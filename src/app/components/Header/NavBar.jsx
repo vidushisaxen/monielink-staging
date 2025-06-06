@@ -1,16 +1,53 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import ButtonComponent from "../ButtonComponent";
 import Image from "next/image";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 export default function NavBar() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+      if (currentScrollPos > prevScrollPos) {
+        gsap.to("#nav", {
+          y: '-100%',
+          duration: 0.5,
+          ease: "linear",
+        });
+      }
+      if(currentScrollPos < prevScrollPos){
+        gsap.to("#nav", {
+          y: "0%",
+          duration: 0.5,
+          ease: "linear",
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <header className="w-screen z-50 flex flex-col  items-center justify-center fixed inset-0  px-[2.55vw] py-[1.51vw] h-fit">
+    <header
+      id="nav"
+      className={`w-screen z-50 flex flex-col items-center justify-center fixed inset-0 px-[2.55vw] py-[1.51vw] h-fit `}
+    >
       <div className="w-[95vw] h-auto flex items-center justify-center">
-        <Image className="h-full w-full " src={"/assets/Union.svg"} alt="logo" width={100} height={100} />
+        <Image
+          className="h-full w-full "
+          src={"/assets/Union.svg"}
+          alt="logo"
+          width={100}
+          height={100}
+        />
       </div>
-      <nav
-        className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw]"
-      >
+      <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw]">
         <div className="w-[14vw] h-full flex items-center justify-center ">
           <svg
             width="200"
@@ -46,10 +83,7 @@ export default function NavBar() {
         <div className="flex items-center gap-[5vw] text-foreground ">
           {["About Us", "Solutions", "Products", "Resources", "Contact Us"].map(
             (item, index) => (
-              <p
-                key={index}
-                className="text-[#D6D6D6] uppercase text-[.9vw] "
-              >
+              <p key={index} className="text-[#D6D6D6] uppercase text-[.9vw] ">
                 {item}
               </p>
             )

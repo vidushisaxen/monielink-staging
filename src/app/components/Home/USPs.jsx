@@ -1,14 +1,61 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function USPs() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#usps",
+          start: "top top",
+          end: "bottom top",
+        },
+      });
+      const tl2= gsap.timeline({
+        scrollTrigger: {
+          trigger: "#usps",
+          start: "65% top",
+          end: "bottom top",
+          once: true,
+         
+        },
+      });
+      gsap.set(".uspsText", {
+        y: "100%",
+      });
+      tl.to(".uspsText", {
+        y: "0%",
+        duration: 0.5,
+        ease: "none",
+      });
+     
+      tl.to(".iconText", {
+        y: "0%",
+        opacity: 1,
+        duration: 0.5,
+        ease: "none",
+        stagger: 0.2,
+      });
+      tl2.to(".sdkText", {
+        y: "0%",
+        duration: 0.5,
+        ease: "none",
+      });
+    });
+    return () => ctx.revert();
+   
+  }, [])
+  
   return (
     <section
       id="usps"
       className="h-fit  py-[11vw] flex items-center flex-col justify-center  w-screen bg-gradient-to-r from-[#FF5100] to-[#FE6E00]"
     >
-      <div className="w-full flex items-center justify-center">
-        <p className="text-white w-[70%] text-[5vw] pb-[6vw] text-center font-display leading-none">
+      <div className="w-full overflow-hidden flex items-center justify-center">
+        <p className="text-white w-[70%] text-[5vw] pb-[6vw] text-center font-display leading-none uspsText">
           Scalable, Secure, and Cost-Efficient Banking Infrastructure
         </p>
       </div>
@@ -52,16 +99,16 @@ export default function USPs() {
                 height={250}
               />
             </div>
-            <div className="flex items-start w-[60%] justify-center font-body flex-col gap-6 h-full  text-white">
+            <div className="flex items-start w-[60%] opacity-0 translate-y-20 iconText justify-center font-body flex-col gap-6 h-full  text-white">
               <p className="text-[1.6vw]">{item.title}</p>
               <p className="text-[1vw] w-[45%] leading-1.1 tracking-wide">{item.description}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="flex items-center h-[70vh] pt-[10vw] text-white font-display flex-col justify-center mt-[5vw]">
-        <p className="text-[7vw] leading-[8vw]">One SDK.</p>
-        <p className="text-[7vw] leading-none">Endless Possibilities.</p>
+      <div className="flex items-center overflow-hidden h-[70vh] pt-[10vw] text-white font-display flex-col justify-center mt-[5vw]">
+        <p className="text-[7vw] sdkText translate-y-[210%] leading-[8vw]">One SDK.</p>
+        <p className="text-[7vw] sdkText translate-y-[200%] leading-none">Endless Possibilities.</p>
       </div>
     </section>
   );

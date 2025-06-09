@@ -1,17 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function FAQs() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#faqs",
+          start: "top top",
+          end: "bottom 120%",
+          pin: true,
+          once: true,
+        },
+      });
+      tl.to(".faqsText", {
+        y: "-10%",
+        duration: 0.5,
+        ease: "none",
+      });
+      tl.to(".faqBox", {
+        opacity: 1,
+        duration: 0.5,
+        ease: "none",
+        stagger: 0.2,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   return (
-    <section id="faqs" className="h-fit w-full flex flex-col items-center justify-center bg-[#FBFBFB] pt-[5vw]">
-      <p className="text-background text-[5vw] w-[80%] text-center leading-none font-display">
-        Frequently Asked Questions
-      </p>
+    <section
+      id="faqs"
+      className="h-fit w-full flex flex-col items-center justify-center bg-[#FBFBFB] pt-[5vw]"
+    >
+      <div className="overflow-hidden flex items-center justify-center">
+        <p className="text-background translate-y-[100%] faqsText text-[5vw] w-[100%] text-center leading-none font-display">
+          Frequently Asked Questions
+        </p>
+      </div>
       <div className="m-[5vw] w-[80vw]">
         <Accordion className="w-full font-display" type="single" collapsible>
           {[
@@ -41,15 +74,22 @@ export default function FAQs() {
                 "We maintain strict compliance with international data protection regulations including GDPR, PSD2, and regional banking regulations, ensuring all data handling meets the highest standards.",
             },
           ].map((faq, index) => (
-            <div key={index} style={{
-                clipPath: "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)"
-            }} className=" p-8 mb-10 bg-[#F0F0F0] rounded-2xl border-2 border-[#E0E0E0] w-full">
+            <div
+              key={index}
+              style={{
+                clipPath:
+                  "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
+              }}
+              className="faqBox opacity-0 p-8 mb-10 bg-[#F0F0F0] rounded-2xl border-2 border-[#E0E0E0] w-full"
+            >
               <AccordionItem
                 key={`item-${index + 1}`}
                 value={`item-${index + 1}`}
               >
-                <AccordionTrigger index={index}>{faq.question}</AccordionTrigger>
-                <AccordionContent >{faq.answer}</AccordionContent>
+                <AccordionTrigger index={index}>
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>
             </div>
           ))}

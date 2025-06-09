@@ -1,11 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ButtonComponent from "../ButtonComponent";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import SwiperButton from "@/app/Buttons/SwiperButton";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Blogs() {
   const swiperRef = useRef(null);
@@ -17,23 +20,74 @@ export default function Blogs() {
     swiperRef.current.slideNext();
   };
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#blogs",
+          start: "top top",
+          end: "bottom top",
+          pin: true,
+          once: true,
+          // markers: true, // Remove debug markers for production
+        },
+      });
+
+      gsap.set(".blogsText", { y: "100%" }); 
+      gsap.set(".button", { y: "100%" }); 
+
+      tl.to(".blogsText", {
+        y: "0%",
+        duration: 0.5,
+        ease: "none",
+        stagger: 0.2,
+      });
+      tl.to(".button", {
+        y: "0%",
+        duration: 0.5,
+        ease: "none",
+      });
+      tl.to(".cards", {
+        opacity: 1,
+        duration: 1,
+        ease: 'none',
+        stagger: 0.2,
+        delay: -0.5,
+      },'<');
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5]">
       <div className=" h-fit py-[3vw] px-[3.75vw]">
-        <p className="text-[5vw] font-display w-[55%] leading-[5.2vw] ">
-          Insights That Drive Innovation
-        </p>
-        <div className="flex items-center justify-between">
-          <p className="text-[1vw] font-medium w-[40%] leading-1.1 mt-5 ">
-            Stay ahead of the curve with expert insights, industry trends, and
-            actionable tips from the world of technology and business.
+        <div className="overflow-hidden">
+          <p className="text-[5vw] blogsText font-display w-[55%] leading-[5.2vw] ">
+            Insights That Drive
           </p>
-          <ButtonComponent
-            text="View All"
-            darkTheme
-            borderTrue
-            bgColor="false"
-          />
+        </div>
+        <div className="overflow-hidden">
+          <p className="text-[5vw] blogsText font-display w-[55%] leading-[5.2vw] ">
+            Innovation
+          </p>
+        </div>
+        <div className="flex items-center justify-between">
+          <div className="overflow-hidden">
+            <p className="text-[1vw] blogsText font-medium w-[40%] leading-1.1 mt-5 ">
+              Stay ahead of the curve with expert insights, industry trends, and
+              actionable tips from the world of technology and business.
+            </p>
+          </div>
+          <div className="overflow-hidden">
+            <ButtonComponent
+              className="button"
+              text="View All"
+              darkTheme
+              borderTrue
+              bgColor="false"
+            />
+          </div>
         </div>
       </div>
       <div className="w-full px-[1.75vw] h-[75vh] border-t border-b border-[#D3D3D3] mb-[3vw]">
@@ -61,17 +115,28 @@ export default function Blogs() {
               bg: "/assets/images/image.png",
               title: "Cybersecurity Best Practices for FinTech",
             },
-            { bg: "/assets/images/image.png", title: "Mobile Payment Trends to Watch" },
+            {
+              bg: "/assets/images/image.png",
+              title: "Mobile Payment Trends to Watch",
+            },
             {
               bg: "/assets/images/image.png",
               title: "AI-Powered Risk Assessment in Banking",
             },
           ].map((blog, index) => (
             <SwiperSlide key={index}>
-              <div className="h-[75vh] cursor-pointer border-r border-[#D3D3D3] px-[2vw] py-[2vw] w-full ">
+              <div className="h-[75vh] opacity-0 cards cursor-pointer border-r border-[#D3D3D3] px-[2vw] py-[2vw] w-full ">
                 <div className=" h-full flex flex-col gap-5 w-full">
-                  <div className={`w-full h-full rounded-lg overflow-hidden`}>
-                    <img src={blog.bg} alt="blog" width={100} height={100} className="w-full h-full object-cover" />
+                  <div
+                    className={`w-full max-h-[70%] rounded-lg overflow-hidden`}
+                  >
+                    <img
+                      src={blog.bg}
+                      alt="blog"
+                      width={100}
+                      height={100}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-col w-[50%] gap-4">

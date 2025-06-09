@@ -15,16 +15,16 @@ export default function NavBar() {
       setPrevScrollPos(currentScrollPos);
       if (currentScrollPos > prevScrollPos) {
         gsap.to("#nav", {
-          y: '-100%',
-          duration: 0.5,
-          ease: "linear",
+          y: "-100%",
+          duration: 0.3,
+          ease: "none",
         });
       }
-      if(currentScrollPos < prevScrollPos){
+      if (currentScrollPos < prevScrollPos) {
         gsap.to("#nav", {
           y: "0%",
-          duration: 0.5,
-          ease: "linear",
+          duration: 0.3,
+          ease: "none",
         });
       }
     };
@@ -83,9 +83,28 @@ export default function NavBar() {
         <div className="flex items-center gap-[5vw] text-foreground ">
           {["About Us", "Solutions", "Products", "Resources", "Contact Us"].map(
             (item, index) => (
-              <p key={index} className="text-[#D6D6D6] uppercase text-[.9vw] ">
-                {item}
-              </p>
+              <div key={index} className="flex items-center gap-[.5vw] group justify-center">
+                <div
+                  style={{
+                    animation: "pulse .5s infinite",
+                  }}
+                  className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+                ></div>
+                <div className="flex flex-col relative items-center justify-center overflow-hidden">
+                  <p
+                    
+                    className="text-[#D6D6D6] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw] "
+                  >
+                    {item}
+                  </p>
+                  <p
+                    key={index}
+                    className="text-[#D6D6D6] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
+                  >
+                    {item}
+                  </p>
+                </div>
+              </div>
             )
           )}
         </div>

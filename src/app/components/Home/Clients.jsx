@@ -27,13 +27,13 @@ export default function Clients() {
         </div>
         <div className="w-1/2 px-20 py-[2vw] h-full flex flex-col items-end justify-between ">
           {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-            <div key={num} className={`${num % 2 ? "mr-0" : "mr-20"} w-[8vw] h-[8vw] flex items-end justify-end`}>
+            <div key={num} className={`${num % 2 ? "mr-0" : "mr-20"} w-[10vw] h-[10vw] flex items-end justify-end`}>
               <Image
                 src={`/assets/logo/${num}.svg`}
                 alt="clients"
-                width={100}
-                height={100}
-                className={`pr-[${Math.floor(Math.random() * 20)}vw] w-full h-full object-contain`}
+                width={5}
+                height={5}
+                className={`pr-[${Math.floor(Math.random() * 20)}vw] w-1/2 h-1/2 object-contain`}
               />
             </div>
           ))}

@@ -44,12 +44,12 @@ export default function Solutions() {
               <div className="flex items-start justify-start  gap-10 ">
                 <div className="h-full w-[2vw] ">
                   <img
-                    className="w-full h-full"
+                    className="w-full h-[70%]"
                     src="./assets/solutionsLights.png"
                     alt=""
                   />
                 </div>
-                <div className="w-[40%]">
+                <div className="w-[50%] flex flex-col items-start justify-center ">
                   <p className="text-[#D6D6D6] font-display leading-none text-[3vw]">
                     Digital Banking & Payments
                   </p>
@@ -57,7 +57,7 @@ export default function Solutions() {
                     From strategy to execution, we help businesses thrive with
                     expert IT consulting and cutting-edge technology solutions.
                   </p>
-                  <div className="pt-10">
+                  <div className="pt-30">
                     <ButtonComponent
                       text="Talk to an expert"
                       borderTrue={true}

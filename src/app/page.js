@@ -11,6 +11,9 @@ import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
 import Blogs from "./components/Home/Blogs";
 import Clients from "./components/Home/Clients";
+import BackgroundLine from "./components/BackgroundLine";
+import CTA from "./components/Home/CTA";
+import HeroBackground from "./components/Home/HeroBackground";
 
 const page = () => {
   return (
@@ -34,7 +37,7 @@ const page = () => {
       <Clients />
       <Blogs />
       <FAQs />
-      <Hero
+      <CTA
         Description={
           "Integrate the Moneylink Super SDK and start delivering seamless, scalable banking services within your mobile app — faster than ever. Let’s build the future of finance together."
         }
@@ -43,6 +46,8 @@ const page = () => {
         paddingTop={"0"}
       />
       <Footer />
+      {/* <HeroBackground /> */}
+      
     </>
   );
 };

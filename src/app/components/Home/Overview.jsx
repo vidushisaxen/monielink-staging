@@ -1,31 +1,131 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   {
     title: "2x",
     subtitle: "Your Retail Customers",
+    number: 2,
+    suffix: "x",
   },
   {
     title: "2x",
     subtitle: "Your X-Selling Ratio",
+    number: 2,
+    suffix: "x",
   },
   {
     title: "6x",
     subtitle: "Revenue from Retail Products",
+    number: 6,
+    suffix: "x",
   },
 ];
 
 export default function Overview() {
-  const slidePaint = useRef(null);
+  const numberRefs = useRef([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#overview",
+          start: "top top",
+          end: "bottom 120%",
+          pin: true,
+          once: true,
+        },
+      });
+      const t2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#overview",
+          start: "60% top",
+          end: "bottom top",
+          pin: true,
+          once: true,
+        },
+      });
+      gsap.set(".overviewText", {
+        y: "100%",
+      });
+      gsap.set(".overviewDescriptionText", {
+        y: "100%",
+      });
+      tl.to(".overviewText", {
+        y: "0%",
+        delay: 0.3,
+        duration: 0.3,
+        ease: "none",
+      });
+      gsap.set(".findText", {
+        y: "100%",
+      });
+      gsap.set(".solutionText", {
+        y: "100%",
+      });
+
+      numberRefs.current.forEach((ref, i) => {
+        if (ref) {
+          tl.fromTo(
+            ref,
+            { innerText: 0 },
+            {
+              innerText: data[i].number,
+              duration: 1,
+              ease: "power1.out",
+              snap: { innerText: 1 },
+              scrollTrigger: {
+                trigger: ref,
+                start: "top 80%",
+                once: true,
+              },
+              onUpdate: function () {
+                ref.innerText = Math.round(ref.innerText) + data[i].suffix;
+              },
+              onStart: function () {
+                ref.innerText = "0" + data[i].suffix;
+              },
+              onComplete: function () {
+                ref.innerText = data[i].number + data[i].suffix;
+              },
+            }
+          );
+        }
+      });
+
+      t2.to(".findText", {
+        y: "-20%",
+        duration: 0.2,
+        delay: 0.5,
+        ease: "none",
+      });
+      t2.to(".solutionText", {
+        y: "0%",
+        duration: 0.2,
+        ease: "none",
+      });
+
+      t2.to(".overviewDescriptionText", {
+        y: "0%",
+        duration: 0.2,
+        ease: "none",
+      });
+    });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section id="overview" className="h-fit w-full pt-[10vw] bg-background">
       <div className="py-[5vw] flex items-center flex-col justify-center">
-        <p className="text-[#A8A8A8] text-center text-[3vw] w-[55%] leading-[3.5vw] capitalize font-display">
-          Enabling Digital Transformation to help You Realize 6X Revenue Growth
-        </p>
+        <div className="flex flex-col items-center justify-center overflow-hidden">
+          <p className="text-[#A8A8A8] text-center text-[3vw] w-[55%] leading-[3.5vw] capitalize font-display overviewText">
+            Enabling Digital Transformation to help You Realize 6X Revenue
+            Growth
+          </p>
+        </div>
         <div className="flex items-center justify-between w-[60%] pt-10">
           {data.map((item, index) => (
             <div
@@ -39,6 +139,7 @@ export default function Overview() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
+                ref={(el) => (numberRefs.current[index] = el)}
               >
                 {item.title}
               </p>
@@ -329,15 +430,19 @@ export default function Overview() {
         </div>
         <div className="flex absolute top-0 left-0 gap-2 h-screen w-screen px-[4.5vw] items-end justify-between pb-[5vw]">
           <div className="flex flex-col pb-[3.5vw] text-[5vw] w-[50%] gap-2">
-            <p className="leading-none font-display text-[#D6D6D6]">
-              Find the Right
-            </p>
-            <p className="leading-none capitalize font-display text-[#D6D6D6]">
-              Solution for You
-            </p>
+            <div className="flex flex-col items-center justify-center overflow-hidden">
+              <p className="leading-none font-display text-[#D6D6D6] findText">
+                Find the Right
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center overflow-hidden">
+              <p className="leading-none capitalize font-display text-[#D6D6D6] solutionText">
+                Solution for You
+              </p>
+            </div>
           </div>
-          <div className="h-fit  w-[42%]">
-            <p className="text-[1vw] leading-[1.6vw] w-[90%] text-[#A8A8A8]">
+          <div className="h-fit overflow-hidden w-[42%]">
+            <p className="text-[1vw] leading-[1.6vw] w-[90%] text-[#A8A8A8] overviewDescriptionText">
               Enable seamless digital banking experiences for your customers
               through your mobile app. The Moneylink Super SDK empowers banks
               and fintechs to launch B2B2C services quickly, securely, and at

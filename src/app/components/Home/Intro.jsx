@@ -3,7 +3,7 @@ import ButtonComponent from "../ButtonComponent";
 
 export default function Intro() {
   return (
-    <section id="intro" className="flex flex-col items-center justify-between h-screen py-[9vw] gap-16 bg-[#050505]">
+    <section id="intro" className="flex flex-col items-center justify-between h-screen py-[9vw] gap-10 bg-[#050505]">
       <p className="text-[#D6D6D6] text-[5vw] w-[70%] text-center leading-none font-display">
         Empowering Banks & Fintechs with Scalable Solutions
       </p>

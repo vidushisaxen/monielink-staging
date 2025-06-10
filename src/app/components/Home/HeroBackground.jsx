@@ -200,19 +200,43 @@ function rotateArrayToMiddle(arr) {
 
 const initialOpacitiesListFromMiddle = initialOpacitiesList.map(col => rotateArrayToMiddle(col));
 
-function Column({ opacities }) {
+function Column({ opacities, hoveredCell, setHoveredCell, colIdx }) {
   return (
     <div className="flex flex-col flex-wrap">
-      {opacities.map((opacity, index) => (
-        <div
-          key={index}
-          className={`w-[1vw]  transition-all duration-300 h-[2.5vw] mb-1.5`}
-          style={{
-            backgroundColor: opacity != null ? "#FF2900" : "transparent",
-            opacity: opacity ?? 1,
-          }}
-        />
-      ))}
+      {opacities.map((opacity, rowIdx) => {
+        const isHovered =
+          hoveredCell &&
+          hoveredCell.col === colIdx &&
+          hoveredCell.row === rowIdx;
+        return (
+          <div
+            key={rowIdx}
+            className={`w-[1vw] transition-all duration-300 h-[2.5vw] mb-1.5`}
+            style={{
+              backgroundColor: opacity != null ? "#FF2900" : "transparent",
+              opacity:
+                opacity != null
+                  ? isHovered
+                    ? 1
+                    : opacity
+                  : 1,
+              boxShadow: isHovered
+                ? "0 0 16px 4px #FF2900, 0 0 0 2px #fff"
+                : undefined,
+              zIndex: isHovered ? 2 : 1,
+              cursor: opacity != null ? "pointer" : "default",
+              transition:
+                "opacity 0.3s, box-shadow 0.3s, z-index 0.3s, background-color 0.3s",
+            }}
+            onMouseEnter={() => {
+              if (opacity != null) setHoveredCell({ col: colIdx, row: rowIdx });
+            }}
+            onMouseLeave={() => {
+              if (opacity != null) setHoveredCell(null);
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -220,6 +244,7 @@ function Column({ opacities }) {
 export default function HeroBackground() {
   const [columns, setColumns] = useState(initialOpacitiesList);
   const [columnsFromMiddle, setColumnsFromMiddle] = useState(initialOpacitiesListFromMiddle);
+  const [hoveredCell, setHoveredCell] = useState(null);
   const containerRef = useRef(null);
   const intervalRef = useRef(null);
 
@@ -285,6 +310,18 @@ export default function HeroBackground() {
     // eslint-disable-next-line
   }, []);
 
+  // Helper to render columns with correct colIdx offset
+  const renderColumns = (columnsArr, colOffset = 0) =>
+    columnsArr.map((col, idx) => (
+      <Column
+        key={idx}
+        opacities={col}
+        hoveredCell={hoveredCell}
+        setHoveredCell={setHoveredCell}
+        colIdx={colOffset + idx}
+      />
+    ));
+
   return (
     <div
       ref={containerRef}
@@ -292,17 +329,20 @@ export default function HeroBackground() {
     >
       <div className="flex gap-1 justify-between px-10">
         <div className="flex gap-1">
-          {columns.map((col, idx) => (
-            <Column key={idx} opacities={col} />
-          ))}
+          {renderColumns(columns, 0)}
         </div>
         <div className="flex gap-1">
-          {columnsFromMiddle.map((col, idx) => (
-            <Column key={idx} opacities={col} />
-          ))}
+          {renderColumns(columnsFromMiddle, columns.length)}
         </div>
-       
-       
+        <div className="flex gap-1">
+          {renderColumns(columns, columns.length + columnsFromMiddle.length)}
+        </div>
+        <div className="flex gap-1">
+          {renderColumns(
+            columnsFromMiddle,
+            columns.length * 2 + columnsFromMiddle.length
+          )}
+        </div>
       </div>
     </div>
   );

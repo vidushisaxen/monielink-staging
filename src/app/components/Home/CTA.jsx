@@ -4,7 +4,9 @@ import ButtonComponent from "../ButtonComponent";
 import HeroBackground from "./HeroBackground";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 export default function CTA({
   Heading1,
   Heading2,
@@ -14,30 +16,40 @@ export default function CTA({
 }) {
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const ctaText = SplitText.create(".ctaDescription", {
+        type: "lines",
+        linesClass: "ctaDescriptionLines",
+        mask:"lines",
+      });
+      const ctaText1 = SplitText.create(".ctaText1", {
+        type: "lines",
+        linesClass: "ctaText1Lines",
+        mask:"lines",
+      });
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#cta",
-          start: "top top",
+          start: "top 80%",
           end: "bottom top",
-          pin: true,
+          // markers: true,
           once: true,
         },
       });
-      tl.to(".ctaText1", {
+      gsap.set(".ctaText1Lines", { y: "100%" });
+      gsap.set(".ctaDescriptionLines", { y: "100%" });
+      tl.to(".ctaText1Lines", {
         y: "0%",
-        duration: 0.5,
-        ease: "none",
+        duration: 1,
+        ease: "power3.inOut",
+        stagger: 0.08,
       });
-      tl.to(".ctaText2", {
+      tl.to(".ctaDescriptionLines", {
         y: "0%",
-        duration: 0.5,
-        ease: "none",
-      });
-      tl.to(".ctaText3", {
-        y: "0%",
-        duration: 0.5,
-        ease: "none",
-      });
+          duration: 1,
+          stagger: 0.08,
+        },
+        "<+1"
+      );
     });
     return () => ctx.revert();
   }, []);
@@ -51,20 +63,18 @@ export default function CTA({
             paddingTop ? `pt-[${paddingTop}]` : "pt-20"
           } flex-col flex items-center justify-center z-10 text-foreground`}
         >
-          <div className="overflow-hidden">
+          <div className="overflow-hidden flex flex-col items-center justify-center">
             <h1
               className={`${
                 headingFontSize ? `text-[8vw]` : "text-[6vw]"
-              } font-display leading-[9vw] ctaText1 translate-y-[100%] text-[#D6D6D6]`}
+              } font-display leading-[1.25] ctaText1 text-[#D6D6D6]`}
             >
               {Heading1}
             </h1>
-          </div>
-          <div className="overflow-hidden">
             <h1
               className={`${
                 headingFontSize ? `text-[8vw]` : "text-[6vw]"
-              }  font-display leading-[9vw] ctaText2 translate-y-[100%] text-[#D6D6D6]`}
+              }  font-display leading-[1.25] ctaText1  text-[#D6D6D6]`}
             >
               {Heading2}
             </h1>
@@ -75,7 +85,9 @@ export default function CTA({
               headingFontSize ? `w-[65%] pt-5 ` : "w-[55%] pt-8"
             } text-center text-[1vw] tracking-wide overflow-hidden`}
           >
-            <p className="text-[#A8A8A8] ctaText3 translate-y-[100%]">{Description}</p>
+            <p className="text-[#A8A8A8] ctaDescription">
+              {Description}
+            </p>
           </div>
           <div className="flex items-center pt-12 gap-5">
             <ButtonComponent text="Talk to an expert" borderColor="white" />

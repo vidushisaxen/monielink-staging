@@ -1,8 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+
+import React, { useEffect, useRef } from "react";
 import ButtonComponent from "../ButtonComponent";
 import HeroBackground from "./HeroBackground";
 import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
 
 export default function Hero({
   Heading1,
@@ -11,37 +14,61 @@ export default function Hero({
   headingFontSize,
   paddingTop,
 }) {
+  const descRef = useRef(null);
+
   useEffect(() => {
-    const contex = gsap.context(() => {
+    let splitDesc;
+    let splitDescRevert;
+    const ctx = gsap.context(() => {
+      // Split the description text into lines for animation
+      if (descRef.current) {
+        splitDesc = new SplitText(descRef.current, {
+          type: "lines,chars",
+          linesClass: "desc-line",
+        });
+        splitDescRevert = splitDesc.revert;
+      }
+
       const tl = gsap.timeline();
       gsap.set(".headingText1", {
         y: "100%",
       });
-      gsap.set(".headingText2", {
-        y: "100%",
-      });
-      gsap.set(".descriptionText", {
-        y: "100%",
-      });
+
+      if (splitDesc) {
+        gsap.set(splitDesc.lines, {
+          y: "200%",
+        });
+      }
+
       tl.to(".headingText1", {
-        y: "-0%",
+        y: "0%",
         delay: 0.3,
-        duration: 0.3,
-        ease: "none",
+        duration: 1,
+        ease: "power3.inOut",
+        stagger: 0.08,
       });
-      tl.to(".headingText2", {
-        y: "-0%",
-        duration: 0.3,
-        ease: "none",
-      });
-      tl.to(".descriptionText", {
-        y: "-0%",
-        duration: 0.3,
-        ease: "none",
-      });
+
+      if (splitDesc) {
+        tl.to(
+          splitDesc.lines,
+          {
+            y: "0%",
+            duration: 1,
+            ease: "power3.inOut",
+            stagger: 0.07,
+          },
+          "-=0.8"
+        );
+      }
     });
-    return () => contex.revert();
+
+    return () => {
+      ctx.revert();
+      if (splitDesc && typeof splitDesc.revert === "function")
+        splitDesc.revert();
+    };
   }, []);
+
   return (
     <section className="w-screen relative h-screen bg-background">
       {typeof NavBar === "function" && <NavBar />}
@@ -65,7 +92,7 @@ export default function Hero({
             <h1
               className={`${
                 headingFontSize ? `text-[8vw]` : "text-[6vw]"
-              }  font-display leading-[9vw] headingText2 text-[#D6D6D6]`}
+              }  font-display leading-[9vw] headingText1 text-[#D6D6D6]`}
             >
               {Heading2}
             </h1>
@@ -75,7 +102,13 @@ export default function Hero({
               headingFontSize ? `w-[65%] pt-5 ` : "w-[55%] pt-8"
             } text-center text-[1vw] tracking-wide overflow-hidden`}
           >
-            <p className="text-[#A8A8A8] descriptionText">{Description}</p>
+            <p
+              className="text-[#A8A8A8] descriptionText"
+              ref={descRef}
+              style={{ display: "inline-block" }}
+            >
+              {Description}
+            </p>
           </div>
           <div className="flex items-center pt-12 gap-5">
             <ButtonComponent text="Talk to an expert" borderColor="white" />

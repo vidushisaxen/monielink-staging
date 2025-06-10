@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useState } from "react";
 import ButtonComponent from "../ButtonComponent";
 import Image from "next/image";
@@ -90,19 +91,19 @@ export default function NavBar() {
                   }}
                   className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                 ></div>
-                <div className="flex flex-col relative items-center justify-center overflow-hidden">
-                  <p
+                <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                  <a
                     
                     className="text-[#D6D6D6] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw] "
                   >
                     {item}
-                  </p>
-                  <p
+                  </a>
+                  <a
                     key={index}
                     className="text-[#D6D6D6] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
                   >
                     {item}
-                  </p>
+                  </a>
                 </div>
               </div>
             )

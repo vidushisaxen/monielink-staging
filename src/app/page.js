@@ -46,7 +46,6 @@ const page = () => {
         paddingTop={"0"}
       />
       <Footer />
-      {/* <HeroBackground /> */}
       
     </>
   );

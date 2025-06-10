@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import {
   Accordion,
@@ -7,30 +8,38 @@ import {
 } from "@/components/ui/accordion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function FAQs() {
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const faqsText = SplitText.create(".faqsText", {
+        type: "lines",
+        mask:"lines",
+        linesClass: "faqsTextLines",
+      });
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#faqs",
-          start: "top top",
-          end: "bottom 120%",
-          pin: true,
+          start: "top 80%",
+          end: "bottom top",
           once: true,
+          // markers: true,
         },
       });
-      tl.to(".faqsText", {
-        y: "-10%",
-        duration: 0.5,
-        ease: "none",
+      gsap.set(".faqsTextLines", { y: "100%" });
+      tl.to(".faqsTextLines", {
+        y: "0%",
+        duration: 1,
+        ease: "power3.inOut",
       });
       tl.to(".faqBox", {
         opacity: 1,
-        duration: 0.5,
-        ease: "none",
-        stagger: 0.2,
+        duration: 1,
+        ease: "power3.inOut",
+        stagger: 0.1,
+        delay: -0.5,
       });
     });
     return () => ctx.revert();
@@ -40,10 +49,10 @@ export default function FAQs() {
       id="faqs"
       className="h-fit w-full flex flex-col items-center justify-center bg-[#FBFBFB] pt-[5vw]"
     >
-      <div className="overflow-hidden flex items-center justify-center">
-        <p className="text-background translate-y-[100%] faqsText text-[5vw] w-[100%] text-center leading-none font-display">
+      <div className=" flex items-center justify-center">
+        <h2 className="text-background  faqsText text-[5vw] w-[100%] text-center leading-[1.25] font-display">
           Frequently Asked Questions
-        </p>
+        </h2>
       </div>
       <div className="m-[5vw] w-[80vw]">
         <Accordion className="w-full font-display" type="single" collapsible>

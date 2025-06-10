@@ -1,13 +1,45 @@
+"use client"
 import SwiperButton from "@/app/Buttons/SwiperButton";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import ButtonComponent from "../ButtonComponent";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Products() {
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const productsText = SplitText.create(".productsText", {
+        type: "lines",
+        linesClass: "productsTextLines",
+        mask:"lines",
+      });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#products",
+          start: "top 80%",
+          end: "bottom top",
+          // markers: true,
+        },
+      });
+      gsap.set(".productsTextLines", { y: "100%" });
+      tl.to(".productsTextLines", {
+        y: "0%",
+        duration: 1,
+        stagger: 0.08,
+        ease: "power3.inOut",
+      });
+    });
+    return () => ctx.revert();
+  }, [])
+  
   const handlePrevClick = () => {
     const swiper = document.querySelector(".mySwiper").swiper;
     swiper.slidePrev();
@@ -24,12 +56,12 @@ export default function Products() {
       className="h-fit w-full relative bg-[#050505] flex flex-col items-center justify-center py-[5vw]"
     >
       <div className=" flex  flex-col items-center justify-center">
-        <p className="text-foreground text-[5vw] w-[60%] text-center leading-none font-display">
+        <p className="text-foreground productsText text-[5vw] w-[60%] text-center leading-[1.25] font-display">
           Everything You Need to Power Digital Banking
         </p>
 
         <div className="h-[90vh] flex items-center justify-center p-[3vw] w-full ">
-         
+          
             {[1, 2, 3].map((_, index) => (
                 <div key={index} className="card relative  h-full w-fit">
                   <div className="cards h-full w-full">
@@ -75,8 +107,8 @@ export default function Products() {
                     <div className="h-auto w-full flex items-center justify-center">
                       <ButtonComponent
                         chevronSize={"1.2vw"}
-                        textSize={".6vw"}
-                        text="Talk to an expert"
+                        textSize={"1vw"}
+                        text="Know More"
                         borderColor="white"
                       />
                     </div>

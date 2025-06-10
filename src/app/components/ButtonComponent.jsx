@@ -10,7 +10,7 @@ export default function ButtonComponent({
   chevronSize,
 }) {
   return (
-    <div className="flex justify-center items-center w-fit h-fit">
+    <div className="flex cursor-pointer justify-center items-center w-fit h-fit">
       <div
         style={{
           clipPath: "polygon(0 0, 92% 0, 100% 19%, 100% 100%, 7% 100%, 0 83%)",

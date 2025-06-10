@@ -3,7 +3,7 @@ import React from "react";
 function SwiperButton({ isRight , rotate, removeBg, onClick}) {
   return (
     <div
-      className="border border-[#636363] p-5 px-6"
+      className="border border-[#636363] cursor-pointer p-5 px-6"
       style={{
         clipPath: "polygon(25% 0%, 100% 0, 100% 76%, 75% 100%, 0 100%, 0 26%)",
         backgroundColor: removeBg ? "#F5F5F5" : "#050505",

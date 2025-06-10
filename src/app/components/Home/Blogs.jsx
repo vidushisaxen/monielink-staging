@@ -8,7 +8,8 @@ import { Navigation } from "swiper/modules";
 import SwiperButton from "@/app/Buttons/SwiperButton";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Blogs() {
   const swiperRef = useRef(null);
@@ -22,38 +23,53 @@ export default function Blogs() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const blogsText = SplitText.create(".blogsText", {
+        type: "lines",
+        mask:"lines",
+        linesClass: "blogsTextLines",
+      });
+      const blogsTextPara = SplitText.create(".blogsTextPara", {
+        type: "lines",
+        mask:"lines",
+        linesClass: "blogsTextParaLines",
+      });
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#blogs",
-          start: "top top",
+          start: "top 80%",
           end: "bottom top",
-          pin: true,
           once: true,
-          // markers: true, // Remove debug markers for production
         },
       });
 
-      gsap.set(".blogsText", { y: "100%" }); 
-      gsap.set(".button", { y: "100%" }); 
+      gsap.set(".blogsTextLines", { y: "100%" });
+      gsap.set(".blogsTextParaLines", { y: "100%" });
+      gsap.set(".button", { y: "100%" });
 
-      tl.to(".blogsText", {
+      tl.to(".blogsTextLines", {
         y: "0%",
-        duration: 0.5,
-        ease: "none",
-        stagger: 0.2,
-      });
-      tl.to(".button", {
-        y: "0%",
-        duration: 0.5,
-        ease: "none",
-      });
-      tl.to(".cards", {
-        opacity: 1,
         duration: 1,
-        ease: 'none',
-        stagger: 0.2,
-        delay: -0.5,
-      },'<');
+        ease: "power3.inOut",
+        stagger: 0.08,
+      });
+      tl.to(".blogsTextParaLines", {
+        y: "0%",
+        delay: -0.3,
+        duration: 1,
+        ease: "power3.inOut",
+        stagger: 0.08,
+      });
+    
+      tl.to(
+        ".cards",
+        {
+          opacity: 1,
+          duration: 1,
+          ease: "power3.inOut",
+          stagger: 0.08,
+          },
+        "<"
+      );
     });
 
     return () => ctx.revert();
@@ -61,24 +77,18 @@ export default function Blogs() {
 
   return (
     <section id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5]">
-      <div className=" h-fit py-[3vw] px-[3.75vw]">
+      <div className=" h-fit py-[3vw] px-[3.75vw] ">
         <div className="overflow-hidden">
-          <p className="text-[5vw] blogsText font-display w-[55%] leading-[5.2vw] ">
-            Insights That Drive
-          </p>
+          <h2 className="text-[5vw] blogsText font-display w-[55%] leading-[1.25] ">
+            Insights That Drive <br /> Innovation
+          </h2>
         </div>
-        <div className="overflow-hidden">
-          <p className="text-[5vw] blogsText font-display w-[55%] leading-[5.2vw] ">
-            Innovation
-          </p>
-        </div>
+
         <div className="flex items-center justify-between">
-          <div className="overflow-hidden">
-            <p className="text-[1vw] blogsText font-medium w-[40%] leading-1.1 mt-5 ">
+            <p className="text-[1vw] blogsTextPara font-medium w-[40%] leading-1.1 mt-5 ">
               Stay ahead of the curve with expert insights, industry trends, and
               actionable tips from the world of technology and business.
             </p>
-          </div>
           <div className="overflow-hidden">
             <ButtonComponent
               className="button"

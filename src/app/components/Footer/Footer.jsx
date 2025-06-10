@@ -1,3 +1,4 @@
+"use client";
 import SwiperButton from "@/app/Buttons/SwiperButton";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
@@ -12,7 +13,7 @@ export default function Footer() {
         className="h-screen absolute inset-0  z-[40] flex items-center justify-center w-full "
         id="footer"
       >
-        <div className="w-full h-full relative ">
+        <div className="w-full h-full flex items-center justify-center relative ">
           <div className="w-screen h-screen absolute top-0 left-0">
             <svg
               width="1920"
@@ -198,9 +199,25 @@ export default function Footer() {
                         key={index}
                         className="text-white mb-[1vw] text-[1vw] font-medium"
                       >
-                        <p className="text-[#A8A8A8] text-[1vw] uppercase">
-                          {item}
-                        </p>
+                        <div className="flex items-center gap-[.5vw] group justify-start">
+                          <div
+                            style={{
+                              animation: "pulse .5s infinite",
+                            }}
+                            className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+                          ></div>
+                          <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                            <a className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
+                              {item}
+                            </a>
+                            <a
+                              key={index}
+                              className="text-[#A8A8A8] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
+                            >
+                              {item}
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -216,9 +233,25 @@ export default function Footer() {
                         key={index}
                         className="text-white  mb-[1vw] text-sm font-medium"
                       >
-                        <p className="text-[#A8A8A8] text-[1vw] uppercase">
-                          {item}
-                        </p>
+                        <div className="flex items-center gap-[.5vw] group justify-start">
+                          <div
+                            style={{
+                              animation: "pulse .5s infinite",
+                            }}
+                            className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+                          ></div>
+                          <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                            <a className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
+                              {item}
+                            </a>
+                            <a
+                              key={index}
+                              className="text-[#A8A8A8] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
+                            >
+                              {item}
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -231,8 +264,8 @@ export default function Footer() {
                   faster than ever. Let’s build the future of finance together.
                 </p>
                 <div className="w-full flex  items-start justify-center flex-col">
-                  <p className="text-[2.6vw]">info@monielink.org</p>
-                  <div className="pt-5 flex  items-start gap-5">
+                  <p className="text-[2.6vw]">info@monielink.Io</p>
+                  <div className="pt-2 flex  items-start gap-2">
                     {["fb", "ld", "x", "ig"].map((item, index) => (
                       <div
                         key={index}
@@ -240,7 +273,7 @@ export default function Footer() {
                           clipPath:
                             "polygon(25% 0%, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 20%)",
                         }}
-                        className="bg-background w-[5vw]  h-[5vw]  flex items-center justify-center"
+                        className="bg-background w-[4vw] h-[4vw]  flex items-center justify-center"
                       >
                         <Image
                           src={`/assets/${item}.svg`}
@@ -257,7 +290,7 @@ export default function Footer() {
             </div>
             <div className="w-full  z-[100]  h-[10%] flex items-end justify-between text-[#A8A8A8] text-[1vw]">
               <p>Copyright © Monielink 2025</p>
-              <p>By Enigma Digital</p>
+              <p>By : Enigma Digital</p>
             </div>
           </div>
         </div>

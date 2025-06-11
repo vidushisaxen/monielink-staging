@@ -7,6 +7,15 @@ import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Clients() {
+  const logos = [
+    { src: "/assets/logo/1.svg", width: "8vw", right: "20%", top: "5%" },
+    { src: "/assets/logo/2.svg", width: "5vw", right: "35%", top: "22%" },
+    { src: "/assets/logo/3.svg", width: "9vw", right: "10%", top: "40%" },
+    { src: "/assets/logo/4.svg", width: "10vw", right: "40%", top: "50%" },
+    { src: "/assets/logo/5.svg", width: "7vw", right: "35%", top: "67.5%" },
+    { src: "/assets/logo/6.svg", width: "9vw", right: "15%", top: "80.5%" },
+    { src: "/assets/logo/7.svg", width: "8vw", right: "20%", top: "100%" },
+  ];
   useEffect(() => {
     const ctx = gsap.context(() => {
       const clientText = SplitText.create(".clientText", {
@@ -29,7 +38,6 @@ export default function Clients() {
         duration: 1,
         stagger: 0.08,
       });
-     
     });
     return () => ctx.revert();
     clientText.revert();
@@ -132,22 +140,23 @@ export default function Clients() {
             Clients & <br /> Partners We <br /> Work Alongside
           </h2>
         </div>
-        <div className="w-1/2 px-20 py-[2vw] h-full flex flex-col items-end justify-between ">
-          {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+        <div className="w-1/2 relative px-20  h-full flex flex-col items-end justify-between ">
+          {logos.map((logo, index) => (
             <div
-              key={num}
-              className={`${
-                num % 2 ? "mr-0" : "mr-20"
-              } w-[10vw] h-[10vw] flex items-end justify-end`}
+              key={index}
+              className="absolute h-auto flex items-end justify-end"
+              style={{
+                width: logo.width,
+                right: logo.right,
+                top: logo.top,
+              }}
             >
               <Image
-                src={`/assets/logo/${num}.svg`}
-                alt="clients"
-                width={5}
-                height={5}
-                // className={`pr-[${Math.floor(
-                //   Math.random() * 20
-                // )}vw] w-1/2 h-1/2 object-contain`}
+                src={logo.src}
+                alt={`client-logo-${index + 1}`}
+                width={100}
+                height={100}
+                className="w-full h-full object-contain"
               />
             </div>
           ))}

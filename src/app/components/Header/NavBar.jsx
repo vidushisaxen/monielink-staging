@@ -76,7 +76,7 @@ export default function NavBar() {
         <div style={{
           clipPath: "polygon(15% 28%, 85% 28%, 86% 0, 100% 0, 100% 100%, 0 100%, 0 0, 13% 0)",
 
-        }} className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs h-[90%] w-[99%] rounded-xl   "></div>
+        }} className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs h-[97%] w-[99%] rounded-xl   "></div>
       </div>
       <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw] ">
         <Link

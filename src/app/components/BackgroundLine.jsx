@@ -69,10 +69,10 @@ export default function BackgroundLine() {
   const moveElementsByOne = () => {
     const newOpacities = [...opacities];
     const newOpacities2 = [...opacities2];
-    const lastElement = newOpacities.pop();
-    const lastElement2 = newOpacities2.pop();
-    newOpacities.unshift(lastElement);
-    newOpacities2.unshift(lastElement2);
+    const firstElement = newOpacities.shift();
+    const firstElement2 = newOpacities2.shift();
+    newOpacities.push(firstElement);
+    newOpacities2.push(firstElement2);
     setOpacities(newOpacities);
     setOpacities2(newOpacities2);
   };

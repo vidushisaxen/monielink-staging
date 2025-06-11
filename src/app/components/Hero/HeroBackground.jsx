@@ -1,349 +1,89 @@
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
-const initialOpacitiesList = [
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    0.3,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    0.3,
-    0.3,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    0.75,
-    0.75,
-    0.75,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    1,
-    1,
-    1,
-    1,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    0.75,
-    0.75,
-    0.75,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    0.3,
-    0.3,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-  [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    0.3,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ],
-];
+export default function HeroBackground() {
+  const cellCount = 1500;
+  const cellsRef = useRef([]);
 
-function rotateArrayToMiddle(arr) {
-  const len = arr.length;
-  const mid = Math.floor(len / 2);
-  return arr.slice(mid).concat(arr.slice(0, mid));
-}
+  useEffect(() => {
+    const cells = cellsRef.current;
 
-const initialOpacitiesListFromMiddle = initialOpacitiesList.map(col => rotateArrayToMiddle(col));
+    const handleMouseEnter = (index) => {
+      const opacities = [0.5, 0.65, 0.8, 1, 0.8, 0.65, 0.5];
 
-function Column({ opacities, hoveredCell, setHoveredCell, colIdx }) {
+      for (let offset = -3; offset <= 3; offset++) {
+        const i = index + offset;
+        if (i >= 0 && i < cellCount) {
+          gsap.killTweensOf(cells[i]);
+          gsap.to(cells[i], {
+            opacity: opacities[offset + 3],
+            backgroundColor: "#FF2900",
+            duration: 0,
+            ease: "linear",
+            overwrite: true,
+          });
+        }
+      }
+    };
+
+    const handleMouseLeave = (index) => {
+      const fadeGroups = [
+        [-3, 3],
+        [-2, 2],
+        [-1, 1],
+        [0],
+      ];
+
+      fadeGroups.forEach((group, i) => {
+        group.forEach((offset) => {
+          const targetIndex = index + offset;
+          if (targetIndex >= 0 && targetIndex < cellCount) {
+            gsap.killTweensOf(cells[targetIndex]);
+            gsap.to(cells[targetIndex], {
+              opacity: 1,
+              backgroundColor: "transparent",
+              duration: 0.5,
+              ease: "expo.inOut",
+              delay: i * 0.1,
+              overwrite: true,
+            });
+          }
+        });
+      });
+    };
+
+    cells.forEach((cell, index) => {
+      cell.addEventListener("mouseenter", () => handleMouseEnter(index));
+      cell.addEventListener("mouseleave", () => handleMouseLeave(index));
+    });
+
+    return () => {
+      cells.forEach((cell, index) => {
+        cell.removeEventListener("mouseenter", () => handleMouseEnter(index));
+        cell.removeEventListener("mouseleave", () => handleMouseLeave(index));
+      });
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col flex-wrap">
-      {opacities.map((opacity, rowIdx) => {
-        const isHovered =
-          hoveredCell &&
-          hoveredCell.col === colIdx &&
-          hoveredCell.row === rowIdx;
+      <div className="w-screen h-screen absolute inset-0 bg-background gap-0.5 overflow-hidden flex flex-wrap">
+      {[...Array(cellCount)].map((_, i) => {
+        const row = Math.floor(i / 50); // Assuming 50 cells per row based on width
+        const isAlternateRow = row % 2 === 1;
         return (
           <div
-            key={rowIdx}
-            className={`w-[1vw] transition-all duration-300 h-[2.5vw] mb-1.5`}
+            key={i}
+            ref={(el) => (cellsRef.current[i] = el)}
+            className="w-[12px] h-[43px] border border-[#121212]"
             style={{
-              backgroundColor: opacity != null ? "#FF2900" : "transparent",
-              opacity:
-                opacity != null
-                  ? isHovered
-                    ? 1
-                    : opacity
-                  : 1,
-              boxShadow: isHovered
-                ? "0 0 16px 4px #FF2900, 0 0 0 2px #fff"
-                : undefined,
-              zIndex: isHovered ? 2 : 1,
-              cursor: opacity != null ? "pointer" : "default",
-              transition:
-                "opacity 0.3s, box-shadow 0.3s, z-index 0.3s, background-color 0.3s",
-            }}
-            onMouseEnter={() => {
-              if (opacity != null) setHoveredCell({ col: colIdx, row: rowIdx });
-            }}
-            onMouseLeave={() => {
-              if (opacity != null) setHoveredCell(null);
+              opacity: 1,
+              backgroundColor: "transparent",
+              marginLeft: isAlternateRow ? "3px" : "0px"
             }}
           />
         );
       })}
-    </div>
-  );
-}
-
-export default function HeroBackground() {
-  const [columns, setColumns] = useState(initialOpacitiesList);
-  const [columnsFromMiddle, setColumnsFromMiddle] = useState(initialOpacitiesListFromMiddle);
-  const [hoveredCell, setHoveredCell] = useState(null);
-  const containerRef = useRef(null);
-  const intervalRef = useRef(null);
-
-  const startAnimation = () => {
-    if (intervalRef.current) return;
-    intervalRef.current = setInterval(() => {
-      setColumns((prevColumns) =>
-        prevColumns.map((col) => {
-          const newCol = [...col];
-          newCol.push(newCol.shift());
-          return newCol;
-        })
-      );
-      setColumnsFromMiddle((prevColumns) =>
-        prevColumns.map((col) => {
-          const newCol = [...col];
-          newCol.push(newCol.shift());
-          return newCol;
-        })
-      );
-    }, 200);
-  };
-
-  // Helper to stop animation
-  const stopAnimation = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
-
-  useEffect(() => {
-    const node = containerRef.current;
-    if (!node) return;
-
-    let observer;
-    if ("IntersectionObserver" in window) {
-      observer = new window.IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              startAnimation();
-            } else {
-              stopAnimation();
-            }
-          });
-        },
-        {
-          threshold: 0.01,
-        }
-      );
-      observer.observe(node);
-    } else {
-      // Fallback: always animate if IntersectionObserver not available
-      startAnimation();
-    }
-
-    // Clean up
-    return () => {
-      stopAnimation();
-      if (observer && node) observer.unobserve(node);
-    };
-    // eslint-disable-next-line
-  }, []);
-
-  // Helper to render columns with correct colIdx offset
-  const renderColumns = (columnsArr, colOffset = 0) =>
-    columnsArr.map((col, idx) => (
-      <Column
-        key={idx}
-        opacities={col}
-        hoveredCell={hoveredCell}
-        setHoveredCell={setHoveredCell}
-        colIdx={colOffset + idx}
-      />
-    ));
-
-  return (
-    <div
-      ref={containerRef}
-      className="h-screen absolute inset-0 overflow-hidden w-full"
-    >
-      <div className="flex gap-1 justify-between px-10">
-        <div className="flex gap-1">
-          {renderColumns(columns, 0)}
-        </div>
-        <div className="flex gap-1">
-          {renderColumns(columnsFromMiddle, columns.length)}
-        </div>
-        <div className="flex gap-1">
-          {renderColumns(columns, columns.length + columnsFromMiddle.length)}
-        </div>
-        <div className="flex gap-1">
-          {renderColumns(
-            columnsFromMiddle,
-            columns.length * 2 + columnsFromMiddle.length
-          )}
-        </div>
-      </div>
     </div>
   );
 }

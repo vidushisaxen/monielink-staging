@@ -18,7 +18,7 @@ export default function HeroBackground() {
           gsap.killTweensOf(cells[i]);
           gsap.to(cells[i], {
             opacity: opacities[offset + 3],
-            backgroundColor: "#FF2900",
+            backgroundColor: "#FF5100",
             duration: 0,
             ease: "linear",
             overwrite: true,

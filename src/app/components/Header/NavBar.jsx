@@ -73,8 +73,8 @@ export default function NavBar() {
           height={100}
         />
       </div>
-      <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw]">
-        <Link href={"/"} className="w-[12vw] h-full flex items-center justify-center ">
+      <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw] ">
+        <Link href={"/"} className="w-[12vw] h-full flex items-center justify-center backdrop-blur-2xl ">
           <svg
             width="200"
             height="60"
@@ -136,6 +136,7 @@ export default function NavBar() {
           )}
         </div>
         <ButtonComponent
+        link={"/"}
           text="Get In Touch"
           bgColor={false}
           borderColor="white"

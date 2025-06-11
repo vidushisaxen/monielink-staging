@@ -21,7 +21,7 @@ const page = () => {
       <NavBar />
       <Hero />
       <Overview />
-      <Solutions />
+      {/* <Solutions /> */}
       <USPs />
       <Products />
       <Intro />

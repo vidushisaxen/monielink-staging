@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import HeroBackground from "../Hero/HeroBackground";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 

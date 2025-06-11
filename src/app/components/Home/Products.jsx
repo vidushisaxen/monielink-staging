@@ -1,12 +1,12 @@
 "use client"
-import SwiperButton from "@/app/Buttons/SwiperButton";
+import SwiperButton from "@/app/components/Buttons/SwiperButton";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import ButtonComponent from "../../Buttons/ButtonComponent";
+import ButtonComponent from "../Buttons/ButtonComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";

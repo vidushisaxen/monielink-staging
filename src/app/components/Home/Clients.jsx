@@ -46,9 +46,9 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="h-fit  w-screen flex items-center justify-center relative bg-[#050505] "
+      className="h-[120vh]  w-screen flex items-center justify-center relative bg-[#050505] "
     >
-      <div className="w-screen  h-auto ">
+      <div className="w-screen -translate-x-[10%] h-[120vh] py-2 ">
         <svg
           className="w-full h-full object-cover"
           id="mySVG"

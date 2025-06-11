@@ -10,6 +10,7 @@ import ButtonComponent from "../Buttons/ButtonComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import BackgroundLine from "../BackgroundLine";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Products() {
@@ -52,9 +53,10 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="h-fit w-full relative bg-[#050505] flex flex-col items-center justify-center py-[5vw]"
+      className="h-[150vh] w-full relative  flex flex-col items-center justify-center"
     >
-      <div className=" flex  flex-col items-center justify-center">
+      <BackgroundLine />
+      <div className="absolute top-0 left-0  h-[150vh] w-full flex  flex-col items-center justify-center">
         <p className="text-foreground productsText text-[5vw] w-[60%] text-center leading-[1.25] font-display">
           Everything You Need to Power Digital Banking
         </p>
@@ -68,7 +70,6 @@ export default function Products() {
           loop={true}
           centeredSlides={true}
           slidesPerView={3}
-
           className="h-fit mySwiper flex items-center justify-center p-[3vw] w-screen "
         >
           {[
@@ -122,17 +123,20 @@ export default function Products() {
             },
           ].map((card, cardIndex) => (
             <SwiperSlide key={cardIndex}>
-              <div className="card relative  h-full w-full">
-                <div className="cards  h-full w-full">
-                  <Image
-                    src={card.cardImage}
-                    alt="frameScoll"
-                    width={100}
-                    height={100}
-                    className={`w-full svg h-full`}
-                  />
+              <div className="card relative h-full w-full">
+                <div className="h-full  w-full relative">
+                  <div className="cards  h-full w-full">
+                    <Image
+                      src={card.cardImage}
+                      alt="frameScoll"
+                      width={100}
+                      height={100}
+                      className={`w-full svg h-full`}
+                    />
+                    <div className="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs h-[78%] w-[80%] rounded-3xl "></div>
+                  </div>
                 </div>
-                <div className="absolute top-0 py-[5vw] flex-col flex items-center justify-evenly left-0 h-full w-full ">
+                <div className="absolute  top-0 py-[5vw] flex-col flex items-center justify-evenly left-0 h-full w-full ">
                   <div className="h-auto w-[15vw]">
                     <Image
                       src={card.logo}

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useRef, useState } from "react";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import Image from "next/image";
@@ -6,29 +6,28 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 
-
-const links=[
+const links = [
   {
-    name:"About Us",
-    link:"/"
+    name: "About Us",
+    link: "/",
   },
   {
-    name:"Solutions",
-    link:"/"
+    name: "Solutions",
+    link: "/",
   },
   {
-    name:"Products",
-    link:"/"
+    name: "Products",
+    link: "/",
   },
   {
-    name:"Resources",
-    link:"/"
+    name: "Resources",
+    link: "/",
   },
   {
-    name:"Contact Us",
-    link:"/"
+    name: "Contact Us",
+    link: "/",
   },
-]
+];
 
 export default function NavBar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -64,17 +63,26 @@ export default function NavBar() {
       id="nav"
       className={`w-screen z-50 flex flex-col items-center justify-center fixed inset-0 px-[2.55vw] py-[1.51vw] h-fit `}
     >
-      <div className="w-[95vw] h-auto flex items-center justify-center">
-        <Image
-          className="h-full w-full "
-          src={"/assets/Union.svg"}
-          alt="logo"
-          width={100}
-          height={100}
-        />
+      <div className="relative h-full w-full">
+        <div className="w-[95vw] h-auto  flex items-center justify-center">
+          <Image
+            className="h-full w-full "
+            src={"/assets/Union.svg"}
+            alt="logo"
+            width={100}
+            height={100}
+          />
+        </div>
+        <div style={{
+          clipPath: "polygon(15% 28%, 85% 28%, 86% 0, 100% 0, 100% 100%, 0 100%, 0 0, 13% 0)",
+
+        }} className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs h-[90%] w-[99%] rounded-xl   "></div>
       </div>
       <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw] ">
-        <Link href={"/"} className="w-[12vw] h-full flex items-center justify-center backdrop-blur-2xl ">
+        <Link
+          href={"/"}
+          className="w-[12vw] h-full flex items-center justify-center backdrop-blur-2xl "
+        >
           <svg
             width="200"
             height="60"
@@ -104,39 +112,37 @@ export default function NavBar() {
               fill="#FE6E00"
             />
           </svg>
-        </Link >
+        </Link>
 
         <div className="flex items-center gap-[5vw] text-foreground ">
-          {links.map(
-            (item, index) => (
-              <Link href={"/"} key={index} className="flex items-center gap-[.5vw] group justify-center">
-                <div
-                  style={{
-                    animation: "pulse .5s infinite",
-                  }}
-                  className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
-                ></div>
-                <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                  
-                  <span                    
-                    className="text-[#D6D6D6] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw] "
-                  >
-                    {item.name}
-                  </span>
-                  <span
-                    key={index}
-                    className="text-[#D6D6D6] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
-                  >
-                    {item.name}
-                  </span>
-                 
-                </div>
-              </Link>
-            )
-          )}
+          {links.map((item, index) => (
+            <Link
+              href={"/"}
+              key={index}
+              className="flex items-center gap-[.5vw] group justify-center"
+            >
+              <div
+                style={{
+                  animation: "pulse .5s infinite",
+                }}
+                className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+              ></div>
+              <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                <span className="text-[#D6D6D6] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw] ">
+                  {item.name}
+                </span>
+                <span
+                  key={index}
+                  className="text-[#D6D6D6] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
+                >
+                  {item.name}
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
         <ButtonComponent
-        link={"/"}
+          link={"/"}
           text="Get In Touch"
           bgColor={false}
           borderColor="white"

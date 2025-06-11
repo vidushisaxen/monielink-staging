@@ -105,7 +105,7 @@ export default function Blogs() {
           slidesPerView={1.7}
           modules={[Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          loop={true}
+          freeMode={true}
           className="mySwiper items-center justify-center flex h-full"
         >
           {[
@@ -138,7 +138,7 @@ export default function Blogs() {
               <div className="h-[75vh] opacity-0 cards cursor-pointer border-r border-[#D3D3D3] px-[2vw] py-[2vw] w-full ">
                 <div className=" h-full flex flex-col gap-5 w-full">
                   <div
-                    className={`w-full max-h-[70%] rounded-lg overflow-hidden`}
+                    className={`w-full max-h-[45vh] rounded-lg overflow-hidden`}
                   >
                     <img
                       src={blog.bg}

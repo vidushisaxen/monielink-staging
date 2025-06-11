@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import ButtonComponent from "../ButtonComponent";
+import ButtonComponent from "../../Buttons/ButtonComponent";
 import HeroBackground from "./HeroBackground";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import ButtonComponent from "../ButtonComponent";
+import ButtonComponent from "../../Buttons/ButtonComponent";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";

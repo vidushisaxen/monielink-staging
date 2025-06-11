@@ -1,6 +1,6 @@
 "use client"
 import React, { useRef, useState } from "react";
-import ButtonComponent from "../ButtonComponent";
+import ButtonComponent from "../../Buttons/ButtonComponent";
 import Image from "next/image";
 import { useEffect } from "react";
 import gsap from "gsap";

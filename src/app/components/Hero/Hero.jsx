@@ -82,13 +82,12 @@ export default function Hero({}) {
           </h1>
 
           <div
-            className={`w-[65%] pt-5
+            className={`w-[55%] pt-5
             text-center text-[1vw] tracking-wide`}
           >
             <p
               className="text-[#A8A8A8] descriptionText"
               ref={descRef}
-              style={{ display: "inline-block" }}
             >
               Seamlessly embed digital banking services into your mobile apps
               with the Monielink Super SDK — a single, unified solution that

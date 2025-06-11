@@ -4,6 +4,31 @@ import ButtonComponent from "../Buttons/ButtonComponent";
 import Image from "next/image";
 import { useEffect } from "react";
 import gsap from "gsap";
+import Link from "next/link";
+
+
+const links=[
+  {
+    name:"About Us",
+    link:"/"
+  },
+  {
+    name:"Solutions",
+    link:"/"
+  },
+  {
+    name:"Products",
+    link:"/"
+  },
+  {
+    name:"Resources",
+    link:"/"
+  },
+  {
+    name:"Contact Us",
+    link:"/"
+  },
+]
 
 export default function NavBar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -17,15 +42,15 @@ export default function NavBar() {
       if (currentScrollPos > prevScrollPos) {
         gsap.to("#nav", {
           y: "-100%",
-          duration: 0.3,
-          ease: "none",
+          duration: 1,
+          ease: "power2.out",
         });
       }
       if (currentScrollPos < prevScrollPos) {
         gsap.to("#nav", {
           y: "0%",
-          duration: 0.3,
-          ease: "none",
+          duration: 1,
+          ease: "power2.out",
         });
       }
     };
@@ -49,7 +74,7 @@ export default function NavBar() {
         />
       </div>
       <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw]">
-        <div className="w-[14vw] h-full flex items-center justify-center ">
+        <Link href={"/"} className="w-[12vw] h-full flex items-center justify-center ">
           <svg
             width="200"
             height="60"
@@ -79,12 +104,12 @@ export default function NavBar() {
               fill="#FE6E00"
             />
           </svg>
-        </div>
+        </Link >
 
         <div className="flex items-center gap-[5vw] text-foreground ">
-          {["About Us", "Solutions", "Products", "Resources", "Contact Us"].map(
+          {links.map(
             (item, index) => (
-              <div key={index} className="flex items-center gap-[.5vw] group justify-center">
+              <Link href={"/"} key={index} className="flex items-center gap-[.5vw] group justify-center">
                 <div
                   style={{
                     animation: "pulse .5s infinite",
@@ -92,20 +117,21 @@ export default function NavBar() {
                   className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                 ></div>
                 <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                  <a
-                    
+                  
+                  <span                    
                     className="text-[#D6D6D6] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw] "
                   >
-                    {item}
-                  </a>
-                  <a
+                    {item.name}
+                  </span>
+                  <span
                     key={index}
                     className="text-[#D6D6D6] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </span>
+                 
                 </div>
-              </div>
+              </Link>
             )
           )}
         </div>

@@ -50,7 +50,7 @@ export default function Clients() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g class="rings">
+          <g className="rings">
             <rect
               x="-0.5"
               y="0.5"
@@ -145,9 +145,9 @@ export default function Clients() {
                 alt="clients"
                 width={5}
                 height={5}
-                className={`pr-[${Math.floor(
-                  Math.random() * 20
-                )}vw] w-1/2 h-1/2 object-contain`}
+                // className={`pr-[${Math.floor(
+                //   Math.random() * 20
+                // )}vw] w-1/2 h-1/2 object-contain`}
               />
             </div>
           ))}

@@ -359,7 +359,7 @@ export default function Overview() {
         </div>
         <div className="flex absolute bottom-0 left-0 gap-2 h-fit w-screen px-[4.5vw] items-end justify-between pb-[5vw]">
           <div className="flex flex-col pb-[3.5vw] text-[5vw] w-[50%] gap-2">
-            <p className="leading-[1.25] font-display text-[#D6D6D6] findText">
+            <p className="leading-[1.25] font-display text-[#D6D6D6] findText text-[5.2vw]">
               Find the Right Solution for You
             </p>
           </div>

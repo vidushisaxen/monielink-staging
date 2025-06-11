@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ButtonComponent({
@@ -8,9 +9,10 @@ export default function ButtonComponent({
   darkTheme,
   textSize,
   chevronSize,
+  link
 }) {
   return (
-    <div className="flex cursor-pointer justify-center items-center w-fit h-fit">
+    <Link href={`${link}`} className="flex cursor-pointer justify-center items-center w-fit h-fit">
       <div
         style={{
           clipPath: "polygon(0 0, 92% 0, 100% 19%, 100% 100%, 7% 100%, 0 83%)",
@@ -62,6 +64,6 @@ export default function ButtonComponent({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

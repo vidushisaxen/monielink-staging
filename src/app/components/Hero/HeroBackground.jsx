@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function HeroBackground() {
-  const cellCount = 1500;
+  const cellCount = 1800;
   const cellsRef = useRef([]);
 
   useEffect(() => {
@@ -67,9 +67,9 @@ export default function HeroBackground() {
   }, []);
 
   return (
-      <div className="w-screen h-screen absolute inset-0 bg-background gap-0.5 overflow-hidden flex flex-wrap">
+      <div className="w-screen h-screen absolute inset-0 bg-background  overflow-hidden flex flex-wrap">
       {[...Array(cellCount)].map((_, i) => {
-        const row = Math.floor(i / 50); // Assuming 50 cells per row based on width
+        const row = Math.floor(i / 50);
         const isAlternateRow = row % 2 === 1;
         return (
           <div

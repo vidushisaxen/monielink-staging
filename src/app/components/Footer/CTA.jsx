@@ -61,20 +61,20 @@ export default function CTA({
         >
           <h2
             className={`
-                text-[5vw]
+                text-[5.2vw]
               font-display w-[75%] text-center leading-[1.25] ctaText1 text-[#D6D6D6]`}
           >
             Ready to Power Your Digital Banking Experience
           </h2>
 
-          <div className={`w-[45%] pt-8 text-center text-[1vw] tracking-wide `}>
+          <div className={`w-[48%] pt-[3vw] text-center text-[1.05vw] tracking-wide `}>
             <p className="text-[#A8A8A8] ctaDescription">
               Integrate the Moneylink Super SDK and start delivering seamless,
               scalable banking services within your mobile app — faster than
               ever. Let's build the future of finance together.
             </p>
           </div>
-          <div className="flex items-center pt-12 gap-5">
+          <div className="flex items-center pt-[3vw] gap-5">
             <ButtonComponent text="Talk to an expert" borderColor="white" />
             <ButtonComponent
               text="Talk to an expert"

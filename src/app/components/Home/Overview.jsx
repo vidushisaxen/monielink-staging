@@ -227,13 +227,13 @@ export default function Overview() {
 
   return (
     <section id="overview" className="h-fit w-full pt-[10vw] bg-background">
-      <div className="py-[5vw] flex items-center flex-col justify-center">
-        <h2 className="text-[#A8A8A8] text-center text-[3vw] w-[55%] leading-[1.3] cah2italize font-display overviewText">
+      <div className="py-[5vw] flex items-center flex-col justify-center gap-[2vw]">
+        <h2 className="text-[#D6D6D6] text-center text-[3.12vw] w-[55%] leading-[1.3] capitalize font-display overviewText ">
           Enabling Digital Transformation to help You Realize 6X Revenue Growth
         </h2>
         <div className="flex items-center justify-between w-[60%] pt-10">
-          <div className="flex flex-col items-center justify-center">
-            <div className="text-[10vw] overflow-hidden  leading-none">
+          <div className="flex flex-col items-center justify-center gap-[1vw]">
+            <div className="text-[10.4vw] overflow-hidden  leading-none">
               <div className="flex h-[9.5vw] items-start w-fit justify-center">
                 <div className="flex flex-col  numberTranslate -translate-y-[0vw] items-center justify-center">
                   {[0, 1, 2].map((num) => (
@@ -263,13 +263,13 @@ export default function Overview() {
               </div>
             </div>
             <div className="overflow-hidden w-full flex items-center justify-center h-fit">
-              <p className="text-[#A8A8A8] subtitle  text-center text-[1vw] tracking-wider font-display">
+              <p className="text-[#A8A8A8] subtitle  text-center text-[1.04vw] tracking-wider font-display">
                 Your Retail Customers
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <div className="text-[10vw]  leading-none">
+          <div className="flex flex-col items-center justify-center gap-[1vw]">
+            <div className="text-[10.4vw]  leading-none">
               <div className="flex h-[9.5vw] overflow-hidden items-start w-fit justify-center">
                 <div className="flex flex-col numberTranslate -translate-y-[0vw] items-center justify-center">
                   {[0, 1, 2].map((num) => (
@@ -299,13 +299,13 @@ export default function Overview() {
               </div>
             </div>
             <div className="overflow-hidden w-full flex items-center justify-center h-full">
-              <p className="text-[#A8A8A8] subtitle  text-center text-[1vw] tracking-wider font-display">
+              <p className="text-[#A8A8A8] subtitle  text-center text-[1.04vw] tracking-wider font-display">
                 Your X-Selling Ratio
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <div className="text-[10vw]  leading-none">
+          <div className="flex flex-col items-center justify-center gap-[1vw]">
+            <div className="text-[10.4vw]  leading-none">
               <div className="flex h-[9.5vw] overflow-hidden items-start w-fit justify-center">
                 <div className="flex flex-col number6Translate -translate-y-[0vw] items-center justify-center">
                   {[0, 1, 2, 3, 4, 5, 6].map((num) => (
@@ -335,15 +335,15 @@ export default function Overview() {
               </div>
             </div>
             <div className="overflow-hidden w-full flex items-center justify-center h-fit">
-              <p className="text-[#A8A8A8] subtitle  text-center text-[1vw] tracking-wider font-display">
+              <p className="text-[#A8A8A8] subtitle  text-center text-[1.04vw] tracking-wider font-display">
                 Revenue from Retail Products
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="h-fit relative pt-2 text-foreground flex items-end justify-end w-full ">
-        <div className="w-[100vw] h-auto flex items-center justify-center ">
+      <div className="h-fit relative pt-[4vw] text-foreground flex items-end justify-end w-full ">
+        <div className="w-[100vw] h-auto flex items-center justify-center">
           <svg
             className="w-full h-full object-cover"
             width="1920"
@@ -364,7 +364,7 @@ export default function Overview() {
             </p>
           </div>
           <div className="h-fit  w-[42%]">
-            <p className="text-[1vw]  solutionText leading-[1.6] w-[90%] text-[#A8A8A8] ">
+            <p className="text-[1.04vw]  solutionText  w-[95%] text-[#A8A8A8] ">
               Enable seamless digital banking experiences for your customers
               through your mobile app. The Moneylink Super SDK empowers banks
               and fintechs to launch B2B2C services quickly, securely, and at

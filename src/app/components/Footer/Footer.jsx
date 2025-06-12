@@ -4,6 +4,75 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import BackgroundLine from "../BackgroundLine";
 import gsap from "gsap";
+import Link from "next/link";
+
+
+const links = [
+  {
+    name:"Home",
+    link:"/"
+  },
+  {
+    name:"About Us",
+    link:"/"
+  },
+  {
+    name:"Solutions",
+    link:"/"
+  },
+  {
+    name:"Products",
+    link:"/"
+  },
+  {
+    name:"Resources",
+    link:"/"
+  },
+  {
+    name:"Contact",
+    link:"/"
+  }
+]
+const links2 = [
+  {
+    name:"LEGAL",
+    link:"/"
+  },
+  {
+    name:"TERMS & CONDITIONS",
+    link:"/"
+  },
+  {
+    name:"PRIVACY POLICY",
+    link:"/"
+  },
+  {
+    name:"INVESTOR PRIVACY NOTICE",
+    link:"/"
+  },
+  {
+    name:"COOKIES POLICY",
+    link:"/"
+  }
+]
+const socials = [
+  {
+    img:"/assets/icons/fb.svg",
+    link:"/"
+  },
+  {
+    img:"/assets/icons/ig.svg",
+    link:"/"
+  },
+  {
+    img:"/assets/icons/x.svg",
+    link:"/"
+  },
+  {
+    img:"/assets/icons/ld.svg",
+    link:"/"
+  }
+]
 
 export default function Footer() {
   return (
@@ -187,17 +256,10 @@ export default function Footer() {
                 </div>
                 <div className="flex  z-[100]  gap-20 items-start">
                   <div>
-                    {[
-                      "Home",
-                      "About Us",
-                      "Solutions",
-                      "Products",
-                      "Resources",
-                      "Contact",
-                    ].map((item, index) => (
+                    {links.map((item, index) => (
+                      <Link href={item.link} key={index}>
                       <div
-                        key={index}
-                        className="text-white mb-[1vw] text-[1vw] font-medium"
+                        className="text-white mb-[1vw] text-[1.05vw] font-medium"
                       >
                         <div className="flex items-center gap-[.5vw] group justify-start">
                           <div
@@ -207,30 +269,26 @@ export default function Footer() {
                             className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                           ></div>
                           <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                            <a className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
-                              {item}
-                            </a>
-                            <a
+                            <span className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
+                              {item.name}
+                            </span>
+                            <span
                               key={index}
                               className="text-[#A8A8A8] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
                             >
-                              {item}
-                            </a>
+                              {item.name}
+                            </span>
                           </div>
                         </div>
                       </div>
+                      </Link>
                     ))}
                   </div>
                   <div>
-                    {[
-                      "Legal",
-                      "Privacy Policy",
-                      "Terms & Conditions",
-                      "Cookie Policy",
-                      "Investor Privacy Notice",
-                    ].map((item, index) => (
+                    {links2.map((item, index) => (
+                      <Link href={item.link}  key={index}>
                       <div
-                        key={index}
+                       
                         className="text-white  mb-[1vw] text-sm font-medium"
                       >
                         <div className="flex items-center gap-[.5vw] group justify-start">
@@ -241,33 +299,34 @@ export default function Footer() {
                             className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                           ></div>
                           <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                            <a className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
-                              {item}
-                            </a>
-                            <a
+                            <span className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
+                              {item.name}
+                            </span>
+                            <span
                               key={index}
                               className="text-[#A8A8A8] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
                             >
-                              {item}
-                            </a>
+                              {item.name}
+                            </span>
                           </div>
                         </div>
                       </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="w-[45%]  z-[100]   text-[#A8A8A8] py-[5vw] flex flex-col h-[90%] items-end justify-between gap-16">
-                <p className=" text-[1vw] w-full">
+                <p className=" text-[1.05vw] w-full">
                   Integrate the Moneylink Super SDK and start delivering
                   seamless, scalable banking services within your mobile app —
-                  faster than ever. Let’s build the future of finance together.
+                  faster than ever. Let&apos;s build the future of finance together.
                 </p>
                 <div className="w-full flex  items-start justify-center flex-col">
-                  <p className="text-[2.6vw]">info@monielink.Io</p>
+                  <p className="text-[3.125vw] font-display">info@monielink.Io</p>
                   <div className="pt-2 flex  items-start gap-2">
-                    {["fb", "ld", "x", "ig"].map((item, index) => (
-                      <div
+                    {socials.map((item, index) => (
+                      <Link href={item.link}
                         key={index}
                         style={{
                           clipPath:
@@ -276,19 +335,19 @@ export default function Footer() {
                         className="bg-background w-[4vw] h-[4vw]  flex items-center justify-center"
                       >
                         <Image
-                          src={`/assets/${item}.svg`}
+                          src={item.img}
                           width={5}
                           height={5}
                           alt="socialIcons"
                           className="w-[25%] h-[25%] object-contain"
                         />
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-full  z-[100]  h-[10%] flex items-end justify-between text-[#A8A8A8] text-[1vw]">
+            <div className="w-full  z-[100]  h-[10%] flex items-end justify-between text-[#A8A8A8] text-[1.05vw]">
               <p>Copyright © Monielink 2025</p>
               <p>By : Enigma Digital</p>
             </div>

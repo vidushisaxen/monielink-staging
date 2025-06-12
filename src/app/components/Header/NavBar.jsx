@@ -1,10 +1,12 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import Image from "next/image";
 import { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const links = [
   {
@@ -30,58 +32,96 @@ const links = [
 ];
 
 export default function NavBar() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [hidden, setHidden] = useState(false);
+  const [lastY, setLastY] = useState(0);
+  const [isInverted, setIsInverted] = useState(false);
+  const [isWhite, setIsWhite] = useState(false);
 
   useEffect(() => {
+    const triggers = [];
+
+    document.querySelectorAll(".dark").forEach((section) => {
+      const trigger = ScrollTrigger.create({
+        trigger: section,
+        start: "top top", 
+        end: "bottom top",
+        onEnter: () => setIsInverted(true),
+        onEnterBack: () => setIsInverted(true),
+        onLeave: () => setIsInverted(false),
+        onLeaveBack: () => setIsInverted(false),
+      });
+
+      triggers.push(trigger);
+    });
+
+    return () => {
+      triggers.forEach((trigger) => trigger.kill());
+    };
+  }, []);
+  useEffect(() => {
+    const triggers = [];
+
+    document.querySelectorAll(".white").forEach((section) => {
+      const trigger = ScrollTrigger.create({
+        trigger: section,
+        start: "top top", 
+        end: "bottom top",
+        onEnter: () => setIsWhite(true),
+        onEnterBack: () => setIsWhite(true),
+        onLeave: () => setIsWhite(false),
+        onLeaveBack: () => setIsWhite(false),
+      });
+
+      triggers.push(trigger);
+    });
+
+    return () => {
+      triggers.forEach((trigger) => trigger.kill());
+    };
+  }, []);
+  useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-      if (currentScrollPos > prevScrollPos) {
-        gsap.to("#nav", {
-          y: "-100%",
-          duration: 1,
-          ease: "power2.out",
-        });
+      const currentY = window.scrollY;
+
+      if (currentY > lastY && currentY > 100) {
+        setHidden(true);
+      } else if (currentY < lastY) {
+        setHidden(false);
       }
-      if (currentScrollPos < prevScrollPos) {
-        gsap.to("#nav", {
-          y: "0%",
-          duration: 1,
-          ease: "power2.out",
-        });
-      }
+
+      setLastY(currentY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, [lastY]);
 
   return (
     <header
       id="nav"
-      className={`w-screen z-50 flex flex-col items-center justify-center fixed inset-0 px-[2.55vw] py-[1.51vw] h-fit `}
+      className={` flex flex-col items-center justify-center fixed inset-0 px-[2.55vw] op-0 left-0 right-0 z-[300] transform transition-transform duration-300 w-screen py-[1.51vw] h-fit  ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
     >
       <div className="relative h-full w-full">
         <div className="w-[95vw] h-auto  flex items-center justify-center">
           <Image
             className="h-full w-full "
-            src={"/assets/Union.svg"}
+            src={"/assets/icons/Union.svg"}
             alt="logo"
             width={100}
             height={100}
           />
         </div>
         <div style={{
-          clipPath: "polygon(15% 28%, 85% 28%, 86% 0, 100% 0, 100% 100%, 0 100%, 0 0, 13% 0)",
+          clipPath: "polygon(16% 28%, 84% 28%, 86% 0, 100% 0, 100% 100%, 0 100%, 0 0, 14.5% 0)",
 
-        }} className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-xs h-[97%] w-[99%] rounded-xl   "></div>
+        }} className={`absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-md h-[96%] w-[99.8%] rounded-xl ${isWhite ? " bg-black/30" : ""}`}></div>
       </div>
       <nav className="h-auto w-screen absolute top-0 left-0 flex justify-between items-center px-[4vw] py-[3.5vw] ">
         <Link
           href={"/"}
-          className="w-[12vw] h-full flex items-center justify-center backdrop-blur-2xl "
+          className={`w-[12vw] h-full flex items-center justify-center ${isInverted ? " brightness-[16]" : ""}`}
         >
           <svg
             width="200"
@@ -125,15 +165,15 @@ export default function NavBar() {
                 style={{
                   animation: "pulse .5s infinite",
                 }}
-                className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+                className={`w-[.3vw] h-[0vw] group-hover:h-[1vw]  transition-all duration-200 ${isInverted ? "group-hover:bg-white" : "group-hover:bg-orange-500"}`}
               ></div>
               <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                <span className="text-[#D6D6D6] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw] ">
+                <span className={` group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw]  ${isWhite ? " text-white" : "text-[#D6D6D6]"} `}>
                   {item.name}
                 </span>
                 <span
                   key={index}
-                  className="text-[#D6D6D6] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
+                  className={` absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[0.95vw]   ${isWhite ? " text-white" : "text-[#D6D6D6]"} `}
                 >
                   {item.name}
                 </span>

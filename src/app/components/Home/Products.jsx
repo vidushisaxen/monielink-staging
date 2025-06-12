@@ -13,6 +13,58 @@ import { SplitText } from "gsap/SplitText";
 import BackgroundLine from "../BackgroundLine";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
+
+const data =[
+  {
+    cardImage: "/assets/icons/Cards.svg",
+    logo: "/assets/icons/logo/scanPay.svg",
+    items: [
+      "Digital Accounts",
+      "Pre-Paid Accounts",
+      "Reward Account Loyalty",
+      "Redemption Account",
+      "Credit Card Account",
+      "Loan Account",
+    ],
+  },
+  {
+    cardImage: "/assets/icons/Cards.svg",
+    logo: "/assets/icons/logo/Balance.svg",
+    items: [
+      "Digital Accounts",
+      "Pre-Paid Accounts",
+      "Reward Account Loyalty",
+      "Redemption Account",
+      "Credit Card Account",
+      "Loan Account",
+    ],
+  },
+  {
+    cardImage: "/assets/icons/Cards.svg",
+    logo: "/assets/icons/logo/snapCreed.svg",
+    items: [
+      "Digital Accounts",
+      "Pre-Paid Accounts",
+      "Reward Account Loyalty",
+      "Redemption Account",
+      "Credit Card Account",
+      "Loan Account",
+    ],
+  },
+  {
+    cardImage: "/assets/icons/Cards.svg",
+    logo: "/assets/icons/logo/snapCreed.svg",
+    items: [
+      "Digital Accounts",
+      "Pre-Paid Accounts",
+      "Reward Account Loyalty",
+      "Redemption Account",
+      "Credit Card Account",
+      "Loan Account",
+    ],
+  },
+];
+
 export default function Products() {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,13 +105,13 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="h-[150vh] w-full relative  flex flex-col items-center justify-center"
+      className="h-[150vh] w-full relative  flex flex-col items-center justify-center bg-[#050505]"
     >
       <BackgroundLine />
-      <div className="absolute top-0 left-0  h-[150vh] w-full flex  flex-col items-center justify-center">
-        <p className="text-foreground productsText text-[5vw] w-[60%] text-center leading-[1.25] font-display">
+      <div className="absolute top-0 left-0  h-full w-full flex  flex-col items-center justify-center py-[10vw] gap-[3vw]">
+        <h2 className="text-foreground productsText text-[5.2vw] w-[60%] text-center leading-[1.25] font-display capitalize pb-[5vw]">
           Everything You Need to Power Digital Banking
-        </p>
+        </h2>
 
         <Swiper
           modules={[Navigation]}
@@ -72,56 +124,7 @@ export default function Products() {
           slidesPerView={3}
           className="h-fit mySwiper flex items-center justify-center p-[3vw] w-screen "
         >
-          {[
-            {
-              cardImage: "/assets/Cards.svg",
-              logo: "/assets/logo/scanPay.svg",
-              items: [
-                "Digital Accounts",
-                "Pre-Paid Accounts",
-                "Reward Account Loyalty",
-                "Redemption Account",
-                "Credit Card Account",
-                "Loan Account",
-              ],
-            },
-            {
-              cardImage: "/assets/Cards.svg",
-              logo: "/assets/logo/Balance.svg",
-              items: [
-                "Digital Accounts",
-                "Pre-Paid Accounts",
-                "Reward Account Loyalty",
-                "Redemption Account",
-                "Credit Card Account",
-                "Loan Account",
-              ],
-            },
-            {
-              cardImage: "/assets/Cards.svg",
-              logo: "/assets/logo/snapCreed.svg",
-              items: [
-                "Digital Accounts",
-                "Pre-Paid Accounts",
-                "Reward Account Loyalty",
-                "Redemption Account",
-                "Credit Card Account",
-                "Loan Account",
-              ],
-            },
-            {
-              cardImage: "/assets/Cards.svg",
-              logo: "/assets/logo/snapCreed.svg",
-              items: [
-                "Digital Accounts",
-                "Pre-Paid Accounts",
-                "Reward Account Loyalty",
-                "Redemption Account",
-                "Credit Card Account",
-                "Loan Account",
-              ],
-            },
-          ].map((card, cardIndex) => (
+          {data.map((card, cardIndex) => (
             <SwiperSlide key={cardIndex}>
               <div className="card relative h-full w-full">
                 <div className="h-full  w-full relative">
@@ -154,7 +157,7 @@ export default function Products() {
                         } items-center py-2 justify-center`}
                         key={index}
                       >
-                        <p className="text-[1vw]" key={index}>
+                        <p className="text-[0.95vw]" key={index}>
                           {item}
                         </p>
                       </div>

@@ -75,15 +75,15 @@ export default function Hero({}) {
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground`}
         >
           <h1
-            className={`text-[8vw]
-               font-display leading-[9.5vw] w-[70%] text-center headingText text-[#D6D6D6]`}
+            className={`text-[7.815vw]
+               font-display leading-[1.1] w-[70%] text-center headingText text-[#D6D6D6]`}
           >
             Powerful Neobank Platform
           </h1>
 
           <div
-            className={`w-[55%] pt-5
-            text-center text-[1vw] tracking-wide`}
+            className={`w-[60%] pt-5
+            text-center text-[1.04vw] tracking-wide`}
           >
             <p
               className="text-[#A8A8A8] descriptionText"
@@ -96,11 +96,12 @@ export default function Hero({}) {
             </p>
           </div>
           <div className="flex items-center pt-12 gap-5">
-            <ButtonComponent text="Talk to an expert" borderColor="white" />
+            <ButtonComponent text="Talk to an expert" borderColor="white" link={"/"} />
             <ButtonComponent
               text="Talk to an expert"
               borderTrue
               bgColor="false"
+              link={"/"}
             />
           </div>
         </div>

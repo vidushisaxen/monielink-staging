@@ -11,9 +11,7 @@ import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
 import Blogs from "./components/Home/Blogs";
 import Clients from "./components/Home/Clients";
-import BackgroundLine from "./components/BackgroundLine";
 import CTA from "./components/Footer/CTA";
-import HeroBackground from "./components/Hero/HeroBackground";
 
 const page = () => {
   return (
@@ -21,7 +19,7 @@ const page = () => {
       <NavBar />
       <Hero />
       <Overview />
-      {/* <Solutions /> */}
+      <Solutions />
       <USPs />
       <Products />
       <Intro />

@@ -103,16 +103,16 @@ export default function USPs() {
   return (
     <section
       id="usps"
-      className="h-fit py-[11vw] flex items-center flex-col justify-center w-screen bg-gradient-to-r from-[#FF5100] to-[#FE6E00]"
+      className="h-fit py-[11vw] flex items-center flex-col justify-center w-screen bg-gradient-to-r from-[#FF5100] to-[#FE6E00] dark"
     >
-      <h2 className="text-white w-[80%] text-[5vw] mb-[6vw] text-center font-display leading-[1.25] uspsText">
-        Scalable, Secure, and Cost-Efficient Banking Infrastructure
+      <h2 className="text-white w-[77%] text-[5vw] mb-[8vw] text-center font-display leading-[1.25] uspsText">
+        Scalable, Secure, and Cost- Efficient Banking Infrastructure
       </h2>
       <div className="flex items-center justify-center w-full flex-col gap-16">
         <div className="flex items-center gap-20 h-full w-full justify-center">
           <div className="w-[40%] items-end justify-end flex h-full">
             <svg
-              className="h-1/3 w-1/3"
+              className="h-[13vw] w-[13vw]"
               width="249"
               height="250"
               viewBox="0 0 249 250"
@@ -134,9 +134,9 @@ export default function USPs() {
             </svg>
           </div>
           <div className="flex items-start w-[60%] iconText justify-center font-body flex-col gap-6 h-full text-white">
-            <p className="text-[1.6vw] subText">Cloud Based Implementation</p>
-            <p className="text-[1vw] w-[45%] subText leading-1.1 tracking-wide">
-              Deploy dedicated cloud instances with partner-managed access
+            <p className="text-[1.56vw] subText font-display">Cloud Based Implementation</p>
+            <p className="text-[1.04vw] w-[48%] subText  tracking-wide">
+              Deploy dedicated cloud instances with partner- managed access
               control and firewalls.
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function USPs() {
         <div className="flex items-center gap-20 h-full w-full justify-center">
           <div className="w-[40%] items-end justify-end flex h-full">
             <svg
-              className="h-1/3 w-1/3"
+              className="h-[13vw] w-[13vw]"
               width="249"
               height="250"
               viewBox="0 0 249 250"
@@ -173,8 +173,8 @@ export default function USPs() {
             </svg>
           </div>
           <div className="flex items-start w-[60%] iconText justify-center font-body flex-col gap-6 h-full text-white">
-            <p className="text-[1.6vw] subText">Secure environments</p>
-            <p className="text-[1vw] w-[45%] subText leading-1.1 tracking-wide">
+            <p className="text-[1.56vw] subText font-display">Secure environments</p>
+            <p className="text-[1.04vw] w-[40%] subText  tracking-wide">
               Meet regulatory compliance with secure, isolated environments at
               lower cost and higher efficiency than on-premise systems.
             </p>
@@ -184,7 +184,7 @@ export default function USPs() {
         <div className="flex items-center gap-20 h-full w-full justify-center">
           <div className="w-[40%] items-end justify-end flex h-full">
             <svg
-              className="h-1/3 w-1/3"
+              className="h-[13vw] w-[13vw]"
               width="249"
               height="250"
               viewBox="0 0 249 250"
@@ -216,8 +216,8 @@ export default function USPs() {
             </svg>
           </div>
           <div className="flex items-start w-[60%] iconText justify-center font-body flex-col gap-6 h-full text-white">
-            <p className="text-[1.6vw] subText">Dedicated Instant SaaS</p>
-            <p className="text-[1vw] w-[45%] subText leading-1.1 tracking-wide">
+            <p className="text-[1.56vw] subText font-display">Dedicated Instant SaaS</p>
+            <p className="text-[1.04vw] w-[35%] subText  tracking-wide">
               Eliminate heavy upfront licensing costs with our revenue-sharing
               SaaS model.
             </p>
@@ -252,8 +252,8 @@ export default function USPs() {
             </svg>
           </div>
           <div className="flex items-start w-[60%] iconText justify-center font-body flex-col gap-6 h-full text-white">
-            <p className="text-[1.6vw] subText">Seamless integration</p>
-            <p className="text-[1vw] w-[45%] subText leading-1.1 tracking-wide">
+            <p className="text-[1.56vw] subText font-display">Seamless integration</p>
+            <p className="text-[1.04vw] w-[50%] subText  tracking-wide">
               Seamlessly integrate digital banking experiences using our Super
               SDK front-end and dedicated cloud back-end — fully managed on
               Monielink Infrastructure.
@@ -261,9 +261,9 @@ export default function USPs() {
           </div>
         </div>
       </div>
-      <div className="flex items-center overflow-hidden h-[70vh] pt-[10vw] text-white font-display flex-col justify-center mt-[5vw]">
-        <h2 className="text-[7vw] sdkText leading-[1]">One SDK.</h2>
-        <h2 className="text-[7vw] sdkText leading-[1]">
+      <div className="flex items-center overflow-hidden pt-[10vw] text-white  flex-col justify-center">
+        <h2 className="text-[7.3vw] sdkText leading-[1.2] font-display">One SDK.</h2>
+        <h2 className="text-[7.3vw] sdkText leading-[1.2] font-display">
           Endless Possibilities.
         </h2>
       </div>

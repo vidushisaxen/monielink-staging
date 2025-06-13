@@ -14,7 +14,7 @@ const page = () => {
    {/* <Hero/> */}
    {/* <Solutions2/> */}
    {/* <Overview2/> */}
-   {/* <Clients2/> */}
+   <Clients2/>
    <FAQs/>
    </>
   )

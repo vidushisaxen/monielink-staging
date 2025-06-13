@@ -18,7 +18,7 @@ export default function ButtonComponent({
         style={{
           clipPath: "polygon(0 0, 92% 0, 100% 19%, 100% 100%, 7% 100%, 0 83%)",
         }}
-        className={`${bgColor ? "bg-transparent" : "bg-orange-500"} ${
+        className={`${bgColor ? "bg-transparent" : "bg-gradient"} ${
           borderTrue ? `border border-${borderColor}` : ""
         } p-1 rounded-sm `}
       >

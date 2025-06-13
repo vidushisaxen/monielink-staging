@@ -39,8 +39,8 @@ export default function Overview2() {
   }, []);
 
   return (
-    <section id="overview" className="h-fit w-full pt-[10vw] bg-background">
-      <div className="h-fit relative pt-[4vw] text-foreground flex items-end justify-end w-full ">
+    <section id="overview" className="h-fit w-full bg-background ">
+      <div className="h-fit relative text-foreground flex w-full ">
         <div className="w-[100vw] h-auto flex items-center justify-center">
           <svg 
             ref={svgRef}

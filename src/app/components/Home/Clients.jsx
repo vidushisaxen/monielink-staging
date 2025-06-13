@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import AnimatedClients from "./Clients2";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Clients() {
@@ -49,90 +50,7 @@ export default function Clients() {
       className="h-[130vh]  w-screen flex items-center justify-center relative bg-[#050505] pb-[4vw]"
     >
       <div className="w-screen  h-full py-2 ">
-        <svg
-          className="w-full h-full object-cover"
-          id="mySVG"
-          width="1920"
-          height="1080"
-          viewBox="0 0 1920 1248"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g className="rings">
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="1246.93"
-              rx="623.463"
-              transform="matrix(-1 0 0 1 3044.1 0.015625)"
-              stroke="#282828"
-            />
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="1068.54"
-              rx="534.268"
-              transform="matrix(-1 0 0 1 3044.1 89.2109)"
-              stroke="#282828"
-            />
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="874.343"
-              rx="437.171"
-              transform="matrix(-1 0 0 1 3044.1 186.307)"
-              stroke="#282828"
-            />
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="695.088"
-              rx="347.544"
-              transform="matrix(-1 0 0 1 3044.1 275.904)"
-              stroke="#282828"
-            />
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="515.833"
-              rx="257.916"
-              transform="matrix(-1 0 0 1 3044.1 365.531)"
-              stroke="#282828"
-            />
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="351.515"
-              rx="175.758"
-              transform="matrix(-1 0 0 1 3044.1 447.691)"
-              stroke="#282828"
-            />
-            <rect
-              x="-0.5"
-              y="0.5"
-              width="1853.81"
-              height="181.113"
-              rx="90.5565"
-              transform="matrix(-1 0 0 1 3044.1 529.852)"
-              stroke="#282828"
-            />
-          </g>
-
-          <line
-            x1="-12.8145"
-            y1="624.833"
-            x2="2159.68"
-            y2="624.833"
-            stroke="#282828"
-            className="center-line"
-          />
-        </svg>
+        <AnimatedClients/>
       </div>
       <div className=" absolute w-screen h-screen top-0 left-0 flex items-center justify-center">
         <div className="w-1/2 h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">

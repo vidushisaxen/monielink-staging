@@ -88,20 +88,16 @@ export default function FAQs() {
          <div key={index} className="relative mb-[3vw] w-full h-full">
          {/* Outer Gradient Layer with Clip-Path */}
          <div
-           className="absolute inset-0 z-0 overflow-hidden rounded-[1vw]"
+           className="inset-0 z-0 overflow-hidden rounded-[1vw] p-[1px] relative animate-border"
            style={{
              clipPath:
                "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
            }}
          >
-           <div className="w-full h-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-border" />
-         </div>
-       
          {/* Inner Gray Content Box */}
          <div style={{
-             clipPath:
-               "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
-           }} className="relative z-10 m-[1px] rounded-[1vw] bg-[#E5E5E5] p-[2vw]">
+            clipPath: "polygon(0% 0%, calc(10% - 1px) 0%, calc(15% - 1px) 2vw, calc(85% + 1px) 2vw, calc(90% + 1px) 0%, 100% 0%, 100% 100%, 0% 100%)",
+           }} className="relative z-10 bg-[#E5E5E5] p-[2vw] rounded-[1vw]">
            <AccordionItem key={`item-${index + 1}`} value={`item-${index + 1}`}>
              <AccordionTrigger index={index} className="font-display">
                {faq.question}
@@ -111,6 +107,8 @@ export default function FAQs() {
              </AccordionContent>
            </AccordionItem>
          </div>
+         </div>
+
        </div>
        
          

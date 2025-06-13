@@ -12,6 +12,8 @@ import Footer from "./components/Footer/Footer";
 import Blogs from "./components/Home/Blogs";
 import Clients from "./components/Home/Clients";
 import CTA from "./components/Footer/CTA";
+import Overview2 from "./components/Home/Overview2";
+import Solutions2 from "./components/Home/Solutions2";
 
 const page = () => {
   return (
@@ -19,7 +21,9 @@ const page = () => {
       <NavBar />
       <Hero />
       <Overview />
+      {/* <Overview2/> */}
       <Solutions />
+      {/* <Solutions2/> */}
       <USPs />
       <Products />
       <Intro />

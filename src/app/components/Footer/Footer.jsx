@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import BackgroundLine from "../BackgroundLine";
 import gsap from "gsap";
 import Link from "next/link";
+import DecryptedText from "../DecryptedText";
 
 
 const links = [
@@ -269,16 +270,11 @@ export default function Footer() {
                             className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                           ></div>
                           <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                            <span className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
-                              {item.name}
-                            </span>
-                            <span
-                              key={index}
-                              className="text-[#A8A8A8] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
-                            >
-                              {item.name}
-                            </span>
-                          </div>
+  <span className="text-[#A8A8A8] uppercase text-[1vw]">
+   <DecryptedText text={item.name}/>
+  </span>
+</div>
+
                         </div>
                       </div>
                       </Link>
@@ -298,17 +294,11 @@ export default function Footer() {
                             }}
                             className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                           ></div>
-                          <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                            <span className="text-[#A8A8A8] group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[1vw] ">
-                              {item.name}
-                            </span>
-                            <span
-                              key={index}
-                              className="text-[#A8A8A8] absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[.9vw] "
-                            >
-                              {item.name}
-                            </span>
-                          </div>
+                         <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+  <span className="text-[#A8A8A8] uppercase text-[1vw]">
+   <DecryptedText text={item.name}/>
+  </span>
+</div>
                         </div>
                       </div>
                       </Link>

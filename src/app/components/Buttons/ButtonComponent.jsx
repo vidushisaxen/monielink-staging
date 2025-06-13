@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DecryptedText from "../DecryptedText";
 
 export default function ButtonComponent({
   text,
@@ -42,7 +43,7 @@ export default function ButtonComponent({
                 darkTheme ? "text-black" : "text-white"
               }`}
             >
-              {text}
+              <DecryptedText text={text}/>
             </p>
             <div style={{
               width: chevronSize ? chevronSize : "1.5vw",

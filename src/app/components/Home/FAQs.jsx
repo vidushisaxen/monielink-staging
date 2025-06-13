@@ -85,24 +85,36 @@ export default function FAQs() {
       <div className="m-[5vw] w-[80vw]">
         <Accordion className="w-full font-display" type="single" collapsible>
           {data.map((faq, index) => (
-            <div
-              key={index}
-              style={{
-                clipPath:
-                  "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
-              }}
-              className="faqBox opacity-0 p-8 mb-[3vw] bg-[#F0F0F0] rounded-2xl border-2 border-[#E0E0E0] w-full"
-            >
-              <AccordionItem
-                key={`item-${index + 1}`}
-                value={`item-${index + 1}`}
-              >
-                <AccordionTrigger index={index} className="font-display">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-[1.05vw]">{faq.answer}</AccordionContent>
-              </AccordionItem>
-            </div>
+         <div key={index} className="relative mb-[3vw] w-full h-full">
+         {/* Outer Gradient Layer with Clip-Path */}
+         <div
+           className="absolute inset-0 z-0 overflow-hidden rounded-[1vw]"
+           style={{
+             clipPath:
+               "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
+           }}
+         >
+           <div className="w-full h-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-border" />
+         </div>
+       
+         {/* Inner Gray Content Box */}
+         <div style={{
+             clipPath:
+               "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
+           }} className="relative z-10 m-[1px] rounded-[1vw] bg-[#E5E5E5] p-[2vw]">
+           <AccordionItem key={`item-${index + 1}`} value={`item-${index + 1}`}>
+             <AccordionTrigger index={index} className="font-display">
+               {faq.question}
+             </AccordionTrigger>
+             <AccordionContent className="text-[1.05vw]">
+               {faq.answer}
+             </AccordionContent>
+           </AccordionItem>
+         </div>
+       </div>
+       
+         
+          
           ))}
         </Accordion>
       </div>

@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function HeroBackground() {
-  const cellCount = 1800;
+  const cellCount = 3000;
   const cellsRef = useRef([]);
 
   useEffect(() => {

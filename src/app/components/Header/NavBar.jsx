@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import DecryptedText from "../DecryptedText";
 gsap.registerPlugin(ScrollTrigger);
 
 const links = [
@@ -99,7 +100,7 @@ export default function NavBar() {
   return (
     <header
       id="nav"
-      className={` flex flex-col items-center justify-center fixed inset-0 px-[2.55vw] op-0 left-0 right-0 z-[300] transform transition-transform duration-300 w-screen py-[1.51vw] h-fit  ${
+      className={` flex flex-col items-center justify-center fixed inset-0 px-[2.55vw] op-0 left-0 right-0 z-[300] transform transition-transform duration-300 w-screen py-[1.51vw] h-fit  pointer-events-none ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
@@ -159,7 +160,7 @@ export default function NavBar() {
             <Link
               href={"/"}
               key={index}
-              className="flex items-center gap-[.5vw] group justify-center"
+              className="flex items-center gap-[.5vw] group justify-center pointer-events-auto"
             >
               <div
                 style={{
@@ -168,16 +169,11 @@ export default function NavBar() {
                 className={`w-[.3vw] h-[0vw] group-hover:h-[1vw]  transition-all duration-200 ${isInverted ? "group-hover:bg-white" : "group-hover:bg-orange-500"}`}
               ></div>
               <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                <span className={` group-hover:translate-y-[-2vw] transition-all duration-400 uppercase text-[.9vw]  ${isWhite ? " text-white" : "text-[#D6D6D6]"} `}>
-                  {item.name}
-                </span>
-                <span
-                  key={index}
-                  className={` absolute top-0 translate-y-[5vw] group-hover:translate-y-0 transition-all duration-400 left-0 uppercase text-[0.95vw]   ${isWhite ? " text-white" : "text-[#D6D6D6]"} `}
-                >
-                  {item.name}
-                </span>
-              </div>
+  <span className={`uppercase text-[.9vw] ${isWhite ? "text-white" : "text-[#D6D6D6]"}`}>
+    <DecryptedText text={item.name}/>
+  </span>
+</div>
+
             </Link>
           ))}
         </div>

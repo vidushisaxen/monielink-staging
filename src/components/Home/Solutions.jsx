@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Solutions() {
   return (
     <section
-      className="w-screen h-fit flex flex-col bg-background mt-[-30%] relative z-[2]  items-center justify-center"
+      className="w-screen h-fit flex flex-col bg-background relative z-[2]  items-center justify-center"
       id="overview"
     >
       <div className="border-t w-full flex items-center justify-center border-b border-[#282828]  ">

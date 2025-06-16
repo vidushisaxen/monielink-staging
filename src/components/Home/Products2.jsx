@@ -1,5 +1,5 @@
 "use client";
-import SwiperButton from "@/app/components/Buttons/SwiperButton";
+import SwiperButton from "@/components/Buttons/SwiperButton";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";

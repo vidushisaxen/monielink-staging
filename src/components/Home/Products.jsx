@@ -1,5 +1,5 @@
 "use client";
-import SwiperButton from "@/app/components/Buttons/SwiperButton";
+import SwiperButton from "@/components/Buttons/SwiperButton";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";
@@ -11,10 +11,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import BackgroundLine from "../BackgroundLine";
+import Copy from "../Animations/Copy";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 
-const data =[
+const data = [
   {
     cardImage: "/assets/icons/Cards.svg",
     logo: "/assets/icons/logo/scanPay.svg",
@@ -109,9 +110,11 @@ export default function Products() {
     >
       <BackgroundLine />
       <div className="absolute top-0 left-0  h-full w-full flex  flex-col items-center justify-center py-[10vw] gap-[3vw]">
-        <h2 className="text-foreground productsText text-[5.2vw] w-[60%] text-center leading-[1.25] font-display capitalize pb-[5vw]">
-          Everything You Need to Power Digital Banking
-        </h2>
+        <Copy>
+          <h2 className="text-foreground productsText text-[5.2vw] w-[60%] text-center leading-[1.25] font-display capitalize pb-[5vw]">
+            Everything You Need to Power Digital Banking
+          </h2>
+        </Copy>
 
         <Swiper
           modules={[Navigation]}
@@ -152,9 +155,8 @@ export default function Products() {
                   <div className="py-[1vw] flex  text-[#A8A8A8] items-center flex-col">
                     {card.items.map((item, index) => (
                       <div
-                        className={`flex w-full ${
-                          index !== 5 ? "border-b border-[#282828]" : ""
-                        } items-center py-2 justify-center`}
+                        className={`flex w-full ${index !== 5 ? "border-b border-[#282828]" : ""
+                          } items-center py-2 justify-center`}
                         key={index}
                       >
                         <p className="text-[0.95vw]" key={index}>

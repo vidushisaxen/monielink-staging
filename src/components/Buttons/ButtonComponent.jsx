@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import DecryptedText from "../DecryptedText";
+// import DecryptedText from "../DecryptedText";
 
 export default function ButtonComponent({
   text,
@@ -10,17 +10,17 @@ export default function ButtonComponent({
   darkTheme,
   textSize,
   chevronSize,
-  link
+  link,
+  ...props
 }) {
   return (
-    <Link href={`${link}`} className="flex cursor-pointer justify-center items-center w-fit h-fit">
+    <Link href={`${link}`} className="flex cursor-pointer justify-center items-center w-fit h-fit" {...props}>
       <div
         style={{
           clipPath: "polygon(0 0, 92% 0, 100% 19%, 100% 100%, 7% 100%, 0 83%)",
         }}
-        className={`${bgColor ? "bg-transparent" : "bg-gradient"} ${
-          borderTrue ? `border border-${borderColor}` : ""
-        } p-1 rounded-sm `}
+        className={`${bgColor ? "bg-transparent" : "bg-gradient"} ${borderTrue ? `border border-${borderColor}` : ""
+          } p-1 rounded-sm `}
       >
         <div
           style={{
@@ -39,11 +39,11 @@ export default function ButtonComponent({
               style={{
                 fontSize: textSize ? textSize : ".9vw",
               }}
-              className={` ${
-                darkTheme ? "text-black" : "text-white"
-              }`}
+              className={` ${darkTheme ? "text-black" : "text-white"
+                }`}
             >
-              <DecryptedText text={text}/>
+              {text}
+              {/* <DecryptedText text={text} /> */}
             </p>
             <div style={{
               width: chevronSize ? chevronSize : "1.5vw",

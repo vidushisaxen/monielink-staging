@@ -1,77 +1,73 @@
 "use client";
-import SwiperButton from "@/components/Buttons/SwiperButton";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
 import BackgroundLine from "../BackgroundLine";
-import gsap from "gsap";
 import Link from "next/link";
 import DecryptedText from "../DecryptedText";
 
-
 const links = [
   {
-    name:"Home",
-    link:"/"
+    name: "Home",
+    link: "/"
   },
   {
-    name:"About Us",
-    link:"/"
+    name: "About Us",
+    link: "/"
   },
   {
-    name:"Solutions",
-    link:"/"
+    name: "Solutions",
+    link: "/"
   },
   {
-    name:"Products",
-    link:"/"
+    name: "Products",
+    link: "/"
   },
   {
-    name:"Resources",
-    link:"/"
+    name: "Resources",
+    link: "/"
   },
   {
-    name:"Contact",
-    link:"/"
+    name: "Contact",
+    link: "/"
   }
 ]
 const links2 = [
   {
-    name:"LEGAL",
-    link:"/"
+    name: "LEGAL",
+    link: "/"
   },
   {
-    name:"TERMS & CONDITIONS",
-    link:"/"
+    name: "TERMS & CONDITIONS",
+    link: "/"
   },
   {
-    name:"PRIVACY POLICY",
-    link:"/"
+    name: "PRIVACY POLICY",
+    link: "/"
   },
   {
-    name:"INVESTOR PRIVACY NOTICE",
-    link:"/"
+    name: "INVESTOR PRIVACY NOTICE",
+    link: "/"
   },
   {
-    name:"COOKIES POLICY",
-    link:"/"
+    name: "COOKIES POLICY",
+    link: "/"
   }
 ]
 const socials = [
   {
-    img:"/assets/icons/fb.svg",
-    link:"/"
+    img: "/assets/icons/fb.svg",
+    link: "/"
   },
   {
-    img:"/assets/icons/ig.svg",
-    link:"/"
+    img: "/assets/icons/ig.svg",
+    link: "/"
   },
   {
-    img:"/assets/icons/x.svg",
-    link:"/"
+    img: "/assets/icons/x.svg",
+    link: "/"
   },
   {
-    img:"/assets/icons/ld.svg",
-    link:"/"
+    img: "/assets/icons/ld.svg",
+    link: "/"
   }
 ]
 
@@ -80,136 +76,44 @@ export default function Footer() {
     <div className="relative" id="footer">
       <BackgroundLine />
       <footer
-        className="h-screen absolute inset-0  z-[40] flex items-center justify-center w-full "
+        className="h-screen absolute inset-0 z-[40] flex items-center justify-center w-full "
         id="footer"
       >
-        <div className="w-full h-full flex items-center justify-center relative ">
+        <div className="w-full h-full flex items-center justify-center relative">
           <div className="w-screen h-screen absolute top-0 left-0">
-            <svg
-              width="1920"
-              height="100%"
-              viewBox="0 0 1920 987"
-              fill="none"
-              className="w-full h-full"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <foreignObject
-                x="-6.6"
-                y="0.024025"
-                width="1933.2"
-                height="1005.35"
-              >
-                <div xmlns="http://www.w3.org/1999/xhtml"></div>
+            <svg className="w-full h-full" width="1934" height="1006" viewBox="0 0 1934 1006" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <foreignObject x="0.400002" y="0.400002" width="1933.2" height="1005.35">
+                <div xmlns="http://www.w3.org/1999/xhtml" style={{backdropFilter: 'blur(10px)', clipPath: 'url(#bgblur_0_3134_158_clip_path)', height:'100%', width:'100%'}}></div>
               </foreignObject>
-              <g
-                filter="url(#filter0_d_73_700893)"
-                data-figma-bg-blur-radius="20"
-              >
-                <mask
-                  id="path-1-outside-1_73_700893"
-                  maskUnits="userSpaceOnUse"
-                  x="74"
-                  y="78.624"
-                  width="1772"
-                  height="845"
-                  fill="black"
-                >
-                  <rect
-                    fill="white"
-                    x="74"
-                    y="78.624"
-                    width="1772"
-                    height="845"
-                  />
-                  <path d="M934.287 79.624C934.848 79.624 935.377 79.8633 935.793 80.2402L1019.47 156.139C1021.31 157.807 1023.7 158.731 1026.18 158.731H1825C1836.05 158.731 1845 167.686 1845 178.731V901.77C1845 912.815 1836.05 921.769 1825 921.77H95C83.9543 921.77 75 912.815 75 901.77V99.624C75 88.5783 83.9543 79.624 95 79.624H934.287Z" />
+              <g filter="url(#filter0_d_3134_158)" data-figma-bg-blur-radius="20">
+                <mask id="path-1-outside-1_3134_158" maskUnits="userSpaceOnUse" x="81" y="79" width="1772" height="845" fill="black">
+                  <rect fill="white" x="81" y="79" width="1772" height="845" />
+                  <path d="M941.287 80C941.848 80 942.377 80.2393 942.793 80.6162V80.6162L1026.47 156.515C1028.31 158.183 1030.7 159.107 1033.18 159.107H1832C1843.05 159.107 1852 168.062 1852 179.107V902.146C1852 913.191 1843.05 922.145 1832 922.146H102C90.9543 922.146 82 913.191 82 902.146V100C82 88.9543 90.9543 80 102 80H941.287Z" />
                 </mask>
-                <path
-                  d="M934.287 79.624C934.848 79.624 935.377 79.8633 935.793 80.2402L1019.47 156.139C1021.31 157.807 1023.7 158.731 1026.18 158.731H1825C1836.05 158.731 1845 167.686 1845 178.731V901.77C1845 912.815 1836.05 921.769 1825 921.77H95C83.9543 921.77 75 912.815 75 901.77V99.624C75 88.5783 83.9543 79.624 95 79.624H934.287Z"
-                  fill="url(#paint0_linear_73_700893)"
-                  fillOpacity="0.02"
-                  shapeRendering="crispEdges"
-                />
-                <path
-                  d="M1019.47 156.139L1018.79 156.879L1018.79 156.879L1019.47 156.139ZM1845 901.77H1846H1845ZM1825 921.77V922.77V921.77ZM75 901.77H74H75ZM75 99.624H74H75ZM95 79.624V78.624V79.624ZM935.793 80.2402L935.121 80.9809L1018.79 156.879L1019.47 156.139L1020.14 155.398L936.465 79.4996L935.793 80.2402ZM1019.47 156.139L1018.79 156.879C1020.82 158.715 1023.45 159.731 1026.18 159.731V158.731V157.731C1023.95 157.731 1021.79 156.9 1020.14 155.398L1019.47 156.139ZM1026.18 158.731V159.731H1825V158.731V157.731H1026.18V158.731ZM1845 178.731H1844V901.77H1845H1846V178.731H1845ZM1845 901.77H1844C1844 912.263 1835.49 920.769 1825 920.77V921.77V922.77C1836.6 922.769 1846 913.367 1846 901.77H1845ZM1825 921.77V920.77H95V921.77V922.77H1825V921.77ZM95 921.77V920.77C84.5066 920.77 76 912.263 76 901.77H75H74C74 913.367 83.402 922.77 95 922.77V921.77ZM75 901.77H76V99.624H75H74V901.77H75ZM75 99.624H76C76 89.1306 84.5066 80.624 95 80.624V79.624V78.624C83.402 78.624 74 88.026 74 99.624H75ZM95 79.624V80.624H934.287V79.624V78.624H95V79.624ZM1825 158.731V159.731C1835.49 159.731 1844 168.238 1844 178.731H1845H1846C1846 167.133 1836.6 157.731 1825 157.731V158.731ZM935.793 80.2402L936.465 79.4996C935.898 78.9851 935.137 78.624 934.287 78.624V79.624V80.624C934.559 80.624 934.857 80.7415 935.121 80.9809L935.793 80.2402Z"
-                  fill="#282828"
-                  mask="url(#path-1-outside-1_73_700893)"
-                />
-                <path
-                  d="M1019.47 156.139L1018.79 156.879L1018.79 156.879L1019.47 156.139ZM1845 901.77H1846H1845ZM1825 921.77V922.77V921.77ZM75 901.77H74H75ZM75 99.624H74H75ZM95 79.624V78.624V79.624ZM935.793 80.2402L935.121 80.9809L1018.79 156.879L1019.47 156.139L1020.14 155.398L936.465 79.4996L935.793 80.2402ZM1019.47 156.139L1018.79 156.879C1020.82 158.715 1023.45 159.731 1026.18 159.731V158.731V157.731C1023.95 157.731 1021.79 156.9 1020.14 155.398L1019.47 156.139ZM1026.18 158.731V159.731H1825V158.731V157.731H1026.18V158.731ZM1845 178.731H1844V901.77H1845H1846V178.731H1845ZM1845 901.77H1844C1844 912.263 1835.49 920.769 1825 920.77V921.77V922.77C1836.6 922.769 1846 913.367 1846 901.77H1845ZM1825 921.77V920.77H95V921.77V922.77H1825V921.77ZM95 921.77V920.77C84.5066 920.77 76 912.263 76 901.77H75H74C74 913.367 83.402 922.77 95 922.77V921.77ZM75 901.77H76V99.624H75H74V901.77H75ZM75 99.624H76C76 89.1306 84.5066 80.624 95 80.624V79.624V78.624C83.402 78.624 74 88.026 74 99.624H75ZM95 79.624V80.624H934.287V79.624V78.624H95V79.624ZM1825 158.731V159.731C1835.49 159.731 1844 168.238 1844 178.731H1845H1846C1846 167.133 1836.6 157.731 1825 157.731V158.731ZM935.793 80.2402L936.465 79.4996C935.898 78.9851 935.137 78.624 934.287 78.624V79.624V80.624C934.559 80.624 934.857 80.7415 935.121 80.9809L935.793 80.2402Z"
-                  fill="url(#paint1_linear_73_700893)"
-                  mask="url(#path-1-outside-1_73_700893)"
-                />
+                <path d="M941.287 80C941.848 80 942.377 80.2393 942.793 80.6162V80.6162L1026.47 156.515C1028.31 158.183 1030.7 159.107 1033.18 159.107H1832C1843.05 159.107 1852 168.062 1852 179.107V902.146C1852 913.191 1843.05 922.145 1832 922.146H102C90.9543 922.146 82 913.191 82 902.146V100C82 88.9543 90.9543 80 102 80H941.287Z" fill="url(#paint0_linear_3134_158)" fillOpacity="0.02" shapeRendering="crispEdges" />
+                <path d="M1026.47 156.515L1025.79 157.255L1025.79 157.255L1026.47 156.515ZM1852 902.146L1853 902.146V902.146H1852ZM1832 922.146L1832 923.146L1832 923.146L1832 922.146ZM82 902.146L81 902.146V902.146L82 902.146ZM82 100L81 100V100H82ZM102 80L102 79H102L102 80ZM942.793 80.6162L942.121 81.3569L1025.79 157.255L1026.47 156.515L1027.14 155.774L943.465 79.8755L942.793 80.6162ZM1026.47 156.515L1025.79 157.255C1027.82 159.091 1030.45 160.107 1033.18 160.107V159.107V158.107C1030.95 158.107 1028.79 157.276 1027.14 155.774L1026.47 156.515ZM1033.18 159.107V160.107H1832V159.107V158.107H1033.18V159.107ZM1852 179.107H1851V902.146H1852H1853V179.107H1852ZM1852 902.146L1851 902.146C1851 912.639 1842.49 921.145 1832 921.146L1832 922.146L1832 923.146C1843.6 923.145 1853 913.743 1853 902.146L1852 902.146ZM1832 922.146V921.146H102V922.146V923.146H1832V922.146ZM102 922.146V921.146C91.5066 921.146 83 912.639 83 902.146L82 902.146L81 902.146C81 913.743 90.402 923.146 102 923.146V922.146ZM82 902.146H83V100H82H81V902.146H82ZM82 100L83 100C83 89.5066 91.5066 81 102 81L102 80L102 79C90.402 79 81 88.402 81 100L82 100ZM102 80V81H941.287V80V79H102V80ZM1832 159.107V160.107C1842.49 160.107 1851 168.614 1851 179.107H1852H1853C1853 167.509 1843.6 158.107 1832 158.107V159.107ZM942.793 80.6162L943.465 79.8755C942.898 79.3611 942.137 79 941.287 79V80V81C941.559 81 941.857 81.1175 942.121 81.3569L942.793 80.6162Z" fill="#282828" mask="url(#path-1-outside-1_3134_158)" />
+                <path d="M1026.47 156.515L1025.79 157.255L1025.79 157.255L1026.47 156.515ZM1852 902.146L1853 902.146V902.146H1852ZM1832 922.146L1832 923.146L1832 923.146L1832 922.146ZM82 902.146L81 902.146V902.146L82 902.146ZM82 100L81 100V100H82ZM102 80L102 79H102L102 80ZM942.793 80.6162L942.121 81.3569L1025.79 157.255L1026.47 156.515L1027.14 155.774L943.465 79.8755L942.793 80.6162ZM1026.47 156.515L1025.79 157.255C1027.82 159.091 1030.45 160.107 1033.18 160.107V159.107V158.107C1030.95 158.107 1028.79 157.276 1027.14 155.774L1026.47 156.515ZM1033.18 159.107V160.107H1832V159.107V158.107H1033.18V159.107ZM1852 179.107H1851V902.146H1852H1853V179.107H1852ZM1852 902.146L1851 902.146C1851 912.639 1842.49 921.145 1832 921.146L1832 922.146L1832 923.146C1843.6 923.145 1853 913.743 1853 902.146L1852 902.146ZM1832 922.146V921.146H102V922.146V923.146H1832V922.146ZM102 922.146V921.146C91.5066 921.146 83 912.639 83 902.146L82 902.146L81 902.146C81 913.743 90.402 923.146 102 923.146V922.146ZM82 902.146H83V100H82H81V902.146H82ZM82 100L83 100C83 89.5066 91.5066 81 102 81L102 80L102 79C90.402 79 81 88.402 81 100L82 100ZM102 80V81H941.287V80V79H102V80ZM1832 159.107V160.107C1842.49 160.107 1851 168.614 1851 179.107H1852H1853C1853 167.509 1843.6 158.107 1832 158.107V159.107ZM942.793 80.6162L943.465 79.8755C942.898 79.3611 942.137 79 941.287 79V80V81C941.559 81 941.857 81.1175 942.121 81.3569L942.793 80.6162Z" fill="url(#paint1_linear_3134_158)" mask="url(#path-1-outside-1_3134_158)" />
               </g>
               <defs>
-                <filter
-                  id="filter0_d_73_700893"
-                  x="-6.6"
-                  y="0.024025"
-                  width="1933.2"
-                  height="1005.35"
-                  filterUnits="userSpaceOnUse"
-                  colorInterpolationFilters="sRGB"
-                >
+                <filter id="filter0_d_3134_158" x="0.400002" y="0.400002" width="1933.2" height="1005.35" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                   <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feMorphology
-                    radius="1"
-                    operator="dilate"
-                    in="SourceAlpha"
-                    result="effect1_dropShadow_73_700893"
-                  />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                  <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_3134_158" />
                   <feOffset dy="2" />
                   <feGaussianBlur stdDeviation="39.8" />
                   <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 1 0 0 0 0 0.316667 0 0 0 0 0 0 0 0 0.19 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_73_700893"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_73_700893"
-                    result="shape"
-                  />
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.316667 0 0 0 0 0 0 0 0 0.19 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3134_158" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3134_158" result="shape" />
                 </filter>
-                <clipPath
-                  id="bgblur_0_73_700893_clip_path"
-                  transform="translate(6.6 -0.024025)"
-                >
-                  <path
-                    fill="none"
-                    d="M934.287 79.624C934.848 79.624 935.377 79.8633 935.793 80.2402L1019.47 156.139C1021.31 157.807 1023.7 158.731 1026.18 158.731H1825C1836.05 158.731 1845 167.686 1845 178.731V901.77C1845 912.815 1836.05 921.769 1825 921.77H95C83.9543 921.77 75 912.815 75 901.77V99.624C75 88.5783 83.9543 79.624 95 79.624H934.287Z"
-                  />
+                <clipPath id="bgblur_0_3134_158_clip_path" transform="translate(-0.400002 -0.400002)">
+                  <path d="M941.287 80C941.848 80 942.377 80.2393 942.793 80.6162V80.6162L1026.47 156.515C1028.31 158.183 1030.7 159.107 1033.18 159.107H1832C1843.05 159.107 1852 168.062 1852 179.107V902.146C1852 913.191 1843.05 922.145 1832 922.146H102C90.9543 922.146 82 913.191 82 902.146V100C82 88.9543 90.9543 80 102 80H941.287Z" />
                 </clipPath>
-                <linearGradient
-                  id="paint0_linear_73_700893"
-                  x1="98.3663"
-                  y1="102.059"
-                  x2="1826.43"
-                  y2="114.112"
-                  gradientUnits="userSpaceOnUse"
-                >
+                <linearGradient id="paint0_linear_3134_158" x1="105.366" y1="102.435" x2="1833.43" y2="114.488" gradientUnits="userSpaceOnUse">
                   <stop stopColor="white" />
                   <stop offset="1" stopColor="white" />
                 </linearGradient>
-                <linearGradient
-                  id="paint1_linear_73_700893"
-                  x1="753.118"
-                  y1="325.943"
-                  x2="617.228"
-                  y2="-87.3007"
-                  gradientUnits="userSpaceOnUse"
-                >
+                <linearGradient id="paint1_linear_3134_158" x1="760.118" y1="326.319" x2="624.228" y2="-86.9247" gradientUnits="userSpaceOnUse">
                   <stop stopColor="#FE6E00" stopOpacity="0" />
                   <stop offset="1" stopColor="#FE6E00" />
                 </linearGradient>
@@ -219,7 +123,6 @@ export default function Footer() {
 
           <div className="py-[8%]  px-[12vw] z-10 flex items-start justify-between left-0 w-full  flex-col h-full ">
             <div className="h-[90%] relative gap-[10vw]  w-full flex  items-center justify-between">
-              <div className="w-[80vw] backdrop-blur-sm h-[75vh] rounded-3xl -translate-y-1/2 -translate-x-1/2 absolute top-[65.5%] left-1/2"></div>
               <div className="w-[50%]  z-[100]  flex flex-col h-[90%] items-start justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-[20vw] h-auto">
@@ -259,48 +162,48 @@ export default function Footer() {
                   <div>
                     {links.map((item, index) => (
                       <Link href={item.link} key={index}>
-                      <div
-                        className="text-white mb-[1vw] text-[1.05vw] font-medium"
-                      >
-                        <div className="flex items-center gap-[.5vw] group justify-start">
-                          <div
-                            style={{
-                              animation: "pulse .5s infinite",
-                            }}
-                            className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
-                          ></div>
-                          <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-  <span className="text-[#A8A8A8] uppercase text-[1vw]">
-   <DecryptedText text={item.name}/>
-  </span>
-</div>
+                        <div
+                          className="text-white mb-[1vw] text-[1.05vw] font-medium"
+                        >
+                          <div className="flex items-center gap-[.5vw] group justify-start">
+                            <div
+                              style={{
+                                animation: "pulse .5s infinite",
+                              }}
+                              className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+                            ></div>
+                            <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                              <span className="text-[#A8A8A8] uppercase text-[1vw]">
+                                <DecryptedText text={item.name} />
+                              </span>
+                            </div>
 
+                          </div>
                         </div>
-                      </div>
                       </Link>
                     ))}
                   </div>
                   <div>
                     {links2.map((item, index) => (
-                      <Link href={item.link}  key={index}>
-                      <div
-                       
-                        className="text-white  mb-[1vw] text-sm font-medium"
-                      >
-                        <div className="flex items-center gap-[.5vw] group justify-start">
-                          <div
-                            style={{
-                              animation: "pulse .5s infinite",
-                            }}
-                            className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
-                          ></div>
-                         <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-  <span className="text-[#A8A8A8] uppercase text-[1vw]">
-   <DecryptedText text={item.name}/>
-  </span>
-</div>
+                      <Link href={item.link} key={index}>
+                        <div
+
+                          className="text-white  mb-[1vw] text-sm font-medium"
+                        >
+                          <div className="flex items-center gap-[.5vw] group justify-start">
+                            <div
+                              style={{
+                                animation: "pulse .5s infinite",
+                              }}
+                              className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
+                            ></div>
+                            <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                              <span className="text-[#A8A8A8] uppercase text-[1vw]">
+                                <DecryptedText text={item.name} />
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
                       </Link>
                     ))}
                   </div>

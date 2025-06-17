@@ -1,6 +1,6 @@
 import React from "react";
 
-function SwiperButton({ isRight , rotate, removeBg, onClick}) {
+function SwiperButton({ isRight, rotate, removeBg, onClick }) {
   return (
     <div
       className="border border-[#636363] cursor-pointer p-5 px-6"

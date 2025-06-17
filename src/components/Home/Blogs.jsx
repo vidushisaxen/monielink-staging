@@ -1,58 +1,19 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import SwiperButton from "@/components/Buttons/SwiperButton";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
 import Image from "next/image";
-gsap.registerPlugin(ScrollTrigger, SplitText);
-
-
-const data=[
-  {
-    bg: "/assets/images/image.png",
-    title: "How Generative AI is Revolutionizing Insurance",
-    date:"6 March, 2025"
-  },
-  {
-    bg: "/assets/images/image2.png",
-    title: "The Future of Digital Banking in 2025",
-    date:"6 March, 2025"
-
-  },
-  {
-    bg: "/assets/images/image.png",
-    title: "Blockchain Technology in Modern Finance",
-    date:"6 March, 2025"
-
-  },
-  {
-    bg: "/assets/images/image.png",
-    title: "Cybersecurity Best Practices for FinTech",
-    date:"6 March, 2025"
-
-  },
-  {
-    bg: "/assets/images/image.png",
-    title: "Mobile Payment Trends to Watch",
-    date:"6 March, 2025"
-
-  },
-  {
-    bg: "/assets/images/image.png",
-    title: "AI-Powered Risk Assessment in Banking",
-    date:"6 March, 2025"
-
-  },
-]
+import ArrowButton from "../Buttons/ArrowButton";
+import Copy from "../Animations/Copy";
+import Link from "next/link";
 
 export default function Blogs() {
+
   const swiperRef = useRef(null);
+
   const handlePrevClick = () => {
     swiperRef.current.slidePrev();
   };
@@ -61,88 +22,38 @@ export default function Blogs() {
     swiperRef.current.slideNext();
   };
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const blogsText = SplitText.create(".blogsText", {
-        type: "lines",
-        mask:"lines",
-        linesClass: "blogsTextLines",
-      });
-      const blogsTextPara = SplitText.create(".blogsTextPara", {
-        type: "lines",
-        mask:"lines",
-        linesClass: "blogsTextParaLines",
-      });
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#blogs",
-          start: "top 80%",
-          end: "bottom top",
-          once: true,
-        },
-      });
-
-      gsap.set(".blogsTextLines", { y: "100%" });
-      gsap.set(".blogsTextParaLines", { y: "100%" });
-      gsap.set(".button", { y: "100%" });
-
-      tl.to(".blogsTextLines", {
-        y: "0%",
-        duration: 1,
-        ease: "power3.inOut",
-        stagger: 0.08,
-      });
-      tl.to(".blogsTextParaLines", {
-        y: "0%",
-        delay: -0.3,
-        duration: 1,
-        ease: "power3.inOut",
-        stagger: 0.08,
-      });
-    
-      tl.to(
-        ".cards",
-        {
-          opacity: 1,
-          duration: 0.5,
-          ease: "power3.inOut",
-          stagger: 0.08,
-          },
-        "<"
-      );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5] white">
-      <div className=" h-fit py-[3vw] px-[3.75vw] ">
-        <div className="overflow-hidden">
-          <h2 className="text-[5.2vw] blogsText font-display w-[55%] leading-[1.2] ">
-            Insights That Drive  Innovation
-          </h2>
-        </div>
 
-        <div className="flex items-center justify-between">
-            <p className="text-[1vw] blogsTextPara w-[43%] leading-[1.1] mt-5 text-[#050505]">
+      <div className="flex pb-[3vw] px-[3.75vw] items-end justify-between">
+        <div className="space-y-[1vw] w-1/2">
+          <Copy>
+            <h2 className="text-[5.2vw] font-display leading-[1.2]">
+              Insights That Drive  Innovation
+            </h2>
+          </Copy>
+          <Copy>
+            <p className="text-[1vw] w-4/5 leading-[1.5]">
               Stay ahead of the curve with expert insights, industry trends, and
               actionable tips from the world of technology and business.
             </p>
-          <div className="overflow-hidden">
-            <ButtonComponent
-              className="button"
-              text="View All"
-              darkTheme
-              borderTrue
-              bgColor="false"
-            />
-          </div>
+          </Copy>
+        </div>
+        <div className="w-fit">
+          <ButtonComponent
+            className="button"
+            text="View All"
+            darkTheme
+            borderTrue
+            bgColor="false"
+          />
         </div>
       </div>
-      <div className="w-full px-[1.75vw] h-full border-t border-b border-[#D3D3D3] mb-[3vw]">
+
+      <div className="w-full h-full mb-[3vw]">
         <Swiper
-          slidesPerView={1.7}
+          spaceBetween={0}
+          slidesPerView={1.8}
           modules={[Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           freeMode={true}
@@ -150,44 +61,77 @@ export default function Blogs() {
         >
           {data.map((blog, index) => (
             <SwiperSlide key={index}>
-              <div className="h-[65vh] opacity-0 cards cursor-pointer border-r border-[#D3D3D3] px-[2vw] py-[2vw] w-full ">
-                <div className=" h-full flex flex-col gap-5 w-full">
-                  <div
-                    className={`w-full max-h-[45vh] rounded-lg overflow-hidden`}
-                  >
-                    <Image
-                      src={blog.bg}
-                      alt="blog"
-                      width={100}
-                      height={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex flex-col w-[50%] gap-4">
-                      <p className="text-[1.25vw] font-medium">{blog.title}</p>
-                      <p className="text-[0.95vw] font-light">{blog.date}</p>
-                    </div>
-                    <div className="w-[10%]">
-                      <SwiperButton rotate removeBg />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Card
+                img={blog.bg}
+                href={"#"}
+                title={blog.title}
+                date={blog.date}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
+
       <div className="flex items-center justify-end px-[3.75vw]">
         <div className="flex items-center w-fit gap-5 ">
-          <div onClick={handlePrevClick} className="cursor-pointer">
-            <SwiperButton isRight removeBg />
-          </div>
-          <div onClick={handleNextClick} className="cursor-pointer">
-            <SwiperButton removeBg />
-          </div>
+          <ArrowButton onClick={handlePrevClick} rotate={"-rotate-180"} />
+          <ArrowButton onClick={handleNextClick} />
         </div>
       </div>
+
     </section>
   );
 }
+
+
+const Card = ({ img, href, title, date }) => {
+  return (
+    <>
+      <div className="h-[65vh] border border-[#D3D3D3] border-r-[0.5px] p-[2vw] w-full">
+        <div className="flex flex-col gap-[1vw]">
+          <Link href={href}>
+            <div className={`w-full h-[45vh] group overflow-hidden relative rounded-xl`}>
+              <Image
+                fill
+                src={img}
+                alt="blog"
+                quality={90}
+                className="scale-105 group-hover:scale-100 duration-300"
+              />
+            </div>
+          </Link>
+          <div className="flex items-center justify-between">
+            <div className="w-1/2 space-y-[1vw]">
+              <p className="text-[1.25vw] font-medium">{title}</p>
+              <p className="text-[0.95vw] font-light">{date}</p>
+            </div>
+            <ArrowButton href={href} rotate={"-rotate-45"} />
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const data = [
+  {
+    bg: "/assets/images/blog-image-1.png",
+    title: "How Generative AI is Revolutionizing Insurance",
+    date: "6 March, 2025"
+  },
+  {
+    bg: "/assets/images/blog-image-2.png",
+    title: "How Generative AI is Revolutionizing Insurance",
+    date: "6 March, 2025"
+  },
+  {
+    bg: "/assets/images/blog-image-1.png",
+    title: "How Generative AI is Revolutionizing Insurance",
+    date: "6 March, 2025"
+  },
+  {
+    bg: "/assets/images/blog-image-2.png",
+    title: "How Generative AI is Revolutionizing Insurance",
+    date: "6 March, 2025"
+  }
+]

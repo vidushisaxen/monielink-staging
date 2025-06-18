@@ -109,9 +109,19 @@ export default function Header() {
         {/* Background SVG */}
         <div className="w-full h-auto absolute top-0 left-0">
           <svg className="w-full h-auto" width="1818" height="135" viewBox="0 0 1818 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <foreignObject x="-40" y="-39.6064" width="1898" height="213.852">
-              <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: "blur(20px)", clipPath: "url(#bgblur_0_73_833892_clip_path)", height: '100%', width: '100%' }}></div>
-            </foreignObject>
+          <foreignObject x="-40" y="-39.6064" width="1898" height="213.852">
+  <div
+    xmlns="http://www.w3.org/1999/xhtml"
+    style={{
+      backdropFilter: "blur(20px)",
+      clipPath: "url(#bgblur_0_73_833892_clip_path)",
+      height: '100%',
+      width: '100%',
+      backgroundColor: isWhite ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
+    }}
+  />
+</foreignObject>
+
             <g data-figma-bg-blur-radius="40">
               <mask id="path-1-inside-1_73_833892" fill="white">
                 <path d="M257.05 0.393555C263.207 0.393607 269.021 3.22969 272.812 8.08203L291.762 32.3438C291.983 32.6265 292.316 32.7998 292.675 32.7998H1525.32C1525.68 32.7998 1526.02 32.6265 1526.24 32.3438L1545.19 8.08203C1548.98 3.22969 1554.79 0.393607 1560.95 0.393555H1798C1809.05 0.393559 1818 9.34798 1818 20.3936V44.6553C1818 47.3603 1818 50.0947 1818 52.7998V114.245C1818 125.291 1809.05 134.245 1798 134.245H20C8.95445 134.245 0.000222773 125.291 0 114.245V52.7998C4.039e-05 50.0948 6.447e-05 47.3603 0 44.6553V20.3936C0.00014365 9.34798 8.9544 0.393559 20 0.393555H257.05Z" />

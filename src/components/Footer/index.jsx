@@ -3,6 +3,7 @@ import Image from "next/image";
 import BackgroundLine from "../BackgroundLine";
 import Link from "next/link";
 import DecryptedText from "../DecryptedText";
+import Copy from "../Animations/Copy";
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "../Icons";
 import SocialMediaBtn from "./SocialMediaBtn";
 
@@ -150,11 +151,13 @@ export default function Footer() {
                 </div>
               </div>
               <div className="w-[45%]  z-[100]   text-[#A8A8A8] py-[5vw] flex flex-col h-[90%] items-end justify-between gap-16">
+                <Copy>
                 <p className=" text-[1.05vw] w-full">
                   Integrate the Moneylink Super SDK and start delivering
                   seamless, scalable banking services within your mobile app —
                   faster than ever. Let&apos;s build the future of finance together.
                 </p>
+                </Copy>
                 <div className="w-full flex  items-start justify-center flex-col">
                   <p className="text-[3.125vw] font-display">info@monielink.Io</p>
                   <div className="pt-2 flex  items-start gap-2">

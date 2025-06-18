@@ -87,7 +87,7 @@ export default function Blogs() {
 const Card = ({ img, href, title, date }) => {
   return (
     <>
-      <div className="h-[65vh] border border-[#D3D3D3] border-r-[0.5px] p-[2vw] w-full">
+      <div className="h-[65vh] border border-[#D3D3D3] border-r-[0.5px] p-[2vw] w-full fadeupanim">
         <div className="flex flex-col gap-[1vw]">
           <Link href={href}>
             <div className={`w-full h-[45vh] group overflow-hidden relative rounded-xl`}>

@@ -7,9 +7,8 @@ import {
 import Copy from "../Animations/Copy";
 
 export default function FAQs() {
-
   return (
-    <section id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw]">
+    <section id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white">
       <div className="w-3/4 mx-auto text-center">
         <Copy>
           <h2 className="text-[5.2vw] text-background leading-[1.25] font-display">
@@ -20,7 +19,7 @@ export default function FAQs() {
       <div className="w-4/5 mx-auto pt-[5vw]">
         <Accordion className="w-full font-display" type="single" collapsible>
           {data.map((faq, index) => (
-            <div key={index} className="relative mb-[3vw] w-full h-full">
+            <div key={index} className="relative mb-[3vw] w-full h-full fadeupanim">
               {/* Outer Gradient Layer with Clip-Path */}
               <div
                 className="inset-0 z-0 overflow-hidden rounded-[1vw] p-[1px] relative animate-border"

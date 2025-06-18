@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import ButtonComponent from "../Buttons/ButtonComponent";
 import { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
@@ -110,18 +109,18 @@ export default function Header() {
         {/* Background SVG */}
         <div className="w-full h-auto absolute top-0 left-0">
           <svg className="w-full h-auto" width="1818" height="135" viewBox="0 0 1818 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <foreignObject x="-40" y="-39.6064" width="1898" height="213.852">
-  <div
-    xmlns="http://www.w3.org/1999/xhtml"
-    style={{
-      backdropFilter: "blur(20px)",
-      clipPath: "url(#bgblur_0_73_833892_clip_path)",
-      height: '100%',
-      width: '100%',
-      backgroundColor: isWhite ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
-    }}
-  />
-</foreignObject>
+            <foreignObject x="-40" y="-39.6064" width="1898" height="213.852">
+              <div
+                xmlns="http://www.w3.org/1999/xhtml"
+                style={{
+                  backdropFilter: "blur(20px)",
+                  clipPath: "url(#bgblur_0_73_833892_clip_path)",
+                  height: '100%',
+                  width: '100%',
+                  backgroundColor: isWhite ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
+                }}
+              />
+            </foreignObject>
 
             <g data-figma-bg-blur-radius="40">
               <mask id="path-1-inside-1_73_833892" fill="white">
@@ -151,16 +150,11 @@ export default function Header() {
               <Link
                 href={"/"}
                 key={index}
-                className="flex items-center gap-[.5vw] group justify-center pointer-events-auto w-[8.5vw]"
+                className="flex items-center gap-[.5vw] group justify-center pointer-events-auto"
               >
-                <div
-                  style={{
-                    animation: "pulse .5s infinite",
-                  }}
-                  className={`w-[.3vw] h-[0vw] group-hover:h-[1vw]  transition-all duration-200 ${isInverted ? "group-hover:bg-white" : "group-hover:bg-orange-500"}`}
-                ></div>
-                <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                  <span className={`uppercase text-[.9vw] ${isWhite ? "text-white" : "text-[#D6D6D6]"}`}>
+                <div style={{animation: "pulse .5s infinite"}} className={`w-[.3vw] h-[0vw] group-hover:h-[1vw]  transition-all duration-200 ${isInverted ? "group-hover:bg-white" : "group-hover:bg-orange-500"}`}></div>
+                <div className="cursor-pointer relative w-[6.5vw] overflow-hidden">
+                  <span className={`uppercase text-[.9vw]  ${isWhite ? "text-white" : "text-[#D6D6D6]"}`}>
                     <DecryptedText text={item.name} />
                   </span>
                 </div>
@@ -169,7 +163,7 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <PrimaryButton 
+          <PrimaryButton
             href={"#"}
             text="Get In Touch"
           />

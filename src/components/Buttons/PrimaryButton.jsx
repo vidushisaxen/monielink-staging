@@ -50,7 +50,7 @@ function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }
                 <div className="absolute inset-0 z-10">
                     <div
                         style={{
-                            clipPath: 'polygon(100% 0%, 100% 2.9vw, 11.1vw 100%, 0% 100%, 0% 1.4vw, 1.4vw 0%)',
+                            clipPath: 'polygon(100% 0%, 100% 2.9vw, 11.25vw 100%, 0% 100%, 0% 1.4vw, 1.3vw 0%)',
                         }}
                         className="w-full absolute flex items-center justify-center h-full bg-gradient transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] duration-400"
                     />

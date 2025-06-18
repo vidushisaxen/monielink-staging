@@ -9,7 +9,7 @@ import {
 import Copy from "../Animations/Copy";
 
 export default function FAQs() {
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeItem, setActiveItem] = useState('item-1');
 
   const data = [
     {
@@ -83,7 +83,7 @@ export default function FAQs() {
                     }}
                   >
                     <AccordionItem value={itemKey}>
-                      <AccordionTrigger className="font-display">
+                      <AccordionTrigger index={index} className="font-display">
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="text-[1.05vw]">

@@ -2,11 +2,12 @@
 import React from "react";
 import ButtonComponent from "../Buttons/ButtonComponent";
 import Image from "next/image";
+import Solutions3 from "./Solutions3";
 
 export default function Solutions() {
   return (
     <section
-      className="w-screen h-fit flex flex-col bg-background relative z-[2]  items-center justify-center"
+      className="w-screen h-fit flex flex-col bg-background relative z-[2] pb-[10%]"
       id="overview"
     >
       <div className="border-t w-full flex items-center justify-center border-b border-[#282828]  ">
@@ -29,7 +30,11 @@ export default function Solutions() {
           </div>
         ))}
       </div>
-      <div className="h-screen relative w-full py-[5vw] bg-background">
+      <div className="w-screen h-[500vh]" id="solutions">
+
+      <Solutions3/>
+      </div>
+      {/* <div className="h-screen relative w-full py-[5vw] bg-background">
         <div className="h-full w-full flex   items-center justify-center ">
           <div className="w-[70vw]  h-auto flex items-center justify-center">
             <Image
@@ -71,7 +76,7 @@ export default function Solutions() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

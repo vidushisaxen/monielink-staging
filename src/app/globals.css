@@ -89,6 +89,9 @@ body {
   font-family: var(--font-body);
   overflow-x: hidden;
 }
+p{
+  letter-spacing: 0.3px;
+}
 .font-display {
   font-family: var(--font-display);
 }
@@ -159,13 +162,13 @@ body {
 }
 
 .animate-border {
-  background-size: 300% 300%;
+  background-size: 50% 50%;
   background: linear-gradient(
     var(--gradient-angle),
     #fe5900,
-    rgb(193, 193, 193)
+    rgb(244, 244, 244)
   );
-  animation: rotation 5s linear 2s infinite normal forwards;
+  animation: rotation 5s linear 0s infinite normal forwards;
 }
 @keyframes rotation {
   0% {

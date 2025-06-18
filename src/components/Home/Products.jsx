@@ -46,7 +46,7 @@ export default function Products() {
   }, { scope: containerRef })
 
   return (
-    <section id="products" className="h-full w-screen relative">
+    <section id="products" className="h-full w-screen relative bg-[#050505]">
       <div className="sticky top-0 left-0">
         <BackgroundLine />
       </div>

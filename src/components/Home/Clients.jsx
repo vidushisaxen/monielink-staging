@@ -25,7 +25,7 @@ export default function Clients() {
       <div className="absolute w-screen h-screen top-0 left-0 flex items-center justify-center">
         <div className="w-1/2 h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
           <Copy>
-            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.2] w-[90%]">
+            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] w-[90%]">
               Clients &  Partners We Work Alongside
             </h2>
           </Copy>

@@ -80,7 +80,7 @@ export default function BackgroundLine() {
   useEffect(() => {
     const interval = setInterval(() => {
       moveElementsByOne();
-    }, 100);
+    }, 200);
     return () => clearInterval(interval);
   }, [moveElementsByOne]);
 

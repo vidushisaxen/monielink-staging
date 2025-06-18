@@ -367,10 +367,10 @@ export default function AnimatedClients() {
             strokeDasharray="100 200"
             strokeDashoffset="0"
           >
-            <animate
+              <animate
               attributeName="stroke-dashoffset"
-              values="300;0;-300"
-              dur="2s"
+              values="-900;0;900"
+              dur="3s"
               repeatCount="indefinite"
             />
           </line>

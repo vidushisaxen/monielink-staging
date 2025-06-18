@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useRef } from "react";
-import ButtonComponent from "../Buttons/ButtonComponent";
 import HeroBackground from "./HeroBackground";
 import gsap from "gsap";
 import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
+import PrimaryButton from "../Buttons/PrimaryButton";
+import BlackButton from "../Buttons/BlackButton";
 
 gsap.registerPlugin(useGSAP);
 
@@ -53,13 +54,8 @@ export default function Hero({ }) {
             </Copy>
           </div>
           <div ref={btnContainer} className="flex items-center pt-12 gap-5">
-            <ButtonComponent text="Talk to an expert" borderColor="white" link={"/"} />
-            <ButtonComponent
-              text="Talk to an expert"
-              borderTrue
-              bgColor="false"
-              link={"/"}
-            />
+            <PrimaryButton text="Talk to an expert" href={"#"}/>
+            <BlackButton text="Talk to an expert" href={"#"}/>
           </div>
         </div>
       </div>

@@ -13,11 +13,11 @@ export default function BackgroundLine() {
     null,
     null,
     0.1,
-    0.3,
-    0.75,
+    0.15,
+    0.5,
     1,
-    0.75,
-    0.3,
+    0.5,
+    0.15,
     0.1,
     null,
     null,
@@ -37,11 +37,11 @@ export default function BackgroundLine() {
     null,
     null,
     0.1,
-    0.3,
-    0.75,
+    0.15,
+    0.5,
     1,
-    0.75,
-    0.3,
+    0.5,
+    0.15,
     0.1,
     null,
     null,
@@ -80,7 +80,7 @@ export default function BackgroundLine() {
   useEffect(() => {
     const interval = setInterval(() => {
       moveElementsByOne();
-    }, 200);
+    }, 120);
     return () => clearInterval(interval);
   }, [moveElementsByOne]);
 
@@ -93,8 +93,8 @@ export default function BackgroundLine() {
               key={index}
               className={`w-[.5vw] transition-all duration-500 h-[1.5vw] `}
               style={{
-                backgroundColor: opacity != null ? "#FF2900" : "transparent",
-                opacity: opacity ?? 1,
+                backgroundColor: opacity != null ? "#FF5100" : "transparent",
+                opacity: opacity ?? 0,
               }}
             />
           ))}
@@ -105,8 +105,8 @@ export default function BackgroundLine() {
               key={index}
               className="w-[.5vw] transition-all duration-500 h-[1.5vw]"
               style={{
-                backgroundColor: opacity != null ? "#FF2900" : "transparent",
-                opacity: opacity ?? 1,
+                backgroundColor: opacity != null ? "#FF5100" : "transparent",
+                opacity: opacity ?? 0.5,
               }}
             />
           ))}
@@ -117,8 +117,8 @@ export default function BackgroundLine() {
               key={index}
               className="w-[.5vw] transition-all duration-500 h-[1.5vw]"
               style={{
-                backgroundColor: opacity != null ? "#FF2900" : "transparent",
-                opacity: opacity ?? 1,
+                backgroundColor: opacity != null ? "#FF5100" : "transparent",
+                opacity: opacity ?? 0,
               }}
             />
           ))}
@@ -129,8 +129,8 @@ export default function BackgroundLine() {
               key={index}
               className="w-[.5vw] transition-all duration-500 h-[1.5vw]"
               style={{
-                backgroundColor: opacity != null ? "#FF2900" : "transparent",
-                opacity: opacity ?? 1,
+                backgroundColor: opacity != null ? "#FF5100" : "transparent",
+                opacity: opacity ?? 0.5,
               }}
             />
           ))}

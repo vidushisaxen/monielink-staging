@@ -13,6 +13,7 @@ import BackgroundLine from "../BackgroundLine";
 import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
 import ArrowButton from "../Buttons/ArrowButton";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -156,12 +157,9 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
             </li>
           ))}
         </ul>
-        <ButtonComponent
-          chevronSize={"1.2vw"}
-          textSize={"1vw"}
+        <PrimaryButton 
+          href={"#"}
           text="Know More"
-          borderColor="white"
-          link={link}
         />
       </div>
     </div>

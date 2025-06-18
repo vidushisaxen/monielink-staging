@@ -1,6 +1,7 @@
-import ButtonComponent from "../Buttons/ButtonComponent";
 import HeroBackground from "../Hero/HeroBackground";
 import Copy from "../Animations/Copy";
+import PrimaryButton from "../Buttons/PrimaryButton";
+import BlackButton from "../Buttons/BlackButton";
 
 export default function CTA() {
 
@@ -27,13 +28,9 @@ export default function CTA() {
               </p>
             </Copy>
           </div>
-          <div className="flex items-center pt-[3vw] gap-5">
-            <ButtonComponent text="Talk to an expert" borderColor="white" />
-            <ButtonComponent
-              text="Talk to an expert"
-              borderTrue
-              bgColor="false"
-            />
+          <div className="flex items-center pt-[3vw] gap-5 fadeupanim">
+            <PrimaryButton text="Talk to an expert" href="#" />
+            <BlackButton text="Talk to an expert" href="#" />
           </div>
         </div>
       </div>

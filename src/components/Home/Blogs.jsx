@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef } from "react";
-import ButtonComponent from "../Buttons/ButtonComponent";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +8,7 @@ import Image from "next/image";
 import ArrowButton from "../Buttons/ArrowButton";
 import Copy from "../Animations/Copy";
 import Link from "next/link";
+import WhiteButton from "../Buttons/WhiteButton";
 
 export default function Blogs() {
 
@@ -39,13 +39,10 @@ export default function Blogs() {
             </p>
           </Copy>
         </div>
-        <div className="w-fit">
-          <ButtonComponent
-            className="button"
+        <div className="w-fit fadeupanim">
+          <WhiteButton 
             text="View All"
-            darkTheme
-            borderTrue
-            bgColor="false"
+            href="#"
           />
         </div>
       </div>

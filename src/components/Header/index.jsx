@@ -8,6 +8,7 @@ import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import DecryptedText from "../DecryptedText";
 import { Logo } from "../Icons";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -168,11 +169,9 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <ButtonComponent
-            link={"/"}
+          <PrimaryButton 
+            href={"#"}
             text="Get In Touch"
-            bgColor={false}
-            borderColor="white"
           />
         </div>
       </div>

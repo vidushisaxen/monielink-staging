@@ -1,5 +1,7 @@
+"use client";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import AnimatedClients from "./Clients2";
 import Copy from "../Animations/Copy";
 
 export default function Clients() {
@@ -14,13 +16,97 @@ export default function Clients() {
     { src: "/assets/icons/logo/7.svg", width: "8vw", right: "20%", top: "100%" },
   ];
 
+  const curveIDs = [
+    "paint0_linear_252_22056",
+    "paint1_linear_252_22056",
+    "paint2_linear_252_22056",
+    "paint3_linear_252_22056",
+    "paint4_linear_252_22056",
+    "paint5_linear_252_22056",
+    "paint6_linear_252_22056"
+  ];
+
+  useEffect(() => {
+    const activeAnimsRef = { current: [] };
+    const DURATION = 4;
+
+    curveIDs.forEach(id => {
+      const gradient = document.getElementById(id);
+      if (gradient) {
+        gsap.set(gradient, {
+          attr: { gradientTransform: "translate(-1000, 0)" }
+        });
+      }
+    });
+    const animateRandomCurves = () => {
+      activeAnimsRef.current.forEach(anim => anim.kill());
+      activeAnimsRef.current = [];
+      const shuffled = [...curveIDs].sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, Math.floor(Math.random() * 2) + 2);
+
+      curveIDs.forEach(id => {
+        const gradient = document.getElementById(id);
+        if (gradient && !selected.includes(id)) {
+          gsap.set(gradient, {
+            attr: { gradientTransform: "translate(-1000, 0)" }
+          });
+        }
+      });
+
+      selected.forEach(id => {
+        const gradient = document.getElementById(id);
+        if (gradient) {
+          const anim = gsap.fromTo(
+            gradient,
+            {
+              attr: { gradientTransform: "translate(-1200, 0)" }
+            },
+            {
+              attr: { gradientTransform: "translate(1200, 0)" },
+              duration: DURATION,
+              ease: "linear",
+              delay:1.35,
+            }
+          );
+          activeAnimsRef.current.push(anim);
+        }
+      });
+    };
+
+    const startAnimation = () => {
+      const lineGradient = document.getElementById("paint7_linear_252_22056");
+  
+      if (lineGradient) {
+        const tl = gsap.timeline({
+          repeat: -1,
+          onRepeat: animateRandomCurves,
+          onStart: animateRandomCurves
+        });
+  
+        tl.fromTo(
+          lineGradient,
+          {
+            attr: { gradientTransform: "translate(-1920, 0)" }
+          },
+          {
+            attr: { gradientTransform: "translate(1920, 0)" },
+            duration: DURATION,
+            ease: "linear"
+          }
+        );
+      }
+    };
+  
+    startAnimation();
+  }, []);
+
   return (
     <section
       id="clients"
       className="h-[130vh]  w-screen flex items-center justify-center relative bg-[#050505] pb-[4vw]"
     >
-      <div className="w-screen  h-full py-2 ">
-      <svg  className="w-full h-full" width="1920" height="1296" viewBox="0 0 1920 1296" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <div className="w-full h-full">
+     <svg  className="w-full h-full" width="1920" height="1296" viewBox="0 0 1920 1296" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_252_22056)">
 <path d="M1919.5 24.0547L1814.25 24.0547C1469.64 24.0547 1190.28 303.412 1190.28 648.018V648.018C1190.28 992.623 1469.64 1271.98 1814.25 1271.98H1919.5" stroke="#282828"/>
 <path d="M1919.5 24.0547L1814.25 24.0547C1469.64 24.0547 1190.28 303.412 1190.28 648.018V648.018C1190.28 992.623 1469.64 1271.98 1814.25 1271.98H1919.5" stroke="url(#paint0_linear_252_22056)" strokeLinecap="round"/>
@@ -86,7 +172,8 @@ export default function Clients() {
 </clipPath>
 </defs>
 </svg>
-      </div>
+
+    </div>
       <div className="absolute w-screen h-screen top-0 left-0 flex items-center justify-center">
         <div className="w-1/2 h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
           <Copy>

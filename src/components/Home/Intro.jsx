@@ -1,5 +1,6 @@
+'use client'
 import Copy from "../Animations/Copy";
-import ButtonComponent from "../Buttons/ButtonComponent";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 export default function Intro() {
 
@@ -27,7 +28,8 @@ export default function Intro() {
           </p>
         </Copy>
       </div>
-      <ButtonComponent text="Learn More" bgColor={false} borderColor="white" />
+      <PrimaryButton text="Learn More" href="/" />
+      {/* <ButtonComponent text="Learn More" bgColor={false} borderColor="white" /> */}
     </section>
   );
 }

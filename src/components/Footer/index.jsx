@@ -3,87 +3,27 @@ import Image from "next/image";
 import BackgroundLine from "../BackgroundLine";
 import Link from "next/link";
 import DecryptedText from "../DecryptedText";
-
-const links = [
-  {
-    name: "Home",
-    link: "/"
-  },
-  {
-    name: "About Us",
-    link: "/"
-  },
-  {
-    name: "Solutions",
-    link: "/"
-  },
-  {
-    name: "Products",
-    link: "/"
-  },
-  {
-    name: "Resources",
-    link: "/"
-  },
-  {
-    name: "Contact",
-    link: "/"
-  }
-]
-const links2 = [
-  {
-    name: "LEGAL",
-    link: "/"
-  },
-  {
-    name: "TERMS & CONDITIONS",
-    link: "/"
-  },
-  {
-    name: "PRIVACY POLICY",
-    link: "/"
-  },
-  {
-    name: "INVESTOR PRIVACY NOTICE",
-    link: "/"
-  },
-  {
-    name: "COOKIES POLICY",
-    link: "/"
-  }
-]
-const socials = [
-  {
-    img: "/assets/icons/fb.svg",
-    link: "/"
-  },
-  {
-    img: "/assets/icons/ig.svg",
-    link: "/"
-  },
-  {
-    img: "/assets/icons/x.svg",
-    link: "/"
-  },
-  {
-    img: "/assets/icons/ld.svg",
-    link: "/"
-  }
-]
+import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "../Icons";
+import SocialMediaBtn from "./SocialMediaBtn";
 
 export default function Footer() {
   return (
     <div className="relative" id="footer">
       <BackgroundLine />
       <footer
-        className="h-screen absolute inset-0 z-[40] flex items-center justify-center w-full "
+        className="h-screen absolute inset-0 z-[40] flex items-center justify-center w-full"
         id="footer"
       >
         <div className="w-full h-full flex items-center justify-center relative">
-          <div className="w-screen h-screen absolute top-0 left-0">
+          <div
+            // style={{clipPath: 'polygon(50% 0%, 60% 9%, 100% 9%, 100% 100%, 0% 100%, 0% 0%)'}} 
+            // className="w-full h-full absolute top-0 left-0 backdrop-blur-xs rounded-2xl"
+            className="w-full h-full absolute top-0 left-0"
+          >
+            {/* <Image alt="image" className="" src={"/assets/shapes/Subtract.png"} fill/> */}
             <svg className="w-full h-full" width="1934" height="1006" viewBox="0 0 1934 1006" fill="none" xmlns="http://www.w3.org/2000/svg">
               <foreignObject x="0.400002" y="0.400002" width="1933.2" height="1005.35">
-                <div xmlns="http://www.w3.org/1999/xhtml" style={{backdropFilter: 'blur(10px)', clipPath: 'url(#bgblur_0_3134_158_clip_path)', height:'100%', width:'100%'}}></div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(10px)', clipPath: 'url(#bgblur_0_3134_158_clip_path)', height: '100%', width: '100%' }}></div>
               </foreignObject>
               <g filter="url(#filter0_d_3134_158)" data-figma-bg-blur-radius="20">
                 <mask id="path-1-outside-1_3134_158" maskUnits="userSpaceOnUse" x="81" y="79" width="1772" height="845" fill="black">
@@ -219,22 +159,13 @@ export default function Footer() {
                   <p className="text-[3.125vw] font-display">info@monielink.Io</p>
                   <div className="pt-2 flex  items-start gap-2">
                     {socials.map((item, index) => (
-                      <Link href={item.link}
+                      <SocialMediaBtn
+                        className=""
                         key={index}
-                        style={{
-                          clipPath:
-                            "polygon(25% 0%, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 20%)",
-                        }}
-                        className="bg-background w-[4vw] h-[4vw]  flex items-center justify-center"
+                        href={item.href}
                       >
-                        <Image
-                          src={item.img}
-                          width={5}
-                          height={5}
-                          alt="socialIcons"
-                          className="w-[25%] h-[25%] object-contain"
-                        />
-                      </Link>
+                        {item.icon}
+                      </SocialMediaBtn>
                     ))}
                   </div>
                 </div>
@@ -250,3 +181,70 @@ export default function Footer() {
     </div>
   );
 }
+
+const links = [
+  {
+    name: "Home",
+    link: "#"
+  },
+  {
+    name: "About Us",
+    link: "#"
+  },
+  {
+    name: "Solutions",
+    link: "#"
+  },
+  {
+    name: "Products",
+    link: "#"
+  },
+  {
+    name: "Resources",
+    link: "#"
+  },
+  {
+    name: "Contact",
+    link: "#"
+  }
+]
+const links2 = [
+  {
+    name: "LEGAL",
+    link: "/"
+  },
+  {
+    name: "TERMS & CONDITIONS",
+    link: "/"
+  },
+  {
+    name: "PRIVACY POLICY",
+    link: "/"
+  },
+  {
+    name: "INVESTOR PRIVACY NOTICE",
+    link: "/"
+  },
+  {
+    name: "COOKIES POLICY",
+    link: "/"
+  }
+]
+const socials = [
+  {
+    icon: <FacebookIcon />,
+    link: "#"
+  },
+  {
+    icon: <LinkedinIcon />,
+    link: "#"
+  },
+  {
+    icon: <InstagramIcon />,
+    link: "#"
+  },
+  {
+    icon: <TwitterIcon />,
+    link: "#"
+  }
+]

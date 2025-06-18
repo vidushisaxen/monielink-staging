@@ -17,56 +17,40 @@ export default function Footer() {
       >
         <div className="w-full h-full flex items-center justify-center relative">
           <div
-            // style={{clipPath: 'polygon(50% 0%, 60% 9%, 100% 9%, 100% 100%, 0% 100%, 0% 0%)'}} 
-            // className="w-full h-full absolute top-0 left-0 backdrop-blur-xs rounded-2xl"
-            className="w-full h-full absolute top-0 left-0"
+            className="w-[90vw] h-[85vh] absolute top-1/2  -translate-y-1/2 left-1/2 -translate-x-1/2"
           >
-            {/* <Image alt="image" className="" src={"/assets/shapes/Subtract.png"} fill/> */}
-            <svg className="w-full h-full" width="1934" height="1006" viewBox="0 0 1934 1006" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <foreignObject x="0.400002" y="0.400002" width="1933.2" height="1005.35">
-                <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(10px)', clipPath: 'url(#bgblur_0_3134_158_clip_path)', height: '100%', width: '100%' }}></div>
-              </foreignObject>
-              <g filter="url(#filter0_d_3134_158)" data-figma-bg-blur-radius="20">
-                <mask id="path-1-outside-1_3134_158" maskUnits="userSpaceOnUse" x="81" y="79" width="1772" height="845" fill="black">
-                  <rect fill="white" x="81" y="79" width="1772" height="845" />
-                  <path d="M941.287 80C941.848 80 942.377 80.2393 942.793 80.6162V80.6162L1026.47 156.515C1028.31 158.183 1030.7 159.107 1033.18 159.107H1832C1843.05 159.107 1852 168.062 1852 179.107V902.146C1852 913.191 1843.05 922.145 1832 922.146H102C90.9543 922.146 82 913.191 82 902.146V100C82 88.9543 90.9543 80 102 80H941.287Z" />
-                </mask>
-                <path d="M941.287 80C941.848 80 942.377 80.2393 942.793 80.6162V80.6162L1026.47 156.515C1028.31 158.183 1030.7 159.107 1033.18 159.107H1832C1843.05 159.107 1852 168.062 1852 179.107V902.146C1852 913.191 1843.05 922.145 1832 922.146H102C90.9543 922.146 82 913.191 82 902.146V100C82 88.9543 90.9543 80 102 80H941.287Z" fill="url(#paint0_linear_3134_158)" fillOpacity="0.02" shapeRendering="crispEdges" />
-                <path d="M1026.47 156.515L1025.79 157.255L1025.79 157.255L1026.47 156.515ZM1852 902.146L1853 902.146V902.146H1852ZM1832 922.146L1832 923.146L1832 923.146L1832 922.146ZM82 902.146L81 902.146V902.146L82 902.146ZM82 100L81 100V100H82ZM102 80L102 79H102L102 80ZM942.793 80.6162L942.121 81.3569L1025.79 157.255L1026.47 156.515L1027.14 155.774L943.465 79.8755L942.793 80.6162ZM1026.47 156.515L1025.79 157.255C1027.82 159.091 1030.45 160.107 1033.18 160.107V159.107V158.107C1030.95 158.107 1028.79 157.276 1027.14 155.774L1026.47 156.515ZM1033.18 159.107V160.107H1832V159.107V158.107H1033.18V159.107ZM1852 179.107H1851V902.146H1852H1853V179.107H1852ZM1852 902.146L1851 902.146C1851 912.639 1842.49 921.145 1832 921.146L1832 922.146L1832 923.146C1843.6 923.145 1853 913.743 1853 902.146L1852 902.146ZM1832 922.146V921.146H102V922.146V923.146H1832V922.146ZM102 922.146V921.146C91.5066 921.146 83 912.639 83 902.146L82 902.146L81 902.146C81 913.743 90.402 923.146 102 923.146V922.146ZM82 902.146H83V100H82H81V902.146H82ZM82 100L83 100C83 89.5066 91.5066 81 102 81L102 80L102 79C90.402 79 81 88.402 81 100L82 100ZM102 80V81H941.287V80V79H102V80ZM1832 159.107V160.107C1842.49 160.107 1851 168.614 1851 179.107H1852H1853C1853 167.509 1843.6 158.107 1832 158.107V159.107ZM942.793 80.6162L943.465 79.8755C942.898 79.3611 942.137 79 941.287 79V80V81C941.559 81 941.857 81.1175 942.121 81.3569L942.793 80.6162Z" fill="#282828" mask="url(#path-1-outside-1_3134_158)" />
-                <path d="M1026.47 156.515L1025.79 157.255L1025.79 157.255L1026.47 156.515ZM1852 902.146L1853 902.146V902.146H1852ZM1832 922.146L1832 923.146L1832 923.146L1832 922.146ZM82 902.146L81 902.146V902.146L82 902.146ZM82 100L81 100V100H82ZM102 80L102 79H102L102 80ZM942.793 80.6162L942.121 81.3569L1025.79 157.255L1026.47 156.515L1027.14 155.774L943.465 79.8755L942.793 80.6162ZM1026.47 156.515L1025.79 157.255C1027.82 159.091 1030.45 160.107 1033.18 160.107V159.107V158.107C1030.95 158.107 1028.79 157.276 1027.14 155.774L1026.47 156.515ZM1033.18 159.107V160.107H1832V159.107V158.107H1033.18V159.107ZM1852 179.107H1851V902.146H1852H1853V179.107H1852ZM1852 902.146L1851 902.146C1851 912.639 1842.49 921.145 1832 921.146L1832 922.146L1832 923.146C1843.6 923.145 1853 913.743 1853 902.146L1852 902.146ZM1832 922.146V921.146H102V922.146V923.146H1832V922.146ZM102 922.146V921.146C91.5066 921.146 83 912.639 83 902.146L82 902.146L81 902.146C81 913.743 90.402 923.146 102 923.146V922.146ZM82 902.146H83V100H82H81V902.146H82ZM82 100L83 100C83 89.5066 91.5066 81 102 81L102 80L102 79C90.402 79 81 88.402 81 100L82 100ZM102 80V81H941.287V80V79H102V80ZM1832 159.107V160.107C1842.49 160.107 1851 168.614 1851 179.107H1852H1853C1853 167.509 1843.6 158.107 1832 158.107V159.107ZM942.793 80.6162L943.465 79.8755C942.898 79.3611 942.137 79 941.287 79V80V81C941.559 81 941.857 81.1175 942.121 81.3569L942.793 80.6162Z" fill="url(#paint1_linear_3134_158)" mask="url(#path-1-outside-1_3134_158)" />
-              </g>
-              <defs>
-                <filter id="filter0_d_3134_158" x="0.400002" y="0.400002" width="1933.2" height="1005.35" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                  <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_3134_158" />
-                  <feOffset dy="2" />
-                  <feGaussianBlur stdDeviation="39.8" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.316667 0 0 0 0 0 0 0 0 0.19 0" />
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3134_158" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3134_158" result="shape" />
-                </filter>
-                <clipPath id="bgblur_0_3134_158_clip_path" transform="translate(-0.400002 -0.400002)">
-                  <path d="M941.287 80C941.848 80 942.377 80.2393 942.793 80.6162V80.6162L1026.47 156.515C1028.31 158.183 1030.7 159.107 1033.18 159.107H1832C1843.05 159.107 1852 168.062 1852 179.107V902.146C1852 913.191 1843.05 922.145 1832 922.146H102C90.9543 922.146 82 913.191 82 902.146V100C82 88.9543 90.9543 80 102 80H941.287Z" />
-                </clipPath>
-                <linearGradient id="paint0_linear_3134_158" x1="105.366" y1="102.435" x2="1833.43" y2="114.488" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="white" />
-                  <stop offset="1" stopColor="white" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_3134_158" x1="760.118" y1="326.319" x2="624.228" y2="-86.9247" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#FE6E00" stopOpacity="0" />
-                  <stop offset="1" stopColor="#FE6E00" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
+ <svg className="h-full w-full" width="1772" height="845" viewBox="0 0 1772 845" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-outside-1_853_3093" maskUnits="userSpaceOnUse" x="0" y="0.716797" width="1772" height="845" fill="black">
+<rect fill="white" y="0.716797" width="1772" height="845"/>
+<path d="M860.287 1.7168C860.848 1.7168 861.377 1.95608 861.793 2.33301V2.33301L945.466 78.2314C947.306 79.9002 949.701 80.8242 952.185 80.8242H1751C1762.05 80.8242 1771 89.7785 1771 100.824V823.862C1771 834.908 1762.05 843.862 1751 843.862H21C9.95431 843.862 1 834.908 1 823.862V21.7168C1 10.6711 9.95431 1.7168 21 1.7168H860.287Z"/>
+</mask>
+<path d="M945.466 78.2314L944.794 78.9721L944.794 78.9721L945.466 78.2314ZM1751 843.862L1751 844.862L1751 844.862L1751 843.862ZM1 21.7168L0 21.7168V21.7168H1ZM861.793 2.33301L861.121 3.07369L944.794 78.9721L945.466 78.2314L946.138 77.4908L862.465 1.59233L861.793 2.33301ZM945.466 78.2314L944.794 78.9721C946.818 80.8078 949.453 81.8242 952.185 81.8242V80.8242V79.8242C949.949 79.8242 947.793 78.9925 946.138 77.4908L945.466 78.2314ZM952.185 80.8242V81.8242H1751V80.8242V79.8242H952.185V80.8242ZM1771 100.824H1770V823.862H1771H1772V100.824H1771ZM1771 823.862H1770C1770 834.356 1761.49 842.862 1751 842.862L1751 843.862L1751 844.862C1762.6 844.862 1772 835.46 1772 823.862H1771ZM1751 843.862V842.862H21V843.862V844.862H1751V843.862ZM21 843.862V842.862C10.5066 842.862 2 834.356 2 823.862H1H0C0 835.46 9.40202 844.862 21 844.862V843.862ZM1 823.862H2V21.7168H1H0V823.862H1ZM1 21.7168L2 21.7168C2 11.2234 10.5066 2.7168 21 2.7168V1.7168V0.716797C9.40202 0.716797 4.32941e-06 10.1188 0 21.7168L1 21.7168ZM21 1.7168V2.7168H860.287V1.7168V0.716797H21V1.7168ZM1751 80.8242V81.8242C1761.49 81.8242 1770 90.3308 1770 100.824H1771H1772C1772 89.2262 1762.6 79.8242 1751 79.8242V80.8242ZM861.793 2.33301L862.465 1.59233C861.898 1.07786 861.137 0.716797 860.287 0.716797V1.7168V2.7168C860.559 2.7168 860.857 2.83431 861.121 3.07369L861.793 2.33301Z" fill="#282828" mask="url(#path-1-outside-1_853_3093)"/>
+<foreignObject x="-20" y="-19.2832" width="1812" height="884.146"><div xmlns="http://www.w3.org/1999/xhtml" style={{backdropFilter:"blur(10px)", clipPath:"url(#bgblur_0_853_3093_clip_path)", height:"100%", width:"100%"}}></div></foreignObject><g data-figma-bg-blur-radius="20">
+<mask id="path-3-outside-2_853_3093" maskUnits="userSpaceOnUse" x="0" y="0.716797" width="1772" height="845" fill="black">
+<rect fill="white" y="0.716797" width="1772" height="845"/>
+<path d="M860.287 1.7168C860.848 1.7168 861.377 1.95608 861.793 2.33301L945.466 78.2314C947.306 79.9002 949.701 80.8242 952.185 80.8242H1751C1762.05 80.8242 1771 89.7785 1771 100.824V823.862C1771 834.908 1762.05 843.862 1751 843.862H21C9.95431 843.862 1 834.908 1 823.862V21.7168C1 10.6711 9.95431 1.7168 21 1.7168H860.287Z"/>
+</mask>
+<path d="M860.287 1.7168C860.848 1.7168 861.377 1.95608 861.793 2.33301L945.466 78.2314C947.306 79.9002 949.701 80.8242 952.185 80.8242H1751C1762.05 80.8242 1771 89.7785 1771 100.824V823.862C1771 834.908 1762.05 843.862 1751 843.862H21C9.95431 843.862 1 834.908 1 823.862V21.7168C1 10.6711 9.95431 1.7168 21 1.7168H860.287Z" fill="url(#paint0_linear_853_3093)" fillOpacity="0.02"/>
+<path d="M945.466 78.2314L944.794 78.9721L944.794 78.9721L945.466 78.2314ZM1771 823.862H1772H1771ZM1751 843.862V844.862V843.862ZM1 823.862H0H1ZM1 21.7168H0H1ZM21 1.7168V0.716797V1.7168ZM861.793 2.33301L861.121 3.07369L944.794 78.9721L945.466 78.2314L946.138 77.4908L862.465 1.59233L861.793 2.33301ZM945.466 78.2314L944.794 78.9721C946.818 80.8078 949.453 81.8242 952.185 81.8242V80.8242V79.8242C949.949 79.8242 947.793 78.9925 946.138 77.4908L945.466 78.2314ZM952.185 80.8242V81.8242H1751V80.8242V79.8242H952.185V80.8242ZM1771 100.824H1770V823.862H1771H1772V100.824H1771ZM1771 823.862H1770C1770 834.356 1761.49 842.862 1751 842.862V843.862V844.862C1762.6 844.862 1772 835.46 1772 823.862H1771ZM1751 843.862V842.862H21V843.862V844.862H1751V843.862ZM21 843.862V842.862C10.5066 842.862 2 834.356 2 823.862H1H0C1.78814e-07 835.46 9.40202 844.862 21 844.862V843.862ZM1 823.862H2V21.7168H1H0V823.862H1ZM1 21.7168H2C2 11.2234 10.5066 2.7168 21 2.7168V1.7168V0.716797C9.40202 0.716797 4.58956e-06 10.1188 0 21.7168H1ZM21 1.7168V2.7168H860.287V1.7168V0.716797H21V1.7168ZM1751 80.8242V81.8242C1761.49 81.8242 1770 90.3308 1770 100.824H1771H1772C1772 89.2262 1762.6 79.8242 1751 79.8242V80.8242ZM861.793 2.33301L862.465 1.59233C861.898 1.07786 861.137 0.716797 860.287 0.716797V1.7168V2.7168C860.559 2.7168 860.857 2.83431 861.121 3.07369L861.793 2.33301Z" fill="url(#paint1_linear_853_3093)" mask="url(#path-3-outside-2_853_3093)"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_853_3093_clip_path" transform="translate(20 19.2832)"><path d="M860.287 1.7168C860.848 1.7168 861.377 1.95608 861.793 2.33301L945.466 78.2314C947.306 79.9002 949.701 80.8242 952.185 80.8242H1751C1762.05 80.8242 1771 89.7785 1771 100.824V823.862C1771 834.908 1762.05 843.862 1751 843.862H21C9.95431 843.862 1 834.908 1 823.862V21.7168C1 10.6711 9.95431 1.7168 21 1.7168H860.287Z"/>
+</clipPath><linearGradient id="paint0_linear_853_3093" x1="24.3663" y1="24.1518" x2="1752.43" y2="36.2049" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_853_3093" x1="679.118" y1="248.036" x2="543.228" y2="-165.208" gradientUnits="userSpaceOnUse">
+<stop stopColor="#FE6E00" stopOpacity="0"/>
+<stop offset="1" stopColor="#FE6E00"/>
+</linearGradient>
+</defs>
+</svg> 
+ </div>
           <div className="py-[8%]  px-[12vw] z-10 flex items-start justify-between left-0 w-full  flex-col h-full ">
             <div className="h-[90%] relative gap-[10vw]  w-full flex  items-center justify-between">
               <div className="w-[50%]  z-[100]  flex flex-col h-[90%] items-start justify-between">
                 <div className="flex justify-between items-center">
-                  <div className="w-[20vw] h-auto">
+                  <div className="w-[20vw] h-auto fadeupanim">
                     <svg
                       width="253"
                       height="60"
@@ -113,8 +97,8 @@ export default function Footer() {
                               }}
                               className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                             ></div>
-                            <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
-                              <span className="text-[#A8A8A8] uppercase text-[1vw]">
+                            <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7vw] ">
+                              <span className="text-[#A8A8A8] uppercase text-[1vw] ">
                                 <DecryptedText text={item.name} />
                               </span>
                             </div>
@@ -138,7 +122,7 @@ export default function Footer() {
                               }}
                               className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                             ></div>
-                            <div className="flex flex-col cursor-pointer relative items-center justify-center overflow-hidden">
+                            <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw]">
                                 <DecryptedText text={item.name} />
                               </span>
@@ -159,8 +143,9 @@ export default function Footer() {
                 </p>
                 </Copy>
                 <div className="w-full flex  items-start justify-center flex-col">
-                  <p className="text-[3.125vw] font-display">info@monielink.Io</p>
-                  <div className="pt-2 flex  items-start gap-2">
+                  <a href="mailto:info@monielink.io">
+                    <Copy><p className="text-[3.125vw] font-display">info@monielink.io</p> </Copy></a>
+                  <div className="pt-2 flex  items-start gap-2 fadeupanim">
                     {socials.map((item, index) => (
                       <SocialMediaBtn
                         className=""
@@ -175,8 +160,14 @@ export default function Footer() {
               </div>
             </div>
             <div className="w-full  z-[100]  h-[10%] flex items-end justify-between text-[#A8A8A8] text-[1.05vw]">
-              <p>Copyright © Monielink 2025</p>
-              <p>By : Enigma Digital</p>
+              <div className="w-[20vw]">
+              <DecryptedText text={"Copyright © Monielink 2025"} />
+              </div>
+              <Link href={"https://weareenigma.com/"}>
+              <div className="w-[11vw]">
+                <DecryptedText text={"By : Enigma Digital"}/>
+              </div>
+              </Link>
             </div>
           </div>
         </div>

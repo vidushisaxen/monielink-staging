@@ -150,7 +150,7 @@ export default function Header() {
               <Link
                 href={"/"}
                 key={index}
-                className="flex items-center gap-[.5vw] group justify-center pointer-events-auto w-[7.5vw]"
+                className="flex items-center gap-[.5vw] group justify-center pointer-events-auto w-[8.5vw]"
               >
                 <div
                   style={{

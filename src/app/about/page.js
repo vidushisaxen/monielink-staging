@@ -1,36 +1,23 @@
 "use client"
-import Hero from "../components/Hero/Hero";
-import Overview from "../components/Home/Overview";
-import Solutions from "../components/Home/Solutions";
-import USPs from "../components/Home/USPs";
-import Products from "../components/Home/Products";
-import Intro from "../components/Home/Intro";
-import FAQs from "../components/Home/FAQs";
-import Blogs from "../components/Home/Blogs";
-import Clients from "../components/Home/Clients";
-import CTA from "../components/Footer/CTA";
-import Layout from "../components/Layout";
+import Hero from "@/components/Hero/Hero";
 import { fadeUpAnim } from "@/components/Animations/gsapAnimations";
+import Layout from "@/components/Layout";
+import FAQs from "@/components/Home/FAQs";
+import CTA from "@/components/Footer/CTA";
 
-export default function HomePage() {
+export default function About() {
 fadeUpAnim();
   return (
     <>
       <Layout>
-        <Hero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customerexperience."}/>
-        <Overview />
-        <Solutions />
-        <USPs />
-        <Products />
-        <Intro />
-        <Clients />
-        <Blogs />
+        <Hero heading={"Powering the Future of Digital Banking"} para={"We exist to bridge the gap between traditional banking infrastructure and modern customer expectations. Whether you're building a digital-first product or scaling existing services, Monielink equips you with the tools to serve retail customers seamlessly through a B2B2C model."}/>
         <FAQs data={faqData}/>
-        <CTA />
+        <CTA/>
       </Layout>
     </>
   );
 };
+
 const faqData = [
   {
     question: "What security measures do you have in place?",

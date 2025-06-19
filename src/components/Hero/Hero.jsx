@@ -10,7 +10,7 @@ import BlackButton from "../Buttons/BlackButton";
 
 gsap.registerPlugin(useGSAP);
 
-export default function Hero({ }) {
+export default function Hero({ heading,para}) {
   const btnContainer = useRef();
 
   useGSAP(() => {
@@ -48,7 +48,7 @@ export default function Hero({ }) {
         >
           <Copy delay={1.8}>
             <h1 className={`text-[7.815vw] font-display leading-[1.1] w-[70%] text-center headingText text-[#D6D6D6]`}>
-              Powerful Neobank Platform
+             {heading}
             </h1>
           </Copy>
           <div
@@ -57,10 +57,7 @@ export default function Hero({ }) {
           >
             <Copy delay={2}>
               <p className="text-[#A8A8A8] descriptionText">
-                Seamlessly embed digital banking services into your mobile apps
-                with the Monielink Super SDK — a single, unified solution that
-                accelerates your go-to-market and elevates your customer
-                experience.
+                {para}
               </p>
             </Copy>
           </div>

@@ -213,7 +213,7 @@ const SolutionsCard = ({ solutionsRef }) => {
     if (!solutionsRef.current) return;
     const sectionTop =
       solutionsRef.current.getBoundingClientRect().top + window.pageYOffset;
-    const scrollY = sectionTop + window.innerHeight * index * 1.15;
+    const scrollY = sectionTop + window.innerHeight * index * 1.24;
     window.scrollTo({ top: scrollY, behavior: "smooth" });
   };
 

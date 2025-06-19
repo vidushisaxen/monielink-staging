@@ -99,7 +99,7 @@ export default function Footer() {
                             ></div>
                             <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw] ">
-                                <DecryptedText text={item.name} />
+                                <DecryptedText text={item.name} speed={60}/>
                               </span>
                             </div>
 
@@ -124,7 +124,7 @@ export default function Footer() {
                             ></div>
                             <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw]">
-                                <DecryptedText text={item.name} />
+                                <DecryptedText text={item.name} speed={40} />
                               </span>
                             </div>
                           </div>
@@ -143,8 +143,10 @@ export default function Footer() {
                 </p>
                 </Copy>
                 <div className="w-full flex  items-start justify-center flex-col">
-                  <a href="mailto:info@monielink.io">
-                    <Copy><p className="text-[3.125vw] font-display">info@monielink.io</p> </Copy></a>
+                  <a href="mailto:info@monielink.io" className="text-[3.125vw] font-display">
+
+                    <DecryptedText text={"info@monielink.io"} speed={60}/>
+                    </a>
                   <div className="pt-2 flex  items-start gap-2 fadeupanim">
                     {socials.map((item, index) => (
                       <SocialMediaBtn
@@ -161,11 +163,13 @@ export default function Footer() {
             </div>
             <div className="w-full  z-[100]  h-[10%] flex items-end justify-between text-[#A8A8A8] text-[1.05vw]">
               <div className="w-[20vw]">
-              <DecryptedText text={"Copyright © Monielink 2025"} />
+                <p className="link-line">Copyright © Monielink 2025</p>
+             
               </div>
               <Link href={"https://weareenigma.com/"}>
               <div className="w-[11vw]">
-                <DecryptedText text={"By : Enigma Digital"}/>
+                <div className="link-line">By : Enigma Digital</div>
+               
               </div>
               </Link>
             </div>

@@ -219,7 +219,7 @@ const SolutionsCard = ({ solutionsRef }) => {
 
   return (
     <div className="w-full h-[90vh]  flex flex-col sticky top-[5%]">
-      <div className="border-t w-full flex items-center justify-center border-b border-[#282828] bg-[#050505]  !px-0 ">
+      <div className="border-t w-full flex items-center justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw] ">
         {[
           "Digital Account",
           "Loyalty",
@@ -262,7 +262,7 @@ export default SolutionsCard;
 function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft, svgRight, y, svgRightRef }) {
   return (
     <>
-      <div className={`h-[90vh]  w-full flex items-center justify-center relative ${cardClass} ${zIndex} ${y} `}>
+      <div className={`h-[85vh]  w-full flex items-center justify-center relative ${cardClass} ${zIndex} ${y} `}>
         <div className="w-[75vw] h-auto flex items-center justify-center z-0">
           {svgLeft}
         </div>

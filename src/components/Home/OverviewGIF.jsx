@@ -23,7 +23,7 @@ export default function OverviewGIF() {
         trigger: container,
         start: "top 80%",
       },
-      duration: 4,
+      duration: 2.5,
       drawSVG: 0,
       onComplete() {
         gsap.set(svgOpacity, {

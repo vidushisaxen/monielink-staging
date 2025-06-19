@@ -46,7 +46,7 @@ export default function Footer() {
 </defs>
 </svg> 
  </div>
-          <div className="py-[8%]  px-[12vw] z-10 flex items-start justify-between left-0 w-full  flex-col h-full ">
+          <div className="py-[8%] px-[8vw] z-10 flex items-start justify-between left-0 w-full  flex-col h-full ">
             <div className="h-[90%] relative gap-[10vw]  w-full flex  items-center justify-between">
               <div className="w-[50%]  z-[100]  flex flex-col h-[90%] items-start justify-between">
                 <div className="flex justify-between items-center">
@@ -134,7 +134,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="w-[45%]  z-[100]   text-[#A8A8A8] py-[5vw] flex flex-col h-[90%] items-end justify-between gap-16">
+              <div className="w-[45%]  z-[100]   text-[#A8A8A8] pb-[5vw] pt-[3vw] flex flex-col h-[80%] items-start justify-between gap-0">
                 <Copy>
                 <p className=" text-[1.05vw] w-full">
                   Integrate the Moneylink Super SDK and start delivering

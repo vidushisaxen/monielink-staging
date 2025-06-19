@@ -6,7 +6,6 @@ import BlackButton from "../Buttons/BlackButton";
 import { SVGLeft, SVGRight } from "../Icons";
 gsap.registerPlugin(ScrollTrigger);
 
-
 const SolutionsCard = ({ solutionsRef }) => {
   useEffect(() => {
     const ctx = gsap.context(() => {

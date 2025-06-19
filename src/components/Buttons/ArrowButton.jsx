@@ -4,37 +4,6 @@ import React from "react";
 function ArrowButton({ href, onClick, rotate, className = "", ...props }) {
     const sharedContent = (
         <>
-            <style jsx>{`
-              @keyframes bounceAlpha {
-                0% {
-                  opacity: 1;
-                  transform: translateX(0px) scale(1);
-                }
-                25% {
-                  opacity: 0;
-                  transform: translateX(-10px) scale(0.9);
-                }
-                26% {
-                  opacity: 0;
-                  transform: translateX(10px) scale(0.9);
-                }
-                55% {
-                  opacity: 1;
-                  transform: translateX(0px) scale(1);
-                }
-              }
-
-              .round:hover .arrow {
-                animation-name: bounceAlpha;
-                animation-duration: 1.4s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-              }
-              .round:hover .arrow.segunda {
-                animation-delay: 0.2s;
-              }
-            `}</style>
-
             <div className="relative flex items-center justify-center">
                 <svg
                     className="w-full h-full"

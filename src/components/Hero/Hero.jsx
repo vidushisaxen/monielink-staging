@@ -7,10 +7,11 @@ import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import BlackButton from "../Buttons/BlackButton";
+import { fadeUpAnim } from "../Animations/gsapAnimations";
 
 gsap.registerPlugin(useGSAP);
 
-export default function Hero({ heading,para}) {
+export default function Hero({ heading, para }) {
   const btnContainer = useRef();
 
   useGSAP(() => {
@@ -29,14 +30,9 @@ export default function Hero({ heading,para}) {
       duration: 0.5,
       delay: 2,
     })
-      // .fromTo("#header-inner", {
-      //   yPercent: -100,
-      // }, {
-      //   yPercent: 0,
-      //   duration: 1,
-      //   delay: -1,
-      // })
   });
+
+  fadeUpAnim();
 
   return (
     <section className="w-screen relative h-screen bg-background">
@@ -48,7 +44,7 @@ export default function Hero({ heading,para}) {
         >
           <Copy delay={1.8}>
             <h1 className={`text-[7.815vw] font-display leading-[1.1] w-[70%] text-center headingText text-[#D6D6D6]`}>
-             {heading}
+              {heading}
             </h1>
           </Copy>
           <div

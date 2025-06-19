@@ -9,7 +9,6 @@ export default function DecryptedText({ text,speed }) {
           sequential={true}
           revealDirection="start"
           useOriginalCharsOnly={false}
-          // className="font-azeret-mono"
           characters="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;':\,./<>?"
         />
     </div>

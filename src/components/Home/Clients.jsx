@@ -105,15 +105,27 @@ export default function Clients() {
         );
       }
     };
-    const masterTimeline = gsap.timeline();
-    masterTimeline.fromTo("#svgMask rect", {
-      x: "-100%"
-    }, {
-      x: "0%",
-      duration: REVEAL_DURATION,
-      ease: "power2.out"
-    })
-    .call(startMainAnimation, null, `+=${-0.01}`);
+    const masterTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#clients",
+        start: "top 80%", // You can adjust this
+        once: true,       // Run only once
+      }
+    });
+  
+    masterTimeline
+      .fromTo("#svgMask rect", {
+        x: "-100%"
+      }, {
+        x: "0%",
+        duration: REVEAL_DURATION,
+        ease: "power2.out"
+      })
+      .call(startMainAnimation, null, `+=${-0.01}`);
+
+      return () => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      };
 
   }, []);
 

@@ -3,9 +3,9 @@ import WhyUsSwiper from "./WhyUsSwiper";
 
 const WhyUs = () => {
     return (
-        <section className="bg-gradient">
-            <div className="w-full h-full py-[7vw] px-[4vw] text-white">
-                <div className="flex justify-between items-start mb-[10vw]">
+        <section className="bg-gradient relative h-[400vh]">
+            <div className="w-full h-full py-[7vw] text-white">
+                <div className="flex justify-between items-start mb-[10vw] px-[4vw]">
                     <Copy>
                         <h3 className="text-head-100 font-display">
                             Why Monielink?
@@ -18,7 +18,7 @@ const WhyUs = () => {
                     </Copy>
                 </div>
                 <WhyUsSwiper />
-                <div className="flex items-center justify-center text-center pt-[15vw] pb-[12vw]">
+                <div className="flex items-center justify-center text-center pt-[15vw] pb-[12vw] px-[4vw]">
                     <Copy>
                         <h2 className="text-head-150 font-display">One SDK. <br /> Endless Possibilities</h2>
                     </Copy>

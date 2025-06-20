@@ -1,12 +1,10 @@
 "use client";
-import SwiperButton from "@/components/Buttons/SwiperButton";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import ButtonComponent from "../Buttons/ButtonComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BackgroundLine from "../BackgroundLine";
@@ -20,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 export default function Products() {
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handlePrevClick = () => {
     swiperRef.current.slidePrev();
@@ -61,6 +59,7 @@ export default function Products() {
 
         <Swiper
           modules={[Navigation]}
+          initialSlide={1}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setActiveIndex(swiper.activeIndex);
@@ -68,7 +67,6 @@ export default function Products() {
           onSlideChange={(swiper) => {
             setActiveIndex(swiper.activeIndex);
           }}
-          // loop={true}
           centeredSlides={true}
           slidesPerView={3}
           spaceBetween={40}
@@ -157,7 +155,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
             </li>
           ))}
         </ul>
-        <PrimaryButton 
+        <PrimaryButton
           href={"#"}
           text="Know More"
         />

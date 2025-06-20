@@ -4,37 +4,6 @@ import React from "react";
 function BlackButton({ href, onClick, rotate, text, className = "", ...props }) {
     const sharedContent = (
         <>
-            <style jsx>{`
-              @keyframes bounceAlpha {
-                0% {
-                  opacity: 1;
-                  transform: translateX(0px) scale(1);
-                }
-                25% {
-                  opacity: 0;
-                  transform: translateX(-10px) scale(0.9);
-                }
-                26% {
-                  opacity: 0;
-                  transform: translateX(10px) scale(0.9);
-                }
-                55% {
-                  opacity: 1;
-                  transform: translateX(0px) scale(1);
-                }
-              }
-
-              .round:hover .arrow {
-                animation-name: bounceAlpha;
-                animation-duration: 1.4s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-              }
-              .round:hover .arrow.segunda {
-                animation-delay: 0.2s;
-              }
-            `}</style>
-
             <div className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw]">
                 <div className="absolute left-0 top-0 flex justify-start">
                     <svg className="w-[5.5vw] h-auto" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,4 +1,3 @@
-"use client"
 import Hero from "../components/Hero/Hero";
 import Overview from "../components/Home/Overview";
 import Solutions from "../components/Home/Solutions";
@@ -10,14 +9,13 @@ import Blogs from "../components/Home/Blogs";
 import Clients from "../components/Home/Clients";
 import CTA from "../components/Footer/CTA";
 import Layout from "../components/Layout";
-import { fadeUpAnim } from "@/components/Animations/gsapAnimations";
+import { faqData } from "@/components/SampleFaqData";
 
 export default function HomePage() {
-fadeUpAnim();
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customerexperience."}/>
         <Overview />
         <Solutions />
         <USPs />
@@ -25,7 +23,7 @@ fadeUpAnim();
         <Intro />
         <Clients />
         <Blogs />
-        <FAQs />
+        <FAQs data={faqData}/>
         <CTA />
       </Layout>
     </>

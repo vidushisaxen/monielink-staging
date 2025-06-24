@@ -1,37 +1,30 @@
 import Link from "next/link";
 import React from "react";
 
-function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, className = "", ...props }) {
+function SecondaryButton({ href, onClick, rotate, text, className = "", ...props }) {
     const sharedContent = (
         <>
-            <div className="relative flex items-center justify-center">
-                <svg
-                    className="w-full h-full"
-                    width="77"
-                    height="67"
-                    viewBox="0 0 77 67"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M21.6787 0.5H75.0049C75.8333 0.5 76.5049 1.17158 76.5049 2V44.5264C76.5049 44.9221 76.349 45.3021 76.0703 45.583L66.1035 55.6279L55.7939 65.9775C55.5125 66.2601 55.1303 66.4199 54.7314 66.4199H2C1.17193 66.4197 0.50026 65.748 0.5 64.9199V22.3535C0.500017 22.0156 0.614008 21.6891 0.821289 21.4258L0.916016 21.3164L11.8223 9.91504L11.8213 9.91406L20.6074 0.950195C20.8895 0.662321 21.2756 0.5 21.6787 0.5Z"
-                        stroke={`${borderColor}`}
-                    />
-                </svg>
-
-                <div className="absolute inset-[6%]">
+            <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] w-fit">
+                <div className="absolute left-0 top-0 flex justify-start">
+                    <svg className="w-[5.5vw] h-auto" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </div>
+                <div className="absolute right-0 bottom-0 flex justify-end">
+                    <svg className="w-[5.5vw] h-auto rotate-180" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </div>
+                <div className="absolute inset-0 z-10">
                     <div
                         style={{
-                            clipPath:
-                                "polygon(100% 0%, 100% 66%, 71% 100%, 0% 100%, 0% 33%, 28% 0%)",
+                            clipPath: 'polygon(100% 0%, 100% 2.9vw, 11.25vw 100%, 0% 100%, 0% 1.4vw, 1.3vw 0%)',
                         }}
-                        className={`w-full absolute flex items-center justify-center h-full  group-hover:scale-100 scale-50 transition-all duration-400 opacity-0 group-hover:opacity-100 ${hoverColor}`}
-                    ></div>
-
-                    <div className="rotate-180 w-full h-full">
-                        <div
-                            className={`round flex items-center justify-center gap-0 w-full h-full ${rotate}`}
-                        >
+                        className="w-full absolute flex items-center justify-center h-full bg-white transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] duration-400"
+                    />
+                    <div className="w-[80%] mx-auto h-full text-primary-1 relative z-10 flex items-center gap-5 justify-center">
+                        <span className="text-[1vw]">{text}</span>
+                        <div className="rotate-180 text-primary-1 flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next"
                                 width="8"
@@ -42,7 +35,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
                             >
                                 <path
                                     d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                    fill={`${arrowColor}`}
+                                    fill="currentColor"
                                 />
                             </svg>
                             <svg
@@ -55,7 +48,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
                             >
                                 <path
                                     d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                    fill={`${arrowColor}`}
+                                    fill="currentColor"
                                 />
                             </svg>
                         </div>
@@ -70,7 +63,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
         return (
             <Link
                 href={href}
-                className={`text-black group ${className}`}
+                className={`text-[#FF5100] pointer-events-auto group ${className}`}
                 {...props}
                 aria-label="Read More"
             >
@@ -84,7 +77,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
         return (
             <button
                 onClick={onClick}
-                className={`text-black group bg-transparent border-none cursor-pointer p-0 ${className}`}
+                className={`text-[#FF5100] group bg-transparent border-none cursor-pointer pointer-events-auto p-0 ${className}`}
                 {...props}
                 aria-label="Read More"
             >
@@ -98,7 +91,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
         <a
             href={href || "#"}
             onClick={(e) => e.preventDefault()}
-            className={`text-black group ${className}`}
+            className={`text-[#FF5100] group pointer-events-auto ${className}`}
             {...props}
             aria-label="Read More"
         >
@@ -107,4 +100,4 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
     );
 }
 
-export default ArrowButton;
+export default SecondaryButton;

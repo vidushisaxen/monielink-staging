@@ -322,3 +322,130 @@ export const SVGRight=()=>{
  </>
   )
 }
+
+export const DigitalAccounts1=()=>{
+  return (
+    <>
+<circle cx="43.6441" cy="42.8751" r="14.7411" stroke="url(#paint0_linear_668_35882)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="43.6455" cy="42.8748" r="23.8791" stroke="url(#paint1_linear_668_35882)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="43.6433" cy="42.875" r="33.5928" stroke="url(#paint2_linear_668_35882)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="43.6465" cy="42.875" r="42.1731" stroke="url(#paint3_linear_668_35882)" strokeWidth="1.40381" className="usp-path"/>
+<defs>
+<linearGradient id="paint0_linear_668_35882" x1="43.6441" y1="27.4321" x2="43.6441" y2="58.3181" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint1_linear_668_35882" x1="43.6455" y1="18.2938" x2="43.6455" y2="67.4558" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint2_linear_668_35882" x1="43.6433" y1="8.58032" x2="43.6433" y2="77.1697" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint3_linear_668_35882" x1="43.6465" y1="0" x2="43.6465" y2="85.75" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+</defs>
+
+    </>
+  )
+}
+export const DigitalAccounts2=()=>{
+  return(
+    <>
+<path d="M85.0439 21.1073C85.0439 26.3999 80.5766 31.3956 72.8828 35.1093C65.2384 38.799 54.6285 41.1005 42.8711 41.1005C31.1137 41.1005 20.5038 38.799 12.8594 35.1092C5.16557 31.3956 0.698241 26.3999 0.698241 21.1073C0.6985 15.8149 5.16579 10.8198 12.8594 7.10632C20.5038 3.41661 31.1137 1.11511 42.8711 1.11511C54.6285 1.11511 65.2384 3.41662 72.8828 7.10632C80.5764 10.8198 85.0437 15.8149 85.0439 21.1073Z" stroke="url(#paint0_linear_668_35899)" strokeWidth="1.40381" className="usp-path"/>
+<path d="M80.1406 32.9869C80.1406 37.664 76.1925 42.0783 69.3936 45.36C62.6382 48.6206 53.2622 50.6549 42.8721 50.6549C32.482 50.6549 23.106 48.6206 16.3506 45.36C9.5516 42.0783 5.60356 37.6639 5.60351 32.9869C5.60352 28.3099 9.55157 23.8956 16.3506 20.6139C23.106 17.3533 32.4819 15.319 42.8721 15.319C53.2622 15.319 62.6382 17.3533 69.3936 20.6139C76.1926 23.8956 80.1406 28.3099 80.1406 32.9869Z" stroke="url(#paint1_linear_668_35899)" strokeWidth="1.24054" className="usp-path"/>
+<path d="M70.9482 45.8666C70.9481 49.3899 67.9734 52.7147 62.8516 55.1869C57.7625 57.6433 50.6994 59.1761 42.8721 59.1761C35.0448 59.1761 27.9817 57.6433 22.8926 55.1869C17.7708 52.7147 14.7961 49.3899 14.7959 45.8666C14.7959 42.3432 17.7706 39.0175 22.8926 36.5453C27.9817 34.089 35.0449 32.556 42.8721 32.556C50.6993 32.556 57.7625 34.089 62.8516 36.5453C67.9735 39.0175 70.9482 42.3432 70.9482 45.8666Z" stroke="url(#paint2_linear_668_35899)" strokeWidth="0.934548" className="usp-path"/>
+<path d="M65.626 57.7457C65.6258 60.6012 63.2154 63.2959 59.0645 65.2994C54.94 67.2902 49.2157 68.5328 42.8721 68.5328C36.5285 68.5328 30.8042 67.2902 26.6797 65.2994C22.5287 63.2959 20.1183 60.6012 20.1182 57.7457C20.1182 54.8902 22.5286 52.1947 26.6797 50.191C30.8042 48.2003 36.5285 46.9586 42.8721 46.9586C49.2156 46.9586 54.94 48.2003 59.0645 50.191C63.2156 52.1947 65.626 54.8902 65.626 57.7457Z" stroke="url(#paint3_linear_668_35899)" strokeWidth="0.75741" className="usp-path"/>
+<path d="M58.8525 66.7456C58.8524 68.751 57.1593 70.6432 54.2441 72.0503C51.3475 73.4484 47.3272 74.3208 42.8721 74.3208C38.4169 74.3208 34.3966 73.4484 31.5 72.0503C28.5849 70.6432 26.8917 68.751 26.8916 66.7456C26.8916 64.7402 28.5847 62.8471 31.5 61.4399C34.3966 60.0418 38.4169 59.1694 42.8721 59.1694C47.3272 59.1694 51.3475 60.0418 54.2441 61.4399C57.1595 62.8471 58.8525 64.7402 58.8525 66.7456Z" stroke="url(#paint4_linear_668_35899)" strokeWidth="0.531927" className="usp-path"/>
+<defs>
+<linearGradient id="paint0_linear_668_35899" x1="85.7461" y1="21.1078" x2="-0.00390715" y2="21.1078" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint1_linear_668_35899" x1="80.7607" y1="32.9869" x2="4.9834" y2="32.9869" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint2_linear_668_35899" x1="71.415" y1="45.8663" x2="14.3291" y2="45.8663" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint3_linear_668_35899" x1="66.0049" y1="57.7454" x2="19.7393" y2="57.7454" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint4_linear_668_35899" x1="59.1182" y1="66.7454" x2="26.626" y2="66.7454" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+</defs>
+    </>
+  )
+}
+export const DigitalAccounts3=()=>{
+  return(
+    <>
+<path d="M21.4658 1.45215C26.7584 1.45215 31.7541 5.91948 35.4678 13.6133C39.1575 21.2577 41.459 31.8676 41.459 43.625C41.459 55.3824 39.1575 65.9923 35.4678 73.6367C31.7541 81.3305 26.7584 85.7979 21.4658 85.7979C16.1734 85.7976 11.1784 81.3303 7.46484 73.6367C3.77514 65.9923 1.47363 55.3824 1.47363 43.625C1.47363 31.8676 3.77514 21.2577 7.46484 13.6133C11.1784 5.9197 16.1734 1.45241 21.4658 1.45215Z" stroke="url(#paint0_linear_668_35890)" strokeWidth="1.40381" className="usp-path"/>
+<path d="M37.3447 1.45215C42.6373 1.45215 47.6331 5.91948 51.3467 13.6133C55.0364 21.2577 57.3379 31.8676 57.3379 43.625C57.3379 55.3824 55.0364 65.9923 51.3467 73.6367C47.6331 81.3305 42.6373 85.7979 37.3447 85.7979C32.0523 85.7976 27.0573 81.3303 23.3438 73.6367C19.654 65.9923 17.3525 55.3824 17.3525 43.625C17.3525 31.8676 19.654 21.2577 23.3438 13.6133C27.0573 5.9197 32.0523 1.45241 37.3447 1.45215Z" stroke="url(#paint1_linear_668_35890)" strokeWidth="1.40381" className="usp-path"/>
+<path d="M53.2246 1.45215C58.5172 1.45215 63.5129 5.91948 67.2266 13.6133C70.9163 21.2577 73.2178 31.8676 73.2178 43.625C73.2178 55.3824 70.9163 65.9923 67.2266 73.6367C63.5129 81.3305 58.5172 85.7979 53.2246 85.7979C47.9322 85.7976 42.9372 81.3303 39.2236 73.6367C35.5339 65.9923 33.2324 55.3824 33.2324 43.625C33.2324 31.8676 35.5339 21.2577 39.2236 13.6133C42.9372 5.9197 47.9322 1.45241 53.2246 1.45215Z" stroke="url(#paint2_linear_668_35890)" strokeWidth="1.40381" className="usp-path"/>
+<path d="M69.1035 1.45215C74.3961 1.45215 79.3918 5.91948 83.1055 13.6133C86.7952 21.2577 89.0967 31.8676 89.0967 43.625C89.0967 55.3824 86.7952 65.9923 83.1055 73.6367C79.3918 81.3305 74.3961 85.7979 69.1035 85.7979C63.8111 85.7976 58.8161 81.3303 55.1025 73.6367C51.4128 65.9923 49.1113 55.3824 49.1113 43.625C49.1113 31.8676 51.4128 21.2577 55.1025 13.6133C58.8161 5.9197 63.8111 1.45241 69.1035 1.45215Z" stroke="url(#paint3_linear_668_35890)" strokeWidth="1.40381" className="usp-path"/>
+<defs>
+<linearGradient id="paint0_linear_668_35890" x1="21.4663" y1="0.75" x2="21.4663" y2="86.5" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint1_linear_668_35890" x1="37.3452" y1="0.75" x2="37.3452" y2="86.5" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint2_linear_668_35890" x1="53.2251" y1="0.75" x2="53.2251" y2="86.5" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint3_linear_668_35890" x1="69.104" y1="0.75" x2="69.104" y2="86.5" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+</defs>
+
+    </>
+  )
+}
+export const DigitalAccounts4=()=>{
+  return(
+    <>
+<circle cx="42.4961" cy="42.5" r="41.7981" stroke="url(#paint0_linear_668_35908)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="47.4961" cy="42.5" r="41.7981" stroke="url(#paint1_linear_668_35908)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="52.4961" cy="42.5" r="41.7981" stroke="url(#paint2_linear_668_35908)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="57.4961" cy="42.5" r="41.7981" stroke="url(#paint3_linear_668_35908)" strokeWidth="1.40381" className="usp-path"/>
+<circle cx="62.4961" cy="42.5" r="41.7981" stroke="url(#paint4_linear_668_35908)" strokeWidth="1.40381" className="usp-path"/>
+<defs>
+<linearGradient id="paint0_linear_668_35908" x1="42.4961" y1="0" x2="42.4961" y2="85" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint1_linear_668_35908" x1="47.4961" y1="0" x2="47.4961" y2="85" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint2_linear_668_35908" x1="52.4961" y1="0" x2="52.4961" y2="85" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint3_linear_668_35908" x1="57.4961" y1="0" x2="57.4961" y2="85" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+<linearGradient id="paint4_linear_668_35908" x1="62.4961" y1="0" x2="62.4961" y2="85" gradientUnits="userSpaceOnUse">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#FF935E"/>
+</linearGradient>
+</defs>
+
+
+    </>
+  )
+}

@@ -8,11 +8,17 @@ import { useGSAP } from "@gsap/react";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import BlackButton from "../Buttons/BlackButton";
 import { fadeUpAnim } from "../Animations/gsapAnimations";
+import { usePathname } from "next/navigation";
+
 
 gsap.registerPlugin(useGSAP);
 
-export default function Hero({ heading, para }) {
+export default function Hero({ heading, para , breadcrumb}) {
   const btnContainer = useRef();
+  const pathname = usePathname();
+  const pathArray = pathname.split("/").filter(Boolean);
+  const createBreadcrumbName = (segment) =>
+    segment.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -43,7 +49,7 @@ export default function Hero({ heading, para }) {
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground`}
         >
           <Copy delay={1.8}>
-            <h1 className={`text-[7.815vw] font-display leading-[1.1] w-[70%] text-center headingText text-[#D6D6D6]`}>
+            <h1 className={`text-[7.815vw] font-display leading-[1.1] w-[80%] text-center headingText text-[#D6D6D6]`}>
               {heading}
             </h1>
           </Copy>
@@ -62,6 +68,39 @@ export default function Hero({ heading, para }) {
             <BlackButton text="Talk to an expert" href={"#"} />
           </div>
         </div>
+        {breadcrumb && (
+        <div className="breadcrumbs w-full flex items-start justify-start text-content-18 text-[#636363]   absolute left-[5%] bottom-[8%] max-sm:bottom-[5%] max-md:text-[2.2vw] fadeupanim">
+          <div className="flex gap-3  ">
+            <a onClick={(e) => {
+              e.preventDefault();
+              navigateTo('/')
+            }} href="/" className="">
+              Home
+            </a>
+            {pathArray.map((segment, index) => {
+              const href = "/" + pathArray.slice(0, index + 1).join("/");
+              const isLast = index === pathArray.length - 1;
+              return (
+                <div key={index} className="flex items-center gap-2 ">
+                  <span>/</span>
+                  {isLast ? (
+                    <span className="text-white ">
+                      {createBreadcrumbName(segment)}
+                    </span>
+                  ) : (
+                    <a onClick={(e) => {
+                      e.preventDefault();
+                      navigateTo(href)
+                    }} href={href} className="">
+                      {createBreadcrumbName(segment)}
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        )}
       </div>
     </section>
   );

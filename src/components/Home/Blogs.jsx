@@ -71,8 +71,8 @@ export default function Blogs() {
 
       <div className="flex items-center justify-end px-[3.75vw]">
         <div className="flex items-center w-fit gap-5 ">
-          <ArrowButton onClick={handlePrevClick} rotate={"-rotate-180"} />
-          <ArrowButton onClick={handleNextClick} />
+          <ArrowButton onClick={handlePrevClick} rotate={"-rotate-180"}  arrowColor={"#050505"} borderColor={"#050505"} hoverColor={"bg-[#050505]/10"}/>
+          <ArrowButton onClick={handleNextClick}  arrowColor={"#050505"} borderColor={"#050505"} hoverColor={"bg-[#050505]/10"}/>
         </div>
       </div>
 
@@ -102,7 +102,7 @@ const Card = ({ img, href, title, date }) => {
               <p className="text-[1.25vw] font-medium">{title}</p>
               <p className="text-[0.95vw] font-light">{date}</p>
             </div>
-            <ArrowButton href={href} rotate={"-rotate-45"} />
+            <ArrowButton href={href} rotate={"-rotate-45"}  arrowColor={"#050505"} borderColor={"#050505"} hoverColor={"bg-[#050505]/10"}/>
           </div>
         </div>
       </div>

@@ -1,0 +1,38 @@
+import Image from 'next/image'
+import React from 'react'
+import Copy from '../Animations/Copy'
+
+const Overview = () => {
+  return (
+    <section className='h-[80vh] w-screen bg-gradient relative' id='productsOverview'>
+    <div className='h-full w-full py-[8vw] px-[8vw]  flex justify-center '>
+      <div className='w-[45%] flex items-start'>
+        <Copy>
+        <h2 className='text-head-60 capitalize font-display'>
+          Explore Our Suite of Scalable Financial Products
+        </h2>
+        </Copy>
+        <div className='absolute top-[12%] left-[12%] h-[3vw] w-[3vw]'>
+<Image src={"/assets/icons/overview-icon.svg"} height={50} width={50} alt='overview-icon' className='h-full w-full'/>
+        </div>
+      </div>
+  
+      <div className='w-[40%] flex items-end'>
+        <Copy>
+        <p className='text-content-20'>
+          Launch, scale, and optimize retail financial services with a powerful suite of modular tools.
+          From digital wallets and card issuing to payments, lending, and identity verification —
+          Monielink gives banks and fintechs the infrastructure to deliver secure, compliant,
+          and seamless financial experiences. Built for performance and flexibility, our platform
+          enables you to go to market faster, adapt to customer needs, and unlock new revenue streams
+          — all through a single integration.
+        </p>
+        </Copy>
+      </div>
+    </div>
+  </section>
+  
+  )
+}
+
+export default Overview

@@ -48,7 +48,7 @@ useEffect(() => {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top 80%',
-                markers: true,
+                // markers: true,
             }
         });
 

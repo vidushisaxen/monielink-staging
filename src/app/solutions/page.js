@@ -14,7 +14,7 @@ export default function About() {
       <Layout>
         <Hero heading={"Smart Solutions for Modern Banking"} para={"Moneylink empowers banks and fintechs to launch and scale digital banking services with speed, flexibility, and security. From onboarding to payments, we offer a full suite of solutions tailored to the demands of today's B2B2C financial ecosystem."}/>
         <Intro />
-        <Solutions />
+        {/* <Solutions /> */}
         <Features />
         <FAQs data={faqData} />
         <CTA />

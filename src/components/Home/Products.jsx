@@ -87,8 +87,8 @@ export default function Products() {
         </Swiper>
 
         <div className="flex items-center justify-center gap-5">
-          <ArrowButton onClick={handlePrevClick} className={"text-white"} rotate={"-rotate-180"} />
-          <ArrowButton onClick={handleNextClick} className={"text-white"} />
+          <ArrowButton onClick={handlePrevClick} arrowColor={"#ffffff"} borderColor={"#636363"} hoverColor={"bg-[#636363]/20"} rotate={"-rotate-180"} />
+          <ArrowButton onClick={handleNextClick} arrowColor={"#ffffff"} borderColor={"#636363"} hoverColor={"bg-[#636363]/20"} />
         </div>
       </div>
     </section>
@@ -156,7 +156,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           ))}
         </ul>
         <PrimaryButton
-          href={"#"}
+          href={link}
           text="Know More"
         />
       </div>

@@ -56,7 +56,7 @@ const AboutUs = () => {
 
     return (
         <>
-            <section className="bg-white-1 p-[8vw]">
+            <section className="bg-white-1 p-[8vw] white">
                 <div className="w-full flex items-center justify-between">
                     <div className="flex flex-col gap-y-[5vw] text-black-1 w-[58%]">
                         <Copy>

@@ -3,7 +3,7 @@ import WhyUsSwiper from "./WhyUsSwiper";
 
 const WhyUs = () => {
     return (
-        <section className="bg-gradient relative h-fit">
+        <section className="bg-gradient relative h-fit white">
             <div className="w-full h-full py-[7vw] text-white">
                 <div className="flex justify-between items-start mb-[10vw] px-[4vw]">
                     <Copy>

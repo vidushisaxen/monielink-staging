@@ -8,29 +8,30 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import DecryptedText from "../DecryptedText";
 import { Logo } from "../Icons";
 import PrimaryButton from "../Buttons/PrimaryButton";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const links = [
   {
     name: "About Us",
-    link: "/",
+    link: "#",
   },
   {
     name: "Solutions",
-    link: "/",
+    link: "#",
   },
   {
     name: "Products",
-    link: "/",
+    link: "#",
   },
   {
     name: "Resources",
-    link: "/",
+    link: "#",
   },
   {
     name: "Contact Us",
-    link: "/",
+    link: "#",
   },
 ];
 
@@ -40,9 +41,8 @@ export default function Header() {
   const [isInverted, setIsInverted] = useState(false);
   const [isWhite, setIsWhite] = useState(false);
 
-  useEffect(() => {
+  useGSAP(() => {
     const triggers = [];
-
     document.querySelectorAll(".dark").forEach((section) => {
       const trigger = ScrollTrigger.create({
         trigger: section,
@@ -56,14 +56,10 @@ export default function Header() {
 
       triggers.push(trigger);
     });
-
-    return () => {
-      triggers.forEach((trigger) => trigger.kill());
-    };
   }, []);
-  useEffect(() => {
-    const triggers = [];
 
+  useGSAP(() => {
+    const triggers = [];
     document.querySelectorAll(".white").forEach((section) => {
       const trigger = ScrollTrigger.create({
         trigger: section,
@@ -77,21 +73,16 @@ export default function Header() {
 
       triggers.push(trigger);
     });
-
-    return () => {
-      triggers.forEach((trigger) => trigger.kill());
-    };
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-
       if (currentY > lastY && currentY > 100) {
         setHidden(true);
       } else if (currentY < lastY) {
         setHidden(false);
       }
-
       setLastY(currentY);
     };
 

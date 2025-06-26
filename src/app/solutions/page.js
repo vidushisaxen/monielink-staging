@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero/Hero";
+import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";

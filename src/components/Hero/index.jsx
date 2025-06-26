@@ -10,7 +10,6 @@ import BlackButton from "../Buttons/BlackButton";
 import { fadeUpAnim } from "../Animations/gsapAnimations";
 import { usePathname } from "next/navigation";
 
-
 gsap.registerPlugin(useGSAP);
 
 export default function Hero({ heading, para , breadcrumb}) {

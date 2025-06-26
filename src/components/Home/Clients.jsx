@@ -1,8 +1,11 @@
 "use client";
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Copy from "../Animations/Copy";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 export default function Clients() {
   const svgRef = useRef(null);
@@ -27,7 +30,7 @@ export default function Clients() {
     "paint6_linear_252_22056"
   ];
 
-  useEffect(() => {
+  useGSAP(() => {
     const activeAnimsRef = { current: [] };
     const DURATION = 4;
     const REVEAL_DURATION = 4;
@@ -122,11 +125,6 @@ export default function Clients() {
         ease: "power2.out"
       })
       .call(startMainAnimation, null, `+=${-0.01}`);
-
-      return () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      };
-
   }, []);
 
   return (

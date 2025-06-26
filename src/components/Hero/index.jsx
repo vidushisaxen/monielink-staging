@@ -68,7 +68,7 @@ export default function Hero({ heading, para , breadcrumb}) {
           </div>
         </div>
         {breadcrumb && (
-        <div className="breadcrumbs w-full flex items-start justify-start text-content-18 text-[#636363]   absolute left-[5%] bottom-[8%] max-sm:bottom-[5%] max-md:text-[2.2vw] fadeupanim">
+        <div className="breadcrumbs w-full flex items-start justify-start text-content-18 text-[#636363]   absolute left-[5%] bottom-[8%] max-sm:bottom-[5%] max-md:text-[2.2vw]">
           <div className="flex gap-3  ">
             <a onClick={(e) => {
               e.preventDefault();

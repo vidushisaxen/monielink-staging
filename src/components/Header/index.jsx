@@ -43,37 +43,36 @@ export default function Header() {
 
   useGSAP(() => {
     const triggers = [];
-    document.querySelectorAll(".dark").forEach((section) => {
+  
+    document.querySelectorAll("[data-theme]").forEach((section) => {
+      const theme = section.dataset.theme;
+  
       const trigger = ScrollTrigger.create({
         trigger: section,
         start: "top top",
         end: "bottom top",
-        onEnter: () => setIsInverted(true),
-        onEnterBack: () => setIsInverted(true),
-        onLeave: () => setIsInverted(false),
-        onLeaveBack: () => setIsInverted(false),
+        onEnter: () => {
+          if (theme === "orange") setIsInverted(true);
+          if (theme === "white") setIsWhite(true);
+        },
+        onEnterBack: () => {
+          if (theme === "orange") setIsInverted(true);
+          if (theme === "white") setIsWhite(true);
+        },
+        onLeave: () => {
+          if (theme === "orange") setIsInverted(false);
+          if (theme === "white") setIsWhite(false);
+        },
+        onLeaveBack: () => {
+          if (theme === "orange") setIsInverted(false);
+          if (theme === "white") setIsWhite(false);
+        },
       });
-
+  
       triggers.push(trigger);
     });
   }, []);
-
-  useGSAP(() => {
-    const triggers = [];
-    document.querySelectorAll(".white").forEach((section) => {
-      const trigger = ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: "bottom top",
-        onEnter: () => setIsWhite(true),
-        onEnterBack: () => setIsWhite(true),
-        onLeave: () => setIsWhite(false),
-        onLeaveBack: () => setIsWhite(false),
-      });
-
-      triggers.push(trigger);
-    });
-  }, []);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,7 +107,7 @@ export default function Header() {
                   clipPath: "url(#bgblur_0_73_833892_clip_path)",
                   height: '100%',
                   width: '100%',
-                  backgroundColor: isWhite ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
+                  backgroundColor: (isInverted || isWhite) ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
                 }}
               />
             </foreignObject>

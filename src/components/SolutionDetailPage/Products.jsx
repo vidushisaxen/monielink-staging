@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Products = () => {
   return (
-    <section id="features" className="bg-white-1 text-black-1">
+    <section data-theme="white" id="features" className="bg-white-1 text-black-1">
                <div className="px-[4.5vw] py-[8vw] w-full space-y-[8vw]">
                 <div className='w-full flex items-center justify-between'>
                    <div className="w-[52%] text-left">

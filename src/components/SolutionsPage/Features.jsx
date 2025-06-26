@@ -63,7 +63,7 @@ export default function Features() {
     });
 
     return (
-        <section id="features" className="bg-white-1 text-black-1">
+        <section data-theme="white" id="features" className="bg-white-1 text-black-1">
             <div className="px-[4.5vw] pt-[8vw] w-full">
                 <div className="w-[52%] text-left mb-[4vw]">
                     <Copy>

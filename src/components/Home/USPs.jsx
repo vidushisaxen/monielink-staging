@@ -64,7 +64,7 @@ const uspData = [
   });
 
   return (
-    <section id="usps" className="bg-gradient-to-r from-[#FF5100] to-[#FE6E00] dark">
+    <section data-theme="orange" id="usps" className="bg-gradient-to-r from-[#FF5100] to-[#FE6E00]">
       <div className="px-[4.5vw] py-[8vw] w-full flex flex-col items-center justify-center space-y-[8vw]">
         <div className="w-[80%]">
           <Copy>

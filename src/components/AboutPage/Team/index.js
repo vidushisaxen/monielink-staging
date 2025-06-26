@@ -5,7 +5,7 @@ import { TeamData } from "./TeamData";
 import Copy from '@/components/Animations/Copy';
 
 const Team = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleAccordionClick = (index) => {
         setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -13,7 +13,7 @@ const Team = () => {
 
     return (
         <>
-            <section className="bg-white-1 py-[4vw]">
+            <section data-theme="white" className="bg-white-1 py-[4vw]">
                 <div className="px-[4vw]">
                     <div className="w-[45%] mb-10">
                         <Copy>

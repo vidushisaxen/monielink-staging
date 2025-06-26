@@ -14,7 +14,7 @@ export default function FAQs({data}) {
  
 
   return (
-    <section id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white">
+    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white">
       <div className="w-3/4 mx-auto text-center">
         <Copy>
           <h2 className="text-[5.2vw] text-background leading-[1.25] font-display">

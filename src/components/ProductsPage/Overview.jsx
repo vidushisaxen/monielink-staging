@@ -4,7 +4,7 @@ import Copy from '../Animations/Copy'
 
 const Overview = () => {
   return (
-    <section className='h-[80vh] w-screen bg-gradient relative' id='productsOverview'>
+    <section data-theme="orange" className='h-[80vh] w-screen bg-gradient relative' id='productsOverview'>
     <div className='h-full w-full py-[8vw] px-[8vw]  flex justify-center '>
       <div className='w-[45%] flex items-start'>
         <Copy>

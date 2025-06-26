@@ -23,7 +23,7 @@ export default function Blogs() {
   };
 
   return (
-    <section id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5] white">
+    <section data-theme="white" id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5]">
 
       <div className="flex pb-[3vw] px-[3.75vw] items-end justify-between">
         <div className="space-y-[1vw] w-1/2">

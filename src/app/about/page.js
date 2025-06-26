@@ -6,7 +6,7 @@ import { faqData } from "@/components/SampleFaqData";
 import AboutUs from "@/components/AboutPage/AboutUs";
 import WhyUs from "@/components/AboutPage/WhyUs";
 import Team from "@/components/AboutPage/Team";
-import Clients from "@/components/About/Clients";
+import Clients from "@/components/AboutPage/Clients";
 
 export default function About() {
 

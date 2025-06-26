@@ -177,7 +177,7 @@ export default function ProductSlider() {
     };
 
     return (
-        <section
+        <section data-theme = "white"
             ref={containerRef}
             className="bg-white-1 relative h-[800vh]"
             style={{ height: `${products.length * 100}vh` }}

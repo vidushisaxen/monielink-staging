@@ -43,7 +43,7 @@ export default function Solutions() {
   }, { scope: containerRef })
 
   return (
-    <section id="products" className="h-full w-screen relative bg-gradient">
+    <section data-theme="orange" id="products" className="h-full w-screen relative bg-gradient">
       <div className="w-full flex flex-col items-center ">
 
         <div className="text-center w-[70%] py-[8vw] ">

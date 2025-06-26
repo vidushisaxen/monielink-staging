@@ -57,7 +57,7 @@ const Intro = () => {
     });
 
     return (
-        <section className="bg-gradient h-[75vw] relative">
+        <section data-theme="orange" className="bg-gradient h-[75vw] relative">
             <div className="px-[4vw] py-[8vw] flex flex-col justify-between items-center h-full w-full relative">
                 <div className="text-center text-white w-[80%] flex flex-col items-center gap-10">
                     <Copy>

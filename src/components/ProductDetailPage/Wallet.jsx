@@ -11,7 +11,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
-const Wallet = () => {
+const Wallet = ({heading}) => {
     const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
 
     const uspData = [
@@ -59,10 +59,10 @@ const Wallet = () => {
     return (
         <section data-theme="orange" className='w-screen bg-gradient h-full relative'>
             <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw]'>
-                <div className='w-[80%]'>
+                <div className='w-[95%]'>
                     <Copy>
-                        <h2 className='text-head-60 font-display text-center capitalize'>
-                            Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale.
+                        <h2 className='text-head-60 font-display text-center'>
+                           {heading}
                         </h2>
                     </Copy>
                 </div>

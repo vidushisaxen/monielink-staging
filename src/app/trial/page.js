@@ -1,15 +1,18 @@
-import Clients from '@/components/Home/Clients'
-import Products from '@/components/Home/Products'
-import React from 'react'
+import Layout from "@/components/Layout";
+import Wallet from "@/components/ProductDetailPage/Wallet";
+import Values from "@/components/ProductDetailPage/Values";
+import Infrastructure2 from "@/components/ProductDetailPage/Balance/Infrstructure2";
 
-const page = () => {
+
+export default function page() {
+
   return (
-   <>
-  <Clients/>
-  
-
-   </>
-  )
-}
-
-export default page
+    <>
+      <Layout>
+        <Wallet/>
+        <Infrastructure2/>
+        <Values/>
+      </Layout>
+    </>
+  );
+};

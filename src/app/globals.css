@@ -49,6 +49,17 @@
   --black-1: #050505;
   --primary-1: #ff5100;
   --primary-2: #fe6e00;
+
+  --head-200: 10.4vw;
+  --head-150: 7.815vw;
+  --head-140: 7.3vw;
+  --head-100: 5.2vw;
+  --head-60: 3.12vw;
+  --head-40: 2.085vw;
+  --content-30: 1.56vw;
+  --content-24: 1.25vw;
+  --content-20: 1.04vw;
+  --content-18: 0.94vw;
 }
 
 @theme inline {
@@ -61,27 +72,34 @@
   --color-black-1: var(--black-1);
   --color-primary-1: var(--primary-1);
   --color-primary-2: var(--primary-2);
-  --text-head-150: 7.815vw;
+
+  --text-head-200: var(--head-200);
+  --text-head-150--line-height: 1.2;
+  --text-head-150: var(--head-150);
   --text-head-150--line-height: 1.1;
-  --text-head-140: 7.3vw;
+  --text-head-140: var(--head-140);
   --text-head-140--line-height: 1.2;
-  --text-head-100: 5vw;
+  --text-head-100: var(--head-100);
   --text-head-100--line-height: 1.25;
-  --text-head-60: 3.12vw;
+  --text-head-60: var(--head-60);
   --text-head-60--line-height: 1.3;
-  --text-head-40: 2.085vw;
+  --text-head-40: var(--head-40);
   --text-head-40--line-height: 1.3;
-  --text-content-30: 1.56vw;
+  --text-content-30: var(--content-30);
   --text-content-30--line-height: 1.2;
-  --text-content-24: 1.25vw;
+  --text-content-24: var(--content-24);
   --text-content-24--line-height: 1.4;
   --text-content-24--letter-spacing: 0.3px;
-  --text-content-20: 1.04vw;
+  --text-content-20: var(--content-20);
   --text-content-20--line-height: 1.4;
   --text-content-20--letter-spacing: 0.3px;
-  --text-content-18: 0.95vw;
+  --text-content-18: var(--content-18);
   --text-content-18--line-height: 1.2;
   --text-content-18--letter-spacing: 0.3px;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 1025px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -285,4 +303,49 @@ li .link-line::after {
 .link-line:hover::after {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+/* Btn CSS */
+.btn-clipPath {
+  clip-path: polygon(
+    100% 0%,
+    100% 2.9vw,
+    11.25vw 100%,
+    0% 100%,
+    0% 1.4vw,
+    1.3vw 0%
+  );
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  :root {
+    --head-200: 20.513vw;
+    --head-150: 14.4vw;
+    --head-140: 9.5vw;
+    --head-100: 10.25vw;
+    --head-60: 7.7vw;
+    --head-40: 3vw;
+    --content-30: 2.5vw;
+    --content-24: 2vw;
+    --content-20: 3.6vw;
+    --content-18: 4.1vw;
+  }
+
+  /* Btn CSS */
+  .btn-clipPath {
+    clip-path: polygon(100% 0%, 100% 63%, 90% 100%, 0% 100%, 0% 37%, 9.5% 0%);
+  }
+  .btn-clipPath::after {
+    left: -44.6%;
+    height: 1.2px;
+    width: 100%;
+    rotate: -50deg;
+  }
+  .btn-clipPath::before {
+    width: 100%;
+    height: 1.2px;
+    right: -44.4%;
+    rotate: -49deg;
+  }
 }

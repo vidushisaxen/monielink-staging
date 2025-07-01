@@ -63,9 +63,9 @@ export default function OverviewGIF() {
   }, []);
 
   return (
-    <div ref={containerRef} id="overviewGif" className="w-[100vw] top-0 absolute">
+    <div ref={containerRef} id="overviewGif" className="w-[100vw] top-0 absolute max-sm:overflow-hidden max-sm:flex max-sm:items-center max-sm:h-[100vh] pointer-events-none">
       <svg
-        className="w-full h-auto"
+        className="w-full h-auto max-sm:scale-200 max-sm:translate-y-[-30%]"
         ref={svgRef}
         width="1922"
         height="1446"

@@ -69,17 +69,17 @@ export default function HeroBackground() {
   return (
       <div className="w-screen h-screen absolute inset-0 bg-background  overflow-hidden flex flex-wrap">
       {[...Array(cellCount)].map((_, i) => {
-        const row = Math.floor(i / 50);
-        const isAlternateRow = row % 2 === 1;
         return (
           <div
             key={i}
             ref={(el) => (cellsRef.current[i] = el)}
-            className="w-[12px] h-[43px] border border-[#121212]"
+            className="w-[12px] h-[43px] border duration-100 border-[#121212] max-sm:hidden"
             style={{
               opacity: 1,
               backgroundColor: "transparent",
-              marginLeft: isAlternateRow ? "3px" : "0px"
+              margin: "1.5px",
+              // marginLeft: "3px",
+              // marginBottom: "3px",
             }}
           />
         );

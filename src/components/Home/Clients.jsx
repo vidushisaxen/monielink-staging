@@ -130,9 +130,9 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="h-[130vh] w-screen flex items-center justify-center relative bg-[#050505] pb-[4vw]"
+      className="h-[130vh] w-screen flex items-center justify-center relative bg-[#050505] pb-[4vw] max-sm:py-[15%]"
     >
-      <div className="w-full h-full">
+      <div className="w-full h-full max-sm:h-[100vw] max-sm:w-[100vw] max-sm:scale-[2] max-sm:translate-x-[-30%]">
         <svg 
           ref={svgRef}
           className="w-full h-full" 
@@ -215,10 +215,10 @@ export default function Clients() {
         </svg>
       </div>
       
-      <div className="absolute w-screen h-screen top-0 left-0 flex items-center justify-center">
-        <div className="w-1/2 h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
+      <div className="absolute w-screen h-screen max-sm:items-start top-0 left-0 flex max-sm:flex-col items-center justify-center">
+        <div className="w-1/2 max-sm:w-[70%] h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
           <Copy>
-            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] w-[90%]">
+            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] w-[90%] max-sm:w-full max-sm:text-[9vw]">
               Clients & Partners We Work Alongside
             </h2>
           </Copy>

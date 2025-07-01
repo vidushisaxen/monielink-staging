@@ -218,8 +218,8 @@ const SolutionsCard = ({ solutionsRef }) => {
   };
 
   return (
-    <div className="w-full h-[90vh]  flex flex-col sticky top-[5%]">
-      <div className="border-t w-full flex items-center justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw] ">
+    <div className="w-full  h-[90vh]  flex flex-col sticky top-[5%]">
+      <div className="border-t w-full flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw] max-sm:mb-[20vw]">
         {[
           "Digital Account",
           "Loyalty",
@@ -230,10 +230,10 @@ const SolutionsCard = ({ solutionsRef }) => {
         ].map((item, index) => (
           <div
             key={index}
-            className="border-l py-5 w-[15vw] text-center border-r border-[#282828] card-tag cursor-pointer"
+            className="border-l py-5 w-[15vw] max-sm:min-w-[45vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw]"
             onClick={() => handleCardClick(index)}
           >
-            <div className="text-[#A8A8A8] text-[0.95vw] !text-center w-[15vw]"><DecryptedText text={item} /></div>
+            <div className="text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full"><DecryptedText text={item} /></div>
           </div>
         ))}
       </div>
@@ -262,8 +262,8 @@ export default SolutionsCard;
 function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft, svgRight, y, svgRightRef }) {
   return (
     <>
-      <div className={`h-[85vh]  w-full flex items-center justify-center relative ${cardClass} ${zIndex} ${y} `}>
-        <div className="w-[75vw] h-auto flex items-center justify-center z-0">
+      <div className={`h-[85vh] max-sm:h-[90vh] max-sm:py-[20vw] w-full flex items-center justify-center relative ${cardClass} ${zIndex} ${y} `}>
+        <div className="w-[75vw] max-sm:hidden h-auto flex items-center justify-center z-0">
           {svgLeft}
         </div>
 
@@ -280,7 +280,7 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
                   />
                 </div>
                 <div className="w-[65%] flex flex-col items-start justify-center">
-                  <p className="text-[#D6D6D6] font-display leading-none text-[3.12vw]">
+                  <p className="text-[#D6D6D6] font-display leading-none text-[3.12vw] max-sm:text-[4vw]">
                     {title}
                   </p>
                   <p className="pt-10 text-[1.04vw] text-[#A8A8A8] w-full">

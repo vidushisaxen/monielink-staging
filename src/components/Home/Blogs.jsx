@@ -23,23 +23,31 @@ export default function Blogs() {
   };
 
   return (
-    <section data-theme="white" id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5]">
+    <section data-theme="white" id="blogs" className="h-fit py-[5vw] text-background bg-[#F5F5F5] overflow-hidden ">
 
-      <div className="flex pb-[3vw] px-[3.75vw] items-end justify-between">
-        <div className="space-y-[1vw] w-1/2">
+      <div className="flex max-sm:flex-col max-sm:items-start max-sm:py-[10vw] pb-[3vw] px-[3.75vw] items-end justify-between">
+        <div className="space-y-[1vw] w-1/2 max-sm:w-[85%]">
           <Copy>
-            <h2 className="text-[5.2vw] font-display leading-[1.2]">
-              Insights That Drive  Innovation
+            <h2 className="text-[5.2vw] max-sm:text-[9vw] font-display leading-[1.2]">
+              <span className="inline-block max-sm:block">
+
+              Insights That 
+              </span>
+              
+              <span className="inline-block max-sm:block">
+              Drive  Innovation
+                </span> 
+
             </h2>
           </Copy>
           <Copy>
-            <p className="text-[1vw] w-4/5 leading-[1.5]">
+            <p className="text-[1vw] w-4/5 leading-[1.5] max-sm:text-[3vw] max-sm:py-[3vw]">
               Stay ahead of the curve with expert insights, industry trends, and
               actionable tips from the world of technology and business.
             </p>
           </Copy>
         </div>
-        <div className="w-fit fadeupanim">
+        <div className="w-fit max-sm:w-[10vw] fadeupanim">
           <WhiteButton 
             text="View All"
             href="#"
@@ -54,6 +62,16 @@ export default function Blogs() {
           modules={[Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           freeMode={true}
+          breakpoints={{
+    0: {
+      slidesPerView: 1,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 3,
+      centeredSlides: true,
+    }
+     }}
           className="mySwiper items-center justify-center flex h-full"
         >
           {data.map((blog, index) => (

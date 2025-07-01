@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Layout>
-        <Hero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customerexperience."}/>
+        <Hero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customer experience."}/>
         <Overview />
         <Solutions />
         <USPs />

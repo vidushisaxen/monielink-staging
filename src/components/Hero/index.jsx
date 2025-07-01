@@ -40,27 +40,27 @@ export default function Hero({ heading, para , breadcrumb}) {
   fadeUpAnim();
 
   return (
-    <section className="w-screen relative h-screen bg-background">
-      <div className="fixed pointer-events-none z-[999] w-screen h-screen bg-black" id="loader" />
-      <div className="relative h-screen w-full flex flex-col items-center justify-center">
+    <section className="w-screen relative h-screen  max-sm:pb-0 bg-background">
+      <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" />
+      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[10vh] w-full flex flex-col items-center justify-center max-sm:items-start">
         <HeroBackground />
         <div
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:px-[6vw] max-sm:pt-[0vw]`}
         >
           <Copy delay={1.8}>
-            <h1 className={`text-head-150 font-display w-[80%] headingText text-gray-1`}>
+            <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1`}>
               {heading}
             </h1>
           </Copy>
           <div
-            className={`w-[60%] pt-5 text-content-20 text-gray-2 max-sm:w-[90%]`}>
+            className={`w-[60%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-[90%] max-sm:pt-[10vw]`}>
             <Copy delay={2}>
-              <p className="descriptionText">
+              <p className="descriptionText max-sm:text-left max-sm:text-[3.6vw]">
                 {para}
               </p>
             </Copy>
           </div>
-          <div ref={btnContainer} className="flex items-center pt-12 gap-5 max-sm:flex-col">
+          <div ref={btnContainer} className="flex items-center pt-12 gap-5 max-sm:flex-col max-sm:gap-[5vw] max-sm:pt-[10vw]">
             <PrimaryButton text="Talk to an expert" href={"#"} />
             <BlackButton text="Talk to an expert" href={"#"} />
           </div>

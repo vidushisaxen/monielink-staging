@@ -45,14 +45,14 @@ export default function Products() {
   }, { scope: containerRef })
 
   return (
-    <section id="products" className="h-full w-screen relative bg-[#050505]">
+    <section id="products" className="h-full w-screen relative bg-[#050505] max-sm:py-[15%]">
       <div className="sticky top-0 left-0">
         <BackgroundLine />
       </div>
 
       <div ref={containerRef} className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw]">
         <Copy>
-          <h2 className="text-foreground productsText text-[5.2vw] w-[60%] text-center leading-[1.25] font-display capitalize pb-[5vw]">
+          <h2 className="text-foreground productsText text-[5.2vw] max-sm:text-[8vw] w-[60%] max-sm:w-[80%] max-sm:text-center text-center leading-[1.25] font-display capitalize pb-[5vw]">
             Everything You Need to Power Digital Banking
           </h2>
         </Copy>
@@ -71,7 +71,17 @@ export default function Products() {
           slidesPerView={3}
           spaceBetween={40}
           speed={500}
-          className="mySwiper !px-[4.5vw] w-screen !overflow-y-visible"
+          breakpoints={{
+    0: {
+      slidesPerView: 1,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 3,
+      centeredSlides: true,
+    }
+     }}
+          className="mySwiper !px-[4.5vw] max-sm:px-[2vw] w-screen !overflow-y-visible"
         >
           {data.map((card, cardIndex) => (
             <SwiperSlide key={cardIndex} className="w-full h-full swiper-slides-anim !origin-top">
@@ -86,7 +96,7 @@ export default function Products() {
           ))}
         </Swiper>
 
-        <div className="flex items-center justify-center gap-5">
+        <div className="flex items-center justify-center gap-5 max-sm:pt-[6vw]">
           <ArrowButton onClick={handlePrevClick} arrowColor={"#ffffff"} borderColor={"#636363"} hoverColor={"bg-[#636363]/20"} rotate={"-rotate-180"} />
           <ArrowButton onClick={handleNextClick} arrowColor={"#ffffff"} borderColor={"#636363"} hoverColor={"bg-[#636363]/20"} />
         </div>
@@ -136,8 +146,8 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full">
-        <div className="h-[3.5vw] w-auto">
+      <div className="py-[3vw] max-sm:py-[10vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full">
+        <div className="h-[3.5vw] max-sm:h-[8vw] w-auto max-sm:mb-[5vw]">
           <Image
             src={logo}
             alt="frameScoll"
@@ -150,7 +160,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           {features.map((item, index) => (
             <li
               key={index}
-              className={`w-full border-b border-[#282828] last:border-0 text-[0.95vw] pb-2`}>
+              className={`w-full border-b border-[#282828] last:border-0 text-[0.95vw] max-sm:text-[3vw] pb-2`}>
               {item}
             </li>
           ))}

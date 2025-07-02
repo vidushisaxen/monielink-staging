@@ -7,20 +7,18 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
-import StaticQR from "@/components/ProductDetailPage/ScanPay/StaticQR";
-import DynamicQR from "@/components/ProductDetailPage/ScanPay/DynamicQR";
+import Diagram from "@/components/ProductDetailPage/ChatBox/Diagram";
 
 
-export default function ScanPay() {
+export default function ChatBox() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Digital Banking with Balance"} para={"Deliver modern financial services — from onboarding to transactions — inside your mobile app using Moneylink’s Super SDK."} breadcrumb={true}/>
+        <Hero heading={"Learn with FAQs & Videos"} para={"Help users explore and understand Monielink Super SDK’s features with engaging FAQs and video content. Empower them with the knowledge they need to use your digital services confidently and effectively."} breadcrumb={true}/>
         <Intro content={introData}/>
-        <Wallet heading={"Enable merchants to accept payments instantly using interoperable static or dynamic QR codes — compatible with all major banks and wallets. Fast, secure, and frictionless for both merchants and customers."}/>
-       <StaticQR/>
-        <DynamicQR/>
+        <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
+       <Diagram/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />
@@ -30,7 +28,7 @@ export default function ScanPay() {
   );
 };
 const introData ={
-    logo:"/assets/icons/scanpay-logo.svg",
+    logo:"/assets/icons/chatbox-logo.svg",
     heading:"One Platform. Every Retail Banking Service.",
     list:[
       "Digital Account Management with integrated KYC and soft-token authentication",

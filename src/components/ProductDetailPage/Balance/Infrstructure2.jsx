@@ -71,7 +71,7 @@ const Infrastructure2 = () => {
 
     useGSAP(() => {
         const texts = sectionRef.current.querySelectorAll(".textanim");
-    
+        
         texts.forEach((text) => {
           gsap.from(text, {
             y: 10,

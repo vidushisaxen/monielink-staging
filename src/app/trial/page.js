@@ -8,11 +8,11 @@ export default function page() {
 
   return (
     <>
-      <Layout>
+      {/* <Layout>
         <Wallet/>
         <Infrastructure2/>
         <Values/>
-      </Layout>
+      </Layout> */}
     </>
   );
 };

@@ -58,20 +58,20 @@ const Wallet = ({heading}) => {
     });
     return (
         <section data-theme="orange" className='w-screen bg-gradient h-full relative'>
-            <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw]'>
-                <div className='w-[90%]'>
+            <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw] max-sm:py-[15%] max-sm:items-start max-sm:px-[5.5vw]'>
+                <div className='w-[90%] max-sm:w-full'>
                     <Copy>
-                        <h2 className='text-head-60 font-display text-center'>
+                        <h2 className='text-head-60 font-display text-center max-sm:text-head-80 capitalize max-sm:text-left'>
                            {heading}
                         </h2>
                     </Copy>
                 </div>
                 <div className='w-full space-y-[3vw]'>
-                <div className="flex items-center justify-between gap-y-[5vw] w-full ">
+                <div className="flex items-center justify-between gap-y-[5vw] w-full max-sm:flex-col max-sm:items-start max-sm:gap-y-[8vw] max-sm:py-[10vw] ">
                     {uspData.map(({ description, svg, svgElement }, index) => (
-                        <div key={index} className="flex items-center w-[22%] justify-start gap-[2vw]">
+                        <div key={index} className="flex items-center w-[22%] justify-start gap-[2vw] max-sm:w-[85%] max-sm:gap-[6vw]">
                             <div className="text-primary-2 mb-1">
-                                <svg width="105" height="85" viewBox="0 0 105 85" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[5vw] w-[5vw]" ref={svg}>
+                                <svg width="105" height="85" viewBox="0 0 105 85" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[5vw] w-[5vw] max-sm:w-[18vw] max-sm:h-auto" ref={svg}>
                                     {svgElement}
                                 </svg>
                             </div>

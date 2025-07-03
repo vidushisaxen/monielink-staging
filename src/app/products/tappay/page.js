@@ -7,7 +7,8 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
-import StaticQR from "@/components/ProductDetailPage/ScanPay/StaticQR";
+import Diagram from "@/components/ProductDetailPage/TapPay/Diagram";
+import Process from "@/components/ProductDetailPage/TapPay/Process";
 
 export default function TapPay() {
 
@@ -17,7 +18,8 @@ export default function TapPay() {
         <Hero heading={"Accept Card Payments Anywhere"} para={"Empower every merchant — from street vendors to retail stores — to accept card payments using our POS terminals and Soft-POS solutions. No hardware barriers, easy setup, and full integration with settlement accounts for real-time visibility and control."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet heading={"Enable merchants to accept payments instantly using interoperable static or dynamic QR codes — compatible with all major banks and wallets. Fast, secure, and frictionless for both merchants and customers."}/>
-       <StaticQR/>
+       <Diagram/>
+       <Process/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />

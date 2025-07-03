@@ -7,17 +7,15 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
-import Diagram from "@/components/ProductDetailPage/SnapCred/Diagram";
 
-export default function SnapCred() {
+export default function Duo() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Credit Lifecycle Management"} para={"MonieLink offers an end-to-end credit management solution—from onboarding to disbursement, repayment, and collections. With integrated credit checks, rule-based underwriting, and automated GSI-enabled collections, you can launch and scale credit products with speed and confidence."} breadcrumb={true}/>
+        <Hero heading={"Seamless Merchant Onboarding"} para={"Digitally onboard merchants in minutes and enable instant acceptance of digital and card payments. With interoperable QR codes and real-time activation, offer a frictionless setup that enhances customer experience and accelerates merchant adoption."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
-        <Diagram/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />
@@ -27,7 +25,7 @@ export default function SnapCred() {
   );
 };
 const introData ={
-  logo:"/assets/icons/snapcred-logo.svg",
+  logo:"/assets/icons/duo-logo.svg",
   heading:"One Platform. Every Retail Banking Service.",
   list:[
     "Digital Account Management with integrated KYC and soft-token authentication",
@@ -44,4 +42,4 @@ const valuesData = {
       "<p>Over <b>40 MN </b>Unbanked Nigerian Adults are likely to <b> start banking by 2030. </b></p>",
       "<p><b>Average cross selling ratio </b> of banks is likely to increase from 1.6 to <b> 3.4 </b>by 2030.</p></p>"
   ]
-}  
+}

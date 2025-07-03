@@ -7,17 +7,21 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
-import Diagram from "@/components/ProductDetailPage/SnapCred/Diagram";
+import Identity from "@/components/ProductDetailPage/Verifyed/Identity";
+import Address from "@/components/ProductDetailPage/Verifyed/Address";
+import Biometrics from "@/components/ProductDetailPage/Verifyed/Biometrics";
 
-export default function SnapCred() {
+export default function Verifyed() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Credit Lifecycle Management"} para={"MonieLink offers an end-to-end credit management solution—from onboarding to disbursement, repayment, and collections. With integrated credit checks, rule-based underwriting, and automated GSI-enabled collections, you can launch and scale credit products with speed and confidence."} breadcrumb={true}/>
+        <Hero heading={"Seamless Digital KYC for Instant Onboarding"} para={"Monielink’s SDK enables fast, secure KYC verification — allowing customers to sign up, get verified, and start using financial services in minutes. From facial biometrics to NIN, BVN, and ID validation, every step is streamlined for compliance, speed, and a seamless user experience."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
-        <Diagram/>
+        <Identity/>
+        <Address/>
+      <Biometrics/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />
@@ -27,7 +31,7 @@ export default function SnapCred() {
   );
 };
 const introData ={
-  logo:"/assets/icons/snapcred-logo.svg",
+  logo:"/assets/icons/verifyed-logo.svg",
   heading:"One Platform. Every Retail Banking Service.",
   list:[
     "Digital Account Management with integrated KYC and soft-token authentication",

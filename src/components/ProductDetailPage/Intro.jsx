@@ -4,7 +4,7 @@ import Copy from '../Animations/Copy'
 
 const Intro = ({content}) => {
   return (
-   <section data-theme="white" className='w-screen h-screen bg-white-1'>
+   <section data-theme="white" className='w-screen h-full bg-white-1'>
     <div className='w-full h-full px-[4vw] py-[7vw] flex items-start justify-start'>
         <div className='w-[45%] flex items-start justify-start'>
 <div className='w-[15vw] h-[5vw] fadeupanim'>

@@ -7,22 +7,19 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
-import Rewards from "@/components/ProductDetailPage/Reward/Rewards";
-import Redemptions from "@/components/ProductDetailPage/Reward/Redemptions";
-import Usage from "@/components/ProductDetailPage/Reward/Usage";
+import Diagram from "@/components/ProductDetailPage/TapPay/Diagram";
+import Process from "@/components/ProductDetailPage/TapPay/Process";
+import Flowchart from "@/components/ProductDetailPage/InstaCard/Flowchart";
 
-
-export default function Reward() {
+export default function TapPay() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Drive Engagement with Loyalty Rewards"} para={"Encourage digital service adoption with personalized loyalty programs. Offer rewards that match customer behavior to boost retention and long-term value."} breadcrumb={true}/>
+        <Hero heading={"Instant Virtual Cards for Seamless Payments"} para={"Issue virtual debit, credit, prepaid, and universal cards instantly — ready for immediate use across online platforms and offline POS terminals. Enable secure, seamless spending with cards that work anywhere, anytime."} breadcrumb={true}/>
         <Intro content={introData}/>
-        <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
-       <Rewards/>
-       <Redemptions/>
-       <Usage/>
+        <Wallet heading={"Merchants can self-onboard and start accepting contactless card payments instantly using Soft-POS on NFC-enabled Android phones — all through your mobile app, powered by our SDK."}/>
+      <Flowchart/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />
@@ -32,7 +29,7 @@ export default function Reward() {
   );
 };
 const introData ={
-    logo:"/assets/icons/reward-logo.svg",
+    logo:"/assets/icons/instacard-logo.svg",
     heading:"One Platform. Every Retail Banking Service.",
     list:[
       "Digital Account Management with integrated KYC and soft-token authentication",

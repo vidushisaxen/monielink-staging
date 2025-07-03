@@ -69,10 +69,10 @@ export default function Solutions() {
               setActiveIndex(swiper.activeIndex);
             }}
             // centeredSlides={true}
-            slidesPerView={3}
+            slidesPerView={3.5}
             spaceBetween={40}
             speed={500}
-            className="mySwiper !px-[10vw] w-screen !overflow-y-visible"
+            className="mySwiper !px-[5vw] w-screen !overflow-y-visible"
           >
             {data.map((card, cardIndex) => (
               <SwiperSlide key={cardIndex} className="w-full h-full swiper-slides-anim !origin-top">

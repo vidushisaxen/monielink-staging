@@ -9,6 +9,7 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 import BlackButton from "../Buttons/BlackButton";
 import { fadeUpAnim } from "../Animations/gsapAnimations";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
 
@@ -66,12 +67,12 @@ export default function Hero({ heading, para , breadcrumb}) {
           </div>
         </div>
         {breadcrumb && (
-        <div className="breadcrumbs w-full flex items-start justify-start text-content-18 text-gray-4  absolute left-[5%] bottom-[8%] max-sm:bottom-[5%] max-md:text-[2.2vw]">
+        <div className="breadcrumbs w-full flex items-start justify-start text-content-18 text-gray-4  absolute left-[5%] bottom-[4%] max-sm:bottom-[5%] max-md:text-[2.2vw]">
           <div className="flex gap-3  ">
             <a onClick={(e) => {
               e.preventDefault();
               navigateTo('/')
-            }} href="/" className="">
+            }} href="/" className=" text-[#636363]">
               Home
             </a>
             {pathArray.map((segment, index) => {
@@ -79,7 +80,7 @@ export default function Hero({ heading, para , breadcrumb}) {
               const isLast = index === pathArray.length - 1;
               return (
                 <div key={index} className="flex items-center gap-2 ">
-                  <span>/</span>
+                  <span><Image src="/assets/icons/slash.svg" height={13} width={13} alt="slash" /></span>
                   {isLast ? (
                     <span className="text-white">
                       {createBreadcrumbName(segment)}
@@ -88,7 +89,7 @@ export default function Hero({ heading, para , breadcrumb}) {
                     <a onClick={(e) => {
                       e.preventDefault();
                       navigateTo(href)
-                    }} href={href} className="">
+                    }} href={href} className=" text-[#636363]">
                       {createBreadcrumbName(segment)}
                     </a>
                   )}

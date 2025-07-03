@@ -9,6 +9,7 @@ import DecryptedText from "../DecryptedText";
 import { Logo } from "../Icons";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useGSAP } from "@gsap/react";
+import HamButton from "../Buttons/HamButton";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -131,10 +132,20 @@ export default function Header() {
         <div className="flex items-center justify-between w-full h-full relative z-10 pointer-events-auto">
           {/* Logo */}
           <Link href={"/"} className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] ${isInverted ? " brightness-[16]" : ""}`}>
-              <Logo className="h-full w-full" hidden={true} />
+              <Logo className="h-full w-full"  />
           </Link>
 
           {/* Navigation Links */}
+          <div className="hidden max-sm:block">
+             <HamButton
+                  href={"/"}
+                  rotate={""}
+                  arrowColor={"#ffffff"}
+                  borderColor={"#636363"}
+                  hoverColor={"bg-[#ffffff]/10"}
+                />
+
+          </div>
           <nav className="flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden">
             {links.map((item, index) => (
               <Link

@@ -14,16 +14,16 @@ export default function FAQs({data}) {
  
 
   return (
-    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white">
-      <div className="w-3/4 mx-auto text-center">
+    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white max-sm:py-[15%] max-sm:pt-[20%]">
+      <div className="w-3/4 mx-auto text-center max-sm:w-[90%]">
         <Copy>
-          <h2 className="text-[5.2vw] text-background leading-[1.25] font-display">
+          <h2 className="text-[5.2vw] text-background leading-[1.25] font-display max-sm:text-head-100">
             Frequently Asked Questions
           </h2>
         </Copy>
       </div>
 
-      <div className="w-4/5 mx-auto pt-[5vw]">
+      <div className="w-4/5 mx-auto pt-[5vw] max-sm:w-[95%] max-sm:pt-[15vw]">
         <Accordion
           type="single"
           collapsible
@@ -38,10 +38,10 @@ export default function FAQs({data}) {
             return (
               <div
                 key={index}
-                className="relative mb-[3vw] w-full h-full fadeupanim faq-tab"
+                className="relative mb-[3vw] w-full h-full fadeupanim faq-tab max-sm:mb-[6vw]"
               >
                 <div
-                  className={`inset-0 z-0 overflow-hidden rounded-[1vw] p-[1px] relative ${
+                  className={`inset-0 z-0 overflow-hidden rounded-[1vw] p-[1px] relative max-sm:rounded-[4vw] ${
                     isActive ? "animate-border" : ""
                   }`}
                   style={{
@@ -50,17 +50,17 @@ export default function FAQs({data}) {
                   }}
                 >
                   <div
-                    className="relative z-10 bg-[#F0F0F0] p-[2vw] rounded-[1vw]"
+                    className="relative z-10 bg-[#F0F0F0] p-[2vw] rounded-[1vw] max-sm:px-[4vw]"
                     style={{
                       clipPath:
                         "polygon(0% 0%, calc(10% - 1px) 0%, calc(15% - 1px) 2vw, calc(85% + 1px) 2vw, calc(90% + 1px) 0%, 100% 0%, 100% 100%, 0% 100%)",
                     }}
                   >
                     <AccordionItem value={itemKey}>
-                      <AccordionTrigger index={index} className="font-display">
+                      <AccordionTrigger index={index} className="font-display max-sm:text-content-18 max-sm:text-left">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-[1.05vw]">
+                      <AccordionContent className="text-[1.05vw] max-sm:text-content-20">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>

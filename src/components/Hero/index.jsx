@@ -42,7 +42,7 @@ export default function Hero({ heading, para , breadcrumb}) {
   return (
     <section className="w-screen relative h-screen  max-sm:pb-0 bg-background">
       <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" />
-      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[10vh] w-full flex flex-col items-center justify-center max-sm:items-start">
+      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[10vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
         <HeroBackground />
         <div
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:px-[6vw] max-sm:pt-[0vw]`}
@@ -53,9 +53,9 @@ export default function Hero({ heading, para , breadcrumb}) {
             </h1>
           </Copy>
           <div
-            className={`w-[60%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-[90%] max-sm:pt-[10vw]`}>
+            className={`w-[60%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-sm:pt-[10vw]`}>
             <Copy delay={2}>
-              <p className="descriptionText max-sm:text-left max-sm:text-[3.6vw]">
+              <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
                 {para}
               </p>
             </Copy>

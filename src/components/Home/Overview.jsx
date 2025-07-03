@@ -18,7 +18,7 @@ export default function Overview() {
   }, []);
 
   return (
-    <section id="overview" className="h-fit w-full pt-[10vw] bg-background relative z-[1] max-sm:py-[15%]">
+    <section id="overview" className="h-fit w-full pt-[10vw] bg-background relative z-[1] max-sm:pt-[15%]">
       <div className="pt-[5vw] flex items-center flex-col justify-center gap-[2vw]">
         <Copy>
           <h2 className="text-gray-1 text-center text-head-60 w-[55%] capitalize font-display overviewText max-sm:w-3/4 max-sm:head-140">
@@ -86,8 +86,8 @@ export default function Overview() {
         </div>
       </div>
       <div className="pt-[40%] mt-[7%] relative max-sm:pt-[60%]">
-        <div className="flex gap-2 w-screen px-[4.5vw] items-end justify-between pb-[5vw] max-sm:flex-col max-sm:text-center max-sm:items-center">
-          <div className="pb-[3.5vw] w-[50%] max-sm:w-full max-sm:pt-[15vh]">
+        <div className="flex gap-2 w-screen px-[4.5vw] items-end justify-between pb-[5vw] max-sm:flex-col max-sm:text-center max-sm:items-center max-sm:pb-[15vw]">
+          <div className="pb-[3.5vw] w-[50%] max-sm:w-full max-sm:pt-[10vh]">
             <Copy>
               <p className="font-display text-gray-1 text-head-100">
                 Find the Right Solution for You

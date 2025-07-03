@@ -65,8 +65,8 @@ const uspData = [
 
   return (
     <section data-theme="orange" id="usps" className="bg-gradient-to-r max-sm:w-screen from-[#FF5100] to-[#FE6E00] max-sm:py-[15%]">
-      <div className="px-[4.5vw] py-[8vw] max-sm:py-[20vw] w-full flex flex-col items-center justify-center space-y-[8vw]">
-        <div className="w-[80%] max-sm:w-full">
+      <div className="px-[4.5vw] py-[8vw] w-full flex flex-col items-center justify-center space-y-[8vw] ">
+        <div className="w-[80%] max-sm:w-[90%]">
           <Copy>
             <h2 className="text-white text-[5vw] max-sm:text-[10.5vw] max-sm:head-140 text-center font-display leading-[1.25]">
               Scalable, Secure, and Cost- Efficient Banking Infrastructure
@@ -74,7 +74,7 @@ const uspData = [
           </Copy>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full max-sm:pt-[5vh] gap-16">
+        <div className="flex flex-col items-center justify-center w-full  gap-[10vw]">
           {uspData.map(({ title, description, width, svg, svgElement }, index) => (
             <div key={index} className="flex items-center max-sm:flex-col gap-20 max-sm:gap-0 w-full justify-center">
               <div className="w-[40%] max-sm:w-full flex items-end max-sm:items-center max-sm:justify-center justify-end h-full max-sm:h-fit max-sm:py-[4vw]">
@@ -88,12 +88,12 @@ const uspData = [
                   {svgElement}
                 </svg>
               </div>
-              <div className="flex flex-col gap-6 max-sm:gap-[2vw] h-full text-white w-[60%] max-sm:w-full font-body iconText justify-center items-start max-sm:items-center max-sm:text-center">
+              <div className="flex flex-col gap-6 max-sm:gap-[5vw] h-full text-white w-[60%] max-sm:w-full font-body iconText justify-center items-start max-sm:items-center max-sm:text-center">
                 <Copy>
-                  <h3 className="text-[1.56vw] max-sm:w-[55vw] max-sm:leading-[1.1] max-sm:text-center max-sm:text-[8vw] max-sm:pb-[3vw] subText font-display">{title}</h3>
+                  <h3 className="text-[1.56vw] max-sm:w-[90%] capitalize max-sm:leading-[1.1] max-sm:text-center max-sm:text-[8vw] subText font-display">{title}</h3>
                 </Copy>
                 <Copy>
-                  <p className={`text-[1.04vw] max-sm:text-[4vw] max-sm:w-full max-sm:text-center ${width} subText tracking-wide max-sm:px-[11vw]`}>{description}</p>
+                  <p className={`text-[1.04vw] max-sm:text-[4vw] max-sm:text-center ${width} subText tracking-wide max-sm:w-[95%] `}>{description}</p>
                 </Copy>
               </div>
             </div>
@@ -102,7 +102,7 @@ const uspData = [
 
         <div>
           <Copy>
-            <h2 className="text-[7.3vw] max-sm:text-[12vw] text-center max-sm:py-[10vw] leading-[1.2] font-display">
+            <h2 className="text-[7.3vw] max-sm:text-head-140 text-center max-sm:py-[10vw] leading-[1.2] font-display">
               <span>One SDK.</span><br />
               <span className="inline-block max-sm:block">Endless </span> {" "}
               <span className="inline-block"> Possibilities.</span>

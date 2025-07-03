@@ -46,13 +46,13 @@ export default function Products() {
 
   return (
     <section id="products" className="h-full w-screen relative bg-[#050505] max-sm:py-[15%]">
-      <div className="sticky top-0 left-0">
+      <div className="sticky top-0 left-0 max-sm:hidden">
         <BackgroundLine />
       </div>
 
-      <div ref={containerRef} className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw]">
+      <div ref={containerRef} className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw] max-sm:mt-0 max-sm:gap-[10vw] max-sm:pb-0">
         <Copy>
-          <h2 className="text-foreground productsText text-[5.2vw] max-sm:text-[8vw] w-[60%] max-sm:w-[80%] max-sm:text-center text-center leading-[1.25] font-display capitalize pb-[5vw]">
+          <h2 className="text-foreground productsText text-[5.2vw]  w-[60%] max-sm:w-[90%] max-sm:text-center max-sm:text-head-100 text-center leading-[1.25] font-display capitalize pb-[5vw]">
             Everything You Need to Power Digital Banking
           </h2>
         </Copy>
@@ -109,7 +109,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-fit w-full active:scale-95 duration-300 transition-scale">
+    <div className="card relative h-fit w-full active:scale-95 duration-300 transition-scale max-sm:active:scale-100">
       <div className="absolute h-full w-full">
         <svg className="h-full w-full" width="532" height="679" viewBox="0 0 532 679" fill="none" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="-20" y="-20" width="572" height="718.707">
@@ -147,7 +147,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
         </svg>
       </div>
       <div className="py-[3vw] max-sm:py-[10vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full">
-        <div className="h-[3.5vw] max-sm:h-[8vw] w-auto max-sm:mb-[5vw]">
+        <div className="h-[3.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw]">
           <Image
             src={logo}
             alt="frameScoll"
@@ -160,7 +160,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           {features.map((item, index) => (
             <li
               key={index}
-              className={`w-full border-b border-[#282828] last:border-0 text-[0.95vw] max-sm:text-[3vw] pb-2`}>
+              className={`w-full border-b border-[#282828] last:border-0 text-[0.95vw] max-sm:text-content-18 pb-2`}>
               {item}
             </li>
           ))}

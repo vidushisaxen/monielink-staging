@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, className = "", ...props }) {
+function HamButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, className = "", ...props }) {
     const sharedContent = (
         <>
             <div className="relative flex items-center justify-center max-sm:w-[12vw]">
@@ -32,32 +32,12 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
                         <div
                             className={`round flex items-center justify-center gap-0 w-full h-full ${rotate}`}
                         >
-                            <svg
-                                className="arrow primera next "
-                                width="8"
-                                height="15"
-                                viewBox="0 0 8 15"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                    fill={`${arrowColor}`}
-                                />
-                            </svg>
-                            <svg
-                                className="arrow segunda next"
-                                width="8"
-                                height="15"
-                                viewBox="0 0 8 15"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                    fill={`${arrowColor}`}
-                                />
-                            </svg>
+                           <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.276306" y1="1.3634" x2="28.1103" y2="1.3634" stroke="white"/>
+<line x1="0.276306" y1="7.66467" x2="28.1103" y2="7.66467" stroke="white"/>
+<line x1="0.276306" y1="13.9659" x2="28.1103" y2="13.9659" stroke="white"/>
+</svg>
+
                         </div>
                     </div>
                 </div>
@@ -70,7 +50,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
         return (
             <Link
                 href={href}
-                className={`text-black group ${className}`}
+                className={`text-white group ${className}`}
                 {...props}
                 aria-label="Read More"
             >
@@ -84,7 +64,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
         return (
             <button
                 onClick={onClick}
-                className={`text-black group bg-transparent border-none cursor-pointer p-0 ${className}`}
+                className={`text-white group bg-transparent border-none cursor-pointer p-0 ${className}`}
                 {...props}
                 aria-label="Read More"
             >
@@ -98,7 +78,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
         <a
             href={href || "#"}
             onClick={(e) => e.preventDefault()}
-            className={`text-black group ${className}`}
+            className={`text-white group ${className}`}
             {...props}
             aria-label="Read More"
         >
@@ -107,4 +87,4 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
     );
 }
 
-export default ArrowButton;
+export default HamButton;

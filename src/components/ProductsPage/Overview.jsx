@@ -4,20 +4,20 @@ import Copy from '../Animations/Copy'
 
 const Overview = () => {
   return (
-    <section data-theme="orange" className='h-[80vh] w-screen bg-gradient relative' id='productsOverview'>
-    <div className='h-full w-full py-[8vw] px-[8vw]  flex justify-center '>
-      <div className='w-[45%] flex items-start'>
+    <section data-theme="orange" className='h-[80vh] w-screen bg-gradient relative max-sm:h-fit ' id='productsOverview'>
+    <div className='h-full w-full py-[8vw] px-[8vw]  flex justify-center max-sm:px-[5.5vw] max-sm:flex-col max-sm:py-[25%] max-sm:pt-[40%] max-sm:gap-[8vw]'>
+      <div className='w-[45%] flex items-start max-sm:w-full'>
         <Copy>
-        <h2 className='text-head-60 capitalize font-display'>
+        <h2 className='text-head-60 capitalize font-display max-sm:text-head-100'>
           Explore Our Suite of Scalable Financial Products
         </h2>
         </Copy>
-        <div className='absolute top-[12%] left-[12%] h-[3vw] w-[3vw]'>
+        <div className='absolute top-[12%] left-[12%] h-[3vw] w-[3vw] max-sm:top-[14%] max-sm:left-[7%] max-sm:w-[15vw] max-sm:h-auto'>
 <Image src={"/assets/icons/overview-icon.svg"} height={50} width={50} alt='overview-icon' className='h-full w-full'/>
         </div>
       </div>
   
-      <div className='w-[40%] flex items-end'>
+      <div className='w-[40%] flex items-end max-sm:w-full'>
         <Copy>
         <p className='text-content-20'>
           Launch, scale, and optimize retail financial services with a powerful suite of modular tools.

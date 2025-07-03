@@ -14,7 +14,7 @@ export default function FAQs({data}) {
  
 
   return (
-    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white max-sm:py-[15%] max-sm:pt-[20%]">
+    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white max-sm:py-[15%] max-sm:pt-[20%] w-screen overflow-hidden">
       <div className="w-3/4 mx-auto text-center max-sm:w-[90%]">
         <Copy>
           <h2 className="text-[5.2vw] text-background leading-[1.25] font-display max-sm:text-head-100">
@@ -41,20 +41,14 @@ export default function FAQs({data}) {
                 className="relative mb-[3vw] w-full h-full fadeupanim faq-tab max-sm:mb-[6vw]"
               >
                 <div
-                  className={`inset-0 z-0 overflow-hidden rounded-[1vw] p-[1px] relative max-sm:rounded-[4vw] ${
+                  className={`inset-0 z-0 overflow-hidden rounded-[1vw] p-[1px] relative max-sm:rounded-[2.5vw] faq-outer ${
                     isActive ? "animate-border" : ""
                   }`}
-                  style={{
-                    clipPath:
-                      "polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%)",
-                  }}
+                 
                 >
                   <div
-                    className="relative z-10 bg-[#F0F0F0] p-[2vw] rounded-[1vw] max-sm:px-[4vw]"
-                    style={{
-                      clipPath:
-                        "polygon(0% 0%, calc(10% - 1px) 0%, calc(15% - 1px) 2vw, calc(85% + 1px) 2vw, calc(90% + 1px) 0%, 100% 0%, 100% 100%, 0% 100%)",
-                    }}
+                    className="relative z-10 bg-[#F0F0F0] p-[2vw] rounded-[1vw] max-sm:px-[4vw] faq-inner max-sm:rounded-[2.5vw]"
+                    
                   >
                     <AccordionItem value={itemKey}>
                       <AccordionTrigger index={index} className="font-display max-sm:text-content-18 max-sm:text-left">

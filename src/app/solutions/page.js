@@ -6,19 +6,25 @@ import { faqData } from "@/components/SampleFaqData";
 import Intro from "@/components/SolutionsPage/Intro";
 import Features from "@/components/SolutionsPage/Features";
 import Solutions from "@/components/SolutionsPage/Solutions";
+import MobileSolutions from "@/components/SolutionsPage/MobileSolutions";
 
 export default function About() {
-
   return (
     <>
       <Layout>
-        <Hero heading={"Smart Solutions for Modern Banking"} para={"Moneylink empowers banks and fintechs to launch and scale digital banking services with speed, flexibility, and security. From onboarding to payments, we offer a full suite of solutions tailored to the demands of today's B2B2C financial ecosystem."}/>
+        <Hero
+          heading={"Smart Solutions for Modern Banking"}
+          para={
+            "Moneylink empowers banks and fintechs to launch and scale digital banking services with speed, flexibility, and security. From onboarding to payments, we offer a full suite of solutions tailored to the demands of today's B2B2C financial ecosystem."
+          }
+        />
         <Intro />
         <Solutions />
+        <MobileSolutions />
         <Features />
         <FAQs data={faqData} />
         <CTA />
       </Layout>
     </>
   );
-};
+}

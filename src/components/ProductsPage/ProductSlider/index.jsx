@@ -179,7 +179,7 @@ export default function ProductSlider() {
     return (
         <section data-theme = "white"
             ref={containerRef}
-            className="bg-white-1 relative h-[800vh]"
+            className="bg-white-1 relative h-[800vh] max-sm:hidden"
             style={{ height: `${products.length * 100}vh` }}
         >
             <div className='sticky h-screen top-0 py-[5vw] overflow-hidden w-screen px-[4.5vw]'>

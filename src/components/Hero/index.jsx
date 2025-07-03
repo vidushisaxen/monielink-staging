@@ -41,15 +41,15 @@ export default function Hero({ heading, para , breadcrumb}) {
   fadeUpAnim();
 
   return (
-    <section className="w-screen relative h-screen  max-sm:pb-0 bg-background">
+    <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
       <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" />
-      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[10vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
+      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
         <HeroBackground />
         <div
-          className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:px-[6vw] max-sm:pt-[0vw]`}
+          className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
         >
           <Copy delay={1.8}>
-            <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1`}>
+            <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}>
               {heading}
             </h1>
           </Copy>
@@ -67,7 +67,7 @@ export default function Hero({ heading, para , breadcrumb}) {
           </div>
         </div>
         {breadcrumb && (
-        <div className="breadcrumbs w-full flex items-start justify-start text-content-18 text-gray-4  absolute left-[5%] bottom-[4%] max-sm:bottom-[5%] max-md:text-[2.2vw]">
+        <div className="breadcrumbs w-full flex items-start justify-start text-content-20 text-gray-4  absolute left-[5%] bottom-[4%] max-sm:bottom-[-20%]">
           <div className="flex gap-3  ">
             <a onClick={(e) => {
               e.preventDefault();
@@ -80,9 +80,9 @@ export default function Hero({ heading, para , breadcrumb}) {
               const isLast = index === pathArray.length - 1;
               return (
                 <div key={index} className="flex items-center gap-2 ">
-                  <span><Image src="/assets/icons/slash.svg" height={13} width={13} alt="slash" /></span>
+                  <span><Image src="/assets/icons/slash.svg" height={13} width={13} alt="slash" className="max-sm:w-[4.5vw] max-sm:h-auto" /></span>
                   {isLast ? (
-                    <span className="text-white">
+                    <span className="text-gray-1">
                       {createBreadcrumbName(segment)}
                     </span>
                   ) : (

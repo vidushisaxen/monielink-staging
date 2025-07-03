@@ -54,6 +54,7 @@
   --head-150: 7.815vw;
   --head-140: 7.3vw;
   --head-100: 5.2vw;
+  --head-80:4.5vw;
   --head-60: 3.12vw;
   --head-40: 2.085vw;
   --content-30: 1.56vw;
@@ -82,6 +83,8 @@
   --text-head-100: var(--head-100);
   --text-head-100--line-height: 1.25;
   --text-head-60: var(--head-60);
+  --text-head-80: var(--head-80);
+  --text-head-50: var(--head-50);
   --text-head-60--line-height: 1.3;
   --text-head-40: var(--head-40);
   --text-head-40--line-height: 1.3;
@@ -244,6 +247,13 @@ p {
   background: linear-gradient(to right, var(--primary-1), var(--primary-2));
 }
 
+.faq-outer{
+  clip-path: polygon(0% 0%, 10% 0%, 15% 2vw, 85% 2vw, 90% 0%, 100% 0, 100% 100%, 0% 100%) ;
+}
+.faq-inner{
+  clip-path: polygon(0% 0%, calc(10% - 1px) 0%, calc(15% - 1px) 2vw, calc(85% + 1px) 2vw, calc(90% + 1px) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -327,8 +337,9 @@ li .link-line::after {
     --head-150: 14.4vw;
     --head-140: 12.5vw;
     --head-100: 10.25vw;
-    --head-60: 7.7vw;
-    --head-50: 5.4vw;
+    --head-80:8.5vw;
+    --head-60: 7.4vw;
+    --head-50: 5vw;
     --head-40: 3vw;
     --content-30: 5.5vw;
     --content-24: 2vw;
@@ -343,6 +354,12 @@ li .link-line::after {
   overflow-x: hidden;
 }
 
+.faq-outer{
+  clip-path: polygon(0% 0%, 10% 0%, 14% 3vw, 86% 3vw, 90% 0%, 100% 0, 100% 100%, 0% 100%) ;
+}
+.faq-inner{
+  clip-path: polygon(0% 0%, calc(10% - 1px) 0%, calc(14% - 1px) 3vw, calc(86% + 1px) 3vw, calc(90% + 1px) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
   /* Btn CSS */
   .btn-clipPath {
     clip-path: polygon(100% 0%, 100% 63%, 90% 100%, 0% 100%, 0% 37%, 9.5% 0%);

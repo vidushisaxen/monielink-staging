@@ -16,11 +16,11 @@ const Diagram = () => {
    
     return (
         <>
-            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative' ref={sectionRef}>
-                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
-                    <div className='w-[70%]'>
+            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative max-sm:py-[15%]' ref={sectionRef}>
+                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]'>
+                    <div className='w-[70%] max-sm:w-full'>
                         <Copy>
-                            <h2 className='text-head-100 font-display text-center capitalize'>
+                            <h2 className='text-head-100 font-display text-center capitalize max-sm:text-left'>
                             Flexible Card Payments with Tap, Dip, or Swipe
                             </h2>
                         </Copy>

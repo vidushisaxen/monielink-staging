@@ -7,9 +7,8 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
-import Diagram from "@/components/ProductDetailPage/TapPay/Diagram";
-import Process from "@/components/ProductDetailPage/TapPay/Process";
 import Flowchart from "@/components/ProductDetailPage/InstaCard/Flowchart";
+import Universal from "@/components/ProductDetailPage/InstaCard/Universal";
 
 export default function TapPay() {
 
@@ -20,6 +19,7 @@ export default function TapPay() {
         <Intro content={introData}/>
         <Wallet heading={"Merchants can self-onboard and start accepting contactless card payments instantly using Soft-POS on NFC-enabled Android phones — all through your mobile app, powered by our SDK."}/>
       <Flowchart/>
+      <Universal/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />

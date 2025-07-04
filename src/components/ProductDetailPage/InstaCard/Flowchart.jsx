@@ -13,7 +13,7 @@ const Flowchart = () => {
     return (
         <section data-theme="orange" className='w-screen h-full bg-gradient relative' >
             <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
-                <div className='w-[80%]'>
+                <div className='w-[95%]'>
                     <Copy>
                         <h2 className='text-head-100 font-display text-center capitalize'>
                         Turn Any NFC-Enabled Phone into a Contactless Payment Terminal
@@ -23,8 +23,6 @@ const Flowchart = () => {
                 <div className='h-full w-full'>
                     <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto" >
                    <Image src={"/assets/icons/diagrams/instacard.svg"} className='h-full w-full' height={100} width={100} alt='instacard'/>
-
-
                     </div>
                     
                 </div>

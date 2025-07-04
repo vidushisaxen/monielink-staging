@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 const Flowchart = () => {
     return (
-        <section data-theme="orange" className='w-screen h-full bg-gradient relative' >
+        <section data-theme="orange" className='w-screen h-full bg-gradient relative max-sm:hidden' >
             <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
                 <div className='w-[95%]'>
                     <Copy>

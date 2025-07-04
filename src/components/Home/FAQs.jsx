@@ -14,7 +14,7 @@ export default function FAQs({data}) {
  
 
   return (
-    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[5vw] px-[4.5vw] white max-sm:py-[15%] max-sm:pt-[20%] w-screen overflow-hidden">
+    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[7%] px-[4.5vw] white max-sm:py-[15%] max-sm:pt-[20%] w-screen overflow-hidden">
       <div className="w-3/4 mx-auto text-center max-sm:w-[90%]">
         <Copy>
           <h2 className="text-[5.2vw] text-background leading-[1.25] font-display max-sm:text-head-100">

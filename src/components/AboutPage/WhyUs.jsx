@@ -17,7 +17,10 @@ const WhyUs = () => {
                         </p>
                     </Copy>
                 </div>
+                <div className="h-[50vh] max-sm:h-[70vh]">
                 <WhyUsSwiper />
+
+                </div>
                 <div className="flex items-center justify-center text-center pt-[15vw] pb-[12vw] px-[4vw]">
                     <Copy>
                         <h2 className="text-head-150 font-display">One SDK. <br /> Endless Possibilities</h2>

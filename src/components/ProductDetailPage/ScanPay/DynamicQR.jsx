@@ -73,16 +73,19 @@ const DynamicQR = () => {
     
     return (
         <>
-            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative' ref={dynamicRef}>
-                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
-                    <div className='w-[80%]'>
+            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative max-sm:pb-[15%]' ref={dynamicRef}>
+                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]'>
+                    <div className='w-[80%] max-sm:w-full'>
                         <Copy>
-                            <h2 className='text-head-100 font-display text-center capitalize'>
+                            <h2 className='text-head-100 font-display text-center capitalize  max-sm:text-left'>
                             and dynamic QR Codes
                             </h2>
                         </Copy>
                     </div>
-                    <div className='w-[85%]' ref={svgRefContainer}>
+                     <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
+
+
+                    <div className='w-[85%] max-sm:w-[250%]' ref={svgRefContainer}>
                         <svg className='h-full w-full' width="1477" height="264" viewBox="0 0 1477 264" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_f_72_5626)">
                                 <path d="M61.077 57.1214L87.6535 30.0009C89.5344 28.0816 92.1086 27 94.7958 27L257.395 27C262.918 27 267.395 31.4772 267.395 37V165.634C267.395 168.273 266.352 170.804 264.494 172.677L234.194 203.216L202.829 234.704C200.952 236.588 198.403 237.647 195.744 237.647H35.0013C29.4785 237.647 25.0014 233.17 25.0013 227.647L25 98.8506C25 96.2753 25.9935 93.7992 27.7737 91.9382L61.077 57.1214Z" fill="#FF5E01" />
@@ -170,24 +173,57 @@ const DynamicQR = () => {
                             </defs>
                         </svg>
 
-                        <div className='w-full flex items-start justify-between py-[2vw]'>
-                        <div className=' w-[20%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text-1'>Merchant enters Payment Amount to generate a Dynamic QR Code</p>
+                        <div className='w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]'>
+                        <div className=' w-[20%] overflow-hidden max-sm:w-[18%]'>
+                            <p className='font-medium text-content-24 font-body  text-center text-1 max-sm:text-content-20 max-sm:text-left'>Merchant enters Payment Amount to generate a Dynamic QR Code</p>
                         </div>
-                        <div className=' w-[18%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text-2'>Merchant presents a Dynamic  QR Code</p>
+                        <div className=' w-[18%] overflow-hidden max-sm:w-[18%]'>
+                            <p className='font-medium text-content-24 font-body  text-center text-2 max-sm:text-content-20 max-sm:text-left'>Merchant presents a Dynamic  QR Code</p>
+                        </div> <div className=' w-[18%] overflow-hidden max-sm:w-[18%]'>
+                            <p className='font-medium text-content-24 font-body  text-center text-3 max-sm:text-content-20 max-sm:text-left'>Customer Scans QR Code & enters PIN for authentication</p>
                         </div> <div className=' w-[18%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text-3'>Customer Scans QR Code & enters PIN for authentication</p>
+                            <p className='font-medium text-content-24 font-body  text-center text-4 max-sm:text-content-20 max-sm:text-left'>Payment  Successful</p>
                         </div> <div className=' w-[18%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text-4'>Payment  Successful</p>
-                        </div> <div className=' w-[18%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text-5'>Payment received confirmation</p>
+                            <p className='font-medium text-content-24 font-body  text-center text-5 max-sm:text-content-20 max-sm:text-left'>Payment received confirmation</p>
                         </div>
                         </div>
 
-
+                       
 
                     </div>
+                    <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex">
+                        <span className="text-content-18">Swipe</span>
+                        <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+
+                     </div>
                 </div>
             </section>
         </>

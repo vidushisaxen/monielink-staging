@@ -95,7 +95,7 @@ const WhyUsSwiper = () => {
     <>
       <div
         ref={containerRef}
-        className="flex justify-start items-center gap-10 max-sm:flex-col max-sm:gap-[4vw]"
+        className="flex justify-start items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] "
       >
         <Swiper
           modules={[Navigation]}
@@ -114,7 +114,7 @@ const WhyUsSwiper = () => {
               speed:500
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 7,
               centeredSlides: true,
             },
           }}

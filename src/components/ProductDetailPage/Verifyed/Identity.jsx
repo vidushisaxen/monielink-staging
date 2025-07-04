@@ -88,7 +88,7 @@ const Identity = () => {
     }, []);
 
     return (
-        <section data-theme="orange" className='w-screen h-full bg-gradient relative ' ref={sectionRef}>
+        <section data-theme="orange" className='w-screen h-full bg-gradient relative max-sm:hidden ' ref={sectionRef}>
             <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] '>
                 <div className='w-[80%] space-y-[7vw]'>
                     <Copy>

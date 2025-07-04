@@ -87,7 +87,7 @@ const Diagram = () => {
                             <p className='text-head-60 font-display text-center'>Help Topics</p>
                         </Copy>
                     </div>
-                    <div className='w-[85%]' ref={svgContainer}>
+                    <div className='w-[65%]' ref={svgContainer}>
 
                         <svg className='h-full w-full' width="970" height="264" viewBox="0 0 970 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g className='svgFirst'>

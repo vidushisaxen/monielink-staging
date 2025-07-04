@@ -8,7 +8,7 @@ import Copy from '../Animations/Copy'
 
 const RelatedBlogs = () => {
   return (
-   <section className='w-screen h-fit pb-[7%] px-[5vw] bg-white text-black-1 max-sm:px-[5.5vw] max-sm:pb-[15%]' id='related-blogs'>
+   <section data-theme="white" className='w-screen h-fit pb-[7%] px-[5vw] bg-white text-black-1 max-sm:px-[5.5vw] max-sm:pb-[15%]' id='related-blogs'>
     <div className='w-full flex flex-col gap-[6vw] max-sm:gap-[10vw]'>
         <div className='w-full flex justify-between items-end'>
             <Copy>

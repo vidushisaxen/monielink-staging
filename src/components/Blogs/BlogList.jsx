@@ -8,6 +8,7 @@ const BlogList = () => {
   return (
     <>
       <section
+      data-theme="white"
         className="w-screen h-fit py-[7%] bg-white px-[5vw] max-sm:py-[15%] max-sm:px-[5.5vw]"
         id="blog-listing"
       >
@@ -274,7 +275,7 @@ const BlogList = () => {
               href={"#"}
               arrowColor={"#050505"}
               borderColor={"#050505"}
-              hoverColor={"bg-[#605050536363]/20"}
+              hoverColor={"bg-[#050505]/20"}
             />
           </div>
         </div>

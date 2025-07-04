@@ -9,7 +9,7 @@ import {
 } from "../Icons";
 const BlogContent = () => {
   return (
-    <section
+    <section data-theme="white"
       className={`w-screen h-fit bg-white pt-[25%] mt-[-25%] text-black-1 max-sm:pt-[50%] max-sm:mt-[-50%] ${styles.blogContent}`}
     >
       <div className="py-[10%] h-full w-full flex justify-between px-[5vw] max-sm:px-[5.5vw] max-sm:flex-col max-sm:gap-[15vw]">

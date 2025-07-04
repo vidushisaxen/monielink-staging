@@ -4,7 +4,7 @@ import React from "react";
 function BlackButton({ href, onClick, rotate, text, className = "", ...props }) {
     const sharedContent = (
         <>
-            <div className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[50vw]">
+            <div className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw]">
                 <div className="absolute left-0 top-0 flex justify-start">
                     <svg className="w-[5.5vw] h-auto max-sm:w-[25vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#A8a8a8" strokeLinecap="round" strokeLinejoin="round" />

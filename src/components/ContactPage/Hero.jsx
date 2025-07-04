@@ -40,7 +40,7 @@ export default function Hero() {
             <div className="relative h-screen space-y-[7vw] max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
                 <HeroBackground />
                 <div
-                    className={`h-fit pointer-events-none w-full pt-30 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
+                    className={`h-fit pointer-events-none w-full !pt-[15vw] flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
                 >
                     <Copy delay={1.8}>
                         <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}>
@@ -58,7 +58,7 @@ export default function Hero() {
 
                 </div>
 
-                <div className="flex items-center  justify-center gap-[3vw] z-[99] max-sm:flex-col max-sm:w-full">
+                <div className="flex items-center max-sm:hidden  justify-center gap-[3vw] z-[99]">
                     <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw]">
                         <Image
                             src="/assets/icons/contact/card-frame.svg"
@@ -132,6 +132,84 @@ export default function Hero() {
                             <Copy>
                                 <p className="text-content-20 text-gray-2">
                                     +2348023970955
+                                </p>
+                            </Copy>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="max-sm:flex max-sm:items-start hidden  justify-center gap-[3vw] z-[99] max-sm:flex-col max-sm:w-full max-sm:px-[5.5vw]">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw]">
+                        <Image
+                            src="/assets/icons/contact/card-frame-mobile.svg"
+                            alt="card-frame"
+                            fill
+                            className="object-contain"
+                        />
+
+                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                            <div className="h-[5vw] w-[5vw] max-sm:w-[12vw] max-sm:h-[12vw]">
+                                <Image
+                                    src="/assets/icons/contact/location.svg"
+                                    height={40}
+                                    width={40}
+                                    alt="location"
+                                    className="w-full h-full"
+                                />
+                            </div>
+                            <Copy>
+                                <p className="text-content-20 text-gray-2">
+                                    23 Adeola Odeku Street, <br /> Victoria Island, Lagos, Nigeria
+                                </p>
+                            </Copy>
+                        </div>
+                    </div>
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw]">
+                        <Image
+                            src="/assets/icons/contact/card-frame-mobile.svg"
+                            alt="card-frame"
+                            fill
+                            className="object-contain"
+                        />
+
+                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                            <div className="h-[5vw] w-[5vw] max-sm:w-[12vw] max-sm:h-[12vw]">
+                                <Image
+                                    src="/assets/icons/contact/mail.svg"
+                                    height={40}
+                                    width={40}
+                                    alt="location"
+                                    className="w-full h-full"
+                                />
+                            </div>
+                            <Copy>
+                                <p className="text-content-20 text-gray-2">
+                                contact@monielink.io
+                                </p>
+                            </Copy>
+                        </div>
+                    </div>
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw]">
+                        <Image
+                            src="/assets/icons/contact/card-frame-mobile.svg"
+                            alt="card-frame"
+                            fill
+                            className="object-contain"
+                        />
+
+                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                            <div className="h-[5vw] w-[5vw] max-sm:w-[12vw] max-sm:h-[12vw]">
+                                <Image
+                                    src="/assets/icons/contact/phone.svg"
+                                    height={40}
+                                    width={40}
+                                    alt="location"
+                                    className="w-full h-full"
+                                />
+                            </div>
+                            <Copy>
+                                <p className="text-content-20 text-gray-2">
+                                +2348023970955
                                 </p>
                             </Copy>
                         </div>

@@ -254,6 +254,49 @@ p {
   clip-path: polygon(0% 0%, calc(10% - 1px) 0%, calc(15% - 1px) 2vw, calc(85% + 1px) 2vw, calc(90% + 1px) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+
+.custom-before-after::before,
+.custom-before-after::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 2.5vw;
+  background-color: oklch(.922 0 0);
+}
+
+.custom-before-after::before {
+  bottom: 0;
+  left: -0.7%;
+  rotate: 43deg;
+}
+
+.custom-before-after::after {
+  top: 0;
+  right: -0.7%;
+  rotate: 43deg;
+}
+
+.text-area::before,
+.text-area::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 1.8vw;
+  background-color: oklch(.922 0 0);
+}
+
+.text-area::before {
+  bottom: 10%;
+  left: -1%;
+  rotate: 50deg;
+}
+
+.text-area::after {
+  top: 10%;
+  right: -1%;
+  rotate: 50deg;
+}
+
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -376,4 +419,46 @@ li .link-line::after {
     right: -44.4%;
     rotate: -49deg;
   }
+
+  .custom-before-after::before,
+.custom-before-after::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 4vw;
+  background-color: oklch(.922 0 0);
+}
+
+.custom-before-after::before {
+  bottom: 15%;
+  left: -1.2%;
+  rotate: 54deg;
+}
+
+.custom-before-after::after {
+  top: 10%;
+  right: -0.7%;
+  rotate: 54deg;
+}
+
+.text-area::before,
+.text-area::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 4vw;
+  background-color: oklch(.922 0 0);
+}
+
+.text-area::before {
+  bottom: 8%;
+  left: -1%;
+  rotate: 60deg;
+}
+
+.text-area::after {
+  top: 9%;
+  right: -1%;
+  rotate: 60deg;
+}
 }

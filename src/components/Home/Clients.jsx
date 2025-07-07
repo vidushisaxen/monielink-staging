@@ -3,6 +3,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Copy from "../Animations/Copy";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
@@ -194,9 +195,36 @@ export default function Clients() {
       .call(startMainAnimation, null, `+=${-0.01}`);
   }, []);
 
+  const container = useRef(null);
+  const logosRef = useRef([]);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      logosRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay:1.2,
+        ease: 'power2.out',
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '#clients',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  }, []);
+
   return (
     <section
       id="clients"
+      ref={container}
       className="h-[130vh] w-screen overflow-hidden flex items-center justify-center relative bg-[#050505] pb-[4vw] max-sm:py-[15%] max-sm:h-[100vh]"
     >
       <div className="w-full h-full max-sm:h-[100vw] max-sm:w-[100vw] max-sm:scale-[2.2] max-sm:translate-x-[-50%] max-sm:translate-y-[30%]">
@@ -416,7 +444,7 @@ export default function Clients() {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className={`absolute h-auto flex items-end justify-end  ${
+              className={`absolute h-auto flex items-end justify-end logoanim ${
                 index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw]"
               }`}
               style={{
@@ -427,6 +455,7 @@ export default function Clients() {
             >
               <Image
                 src={logo.src}
+                ref={(el) => (logosRef.current[index] = el)}
                 alt={`client-logo-${index + 1}`}
                 width={100}
                 height={100}

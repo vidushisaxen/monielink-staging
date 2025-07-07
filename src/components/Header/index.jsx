@@ -5,11 +5,11 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import DecryptedText from "../DecryptedText";
 import { Logo } from "../Icons";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useGSAP } from "@gsap/react";
 import HamButton from "../Buttons/HamButton";
+import ScrambleText from "../ScrambleText";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -156,7 +156,7 @@ export default function Header() {
                 <div style={{ animation: "pulse .5s infinite" }} className={`w-[.3vw] h-[0vw] group-hover:h-[1vw]  transition-all duration-200 ${isInverted ? "group-hover:bg-white" : "group-hover:bg-orange-500"}`}></div>
                 <div className="cursor-pointer relative w-[6.5vw] overflow-hidden">
                   <span className={`uppercase text-[.9vw]  ${isWhite ? "text-white" : "text-[#D6D6D6]"}`}>
-                    <DecryptedText text={item.name} />
+                    <ScrambleText text={item.name} speed={0.4} charType={"lowercase"}/>
                   </span>
                 </div>
               </Link>

@@ -5,13 +5,13 @@ import gsap from "gsap";
 import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
 import { fadeUpAnim } from "../Animations/gsapAnimations";
-import { usePathname } from "next/navigation";
 import HeroBackground from "../Hero/HeroBackground";
 import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
 
 export default function Hero() {
+    fadeUpAnim();
     const btnContainer = useRef();
 
     useGSAP(() => {
@@ -31,8 +31,6 @@ export default function Hero() {
             delay: 2,
         })
     });
-
-    fadeUpAnim();
 
     return (
         <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
@@ -59,12 +57,12 @@ export default function Hero() {
                 </div>
 
                 <div className="flex items-center max-sm:hidden  justify-center gap-[3vw] z-[99]">
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw]">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
                         <Image
                             src="/assets/icons/contact/card-frame.svg"
                             alt="card-frame"
                             fill
-                            className="object-contain"
+                            className="object-contain "
                         />
 
                         <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
@@ -84,7 +82,7 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative w-[18vw] h-[18vw] z-[99] ">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
 
                         <Image
                             src="/assets/icons/contact/card-frame.svg"
@@ -110,7 +108,7 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative w-[18vw] h-[18vw] z-[99]">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
 
                         <Image
                             src="/assets/icons/contact/card-frame.svg"
@@ -139,7 +137,7 @@ export default function Hero() {
                 </div>
 
                 <div className="max-sm:flex max-sm:items-start hidden  justify-center gap-[3vw] z-[99] max-sm:flex-col max-sm:w-full max-sm:px-[5.5vw]">
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw]">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw] backdrop-blur-lg fadeupanim">
                         <Image
                             src="/assets/icons/contact/card-frame-mobile.svg"
                             alt="card-frame"
@@ -164,7 +162,7 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw]">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw] backdrop-blur-lg fadeupanim">
                         <Image
                             src="/assets/icons/contact/card-frame-mobile.svg"
                             alt="card-frame"
@@ -189,7 +187,7 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw]">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw] backdrop-blur-lg fadeupanim">
                         <Image
                             src="/assets/icons/contact/card-frame-mobile.svg"
                             alt="card-frame"

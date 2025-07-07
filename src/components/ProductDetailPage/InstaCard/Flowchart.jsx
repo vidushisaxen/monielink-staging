@@ -21,7 +21,7 @@ const Flowchart = () => {
                     </Copy>
                 </div>
                 <div className='h-full w-full'>
-                    <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto max-sm:hidden" >
+                    <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto" >
                    <Image src={"/assets/icons/diagrams/instacard.svg"} className='h-full w-full' height={100} width={100} alt='instacard'/>
                     </div>
                     <div className='w-full h-auto hidden max-sm:block'>

@@ -12,8 +12,8 @@ const Overview = () => {
           Explore Our Suite of Scalable Financial Products
         </h2>
         </Copy>
-        <div className='absolute top-[12%] left-[12%] h-[3vw] w-[3vw] max-sm:top-[14%] max-sm:left-[7%] max-sm:w-[15vw] max-sm:h-auto'>
-<Image src={"/assets/icons/overview-icon.svg"} height={50} width={50} alt='overview-icon' className='h-full w-full'/>
+        <div className='absolute top-[12%] left-[12%] h-[3vw] w-[3vw] max-sm:top-[14%] max-sm:left-[7%] max-sm:w-[15vw] max-sm:h-auto overflow-hidden'>
+<Image src={"/assets/icons/overview-icon.svg"} height={50} width={50} alt='overview-icon' className='h-full w-full fadeupanim'/>
         </div>
       </div>
   

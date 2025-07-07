@@ -7,7 +7,7 @@ import SplitText from "gsap/SplitText";
 import Image from "next/image";
 import SegmentedProgressBar from "./SegmntedProgressBar";
 import PrimaryButton from "../Buttons/PrimaryButton";
-import DecryptedText from "../DecryptedText";
+import ScrambleText from "../ScrambleText";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 
@@ -189,7 +189,7 @@ export default function Solutions() {
                   }`}
                   onClick={() => goToSlide(i)}
                 >
-                  <DecryptedText text={f.title} speed={60} />
+                  <ScrambleText text={f.title} speed={0.5}/>
                 </button>
               ))}
             </div>

@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import BlackButton from "../Buttons/BlackButton";
-import DecryptedText from "../DecryptedText";
+import ScrambleText from "../ScrambleText";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -64,7 +64,7 @@ const handleCardClick = (index) => {
               onClick={() => handleCardClick(index)}
             >
               <div className="text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full ">
-                <DecryptedText text={item} />
+                <ScrambleText text={item} speed={0.4}/>
               </div>
             </div>
           ))}

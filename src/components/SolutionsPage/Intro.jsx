@@ -3,7 +3,7 @@ import Copy from "../Animations/Copy";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -33,7 +33,7 @@ const Intro = () => {
                 transformOrigin: "50% 50%",
                 repeat: -1,
                 ease: "linear",
-                duration: 15,
+                duration: 10,
             });
 
             gsap.to(g2, {
@@ -41,7 +41,7 @@ const Intro = () => {
                 transformOrigin: "50% 50%",
                 repeat: -1,
                 ease: "linear",
-                duration: 15,
+                duration: 10,
             });
         }
     }, []);
@@ -57,58 +57,31 @@ const Intro = () => {
                         <p className="text-content-20 w-9/12">Enable seamless digital banking experiences for your customers through your mobile app. The Moneylink Super SDK empowers banks and fintechs to launch B2B2C services quickly, securely, and at scale — all from a single integration.</p>
                     </Copy>
                 </div>
-                <div className="absolute w-1/2 max-sm:w-[150%]">
-                    {/* <Image className="" src={"/assets/shapes/solutions-intro.svg"} alt="solutions intro image" width={900} height={900} /> */}
-                    <svg ref={svgRef} className="h-full w-full" width="1040" height="1026" viewBox="0 0 1040 1026" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g ref={group1Ref}>
-                    <rect className="svg-path" x="0.985747" y="652.069" width="759.89" height="759.891" rx="199.5" transform="rotate(-60 0.985747 652.069)" stroke="#FF8A4A" />
-                    <path className="svg-path" d="M205.109 299.45L131.331 429.96" stroke="url(#paint1_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                    <path className="svg-path" d="M869.018 276.469L739.221 200.854" stroke="url(#paint2_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                    <path className="svg-path" d="M421.312 894.236L291.516 818.622" stroke="url(#paint3_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                    <path className="svg-path" d="M880.887 646.676L807.108 777.186" stroke="url(#paint4_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                    </g>
-                        <g ref={group2Ref}>
-                        <rect className="svg-path" x="0.788741" y="374.668" width="759.89" height="759.891" rx="199.5" transform="rotate(-30.0814 0.788741 374.668)" stroke="#FF8A4A" />
-                        <path className="svg-path" d="M300.42 201.509L170.585 276.469" stroke="url(#paint0_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                        <path className="svg-path" d="M903.82 730.845L773.985 805.805" stroke="url(#paint5_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                        <path className="svg-path" d="M746.613 146.544L821.615 276.492" stroke="url(#paint6_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                        <path className="svg-path" d="M168.617 663.862L243.619 793.81" stroke="url(#paint7_linear_194_18599)" strokeWidth="2" strokeLinecap="round" />
-                        </g>
-                        <defs>
-                            <linearGradient id="paint0_linear_194_18599" x1="289.993" y1="208.683" x2="293.384" y2="216.319" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#FF5E02" stopOpacity="0" />
-                                <stop offset="1" stopColor="white" />
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_194_18599" x1="199.771" y1="310.926" x2="206.57" y2="315.782" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="white" />
-                                <stop offset="1" stopColor="#FF5E02" stopOpacity="0" />
-                            </linearGradient>
-                            <linearGradient id="paint2_linear_194_18599" x1="858.597" y1="269.241" x2="862.019" y2="261.619" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="white" />
-                                <stop offset="1" stopColor="#FF5E02" stopOpacity="0" />
-                            </linearGradient>
-                            <linearGradient id="paint3_linear_194_18599" x1="410.892" y1="887.009" x2="414.314" y2="879.386" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#FF5E02" stopOpacity="0" />
-                                <stop offset="1" stopColor="white" />
-                            </linearGradient>
-                            <linearGradient id="paint4_linear_194_18599" x1="875.548" y1="658.152" x2="882.347" y2="663.008" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#FF5E02" stopOpacity="0" />
-                                <stop offset="1" stopColor="white" />
-                            </linearGradient>
-                            <linearGradient id="paint5_linear_194_18599" x1="893.393" y1="738.02" x2="896.784" y2="745.656" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="white" />
-                                <stop offset="1" stopColor="#FF5E02" stopOpacity="0" />
-                            </linearGradient>
-                            <linearGradient id="paint6_linear_194_18599" x1="752.059" y1="157.98" x2="745.304" y2="162.897" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="white" />
-                                <stop offset="1" stopColor="#FF5E02" stopOpacity="0" />
-                            </linearGradient>
-                            <linearGradient id="paint7_linear_194_18599" x1="174.063" y1="675.298" x2="167.308" y2="680.215" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#FF5E02" stopOpacity="0" />
-                                <stop offset="1" stopColor="white" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                <div className="absolute w-[70%] max-sm:w-[150%]">
+<svg ref={svgRef} className="h-full w-full" width="1453" height="1453" viewBox="0 0 1453 1453" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g ref={group1Ref}>
+<path className="svg-path" d="M487.521 380.821C542.618 285.376 664.669 252.686 760.096 307.815L1071.63 487.793C1167.02 542.898 1199.69 664.884 1144.61 760.285L964.693 1071.93C909.599 1167.36 787.57 1200.05 692.147 1144.94L380.598 965.015C285.198 909.92 252.513 787.926 307.59 692.516L487.521 380.821Z" stroke="#FF8A4A"/>
+<path className="svg-path" d="M486.655 380.321C542.029 284.398 664.691 251.544 760.596 306.949L1072.13 486.927C1168 542.308 1200.83 664.906 1145.48 760.785L965.559 1072.43C910.188 1168.33 787.548 1201.19 691.647 1145.81L380.098 965.88C284.22 910.509 251.371 787.905 306.724 692.016L486.655 380.321Z" stroke="url(#paint0_linear_1600_42)"/>
+</g>
+<g ref={group2Ref}>
+<path className="svg-path" d="M740.504 306.705C841.636 262.912 959.119 309.417 1002.88 410.564L1145.74 740.774C1189.48 841.876 1143 959.295 1041.91 1003.06L711.682 1146.04C610.562 1189.83 493.095 1143.34 449.327 1042.21L306.425 712.034C262.667 610.931 309.142 493.496 410.237 449.72L740.504 306.705Z" stroke="#FF8A4A"/>
+<path className="svg-path" d="M740.107 305.788C841.746 261.776 959.817 308.513 1003.8 410.166L1146.66 740.377C1190.61 841.986 1143.9 959.994 1042.3 1003.98L712.079 1146.96C610.452 1190.96 492.397 1144.24 448.409 1042.61L305.508 712.431C261.531 610.821 308.238 492.798 409.84 448.802L740.107 305.788Z" stroke="url(#paint1_linear_1600_42)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1600_42" x1="293.259" y1="657.723" x2="485.055" y2="344.232" gradientUnits="userSpaceOnUse" gradientTransform="translate(0, 0)">
+
+<stop stopColor="#FE8E51" stopOpacity="0"/>
+<stop offset="0.5" stopColor="white"/>
+<stop offset="1" stopColor="#FE8E51" stopOpacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1600_42" x1="419.47" y1="413.241" x2="760.333" y2="275.857" gradientUnits="userSpaceOnUse" gradientTransform="translate(0, 0)">
+<stop stopColor="#FE8E51" stopOpacity="0"/>
+<stop offset="0.5" stopColor="white"/>
+<stop offset="1" stopColor="#FE8E51" stopOpacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+
 
                 </div>
             </div>

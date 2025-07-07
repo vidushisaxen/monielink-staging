@@ -2,7 +2,6 @@
 import Image from "next/image";
 import BackgroundLine from "../BackgroundLine";
 import Link from "next/link";
-import DecryptedText from "../DecryptedText";
 import Copy from "../Animations/Copy";
 import {
   FacebookIcon,
@@ -12,6 +11,7 @@ import {
 } from "../Icons";
 import SocialMediaBtn from "./SocialMediaBtn";
 import { useEffect, useState } from "react";
+import ScrambleText from "../ScrambleText";
 
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(false);
@@ -145,7 +145,7 @@ export default function Footer() {
                   href="mailto:info@monielink.io"
                   className="text-content-30 font-display"
                 >
-                  <DecryptedText text={"info@monielink.io"} speed={60} />
+                  <ScrambleText text={"info@monielink.io"} speed={0.45} charType={"lowercase"}/>
                 </a>
                 <div className="w-fit flex gap-[3vw]">
                     {socials.map((item, index) => (
@@ -317,7 +317,7 @@ export default function Footer() {
                               ></div>
                               <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7vw] ">
                                 <span className="text-[#A8A8A8] uppercase text-[1vw] ">
-                                  <DecryptedText text={item.name} speed={60} />
+                  <ScrambleText text={item.name} speed={0.6} charType={"lowercase"}/>
                                 </span>
                               </div>
                             </div>
@@ -338,7 +338,8 @@ export default function Footer() {
                               ></div>
                               <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                                 <span className="text-[#A8A8A8] uppercase text-[1vw]">
-                                  <DecryptedText text={item.name} speed={40} />
+                  <ScrambleText text={item.name} speed={0.6} charType={"lowercase"}/>
+                                 
                                 </span>
                               </div>
                             </div>
@@ -362,7 +363,8 @@ export default function Footer() {
                       href="mailto:info@monielink.io"
                       className="text-[3.125vw] font-display"
                     >
-                      <DecryptedText text={"info@monielink.io"} speed={60} />
+                  <ScrambleText text={"info@monielink.io"} speed={0.6} charType={"lowercase"}/>
+                      
                     </a>
                     <div className="pt-2 flex  items-start gap-2 fadeupanim">
                       {socials.map((item, index) => (

@@ -6,7 +6,6 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import SplitText from 'gsap/SplitText'
 import Image from 'next/image'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
-import DecryptedText from '@/components/DecryptedText'
 import RadialSegmentedProgressBar from './RadialSegmentedProgressBar';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);

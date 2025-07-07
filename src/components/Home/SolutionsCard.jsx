@@ -4,9 +4,9 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import BlackButton from "../Buttons/BlackButton";
 import { SVGLeft, SVGRight } from "../Icons";
-import DecryptedText from "../DecryptedText";
 import { useGSAP } from "@gsap/react";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import ScrambleText from "../ScrambleText";
 gsap.registerPlugin(ScrollTrigger, useGSAP, DrawSVGPlugin);
 
 const SolutionsCard = ({ solutionsRef }) => {
@@ -230,10 +230,10 @@ const SolutionsCard = ({ solutionsRef }) => {
         ].map((item, index) => (
           <div
             key={index}
-            className="border-l py-5 w-[15vw] max-sm:min-w-[45vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw]"
+            className="border-l py-5 w-[15vw] max-sm:min-w-[45vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw]  max-sm:w-full"
             onClick={() => handleCardClick(index)}
           >
-            <div className="text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full"><DecryptedText text={item} /></div>
+            <ScrambleText text={item} speed={0.5} charType={"lowerCase"}/>
           </div>
         ))}
       </div>

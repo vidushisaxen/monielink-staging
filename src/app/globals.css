@@ -225,7 +225,7 @@ p {
 }
 
 .animate-border {
-  background-size: 50% 50%;
+  /* background-size: 1% 1%; */
   background: linear-gradient(
     var(--gradient-angle),
     #fe5900,

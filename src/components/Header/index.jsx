@@ -10,29 +10,30 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 import { useGSAP } from "@gsap/react";
 import HamButton from "../Buttons/HamButton";
 import ScrambleText from "../ScrambleText";
+import { usePathname } from 'next/navigation';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const links = [
   {
     name: "About Us",
-    link: "#",
+    link: "/about",
   },
   {
     name: "Solutions",
-    link: "#",
+    link: "/solutions",
   },
   {
     name: "Products",
-    link: "#",
+    link: "/products",
   },
   {
     name: "Resources",
-    link: "#",
+    link: "/blogs",
   },
   {
     name: "Contact Us",
-    link: "#",
+    link: "/contact",
   },
 ];
 
@@ -42,9 +43,10 @@ export default function Header() {
   const [isInverted, setIsInverted] = useState(false);
   const [isWhite, setIsWhite] = useState(false);
 
+  const pathname = usePathname();
+
   useGSAP(() => {
     const triggers = [];
-  
     document.querySelectorAll("[data-theme]").forEach((section) => {
       const theme = section.dataset.theme;
   
@@ -74,7 +76,6 @@ export default function Header() {
     });
   }, []);
   
-
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
@@ -127,15 +128,11 @@ export default function Header() {
             </defs>
           </svg>
         </div>
-
-        {/* Main Content */}
         <div className="flex items-center justify-between w-full h-full relative z-10 pointer-events-auto">
           {/* Logo */}
           <Link href={"/"} className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] ${isInverted ? " brightness-[16]" : ""}`}>
               <Logo className="h-full w-full"  />
           </Link>
-
-          {/* Navigation Links */}
           <div className="hidden max-sm:block">
              <HamButton
                   href={"/"}
@@ -147,21 +144,44 @@ export default function Header() {
 
           </div>
           <nav className="flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden">
-            {links.map((item, index) => (
-              <Link
-                href={"/"}
-                key={index}
-                className="flex items-center gap-[.5vw] group justify-center pointer-events-auto"
-              >
-                <div style={{ animation: "pulse .5s infinite" }} className={`w-[.3vw] h-[0vw] group-hover:h-[1vw]  transition-all duration-200 ${isInverted ? "group-hover:bg-white" : "group-hover:bg-orange-500"}`}></div>
-                <div className="cursor-pointer relative w-[6.5vw] overflow-hidden">
-                  <span className={`uppercase text-[.9vw]  ${isWhite ? "text-white" : "text-[#D6D6D6]"}`}>
-                    <ScrambleText text={item.name} speed={0.4} charType={"lowercase"}/>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </nav>
+  {links.map((item, index) => {
+    const isActive = pathname === item.link;
+
+    return (
+      <Link
+        href={item.link}
+        key={index}
+        className="flex items-center group justify-center pointer-events-auto"
+      >
+        <div
+          style={isActive ? { animation: 'pulse .5s infinite' } : { animation: 'pulse .5s infinite'}}
+          className={`w-[.3vw] ${
+            isActive ? 'h-[1vw]' : 'h-[0vw] group-hover:h-[1vw]'
+          } transition-all duration-200 ${
+            isInverted
+              ? 'bg-white'
+              : 'group-hover:bg-orange-500'
+          } ${isActive && !isInverted ? 'bg-orange-500' : ''}`}
+        ></div>
+
+        <div className="cursor-pointer relative w-[7vw] overflow-hidden">
+          <span
+            className={`uppercase text-[.9vw] ${
+              isWhite ? 'text-white' : 'text-[#D6D6D6]'
+            }`}
+          >
+            <ScrambleText
+              text={item.name}
+              speed={0.4}
+              charType={'lowercase'}
+            />
+          </span>
+        </div>
+      </Link>
+    );
+  })}
+</nav>
+
 
           {/* CTA */}
           <PrimaryButton

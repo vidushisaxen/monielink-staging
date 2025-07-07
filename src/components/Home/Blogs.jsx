@@ -92,6 +92,7 @@ export default function Blogs() {
           modules={[Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           freeMode={true}
+          speed={500}
           breakpoints={{
             768: {
               slidesPerView: 1.8,

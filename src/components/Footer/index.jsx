@@ -315,7 +315,7 @@ export default function Footer() {
                                 }}
                                 className="w-[.3vw] h-[0vw] group-hover:h-[1vw] group-hover:bg-orange-500  transition-all duration-200"
                               ></div>
-                              <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7vw] ">
+                              <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7.5vw] ">
                                 <span className="text-[#A8A8A8] uppercase text-[1vw] ">
                   <ScrambleText text={item.name} speed={0.6} charType={"lowercase"}/>
                                 </span>
@@ -404,27 +404,27 @@ export default function Footer() {
 const links = [
   {
     name: "Home",
-    link: "#",
+    link: "/",
   },
   {
     name: "About Us",
-    link: "#",
+    link: "/about",
   },
   {
     name: "Solutions",
-    link: "#",
+    link: "/solutions",
   },
   {
     name: "Products",
-    link: "#",
+    link: "/products",
   },
   {
     name: "Resources",
-    link: "#",
+    link: "/blogs",
   },
   {
     name: "Contact",
-    link: "#",
+    link: "/contact",
   },
 ];
 const links2 = [
@@ -452,18 +452,18 @@ const links2 = [
 const socials = [
   {
     icon: <FacebookIcon />,
-    link: "#",
+    link: "/#",
   },
   {
     icon: <LinkedinIcon />,
-    link: "#",
+    link: "/#",
   },
   {
     icon: <InstagramIcon />,
-    link: "#",
+    link: "/#",
   },
   {
     icon: <TwitterIcon />,
-    link: "#",
+    link: "//#",
   },
 ];

@@ -73,7 +73,6 @@ const ScrambleText = ({ text, speed, charType }) => {
     <p
       ref={elRef}
       className="text-white w-full cursor-pointer text-center"
-      
       >
       {text}
     </p>

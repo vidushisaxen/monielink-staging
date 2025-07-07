@@ -5,7 +5,7 @@ import Copy from "../Animations/Copy";
 const Values = ({ data }) => {
   return (
     <section data-theme="white" className="w-screen h-full bg-white-1">
-      <div className="w-full h-full px-[4vw] py-[7vw] flex items-start justify-between max-sm:flex-col max-sm:py-[15%] max-sm:pb-[25%] max-sm:px-[5.5vw]">
+      <div className="w-full h-full px-[4vw] py-[7vw] flex items-start justify-between max-sm:flex-col max-sm:py-[20%] max-sm:pb-[30%] max-sm:px-[5.5vw]">
         <div className="w-1/2 flex items-start justify-between max-sm:w-full max-sm:gap-[8vw]">
           <div>
             <Copy>

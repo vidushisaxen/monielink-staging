@@ -8,6 +8,7 @@ import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/SnapCred/Diagram";
+import MobileDiagram from "@/components/ProductDetailPage/SnapCred/MobileDiagram";
 
 export default function SnapCred() {
 
@@ -18,6 +19,7 @@ export default function SnapCred() {
         <Intro content={introData}/>
         <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
         <Diagram/>
+        <MobileDiagram/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />

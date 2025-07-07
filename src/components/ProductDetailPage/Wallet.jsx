@@ -58,7 +58,7 @@ const Wallet = ({heading}) => {
     });
     return (
         <section data-theme="orange" className='w-screen bg-gradient h-full relative'>
-            <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw] max-sm:py-[15%] max-sm:items-start max-sm:px-[5.5vw]'>
+            <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw] max-sm:py-[20%] max-sm:items-start max-sm:px-[5.5vw]'>
                 <div className='w-[90%] max-sm:w-full'>
                     <Copy>
                         <h2 className='text-head-60 font-display text-center max-sm:text-head-80 capitalize max-sm:text-left'>

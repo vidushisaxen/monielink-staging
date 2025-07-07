@@ -191,6 +191,8 @@ const DynamicQR = () => {
                        
 
                     </div>
+
+                     </div>
                     <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex">
                         <span className="text-content-18">Swipe</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
@@ -222,8 +224,6 @@ const DynamicQR = () => {
                             </svg>
                         </div>
                     </div>
-
-                     </div>
                 </div>
             </section>
         </>

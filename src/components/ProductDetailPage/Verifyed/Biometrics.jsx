@@ -78,7 +78,7 @@ const Biometrics = () => {
         className="w-screen h-full overflow-hidden bg-gradient relative"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[15%]">
+        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[20%] max-sm:gap-[15vw]">
           <div className="">
             <Copy>
               <h2 className="text-[5vw] font-display text-center max-sm:text-head-100 max-sm:text-left max-sm:px-[5.5vw]  ">
@@ -408,8 +408,8 @@ const Biometrics = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
-              <div className="  overflow-hidden max-sm:w-[30%]">
+            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[10vw]">
+              <div className="  overflow-hidden max-sm:w-[35%]">
                 <p className=" text-content-24 font-body  text-center text1   max-sm:text-content-20 max-sm:text-left ">
                   Customers submit a selfie
                 </p>

@@ -8,16 +8,18 @@ import Intro from "@/components/ProductDetailPage/Intro";
 import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
 import Infrastructure2 from "@/components/ProductDetailPage/Balance/Infrstructure2";
+import MobileInfrastructure from "@/components/ProductDetailPage/Balance/MobileInfrastructure";
 
 export default function Balance() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Merchant Onboarding"} para={"Digitally onboard merchants in minutes and enable instant acceptance of digital and card payments. With interoperable QR codes and real-time activation, offer a frictionless setup that enhances customer experience and accelerates merchant adoption."} breadcrumb={true}/>
+        <Hero heading={"Seamless Digital Banking with Balance"} para={"Deliver modern financial services — from onboarding to transactions — inside your mobile app using Moneylink’s Super SDK."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
         <Infrastructure2/>
+        <MobileInfrastructure/>
         <Values data={valuesData}/>
         <Products/>
         <FAQs data={faqData} />

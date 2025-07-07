@@ -16,7 +16,7 @@ export default function ScanPay() {
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Digital Banking with Balance"} para={"Deliver modern financial services — from onboarding to transactions — inside your mobile app using Moneylink’s Super SDK."} breadcrumb={true}/>
+        <Hero heading={"Seamless Merchant Onboarding"} para={"Digitally onboard merchants in minutes and enable instant acceptance of digital and card payments. With interoperable QR codes and real-time activation, offer a frictionless setup that enhances customer experience and accelerates merchant adoption."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet heading={"Enable merchants to accept payments instantly using interoperable static or dynamic QR codes — compatible with all major banks and wallets. Fast, secure, and frictionless for both merchants and customers."}/>
        <StaticQR/>

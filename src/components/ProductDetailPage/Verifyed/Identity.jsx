@@ -27,64 +27,61 @@ const Identity = () => {
                 gsap.set(centerGroup, { opacity: 0, scale: 0.8 });
             }
         });
-        groups.forEach((groupName) => {
+        const texts = sectionRef.current?.querySelectorAll(".textanim");
+        if (texts) {
+            gsap.set(texts, { y: 10, opacity: 0 });
+        }
+    
+        groups.forEach((groupName, index) => {
             const groupElement = svgRef.current?.querySelector(`.${groupName}`);
             if (!groupElement) return;
-
+    
             ScrollTrigger.create({
                 trigger: groupElement,
                 start: "top 70%",
-                // markers: true,
                 toggleActions: "play none none none",
                 onEnter: () => {
                     const lines = groupElement.querySelectorAll(".path-line");
                     const rects = groupElement.querySelectorAll(".rect");
                     const centerGroup = groupElement.querySelectorAll(".center-group");
+                    const correspondingTexts = sectionRef.current?.querySelectorAll(`.textanim.${groupName}`);
+                    
                     const tl = gsap.timeline();
+                   
                     tl.to(centerGroup, {
                         opacity: 1,
                         scale: 1,
                         duration: 0.8,
-                        //   transformOrigin:"center",
                         ease: "power2.out"
                     })
-
-                        .to(lines, {
-                            drawSVG: "100%",
-                            opacity: 1,
-                            duration: 1.5,
-                            stagger: 0.05,
-                            ease: "power2.out"
-                        }, "-=0.5")
-
-                        .to(rects, {
+                    .to(lines, {
+                        drawSVG: "100%",
+                        opacity: 1,
+                        duration: 1.5,
+                        stagger: 0.05,
+                        ease: "power2.out"
+                    }, "-=0.5")
+                    .to(rects, {
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.01,
+                        ease: "power2.out"
+                    }, "-=1");
+                    
+                    // Text animations - only if corresponding texts exist
+                    if (correspondingTexts && correspondingTexts.length > 0) {
+                        tl.to(correspondingTexts, {
+                            y: 0,
                             opacity: 1,
                             duration: 1,
-                            stagger: 0.01,
+                            stagger: 0.1,
                             ease: "power2.out"
-                        }, "-=1");
+                        }, "-=0.95"); 
+                    }
                 }
             });
         });
 
-    }, []);
-
-    useGSAP(() => {
-        const texts = sectionRef.current.querySelectorAll(".textanim");
-
-        texts.forEach((text) => {
-            gsap.from(text, {
-                y: 10,
-                opacity: 0,
-                duration: 1,
-                delay: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: text,
-                    start: "top 80%",
-                },
-            });
-        });
     }, []);
 
     return (
@@ -261,15 +258,15 @@ const Identity = () => {
                     </div>
                     <div>
                         <div className='absolute top-[61%] left-[44%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim '>NIN Verification
+                            <p className='font-medium text-content-20 font-body  text-center textanim svgFirst'>NIN Verification
                                 (KYC Level 1)</p>
                         </div>
                         <div className='absolute top-[73%] left-[53%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim '>BVN Verification
+                            <p className='font-medium text-content-20 font-body  text-center textanim svgSecond'>BVN Verification
                                 (KYC Level 2)</p>
                         </div>
-                        <div className='absolute top-[85%] left-[45%] w-[8%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim '>ID Document
+                        <div className='absolute top-[85.2%] left-[45%] w-[8%] overflow-hidden'>
+                            <p className='font-medium text-content-20 font-body  text-center textanim  svgThird'>ID Document
                                 Verification (KYC Level 3)</p>
                         </div>
 
@@ -277,29 +274,29 @@ const Identity = () => {
                     <div>
                         <div>
                             <div className='absolute top-[51.5%] left-[24%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim '>Customer scans or inputs NIN</p>
+                                <p className='text-content-18 font-body text-center textanim svgFirst'>Customer scans or inputs NIN</p>
                             </div>
                             <div className='absolute top-[65.5%] left-[15.5%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim '>Facial biometrics used to verify identity</p>
+                                <p className='text-content-18 font-body text-center textanim svgFirst'>Facial biometrics used to verify identity</p>
                             </div>
                             <div className='absolute top-[54.5%] left-[63%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim '>OCR captures and matches data to NIMC</p>
+                                <p className='text-content-18 font-body text-center textanim svgFirst'>OCR captures and matches data to NIMC</p>
                             </div>
                         </div>
                         <div>
                             <div className='absolute top-[76%] left-[29%] overflow-hidden w-[15%]'>
-                                <p className='text-content-18 font-body textanim leading-[1.5]'>Customer enters BVN; details fetched from NIBSS</p>
+                                <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Customer enters BVN; details fetched from NIBSS</p>
                             </div>
                             <div className='absolute top-[66.3%] left-[72%] overflow-hidden w-[13%]'>
-                                <p className='text-content-18 font-body textanim leading-[1.5]'>Facial biometrics matched with BVN profile</p>
+                                <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Facial biometrics matched with BVN profile</p>
                             </div>
                         </div>
                         <div>
                             <div className='absolute top-[89%] left-[15%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim '>OCR reads ID; facial biometrics matched</p>
+                                <p className='text-content-18 font-body text-center textanim  svgThird'>OCR reads ID; facial biometrics matched</p>
                             </div>
                             <div className='absolute top-[80.5%] left-[66%] overflow-hidden w-[18%]'>
-                                <p className='text-content-18 font-body  textanim leading-[1.5]'>Customer scans acceptable ID (e.g., driver&apos;s license, voter&apos;s card)</p>
+                                <p className='text-content-18 font-body  textanim leading-[1.5] svgThird'>Customer scans acceptable ID (e.g., driver&apos;s license, voter&apos;s card)</p>
                             </div>
                         </div>
                     </div>

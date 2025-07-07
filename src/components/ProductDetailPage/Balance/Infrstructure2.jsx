@@ -14,78 +14,78 @@ const Infrastructure2 = () => {
 
     useGSAP(() => {
         const groups = ['svgFirst', 'svgSecond', 'svgThird', 'svgFourth', 'svgFifth', 'svgSixth'];
-
+    
+        // Initial setup for SVG elements
         groups.forEach(groupName => {
             const groupElement = svgRef.current?.querySelector(`.${groupName}`);
             if (groupElement) {
                 const lines = groupElement.querySelectorAll(".path-line");
                 const rects = groupElement.querySelectorAll(".rect");
                 const centerGroup = groupElement.querySelectorAll(".center-group");
-
+    
                 gsap.set(lines, { opacity: 0, drawSVG: "0%" });
                 gsap.set(rects, { opacity: 0 });
                 gsap.set(centerGroup, { opacity: 0, scale: 0.8 });
             }
         });
-        groups.forEach((groupName) => {
+    
+        // Initial setup for text elements
+        const texts = sectionRef.current?.querySelectorAll(".textanim");
+        if (texts) {
+            gsap.set(texts, { y: 10, opacity: 0 });
+        }
+    
+        // Individual triggers for each SVG group with corresponding text
+        groups.forEach((groupName, index) => {
             const groupElement = svgRef.current?.querySelector(`.${groupName}`);
             if (!groupElement) return;
-
+    
             ScrollTrigger.create({
                 trigger: groupElement,
                 start: "top 70%",
-                // markers: true,
                 toggleActions: "play none none none",
                 onEnter: () => {
                     const lines = groupElement.querySelectorAll(".path-line");
                     const rects = groupElement.querySelectorAll(".rect");
                     const centerGroup = groupElement.querySelectorAll(".center-group");
+                    const correspondingTexts = sectionRef.current?.querySelectorAll(`.textanim.${groupName}`);
+                    
                     const tl = gsap.timeline();
+                   
                     tl.to(centerGroup, {
                         opacity: 1,
                         scale: 1,
                         duration: 0.8,
-                        //   transformOrigin:"center",
                         ease: "power2.out"
                     })
-
-                        .to(lines, {
-                            drawSVG: "100%",
-                            opacity: 1,
-                            duration: 1.5,
-                            stagger: 0.05,
-                            ease: "power2.out"
-                        }, "-=0.5")
-
-                        .to(rects, {
+                    .to(lines, {
+                        drawSVG: "100%",
+                        opacity: 1,
+                        duration: 1.5,
+                        stagger: 0.05,
+                        ease: "power2.out"
+                    }, "-=0.5")
+                    .to(rects, {
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.01,
+                        ease: "power2.out"
+                    }, "-=1");
+                    
+                    // Text animations - only if corresponding texts exist
+                    if (correspondingTexts && correspondingTexts.length > 0) {
+                        tl.to(correspondingTexts, {
+                            y: 0,
                             opacity: 1,
                             duration: 1,
-                            stagger: 0.01,
+                            stagger: 0.1,
                             ease: "power2.out"
-                        }, "-=1");
+                        }, "-=0.95"); 
+                    }
                 }
             });
         });
-
     }, []);
-
-    useGSAP(() => {
-        const texts = sectionRef.current.querySelectorAll(".textanim");
-        
-        texts.forEach((text) => {
-          gsap.from(text, {
-            y: 10,
-            opacity: 0,
-            duration: 1,
-            delay:1,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: text,
-              start: "top 80%",
-            },
-          });
-        });
-      }, []);
 
     return (
         <section data-theme="orange" className='w-screen h-full bg-gradient relative max-sm:hidden' ref={sectionRef}>
@@ -413,90 +413,90 @@ const Infrastructure2 = () => {
                     </div>
                     <div>
                         <div className='absolute top-[22.5%] left-[38%] w-[7%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center textanim '>Digital Accounts</p>
+                            <p className='font-medium text-content-24 font-body  text-center textanim svgFirst'>Digital Accounts</p>
                         </div>
-                        <div className='absolute top-[36%] left-[47%] w-[8%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center textanim '>Redemption Account </p>
+                        <div className='absolute top-[36.2%] left-[46.5%] w-[8%] overflow-hidden'>
+                            <p className='font-medium text-content-24 font-body  text-center textanim svgSecond'>Redemption Account </p>
                         </div>
                         <div className='absolute top-[49.8%] left-[55%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center textanim '>Pre-paid Cards Accounts</p>
+                            <p className='font-medium text-content-24 font-body  text-center textanim svgThird'>Pre-paid Cards Accounts</p>
                         </div>
                         <div className='absolute top-[63.5%] left-[45.5%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center textanim '>Credit Card Accounts</p>
+                            <p className='font-medium text-content-24 font-body  text-center textanim svgFourth'>Credit Card Accounts</p>
                         </div>
                         <div className='absolute top-[76.7%] left-[38%] w-[7%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center textanim '>Reward Account </p>
+                            <p className='font-medium text-content-24 font-body  text-center textanim svgFifth'>Reward Account </p>
                         </div>
-                        <div className='absolute top-[90.5%] left-[47.2%] w-[7%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body text-center textanim '>Loan Accounts </p>
+                        <div className='absolute top-[90.2%] left-[47.2%] w-[7%] overflow-hidden'>
+                            <p className='font-medium text-content-24 font-body text-center textanim svgSixth'>Loan Accounts </p>
                         </div>
                     </div>
                     <div>
                         <div>
                             <div className='absolute top-[16.4%] left-[23%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Fund Transfers</p>
+                                <p className='text-content-20 font-body text-center textanim svgFirst'>Fund Transfers</p>
                             </div>
                             <div className='absolute top-[25.3%] left-[18.2%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Digital Payments</p>
+                                <p className='text-content-20 font-body text-center textanim svgFirst'>Digital Payments</p>
                             </div>
                             <div className='absolute top-[18.2%] left-[56%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Collect payments / Settlements</p>
+                                <p className='text-content-20 font-body text-center textanim svgFirst'>Collect payments / Settlements</p>
                             </div>
                         </div>
                         <div>
                             <div className='absolute top-[35.5%] left-[22.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Usage of Redeemed Amount</p>
+                                <p className='text-content-20 font-body text-center textanim svgSecond'>Usage of Redeemed Amount</p>
                             </div>
                             <div className='absolute top-[31%] left-[65%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Redeem Reward Points</p>
+                                <p className='text-content-20 font-body text-center textanim svgSecond'>Redeem Reward Points</p>
                             </div>
                         </div>
                         <div>
                             <div className='absolute top-[45.2%] left-[33%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Load Money</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Load Money</p>
                             </div>
                             <div className='absolute top-[51.2%] left-[41%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Spends</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Spends</p>
                             </div>
                             <div className='absolute top-[42.5%] left-[74%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Card Controls</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Card Controls</p>
                             </div>
                             <div className='absolute top-[50%] left-[74%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Card Statements</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Card Statements</p>
                             </div>
                         </div>
                         <div>
                             <div className='absolute top-[57%] left-[31.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Card Statement</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Card Statement</p>
                             </div>
                             <div className='absolute top-[60.4%] left-[19%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Limit Management</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Limit Management</p>
                             </div>
                             <div className='absolute top-[66.5%] left-[17.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Collection of Delinquent Amounts</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Collection of Delinquent Amounts</p>
                             </div>
                             <div className='absolute top-[58.7%] left-[72%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Card Controls</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Card Controls</p>
                             </div>
                             <div className='absolute top-[63.3%] left-[65.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Spends</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Spends</p>
                             </div>
                             <div className='absolute top-[68.2%] left-[64%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Repayments</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Repayments</p>
                             </div>
                         </div>
                         <div>
                             <div className='absolute top-[89.3%] left-[21%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Loan Repayments</p>
+                                <p className='text-content-20 font-body text-center textanim svgSixth'>Loan Repayments</p>
                             </div>
                             <div className='absolute top-[95%] left-[25%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Loan Disbursement</p>
+                                <p className='text-content-20 font-body text-center textanim svgSixth'>Loan Disbursement</p>
                             </div>
                             <div className='absolute top-[85%] left-[65%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Collection of Delinquent Amount</p>
+                                <p className='text-content-20 font-body text-center textanim svgSixth'>Collection of Delinquent Amount</p>
                             </div>
                             <div className='absolute top-[94.5%] left-[62%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim '>Loan Statements</p>
+                                <p className='text-content-20 font-body text-center textanim svgSixth'>Loan Statements</p>
                             </div>
                         </div>
                     </div>

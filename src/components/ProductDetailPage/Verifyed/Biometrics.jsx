@@ -88,7 +88,7 @@ const Biometrics = () => {
           </div>
             <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
 
-          <div className="w-[60%] max-sm:w-[150%]" ref={svgContainer}>
+          <div className="w-[50%] max-sm:w-[150%]" ref={svgContainer}>
             <svg
               className="h-full w-full"
               width="860"
@@ -414,7 +414,7 @@ const Biometrics = () => {
                   Customers submit a selfie
                 </p>
               </div>
-              <div className=" w-[25%] overflow-hidden max-sm:w-[30%]">
+              <div className=" w-[35%] overflow-hidden max-sm:w-[30%]">
                 <p className=" text-content-24 font-body  text-center text2  max-sm:text-content-20 max-sm:text-left  ">
                   System detects liveness and matches with profile image{" "}
                 </p>

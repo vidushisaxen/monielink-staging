@@ -16,8 +16,6 @@ const Intro = () => {
         const paths = svgRef.current?.querySelectorAll(".svg-path");
         const g1 = group1Ref.current;
         const g2 = group2Ref.current;
-
-
         if (paths) {
             // Animate drawing
             gsap.from(paths, {

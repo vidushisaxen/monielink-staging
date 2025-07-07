@@ -13,7 +13,7 @@ const Address = () => {
     const sectionRef = useRef(null);
 
     useGSAP(() => {
-        const groups = ['svg-first', 'svg-second', 'svg-third'];
+        const groups = ['svg-first', 'svg-second'];
 
         groups.forEach(groupName => {
             const groupElement = svgref.current?.querySelector(`.${groupName}`);
@@ -27,64 +27,60 @@ const Address = () => {
                 gsap.set(centerGroup, { opacity: 0, scale: 0.8 });
             }
         });
-        groups.forEach((groupName) => {
+        const texts = sectionRef.current?.querySelectorAll(".text-anim");
+        if (texts) {
+            gsap.set(texts, { y: 10, opacity: 0 });
+        }
+        groups.forEach((groupName, index) => {
             const groupElement = svgref.current?.querySelector(`.${groupName}`);
             if (!groupElement) return;
-
+    
             ScrollTrigger.create({
                 trigger: groupElement,
                 start: "top 70%",
-                // markers: true,
                 toggleActions: "play none none none",
                 onEnter: () => {
                     const lines = groupElement.querySelectorAll(".pathLine");
                     const rects = groupElement.querySelectorAll(".rects");
                     const centerGroup = groupElement.querySelectorAll(".centerGroup");
+                    const correspondingTexts = sectionRef.current?.querySelectorAll(`.text-anim.${groupName}`);
+                    
                     const tl = gsap.timeline();
+                   
                     tl.to(centerGroup, {
                         opacity: 1,
                         scale: 1,
                         duration: 0.8,
-                        //   transformOrigin:"center",
                         ease: "power2.out"
                     })
-
-                        .to(lines, {
-                            drawSVG: "100%",
-                            opacity: 1,
-                            duration: 1.5,
-                            stagger: 0.05,
-                            ease: "power2.out"
-                        }, "-=0.5")
-
-                        .to(rects, {
+                    .to(lines, {
+                        drawSVG: "100%",
+                        opacity: 1,
+                        duration: 1.5,
+                        stagger: 0.05,
+                        ease: "power2.out"
+                    }, "-=0.5")
+                    .to(rects, {
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.01,
+                        ease: "power2.out"
+                    }, "-=1");
+                    
+                    // Text animations - only if corresponding texts exist
+                    if (correspondingTexts && correspondingTexts.length > 0) {
+                        tl.to(correspondingTexts, {
+                            y: 0,
                             opacity: 1,
                             duration: 1,
-                            stagger: 0.01,
+                            stagger: 0.1,
                             ease: "power2.out"
-                        }, "-=1");
+                        }, "-=0.95"); 
+                    }
                 }
             });
         });
 
-    }, []);
-
-    useGSAP(() => {
-        const texts = sectionRef.current.querySelectorAll(".text-anim");
-
-        texts.forEach((text) => {
-            gsap.from(text, {
-                y: 10,
-                opacity: 0,
-                duration: 1,
-                delay: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: text,
-                    start: "top 80%",
-                },
-            });
-        });
     }, []);
 
     return (
@@ -205,10 +201,10 @@ const Address = () => {
                     </div>
                     <div>
                         <div className='absolute top-[52%] left-[38%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center text-anim '>Residence Verification</p>
+                            <p className='font-medium text-content-20 font-body  text-center text-anim svg-first'>Residence Verification</p>
                         </div>
                         <div className='absolute top-[73.5%] left-[47.5%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center text-anim '>Business Verification</p>
+                            <p className='font-medium text-content-20 font-body  text-center text-anim svg-second'>Business Verification</p>
                         </div>
                         
 
@@ -216,22 +212,22 @@ const Address = () => {
                     <div>
                         <div>
                             <div className='absolute top-[34%] left-[15%] overflow-hidden w-[15%]'>
-                                <p className='text-content-18 font-body text-center text-anim leading-[1.5]'>Customer uploads utility bill or acceptable proof of address</p>
+                                <p className='text-content-18 font-body text-center text-anim leading-[1.5] svg-first'>Customer uploads utility bill or acceptable proof of address</p>
                             </div>
                             <div className='absolute top-[39%] left-[58%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center text-anim '>Customer selects residence on map</p>
+                                <p className='text-content-18 font-body text-center text-anim svg-first'>Customer selects residence on map</p>
                             </div>
                             
                         </div>
                         <div>
                             <div className='absolute top-[71%] left-[17%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-anim '>Customer enters registration details</p>
+                                <p className='text-content-18 font-body text-anim svg-second'>Customer enters registration details</p>
                             </div>
                             <div className='absolute top-[58%] left-[67%] overflow-hidden '>
-                                <p className='text-content-18 font-body text-anim '>CAC or other document is verified</p>
+                                <p className='text-content-18 font-body text-anim svg-second'>CAC or other document is verified</p>
                             </div>
                             <div className='absolute top-[86%] left-[66%] overflow-hidden '>
-                                <p className='text-content-18 font-body text-anim '>Location is selected on map</p>
+                                <p className='text-content-18 font-body text-anim svg-second'>Location is selected on map</p>
                             </div>
                         </div>
                        

@@ -51,11 +51,11 @@ export default function ContactForm() {
   return (
     <section className="mobile:pt-0 overflow-hidden" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
-        <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] mobile:py-[5vw]">
+        <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] max-md:px-[2vw] mobile:py-[5vw]">
           <Form {...form}>
             <form
               autoComplete="off"
-              className="space-y-[2vw] max-sm:space-y-[7vw] tablet:space-y-[5vw]  mobile:pt-[5vw]"
+              className="space-y-[2vw] max-sm:space-y-[7vw] max-md:space-y-[4vw] tablet:space-y-[5vw]  mobile:pt-[5vw]"
             >
               <FormField
   control={form.control}
@@ -160,7 +160,7 @@ export default function ContactForm() {
 />
 
 
-              <div className="mt-[2vw] w-full flex justify-start max-sm:pt-[10vw]">
+              <div className="mt-[2vw] w-full flex justify-start max-md:pt-[5vw] max-sm:pt-[10vw]">
         <SecondaryButton href={"/"} text="Submit" className=" text-white" />
              
               </div>

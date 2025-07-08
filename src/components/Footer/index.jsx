@@ -16,7 +16,7 @@ import ScrambleText from "../ScrambleText";
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
+    if (globalThis.innerWidth > 640) {
       setIsMobile(false);
     } else {
       setIsMobile(true);
@@ -26,7 +26,7 @@ export default function Footer() {
     <div className="relative" id="footer">
       <BackgroundLine />
       <footer
-        className="h-screen absolute inset-0 z-[40] flex items-center justify-center max-sm:h-[140vh] w-screen overflow-hidden"
+        className="h-screen absolute inset-0 z-[40] flex items-center justify-center max-md:h-fit  max-sm:h-[140vh] w-screen overflow-hidden"
         id="footer"
       >
         {isMobile ? (
@@ -167,8 +167,8 @@ export default function Footer() {
             </div>
           </div>
         ) : (
-          <div className="w-full h-full flex items-center justify-center relative">
-            <div className="w-[90vw] h-[85vh] absolute top-1/2  -translate-y-1/2 left-1/2 -translate-x-1/2">
+          <div className="w-full h-full flex max-md:h-fit items-center justify-center relative">
+            <div className="w-[90vw] h-[85vh] max-md:h-[120vh] absolute top-1/2  -translate-y-1/2 left-1/2 -translate-x-1/2">
               <svg
                 className="h-full w-full"
                 width="1772"
@@ -266,9 +266,9 @@ export default function Footer() {
                 </defs>
               </svg>
             </div>
-            <div className="py-[8%] px-[8vw] z-10 flex items-start justify-between left-0 w-full  flex-col h-full ">
-              <div className="h-[90%] relative gap-[10vw]  w-full flex  items-center justify-between">
-                <div className="w-[50%]  z-[100]  flex flex-col h-[90%] items-start justify-between">
+            <div className="py-[8%] max-md:py-[15%] px-[8vw] z-10 flex items-start justify-between left-0 w-full  flex-col h-full ">
+              <div className="h-[90%] relative gap-[10vw]  w-full flex  items-center justify-between ">
+                <div className="w-[50%]  z-[100] flex max-md:gap-[10vw] flex-col h-[90%] items-start justify-between">
                   <div className="flex justify-between items-center">
                     <div className="w-[20vw] h-auto fadeupanim">
                       <svg
@@ -349,9 +349,9 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[45%]  z-[100]   text-[#A8A8A8] pb-[5vw] pt-[3vw] flex flex-col h-[80%] items-start justify-between gap-0">
+                <div className="w-[45%] max-md:gap-[4vw]  z-[100]   text-[#A8A8A8] pb-[5vw] pt-[3vw] flex flex-col h-[80%] items-start justify-between gap-0">
                   <Copy>
-                    <p className=" text-[1.05vw] w-full">
+                    <p className=" text-[1.05vw] max-md:text-[1.35vw] w-full">
                       Integrate the Moneylink Super SDK and start delivering
                       seamless, scalable banking services within your mobile app
                       — faster than ever. Let&apos;s build the future of finance
@@ -380,11 +380,11 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="w-full  z-[100]  h-[10%] flex items-end justify-between text-[#A8A8A8] text-[1.05vw]">
-                <div className="w-[20vw]">
+              <div className="w-full  z-[100]  h-[10%] max-md:pt-[2vw] flex items-end justify-between  text-[#A8A8A8] text-[1.05vw] max-md:text-[1.7vw]">
+                <div className="w-[20vw] max-md:w-[50%]">
                   <p className="">Copyright © Monielink 2025</p>
                 </div>
-                <div className="w-fit">
+                <div className="w-fit max-md:w-[50%] max-md:flex max-md:justify-end">
                   <div className="">
                     By :{" "}
                     <a href={"https://weareenigma.com/"} target="_blank">

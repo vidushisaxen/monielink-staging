@@ -57,7 +57,7 @@ const CountrySelect = ({ disabled, value: selectedCountry, options: countryList,
         <Button
           type="button"
           variant="outline"
-          className="flex justify-between h-11 border shadow-none px-3 pb-2 mobile:pb-0 focus:z-10 bg-transparent w-[15%] mr-[1.5vw]"
+          className="flex justify-between h-11 border shadow-none px-3 pb-2 mobile:pb-0 focus:z-10 bg-transparent max-md:h-[10vw] w-[15%] mr-[1.5vw]"
           disabled={disabled}
         >
           <FlagComponent country={selectedCountry} countryName={selectedCountry} />

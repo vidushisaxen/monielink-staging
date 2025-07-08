@@ -13,7 +13,7 @@ const BlogContent = () => {
       className={`w-screen h-fit bg-white pt-[25%] mt-[-25%] text-black-1 max-sm:pt-[50%] max-sm:mt-[-50%] ${styles.blogContent}`}
     >
       <div className="py-[10%] h-full w-full flex justify-between px-[5vw] max-sm:px-[5.5vw] max-sm:flex-col max-sm:gap-[15vw]">
-        <div className="w-[20%] h-fit sticky top-[10%] max-sm:static max-sm:w-full">
+        <div className="w-[20%] h-fit sticky max-md:hidden top-[10%] max-sm:static max-sm:w-full">
           <div className="w-full flex flex-col gap-[3vw] max-sm:gap-[8vw]">
             <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw]">
               <span className="text-[1.5vw] max-sm:text-head-50">Posted On:</span>
@@ -65,7 +65,7 @@ const BlogContent = () => {
             </div>
           </div>
         </div>
-        <div className="w-[65%] max-sm:w-full">
+        <div className="w-[65%] max-md:w-[100%] max-sm:w-full">
           <p>
             The internet is evolving — and with it, so is the way we engage with
             money, identity, and value. Welcome to Web3: a decentralized,
@@ -86,7 +86,7 @@ const BlogContent = () => {
             meets emerging crypto experiences. That’s why infrastructure matters
             more than ever.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] max-sm:my-[15vw]" />
+          <div className="w-full h-[1px] bg-black-1 my-[5vw]  max-sm:my-[15vw]" />
           <h2>What is Web3 and Why Does It Matter?</h2>
           <p>
             Web3 replaces traditional intermediaries with smart contracts,

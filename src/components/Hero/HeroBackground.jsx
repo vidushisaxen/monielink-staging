@@ -67,7 +67,7 @@ export default function HeroBackground() {
   }, []);
 
   return (
-      <div className="w-screen h-screen absolute inset-0 bg-background  overflow-hidden flex flex-wrap max-sm:hidden">
+      <div className="w-screen max-md:h-[80vh] h-screen absolute inset-0 bg-background  overflow-hidden flex flex-wrap max-sm:hidden">
       {[...Array(cellCount)].map((_, i) => {
         return (
           <div

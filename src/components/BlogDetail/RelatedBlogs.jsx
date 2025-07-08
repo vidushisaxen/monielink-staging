@@ -7,10 +7,12 @@ import Link from 'next/link'
 import Copy from '../Animations/Copy'
 
 const RelatedBlogs = () => {
+
+  
   return (
-   <section data-theme="white" className='w-screen h-fit pb-[7%] px-[5vw] bg-white text-black-1 max-sm:px-[5.5vw] max-sm:pb-[15%]' id='related-blogs'>
+   <section data-theme="white" className='w-screen h-fit pb-[7%] max-md:pb-[15%] px-[5vw] bg-white text-black-1 max-sm:px-[5.5vw] max-sm:pb-[15%]' id='related-blogs'>
     <div className='w-full flex flex-col gap-[6vw] max-sm:gap-[10vw]'>
-        <div className='w-full flex justify-between items-end'>
+        <div className='w-full flex justify-between max-md:pt-[5vw] items-end'>
             <Copy>
             <h2 className='text-head-100 font-display'>View More Blogs</h2>
 
@@ -19,7 +21,7 @@ const RelatedBlogs = () => {
         </div>
      <div className='w-full flex justify-between max-sm:flex-col max-sm:gap-[10vw]'>
          {blogContent.map((blog, index) => (
-              <div key={index} className={`w-[32%] h-fit relative group max-sm:w-full fadeupanim ${index==0?"max-sm:mt-[4vw]":""}`}>
+              <div key={index} className={`w-[32%] max-md:w-[47%] max-md:last:hidden max-sm:last:block h-fit relative group max-sm:w-full fadeupanim ${index==0?"max-sm:mt-[4vw]":""}`}>
                 <div className="w-full h-fit">
                   <svg
                     width="532"

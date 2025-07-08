@@ -4,7 +4,7 @@ import React from "react";
 function HamButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, className = "", ...props }) {
     const sharedContent = (
         <>
-            <div className="relative flex items-center justify-center max-sm:w-[12vw]">
+            <div className="relative flex items-center justify-center max-sm:w-[12vw] max-md:w-[11vw]">
                 <svg
                     className="w-full h-full"
                     width="77"

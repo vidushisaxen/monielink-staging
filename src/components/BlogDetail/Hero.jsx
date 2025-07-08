@@ -14,10 +14,10 @@ const Hero = () => {
     segment.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
   return (
     <section className="w-screen h-fit " id="hero">
-      <div className="px-[5vw] bg-black-1 w-full h-full flex flex-col pt-[15%] gap-[3vw] max-sm:pt-[30%]">
+      <div className="px-[5vw] bg-black-1 w-full h-full flex flex-col max-md:pt-[22%] pt-[15%] gap-[3vw] max-sm:pt-[30%]">
         <Copy>
 
-        <h1 className="text-head-100 font-display w-[60%] capitalize max-sm:w-[90%] max-sm:text-head-150 text-gray-1">
+        <h1 className="text-head-100 font-display w-[60%] max-md:w-[85%] capitalize max-sm:w-[90%] max-sm:text-head-150 text-gray-1">
           Your passport to the web3 economy
         </h1>
         </Copy>
@@ -69,7 +69,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="w-full flex justify-center">
-        <div className="w-full h-[80vh] rounded-[0.8vw] mt-[3vw] overflow-hidden relative z-[10] max-sm:mt-[30vw] max-sm:h-[55vh] max-sm:w-[94%] max-sm:rounded-[2.5vw] fadeupanim">
+        <div className="w-full h-[80vh] rounded-[0.8vw] mt-[3vw] overflow-hidden relative z-[10] max-sm:mt-[30vw] max-sm:h-[55vh] max-sm:w-[94%] max-sm:rounded-[2.5vw] max-md:rounded-[3vw] fadeupanim">
           <Image src={"/assets/images/blogs/blog-detail-hero.png"} alt="blog-detail-hero" width={1920} height={1080} className="w-full h-full object-cover"/>
         </div>
 

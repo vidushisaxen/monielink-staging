@@ -94,12 +94,12 @@ export default function Header() {
   return (
     <header
       id="nav"
-      className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen z-[300] transform transition-transform duration-300 pointer-events-none max-sm:px-[6vw] ${hidden ? "-translate-y-full" : "translate-y-0"}`}
+      className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen z-[300] transform transition-transform duration-300 pointer-events-none max-sm:px-[6vw] max-md:px-[6vw] ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div id="header-inner" className="relative flex items-center justify-center h-full w-full px-[1.25vw] py-[1.7vw]">
 
         {/* Background SVG */}
-        <div className="w-full h-auto absolute top-0 left-0 max-sm:hidden">
+        <div className="w-full h-auto absolute top-0 left-0 max-sm:hidden max-md:hidden">
           <svg className="w-full h-auto" width="1818" height="135" viewBox="0 0 1818 135" fill="none" xmlns="http://www.w3.org/2000/svg">
             <foreignObject x="-40" y="-39.6064" width="1898" height="213.852">
               <div
@@ -130,10 +130,10 @@ export default function Header() {
         </div>
         <div className="flex items-center justify-between w-full h-full relative z-10 pointer-events-auto">
           {/* Logo */}
-          <Link href={"/"} className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] ${isInverted ? " brightness-[16]" : ""}`}>
+          <Link href={"/"} className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[12vw] ${isInverted ? " brightness-[16]" : ""}`}>
               <Logo className="h-full w-full"  />
           </Link>
-          <div className="hidden max-sm:block">
+          <div className="hidden max-md:block max-sm:block">
              <HamButton
                   href={"/"}
                   rotate={""}
@@ -143,7 +143,7 @@ export default function Header() {
                 />
 
           </div>
-          <nav className="flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden">
+          <nav className="flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden max-md:hidden">
   {links.map((item, index) => {
     const isActive = pathname === item.link;
 
@@ -187,7 +187,7 @@ export default function Header() {
           <PrimaryButton
             href={"#"}
             text="Get In Touch"
-            className="max-sm:hidden"
+            className="max-sm:hidden max-md:hidden"
           />
         </div>
       </div>

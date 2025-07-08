@@ -12,12 +12,12 @@ const BlogList = () => {
         className="w-screen h-fit py-[7%] bg-white px-[5vw] max-sm:py-[15%] max-sm:px-[5.5vw]"
         id="blog-listing"
       >
-        <div className="flex flex-col gap-[5vw] text-black-1 max-sm:gap-[10vw]">
-          <h2 className="w-[40%] text-head-100 font-display capitalize flex flex-col max-sm:w-[80%]">
+        <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[10vw] max-sm:gap-[10vw]">
+          <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display capitalize flex flex-col max-sm:w-[80%] ">
             <span>Explore</span> <span>expert insights</span>{" "}
           </h2>
           <div className="w-full flex justify-between flex-wrap gap-y-[4vw] max-sm:flex-col max-sm:gap-y-[10vw]">
-            <div className="w-[66%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[70vh]">
+            <div className="w-[66%] max-md:w-[100%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[70vh]">
               <div className="w-full  flex justify-between max-sm:hidden">
                 <svg
                   width="1110"
@@ -114,16 +114,16 @@ const BlogList = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="absolute top-0 left-0 w-full h-fit max-sm:top-[3%]">
-                <div className="w-full h-full px-[2.5vw] pt-[3vw] flex flex-col gap-[2vw] max-sm:px-0 max-sm:pt-0 max-sm:gap-[7vw]">
+              <div className="absolute top-0 left-0 w-full  h-fit max-md:top-[2.5%] max-sm:top-[3%]">
+                <div className="w-full h-full px-[2.5vw]  pt-[3vw] flex flex-col gap-[2vw] max-sm:px-0 max-sm:pt-0 max-md:pt-[6vw] max-md:gap-[3vw] max-sm:gap-[7vw]">
                   <div className="flex justify-between max-sm:flex-col max-sm:gap-[6vw]">
-                    <div className="flex flex-col gap-[1.5vw] w-[40%] max-sm:order-1 max-sm:w-full max-sm:px-[4vw] max-sm:gap-[4vw]">
+                    <div className="flex flex-col gap-[1.5vw] w-[40%] max-md:w-[50%] max-sm:order-1 max-sm:w-full max-sm:px-[4vw] max-sm:gap-[4vw]">
                       <p className="uppercase max-sm:text-head-50">featured</p>
                       <h3 className="text-head-60 font-display capitalize max-sm:text-content-30">
                         Your passport to the web3 economy
                       </h3>
                     </div>
-                    <div className="w-[55%] h-[40%] rounded-[1.2vw] overflow-hidden max-sm:w-full max-sm:rounded-[4vw]">
+                    <div className="w-[55%] max-md:w-[50%] h-[40%] rounded-[1.2vw] overflow-hidden max-md:rounded-[3vw] max-sm:rounded-[4vw]">
                       <Image
                         src={"/assets/images/blogs/blog-img-1.png"}
                         alt=""
@@ -147,7 +147,7 @@ const BlogList = () => {
               </div>
             </div>
             {blogContent.map((blog, index) => (
-              <div key={index} className={`w-[32%] h-fit relative group max-sm:w-full ${index==0?"max-sm:mt-[4vw]":""}`}>
+              <div key={index} className={`w-[32%] max-md:w-[47%] h-fit relative group max-sm:w-full ${index==0?"max-sm:mt-[4vw]":""}`}>
                 <div className="w-full h-fit">
                   <svg
                     width="532"

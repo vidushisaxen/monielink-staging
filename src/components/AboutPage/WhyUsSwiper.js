@@ -107,7 +107,7 @@ const WhyUsSwiper = () => {
         trigger: containerRef.current,
         start: 'top center',
         end: 'bottom center',
-        markers: true, 
+        // markers: true, 
       },
     });
   }, []);

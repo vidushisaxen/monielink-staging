@@ -74,7 +74,7 @@ const StaticQR = () => {
     
     return (
         <>
-            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative max-sm:pb-[15%]' ref={sectionRef}>
+            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient max-md:mt-[-1px] relative max-sm:pb-[15%]' ref={sectionRef}>
                 <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]'>
                     <div className='w-[60%] max-sm:w-full'>
                         <Copy>
@@ -83,8 +83,8 @@ const StaticQR = () => {
                             </h2>
                         </Copy>
                     </div>
-                    <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
-                    <div className='w-[85%] max-sm:w-[250%] ' ref={svgContainer}>
+                    <div className='w-screen max-md:overflow-hidden overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw]'>
+                    <div className='w-[85%] max-md:w-[95%] max-sm:w-[250%] ' ref={svgContainer}>
                         <svg className='h-full w-full' width="1477" height="264" viewBox="0 0 1477 264" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_f_72_5626)">
                                 <path d="M61.077 57.1214L87.6535 30.0009C89.5344 28.0816 92.1086 27 94.7958 27L257.395 27C262.918 27 267.395 31.4772 267.395 37V165.634C267.395 168.273 266.352 170.804 264.494 172.677L234.194 203.216L202.829 234.704C200.952 236.588 198.403 237.647 195.744 237.647H35.0013C29.4785 237.647 25.0014 233.17 25.0013 227.647L25 98.8506C25 96.2753 25.9935 93.7992 27.7737 91.9382L61.077 57.1214Z" fill="#FF5E01" />
@@ -174,16 +174,16 @@ const StaticQR = () => {
 
                         <div className='w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]'>
                         <div className=' w-[18%] overflow-hidden max-sm:w-[18%]'>
-                            <p className='font-medium text-content-24 font-body  text-center text1 textanim max-sm:text-content-20 max-sm:text-left '>Merchant presents a Static QR Code</p>
+                            <p className='font-medium text-content-24 font-body  text-center text1 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left '>Merchant presents a Static QR Code</p>
                         </div>
                         <div className=' w-[15%] overflow-hidden max-sm:w-[18%]'>
-                            <p className='font-medium text-content-24 font-body  text-center text2 textanim max-sm:text-content-20 max-sm:text-left '>Customer Scans Static QR</p>
+                            <p className='font-medium text-content-24 font-body  text-center text2 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left '>Customer Scans Static QR</p>
                         </div> <div className=' w-[25%] overflow-hidden max-sm:w-[18%]'>
-                            <p className='font-medium text-content-24 font-body  text-center text3 textanim max-sm:text-content-20 max-sm:text-left'>Customer enters Payment Amount followed by PIN for authentication</p>
+                            <p className='font-medium text-content-24 font-body  text-center text3 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>Customer enters Payment Amount followed by PIN for authentication</p>
                         </div> <div className=' w-[18%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text4 textanim max-sm:text-content-20 max-sm:text-left'>Payment  Successful</p>
+                            <p className='font-medium text-content-24 font-body  text-center text4 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>Payment  Successful</p>
                         </div> <div className=' w-[18%] overflow-hidden'>
-                            <p className='font-medium text-content-24 font-body  text-center text5 textanim max-sm:text-content-20 max-sm:text-left'>Payment  Successful</p>
+                            <p className='font-medium text-content-24 font-body  text-center text5 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>Payment  Successful</p>
                         </div>
                         </div>
 

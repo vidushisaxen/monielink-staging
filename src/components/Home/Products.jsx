@@ -54,8 +54,8 @@ export default function Products() {
       id="products"
       className="h-full w-screen relative bg-[#050505] max-md:py-[10%] max-sm:py-[15%]"
     >
-      <div className="sticky top-0 left-0 max-sm:hidden">
-        <BackgroundLine />
+      <div className="sticky h-full  top-0 left-0 max-sm:hidden">
+        <BackgroundLine/>
       </div>
 
       <div

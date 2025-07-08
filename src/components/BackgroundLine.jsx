@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-export default function BackgroundLine() {
+export default function BackgroundLine({
+  showOnTablet = true,
+}) {
   const initialOpacities2 = [
     null,
     null,
@@ -85,7 +87,7 @@ export default function BackgroundLine() {
   }, [moveElementsByOne]);
 
   return (
-    <div className="h-screen w-screen max-md:h-fit overflow-hidden  max-sm:hidden">
+    <div className={`h-screen w-screen overflow-hidden  max-sm:hidden`}>
       <div className="flex flex-row items-center px-10 justify-between">
         <div className="flex flex-col px-5 gap-1  h-full">
           {opacities2.map((opacity, index) => (

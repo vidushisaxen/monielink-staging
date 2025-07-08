@@ -537,10 +537,10 @@ li .link-line::after {
   {
     :root {
     --head-150: 10vw;
+    --content-30: 3.5vw;
     --content-20: 2.2vw;
     --head-60: 6vw;
     --head-100: 6.5vw;
-
     --head-60: 5vw;
     --head-120: 12vw;
     --head-140:6vw;

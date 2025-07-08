@@ -49,12 +49,12 @@ export default function Hero({ heading, para , breadcrumb}) {
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
         >
           <Copy delay={1.8}>
-            <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}>
+            <h1 className={`text-head-150 font-display w-[80%] max-md:w-[90%] headingText  text-gray-1 max-sm:w-[90%]`}>
               {heading}
             </h1>
           </Copy>
           <div
-            className={`w-[55%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-sm:pt-[10vw]`}>
+            className={`w-[55%] max-md:w-[80%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-md:pt-[5vw] max-sm:pt-[10vw]`}>
             <Copy delay={2}>
               <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
                 {para}

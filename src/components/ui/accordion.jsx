@@ -41,7 +41,7 @@ function AccordionTrigger({
         {...props}>
         {children}
         <div className="absolute top-0 left-0 max-sm:top-[10%]">
-          <p className="text-background text-[1vw] font-body max-sm:text-[3.4vw]">00{index + 1}</p>
+          <p className="text-background text-[1vw] max-md:text-[1.5vw] font-body max-sm:text-[3.4vw]">00{index + 1}</p>
         </div>
         <div className="flex cursor-pointer flex-col absolute top-0 right-0 gap-[-0.5rem]  rotate-180">
           <ChevronDownIcon

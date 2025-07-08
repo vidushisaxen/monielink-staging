@@ -58,8 +58,8 @@ const Wallet = ({heading}) => {
     });
     return (
         <section data-theme="orange" className='w-screen bg-gradient h-full relative'>
-            <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw] max-sm:py-[20%] max-sm:items-start max-sm:px-[5.5vw]'>
-                <div className='w-[90%] max-sm:w-full'>
+            <div className='px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between space-y-[10vw] max-md:py-[10vw] max-sm:py-[20%] max-sm:items-start max-sm:px-[5.5vw]'>
+                <div className='w-[90%] max-md:w-[95%] max-sm:w-full'>
                     <Copy>
                         <h2 className='text-head-60 font-display text-center max-sm:text-head-80 capitalize max-sm:text-left'>
                            {heading}
@@ -67,22 +67,22 @@ const Wallet = ({heading}) => {
                     </Copy>
                 </div>
                 <div className='w-full space-y-[3vw]'>
-                <div className="flex items-center justify-between gap-y-[5vw] w-full max-sm:flex-col max-sm:items-start max-sm:gap-y-[8vw] max-sm:py-[10vw] ">
+                <div className="flex items-center justify-between gap-y-[5vw] w-full max-sm:flex-col max-sm:items-start   max-sm:gap-y-[8vw] max-sm:py-[10vw] ">
                     {uspData.map(({ description, svg, svgElement }, index) => (
-                        <div key={index} className="flex items-center w-[22%] justify-start gap-[2vw] max-sm:w-[85%] max-sm:gap-[6vw]">
+                        <div key={index} className="flex items-center w-[22%] justify-start gap-[2vw] max-sm:w-[85%] max-md:w-[80%] max-md:flex-col max-sm:flex-row max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw]">
                             <div className="text-primary-2 mb-1">
-                                <svg width="105" height="85" viewBox="0 0 105 85" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[5vw] w-[5vw] max-sm:w-[18vw] max-sm:h-auto" ref={svg}>
+                                <svg width="105" height="85" viewBox="0 0 105 85" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[5vw] w-[5vw] max-md:h-[10vw] max-md:w-[10vw] max-sm:w-[18vw] max-sm:h-auto" ref={svg}>
                                     {svgElement}
                                 </svg>
                             </div>
                             <Copy>
-                                <p className={`text-content-20 `}>{description}</p>
+                                <p className={`text-content-20 max-md:text-center`}>{description}</p>
                             </Copy>
                         </div>
                     ))}
                 </div>
 
-                <div className='h-[1px] w-full bg-white'></div>
+                <div className='h-[1px] w-full max-md:mt-[5vw] bg-white'></div>
                 </div>
             </div>
 

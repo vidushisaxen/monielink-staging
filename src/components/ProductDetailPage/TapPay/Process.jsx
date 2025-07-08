@@ -19,8 +19,8 @@ const Diagram = () => {
         className="w-screen h-full overflow-hidden bg-gradient relative max-sm:py-[15%]"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]">
-          <div className="w-[70%] max-sm:w-full">
+        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-md:py-[10vw] max-sm:px-[5.5vw]">
+          <div className="w-[70%] max-md:w-[95%] max-sm:w-full">
             <Copy>
               <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left">
                 Flexible Card Payments with Tap, Dip, or Swipe

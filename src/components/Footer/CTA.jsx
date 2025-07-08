@@ -19,7 +19,7 @@ export default function CTA() {
             </h2>
           </Copy>
 
-          <div className={`w-[48%] pt-[3vw] max-md:pt-[5vw] text-center text-[1.05vw] max-sm:w-[90%] max-sm:text-left max-sm:text-content-20 max-md:text-content-20 max-md:w-[60%]`}>
+          <div className={`w-[48%] pt-[3vw] max-md:pt-[5vw] text-center text-[1.05vw] max-sm:w-[80%] max-sm:text-left max-sm:text-content-20 max-md:text-content-20 max-md:w-[60%]`}>
             <Copy>
               <p className="text-[#A8A8A8] ctaDescription">
                 Integrate the Moneylink Super SDK and start delivering seamless,

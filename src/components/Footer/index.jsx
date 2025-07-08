@@ -24,7 +24,9 @@ export default function Footer() {
   }, [isMobile]);
   return (
     <div className="relative" id="footer">
-      <BackgroundLine />
+      <div className="max-md:hidden">
+        <BackgroundLine />
+      </div>
       <footer
         className="h-screen absolute inset-0 z-[40] flex items-center justify-center max-md:h-fit  max-sm:h-[140vh] w-screen overflow-hidden"
         id="footer"
@@ -145,24 +147,23 @@ export default function Footer() {
                   href="mailto:info@monielink.io"
                   className="text-content-30 font-display"
                 >
-                  <ScrambleText text={"info@monielink.io"} speed={0.45} charType={"lowercase"}/>
+                  <ScrambleText
+                    text={"info@monielink.io"}
+                    speed={0.45}
+                    charType={"lowercase"}
+                  />
                 </a>
                 <div className="w-fit flex gap-[3vw]">
-                    {socials.map((item, index) => (
-                        <SocialMediaBtn
-                          className=""
-                          key={index}
-                          href={item.href}
-                        >
-                          {item.icon}
-                        </SocialMediaBtn>
-                      ))}
+                  {socials.map((item, index) => (
+                    <SocialMediaBtn className="" key={index} href={item.href}>
+                      {item.icon}
+                    </SocialMediaBtn>
+                  ))}
                 </div>
               </div>
               <div className="w-full">
-              <p className="text-center">Copyright © Monielink 2025</p>
-              <p className="text-center">By: Enigma Digital</p>
-
+                <p className="text-center">Copyright © Monielink 2025</p>
+                <p className="text-center">By: Enigma Digital</p>
               </div>
             </div>
           </div>
@@ -317,7 +318,11 @@ export default function Footer() {
                               ></div>
                               <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7.5vw] ">
                                 <span className="text-[#A8A8A8] uppercase text-[1vw] ">
-                  <ScrambleText text={item.name} speed={0.6} charType={"lowercase"}/>
+                                  <ScrambleText
+                                    text={item.name}
+                                    speed={0.6}
+                                    charType={"lowercase"}
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -338,8 +343,11 @@ export default function Footer() {
                               ></div>
                               <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                                 <span className="text-[#A8A8A8] uppercase text-[1vw]">
-                  <ScrambleText text={item.name} speed={0.6} charType={"lowercase"}/>
-                                 
+                                  <ScrambleText
+                                    text={item.name}
+                                    speed={0.6}
+                                    charType={"lowercase"}
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -363,8 +371,11 @@ export default function Footer() {
                       href="mailto:info@monielink.io"
                       className="text-[3.125vw] font-display"
                     >
-                  <ScrambleText text={"info@monielink.io"} speed={0.6} charType={"lowercase"}/>
-                      
+                      <ScrambleText
+                        text={"info@monielink.io"}
+                        speed={0.6}
+                        charType={"lowercase"}
+                      />
                     </a>
                     <div className="pt-2 flex  items-start gap-2 fadeupanim">
                       {socials.map((item, index) => (

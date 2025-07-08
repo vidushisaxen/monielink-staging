@@ -110,21 +110,21 @@ const Launch = () => {
       <div className="px-[4vw] py-[7vw] w-full h-full flex flex-col items-center justify-between pb-[10vw] gap-[10vw] max-sm:py-[15%] max-sm:items-start">
         <div className="text-center text-white w-[80%] max-sm:w-full  ">
           <Copy>
-            <h2 className="text-head-60 font-display max-sm:text-head-100">
+            <h2 className="text-head-60 font-display max-md:text-head-60 max-sm:text-head-100">
               Everything You Need to Launch & Scale
             </h2>
           </Copy>
         </div>
-        <div className="flex flex-row flex-wrap  items-center justify-between w-[85%] gap-y-[10vw] mx-auto">
+        <div className="flex flex-row flex-wrap  items-center justify-between max-md:justify-evenly max-md:w-full  w-[85%]  gap-y-[10vw] max-md:gap-y-[5vw] mx-auto">
           {uspData.map(({ title, description, svg, svgElement }, index) => (
             <div
               key={index}
-              className="flex flex-col items-center w-[35%] justify-start max-sm:w-full"
+              className="flex flex-col items-center w-[35%] max-md:w-[50%] justify-start max-sm:w-full"
             >
-              <div className="mb-1 max-sm:mb-[6vw]">
+              <div className="mb-1 max-md:mb-[4vw] max-sm:mb-[6vw]">
                 <svg
                   ref={svg}
-                  className="h-[7vw] w-[7vw] max-sm:w-[25vw] max-sm:h-auto"
+                  className="h-[7vw] w-[7vw] max-md:w-[15vw] max-md:h-[15vw] max-sm:w-[25vw] max-sm:h-auto"
                   viewBox="0 0 249 250"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,18 +133,18 @@ const Launch = () => {
                 </svg>
               </div>
               <Copy>
-                <h3 className="text-content-30 font-display mb-5 w-[50%] text-center capitalize max-sm:text-head-80 max-sm:w-full max-sm:!leading-[1.2] max-sm:mb-[4vw]">
+                <h3 className="text-content-30 font-display mb-5 w-[50%] text-center capitalize max-sm:text-head-80 max-md:w-[70%] max-sm:w-full max-sm:!leading-[1.2] max-sm:mb-[4vw]">
                   {title}
                 </h3>
               </Copy>
               <Copy>
-                <p className={`text-content-20 text-center`}>{description}</p>
+                <p className={`text-content-20 text-center max-md:w-[70%] `}>{description}</p>
               </Copy>
             </div>
           ))}
         </div>
       </div>
-      <div className="absolute top-[25%] left-1/2 -translate-x-1/2 h-[70%] w-[90%] max-sm:hidden">
+      <div className="absolute top-[25%] left-1/2 -translate-x-1/2 h-[70%] w-[90%] max-md:top-[20%] max-md:hidden max-sm:hidden">
         <svg ref={bgsvgRef}
           className="h-full w-full"
           width="1440"

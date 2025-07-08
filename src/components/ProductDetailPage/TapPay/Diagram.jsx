@@ -85,14 +85,14 @@ const Diagram = () => {
         ref={sectionRef}
       >
         <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:pb-[15%] max-sm:px-[5.5vw]">
-          <div className="w-[90%] max-sm:w-full">
+          <div className="w-[90%] max-md:w-[95%] max-sm:w-full">
             <Copy>
-              <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left">
+              <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left ">
                 Turn Any NFC-Enabled Phone into a Contactless Payment Terminal
               </h2>
             </Copy>
           </div>
-            <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
+            <div className='w-screen  max-md:overflow-hidden overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
 
           <div className="w-[85%] max-sm:w-[250%]" ref={svgContainer}>
             <svg

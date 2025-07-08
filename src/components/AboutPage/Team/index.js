@@ -37,10 +37,10 @@ const Team = () => {
     <>
       <section
         data-theme="white"
-        className="bg-white-1 py-[4vw] max-sm:py-[15%] w-screen overflow-hidden"
+        className="bg-white-1 py-[4vw] max-md:py-[10%] max-sm:py-[15%] w-screen overflow-hidden"
       >
         <div className="px-[4vw] max-sm:px-[5.5vw]">
-          <div className="w-[45%] mb-10 max-sm:w-[90%]">
+          <div className="w-[45%] mb-10 max-sm:w-[90%] max-sm:pb-0 max-md:pb-[10vw] max-md:w-[80%]">
             <Copy>
               <h3 className="text-head-60 font-display text-black-1 capitalize">
                 Meet the People who drive the Business forward
@@ -51,7 +51,7 @@ const Team = () => {
             <>
               <Swiper
                 modules={[Navigation]}
-                initialSlide={1}
+                initialSlide={0}
                 onSwiper={(swiper) => {
                   swiperRef.current = swiper;
                   setActiveIndex(swiper.activeIndex);
@@ -59,7 +59,7 @@ const Team = () => {
                 onSlideChange={(swiper) => {
                   setActiveIndex(swiper.activeIndex);
                 }}
-                centeredSlides={true}
+                centeredSlides={false}
                 slidesPerView={3}
                 spaceBetween={40}
                 speed={500}
@@ -69,11 +69,11 @@ const Team = () => {
                     centeredSlides: false,
                   },
                   768: {
-                    slidesPerView: 3,
-                    centeredSlides: true,
+                    slidesPerView: 2,
+                    centeredSlides: false,
                   },
                 }}
-                className="mySwiper !px-[4.5vw] max-sm:px-0 w-screen max-sm:w-full !overflow-y-visible"
+                className="mySwiper !px-[4.5vw] max-md:px-[1vw] max-sm:px-0 w-screen max-sm:w-full !overflow-y-visible"
               >
                 {TeamData.map((card, cardIndex) => (
                   <SwiperSlide
@@ -91,7 +91,7 @@ const Team = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="flex items-center justify-center gap-5 max-sm:mt-[15vw]">
+              <div className="flex items-center justify-center gap-5 max-sm:mt-[15vw] max-md:mt-[10vw]">
                 <ArrowButton
                   onClick={handlePrevClick}
                   arrowColor={"#050505"}
@@ -159,8 +159,8 @@ const SwiperCard = ({ name,image,position,info, activeIndex, index }) => {
         </svg>
       </div>
       <div className="py-[3vw] max-sm:pb-[2vw] max-sm:pt-[5vw] relative z-10 gap-y-[4vw] flex-col flex items-start gap-[8vw] h-[60vh] w-full px-[4vw]">
-        <div className="w-full pl-[12vw]">
-          <h4 className="text-head-60 font-display">{name}</h4>
+        <div className="w-full pl-[12vw] max-md:pl-0">
+          <h4 className="text-head-60 font-display max-md:text-nowrap">{name}</h4>
           <p className="text-head-50 font-display">{position}</p>
         </div>
         <div className="w-full h-[60%] rounded-[4vw] overflow-hidden">

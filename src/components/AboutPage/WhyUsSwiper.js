@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger,useGSAP);
 const WhyUsSwiper = () => {
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
 
   const handlePrevClick = () => {
@@ -116,7 +116,7 @@ const WhyUsSwiper = () => {
     <>
       <div
         ref={containerRef}
-        className="flex justify-start items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] "
+        className="flex justify-start items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] max-md:flex-col max-md:gap-[4vw]"
       >
         <Swiper
           modules={[Navigation]}
@@ -135,23 +135,29 @@ const WhyUsSwiper = () => {
               speed:500
             },
             768: {
-              slidesPerView: 7,
-              centeredSlides: true,
+              slidesPerView: 1.5,
+              centeredSlides: false,
+              // speed:500
             },
+            1080: {
+                slidesPerView: 7,
+                centeredSlides: true,
+            }
           }}
-          slidesPerView={"auto"}
+          // slidesPerView={"auto"}
           spaceBetween={30}
           threshold={10}
           speed={100}
-          className="mySwiper !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] swiper-container"
+          slidesPerView={1.5}
+          className="mySwiper  !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] max-md:!px-[5vw] max-md:h-[50vh] swiper-container"
         >
           {SwiperData.map((item, cardIndex) => {
             const isActive = activeIndex === cardIndex;
             return (
               <SwiperSlide
                 key={item.id}
-                className={`cursor-grab duration-500 !transition-all !w-[12vw] overflow-hidden max-sm:!w-full ${
-                  isActive ? "!w-[22vw] max-sm:!w-full" : ""
+                className={`cursor-grab duration-500 !transition-all !w-[12vw] overflow-hidden max-sm:!w-full max-md:!w-[60vw] ${
+                  isActive ? "!w-[22vw] max-sm:!w-full max-md:!w-[20vw]" : ""
                 }`}
               >
                 <SwiperCard
@@ -166,7 +172,7 @@ const WhyUsSwiper = () => {
             );
           })}
         </Swiper>
-          <div className="flex items-center justify-center gap-5 max-sm:pt-[0vw] max-sm:mb-[10vw]">
+          <div className="flex items-center justify-center gap-5 max-sm:pt-[0vw] max-sm:mb-[10vw] max-md:pt-0 max-md:mb-[10vw]">
           <ArrowButton onClick={handlePrevClick} arrowColor={"#ffffff"} borderColor={"#ffffff"} hoverColor={"bg-[#636363]/20"} rotate={"-rotate-180"} />
           <ArrowButton onClick={handleNextClick} arrowColor={"#ffffff"} borderColor={"#ffffff"} hoverColor={"bg-[#636363]/20"} />
         </div>
@@ -185,18 +191,18 @@ const SwiperCard = ({ id, title, description, index, activeIndex }) => {
       style={{
         clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
       }}
-      className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] ${
-        isActive ? "h-[25vw] max-sm:h-[110vw]" : ""
+      className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[45vh] ${
+        isActive ? "h-[25vw] max-sm:h-[110vw] max-md:h-[30vh]" : ""
       }`}
     >
-      <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[10vw]">
+      <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[10vw] max-md:p-[5vw]">
         <p>00{id}</p>
         <div
-          className={`space-y-[3.5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[10vw] max-sm:mt-[12vw] ${
+          className={`space-y-[3.5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[10vw] max-sm:mt-[12vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] ${
             isActive ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h4 className="text-content-30 font-display max-sm:text-head-80 capitalize">
+          <h4 className="text-content-30 font-display max-md:text-head-80 max-sm:text-head-80 capitalize">
             {title}
           </h4>
           <p className="text-content-20 mb-[3.5vw]">{description}</p>

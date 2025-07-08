@@ -544,5 +544,8 @@ li .link-line::after {
     --head-60: 5vw;
     --head-120: 12vw;
     --head-140:6vw;
+    
+    --head-40:3vw;
+    --content-20: 2.5vw;
   }
 }

@@ -73,16 +73,16 @@ const Clients = () => {
   }, []);
   return (
     <section
-      className="w-screen px-[4vw] overflow-hidden max-sm:px-[5.5vw] max-sm:py-[15%]"
+      className="w-screen px-[4vw] overflow-hidden max-md:py-[15%] max-sm:px-[5.5vw] max-sm:py-[15%]"
       id="clients"
     >
-      <div className="w-full h-[90vh] flex justify-between items-center max-sm:flex-col max-sm:items-start max-sm:h-fit max-sm:gap-[12vw]">
+      <div className="w-full h-[90vh] flex justify-between max-md:flex-col max-md:items-start max-md:h-fit max-md:gap-[12vw] items-center max-sm:flex-col max-sm:items-start max-sm:h-fit max-sm:px-0 max-md:px-[5vw] max-sm:gap-[12vw]">
         <Copy>
-          <h2 className="w-[40%] text-[5.2vw] font-display leading-[1.1] text-white py-[5vw] max-sm:text-head-100 max-sm:w-full">
+          <h2 className="w-[40%] text-[5.2vw] max-sm:px-0 font-display leading-[1.1] text-white py-[5vw] max-sm:text-head-100 max-sm:w-full max-md:text-head-100 max-md:w-full">
             Clients & Partners we work alongside
           </h2>
         </Copy>
-        <div className="w-[50%] h-full grid grid-cols-4 grid-rows-5 relative max-sm:w-full max-sm:hidden">
+        <div className="w-[50%] h-full grid grid-cols-4 grid-rows-5 relative max-sm:w-full max-sm:hidden max-md:w-full max-md:hidden">
           <div className="w-[1px] h-full absolute top-0 left-0 bg-white/10">
             <span className="w-[1px] h-[8vw] absolute top-0 left-0 bg-gradient-to-b from-transparent to-[#fe5900] -translate-y-[200%] line-drop-1" />
           </div>
@@ -191,7 +191,7 @@ const Clients = () => {
 
           {/* <div className="col-start-4 col-span-1 border border-white/10 "></div> */}
         </div>
-        <div className="w-full h-full max-sm:block hidden">
+        <div className="w-full max-sm:h-full max-md:h-[60vh] max-sm:block max-sm:px-0 max-md:px-[4vw] max-md:block hidden">
           <div className="w-full h-full grid grid-cols-2 grid-rows-4 relative overflow-hidden">
             <div className="w-[1px] h-full absolute top-0 left-0 bg-white/10">
               <span className="w-[1px] h-[20vw] absolute top-0 left-0 bg-gradient-to-b from-transparent to-[#fe5900] -translate-y-[200%] line-drop-1" />
@@ -200,9 +200,9 @@ const Clients = () => {
               <span className="w-[1px] h-[20vw] absolute top-0 left-0 bg-gradient-to-b from-transparent to-[#fe5900] -translate-y-[200%] line-drop-2" />
             </div>
             <div className="w-[1px] h-full absolute top-0 left-1/2 bg-white/10">
-              <span className="w-[1px] h-[20vw] absolute top-0 left-0 bg-gradient-to-b from-transparent to-[#fe5900] -translate-y-[200%] line-drop-3" />
+              <span className="w-[1px] max-sm:h-[20vw] max-md:h-[15vw] absolute top-0 left-0 bg-gradient-to-b from-transparent to-[#fe5900] -translate-y-[200%] line-drop-3" />
             </div>
-            <div className="col-start-1 p-[4vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/1.svg"}
                 width={200}
@@ -211,7 +211,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-2 p-[10vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-2 max-sm:p-[10vw] max-md:p-[6vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/2.svg"}
                 width={200}
@@ -220,7 +220,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-1 p-[4vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/3.svg"}
                 width={200}
@@ -229,7 +229,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-2 p-[10vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-2 max-sm:p-[10vw] max-md:p-[2vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/4.svg"}
                 width={200}
@@ -238,7 +238,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-1 p-[4vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/5.svg"}
                 width={200}
@@ -247,7 +247,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-2 p-[10vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-2 max-sm:p-[10vw] max-md:p-[4vw]  max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/6.svg"}
                 width={200}
@@ -256,7 +256,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-1 p-[4vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/7.svg"}
                 width={200}
@@ -265,7 +265,7 @@ const Clients = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-2 p-[10vw] h-[20vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-2 max-sm:p-[10vw] max-md:p-[5vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
                 src={"/assets/icons/logo/8.svg"}
                 width={200}

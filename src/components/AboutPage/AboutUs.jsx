@@ -73,7 +73,7 @@ const AboutUs = () => {
         className="bg-white-1 p-[8vw] white max-sm:px-[5.5vw] max-sm:py-[25%] relative"
       >
         <div className="w-full flex items-center justify-between max-sm:flex-col">
-          <div className="flex flex-col gap-y-[5vw] text-black-1 w-[58%] max-sm:w-full max-sm:gap-y-[120vw]">
+          <div className="flex flex-col gap-y-[5vw] text-black-1 w-[58%] max-sm:w-full max-md:w-[55%] max-sm:gap-y-[120vw]">
             <Copy>
               <h2 className="text-head-40 font-body max-sm:text-head-60">
                 Monielink is a neobank enablement platform designed to help
@@ -97,7 +97,7 @@ const AboutUs = () => {
               </p>
             </Copy>
           </div>
-          <div className="flex items-end flex-col w-[30%] max-sm:w-[90%] max-sm:absolute max-sm:top-[50%]">
+          <div className="flex items-end flex-col w-[30%] max-md:w-[40%] max-sm:w-[90%] max-sm:absolute max-sm:top-[50%]">
             <svg
               className="h-auto w-full"
               ref={svgRef}

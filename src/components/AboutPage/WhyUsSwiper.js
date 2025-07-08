@@ -8,8 +8,9 @@ import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ArrowButton from "../Buttons/ArrowButton";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger,useGSAP);
 
 const WhyUsSwiper = () => {
   const swiperRef = useRef(null);
@@ -91,6 +92,26 @@ const WhyUsSwiper = () => {
     return () => ctx.revert();
   }, []);
 
+  useGSAP(() => {
+    gsap.set(".swiper-container", {
+      scale: 0.5,
+      xPercent: -10,
+    });
+
+    gsap.to(".swiper-container", {
+      scale: 1,
+      xPercent: 0,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top center',
+        end: 'bottom center',
+        markers: true, 
+      },
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -122,7 +143,7 @@ const WhyUsSwiper = () => {
           spaceBetween={30}
           threshold={10}
           speed={100}
-          className="mySwiper !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh]"
+          className="mySwiper !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] swiper-container"
         >
           {SwiperData.map((item, cardIndex) => {
             const isActive = activeIndex === cardIndex;

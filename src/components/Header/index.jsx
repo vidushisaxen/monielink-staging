@@ -151,7 +151,7 @@ export default function Header() {
       <Link
         href={item.link}
         key={index}
-        className="flex items-center group justify-center pointer-events-auto"
+        className="flex items-center group gap-[0.5vw] justify-start pointer-events-auto"
       >
         <div
           style={isActive ? { animation: 'pulse .5s infinite' } : { animation: 'pulse .5s infinite'}}
@@ -164,9 +164,9 @@ export default function Header() {
           } ${isActive && !isInverted ? 'bg-orange-500' : ''}`}
         ></div>
 
-        <div className="cursor-pointer relative w-[7vw] overflow-hidden">
+        <div className="cursor-pointer text-left relative w-[7vw] overflow-hidden">
           <span
-            className={`uppercase text-[.9vw] ${
+            className={`uppercase  text-[.9vw] text-left ${
               isWhite ? 'text-white' : 'text-[#D6D6D6]'
             }`}
           >

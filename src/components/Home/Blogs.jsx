@@ -81,7 +81,7 @@ export default function Blogs() {
         </div>
 
         <div className="w-fit fadeupanim">
-          <WhiteButton text="View All" href="#" />
+          <WhiteButton text="View All" href="/blogs" />
         </div>
       </div>
 

@@ -30,7 +30,7 @@ export default function Intro() {
       </div>
       <div className="w-full flex justify-center items-center max-sm:justify-start max-sm:pl-[4vw]">
 
-      <PrimaryButton text="Learn More" href="/" />
+      <PrimaryButton text="Learn More" href="/solutions" />
       </div>
       {/* <ButtonComponent text="Learn More" bgColor={false} borderColor="white" /> */}
     </section>

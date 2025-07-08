@@ -7,8 +7,9 @@ import SplitText from 'gsap/SplitText'
 import Image from 'next/image'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
 import RadialSegmentedProgressBar from './RadialSegmentedProgressBar';
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin,useGSAP);
 
 const products = [
     {
@@ -20,7 +21,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-balance.svg",
-        href: '#'
+        href: '/products/balance'
     },
         {
         id: 2,
@@ -31,7 +32,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-scanpay.svg",
-        href: '#'
+        href: '/products/scanpay'
     },
     {
         id: 3,
@@ -42,7 +43,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-tappay.svg",
-        href: '#'
+        href: '/products/tap-pay'
     },
     {
         id: 4,
@@ -53,7 +54,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-instacard.svg",
-        href: '#'
+        href: '/products/instacard'
     },
     {
         id: 5,
@@ -64,7 +65,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-verifyed.svg",
-        href: '#'
+        href: '/products/verifyed'
     },
     {
         id: 6,
@@ -75,7 +76,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-snapcred.svg",
-        href: '#'
+        href: '/products/snapcred'
     },
     {
         id: 7,
@@ -86,7 +87,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-reward.svg",
-        href: '#'
+        href: '/products/reward'
     },
     {
         id: 8,
@@ -97,7 +98,7 @@ const products = [
             "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app."
         ],
         img: "/assets/images/products/product-chatbox.svg",
-        href: '#'
+        href: '/proucts/chatbox'
     },
 ]
 
@@ -142,13 +143,11 @@ export default function ProductSlider() {
                 const btnCurr = slide.querySelector('.btnFade');
 
                 if (i < total - 1) {
-                    // animate current slide out
                     tl.to(imgCurr, {opacity: 0, y: -20, duration: 0.5, ease: 'power1.inOut', delay: 0.5 }, i)
                         .to(currSplit.lines, { yPercent: -100, duration: 0.5, ease: 'power1.inOut' }, '<')
                         .to(btnCurr, {opacity: 0, y: -20, duration: 0.5, ease: 'power1.inOut'}, '<')
                         .set(currSplit.lines, { yPercent: 100 });
 
-                    // animate next slide in
                     const nextSplit = splits[i + 1];
                     const imgNext = slides[i + 1].querySelector('img');
                     const btnNext = slides[i + 1].querySelector('.btnFade');
@@ -164,6 +163,26 @@ export default function ProductSlider() {
         return () => ctx.revert();
     }, []);
 
+    useGSAP(() => {
+        gsap.fromTo(
+          ".radial",
+          {
+            x: -50,
+            opacity: 0,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: containerRef.current, 
+              start: "top 80%", 
+            },
+          }
+        );
+      }, []);
+
     const goToSlide = i => {
         const st = ScrollTrigger.getById('solutions-slider-solutions-page');
         if (!st) return;
@@ -174,6 +193,10 @@ export default function ProductSlider() {
             ease: 'power2.inOut'
         });
     };
+    const handleSkip = () => {
+        const next = document.getElementById("launch");
+        if (next) next.scrollIntoView({ behavior: "smooth" });
+      };
 
     return (
         <section data-theme = "white"
@@ -181,7 +204,7 @@ export default function ProductSlider() {
             className="bg-white-1 relative h-[800vh] max-sm:hidden"
             style={{ height: `${products.length * 100}vh` }}
         >
-            <div className='sticky h-screen top-0 py-[5vw] overflow-hidden w-screen px-[4.5vw]'>
+            <div className='sticky h-screen top-0 py-[5vw] overflow-hidden w-screen px-[4.5vw] '>
                 {/* buttons + progress bar */}
                 {/* <div className="flex justify-between mb-6">
                     {products.map((f, i) => (
@@ -194,7 +217,7 @@ export default function ProductSlider() {
                         </button>
                     ))}
                 </div> */}
-                <div className='absolute left-[-17%] top-1/2 -translate-y-1/2 fadeupanim'>
+                <div className='absolute left-[-17%] top-1/2 -translate-y-1/2 radial'>
                     <RadialSegmentedProgressBar
                         size={650}
                         progress={scrollProgress * 100}
@@ -243,6 +266,41 @@ export default function ProductSlider() {
                         </div>
                     ))}
                 </div>
+                <button
+          onClick={handleSkip}
+          className="absolute bottom-10 right-10 z-30 text-black text-content-18 flex items-center gap-1 group  cursor-pointer"
+        >
+          Skip
+          <div className="-rotate-90 text-black flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+         
+        </button>
             </div>
         </section>
     )

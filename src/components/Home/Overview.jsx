@@ -94,9 +94,9 @@ export default function Overview() {
               </p>
             </Copy>
           </div>
-          <div className="h-fit w-[40%] max-sm:w-[85%]">
+          <div className="h-fit w-[35%] max-sm:w-[85%]">
             <Copy>
-              <p className="text-content-20 text-gray-2">
+              <p className="text-content-20 text-gray-2 ">
                 Enable seamless digital banking experiences for your customers
                 through your mobile app. The Moneylink Super SDK empowers banks
                 and fintechs to launch B2B2C services quickly, securely, and at

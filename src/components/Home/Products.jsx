@@ -104,7 +104,7 @@ export default function Products() {
                 features={card.features}
                 index={cardIndex}
                 activeIndex={activeIndex}
-                link="#"
+                link={card.link}
               />
             </SwiperSlide>
           ))}
@@ -275,6 +275,7 @@ const data = [
       "Credit Card Account",
       "Loan Account",
     ],
+    link:"/products/scanpay"
   },
   {
     logo: "/assets/icons/logo/Balance.svg",
@@ -286,6 +287,8 @@ const data = [
       "Credit Card Account",
       "Loan Account",
     ],
+    link:"/products/balance"
+
   },
   {
     logo: "/assets/icons/logo/snapCreed.svg",
@@ -297,6 +300,8 @@ const data = [
       "Credit Card Account",
       "Loan Account",
     ],
+    link:"/products/snapcred"
+
   },
   {
     logo: "/assets/icons/logo/scanPay.svg",
@@ -308,6 +313,8 @@ const data = [
       "Credit Card Account",
       "Loan Account",
     ],
+    link:"/products/scanpay"
+
   },
   {
     logo: "/assets/icons/logo/Balance.svg",
@@ -319,6 +326,8 @@ const data = [
       "Credit Card Account",
       "Loan Account",
     ],
+    link:"/products/balance"
+
   },
   {
     logo: "/assets/icons/logo/snapCreed.svg",
@@ -330,5 +339,7 @@ const data = [
       "Credit Card Account",
       "Loan Account",
     ],
+    link:"/products/snapcred"
+
   },
 ];

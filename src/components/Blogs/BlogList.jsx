@@ -135,9 +135,9 @@ const BlogList = () => {
                   </div>
                   <div className="flex flex-col gap-[3vw] max-sm:px-[4vw] max-sm:gap-[5vw]">
                     <p>
-                      If you’ve read this far and you’re wondering what “web3”
-                      is exactly, this is one of those need-to-knows, and it’s
-                      pretty simple. We’ll explain more below, but in short web3
+                      If you&apos;ve read this far and you&apos;re wondering what “web3”
+                      is exactly, this is one of those need-to-knows, and it&apos;s
+                      pretty simple. We&apos;ll explain more below, but in short web3
                       is the next era of the internet in which blockchain
                       technology
                     </p>
@@ -224,39 +224,43 @@ const BlogList = () => {
                         {blog.title}
                       </h4>
                       <p>{blog.description}</p>
-                      <Link className="w-fit group" href={blog.link}>
-                        <div className="w-fit mx-auto h-full text-black-1 relative z-10 flex items-center gap-5 justify-center">
-                          <span className="text-content-18">Read More</span>
-                          <div className="rotate-180 text-black-1 flex items-center justify-center gap-0 w-fit h-full">
+
+                      <Link href={blog.link} className="round relative flex items-center justify-center min-w-[9.3vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
+                <div className="absolute inset-0 z-10">
+                    <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-5 justify-center">
+                        <span className="text-content-18">Read More</span>
+                        <div className="rotate-180 text-black flex items-center justify-center gap-0 w-fit h-full">
                             <svg
-                              className="arrow primera next"
-                              width="8"
-                              height="15"
-                              viewBox="0 0 8 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                fill="currentColor"
-                              />
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
                             </svg>
                             <svg
-                              className="arrow segunda next"
-                              width="8"
-                              height="15"
-                              viewBox="0 0 8 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                fill="currentColor"
-                              />
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
                             </svg>
-                          </div>
                         </div>
-                      </Link>
+                    </div>
+                </div>
+            </Link>
+                     
                     </div>
                   </div>
                 </div>

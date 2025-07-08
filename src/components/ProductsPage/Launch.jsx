@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 const Launch = () => {
   const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+  const bgsvgRef = useRef(null);
 
   const uspData = [
     {
@@ -65,6 +66,41 @@ const Launch = () => {
       }
     });
   });
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set(".center-group", { autoAlpha: 0 });
+      gsap.set(".outer-paths path", { transformOrigin: "center" });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: bgsvgRef.current,
+          start: "top 70%",
+        },
+      });
+
+      tl.fromTo(
+        ".line1",
+        { drawSVG: "0%" },
+        { drawSVG: "100%", duration: 1 }
+      ).fromTo(
+        ".line2",
+        { drawSVG: "0%" },
+        { drawSVG: "100%", duration: 1 },
+        ">-0.5"
+      );
+      tl.to(".center-group", { autoAlpha: 1, duration: 1 }, ">-0.3");
+
+      gsap.to(".outer-paths path", {
+        scale: 1.08,
+        repeat: -1,
+        yoyo: true,
+        duration: 0.8,
+        ease: "power1.inOut",
+      });
+    }, bgsvgRef);
+
+    return () => ctx.revert();
+  }, []);
   return (
     <section
       data-theme="orange"
@@ -109,7 +145,7 @@ const Launch = () => {
         </div>
       </div>
       <div className="absolute top-[25%] left-1/2 -translate-x-1/2 h-[70%] w-[90%] max-sm:hidden">
-        <svg
+        <svg ref={bgsvgRef}
           className="h-full w-full"
           width="1440"
           height="860"
@@ -118,7 +154,7 @@ const Launch = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <line
-            className="usp-path"
+            className=" line1"
             x1="0.0330839"
             y1="429.43"
             x2="1439.42"
@@ -126,13 +162,14 @@ const Launch = () => {
             stroke="#FF8A4A"
           />
           <line
-            className="usp-path"
+            className=" line2"
             x1="720.23"
             y1="0.128906"
             x2="720.23"
             y2="859.398"
             stroke="#FF8A4A"
           />
+          <g className="outer-paths">
           <g filter="url(#filter0_d_43_65)">
             <path
               d="M682.119 348.461H806.885C811.374 348.461 815.014 352.1 815.014 356.59V455.038C815.014 457.183 814.166 459.24 812.656 460.763L789.429 484.172L765.379 508.317C763.854 509.849 761.781 510.709 759.619 510.709H636.288C631.799 510.709 628.16 507.07 628.159 502.581L628.158 403.997C628.158 401.904 628.966 399.891 630.413 398.378L655.979 371.649L676.313 350.9C677.842 349.34 679.935 348.461 682.119 348.461Z"
@@ -149,6 +186,8 @@ const Launch = () => {
               shapeRendering="crispEdges"
             />
           </g>
+          </g>
+          <g className="center-group">
           <g filter="url(#filter2_d_43_65)">
             <path
               d="M666.39 380.823L683.405 363.46C684.764 362.073 686.624 361.291 688.567 361.291L792.948 361.291C796.939 361.291 800.175 364.527 800.175 368.518V450.881C800.175 452.788 799.421 454.618 798.078 455.971L778.646 475.556L758.525 495.756C757.169 497.118 755.326 497.883 753.405 497.883H650.224C646.233 497.883 642.997 494.647 642.997 490.656L642.996 408.18C642.996 406.319 643.714 404.529 645.001 403.184L666.39 380.823Z"
@@ -172,6 +211,7 @@ const Launch = () => {
             d="M700.896 440.473L720.189 451.644L739.91 440.32L739.91 450.909L720.189 462.187L700.896 451.042L700.896 440.473Z"
             fill="#FE6E00"
           />
+          </g>
           <defs>
             <filter
               id="filter0_d_43_65"

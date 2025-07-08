@@ -21,11 +21,11 @@ const Flowchart = () => {
                     </Copy>
                 </div>
                 <div className='h-full w-full'>
-                    <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto" >
+                    <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto max-sm:hidden" >
                    <Image src={"/assets/icons/diagrams/instacard.svg"} className='h-full w-full' height={100} width={100} alt='instacard'/>
                     </div>
                     <div className='w-full h-auto hidden max-sm:block'>
-                        <Image src={"/assets/shapes/instacard/instacard-flowchart-mobile.svg"} alt='' width={500} height={1080} className='w-full h-full'/>
+                        <Image src={"/assets/shapes/instacard/instacard-flowchart-mobile.svg"} alt='instacard-flowchart' width={500} height={1080} className='w-full h-full'/>
 
                     </div>
                 </div>

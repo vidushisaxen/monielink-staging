@@ -72,7 +72,7 @@ const ScrambleText = ({ text, speed, charType }) => {
     <div onMouseEnter={handleMouseEnter}>
     <p
       ref={elRef}
-      className="text-white w-full cursor-pointer text-center"
+      className="text-white w-full cursor-pointer"
       >
       {text}
     </p>

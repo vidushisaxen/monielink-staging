@@ -11,29 +11,33 @@ const Intro = ({ content }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const bars = gsap.utils.toArray('.bar-anim');
-
-    bars.forEach((bar) => {
-      gsap.fromTo(
-        bar,
-        {
-          scale: 0,
-          opacity: 0,
-          transformOrigin: 'center',
-        },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 1,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: bar,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
+    const ctx = gsap.context(() => {
+      const bars = gsap.utils.toArray('.bar-anim');
+  
+      bars.forEach((bar) => {
+        gsap.fromTo(
+          bar,
+          {
+            scaleY: 0,
+            opacity: 0,
+            transformOrigin: 'center',
           },
-        }
-      );
+          {
+            scaleY: 1,
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: bar,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
     });
+  
+    return () => ctx.revert();
   }, []);
   return (
     <section ref={containerRef} data-theme="white" className="w-screen h-full bg-white-1">

@@ -68,8 +68,6 @@ export default function Solutions() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
   
-
-
   useEffect(() => {
     let ctx = gsap.context(() => {
       const slides = gsap.utils.toArray(".slide");
@@ -91,6 +89,15 @@ export default function Solutions() {
           trigger: containerRef.current,
           start: "top top",
           end: "bottom bottom",
+          // markers:true,
+          snap: {
+            snapTo: (progress) => {
+              const snapIndex = Math.round(progress * (total - 1));
+              return snapIndex / (total - 1);
+            },
+            duration: { min: 0.5, max: 1 },
+            ease: "power2.out",  
+          },
           scrub: true,
           onUpdate: (self) => {
             setScrollProgress(self.progress);
@@ -157,6 +164,11 @@ export default function Solutions() {
 
     return () => ctx.revert();
   }, []);
+
+  const handleSkip = () => {
+    const next = document.getElementById("features");
+    if (next) next.scrollIntoView({ behavior: "smooth" });
+  };
 
   const goToSlide = (i) => {
     const st = ScrollTrigger.getById("solutions-slider-solutions-page");
@@ -234,7 +246,43 @@ export default function Solutions() {
                 </div>
               ))}
             </div>
+            <button
+          onClick={handleSkip}
+          className="absolute bottom-10 right-0 z-30 text-content-18 flex items-center gap-1 group  cursor-pointer"
+        >
+          Skip
+          <div className="-rotate-90 text-white flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+         
+        </button>
           </div>
+         
         </section>
      
     </>

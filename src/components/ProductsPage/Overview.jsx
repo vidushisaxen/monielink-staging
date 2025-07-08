@@ -17,7 +17,7 @@ const Overview = () => {
         </div>
       </div>
   
-      <div className='w-[40%] flex items-end max-sm:w-full'>
+      <div className='w-[42%] flex items-end max-sm:w-full'>
         <Copy>
         <p className='text-content-20'>
           Launch, scale, and optimize retail financial services with a powerful suite of modular tools.

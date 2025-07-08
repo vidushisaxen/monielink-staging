@@ -1,10 +1,44 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Copy from "../Animations/Copy";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Values = ({ data }) => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const bars = gsap.utils.toArray('.baranim');
+  
+      bars.forEach((bar) => {
+        gsap.fromTo(
+          bar,
+          {
+            scaleY: 0,
+            opacity: 0,
+            transformOrigin: 'center',
+          },
+          {
+            scaleY: 1,
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: bar,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
+    });
+  
+    return () => ctx.revert(); 
+  }, []);
   return (
-    <section data-theme="white" className="w-screen h-full bg-white-1">
+    <section data-theme="white" className="w-screen h-full bg-white-1" >
       <div className="w-full h-full px-[4vw] py-[7vw] flex items-start justify-between max-sm:flex-col max-sm:py-[20%] max-sm:pb-[30%] max-sm:px-[5.5vw]">
         <div className="w-1/2 flex items-start justify-between max-sm:w-full max-sm:gap-[8vw]">
           <div>
@@ -22,7 +56,7 @@ const Values = ({ data }) => {
                 key={index}
                 className="w-full flex gap-[1.5vw] items-center overflow-hidden max-sm:items-start max-sm:gap-[5vw]"
               >
-                <span className="h-[2vw] w-[0.6vw] max-sm:w-[2vw] max-sm:h-[10vw] bg-[#FE6E00] fadeupanim" />
+                <span className="h-[2vw] w-[0.6vw] max-sm:w-[2vw] max-sm:h-[10vw] bg-[#FE6E00] baranim" />
                 <Copy>
                   <div
                     className="text-content-20 text-black-1 font-body w-[80%]"

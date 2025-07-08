@@ -27,10 +27,10 @@ export default function Blogs() {
       id="blogs"
       className="h-fit py-[5vw] text-background bg-[#F5F5F5] overflow-hidden "
     >
-      <div className="flex max-sm:flex-col max-sm:items-start max-sm:py-[10vw] pb-[3vw] px-[3.75vw] max-sm:px-[6vw] items-end justify-between">
-        <div className="space-y-[1vw] w-1/2 max-sm:w-[90%]">
+      <div className="flex max-sm:flex-col max-sm:items-start max-sm:py-[12vw] max-md:py-[5vw] pb-[3vw] px-[3.75vw] max-sm:px-[6vw] items-end justify-between">
+        <div className="space-y-[1vw] w-1/2 max-md:w-[70%] max-sm:w-[90%]">
           <Copy>
-            <h2 className="text-[5.2vw] max-sm:text-head-100 font-display leading-[1.2]">
+            <h2 className="text-[5.2vw] text max-sm:text-head-100 max-md:text-head-100 font-display leading-[1.2]">
               <span className="inline-block max-sm:block">Insights That</span>
 
               <span className="inline-block max-sm:block">
@@ -39,7 +39,7 @@ export default function Blogs() {
             </h2>
           </Copy>
           <Copy>
-            <p className="text-[1vw] w-4/5 leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw]">
+            <p className="text-[1vw] w-4/5 leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw] max-sm:text-[2.5vw] max-md:text-[2.5vw]">
               Stay ahead of the curve with expert insights, industry trends, and
               actionable tips from the world of technology and business.
             </p>
@@ -85,7 +85,7 @@ export default function Blogs() {
         </div>
       </div>
 
-      <div className="w-full h-full mb-[3vw] max-sm:hidden">
+      <div className="w-full h-full max-md:pt-[8vw] mb-[3vw] max-sm:hidden">
         <Swiper
           spaceBetween={0}
           slidesPerView={1.8}
@@ -94,10 +94,17 @@ export default function Blogs() {
           freeMode={true}
           speed={500}
           breakpoints={{
-            768: {
-              slidesPerView: 1.8,
-              centeredSlides: false,
-            },
+           0: {
+    slidesPerView: 1.8, // mobile
+  },
+  768: {
+    slidesPerView: 1.2, // tablet
+    centeredSlides: false,
+  },
+  1080: {
+    slidesPerView: 1.8, // desktop
+    centeredSlides: false,
+  }
           }}
           className="mySwiper items-center justify-center flex h-full"
         >
@@ -138,11 +145,11 @@ export default function Blogs() {
 const Card = ({ img, href, title, date }) => {
   return (
     <>
-      <div className="h-[65vh] border border-[#D3D3D3] border-r-[0.5px] p-[2vw] w-full fadeupanim">
+      <div className="h-[65vh] max-sm:h-[65vh] max-md:h-[55vh] border border-[#D3D3D3] border-r-[0.5px] p-[2vw] w-full fadeupanim">
         <div className="flex flex-col gap-[1vw]">
           <Link href={href}>
             <div
-              className={`w-full h-[45vh] group overflow-hidden relative rounded-xl`}
+              className={`w-full h-[45vh] max-sm:h-[45vh] max-md:w-full max-sm:w-full max-md:h-[30vh] group overflow-hidden relative rounded-xl`}
             >
               <Image
                 fill
@@ -153,10 +160,10 @@ const Card = ({ img, href, title, date }) => {
               />
             </div>
           </Link>
-          <div className="flex items-center justify-between">
-            <div className="w-1/2 space-y-[1vw]">
-              <p className="text-[1.25vw] font-medium">{title}</p>
-              <p className="text-[0.95vw] font-light">{date}</p>
+          <div className="flex items-center max-md:items-start justify-between max-sm:pt-0 max-md:pt-[2vw]">
+            <div className="w-1/2 max-md:w-3/4 max-sm:w-1/2 space-y-[1vw] max-sm:space-y-[1vw] max-md:space-y-[2vw]">
+              <p className="text-[1.25vw] max-sm:text-[2vw] max-md:text-[3.5vw] font-medium">{title}</p>
+              <p className="text-[0.95vw] max-md:text-[2.5vw] font-light">{date}</p>
             </div>
             <ArrowButton
               href={href}

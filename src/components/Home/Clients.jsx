@@ -11,6 +11,7 @@ gsap.registerPlugin(useGSAP);
 export default function Clients() {
   const svgRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTab, setIsTab] = useState(false);
 
   const logos = [
     {
@@ -18,7 +19,7 @@ export default function Clients() {
       width: "8vw",
       right: "20%",
       top: "5%",
-      mobileRight: "15%",
+      mobileRight: isTab ?"-5%": "15%",
       mobileTop: "-40%",
       mobileWidth: "15vw",
     },
@@ -27,7 +28,7 @@ export default function Clients() {
       width: "5vw",
       right: "35%",
       top: "22%",
-      mobileRight: "30%",
+      mobileRight: isTab ?"25%": "30%",
       mobileTop: "-20%",
       mobileWidth: "15vw",
     },
@@ -45,8 +46,8 @@ export default function Clients() {
       width: "10vw",
       right: "40%",
       top: "50%",
-      mobileRight: "50%",
-      mobileTop: "15%",
+      mobileRight: isTab ?"43%": "50%",
+      mobileTop: isTab ?"27%": "15%",
       mobileWidth: "15vw",
     },
     {
@@ -54,8 +55,8 @@ export default function Clients() {
       width: "7vw",
       right: "35%",
       top: "67.5%",
-      mobileRight: "30%",
-      mobileTop: "35%",
+      mobileRight: isTab ?"15%": "30%",
+      mobileTop: isTab ?"56%": "35%",
       mobileWidth: "15vw",
     },
     {
@@ -63,8 +64,8 @@ export default function Clients() {
       width: "9vw",
       right: "15%",
       top: "80.5%",
-      mobileRight: "5%",
-      mobileTop: "55%",
+      mobileRight: isTab ?"-10%": "5%",
+      mobileTop: isTab ? "90%": "55%",
       mobileWidth: "15vw",
     },
     {
@@ -72,8 +73,8 @@ export default function Clients() {
       width: "8vw",
       right: "20%",
       top: "100%",
-      mobileRight: "20%",
-      mobileTop: "75%",
+      mobileRight: isTab ?"15%": "20%",
+      mobileTop: isTab ?"110%": "75%",
       mobileWidth: "15vw",
     },
   ];
@@ -88,12 +89,18 @@ export default function Clients() {
     "paint6_linear_252_22056",
   ];
   useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-    }
-  }, [isMobile]);
+  const handleResize = () => {
+    const width = globalThis.innerWidth;
+
+    setIsMobile(width <= 768);
+    setIsTab(width > 768 && width <= 1024);
+  };
+
+  handleResize(); 
+  globalThis.addEventListener("resize", handleResize);
+
+  return () => globalThis.removeEventListener("resize", handleResize);
+}, []);
   useGSAP(() => {
     const activeAnimsRef = { current: [] };
     const DURATION = 4;
@@ -225,9 +232,9 @@ export default function Clients() {
     <section
       id="clients"
       ref={container}
-      className="h-[130vh] w-screen overflow-hidden flex items-center justify-center relative bg-[#050505] pb-[4vw] max-sm:py-[15%] max-sm:h-[100vh]"
+      className="h-[130vh] w-screen overflow-hidden flex items-center justify-center relative bg-[#050505] pb-[4vw] max-sm:py-[15%] max-md:h-[150vh] max-sm:h-[100vh]"
     >
-      <div className="w-full h-full max-sm:h-[100vw] max-sm:w-[100vw] max-sm:scale-[2.2] max-sm:translate-x-[-50%] max-sm:translate-y-[30%]">
+      <div className="w-full h-full max-sm:h-[100vw] max-md:h-[100vh] max-sm:w-[100vw] max-md:scale-[2] max-md:translate-x-[-40%] max-sm:scale-[2.2] max-sm:translate-x-[-50%] max-sm:translate-y-[30%]">
         <svg
           ref={svgRef}
           className="w-full h-full"
@@ -432,25 +439,25 @@ export default function Clients() {
         </svg>
       </div>
 
-      <div className="absolute w-screen h-screen max-sm:items-start top-0 left-0 flex max-sm:flex-col items-center justify-center max-sm:px-[3.5vw]">
-        <div className="w-1/2 max-sm:w-[90%] h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
+      <div className="absolute w-screen h-screen max-sm:items-start max-md:items-center max-md:flex-col  top-0 left-0 flex max-sm:flex-col items-center justify-center max-sm:px-[3.5vw]">
+        <div className="w-1/2 max-md:w-[90%] max-sm:w-[90%] h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
           <Copy>
-            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] w-[90%] max-sm:w-full max-sm:text-head-100">
+            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] max-md:w-full w-[90%] max-sm:w-full max-sm:text-head-100">
               Clients & Partners We Work Alongside
             </h2>
           </Copy>
         </div>
-        <div className="w-1/2 relative px-20 h-full flex flex-col items-end justify-between max-sm:w-full max-sm:px-0">
+        <div className="w-1/2 relative px-20 max-sm:pt-0 h-full flex flex-col items-end justify-between max-sm:w-full  max-sm:px-0">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className={`absolute h-auto flex items-end justify-end logoanim ${
-                index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw]"
+              className={`absolute h-auto  flex items-end justify-end logoanim ${
+                index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw] max-md:!w-[20vw]"
               }`}
               style={{
                 width: logo.width,
-                right: isMobile?logo.mobileRight:logo.right,
-                top: isMobile?logo.mobileTop:logo.top,
+                right: (isMobile || isTab) ? logo.mobileRight : logo.right,
+                top: (isMobile || isTab) ? logo.mobileTop : logo.top,
               }}
             >
               <Image

@@ -21,7 +21,7 @@ export default function Overview() {
     <section id="overview" className="h-fit w-full pt-[10vw] bg-background relative z-[1] max-sm:pt-[15%]">
       <div className="pt-[5vw] flex items-center flex-col justify-center gap-[2vw]">
         <Copy>
-          <h2 className="text-gray-1 text-center text-head-60 w-[55%] capitalize font-display overviewText max-sm:w-3/4 max-sm:head-140">
+          <h2 className="text-gray-1 text-center text-head-60 w-[55%] capitalize font-display overviewText max-sm:w-3/4 max-md:w-[70%] max-sm:head-140">
             Enabling Digital Transformation to help You Realize 6X Revenue Growth
           </h2>
         </Copy>
@@ -65,7 +65,7 @@ export default function Overview() {
             </Copy>
           </div>
           <div className="flex flex-col items-center justify-center gap-[1vw]">
-            <div className="flex h-[10vw] text-head-200 leading-none overflow-hidden items-start w-fit justify-center max-sm:h-auto">
+            <div className="flex h-[10vw] pt-0  text-head-200 leading-none overflow-hidden items-start w-fit justify-center max-sm:h-auto">
               {renderDigits(values[2])}
               <p
                 style={{
@@ -78,23 +78,23 @@ export default function Overview() {
               </p>
             </div>
             <Copy>
-              <p className="text-gray-2 subtitle  text-center text-content-20 tracking-wider font-display">
+              <p className="text-gray-2 subtitle  text-center text-content-20 tracking-wider font-display max-sm:w-fit  max-md:w-[90%]">
                 Revenue from Retail Products
               </p>
             </Copy>
           </div>
         </div>
       </div>
-      <div className="pt-[40%] mt-[7%] relative max-sm:pt-[60%]">
-        <div className="flex gap-2 w-screen px-[4.5vw] items-end justify-between pb-[5vw] max-sm:flex-col max-sm:text-center max-sm:items-center max-sm:pb-[15vw]">
-          <div className="pb-[3.5vw] w-[50%] max-sm:w-full max-sm:pt-[10vh]">
+      <div className="pt-[40%] mt-[7%] relative max-md:pt-[40%] max-sm:pt-[60%]">
+        <div className="flex gap-2 w-screen px-[4.5vw] items-end justify-between pb-[5vw] max-md:pb-[10vw] max-md:flex-col max-md:text-center max-md:items-center max-sm:pb-[15vw]">
+          <div className="pb-[3.5vw] w-[50%] max-md:w-full max-sm:pt-[10vh]">
             <Copy>
               <p className="font-display text-gray-1 text-head-100">
                 Find the Right Solution for You
               </p>
             </Copy>
           </div>
-          <div className="h-fit w-[35%] max-sm:w-[85%]">
+          <div className="h-fit w-[35%] max-md:w-[85%]">
             <Copy>
               <p className="text-content-20 text-gray-2 ">
                 Enable seamless digital banking experiences for your customers

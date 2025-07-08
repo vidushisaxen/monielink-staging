@@ -52,7 +52,7 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="h-full w-screen relative bg-[#050505] max-sm:py-[15%]"
+      className="h-full w-screen relative bg-[#050505] max-md:py-[10%] max-sm:py-[15%]"
     >
       <div className="sticky top-0 left-0 max-sm:hidden">
         <BackgroundLine />
@@ -63,7 +63,7 @@ export default function Products() {
         className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw] max-sm:mt-0 max-sm:gap-[10vw] max-sm:pb-0"
       >
         <Copy>
-          <h2 className="text-foreground productsText text-[5.2vw]  w-[60%] max-sm:w-[90%] max-sm:text-center max-sm:text-head-100 text-center leading-[1.25] font-display capitalize pb-[5vw]">
+          <h2 className="text-foreground productsText text-[5.2vw] max-md:w-[80%]  w-[60%] max-sm:w-[90%] max-sm:text-center max-md:text-head-100 max-sm:text-head-100 text-center leading-[1.25] font-display capitalize pb-[5vw]">
             Everything You Need to Power Digital Banking
           </h2>
         </Copy>
@@ -78,7 +78,7 @@ export default function Products() {
           onSlideChange={(swiper) => {
             setActiveIndex(swiper.activeIndex);
           }}
-          centeredSlides={true}
+          centeredSlides={false}
           slidesPerView={3}
           spaceBetween={40}
           speed={500}
@@ -88,11 +88,15 @@ export default function Products() {
               centeredSlides: true,
             },
             768: {
-              slidesPerView: 3,
-              centeredSlides: true,
+              slidesPerView: 2,
+              centeredSlides: false,
             },
+            1080: {
+              slidesPerView:3,
+              centeredSlides:true,
+            }
           }}
-          className="mySwiper !px-[4.5vw] max-sm:px-[2vw] w-screen !overflow-y-visible"
+          className="mySwiper !px-[4.5vw] max-md:px-0 max-sm:px-[2vw] w-screen !overflow-y-visible"
         >
           {data.map((card, cardIndex) => (
             <SwiperSlide
@@ -110,7 +114,7 @@ export default function Products() {
           ))}
         </Swiper>
 
-        <div className="flex items-center justify-center gap-5 max-sm:pt-[6vw]">
+        <div className="flex items-center justify-center gap-5 max-sm:pt-[6vw] max-md:pt-[5vw]">
           <ArrowButton
             onClick={handlePrevClick}
             arrowColor={"#ffffff"}
@@ -238,8 +242,8 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] max-sm:py-[10vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full">
-        <div className="h-[3.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw]">
+      <div className="py-[3vw] max-sm:py-[10vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full">
+        <div className="h-[3.5vw] max-md:h-[5.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw] max-md:mb-[1vw]">
           <Image
             src={logo}
             alt="frameScoll"
@@ -248,11 +252,11 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
             className="w-full h-full"
           />
         </div>
-        <ul className="py-[1vw] text-[#A8A8A8] text-center space-y-4 w-2/4">
+        <ul className="py-[1vw] text-[#A8A8A8] max-sm:text-[2vw] max-md:mb-[0.5vw]  text-center space-y-4 w-2/4">
           {features.map((item, index) => (
             <li
               key={index}
-              className={`w-full border-b border-[#282828] last:border-0 text-[0.95vw] max-sm:text-content-18 pb-2`}
+              className={`w-full border-b border-[#282828] max-md:text-[2vw] last:border-0 text-[0.95vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-2`}
             >
               {item}
             </li>

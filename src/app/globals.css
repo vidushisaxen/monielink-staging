@@ -379,6 +379,7 @@ li .link-line::after {
     --head-200: 20.513vw;
     --head-150: 14.4vw;
     --head-140: 12.5vw;
+    --head-120: 10.5vw;
     --head-100: 10.25vw;
     --head-80:8.5vw;
     --head-60: 7.4vw;
@@ -389,6 +390,8 @@ li .link-line::after {
     --content-20: 3.6vw;
     --content-18: 4.1vw;
   }
+
+  
 
   body {
   width: 100%;
@@ -461,4 +464,18 @@ li .link-line::after {
   right: -1%;
   rotate: 60deg;
 }
+}
+
+@media (max-width: 1080px)
+  {
+    :root {
+    --head-150: 10vw;
+    --content-20: 2.2vw;
+    --head-60: 6vw;
+    --head-100: 6.5vw;
+
+    --head-60: 5vw;
+    --head-120: 12vw;
+    --head-140:6vw;
+  }
 }

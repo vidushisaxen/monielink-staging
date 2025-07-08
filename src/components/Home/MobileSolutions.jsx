@@ -49,7 +49,7 @@ const handleCardClick = (index) => {
     >
       <div className="w-screen overflow-x-scroll max-sm:mb-[10vw]">
         <div className="border-t w-fit flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw]">
-          <div className="w-[25vw] h-full" />
+          <div className="w-[25vw] max-sm:w-[25vw] max-md:w-[1vw] h-full" />
           {[
             "Digital Account",
             "Loyalty",
@@ -60,10 +60,10 @@ const handleCardClick = (index) => {
           ].map((item, index) => (
             <div
               key={index}
-              className="border-l py-5 w-[15vw] max-sm:min-w-[50vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] active-title"
+              className="border-l py-5 w-[15vw] max-sm:min-w-[50vw] max-md:w-[32vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] active-title"
               onClick={() => handleCardClick(index)}
             >
-              <div className="text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full ">
+              <div className="text-[#A8A8A8] text-[0.95vw] max-md:text-[3vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full max-md:w-full">
                 <ScrambleText text={item} speed={0.4}/>
               </div>
             </div>
@@ -73,27 +73,31 @@ const handleCardClick = (index) => {
       </div>
       <div
         ref={solutionContainerRef}
-        className="relative w-screen overflow-hidden z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw]"
+        className="relative w-screen overflow-hidden z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw] max-sm:px-0 max-md:px-[3vw]"
       >
         <Swiper
         ref={swiperRef}
           modules={[Navigation]}
           initialSlide={0}
-          centeredSlides={true}
-          slidesPerView={3}
+          centeredSlides={false}
+          slidesPerView={2}
           spaceBetween={40}
           speed={500}
           breakpoints={{
             0: {
               slidesPerView: 1,
-              centeredSlides: true,
+              centeredSlides: false,
             },
             768: {
-              slidesPerView: 3,
-              centeredSlides: true,
+              slidesPerView: 2,
+              centeredSlides: false,
             },
+            1080: {
+              slidesPerView: 2,
+              centeredSlides: false,
+            }
           }}
-          className="mySwiper !px-[4.5vw] max-sm:px-[2vw] w-screen !overflow-y-visible"
+          className="mySwiper max-md:px-0 max-sm:px-[2vw] w-screen !overflow-y-visible"
         >
           {cardsData.map((card, cardIndex) => (
             <SwiperSlide
@@ -117,8 +121,8 @@ const handleCardClick = (index) => {
 const SwiperCard = ({ title, id, description, link }) => {
 
   return (
-    <div className="card relative h-fit w-full">
-      <div className="absolute h-[105%] w-full ">
+    <div className="card relative h-fit w-full max-sm:px-0 max-md:px-0">
+      <div className="absolute h-[105%] w-full">
         <svg
           width="330"
           height="530"
@@ -159,12 +163,12 @@ const SwiperCard = ({ title, id, description, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="w-full h-[60vh] flex flex-col justify-between px-[15vw] relative z-[10] pt-[10vw]">
-        <p className="text-[#A8A8A8]">{id}</p>
+      <div className="w-full h-[60vh] max-sm:h-[60vh]  max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw] flex flex-col justify-between max-sm:justify-between max-md:justify-start max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[5vw] relative z-[10] pt-[10vw]">
+        <p className="text-[#A8A8A8] max-sm:text-[3.5vw] max-md:text-[2.5vw]">{id}</p>
 
-        <div className="w-full flex flex-col gap-[5vw]">
+        <div className="w-full flex flex-col gap-[5vw] max-sm:gap-[5vw] max-md:gap-[2vw]">
           <h4 className="text-head-60 font-light w-[80vw]">{title}</h4>
-          <p className="text-[#A8A8A8]">{description}</p>
+          <p className="text-[#A8A8A8] max-sm:text-[4.2vw] max-md:text-[2.5vw]">{description}</p>
         </div>
         <BlackButton text={"Know More"} href={link} />
       </div>

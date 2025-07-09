@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from 'next/image';
+import Diagram from './Diagram';
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 
@@ -23,6 +24,7 @@ const Flowchart = () => {
                 <div className='h-full w-full'>
                     <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto max-md:hidden max-sm:hidden" >
                    <Image src={"/assets/icons/diagrams/instacard.svg"} className='h-full w-full' height={100} width={100} alt='instacard'/>
+                   {/* <Diagram/> */}
                     </div>
                     <div className='w-full h-auto hidden max-md:block max-sm:block'>
                         <Image src={"/assets/shapes/instacard/instacard-flowchart-mobile.svg"} alt='instacard-flowchart' width={500} height={1080} className='w-full h-full'/>

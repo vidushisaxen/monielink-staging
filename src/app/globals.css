@@ -504,11 +504,16 @@ li .link-line::after {
 @media (max-width: 1080px) {
   :root {
     --head-150: 10vw;
-    --content-20: 2.2vw;
-    --head-60: 6vw;
     --head-100: 6.5vw;
     --content-18: 2vw;
     --content-30: 3vw;
+    --content-30: 3.5vw;
+    --head-60: 5vw;
+    --head-120: 12vw;
+    --head-140:6vw;
+    --head-80: 5vw;
+    --head-40:3vw;
+    --content-20: 2.5vw;
   }
 
   .custom-before-after::before,
@@ -531,24 +536,7 @@ li .link-line::after {
     right: -0.7%;
     rotate: 54deg;
   }
-}
-
-@media (max-width: 1080px)
-  {
-    :root {
-    --head-150: 10vw;
-    --content-30: 3.5vw;
-    --content-20: 2.2vw;
-    --head-60: 6vw;
-    --head-100: 6.5vw;
-    --head-60: 5vw;
-    --head-120: 12vw;
-    --head-140:6vw;
-    --head-80: 5vw;
-    --head-40:3vw;
-    --content-20: 2.5vw;
-  }
-  li{
+  /* li{
     font-size: 1.8vw;
-  }
+  } */
 }

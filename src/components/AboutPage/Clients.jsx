@@ -78,7 +78,7 @@ const Clients = () => {
     >
       <div className="w-full h-[90vh] flex justify-between max-md:flex-col max-md:items-start max-md:h-fit max-md:gap-[12vw] items-center max-sm:flex-col max-sm:items-start max-sm:h-fit max-sm:px-0 max-md:px-[5vw] max-sm:gap-[12vw]">
         <Copy>
-          <h2 className="w-[40%] text-[5.2vw] max-sm:px-0 font-display leading-[1.1] text-white py-[5vw] max-sm:text-head-100 max-sm:w-full max-md:text-head-100 max-md:w-full">
+          <h2 className="w-[40%] text-[5.2vw] max-sm:px-0 font-display leading-[1.1] text-white py-[5vw] max-sm:text-head-100 max-sm:w-full max-md:text-head-100 max-md:w-[80%]">
             Clients & Partners we work alongside
           </h2>
         </Copy>

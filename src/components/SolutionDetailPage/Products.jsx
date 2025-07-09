@@ -11,7 +11,7 @@ const Products = () => {
     >
       <div className="px-[4.5vw] py-[8vw] w-full space-y-[8vw] max-sm:px-[5.5vw] max-sm:py-[15%] max-md:py-[15%] max-sm:space-y-[12vw]">
         <div className="w-full flex items-center justify-between max-sm:flex-col max-sm:items-start max-md:items-start max-md:flex-col">
-          <div className="w-[52%] max-md:w-[100%] text-left max-sm:w-full max-sm:mb-[20vw]">
+          <div className="w-[52%] max-md:w-[70%] text-left max-sm:w-full max-sm:mb-[20vw]">
             <Copy>
               <h2 className="text-head-100 font-display">
                 Creating Lasting Value, Together

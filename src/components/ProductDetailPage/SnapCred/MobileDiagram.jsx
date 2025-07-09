@@ -19,13 +19,15 @@ const MobileDiagram = () => {
             </h2>
           </Copy>
         </div>
-        <div className="w-screen overflow-x-scroll  flex flex-col items-center max-sm:items-start max-sm:px-[5vw]">
+        <div className="w-screen overflow-x-scroll   flex flex-col items-center max-sm:items-start max-sm:px-[5vw]">
           <div
-            className="w-[85%] max-sm:w-[300%] fadeupanim"
+            className="w-[85%] max-sm:translate-x-0 max-md:translate-x-[40vw] max-sm:w-[300%] max-md:py-[2vw] max-sm:py-0 fadeupanim"
           >
             <svg
               width="1116"
               height="165"
+
+              className="max-sm:scale-[1] max-md:scale-[1.5]"
               viewBox="0 0 1116 165"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -495,30 +497,30 @@ const MobileDiagram = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-md:justify-evenly max-md:px-[5vw] max-md:gap-[15vw] max-sm:justify-start max-sm:gap-[30vw]">
-              <div className=" w-[18%] max-md:w-[25%] max-sm:w-[25%]">
-                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left">
+            <div className="w-full flex max-sm:translate-x-0 max-md:translate-x-[-30vw] max-md:gap-[37vw] items-start justify-start py-[2vw] max-sm:px-[5vw] max-md:px-[2vw] max-sm:justify-start max-sm:gap-[30vw]">
+              <div className=" w-[18%] max-md:w-[30%] max-sm:w-[25%]">
+                <ul className="max-sm:pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim max-md:text-content-20 max-sm:pt-0 max-md:pt-[3vw]  max-sm:text-content-20 max-sm:text-left max-md:text-left">
                   <li>Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
                   <li>Digital Payments</li>
                 </ul>
               </div>
-              <div className=" w-[15%] max-md:w-[20%] max-sm:w-[25%]">
-                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left">
+              <div className=" w-[15%] max-md:w-[20vw] max-sm:w-[25%] max-sm:pl-[2vw] max-md:pl-[4vw] max-sm:pt-0 max-md:pt-[2vw]">
+                <ul className="pl-[2vw]  list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
                   <li>Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
                   <li>Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[15%] max-md:w-[20%] max-sm:w-[25%]">
-                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left">
+              <div className=" w-[15%] max-md:w-[20vw] max-sm:w-[25%] max-sm:pl-[2vw] max-md:pl-[6vw] max-sm:pt-0 max-md:pt-[2vw]">
+                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
                   <li>Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
                   <li>Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[18%] max-md:w-[20%] max-sm:w-[25%]">
-                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left">
+              <div className=" w-[18%] max-md:w-[20vw] max-sm:w-[25%] max-sm:pl-[2vw] max-md:pl-[8vw] max-sm:pt-0 max-md:pt-[2vw]">
+                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
                   <li>Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
                   <li>Digital Payments</li>

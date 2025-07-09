@@ -442,7 +442,7 @@ export default function Clients() {
       <div className="absolute w-screen h-screen max-sm:items-start max-md:items-center max-md:flex-col  top-0 left-0 flex max-sm:flex-col items-center justify-center max-sm:px-[3.5vw]">
         <div className="w-1/2 max-md:w-[90%] max-sm:w-[90%] h-full px-[3.75vw] flex flex-col pt-[12vw] items-start justify-start">
           <Copy>
-            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] max-md:w-full w-[90%] max-sm:w-full max-sm:text-head-100">
+            <h2 className="text-[5.2vw] clientText font-display font-light text-[#D6D6D6] leading-[1.15] max-md:w-[60%] w-[90%] max-sm:w-full max-sm:text-head-100">
               Clients & Partners We Work Alongside
             </h2>
           </Copy>

@@ -97,7 +97,7 @@ export default function Features() {
                     ))}
                 </div>
 
-                <div className="py-[12vw] max-sm:py-[40%]">
+                <div className="py-[12vw] max-sm:pt-0 max-md:pt-[20vw] max-sm:py-[40%]">
                     <Copy>
                         <h2 className="text-head-140 text-center text-primary-1 font-display max-sm:text-black-1">
                             <span>One SDK.</span><br />

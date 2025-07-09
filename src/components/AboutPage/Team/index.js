@@ -69,11 +69,14 @@ const Team = () => {
                     centeredSlides: false,
                   },
                   768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1.5,
                     centeredSlides: false,
                   },
+                  // 1080: {
+                  //   slidesPerView:2,
+                  // }
                 }}
-                className="mySwiper !px-[4.5vw] max-md:px-[1vw] max-sm:px-0 w-screen max-sm:w-full !overflow-y-visible"
+                className="mySwiper !px-[4.5vw] max-sm:px-0 w-screen max-sm:w-full !overflow-y-visible"
               >
                 {TeamData.map((card, cardIndex) => (
                   <SwiperSlide
@@ -134,8 +137,8 @@ const SwiperCard = ({ name,image,position,info, activeIndex, index }) => {
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-fit w-full text-black-1">
-      <div className="absolute w-[105%] left-[-3%] h-[105%]">
+    <div className="card relative h-fit w-full max-sm:py-0 text-black-1">
+      <div className="absolute w-[105%] left-[-3%] max-md:top-[-8%] max-sm:top-0 max-sm:h-[105%] max-sm:w-[105%] max-md:w-[60vw] max-md:h-[68vh]">
         <svg
           width="333"
           height="558"
@@ -158,7 +161,7 @@ const SwiperCard = ({ name,image,position,info, activeIndex, index }) => {
           />
         </svg>
       </div>
-      <div className="py-[3vw] max-sm:pb-[2vw] max-sm:pt-[5vw] relative z-10 gap-y-[4vw] flex-col flex items-start gap-[8vw] h-[60vh] w-full px-[4vw]">
+      <div className="py-[3vw] max-md:py-0 max-sm:pb-[2vw] max-sm:pt-[5vw] relative z-10 gap-y-[4vw] flex-col flex items-start gap-[8vw] h-[60vh] w-full px-[4vw]">
         <div className="w-full pl-[12vw] max-md:pl-0">
           <h4 className="text-head-60 font-display max-md:text-nowrap">{name}</h4>
           <p className="text-head-50 font-display">{position}</p>
@@ -172,9 +175,9 @@ const SwiperCard = ({ name,image,position,info, activeIndex, index }) => {
             className="w-full h-full object-cover bg-red-300"
           />
         </div>
-        <div className="space-y-[4vw]">
+        <div className="space-y-[4vw] max-sm:space-y-[4vw] max-md:space-y-[2vw]">
          {info.map((info,id)=>(
-            <p key={id}>{info}</p>
+            <p className="max-sm:text-[3.5vw] max-md:text-[2.5vw]" key={id}>{info}</p>
          ))}
      
         </div>

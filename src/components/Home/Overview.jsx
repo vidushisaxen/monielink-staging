@@ -25,9 +25,9 @@ export default function Overview() {
             Enabling Digital Transformation to help You Realize 6X Revenue Growth
           </h2>
         </Copy>
-        <div className="flex items-center justify-between w-[60%] pt-10 relative z-[2] max-sm:flex-col max-sm:gap-16">
-          <div className="flex flex-col items-center justify-center gap-[1vw]">
-            <div className="flex h-[10vw] items-start w-fit justify-center text-head-200 leading-none max-sm:h-auto">
+        <div className="flex items-center justify-between w-[60%] pt-10 relative z-[2] max-sm:flex-col max-sm:gap-16 max-md:gap-[5vw]  max-md:w-[70%]">
+          <div className="flex flex-col items-center justify-center gap-[1vw] max-sm:w-fit max-md:w-[15vw]">
+            <div className="flex h-[10vw] items-start w-fit justify-center text-head-200 leading-none max-sm:h-auto ">
               {renderDigits(values[0])}
               <p
                 style={{
@@ -45,8 +45,8 @@ export default function Overview() {
               </p>
             </Copy>
           </div>
-          <div className="flex flex-col items-center justify-center gap-[1vw]">
-            <div className="flex h-[10vw] text-head-200 leading-none overflow-hidden items-start w-fit justify-center max-sm:h-auto">
+          <div className="flex flex-col items-center justify-center gap-[1vw] max-sm:w-fit max-md:w-[18vw]">
+            <div className="flex h-[10vw] text-head-200 leading-none  overflow-hidden items-start w-fit max-sm:px-0 max-md:px-[1vw] justify-center max-sm:h-auto">
               {renderDigits(values[1])}
               <p
                 style={{
@@ -64,8 +64,8 @@ export default function Overview() {
               </p>
             </Copy>
           </div>
-          <div className="flex flex-col items-center justify-center gap-[1vw]">
-            <div className="flex h-[10vw] pt-0  text-head-200 leading-none overflow-hidden items-start w-fit justify-center max-sm:h-auto">
+          <div className="flex flex-col items-center justify-center gap-[1vw] max-sm:w-fit max-md:w-[18vw]">
+            <div className="flex h-[10vw] pt-0  text-head-200 leading-none overflow-hidden items-start w-fit justify-center max-sm:h-auto ">
               {renderDigits(values[2])}
               <p
                 style={{
@@ -78,7 +78,7 @@ export default function Overview() {
               </p>
             </div>
             <Copy>
-              <p className="text-gray-2 subtitle  text-center text-content-20 tracking-wider font-display max-sm:w-fit  max-md:w-[90%]">
+              <p className="text-gray-2 subtitle  text-center text-content-20 tracking-wider font-display max-sm:w-fit">
                 Revenue from Retail Products
               </p>
             </Copy>

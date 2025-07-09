@@ -14,7 +14,7 @@ export default function FAQs({data}) {
  
 
   return (
-    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[7%] px-[4.5vw] white max-sm:py-[15%] max-md:py-[15%] max-sm:pt-[20%] w-screen overflow-hidden">
+    <section data-theme="white" id="faqs" className="bg-[#FBFBFB] py-[7%] px-[4.5vw] max-sm:px-[4.5vw] max-md:px-[2vw] white max-sm:py-[15%] max-md:py-[15%] max-sm:pt-[20%] w-screen overflow-hidden">
       <div className="w-3/4 mx-auto max-md text-center max-sm:w-[90%]">
         <Copy>
           <h2 className="text-[5.2vw] max-md:text-head-100 text-background leading-[1.25] font-display max-sm:text-head-100">
@@ -23,7 +23,7 @@ export default function FAQs({data}) {
         </Copy>
       </div>
 
-      <div className="w-4/5 mx-auto pt-[5vw] max-md:pt-[10vw] max-sm:w-[95%] max-sm:pt-[15vw]">
+      <div className="w-4/5 max-md:w-[90%] mx-auto pt-[5vw] max-md:pt-[10vw] max-sm:w-[95%] max-sm:pt-[15vw]">
         <Accordion
           type="single"
           collapsible

@@ -77,7 +77,7 @@ export default function MobileSolutions({ allowMultiple = false }) {
   return (
     <section
       ref={sectionRef}
-      className="px-[7vw] max-sm:py-[15%] w-full h-fit relative max-md:py-[7%] hidden max-md:block "
+      className="px-[7vw] max-sm:py-[15%] w-screen max-sm:overflow-x-hidden h-fit relative max-md:py-[7%] hidden max-md:block "
     >
       <div className="w-full space-y-[2vw]">
         {features.map((f, i) => (
@@ -106,7 +106,7 @@ function Accordion({ title, description, img, href, isOpen, onToggle }) {
           className="relative cursor-pointer w-full h-full max-sm:pt-[7vw] max-sm:pb-[12vw] flex items-start justify-between max-md:pt-[3vw] max-md:pb-[5vw]"
         >
           <div className="w-full flex gap-[5vw]">
-            <div className="w-[2vw] h-[10vw] bg-primary-2 mt-[1vw]"/>
+            <div className="w-[2vw] h-[10vw] max-sm:h-[8vw] max-md:h-[6vw] bg-primary-2 mt-[1vw]"/>
             <h3 className="max-sm:text-head-60 font-display capitalize max-md:text-[5.5vw] text-left text-gray-1">
               {title}
             </h3>

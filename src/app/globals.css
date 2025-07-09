@@ -390,6 +390,47 @@ li .link-line::after {
   );
 }
 
+
+/* Tablet responsve */
+@media (max-width: 1080px) {
+  :root {
+    --head-150: 10vw;
+    --content-30: 3.5vw;
+    --content-20: 2.2vw;
+    --head-60: 6vw;
+    --head-100: 6.5vw;
+    --head-120: 12vw;
+    --head-140:6vw;
+    --head-80: 5vw;
+    --head-40:3vw;
+    --content-20: 2.5vw;
+    --content-18: 2vw;
+    --content-30: 3vw;
+    --head-50:3vw;
+  }
+
+  .custom-before-after::before,
+  .custom-before-after::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 3.5vw;
+    background-color: oklch(0.922 0 0);
+  }
+
+  .custom-before-after::before {
+    bottom: 15%;
+    left: -1.2%;
+    rotate: 54deg;
+  }
+
+  .custom-before-after::after {
+    top: 10%;
+    right: -0.7%;
+    rotate: 54deg;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   :root {
@@ -499,44 +540,4 @@ li .link-line::after {
     right: -1%;
     rotate: 60deg;
   }
-}
-
-@media (max-width: 1080px) {
-  :root {
-    --head-150: 10vw;
-    --head-100: 6.5vw;
-    --content-18: 2vw;
-    --content-30: 3vw;
-    --content-30: 3.5vw;
-    --head-60: 5vw;
-    --head-120: 12vw;
-    --head-140:6vw;
-    --head-80: 5vw;
-    --head-40:3vw;
-    --content-20: 2.5vw;
-  }
-
-  .custom-before-after::before,
-  .custom-before-after::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 3.5vw;
-    background-color: oklch(0.922 0 0);
-  }
-
-  .custom-before-after::before {
-    bottom: 15%;
-    left: -1.2%;
-    rotate: 54deg;
-  }
-
-  .custom-before-after::after {
-    top: 10%;
-    right: -0.7%;
-    rotate: 54deg;
-  }
-  /* li{
-    font-size: 1.8vw;
-  } */
 }

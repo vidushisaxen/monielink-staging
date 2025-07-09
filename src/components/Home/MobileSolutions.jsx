@@ -89,7 +89,7 @@ const handleCardClick = (index) => {
               centeredSlides: false,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 1.5,
               centeredSlides: false,
             },
             1080: {
@@ -122,7 +122,7 @@ const SwiperCard = ({ title, id, description, link }) => {
 
   return (
     <div className="card relative h-fit w-full max-sm:px-0 max-md:px-0">
-      <div className="absolute h-[105%] w-full">
+      <div className="absolute h-[105%] max-md:w-[65vw] max-sm:h-[105%] max-sm:w-full w-full">
         <svg
           width="330"
           height="530"
@@ -163,7 +163,7 @@ const SwiperCard = ({ title, id, description, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="w-full h-[60vh] max-sm:h-[60vh]  max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw] flex flex-col justify-between max-sm:justify-between max-md:justify-start max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[5vw] relative z-[10] pt-[10vw]">
+      <div className="w-full h-[60vh] max-sm:h-[60vh]  max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw]  flex flex-col justify-between max-sm:justify-between max-md:justify-start max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[8vw] relative z-[10] pt-[10vw]">
         <p className="text-[#A8A8A8] max-sm:text-[3.5vw] max-md:text-[2.5vw]">{id}</p>
 
         <div className="w-full flex flex-col gap-[5vw] max-sm:gap-[5vw] max-md:gap-[2vw]">

@@ -21,7 +21,7 @@ const WhyUs = () => {
                 <WhyUsSwiper />
 
                 </div>
-                <div className="flex items-center justify-center text-center pt-[15vw] pb-[12vw] px-[4vw]">
+                <div className="flex items-center justify-center text-center pt-[15vw] pb-[12vw] max-sm:pb-[15vw] max-md:pb-[8vw] px-[4vw]">
                     <Copy>
                         <h2 className="text-head-150 font-display">One SDK. <br /> Endless Possibilities</h2>
                     </Copy>

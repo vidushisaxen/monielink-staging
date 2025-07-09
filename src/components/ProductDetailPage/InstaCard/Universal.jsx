@@ -81,7 +81,7 @@ const Universal = () => {
     <>
       <section
         data-theme="orange"
-        className="w-screen h-full max-md:mt-[-2px] overflow-hidden   bg-gradient relative max-sm:hidden"
+        className="w-screen h-full max-md:mt-[-2px] overflow-hidden   bg-gradient relative max-md:hidden max-sm:hidden"
         ref={sectionRef}
       >
         <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]">
@@ -92,7 +92,7 @@ const Universal = () => {
               </h2>
             </Copy>
           </div>
-          <div className="w-[85%] max-md:w-[100%]  max-md:pr-[2vw]" ref={svgContainer}>
+          <div className="w-[85%] max-md:w-[100%] max-md:pr-[2vw]" ref={svgContainer}>
             <svg
               className=" h-full w-full"
               width="1477"
@@ -492,28 +492,28 @@ const Universal = () => {
 
             <div className="w-full flex items-start justify-between py-[2vw]">
               <div className=" w-[18%] overflow-hidden">
-                <p className="font-medium text-content-24 font-body  text-center text1 textanim ">
+                <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text1 textanim ">
                   Customer Purchase Universal Card
                 </p>
               </div>
               <div className=" w-[20%] overflow-hidden">
-                <p className="font-medium text-content-24 font-body  text-center text2 textanim ">
+                <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text2 textanim ">
                   Customer Activates Universal Card on Issuer’s App Using SDK
                 </p>
               </div>{" "}
               <div className=" w-[20%] overflow-hidden">
-                <p className="font-medium text-content-24 font-body  text-center text3 textanim ">
+                <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text3 textanim ">
                   Customer Selects Virtual Instacard for Linking to Universal
                   Card
                 </p>
               </div>{" "}
               <div className=" w-[18%] overflow-hidden">
-                <p className="font-medium text-content-24 font-body  text-center text4 textanim ">
+                <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text4 textanim ">
                   Virtual Instacard is Linked to Universal Instacard
                 </p>
               </div>{" "}
               <div className=" w-[18%] overflow-hidden">
-                <p className="font-medium text-content-24 font-body  text-center text5 textanim ">
+                <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text5 textanim ">
                   Customer use Universal Instacard on POS / ATM
                 </p>
               </div>

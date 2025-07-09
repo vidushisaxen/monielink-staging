@@ -56,8 +56,8 @@ export default function Hero() {
 
                 </div>
 
-                <div className="flex items-center max-sm:hidden max-md:flex-wrap  justify-center gap-[3vw] z-[99]">
-                    <div className="relative w-[18vw] max-md:w-[45%] max-md:h-[28vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
+                <div className="flex items-center  max-sm:hidden max-md:flex-wrap  max-md:flex-row-reverse justify-center gap-[3vw] z-[99]">
+                    <div className="relative w-[18vw] max-md:w-[40vw] max-md:h-[40vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
                         <Image
                             src="/assets/icons/contact/card-frame.svg"
                             alt="card-frame"
@@ -65,7 +65,7 @@ export default function Hero() {
                             className="object-contain "
                         />
 
-                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw] ">
                             <div className="h-[5vw] w-[5vw] max-sm:w-[10vw] max-sm:h-[10vw] max-md:w-[10vw] max-md:h-[10vw]">
                                 <Image
                                     src="/assets/icons/contact/location.svg"
@@ -76,13 +76,13 @@ export default function Hero() {
                                 />
                             </div>
                             <Copy>
-                                <p className="text-content-20 text-gray-2">
+                                <p className="text-content-20  text-gray-2">
                                     23 Adeola Odeku Street, <br /> Victoria Island, Lagos, Nigeria
                                 </p>
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative max-md:w-[45%] max-md:h-[28vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
+                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
 
                         <Image
                             src="/assets/icons/contact/card-frame.svg"
@@ -108,7 +108,7 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative max-md:w-[45%] max-md:h-[28vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
+                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
 
                         <Image
                             src="/assets/icons/contact/card-frame.svg"

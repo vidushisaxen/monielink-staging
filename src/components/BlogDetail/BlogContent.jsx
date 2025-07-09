@@ -101,11 +101,11 @@ const BlogContent = () => {
           </p>
           <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw]" />
           <h2>Bridging Traditional Finance and the Web3 Economy</h2>
-          <span>
+          <span className="max-md:text-content-20">
             Moneylink is solving this challenge by providing the foundational
             tools banks and fintechs need to enable Web3 access:
           </span>
-          <ul>
+          <ul className="max-md:text-content-20">
             <li>
               Smart Wallets: Create and manage digital wallets with
               multi-currency and crypto asset support
@@ -123,7 +123,7 @@ const BlogContent = () => {
               requirements for Web3 readiness
             </li>
           </ul>
-          <span>
+          <span className="max-md:text-content-20">
             Whether you're a neobank or an established institution, our platform
             helps you embed secure, Web3-ready functionality directly into your
             apps.

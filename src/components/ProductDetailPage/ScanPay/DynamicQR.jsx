@@ -91,9 +91,9 @@ const DynamicQR = () => {
               </h2>
             </Copy>
           </div>
-          <div className="w-screen max-md:overflow-hidden overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw] ">
+            <div className="w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw] ">
             <div
-              className="w-[85%] max-md:w-[95%]  max-sm:w-[250%]"
+              className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-0 max-sm:w-[250%]"
               ref={svgRefContainer}
             >
               <svg
@@ -368,8 +368,8 @@ const DynamicQR = () => {
               </div>
             </div>
           </div>
-          <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex">
-            <span className="text-content-18">Swipe</span>
+          <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-md:flex max-sm:flex">
+            <span className="text-content-18 max-md:text-content-20">Swipe</span>
             <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
               <svg
                 className="arrow primera next"

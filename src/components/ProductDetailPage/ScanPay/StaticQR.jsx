@@ -83,8 +83,8 @@ const StaticQR = () => {
                             </h2>
                         </Copy>
                     </div>
-                    <div className='w-screen max-md:overflow-hidden overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw]'>
-                    <div className='w-[85%] max-md:w-[95%] max-sm:w-[250%] ' ref={svgContainer}>
+                    <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw]'>
+                    <div className='w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-0 max-sm:w-[250%] ' ref={svgContainer}>
                         <svg className='h-full w-full' width="1477" height="264" viewBox="0 0 1477 264" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_f_72_5626)">
                                 <path d="M61.077 57.1214L87.6535 30.0009C89.5344 28.0816 92.1086 27 94.7958 27L257.395 27C262.918 27 267.395 31.4772 267.395 37V165.634C267.395 168.273 266.352 170.804 264.494 172.677L234.194 203.216L202.829 234.704C200.952 236.588 198.403 237.647 195.744 237.647H35.0013C29.4785 237.647 25.0014 233.17 25.0013 227.647L25 98.8506C25 96.2753 25.9935 93.7992 27.7737 91.9382L61.077 57.1214Z" fill="#FF5E01" />
@@ -190,8 +190,8 @@ const StaticQR = () => {
                     </div>
 
                     </div>
-                     <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex">
-                        <span className="text-content-18">Swipe</span>
+                     <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-md:flex max-sm:flex">
+                        <span className="text-content-18 max-md:text-content-20">Swipe</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next"

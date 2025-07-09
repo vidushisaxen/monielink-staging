@@ -92,9 +92,9 @@ const Diagram = () => {
               </h2>
             </Copy>
           </div>
-            <div className='w-screen  max-md:overflow-hidden overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
+            <div className='w-screen  overflow-x-scroll flex flex-col items-center max-sm:items-start  max-sm:pr-[5vw]'>
 
-          <div className="w-[85%] max-sm:w-[250%]" ref={svgContainer}>
+          <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[0%] max-sm:w-[250%]" ref={svgContainer}>
             <svg
               className="h-full w-full"
               width="1477"
@@ -339,35 +339,35 @@ const Diagram = () => {
             </svg>
             <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
               <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left">
+                <p className="font-medium text-content-24 font-body  text-center text1 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left">
                   Open the Mobile App
                 </p>
               </div>
               <div className=" w-[15%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text2 textanim max-sm:text-content-20 max-sm:text-left ">
+                <p className="font-medium text-content-24 font-body  text-center text2 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Enter Payment Amount
                 </p>
               </div>{" "}
               <div className=" w-[15%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text3 textanim max-sm:text-content-20 max-sm:text-left ">
+                <p className="font-medium text-content-24 font-body  text-center text3 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Offer Phone to Customer to Tap
                 </p>
               </div>{" "}
               <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text4 textanim max-sm:text-content-20 max-sm:text-left ">
+                <p className="font-medium text-content-24 font-body  text-center text4 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Enter Pin
                 </p>
               </div>{" "}
               <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text5 textanim max-sm:text-content-20 max-sm:text-left ">
+                <p className="font-medium text-content-24 font-body  text-center text5 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Transaction Completed
                 </p>
               </div>
             </div>
           </div>
         </div>
-          <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex">
-                        <span className="text-content-18">Swipe</span>
+          <div className="w-full mx-auto max-md:flex h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex">
+                        <span className="text-content-18 max-md:text-content-20">Swipe</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next"

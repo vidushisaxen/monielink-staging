@@ -86,7 +86,7 @@ const Biometrics = () => {
               </h2>
             </Copy>
           </div>
-            <div className='w-screen overflow-x-scroll max-md:overflow-x-hidden flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
+            <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
 
           <div className="w-[50%] max-md:w-[80%] max-sm:w-[150%]" ref={svgContainer}>
             <svg
@@ -410,17 +410,17 @@ const Biometrics = () => {
 
             <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-md:gap-[5vw] max-sm:gap-[10vw]">
               <div className="max-md:pl-[2vw]  overflow-hidden max-sm:w-[35%] max-md:w-[25%]">
-                <p className=" text-content-24 max-md:text-[2vw] font-body  text-center text1   max-sm:text-content-20 max-md:text-left max-sm:text-left ">
+                <p className=" text-content-24  font-body  text-center text1   max-sm:text-content-20 max-md:text-content-20  max-sm:text-left ">
                   Customers submit a selfie
                 </p>
               </div>
               <div className=" w-[35%] overflow-hidden max-sm:w-[30%] max-md:w-[25%]">
-                <p className=" text-content-24 max-md:text-[2vw] font-body   text-center text2  max-sm:text-content-20 max-md:text-left max-sm:text-left  ">
+                <p className=" text-content-24  font-body   text-center text2  max-sm:text-content-20 max-md:text-content-20  max-sm:text-left  ">
                   System detects liveness and matches with profile image{" "}
                 </p>
               </div>{" "}
               <div className=" w-[25%] overflow-hidden max-sm:w-[30%] max-md:w-[25%]  ">
-                <p className=" text-content-24 max-md:text-[2vw] font-body  text-center text3  max-sm:text-content-20 max-md:text-left max-sm:text-left ">
+                <p className=" text-content-24  font-body  text-center text3  max-sm:text-content-20 max-md:text-content-20  max-sm:text-left ">
                   Used across NIN, BVN, and ID steps
                 </p>
               </div>

@@ -297,19 +297,19 @@ const Diagram = () => {
             </svg>
 
             <div className="w-full flex items-start justify-between py-[2vw]">
-              <div className=" w-[22%] overflow-hidden">
-                <p className=" text-content-24 font-body  text-center text1  ">
+              <div className=" w-[22%] max-md:w-[30%] overflow-hidden">
+                <p className=" text-content-24 font-body max-md:text-content-20 text-center text1  ">
                   Users can choose a help topic to get assistance with any
                   services offered on SDK
                 </p>
               </div>
-              <div className=" w-[22%] overflow-hidden">
-                <p className=" text-content-24 font-body  text-center text2  ">
+              <div className=" w-[22%] max-md:w-[30%] overflow-hidden">
+                <p className=" text-content-24 font-body max-md:text-content-20 text-center text2  ">
                   Chatbot presents questions for users to select{" "}
                 </p>
               </div>{" "}
-              <div className=" w-[25%] overflow-hidden">
-                <p className=" text-content-24 font-body  text-center text3  ">
+              <div className=" w-[25%] max-md:w-[30%] overflow-hidden">
+                <p className=" text-content-24 font-body max-md:text-content-20 text-center text3  ">
                   The bot advances the conversation by asking follow-up
                   questions and providing answers when prompted
                 </p>

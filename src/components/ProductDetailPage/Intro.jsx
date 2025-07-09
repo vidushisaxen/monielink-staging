@@ -65,7 +65,7 @@ const Intro = ({ content }) => {
               {content.list.map((item, index) => (
                 <div
                   key={index}
-                  className="w-full flex gap-[1.5vw] items-center overflow-hidden max-md:gap-[5vw] max-sm:gap-[5vw]"
+                  className="w-full flex gap-[1.5vw] max-md:items-start items-center overflow-hidden max-md:gap-[5vw] max-sm:gap-[5vw]"
                 >
                   <span className="h-[2vw] w-[0.6vw]  max-md:h-[5vw] max-md:w-[1vw] max-sm:h-[10vw] max-sm:w-[2vw]  bg-[#FE6E00] bar-anim inline-block" />
                   <Copy>

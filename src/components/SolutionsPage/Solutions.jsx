@@ -187,7 +187,7 @@ export default function Solutions() {
      
         <section
           ref={containerRef}
-          className="bg-black-1 px-[4.5vw] relative h-[600vh] max-sm:hidden"
+          className="bg-black-1 px-[4.5vw] relative h-[600vh] max-sm:hidden max-md:hidden"
           style={{ height: `${features.length * 100}vh` }}
         >
           <div className="sticky h-screen top-0 py-[5vw]">

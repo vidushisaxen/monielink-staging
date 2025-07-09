@@ -54,7 +54,7 @@ export default function Solutions() {
       className="h-full w-screen relative bg-gradient "
     >
       <div className="w-full flex flex-col items-center ">
-        <div className="text-center w-[70%] py-[8vw] max-sm:w-full max-sm:py-[50%] max-sm:px-[5vw] ">
+        <div className="text-center w-[70%] py-[8vw] max-sm:w-full max-md:w-[80%] max-sm:py-[50%] max-sm:px-[5vw] ">
           <Copy>
             <p className="text-head-60 font-display capitalize">
               All-in-one Digital Account Management solution supported with
@@ -92,6 +92,10 @@ export default function Solutions() {
                 centeredSlides: true,
               },
               768: {
+                slidesPerView: 2.2,
+                centeredSlides: false,
+              },
+              1080: {
                 slidesPerView: 3.2,
                 centeredSlides: true,
               },
@@ -116,7 +120,7 @@ export default function Solutions() {
             ))}
           </Swiper>
 
-          <div className="flex items-center justify-center gap-5 max-sm:w-full">
+          <div className="flex items-center max-sm:mt-0 max-md:mt-[5vw] justify-center gap-5 max-sm:w-full">
             <ArrowButton
               onClick={handlePrevClick}
               arrowColor={"#ffffff"}
@@ -147,8 +151,8 @@ const SwiperCard = ({
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-fit w-full active:scale-95 duration-300 transition-scale">
-      <div className="absolute h-full w-full max-sm:w-[100%] max-sm:h-[100%]">
+    <div className="card relative h-fit max-sm:py-0 max-md:py-[1vw] w-full active:scale-95 duration-300 transition-scale">
+      <div className="absolute h-full w-full max-md:w-[42vw] max-md:h-[100%] max-sm:w-[100%] max-sm:h-[100%]">
         <svg
           width="466"
           height="638"
@@ -214,7 +218,7 @@ const SwiperCard = ({
         <div className=" w-[60%]">
           <p className="text-head-60 font-display">{title}</p>
         </div>
-        <div className="py-[1vw] w-[60%]">
+        <div className="py-[1vw] w-[60%] max-sm:w-[60%] max-md:w-[80%]">
           <p className="text-content-20">{para}</p>
         </div>
 

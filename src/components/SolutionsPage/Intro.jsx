@@ -57,7 +57,7 @@ const Intro = () => {
                         <p className="text-content-20 w-9/12">Enable seamless digital banking experiences for your customers through your mobile app. The Moneylink Super SDK empowers banks and fintechs to launch B2B2C services quickly, securely, and at scale — all from a single integration.</p>
                     </Copy>
                 </div>
-                <div className="absolute w-[70%] max-sm:w-[150%]">
+                <div className="absolute w-[70%] max-sm:w-[150%] max-md:w-[120vw]">
 <svg ref={svgRef} className="h-full w-full" width="1453" height="1453" viewBox="0 0 1453 1453" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g ref={group1Ref}>
 <path className="svg-path" d="M487.521 380.821C542.618 285.376 664.669 252.686 760.096 307.815L1071.63 487.793C1167.02 542.898 1199.69 664.884 1144.61 760.285L964.693 1071.93C909.599 1167.36 787.57 1200.05 692.147 1144.94L380.598 965.015C285.198 909.92 252.513 787.926 307.59 692.516L487.521 380.821Z" stroke="#FF8A4A"/>

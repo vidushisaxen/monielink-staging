@@ -76,9 +76,9 @@ const StaticQR = () => {
         <>
             <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient max-md:mt-[-1px] relative max-sm:pb-[15%]' ref={sectionRef}>
                 <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]'>
-                    <div className='w-[60%] max-sm:w-full'>
+                    <div className='w-[60%] max-md:w-[100%] max-sm:w-full'>
                         <Copy>
-                            <h2 className='text-head-100 font-display text-center capitalize max-sm:text-left'>
+                            <h2 className='text-head-100 font-display text-center capitalize max-sm:text-left max-md:text-left'>
                                 Instant Payments with Static QR Codes
                             </h2>
                         </Copy>

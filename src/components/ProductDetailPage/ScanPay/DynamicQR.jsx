@@ -84,9 +84,9 @@ const DynamicQR = () => {
         ref={dynamicRef}
       >
         <div className="px-[4vw] py-[7vw] flex flex-col  items-center  gap-[10vw] max-md:py-[10vw] max-md:px-[5vw] max-sm:px-[5.5vw]">
-          <div className="w-[80%] max-sm:w-full">
+          <div className="w-[80%] max-md:w-[100%] max-sm:w-full">
             <Copy>
-              <h2 className="text-head-100 font-display text-center capitalize  max-sm:text-left">
+              <h2 className="text-head-100 font-display text-center capitalize  max-sm:text-left max-md:text-left">
                 and dynamic QR Codes
               </h2>
             </Copy>

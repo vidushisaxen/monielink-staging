@@ -8,13 +8,13 @@ const IndentityMobile = () => {
   return (
     <section
       data-theme="orange"
-      className="w-screen h-full overflow-hidden bg-gradient relative hidden max-sm:block"
+      className="w-screen h-full max-md:mt-[-1px] overflow-hidden bg-gradient relative hidden max-sm:block max-md:block"
       ref={sectionRef}
     >
-      <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:pb-[15%] max-sm:px-[5.5vw] max-sm:gap-[15vw]">
-        <div className="w-[90%] max-sm:w-full">
+      <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:pb-[15%] max-sm:px-[5.5vw] max-md:px-[5vw] max-md:gap-[10vw] max-sm:gap-[15vw]">
+        <div className="w-[90%] max-md:w-[100%] max-sm:w-full">
           <Copy>
-            <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left">
+            <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left max-md:text-left">
               Verifyed: Instant Digital KYC & Customer Upgrade Solution
             </h2>
           </Copy>
@@ -30,15 +30,15 @@ const IndentityMobile = () => {
           </Copy>
         </div>
         <div className="flex flex-col gap-[8vw]">
-          <div className="w-full pl-[5.5vw]">
+          <div className="w-full pl-[5.5vw] max-md:pl-[5vw]">
             <Copy>
               <h3 className="text-head-80 font-display w-[90%] leading-[1.25]">
                 Step 2: Identity Capture & Matching
               </h3>
             </Copy>
           </div>
-          <div className="w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:px-[5vw] max-sm:gap-[8vw]">
-            <div className="w-[85%] max-sm:w-[230%] fadeupanim">
+          <div className="w-screen overflow-x-scroll max-md:overflow-x-hidden flex flex-col items-center max-sm:items-start max-sm:px-[5vw] max-sm:gap-[8vw] max-md:px-[5vw]">
+            <div className="w-[85%] max-sm:w-[230%] max-md:w-[100%] max-md:px-[5vw] fadeupanim">
               <svg
                 width="805"
                 height="165"
@@ -394,23 +394,23 @@ const IndentityMobile = () => {
                 </defs>
               </svg>
 
-              <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[20vw]">
-                <div className=" w-[18%]  max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left">
+              <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-md:px-[3vw] max-sm:justify-start max-sm:gap-[20vw]">
+                <div className=" w-[18%] max-md:w-[22%] max-sm:w-[90vw]">
+                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
                     <li>Customer scans or inputs NIN</li>
                     <li>OCR captures and matches data to NIMC</li>
                     <li>Facial biometrics used to verify identity</li>
                   </ul>
                 </div>
-                <div className=" w-[15%] max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left">
+                <div className=" w-[15%] max-md:w-[22%] max-sm:w-[90vw]">
+                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
                     <li>Fund Transfers</li>
                     <li>Collect payments / Settlements</li>
                     <li>Digital Payments</li>
                   </ul>
                 </div>{" "}
-                <div className=" w-[15%] max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left">
+                <div className=" w-[15%] max-md:w-[22%] max-sm:w-[90vw]">
+                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
                     <li>Fund Transfers</li>
                     <li>Collect payments / Settlements</li>
                     <li>Digital Payments</li>
@@ -459,8 +459,8 @@ const IndentityMobile = () => {
             </h3>
             </Copy>
           </div>
-          <div className="w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:px-[5vw] max-sm:gap-[8vw]">
-            <div className="w-[85%] max-sm:w-[150%] fadeupanim">
+          <div className="w-screen overflow-x-scroll max-md:overflow-x-hidden flex flex-col items-center max-sm:items-start max-sm:px-[5vw] max-sm:gap-[8vw] max-md:px-[5vw]">
+            <div className="w-[85%] max-sm:w-[150%] max-md:w-[100%] max-md:px-[5vw] fadeupanim">
               <svg
                 width="493"
                 height="164"
@@ -699,16 +699,16 @@ const IndentityMobile = () => {
                 </defs>
               </svg>
 
-              <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[25vw]">
-                <div className=" w-[18%]  max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left">
+              <div className="w-full flex items-start justify-between max-md:justify-start max-md:gap-[15vw] max-md:px-[2vw] py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[25vw]">
+                <div className=" w-[18%] max-md:w-[22%]  max-sm:w-[90vw]">
+                  <ul className="pl-[2vw] max-md:pl-[3vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
                     <li>Customer scans or inputs NIN</li>
                     <li>OCR captures and matches data to NIMC</li>
                     <li>Facial biometrics used to verify identity</li>
                   </ul>
                 </div>
-                <div className=" w-[15%] max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left">
+                <div className=" w-[15%] max-md:w-[22%] max-sm:w-[90vw]">
+                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
                     <li>Fund Transfers</li>
                     <li>Collect payments / Settlements</li>
                     <li>Digital Payments</li>

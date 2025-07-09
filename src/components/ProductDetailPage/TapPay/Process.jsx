@@ -16,7 +16,7 @@ const Diagram = () => {
     <>
       <section
         data-theme="orange"
-        className="w-screen h-full overflow-hidden bg-gradient relative max-sm:py-[15%]"
+        className="w-screen h-full max-md:mt-[-1px] overflow-hidden bg-gradient relative max-sm:py-[15%]"
         ref={sectionRef}
       >
         <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-md:py-[10vw] max-sm:px-[5.5vw]">

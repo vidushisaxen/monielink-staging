@@ -92,7 +92,7 @@ const Diagram = () => {
               </p>
             </Copy>
           </div>
-          <div className="w-[65%]" ref={svgContainer}>
+          <div className="w-[65%] max-md:w-[90%]" ref={svgContainer}>
             <svg
               className="h-full w-full"
               width="970"

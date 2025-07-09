@@ -75,20 +75,20 @@ const Biometrics = () => {
     <>
       <section
         data-theme="orange"
-        className="w-screen h-full overflow-hidden bg-gradient relative"
+        className="w-screen h-full max-md:mt-[-1px] overflow-hidden bg-gradient relative"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[20%] max-sm:gap-[15vw]">
-          <div className="">
+        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[20%] max-md:px-[5vw] max-sm:gap-[15vw]">
+          <div className="max-md:w-[100%]">
             <Copy>
               <h2 className="text-[5vw] font-display text-center max-sm:text-head-100 max-sm:text-left max-sm:px-[5.5vw]  ">
                 Facial Biometrics & Liveness Detection
               </h2>
             </Copy>
           </div>
-            <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
+            <div className='w-screen overflow-x-scroll max-md:overflow-x-hidden flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
 
-          <div className="w-[50%] max-sm:w-[150%]" ref={svgContainer}>
+          <div className="w-[50%] max-md:w-[80%] max-sm:w-[150%]" ref={svgContainer}>
             <svg
               className="h-full w-full"
               width="860"
@@ -408,19 +408,19 @@ const Biometrics = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[10vw]">
-              <div className="  overflow-hidden max-sm:w-[35%]">
-                <p className=" text-content-24 font-body  text-center text1   max-sm:text-content-20 max-sm:text-left ">
+            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-md:gap-[5vw] max-sm:gap-[10vw]">
+              <div className="max-md:pl-[2vw]  overflow-hidden max-sm:w-[35%] max-md:w-[25%]">
+                <p className=" text-content-24 max-md:text-[2vw] font-body  text-center text1   max-sm:text-content-20 max-md:text-left max-sm:text-left ">
                   Customers submit a selfie
                 </p>
               </div>
-              <div className=" w-[35%] overflow-hidden max-sm:w-[30%]">
-                <p className=" text-content-24 font-body  text-center text2  max-sm:text-content-20 max-sm:text-left  ">
+              <div className=" w-[35%] overflow-hidden max-sm:w-[30%] max-md:w-[25%]">
+                <p className=" text-content-24 max-md:text-[2vw] font-body   text-center text2  max-sm:text-content-20 max-md:text-left max-sm:text-left  ">
                   System detects liveness and matches with profile image{" "}
                 </p>
               </div>{" "}
-              <div className=" w-[25%] overflow-hidden max-sm:w-[30%]">
-                <p className=" text-content-24 font-body  text-center text3  max-sm:text-content-20 max-sm:text-left ">
+              <div className=" w-[25%] overflow-hidden max-sm:w-[30%] max-md:w-[25%]  ">
+                <p className=" text-content-24 max-md:text-[2vw] font-body  text-center text3  max-sm:text-content-20 max-md:text-left max-sm:text-left ">
                   Used across NIN, BVN, and ID steps
                 </p>
               </div>

@@ -74,7 +74,7 @@ const Rewards = () => {
     
     return (
         <>
-            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative max-sm:hidden' ref={sectionRef}>
+            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient max-md:mt-[-1px] relative max-sm:hidden max-md:hidden' ref={sectionRef}>
                 <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
                     <div className='w-[65%] space-y-[9vw]'>
                         <Copy>

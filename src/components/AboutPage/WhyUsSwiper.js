@@ -28,6 +28,7 @@ const WhyUsSwiper = () => {
 
 
   useEffect(() => {
+    
     if (!swiperRef.current) return;
     const ctx = gsap.context(() => {
       const swiperEl = swiperRef.current.el;
@@ -149,7 +150,7 @@ const WhyUsSwiper = () => {
           threshold={10}
           speed={100}
           slidesPerView={1.5}
-          className="mySwiper  !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] max-md:!px-[5vw] max-md:h-[50vh] swiper-container"
+          className="mySwiper !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] max-md:!px-[5vw] max-md:h-[50vh] swiper-container"
         >
           {SwiperData.map((item, cardIndex) => {
             const isActive = activeIndex === cardIndex;

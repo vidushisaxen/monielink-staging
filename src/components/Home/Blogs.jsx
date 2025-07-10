@@ -39,7 +39,7 @@ export default function Blogs() {
             </h2>
           </Copy>
           <Copy>
-            <p className="text-[1vw] w-4/5 leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw] max-sm:text-[2.5vw] max-md:text-[2.5vw]">
+            <p className="text-[1vw] w-4/5 leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw] max-sm:text-[3.7vw] max-md:text-[2.5vw]">
               Stay ahead of the curve with expert insights, industry trends, and
               actionable tips from the world of technology and business.
             </p>

@@ -45,7 +45,7 @@ const handleCardClick = (index) => {
   return (
     <section
       id="solutions"
-      className="h-full w-screen relative overflow-hidden bg-[#050505] max-sm:pb-[5%]"
+      className="h-full w-screen max-sm:pb-[15vw] max-md:pb-[12vw] relative overflow-hidden bg-[#050505]"
     >
       <div className="w-screen overflow-x-scroll max-sm:mb-[10vw]">
         <div className="border-t w-fit flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw]">
@@ -121,7 +121,7 @@ const handleCardClick = (index) => {
 const SwiperCard = ({ title, id, description, link }) => {
 
   return (
-    <div className="card relative h-fit w-full max-sm:px-0 max-md:px-0">
+    <div className="card relative h-fit  w-full max-sm:px-0 max-md:px-0">
       <div className="absolute h-[105%] max-md:w-[65vw] max-sm:h-[105%] max-sm:w-full w-full">
         <svg
           width="330"
@@ -163,14 +163,17 @@ const SwiperCard = ({ title, id, description, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="w-full h-[60vh] max-sm:h-[60vh]  max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw]  flex flex-col justify-between max-sm:justify-between max-md:justify-start max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[8vw] relative z-[10] pt-[10vw]">
+      <div className="w-full h-[60vh] max-sm:h-[60vh] max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw]  flex flex-col justify-between max-sm:justify-between max-md:justify-start max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[8vw] relative z-[10] pt-[10vw]">
         <p className="text-[#A8A8A8] max-sm:text-[3.5vw] max-md:text-[2.5vw]">{id}</p>
 
         <div className="w-full flex flex-col gap-[5vw] max-sm:gap-[5vw] max-md:gap-[2vw]">
           <h4 className="text-head-60 font-light w-[80vw]">{title}</h4>
           <p className="text-[#A8A8A8] max-sm:text-[4.2vw] max-md:text-[2.5vw]">{description}</p>
         </div>
+        <div className="max-sm:pt-0 max-md:py-[10vw]">
+
         <BlackButton text={"Know More"} href={link} />
+        </div>
       </div>
     </div>
   );

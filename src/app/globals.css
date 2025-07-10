@@ -403,7 +403,6 @@ li .link-line::after {
     --head-140:6vw;
     --head-80: 5vw;
     --head-40:3vw;
-    --content-20: 2.5vw;
     --content-18: 2vw;
     --content-30: 3vw;
     --head-50:3vw;
@@ -445,7 +444,7 @@ li .link-line::after {
     --head-40: 3vw;
     --content-30: 5.5vw;
     --content-24: 2vw;
-    --content-20: 3.6vw;
+    --content-20: 3.8vw;
     --content-18: 4.1vw;
   }
 

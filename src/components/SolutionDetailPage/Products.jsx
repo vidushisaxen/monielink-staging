@@ -30,7 +30,7 @@ const Products = () => {
             </div>
 
             <Copy>
-              <p className={`text-content-20`}>
+              <p className={`text-content-20 max-sm:w-[100%] max-md:w-[85%]`}>
                 Comprehensive solution for building a Digital Wallet Ecosystem
                 Serving Both Consumers, & Merchants supporting multiple
                 currencies. Comes with option to offer a Virtual Debit, Credit &
@@ -53,7 +53,7 @@ const Products = () => {
             </div>
 
             <Copy>
-              <p className={`text-content-20`}>
+              <p className={`text-content-20 max-sm:w-[100%] max-md:w-[85%]`}>
                 Comprehensive solution for building a Digital Wallet Ecosystem
                 Serving Both Consumers, & Merchants supporting multiple
                 currencies. Comes with option to offer a Virtual Debit, Credit &
@@ -74,7 +74,7 @@ const Products = () => {
             </div>
 
             <Copy>
-              <p className={`text-content-20`}>
+              <p className={`text-content-20 max-sm:w-[100%] max-md:w-[85%]`}>
                 Comprehensive solution for building a Digital Wallet Ecosystem
                 Serving Both Consumers, & Merchants supporting multiple
                 currencies. Comes with option to offer a Virtual Debit, Credit &

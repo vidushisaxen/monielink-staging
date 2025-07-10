@@ -29,8 +29,11 @@ const WhyUsSwiper = () => {
 
   useEffect(() => {
     
+    
     if (!swiperRef.current) return;
+    
     const ctx = gsap.context(() => {
+      
       const swiperEl = swiperRef.current.el;
       const wrapper = swiperEl.querySelector(".swiper-wrapper");
       const slideEls = Array.from(wrapper.querySelectorAll(".swiper-slide"));
@@ -41,14 +44,14 @@ const WhyUsSwiper = () => {
         x: rects[0].left - r.left,
         y: rects[0].top - r.top,
       }));
-
+      
       gsap.set(slideEls, {
         x: (i) => dxdy[i].x,
         y: (i) => dxdy[i].y,
         opacity: 0,
         zIndex: (i) => slideEls.length - i,
       });
-
+   
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -56,6 +59,7 @@ const WhyUsSwiper = () => {
           // markers: true,
         },
       });
+    
 
       tl.fromTo(
         slideEls[0],
@@ -93,7 +97,12 @@ const WhyUsSwiper = () => {
     return () => ctx.revert();
   }, []);
 
+
+
+
+
   useGSAP(() => {
+    
     gsap.set(".swiper-container", {
       scale: 0.5,
       xPercent: -10,
@@ -197,10 +206,10 @@ const SwiperCard = ({ id, title, description, index, activeIndex }) => {
       }`}
     >
       <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[10vw] max-md:p-[5vw]">
-        <p>00{id}</p>
+        <p className="max-sm:text-[4vw] max-md:text-[2.7vw]">00{id}</p>
         <div
           className={`space-y-[3.5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[10vw] max-sm:mt-[12vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] ${
-            isActive ? "opacity-100" : "opacity-0"
+            isActive ? "opacity-100" : "opacity-0 max-md:opacity-100"
           }`}
         >
           <h4 className="text-content-30 font-display max-md:text-head-80 max-sm:text-head-80 capitalize">

@@ -152,7 +152,7 @@ const SwiperCard = ({
 
   return (
     <div className="card relative h-fit max-sm:py-0 max-md:py-[1vw] w-full active:scale-95 duration-300 transition-scale">
-      <div className="absolute h-full w-full max-md:w-[42vw] max-md:p-[0.5vw] max-md:h-[100%] max-sm:w-[100%] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:pl-[1vw]">
+      <div className="absolute h-full w-full max-md:w-[42vw] max-md:h-[100%] max-sm:w-[100%] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:pl-[1vw] ">
         <svg
           width="466"
           height="638"
@@ -215,7 +215,7 @@ const SwiperCard = ({
         </svg>
       </div>
       <div className="py-[3vw] relative z-10 gap-y-[2vw] flex-col flex items-start ml-[5vw] justify-between h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-sm:py-[8vw]">
-        <div className=" w-[60%]">
+        <div className=" w-[60%] max-sm:mx-0">
           <p className="text-head-60 font-display">{title}</p>
         </div>
         <div className="py-[1vw] w-[60%] max-sm:w-[60%] max-md:w-[80%]">

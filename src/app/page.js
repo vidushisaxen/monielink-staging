@@ -10,12 +10,15 @@ import Clients from "../components/Home/Clients";
 import CTA from "../components/Footer/CTA";
 import Layout from "../components/Layout";
 import { faqData } from "@/components/SampleFaqData";
+import Loader from "@/components/Loader/Loader";
+import HomePageHero from "@/components/Hero/HomePageHero";
 
 export default function HomePage() {
   return (
     <>
-      <Layout>
-        <Hero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customer experience."}/>
+      <Layout delay={5.5}>
+        <Loader />
+        <HomePageHero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customer experience."}/>
         <Overview />
         <Solutions />
         <USPs />

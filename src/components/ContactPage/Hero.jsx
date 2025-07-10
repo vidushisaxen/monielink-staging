@@ -16,11 +16,11 @@ export default function Hero() {
 
     useGSAP(() => {
         const tl = gsap.timeline();
-        gsap.to('#loader', {
-            duration: 0.5,
-            opacity: 0,
-            delay: 1.5,
-        })
+        // gsap.to('#loader', {
+        //     duration: 0.5,
+        //     opacity: 0,
+        //     delay: 1.5,
+        // })
         tl.fromTo(btnContainer.current, {
             y: 50,
             opacity: 0,
@@ -34,7 +34,7 @@ export default function Hero() {
 
     return (
         <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
-            <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" />
+            {/* <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" /> */}
             <div className="relative h-screen space-y-[7vw] max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
                 <HeroBackground />
                 <div

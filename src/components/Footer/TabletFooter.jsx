@@ -2,10 +2,8 @@ import {
     FacebookIcon,
     InstagramIcon,
     LinkedinIcon,
-    Logo,
     TwitterIcon,
   } from "@/components/Icons";
-  import Loader2 from "@/components/Loader/Loader2";
   import Link from "next/link";
   import Image from "next/image";
   import React from "react";

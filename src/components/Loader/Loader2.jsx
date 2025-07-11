@@ -112,7 +112,7 @@ export default function Loader2() {
       className="h-screen fixed top-0 left-0 z-[999] bg-background  w-full flex items-center justify-center"
     >
       {/* Gate SVGS */}
-      {/* <div className="w-[105vw] loader-gate opacity-0 h-screen -translate-x-[2%] absolute  inset-0  flex items-center justify-center ">
+      <div className="w-[105vw] loader-gate opacity-0 h-screen -translate-x-[2%] absolute  inset-0  flex items-center justify-center ">
         <div className="w-full h-full gate1 translate-x-[4%]">
           <Image
             className="w-full h-full absolute z-[0] object-cover"
@@ -132,7 +132,7 @@ export default function Loader2() {
             height={100}
           />
         </div>
-      </div> */}
+      </div>
 
       <div className="w-full px-[10%] h-full relative flex">
         <p className=" absolute left-1/2 -translate-x-1/2   top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] tracking-widest font-mono font-medium uppercase splitText">

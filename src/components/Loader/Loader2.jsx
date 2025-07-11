@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import Image from "next/image";
+
 export default function Loader2() {
   gsap.registerPlugin(SplitText, ScrambleTextPlugin);
 
@@ -20,7 +22,7 @@ export default function Loader2() {
       onComplete: () => {
         gsap.to(splitText.chars, {
           opacity: 0,
-          delay:.5,
+          delay:1,
         });
       },
     });
@@ -28,79 +30,70 @@ export default function Loader2() {
     tl.to(".loader-container", {
       opacity: 1,
       duration: 1,
-      delay:.5,
-      onComplete: () => {
-        gsap.to(".plus", {
-          rotate: 360,
-          duration: 1,
-          delay: 2,
-          repeat: 2,
-          repeatDelay: 1.5,
-          ease: "power2.inOut",
-        });
-      },
+      delay: 1,
     });
     tl.to(
       ".mainLogoLoader",
       {
         duration: 1,
         opacity: 1,
-        filter: "blur(0px)",
       },
       "<"
     );
 
     tl.to(".scrambleText", {
       duration: 3,
-      filter: "blur(0px)",
       scrambleText: {
         text: "Design elevated by a tech forward aesthetic.",
-        chars: "⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟",
+        chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
       onComplete: () => {
         gsap.to(".scrambleText", {
           duration: 0.5,
           opacity: 0,
+          delay:.5
         });
+        gsap.to(".loader-gate", {
+          opacity: 1,
+          duration: 1,
+          delay: 1,
+        });
+
       },
-    });
+    },"<+1");
+
     tl.to(
       ".svg-secondPart",
       {
         duration: 1,
         opacity: 1,
-        filter: "blur(0px)",
       },
       "<"
     );
 
     tl.to(".scrambleText2", {
       duration: 1,
-      delay: 1,
-
+      delay: 1.2,
       scrambleText: {
         text: "By Enigma",
-        chars: "XO",
+        chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
+      onComplete:()=>{
+        gsap.to("#LoaderScreen", {
+         backgroundColor:"transparent",
+        });
+      }
     });
-    // tl.to([".text-loader", ".plus"], {
-    //   opacity: 0,
-    //   duration: 1,
-    //   delay:.3,
-    // });
-    // tl.to(".mainLogoLoader", {
-    //   y: "-100.5%",
-    //   x: "-52.5%",
-    //   scale:.9,
-    //   duration: 1,
-    //   onComplete: () => {
-    //     gsap.to(".mainLogoLoader", {
-    //       opacity: 0,
-    //       duration: 1,
-    //       ease: "power2.inOut",
-    //     });
-    //   },
-    // });
+
+    tl.to([".gate1", ".gate2", ".text-gate1", ".text-gate2"], {
+      duration: 1,
+      x: (i) => (i % 2 === 0 ? "-100%" : "100%"),
+      ease:"power3.out",
+      duration:2,
+      delay:1,
+    });
+
+
     tl.to("#LoaderScreen", {
       opacity: 0,
       duration: 1,
@@ -114,13 +107,39 @@ export default function Loader2() {
   }, []);
 
   return (
-    <div id="LoaderScreen" className="h-screen bg-[#010101] fixed top-0 left-0 z-[9900]  w-full flex items-center justify-center">
-      <div className="w-[70%] h-[40%] relative flex">
+    <div
+      id="LoaderScreen"
+      className="h-screen fixed top-0 left-0 z-[999] bg-background  w-full flex items-center justify-center"
+    >
+      {/* Gate SVGS */}
+      {/* <div className="w-[105vw] loader-gate opacity-0 h-screen -translate-x-[2%] absolute  inset-0  flex items-center justify-center ">
+        <div className="w-full h-full gate1 translate-x-[4%]">
+          <Image
+            className="w-full h-full absolute z-[0] object-cover"
+            src="/assets/gate-left.svg"
+            alt="left-gate"
+            width={100}
+            height={100}
+          />
+         
+        </div>
+        <div className="w-full h-full gate2 -translate-x-[4%]">
+          <Image
+            className="w-full h-full object-cover"
+            src="/assets/gate-right.svg"
+            alt="right-gate"
+            width={100}
+            height={100}
+          />
+        </div>
+      </div> */}
+
+      <div className="w-full px-[10%] h-full relative flex">
         <p className=" absolute left-1/2 -translate-x-1/2   top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] tracking-widest font-mono font-medium uppercase splitText">
           Design elevated by a tech forward aesthetic.
         </p>
-        <div className="flex w-full h-full opacity-0 loader-container">
-          <div className="flex w-full blur-[10px] mainLogoLoader items-center justify-start">
+        <div className="flex w-full  h-full opacity-0 loader-container">
+          <div className="flex w-full text-gate1 mainLogoLoader items-center justify-center">
             <svg
               width="200"
               height="60"
@@ -143,7 +162,7 @@ export default function Loader2() {
                 />
               </g>
 
-              <g className="opacity-0 blur-[2px] svg-secondPart">
+              <g className="opacity-0  svg-secondPart">
                 <path
                   d="M111.768 32.7118L107.268 32.7118L107.268 18.0163L101.352 32.7118L99.4007 32.7118L93.4848 18.0163L93.4848 32.7118L89.0163 32.7118L89.0163 11.7227L95.2784 11.7227L100.376 24.4043L105.474 11.7227L111.768 11.7227L111.768 32.7118ZM125.88 33.0894C119.555 33.0894 114.929 28.5581 114.929 22.233C114.929 15.908 119.555 11.3766 125.88 11.3766C132.237 11.3766 136.862 15.908 136.862 22.233C136.862 28.5581 132.237 33.0894 125.88 33.0894ZM125.88 29.1245C129.751 29.1245 132.268 26.135 132.268 22.233C132.268 18.2995 129.751 15.3415 125.88 15.3415C122.009 15.3415 119.523 18.2995 119.523 22.233C119.523 26.135 122.009 29.1245 125.88 29.1245ZM158.784 32.7118L154.473 32.7118L144.466 19.0233L144.466 32.7118L139.998 32.7118L139.998 11.7227L144.592 11.7227L154.316 24.9078L154.316 11.7227L158.784 11.7227L158.784 32.7118ZM167.391 32.7118L162.923 32.7118L162.923 11.7227L167.391 11.7227L167.391 32.7118ZM186.411 32.7118L171.558 32.7118L171.558 11.7227L186.411 11.7227L186.411 15.6562L176.027 15.6562L176.027 20.0932L186.191 20.0932L186.191 24.0267L176.027 24.0267L176.027 28.7783L186.411 28.7783L186.411 32.7118Z"
                   fill="white"
@@ -155,15 +174,10 @@ export default function Loader2() {
               </g>
             </svg>
           </div>
-          <div className="w-full h-full flex plus  items-center justify-center">
-            <div className="w-[2vw] h-[2vw] relative">
-              <div className="absolute w-[0.05vw] h-full bg-zinc-400 left-1/2 -translate-x-1/2"></div>
-              <div className="absolute h-[0.05vw] w-full bg-zinc-400 top-1/2 -translate-y-1/2"></div>
-            </div>
-          </div>
-          <div className=" h-full w-full flex text-loader  relative items-center justify-end">
-            <p className="text-left text-zinc-400 w-[65%] text-[1vw] tracking-widest font-mono scrambleText font-medium uppercase"></p>
-            <p className="text-left absolute right-0 text-zinc-400 w-[40%] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
+          
+          <div className=" h-full w-full flex text-gate2 text-loader relative items-center justify-center">
+            <p className="text-left text-zinc-400 w-[40%]  text-[1vw] tracking-widest font-mono scrambleText font-medium uppercase"></p>
+            <p className="text-center w-full  absolute right-0 text-zinc-400 text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
           </div>
         </div>
       </div>

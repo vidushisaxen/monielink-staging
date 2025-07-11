@@ -2,9 +2,21 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export default function HeroBackground() {
+export default function HeroBackground({
+  delay = 0,
+}) {
   const cellCount = 3000;
   const cellsRef = useRef([]);
+
+  // useEffect(() => {
+  //   gsap.to(".hero-background", {
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: delay,
+  //     ease: "power2.inOut",
+  //   });
+  // }, [])
+  
 
   useEffect(() => {
     const cells = cellsRef.current;
@@ -79,7 +91,7 @@ export default function HeroBackground() {
   }, []);
 
   return (
-    <div className="w-screen max-md:h-[80vh] h-screen absolute inset-0 bg-background overflow-hidden flex flex-wrap max-sm:hidden">
+    <div className="w-screen max-md:h-[80vh] h-screen absolute inset-0 bg-background overflow-hidden flex flex-wrap max-sm:hidden hero-background">
       {[...Array(cellCount)].map((_, i) => (
         <div
           key={i}

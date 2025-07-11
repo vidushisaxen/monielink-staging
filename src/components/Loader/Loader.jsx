@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-export default function Loader2() {
+export default function Loader() {
   gsap.registerPlugin(SplitText, ScrambleTextPlugin);
 
   useEffect(() => {
@@ -12,15 +12,24 @@ export default function Loader2() {
     const splitText = new SplitText(".splitText", {
       type: "chars",
     });
-    tl.from(splitText.chars, {
+    gsap.set(splitText.chars, {
       opacity: 0,
+      filter: "blur(10px)",
+    });
+    tl.to(splitText.chars, {
+      onStart: () => {
+        gsap.to(".text-wrap-loader", {
+          opacity: 1,
+        });
+      },
+      opacity: 1,
       duration: 0.2,
       stagger: 0.05,
-      filter: "blur(10px)",
+      filter: "blur(0px)",
       onComplete: () => {
         gsap.to(splitText.chars, {
           opacity: 0,
-          delay:.5,
+          delay: 0.5,
         });
       },
     });
@@ -28,7 +37,7 @@ export default function Loader2() {
     tl.to(".loader-container", {
       opacity: 1,
       duration: 1,
-      delay:.5,
+      delay: 0.5,
       onComplete: () => {
         gsap.to(".plus", {
           rotate: 360,
@@ -55,7 +64,8 @@ export default function Loader2() {
       filter: "blur(0px)",
       scrambleText: {
         text: "Design elevated by a tech forward aesthetic.",
-        chars: "⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟",
+        // chars: "⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟",
+        chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
       onComplete: () => {
         gsap.to(".scrambleText", {
@@ -69,6 +79,7 @@ export default function Loader2() {
       {
         duration: 1,
         opacity: 1,
+        delay:0.5,
         filter: "blur(0px)",
       },
       "<"
@@ -80,7 +91,7 @@ export default function Loader2() {
 
       scrambleText: {
         text: "By Enigma",
-        chars: "XO",
+        chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
     });
     // tl.to([".text-loader", ".plus"], {
@@ -114,11 +125,16 @@ export default function Loader2() {
   }, []);
 
   return (
-    <div id="LoaderScreen" className="h-screen bg-[#010101] fixed top-0 left-0 z-[9900]  w-full flex items-center justify-center">
+    <div
+      id="LoaderScreen"
+      className="h-screen bg-[#010101] fixed top-0 left-0 z-[9900]  w-full flex items-center justify-center"
+    >
       <div className="w-[70%] h-[40%] relative flex">
-        <p className=" absolute left-1/2 -translate-x-1/2   top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] tracking-widest font-mono font-medium uppercase splitText">
-          Design elevated by a tech forward aesthetic.
-        </p>
+        <div className="opacity-0 text-wrap-loader">
+          <p className=" absolute left-1/2 -translate-x-1/2   top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw]  tracking-widest font-mono font-medium uppercase  splitText">
+            Design elevated by a tech forward aesthetic.
+          </p>
+        </div>
         <div className="flex w-full h-full opacity-0 loader-container">
           <div className="flex w-full blur-[10px] mainLogoLoader items-center justify-start">
             <svg
@@ -162,7 +178,7 @@ export default function Loader2() {
             </div>
           </div>
           <div className=" h-full w-full flex text-loader  relative items-center justify-end">
-            <p className="text-left text-zinc-400 w-[65%] text-[1vw] tracking-widest font-mono scrambleText font-medium uppercase"></p>
+            <p className="text-left text-zinc-400 w-[68%] text-[1vw] tracking-widest font-mono scrambleText font-medium uppercase"></p>
             <p className="text-left absolute right-0 text-zinc-400 w-[40%] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
           </div>
         </div>

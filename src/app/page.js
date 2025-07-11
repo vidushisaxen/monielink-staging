@@ -16,9 +16,14 @@ import HomePageHero from "@/components/Hero/HomePageHero";
 export default function HomePage() {
   return (
     <>
-      <Layout delay={5.5}>
+      <Layout delay={11.5}>
         <Loader />
-        <HomePageHero heading={" Powerful Neobank Platform"} para={"Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customer experience."}/>
+        <HomePageHero
+          heading={" Powerful Neobank Platform"}
+          para={
+            "Seamlessly embed digital banking services into your mobile apps with the Monielink Super SDK — a single, unified solution that accelerates your go-to-market and elevates your customer experience."
+          }
+        />
         <Overview />
         <Solutions />
         <USPs />
@@ -26,9 +31,9 @@ export default function HomePage() {
         <Intro />
         <Clients />
         <Blogs />
-        <FAQs data={faqData}/>
+        <FAQs data={faqData} />
         <CTA />
       </Layout>
     </>
   );
-};
+}

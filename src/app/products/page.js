@@ -9,6 +9,8 @@ import ProductSlider from "@/components/ProductsPage/ProductSlider";
 import Copy from "@/components/Animations/Copy";
 import Launch from "@/components/ProductsPage/Launch";
 import MobileProducts from "@/components/ProductsPage/MobileProducts";
+import Diagram1 from "@/components/ProductsPage/Diagram1";
+import Diagram2 from "@/components/ProductsPage/Diagram2";
 
 export default function ProductsPage() {
 
@@ -20,6 +22,8 @@ export default function ProductsPage() {
         <ProductSlider />
         <MobileProducts/>
         <Launch/>
+      <Diagram1/>
+      <Diagram2/>
         <section data-theme="white" className="bg-white-1 py-[20vw] flex items-center justify-center text-center max-sm:py-[40%]">
           <Copy>
             <h3 className="text-head-140 font-light font-display">

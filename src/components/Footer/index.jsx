@@ -470,11 +470,11 @@ const socials = [
     link: "/#",
   },
   {
-    icon: <InstagramIcon />,
-    link: "/#",
-  },
-  {
     icon: <TwitterIcon />,
     link: "//#",
+  },
+  {
+    icon: <InstagramIcon />,
+    link: "/#",
   },
 ];

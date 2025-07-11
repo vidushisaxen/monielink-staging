@@ -54,9 +54,9 @@ const Values = ({ data }) => {
             {data.list.map((item, index) => (
               <div
                 key={index}
-                className="w-full flex gap-[1.5vw] items-center overflow-hidden max-sm:items-start max-md:items-start max-sm:gap-[5vw] max-md:gap-[3vw]"
+                className="w-full flex gap-[1.5vw] items-start overflow-hidden max-sm:items-start max-md:items-start max-sm:gap-[5vw] max-md:gap-[3vw]"
               >
-                <span className="h-[2vw] w-[0.6vw] max-md:h-[5vw] max-md:w-[0.8vw] max-sm:w-[2vw] max-sm:h-[10vw] bg-[#FE6E00] baranim" />
+                <span className="h-[2vw] w-[0.6vw] mt-[0.5vw] max-md:h-[5vw] max-md:w-[0.8vw] max-sm:w-[2vw] max-sm:h-[10vw] bg-[#FE6E00] baranim" />
                 <Copy>
                   <div
                     className="text-content-20 max-md:mt-[-.5vw] text-black-1 font-body w-[80%]"

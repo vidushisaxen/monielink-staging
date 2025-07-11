@@ -21,7 +21,7 @@ const Launch = () => {
       title: "Cloud Based Implementation",
       description:
         "Deploy dedicated cloud instances with partner-managed access control and firewalls.",
-      width: "w-[45%]",
+      width: "w-[40%]",
       svg: svgRefs[0],
       svgElement: <CloudImplementationIcon />,
     },
@@ -138,7 +138,7 @@ const Launch = () => {
                 </h3>
               </Copy>
               <Copy>
-                <p className={`text-content-20 text-center max-md:w-[70%] `}>{description}</p>
+                <p className={`text-content-20 text-center w-[98%] max-md:w-[70%] `}>{description}</p>
               </Copy>
             </div>
           ))}

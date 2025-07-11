@@ -133,7 +133,7 @@ const BlogList = () => {
                       />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-[3vw] max-sm:px-[4vw] max-sm:gap-[5vw]">
+                  <div className="flex text-content-20 flex-col gap-[3vw] max-sm:px-[4vw] max-sm:gap-[5vw]">
                     <p>
                       If you&apos;ve read this far and you&apos;re wondering what “web3”
                       is exactly, this is one of those need-to-knows, and it&apos;s
@@ -223,7 +223,7 @@ const BlogList = () => {
                       <h4 className="text-content-30 font-display capitalize ">
                         {blog.title}
                       </h4>
-                      <p>{blog.description}</p>
+                      <p className="text-content-20">{blog.description}</p>
 
                       <Link href={blog.link} className="round relative flex items-center justify-center min-w-[9.3vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
                 <div className="absolute inset-0 z-10">

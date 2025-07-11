@@ -39,13 +39,13 @@ export default function Blogs() {
             </h2>
           </Copy>
           <Copy>
-            <p className="text-[1vw] w-4/5 leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw] max-sm:text-[3.7vw] max-md:text-[2.5vw]">
+            <p className="text-[1vw] w-[88%] leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw] max-sm:text-[3.7vw] max-md:text-[2.5vw]">
               Stay ahead of the curve with expert insights, industry trends, and
               actionable tips from the world of technology and business.
             </p>
           </Copy>
         </div>
-        <div className="flex flex-col w-full h-fit mt-[10vw] hidden max-sm:block">
+        <div className=" flex-col w-full h-fit mt-[10vw] hidden max-sm:flex">
           {data.map((data,index)=>(
 
           <div key={index} className="w-full  flex flex-col gap-[4vw] h-[40vh] border border-black/10 p-[5vw] mb-[7vw]">

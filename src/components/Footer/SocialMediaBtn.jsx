@@ -3,7 +3,7 @@ import React from "react";
 function SocialMediaBtn({ href, children, className = "", ...props }) {
     return (
         <a href={href || "#"} className={`group ${className}`} {...props} aria-label="Read More" target="_blank">
-            <div className="text-[#A8A8A8] group-hover:text-[#FF5100] duration-300 transition-colors relative flex items-center justify-center w-[4.2vw] max-sm:w-[14vw]">
+            <div className="text-[#A8A8A8] group-hover:text-[#FF5100] duration-300 transition-colors relative flex items-center justify-center w-[4.2vw] max-md:w-[8vw] max-sm:w-[14vw]">
                 <svg
                     className="w-full h-full"
                     width="77"

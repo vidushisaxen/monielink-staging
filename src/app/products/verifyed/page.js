@@ -34,7 +34,7 @@ export default function Verifyed() {
         <Address />
         <Biometrics />
         <Values data={valuesData} />
-        <Products />
+        <Products  heading={"Explore Other Products"}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

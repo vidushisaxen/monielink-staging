@@ -54,7 +54,7 @@ export default function Solutions() {
       className="h-full w-screen relative bg-gradient "
     >
       <div className="w-full flex flex-col items-center ">
-        <div className="text-center w-[70%] py-[8vw] max-sm:w-full max-md:w-[80%] max-sm:py-[50%] max-sm:px-[5vw] ">
+        <div className="text-center w-[70%] py-[10vw] max-sm:w-full max-md:w-[80%] max-sm:py-[50%] max-sm:px-[5vw] ">
           <Copy>
             <p className="text-head-60 font-display capitalize">
               All-in-one Digital Account Management solution supported with
@@ -83,8 +83,8 @@ export default function Solutions() {
               setActiveIndex(swiper.activeIndex);
             }}
             // centeredSlides={true}
-            slidesPerView={3.5}
-            spaceBetween={40}
+            slidesPerView={3}
+            spaceBetween={80}
             speed={500}
             breakpoints={{
               0: {
@@ -96,11 +96,11 @@ export default function Solutions() {
                 centeredSlides: false,
               },
               1080: {
-                slidesPerView: 3.2,
-                centeredSlides: true,
+                slidesPerView: 3,
+                // centeredSlides: true,
               },
             }}
-            className="mySwiper !px-[5vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
+            className="mySwiper !px-[10vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
           >
             {data.map((card, cardIndex) => (
               <SwiperSlide
@@ -120,7 +120,7 @@ export default function Solutions() {
             ))}
           </Swiper>
 
-          <div className="flex items-center max-sm:mt-0 max-md:mt-[5vw] justify-center gap-5 max-sm:w-full">
+          <div className="flex items-start max-sm:mt-0 max-md:mt-[5vw] justify-center gap-5 max-sm:w-full">
             <ArrowButton
               onClick={handlePrevClick}
               arrowColor={"#ffffff"}
@@ -214,7 +214,7 @@ const SwiperCard = ({
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] relative z-10 gap-y-[2vw] flex-col flex items-start ml-[5vw] justify-between h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-sm:py-[8vw]">
+      <div className="py-[3vw] relative z-10 gap-y-[3vw] flex-col flex items-start ml-[2vw] justify-between h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-sm:py-[8vw]">
         <div className=" w-[60%] max-sm:mx-0">
           <p className="text-head-60 font-display">{title}</p>
         </div>

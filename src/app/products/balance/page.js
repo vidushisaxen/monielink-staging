@@ -21,7 +21,7 @@ export default function Balance() {
         <Infrastructure2/>
         <MobileInfrastructure/>
         <Values data={valuesData}/>
-        <Products/>
+        <Products heading={"Explore Other Products"}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

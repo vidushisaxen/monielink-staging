@@ -90,14 +90,14 @@ export default function Solutions() {
           start: "top top",
           end: "bottom bottom",
           // markers:true,
-          snap: {
-            snapTo: (progress) => {
-              const snapIndex = Math.round(progress * (total - 1));
-              return snapIndex / (total - 1);
-            },
-            duration: { min: 0.5, max: 1 },
-            ease: "power2.out",  
-          },
+          // snap: {
+          //   snapTo: (progress) => {
+          //     const snapIndex = Math.round(progress * (total - 1));
+          //     return snapIndex / (total - 1);
+          //   },
+          //   duration: { min: 0.5, max: 1 },
+          //   ease: "power2.out",  
+          // },
           scrub: true,
           onUpdate: (self) => {
             setScrollProgress(self.progress);
@@ -248,10 +248,10 @@ export default function Solutions() {
             </div>
             <button
           onClick={handleSkip}
-          className="absolute bottom-10 right-0 z-30 text-content-18 flex items-center gap-1 group  cursor-pointer"
+          className="text-[#A8A8A8] absolute bottom-10 right-0 z-30 text-[0.9vw] flex items-center gap-1 group  cursor-pointer"
         >
           Skip
-          <div className="-rotate-90 text-white flex items-center justify-center gap-0 w-fit h-full">
+          <div className="-rotate-90 text-[#A8A8A8] flex items-center justify-center gap-0 w-[1vw] h-[1vw]">
                             <svg
                                 className="arrow primera next"
                                 width="8"

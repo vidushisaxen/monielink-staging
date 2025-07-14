@@ -81,7 +81,7 @@ const Usage = () => {
                             <p className='text-head-60 font-display text-center'>Usage of Redeemed Points</p>
                         </Copy>
                     </div>
-                    <div className='w-[65%]' ref={svgRefContainer}>
+                    <div className='w-[55%]' ref={svgRefContainer}>
                     <svg className='h-full w-full  ' width="966" height="264" viewBox="0 0 966 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <g className='svg1'>

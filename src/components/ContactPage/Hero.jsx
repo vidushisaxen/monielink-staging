@@ -40,14 +40,14 @@ export default function Hero() {
                 <div
                     className={`h-fit pointer-events-none w-full !pt-[15vw] flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
                 >
-                    <Copy delay={1.8}>
+                    <Copy delay={1.2}>
                         <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}>
                             Get in Touch
                         </h1>
                     </Copy>
                     <div
                         className={`w-[50%] max-md:w-[60%] pt-5 max-md:pt-[5vw] text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-sm:pt-[10vw]`}>
-                        <Copy delay={2}>
+                        <Copy delay={1.5}>
                             <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
                                 We&apos;re here to help you launch, scale, and grow in the digital finance economy. Whether you're a bank, fintech, merchant, or partner — let&apos;s connect and build the future of finance together.
                             </p>

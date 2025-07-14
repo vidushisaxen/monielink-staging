@@ -201,7 +201,7 @@ export default function ProductSlider() {
     return (
         <section data-theme = "white"
             ref={containerRef}
-            className="bg-white-1 relative h-[800vh] max-md:hidden max-sm:hidden"
+            className="bg-white-1 relative h-[800vh] max-md:hidden max-sm:hidden py-[5vw]"
             style={{ height: `${products.length * 100}vh` }}
         >
             <div className='sticky h-screen top-0 py-[5vw] overflow-hidden w-screen px-[4.5vw] '>
@@ -271,7 +271,7 @@ export default function ProductSlider() {
           className="absolute bottom-10 right-10 z-30 text-black text-content-18 flex items-center gap-1 group  cursor-pointer"
         >
           Skip
-          <div className="-rotate-90 text-black flex items-center justify-center gap-0 w-fit h-full">
+          <div className="-rotate-90 text-black flex items-center justify-center gap-0 w-[1vw] h-[1vw]">
                             <svg
                                 className="arrow primera next"
                                 width="8"

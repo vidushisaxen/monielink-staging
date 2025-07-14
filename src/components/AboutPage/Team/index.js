@@ -37,7 +37,7 @@ const Team = () => {
     <>
       <section
         data-theme="white"
-        className="bg-white-1 py-[4vw] max-md:py-[10%] max-sm:py-[15%] w-screen overflow-hidden"
+        className="bg-white-1 py-[8vw] max-md:py-[10%] max-sm:py-[15%] w-screen overflow-hidden"
       >
         <div className="px-[4vw] max-sm:px-[5.5vw]">
           <div className="w-[45%] mb-10 max-sm:w-[90%] max-sm:pb-0 max-md:pb-[10vw] max-md:w-[80%]">
@@ -162,17 +162,17 @@ const SwiperCard = ({ name,image,position,info, activeIndex, index }) => {
         </svg>
       </div>
       <div className="py-[3vw] max-md:py-0 max-sm:pb-[2vw] max-sm:pt-[5vw] relative z-10 gap-y-[4vw] flex-col flex items-start gap-[8vw] h-[60vh] w-full px-[4vw]">
-        <div className="w-full pl-[12vw] max-md:pl-0">
+        <div className="w-full pl-[12vw] max-md:pl-0 max-sm:pl-[8vw]">
           <h4 className="text-head-60 font-display max-md:text-nowrap">{name}</h4>
           <p className="text-head-50 font-display">{position}</p>
         </div>
         <div className="w-full h-[60%] rounded-[4vw] overflow-hidden">
           <Image
             src={image}
-            alt=""
+            alt="team"
             width={400}
             height={600}
-            className="w-full h-full object-cover bg-red-300"
+            className="w-full h-full object-cover bg-[#FE6E00]"
           />
         </div>
         <div className="space-y-[4vw] max-sm:space-y-[4vw] max-md:space-y-[2vw]">

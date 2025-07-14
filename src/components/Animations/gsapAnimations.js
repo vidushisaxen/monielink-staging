@@ -28,3 +28,26 @@ export function fadeUpAnim() {
   }, []);
 }
 
+export function lineAnim() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const lineDraws = document.querySelectorAll(".lineDraw");
+      lineDraws.forEach((lineDraw) => {
+        gsap.from(lineDraw, {
+          scrollTrigger: {
+            trigger: lineDraw,
+            start: "top 80%",
+          },
+          scaleX: 0,
+          transformOrigin: "left",
+          duration: 1,
+          yPercent: 100,
+          stagger: 0.07,
+          ease: "power3.out",
+        });
+      });
+    })
+    return () => ctx.revert()
+  }, []);
+}
+

@@ -168,9 +168,9 @@ const SwiperCard = ({ title, id, description, link }) => {
 
         <div className="w-full flex flex-col gap-[5vw] max-sm:gap-[5vw] max-md:gap-[2vw]">
           <h4 className="text-head-60 font-light w-[80vw]">{title}</h4>
-          <p className="text-[#A8A8A8] max-sm:text-[4.2vw] max-md:text-[2.5vw]">{description}</p>
+          <p className="text-[#A8A8A8] max-sm:text-[3.25vw] max-md:text-[2.5vw]">{description}</p>
         </div>
-        <div className="max-sm:pt-0 max-md:py-[10vw]">
+        <div className="max-sm:py-0 max-md:py-[10vw]">
 
         <BlackButton text={"Know More"} href={link} />
         </div>

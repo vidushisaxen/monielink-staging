@@ -298,20 +298,20 @@ p {
   content: "";
   position: absolute;
   height: 1px;
-  width: 1.8vw;
+  width: 2vw;
   background-color: oklch(0.922 0 0);
 }
 
 .text-area::before {
-  bottom: 10%;
-  left: -1%;
-  rotate: 50deg;
+  bottom: 9%;
+  left: -1.2%;
+  rotate: 53deg;
 }
 
 .text-area::after {
-  top: 10%;
+  top: 9.8%;
   right: -1%;
-  rotate: 50deg;
+  rotate: 60deg;
 }
 
 @property --gradient-angle {

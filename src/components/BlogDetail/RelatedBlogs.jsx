@@ -14,7 +14,7 @@ const RelatedBlogs = () => {
     <div className='w-full flex flex-col gap-[6vw] max-sm:gap-[10vw]'>
         <div className='w-full flex justify-between max-md:pt-[5vw] items-end'>
             <Copy>
-            <h2 className='text-head-100 font-display'>View More Blogs</h2>
+            <h2 className='text-head-100 font-display text-black-1'>View More Blogs</h2>
 
             </Copy>
              <div className='max-sm:hidden fadeupanim'><WhiteButton href={"/"} text={"View All"}/></div>

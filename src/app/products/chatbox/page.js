@@ -20,7 +20,7 @@ export default function ChatBox() {
         <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
        <Diagram/>
         <Values data={valuesData}/>
-        <Products/>
+        <Products  heading={"Explore Other Products"}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

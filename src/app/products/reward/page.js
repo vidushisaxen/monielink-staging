@@ -24,7 +24,7 @@ export default function Reward() {
        <Redemptions/>
        <Usage/>
         <Values data={valuesData}/>
-        <Products/>
+        <Products  heading={"Explore Other Products"}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

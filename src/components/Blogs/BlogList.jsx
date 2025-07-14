@@ -3,6 +3,7 @@ import React from "react";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import Link from "next/link";
 import ArrowButton from "../Buttons/ArrowButton";
+import Copy from "../Animations/Copy";
 
 const BlogList = () => {
   return (
@@ -13,11 +14,13 @@ const BlogList = () => {
         id="blog-listing"
       >
         <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[10vw] max-sm:gap-[10vw]">
+          <Copy>
           <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display capitalize flex flex-col max-sm:w-[80%] ">
             <span>Explore</span> <span>expert insights</span>{" "}
           </h2>
+          </Copy>
           <div className="w-full flex justify-between flex-wrap gap-y-[4vw] max-sm:flex-col max-sm:gap-y-[10vw]">
-            <div className="w-[66%] max-md:w-[100%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[70vh]">
+            <div className="w-[66%] fadeupanim max-md:w-[100%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[70vh]">
               <div className="w-full  flex justify-between max-sm:hidden">
                 <svg
                   width="1110"
@@ -123,7 +126,7 @@ const BlogList = () => {
                         Your passport to the web3 economy
                       </h3>
                     </div>
-                    <div className="w-[55%] max-md:w-[50%] h-[40%] rounded-[1.2vw] overflow-hidden max-md:rounded-[3vw] max-sm:rounded-[4vw]">
+                    <div className="w-[55%] max-md:w-[50%] h-[40%] rounded-[1.2vw] overflow-hidden max-md:rounded-[3vw] max-sm:rounded-[4vw] max-sm:w-full">
                       <Image
                         src={"/assets/images/blogs/blog-img-1.png"}
                         alt=""
@@ -147,7 +150,7 @@ const BlogList = () => {
               </div>
             </div>
             {blogContent.map((blog, index) => (
-              <div key={index} className={`w-[32%] max-md:w-[47%] h-fit relative group max-sm:w-full ${index==0?"max-sm:mt-[4vw]":""}`}>
+              <div key={index} className={`w-[32%] fadeupanim max-md:w-[47%] h-fit relative group max-sm:w-full ${index==0?"max-sm:mt-[4vw]":""}`}>
                 <div className="w-full h-fit">
                   <svg
                     width="532"
@@ -225,11 +228,11 @@ const BlogList = () => {
                       </h4>
                       <p className="text-content-20">{blog.description}</p>
 
-                      <Link href={blog.link} className="round relative flex items-center justify-center min-w-[9.3vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
+                      <Link href={blog.link} className="round relative ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
                 <div className="absolute inset-0 z-10">
-                    <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-5 justify-center">
+                    <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center">
                         <span className="text-content-18">Read More</span>
-                        <div className="rotate-180 text-black flex items-center justify-center gap-0 w-fit h-full">
+                        <div className="rotate-180 text-black flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
                             <svg
                                 className="arrow primera next"
                                 width="8"

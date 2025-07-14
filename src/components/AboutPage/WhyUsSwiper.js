@@ -105,12 +105,12 @@ const WhyUsSwiper = () => {
     
     gsap.set(".swiper-container", {
       scale: 0.5,
-      xPercent: -10,
+      xPercent: -15,
     });
 
     gsap.to(".swiper-container", {
       scale: 1,
-      xPercent: 0,
+      xPercent: -10,
       duration: 2,
       ease: 'power2.out',
       scrollTrigger: {
@@ -159,7 +159,7 @@ const WhyUsSwiper = () => {
           threshold={10}
           speed={100}
           slidesPerView={1.5}
-          className="mySwiper !px-[4.5vw] w-screen !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] max-md:!px-[5vw] max-md:h-[50vh] swiper-container"
+          className="mySwiper !px-[4.5vw] w-screen  !overflow-y-visible max-sm:!px-[5.5vw] max-sm:h-[55vh] max-md:!px-[5vw] max-md:h-[50vh] swiper-container"
         >
           {SwiperData.map((item, cardIndex) => {
             const isActive = activeIndex === cardIndex;
@@ -202,17 +202,17 @@ const SwiperCard = ({ id, title, description, index, activeIndex }) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
       }}
       className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[45vh] ${
-        isActive ? "h-[25vw] max-sm:h-[110vw] max-md:h-[30vh]" : ""
+        isActive ? "h-[28vw] max-sm:h-[110vw] max-md:h-[30vh]" : ""
       }`}
     >
       <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[10vw] max-md:p-[5vw]">
         <p className="max-sm:text-[4vw] max-md:text-[2.7vw]">00{id}</p>
         <div
-          className={`space-y-[3.5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[10vw] max-sm:mt-[12vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] ${
+          className={`space-y-[5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[10vw] max-sm:mt-[12vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] ${
             isActive ? "opacity-100" : "opacity-0 max-md:opacity-100"
           }`}
         >
-          <h4 className="text-content-30 font-display max-md:text-head-80 max-sm:text-head-80 capitalize">
+          <h4 className="w-[80%] text-content-30 font-display max-md:text-head-80 max-sm:text-head-80 capitalize">
             {title}
           </h4>
           <p className="text-content-20 mb-[3.5vw]">{description}</p>

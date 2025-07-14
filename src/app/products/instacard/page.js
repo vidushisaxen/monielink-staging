@@ -21,7 +21,7 @@ export default function TapPay() {
       <Flowchart/>
       <Universal/>
         <Values data={valuesData}/>
-        <Products/>
+        <Products  heading={"Explore Other Products"}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

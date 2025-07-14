@@ -81,7 +81,7 @@ const Redemptions = () => {
                             <p className='text-head-60 font-display text-center'>Redemptions</p>
                         </Copy>
                     </div>
-                    <div className='w-[65%]' ref={svgRefContainer}>
+                    <div className='w-[55%]' ref={svgRefContainer}>
                     <svg className='h-full w-full' width="970" height="264" viewBox="0 0 970 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="266.68" y1="143.5" x2="386.359" y2="143.5" stroke="white" className='line-1'/>
 <line x1="628.754" y1="143.5" x2="726.754" y2="143.5" stroke="#FFFFFF" className='line-2'/>

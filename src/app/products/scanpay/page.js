@@ -22,7 +22,7 @@ export default function ScanPay() {
        <StaticQR/>
         <DynamicQR/>
         <Values data={valuesData}/>
-        <Products/>
+        <Products  heading={"Explore Other Products"}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

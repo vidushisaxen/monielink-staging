@@ -15,7 +15,7 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-export default function Products() {
+export default function Products({heading}) {
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -60,11 +60,11 @@ export default function Products() {
 
       <div
         ref={containerRef}
-        className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw] max-sm:mt-0 max-sm:gap-[10vw] max-sm:pb-0"
+        className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[1vw] max-sm:mt-0 max-sm:gap-[10vw] max-sm:pb-0"
       >
         <Copy>
           <h2 className="text-foreground productsText text-[5.2vw] max-md:w-[80%]  w-[60%] max-sm:w-[90%] max-sm:text-center max-md:text-head-100 max-sm:text-head-100 text-center leading-[1.25] font-display capitalize pb-[5vw]">
-            Everything You Need to Power Digital Banking
+           {heading}
           </h2>
         </Copy>
 
@@ -242,7 +242,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] max-sm:py-[10vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full">
+      <div className="py-[3vw] max-sm:py-[10vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full max-sm:gap-y-[5vw]">
         <div className="h-[3.5vw] max-md:h-[5.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw] max-md:mb-[1vw]">
           <Image
             src={logo}
@@ -252,11 +252,11 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
             className="w-full h-full"
           />
         </div>
-        <ul className="py-[1vw] text-[#A8A8A8] max-sm:text-[2vw] max-md:mb-[0.5vw]  text-center space-y-4 w-2/4">
+        <ul className="py-[1vw] text-[#A8A8A8]  max-md:mb-[0.5vw]  text-center space-y-4 w-2/4 max-sm:space-y-[5vw]">
           {features.map((item, index) => (
             <li
               key={index}
-              className={`w-full border-b border-[#282828] max-md:text-[2vw] last:border-0 text-[0.95vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-2`}
+              className={`w-full border-b border-[#282828] text-gray-2 last:border-0 text-[0.95vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-2`}
             >
               {item}
             </li>

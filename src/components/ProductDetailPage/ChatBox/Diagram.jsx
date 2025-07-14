@@ -75,13 +75,13 @@ const Diagram = () => {
     <>
       <section
         data-theme="orange"
-        className="w-screen h-full overflow-hidden bg-gradient relative max-sm:hidden"
+        className="w-screen h-full overflow-hidden bg-gradient relative max-md:mt-[-1px] max-sm:pb-[15%]"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]">
-          <div className="w-[90%] space-y-[9vw]">
+        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]">
+          <div className="w-[90%] space-y-[9vw] max-md:w-[100%] max-sm:w-full">
             <Copy>
-              <h2 className="text-head-100 font-display text-center ">
+              <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left max-md:text-left">
                 Instant Support with ChatBot for a Smarter Customer Experience
               </h2>
             </Copy>
@@ -92,7 +92,8 @@ const Diagram = () => {
               </p>
             </Copy>
           </div>
-          <div className="w-[65%] max-md:w-[90%]" ref={svgContainer}>
+          <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw]'>
+          <div className="w-[55%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[5%] max-sm:w-[200%]" ref={svgContainer}>
             <svg
               className="h-full w-full"
               width="970"
@@ -296,26 +297,60 @@ const Diagram = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex items-start justify-between py-[2vw]">
-              <div className=" w-[22%] max-md:w-[30%] overflow-hidden">
+            <div className="w-full flex items-start justify-between py-[2vw] max-sm:justify-start max-sm:gap-[18vw]">
+              <div className=" w-[22%] max-md:w-[30%] overflow-hidden max-sm:w-[30%]">
                 <p className=" text-content-24 font-body max-md:text-content-20 text-center text1  ">
                   Users can choose a help topic to get assistance with any
                   services offered on SDK
                 </p>
               </div>
-              <div className=" w-[22%] max-md:w-[30%] overflow-hidden">
+              <div className=" w-[22%] max-md:w-[30%] overflow-hidden max-sm:w-[25%]">
                 <p className=" text-content-24 font-body max-md:text-content-20 text-center text2  ">
                   Chatbot presents questions for users to select{" "}
                 </p>
               </div>{" "}
-              <div className=" w-[25%] max-md:w-[30%] overflow-hidden">
+              <div className=" w-[25%] max-md:w-[30%] overflow-hidden max-sm:w-[35%]">
                 <p className=" text-content-24 font-body max-md:text-content-20 text-center text3  ">
                   The bot advances the conversation by asking follow-up
                   questions and providing answers when prompted
                 </p>
               </div>
             </div>
-          </div>
+            </div>
+            </div>
+
+            <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-md:flex max-sm:flex">
+                        <span className="text-content-18 max-md:text-content-20">Swipe</span>
+                        <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+          
         </div>
       </section>
     </>

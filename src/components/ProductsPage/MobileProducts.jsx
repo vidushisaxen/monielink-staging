@@ -145,10 +145,10 @@ function Accordion({ title, description, img, href, isOpen, onToggle }) {
           aria-expanded={isOpen}
           className="relative cursor-pointer w-full h-full max-sm:pt-[7vw] max-sm:pb-[12vw] flex items-start justify-between max-md:pt-[3vw] max-md:pb-[5vw]"
         >
-          <div className="w-[45%]  max-md:w-[35%] flex gap-[5vw]">
+          <div className="w-[45%]  max-md:w-[35%] flex gap-[5vw] max-sm:w-[55%]">
             <Image
               src={img}
-              alt=""
+              alt="products-icons"
               width={600}
               height={900}
               className="w-full h-full object-contain"

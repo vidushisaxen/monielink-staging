@@ -167,7 +167,6 @@ export default function MobileFooter() {
               </div>
             </div>
           </div>
-        ) 
       </footer>
     </div>
   );

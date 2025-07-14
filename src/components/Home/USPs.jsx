@@ -100,7 +100,7 @@ const uspData = [
           ))}
         </div>
 
-        <div>
+        <div className="py-[8vw]">
           <Copy>
             <h2 className="text-[7.3vw] max-md:text-head-140 text-center max-sm:py-[20vw] max-md:py-[5vw] leading-[1.2] font-display">
               <span>One SDK.</span><br />

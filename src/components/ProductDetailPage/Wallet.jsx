@@ -7,11 +7,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { lineAnim } from '../Animations/gsapAnimations';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 const Wallet = ({heading}) => {
+    lineAnim();
     const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
 
     const uspData = [
@@ -82,7 +84,7 @@ const Wallet = ({heading}) => {
                     ))}
                 </div>
 
-                <div className='h-[1px] w-full max-md:mt-[5vw] bg-white'></div>
+                <div className='h-[1px] w-full max-md:mt-[5vw] bg-white lineDraw'></div>
                 </div>
             </div>
 

@@ -28,7 +28,7 @@ export default function HomePage() {
         <Overview />
         <Solutions />
         <USPs />
-        <Products />
+        <Products  heading={"Everything needed to Power Digital Banking"}/>
         <Intro />
         <Clients />
         <Blogs />

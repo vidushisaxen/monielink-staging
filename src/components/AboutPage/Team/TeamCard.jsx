@@ -14,7 +14,7 @@ const TeamCard = ({ name, position, info, image, isOpen, onClick }) => {
     >
       <div className={`bg-white-2 relative p-[1.2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] flex justify-end text-black-1 transition-all duration-300 ${isOpen ? 'text-white' : 'text-black-1'}`}>
         <div
-          className={`bg-gradient absolute rounded-[15px]  top-0 left-0 w-full h-full right-0 bottom-0 transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0' }`} />
+          className={`bg-[#FE6E00] absolute rounded-[15px]  top-0 left-0 w-full h-full right-0 bottom-0 transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0' }`} />
         <div className="absolute z-10 left-[1.2vw] top-0 pt-[3vw] pb-[1.5vw] flex flex-col h-full justify-between items-start w-[40%]">
           <div className="">
             <h4 className="text-content-30 font-display mb-1">{name}</h4>

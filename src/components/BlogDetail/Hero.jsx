@@ -3,10 +3,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 import Copy from "../Animations/Copy";
-import { fadeUpAnim } from "../Animations/gsapAnimations";
+import { fadeUpAnim, lineAnim } from "../Animations/gsapAnimations";
 
 const Hero = () => {
-  fadeUpAnim()
+  fadeUpAnim();
+  lineAnim();
   
   const pathname = usePathname();
   const pathArray = pathname.split("/").filter(Boolean);
@@ -17,7 +18,7 @@ const Hero = () => {
       <div className="px-[5vw] bg-black-1 w-full h-full flex flex-col max-md:pt-[22%] pt-[15%] gap-[3vw] max-sm:pt-[30%]">
         <Copy>
 
-        <h1 className="text-head-100 font-display w-[60%] max-md:w-[85%] capitalize max-sm:w-[90%] max-sm:text-head-150 text-gray-1">
+        <h1 className="text-head-100 font-display w-[60%] max-md:w-[85%] capitalize max-sm:w-[90%] max-sm:text-head-150 text-white">
           Your passport to the web3 economy
         </h1>
         </Copy>

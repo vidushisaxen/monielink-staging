@@ -7,6 +7,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from "../Icons";
+import Copy from "../Animations/Copy";
 const BlogContent = () => {
   return (
     <section data-theme="white"
@@ -15,11 +16,11 @@ const BlogContent = () => {
       <div className="py-[10%] h-full w-full flex justify-between px-[5vw] max-sm:px-[5.5vw] max-sm:flex-col max-sm:gap-[15vw]">
         <div className="w-[20%] h-fit sticky max-md:hidden top-[10%] max-sm:static max-sm:w-full">
           <div className="w-full flex flex-col gap-[3vw] max-sm:gap-[8vw]">
-            <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw]">
+            <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw] fadeupanim">
               <span className="text-[1.5vw] max-sm:text-head-50">Posted On:</span>
               <p className="">June 6 , 2024</p>
             </div>
-            <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw]">
+            <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw] fadeupanim">
               <span className="text-[1.5vw] max-sm:text-head-50">Share Article:</span>
               <div className="w-fit flex gap-[1vw]">
                 {socials.map((item, index) => (
@@ -66,71 +67,77 @@ const BlogContent = () => {
           </div>
         </div>
         <div className="w-[65%] max-md:w-[100%] max-sm:w-full">
-          <p>
+          <p className="fadeupanim">
             The internet is evolving — and with it, so is the way we engage with
             money, identity, and value. Welcome to Web3: a decentralized,
-            user-owned digital economy that’s redefining how financial services
+            user-owned digital economy that&apos;s redefining how financial services
             work at a global scale
           </p>
-          <p>
+          <p className="fadeupanim">
             At its core, Web3 replaces centralized intermediaries with smart
             contracts, digital wallets, and blockchain-based protocols. It gives
             individuals true ownership of their assets and digital identities,
             while unlocking new forms of value exchange — from tokenized
             currencies to NFTs, DeFi, and beyond. <br />
             But while the promise of Web3 is vast, the path to participation
-            isn’t always simple.
+            isn&apos;t always simple.
           </p>
-          <p>
+          <p className="fadeupanim">
             Most users still live in a hybrid world — where traditional banking
-            meets emerging crypto experiences. That’s why infrastructure matters
+            meets emerging crypto experiences. That&apos;s why infrastructure matters
             more than ever.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw]  max-sm:my-[15vw]" />
+          <div className="w-full h-[1px] bg-black-1 my-[5vw]  max-sm:my-[15vw] lineDraw" />
+          <Copy>
           <h2>What is Web3 and Why Does It Matter?</h2>
-          <p>
+          </Copy>
+          <p className="fadeupanim">
             Web3 replaces traditional intermediaries with smart contracts,
             blockchain protocols, and self-custody. Users can hold digital
             assets, verify identities, and access financial tools — all without
             a central authority. This shift promises greater transparency,
             control, and opportunity for individuals and institutions alike.
             <br />
-            But participation isn’t frictionless. Most users still straddle two
+            But participation isn&apos;t frictionless. Most users still straddle two
             worlds — conventional banking and emerging crypto platforms — and
-            the infrastructure to connect them isn’t always seamless
+            the infrastructure to connect them isn&apos;t always seamless
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw]" />
+          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <Copy>
           <h2>Bridging Traditional Finance and the Web3 Economy</h2>
-          <span className="max-md:text-content-20">
+          </Copy>
+          <span className="max-md:text-content-20 fadeupanim">
             Moneylink is solving this challenge by providing the foundational
             tools banks and fintechs need to enable Web3 access:
           </span>
-          <ul className="max-md:text-content-20">
-            <li>
+          <ul className="max-md:text-content-20 fadeupanim">
+            <li >
               Smart Wallets: Create and manage digital wallets with
               multi-currency and crypto asset support
             </li>
-            <li>
+            <li >
               Programmable Cards: Issue virtual debit, credit, or prepaid cards
               linked to fiat and blockchain balances
             </li>
-            <li>
+            <li >
               Interoperable Transfers: Enable users to move funds between
               traditional bank accounts and blockchain networks
             </li>
-            <li>
+            <li >
               Compliant Onboarding: Seamlessly verify users and meet KYC/AML
               requirements for Web3 readiness
             </li>
           </ul>
-          <span className="max-md:text-content-20">
+          <span className="max-md:text-content-20 fadeupanim">
             Whether you're a neobank or an established institution, our platform
             helps you embed secure, Web3-ready functionality directly into your
             apps.
           </span>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw]" />
+          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <Copy>
           <h2>Why Emerging Markets Are Poised to Lead</h2>
-          <p>
+          </Copy>
+          <p className="fadeupanim">
             Markets like Nigeria are already mobile-first and digitally driven.
             With over 100 million adults expected to be banked by 2030, and a
             sharp rise in digital wallets and virtual card issuance, the
@@ -140,16 +147,18 @@ const BlogContent = () => {
             and ownership to millions — but only if the infrastructure is in
             place.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw]" />
-          <h2>The Future Is Here — Let’s Build It Together</h2>
-          <p>
-            Moneylink is your partner in connecting today’s financial ecosystem
-            to tomorrow’s decentralized world. With robust APIs, compliant
+          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <Copy>
+          <h2>The Future Is Here — Let&apos;s Build It Together</h2>
+          </Copy>
+          <p className="fadeupanim">
+            Moneylink is your partner in connecting today&apso;s financial ecosystem
+            to tomorrow&apos;s decentralized world. With robust APIs, compliant
             infrastructure, and a single Super SDK, we make it easy to scale
-            your services into the Web3 economy. Let’s shape the future of
+            your services into the Web3 economy. Let&apso;s shape the future of
             finance — together.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw]" />
+          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
         </div>
       </div>
     </section>

@@ -87,13 +87,13 @@ export default function BackgroundLine({
   }, [moveElementsByOne]);
 
   return (
-    <div className={`h-screen w-screen overflow-hidden  max-sm:hidden`}>
+    <div className={`h-screen w-screen overflow-hidden max-sm:h-[120vh]`}>
       <div className="flex flex-row items-center px-10 justify-between">
-        <div className="flex flex-col px-5 gap-1  h-full">
+        <div className="flex flex-col px-5 gap-1  h-full max-sm:h-[100vh]">
           {opacities2.map((opacity, index) => (
             <div
               key={index}
-              className={`w-[.5vw] transition-all duration-500 h-[1.5vw] `}
+              className={`w-[.5vw] max-sm:w-[1vw] transition-all duration-500 h-[1.5vw] `}
               style={{
                 backgroundColor: opacity != null ? "#FF5100" : "transparent",
                 opacity: opacity ?? 0,
@@ -101,11 +101,11 @@ export default function BackgroundLine({
             />
           ))}
         </div>
-        <div className="flex flex-col px-5  gap-1 w-fit  h-full">
+        <div className="flex flex-col px-5  gap-1 w-fit max-sm:h-[100vh]  h-full">
           {opacities.map((opacity, index) => (
             <div
               key={index}
-              className="w-[.5vw] transition-all duration-500 h-[1.5vw]"
+              className="w-[.5vw] max-sm:w-[1vw] transition-all duration-500 h-[1.5vw]"
               style={{
                 backgroundColor: opacity != null ? "#FF5100" : "transparent",
                 opacity: opacity ?? 0.5,
@@ -113,11 +113,11 @@ export default function BackgroundLine({
             />
           ))}
         </div>
-        <div className="flex flex-col px-5  gap-1 w-fit h-full">
+        <div className="flex flex-col px-5  gap-1 w-fit h-full max-sm:h-[100vh]">
           {opacities2.map((opacity, index) => (
             <div
               key={index}
-              className="w-[.5vw] transition-all duration-500 h-[1.5vw]"
+              className="w-[.5vw] max-sm:w-[1vw] transition-all duration-500 h-[1.5vw]"
               style={{
                 backgroundColor: opacity != null ? "#FF5100" : "transparent",
                 opacity: opacity ?? 0,
@@ -125,11 +125,11 @@ export default function BackgroundLine({
             />
           ))}
         </div>
-        <div className="flex flex-col px-5  gap-1 w-fit h-full">
+        <div className="flex flex-col px-5  gap-1 w-fit h-full max-sm:h-[100vh]">
           {opacities.map((opacity, index) => (
             <div
               key={index}
-              className="w-[.5vw] transition-all duration-500 h-[1.5vw]"
+              className="w-[.5vw] max-sm:w-[1vw] transition-all duration-500 h-[1.5vw]"
               style={{
                 backgroundColor: opacity != null ? "#FF5100" : "transparent",
                 opacity: opacity ?? 0.5,

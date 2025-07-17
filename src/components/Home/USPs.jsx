@@ -47,21 +47,26 @@ const uspData = [
   }
 ];
 
-  useGSAP(() => {
-    svgRefs.forEach((ref) => {
-      const paths = ref.current?.querySelectorAll(".usp-path");
-      if (paths) {
-        gsap.from(paths, {
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top 80%",
-          },
-          duration: 2,
-          drawSVG: 0,
-        });
-      }
-    });
+useGSAP(() => {
+  
+  svgRefs.forEach((ref) => {
+    const paths = ref.current?.querySelectorAll(".usp-path");
+    if (paths) {
+      gsap.from(paths, {
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top 80%",
+          once: true, 
+        },
+        duration: 2,
+        drawSVG: 0,
+        ease: "power2.out"
+      });
+    }
   });
+
+}, []); 
+
 
   return (
     <section data-theme="orange" id="usps" className="bg-gradient-to-r max-sm:w-screen from-[#FF5100] to-[#FE6E00] max-sm:py-[15%]">

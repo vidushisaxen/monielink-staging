@@ -24,7 +24,7 @@ export default function MobileFooter() {
   }, [isMobile]);
   return (
     <div className="relative max-md:hidden hidden max-sm:block" id="footer">
-      <div className="max-md:hidden hidden">
+      <div className="max-sm:h-[100vh]">
         <BackgroundLine />
       </div>
       <footer

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import PrimaryButton from "../Buttons/PrimaryButton";
+
 // import { LinkButton } from "../Buttons";
 
 const products = [
@@ -112,12 +113,13 @@ export default function MobileProducts({ allowMultiple = false }) {
       // single: either clear or only keep this one
       setOpenIndexes((prev) => (prev.includes(i) ? [] : [i]));
     }
+    
   }
 
   return (
     <section
       ref={sectionRef}
-      className="px-[7vw] max-sm:py-[15%] w-full h-fit relative max-md:py-[7%] bg-white hidden max-md:block "
+      className="px-[7vw] max-sm:py-[15%] w-full h-fit max-sm:h-[185vh] relative max-md:py-[7%] bg-white hidden max-md:block "
     >
       <div className="w-full space-y-[2vw]">
         {products.map((f, i) => (

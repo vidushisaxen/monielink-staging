@@ -4,6 +4,7 @@ import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CloudImplementationIcon } from "@/components/Icons";
 import { SecureEnvironmentIcon } from "@/components/Icons";
@@ -52,6 +53,7 @@ const Launch = () => {
   ];
 
   useGSAP(() => {
+    
     svgRefs.forEach((ref) => {
       const paths = ref.current?.querySelectorAll(".usp-path");
       if (paths) {
@@ -59,12 +61,14 @@ const Launch = () => {
           scrollTrigger: {
             trigger: ref.current,
             start: "top 80%",
+            // markers:true,
           },
           duration: 2,
           drawSVG: 0,
         });
       }
     });
+    
   });
 
   useEffect(() => {
@@ -73,6 +77,7 @@ const Launch = () => {
       gsap.set(".outer-paths path", { transformOrigin: "center" });
       const tl = gsap.timeline({
         scrollTrigger: {
+          
           trigger: bgsvgRef.current,
           start: "top 70%",
         },
@@ -98,6 +103,8 @@ const Launch = () => {
         ease: "power1.inOut",
       });
     }, bgsvgRef);
+
+    
 
     return () => ctx.revert();
   }, []);

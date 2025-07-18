@@ -8,13 +8,69 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Logo } from "../Icons";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useGSAP } from "@gsap/react";
+import Copy from "../Animations/Copy";
 import HamButton from "../Buttons/HamButton";
+import SocialMediaBtn from '@/components/Footer/SocialMediaBtn'
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "../Icons";
 import ScrambleText from "../ScrambleText";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { useLenis } from 'lenis/react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
+const socials = [
+  {
+    icon: <FacebookIcon />,
+    link: "/#",
+  },
+  {
+    icon: <LinkedinIcon />,
+    link: "/#",
+  },
+  {
+    icon: <InstagramIcon />,
+    link: "/#",
+  },
+  {
+    icon: <TwitterIcon />,
+    link: "//#",
+  },
+];
+
 const links = [
+  {
+    name: "About Us",
+    link: "/about",
+  },
+  {
+    name: "Solutions",
+    link: "/solutions",
+  },
+  {
+    name: "Products",
+    link: "/products",
+  },
+  {
+    name: "Resources",
+    link: "/blogs",
+  },
+  {
+    name: "Contact Us",
+    link: "/contact",
+  },
+];
+
+const links2 = [
+  {
+    name:'Home',
+    link:'/',
+  },
   {
     name: "About Us",
     link: "/about",
@@ -40,10 +96,53 @@ const links = [
 export default function Header({delay = 0}) {
   const [hidden, setHidden] = useState(false);
   const [lastY, setLastY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isInverted, setIsInverted] = useState(false);
   const [isWhite, setIsWhite] = useState(false);
-
   const pathname = usePathname();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    const ctx= gsap.context(() => {
+      if (isMobileMenuOpen)
+      {
+       gsap.from('.mobile-nav-item', {
+        delay:0.5,
+        yPercent:100,
+        opacity:0,
+        stagger:0.05,
+        duration:0.4,
+       })
+       gsap.fromTo('.mobile-nav-lines', {
+        width:'0%',
+       } ,{
+        width:'93%',
+        delay:0.2,
+        duration:0.8,
+        stagger:0.2,
+       })
+       gsap.from('.mobile-social-btn', {
+        yPercent:100,
+        opacity:0,
+        delay:1,
+        duration:0.8,
+        stagger:0.1,
+       })
+      }
+    })
+  
+    return () => ctx.revert();
+  })
+
+  useEffect(() => {
+    
+      if (isMobileMenuOpen) {
+        lenis&&lenis.stop();
+      } else {
+        lenis&&lenis.start();
+      }
+    
+  }, [isMobileMenuOpen, lenis]);
 
   useGSAP(() => {
     const triggers = [];
@@ -107,10 +206,24 @@ export default function Header({delay = 0}) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastY]);
 
+
+  const toggleMobileMenu = () => {
+  setIsMobileMenuOpen(!isMobileMenuOpen);
+  // lenis.stop();
+
+};
+
+const closeMobileMenu = () => {
+  setIsMobileMenuOpen(false);
+  // lenis.start();
+};
+
   return (
+    <>
     <header
       id="nav"
-      className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen z-[300] transform transition-transform duration-300 pointer-events-none max-sm:px-[6vw] max-md:px-[6vw] ${
+      className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] bg-black/10 max-md:backdrop-blur-[1vw]
+ ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
@@ -181,9 +294,9 @@ export default function Header({delay = 0}) {
             >
               <Logo className="h-full w-full" />
             </Link>
-            <div className="hidden max-md:block max-sm:block">
+            <div className="hidden max-md:block max-sm:block" onClick={toggleMobileMenu}>
               <HamButton
-                href={"/"}
+                // href={"/"}
                 rotate={""}
                 arrowColor={"#ffffff"}
                 borderColor={"#636363"}
@@ -198,7 +311,7 @@ export default function Header({delay = 0}) {
                   <Link
                     href={item.link}
                     key={index}
-                    className="flex items-center group gap-[0.5vw] justify-start pointer-events-auto"
+                    className="flex items-center group gap-[0.5vw] justify-start "
                   >
                     <div
                       style={
@@ -241,5 +354,109 @@ export default function Header({delay = 0}) {
         </div>
       </div>
     </header>
+
+    {/* Mobile Menu */}
+<div className={`fixed  inset-0 z-[400] w-screen origin-top-right overflow-hidden pointer-events-none ${isMobileMenuOpen ? '' : ''} hidden max-md:block max-sm:block`}>
+  {/* Backdrop */}
+  <div 
+    className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${
+      isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+    }`}
+    onClick={closeMobileMenu}
+  />
+
+ 
+  
+  {/* Mobile Menu Panel */}
+  <div className={`absolute top-[2%] right-[4%] max-sm:w-[75%] max-md:w-[50%] max-sm:h-[55vh] bg-black max-md:rounded-[2.5vw] max-sm:rounded-[5vw] shadow-2xl border border-neutral-600 z-[2] transform transition-all duration-500 ease-in-out origin-top-right  ${
+  isMobileMenuOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
+}`}
+      // style={{
+      //   clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
+      // }}
+>
+  <div >
+
+    
+  
+      
+
+    {/* Close Button */}
+    <button
+      onClick={closeMobileMenu}
+      className="absolute max-sm:top-4 max-sm:right-4 max-md:top-[6%] max-md:right-[12%] w-8 h-8 flex items-center justify-center rounded-full bg-black hover:bg-gray-200 transition-colors"
+    >
+      <svg className="max-sm:w-[5vw] max-md:w-[10vw] max-md:h-[10vw] max-sm:h-[5vw] text-gray-500" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12M4 4L12 12" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </button>
+
+    {/* Menu Content */}
+    <div className="flex flex-col h-full p-6 max-md:pt-[10vw] max-sm:pt-[15vw]">
+      {/* Navigation Links */}
+      <div className="flex">
+
+      
+      <nav className="flex flex-col relative max-md:gap-[0.2vw] max-sm:gap-[0.5vw] flex-grow">
+        {links2.map((item, index) => {
+          const isActive = pathname === item.link;
+          return (
+     <Link
+  href={item.link}
+  key={index}
+  onClick={closeMobileMenu}
+  className={`flex items-center justify-between max-md:p-[1vw] max-sm:p-[2.5vw]   transition-all duration-200 group hover:bg-gray-50 ${
+    isActive ? '' : ''
+  }`}
+>
+
+   <div className="h-[0.2vw] top-[13.5%] left-[3%] w-[58vw] absolute bg-neutral-800 mobile-nav-lines"/>
+    <div className="h-[0.2vw] top-[30.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800"/>
+     <div className="h-[0.2vw] top-[47.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800"/>
+      <div className="h-[0.2vw] top-[62.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800"/>
+       <div className="h-[0.2vw] top-[79.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800"/>
+        <div className="h-[0.2vw] top-[96.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800"/>
+  
+
+ 
+  <span className={`max-sm:text-[4.5vw] mobile-nav-item uppercase text-[2.5vw] font-medium ${
+    isActive ? 'text-gray-200' : 'text-gray-400'
+  }`}>
+    {item.name}
+  </span>
+  
+  <div className="w-[6vw] h-[6vw] max-md:p-[1.5vw] mobile-nav-item max-sm:p-[1vw] text-white">
+    <Image src='assets/icons/header/arrow.svg' alt='' width={900} height={900} />
+  </div>
+  
+  
+</Link>
+
+          );
+        })}
+       
+        
+      </nav>
+      
+      </div>
+
+     
+      <div className="mt-auto max-md:pt-[4vw] max-sm:pt-[2vw] ">
+        
+        
+        {/* Social Icons */}
+      <div className="pt-2 flex  items-start max-md:gap-[2.5vw] gap-2 fadeupanim">
+                    {socials.map((item, index) => (
+                      <SocialMediaBtn className="mobile-social-btn" key={index} href={item.href}>
+                        {item.icon}
+                      </SocialMediaBtn>
+                    ))}
+                  </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+    </>
   );
 }

@@ -129,16 +129,16 @@ export default function Loader() {
       id="LoaderScreen"
       className="h-screen bg-[#010101] fixed top-0 left-0 z-[9900]  w-full flex items-center justify-center"
     >
-      <div className="w-[70%] max-sm:w-[90%] h-[40%] relative flex">
+      <div className="w-[70%] max-sm:w-[100%] h-[40%] relative flex">
         <div className="opacity-0 text-wrap-loader">
-          <p className=" absolute left-1/2 -translate-x-1/2   top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] max-sm:text-[5vw]  tracking-widest font-mono font-medium uppercase  splitText">
+          <p className=" absolute  w-[68%] max-sm:w-[72%] left-1/2 -translate-x-1/2 max-md:text-[3.5vw] max-md:w-[72%]  top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] max-sm:text-[5vw]  tracking-widest font-mono font-medium uppercase  splitText">
             Design elevated by a tech forward aesthetic.
           </p>
         </div>
-        <div className="flex max-sm:flex-col max-sm:gap-[20vw] max-sm:py-[10vw] w-full h-full opacity-0 loader-container">
-          <div className="flex w-full blur-[10px] max-sm:pt-[10%] mainLogoLoader  items-center justify-start">
+        <div className="flex max-sm:flex-col max-sm:gap-[20vw] max-md:gap-[2vw] max-sm:py-[10vw] w-full h-full opacity-0 loader-container">
+          <div className="flex w-full max-sm:w-full max-md:w-[60vw]  blur-[10px] max-sm:pt-[10%] mainLogoLoader  items-center justify-start">
             <svg
-              className="h-full w-full max-sm:h-[10vw]"
+              className="h-full w-full max-sm:h-[10vw] max-md:h-[10vw]"
               width="200"
               height="60"
               viewBox="0 0 253 60"
@@ -172,15 +172,15 @@ export default function Loader() {
               </g>
             </svg>
           </div>
-          <div className="w-full h-full flex plus  items-center justify-center">
-            <div className="w-[2vw] h-[2vw] max-sm:h-[6vw] max-sm:w-[6vw] relative">
+          <div className="w-full h-full flex plus max-sm:w-full max-md:w-[20vw]   items-center justify-center">
+            <div className="w-[2vw] h-[2vw] max-md:w-[4vw] max-md:h-[4vw] max-sm:h-[6vw] max-sm:w-[6vw] relative">
               <div className="absolute w-[0.05vw] h-full bg-zinc-400 left-1/2 -translate-x-1/2"></div>
               <div className="absolute h-[0.05vw] w-full bg-zinc-400 top-1/2 -translate-y-1/2"></div>
             </div>
           </div>
-          <div className=" h-full w-full flex max-sm:flex-col max-sm:gap-[10vw] text-loader  relative items-center max-sm:justify-center justify-end">
-            <p className="text-left text-zinc-400 max-sm:text-[3.5vw] w-[68%] text-[1vw] tracking-widest font-mono scrambleText font-medium uppercase"></p>
-            <p className="text-left absolute right-0 max-sm:right-[10%] text-zinc-400 w-[40%] max-sm:text-[4vw] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
+          <div className=" h-full w-full flex max-sm:flex-col max-sm:gap-[10vw] text-loader  relative items-center max-sm:justify-center max-md:justify-start justify-end">
+            <p className="text-left text-zinc-400 max-sm:text-[3.5vw] w-[68%] text-[1vw] max-md:text-[2.5vw]  max-md:w-fit tracking-widest max-sm:w-[50%] max-sm:overflow-hidden font-mono scrambleText max-sm:text-center font-medium uppercase"></p>
+            <p className="text-left absolute right-0 max-md:right-[30%] max-sm:right-[18%] text-zinc-400 w-[40%] max-md:text-nowrap max-sm:text-[4vw] max-md:text-[2.5vw] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
           </div>
         </div>
       </div>

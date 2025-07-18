@@ -49,7 +49,7 @@ export default function HomePageHero({ heading, para, breadcrumb }) {
   return (
     <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
       {/* <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" /> */}
-      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
+      <div className="relative h-screen max-md:h-[80vh] max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
         <HeroBackground />
         <div
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}

@@ -403,18 +403,18 @@ const IndentityMobile = () => {
                     <li>Facial biometrics used to verify identity</li>
                   </ul>
                 </div>
-                <div className=" w-[15%] max-md:w-[30%] max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc  space-y-[0.8vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
-                    <li>Fund Transfers</li>
+                <div className=" w-[15%] max-md:w-[20%] max-sm:w-[90vw] max-sm:ml-[10vw]">
+                  <ul className="pl-[2vw] max-sm:pl-[8vw] list-disc  space-y-[0.8vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
+                    <li className="max-md:text-nowrap">Fund Transfers</li>
                     <li>Collect payments / Settlements</li>
-                    <li>Digital Payments</li>
+                    <li className="max-md:text-nowrap">Digital Payments</li>
                   </ul>
                 </div>{" "}
-                <div className=" w-[15%] max-md:w-[30%] max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full  font-body  text-center  max-sm:text-content-20 max-sm:text-left max-md:text-left">
-                    <li>Fund Transfers</li>
+                <div className=" w-[15%] max-md:w-[30%] max-md:ml-[10vw] max-sm:ml-[10vw] max-sm:w-[90vw]">
+                  <ul className="max-sm:pl-[12vw] max-md:pl-[10vw] list-disc space-y-[0.8vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full  font-body  text-center  max-sm:text-content-20 max-sm:text-left max-md:text-left">
+                    <li className="max-md:text-nowrap">Fund Transfers</li>
                     <li>Collect payments / Settlements</li>
-                    <li>Digital Payments</li>
+                    <li className="max-md:text-nowrap">Digital Payments</li>
                   </ul>
                 </div>
               </div>
@@ -710,10 +710,10 @@ const IndentityMobile = () => {
                   </ul>
                 </div>
                 <div className=" w-[15%] max-md:w-[30%] max-sm:w-[90vw]">
-                  <ul className="pl-[2vw] max-md:w-full list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-content-20 max-md:text-left">
-                    <li>Fund Transfers</li>
+                  <ul className="max-sm:pl-[10vw] max-md:pl-[7vw] max-md:w-full list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-content-20 max-md:text-left">
+                    <li className="max-md:text-nowrap">Fund Transfers</li>
                     <li>Collect payments / Settlements</li>
-                    <li>Digital Payments</li>
+                    <li className="max-md:text-nowrap">Digital Payments</li>
                   </ul>
                 </div>{" "}
               </div>

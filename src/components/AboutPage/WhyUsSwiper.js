@@ -28,11 +28,15 @@ const WhyUsSwiper = () => {
 
 
   useEffect(() => {
+
+    
     
     
     if (!swiperRef.current) return;
     
     const ctx = gsap.context(() => {
+
+      
       
       const swiperEl = swiperRef.current.el;
       const wrapper = swiperEl.querySelector(".swiper-wrapper");
@@ -102,6 +106,10 @@ const WhyUsSwiper = () => {
 
 
   useGSAP(() => {
+
+    if (globalThis.innerWidth < 1024) {
+      return;
+    }
     
     gsap.set(".swiper-container", {
       scale: 0.5,

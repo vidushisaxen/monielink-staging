@@ -84,7 +84,7 @@ import {
           <BackgroundLine />
         </div>
         <Image
-          className="h-full absolute top-0 left-0 z-[0] w-full"
+          className="h-full pl-[1vw] pb-[2vw] absolute top-0 left-0 z-[0] w-full"
           src={"/assets/icons/Tablet-Footer.svg"}
           alt="loader"
           width={100}
@@ -94,7 +94,7 @@ import {
           <div className="w-full h-[85%]  ">
             <div className="w-full h-[80%] flex">
               {/* left */}
-              <div className="w-1/2 h-full flex flex-col justify-between pb-[15%] px-[5vw] py-[5vw] ">
+              <div className="w-1/2 h-full flex flex-col justify-between pb-[15%] px-[5vw] py-[5.5vw] ">
                 <svg
                   width="200"
                   height="60"

@@ -86,7 +86,7 @@ const Biometrics = () => {
               </h2>
             </Copy>
           </div>
-            <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
+            <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw]'>
 
           <div className="w-[50%] max-md:w-[80%] max-sm:w-[150%]" ref={svgContainer}>
             <svg

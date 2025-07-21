@@ -731,44 +731,44 @@ const MobileInfrastructure = () => {
             <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-md:shrink-0 max-md:gap-[35vw] max-sm:gap-[40vw] max-md:translate-x-[-60%] max-sm:translate-x-0 max-md:mt-[5vw]">
               <div className=" w-[18%] max-md:w-[30%] ">
                 <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  max-md:w-full text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
-                  <li>Fund Transfers</li>
+                  <li  className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>
-              <div className=" w-[15%]  max-sm:w-[30%]">
+              <div className=" w-[30%]  max-sm:w-[30%] max-sm:ml-[6vw]">
                   <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body max-md:w-full text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
-                  <li>Fund Transfers</li>
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[15%] max-sm:w-[30%]">
-                  <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body max-md:w-full text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
-                  <li>Fund Transfers</li>
+              <div className=" w-[30%] max-sm:pl-[6vw] max-sm:w-[30%]">
+                  <ul className="  list-disc space-y-[0.8vw] font-medium text-content-24 font-body max-md:w-full text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[18%]  max-sm:w-[30%]">
+              <div className=" w-[18%]  max-sm:w-[30%] max-sm:ml-[5vw]">
                   <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body max-md:w-full  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
-                  <li>Fund Transfers</li>
-                  <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
+                  <li >Collect payments / Settlements</li>
+                  <li  className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[18%] max-sm:w-[30%]">
+              <div className=" w-[18%] max-sm:w-[30%] max-sm:ml-[5vw]">
                   <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body max-md:w-full  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
-                  <li>Fund Transfers</li>
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>
-              <div className=" w-[18%] max-sm:w-[30%]">
+              <div className=" w-[30%] max-sm:w-[30%] max-md:ml-[4vw] max-sm:ml-[5vw]">
                   <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body max-md:w-full  text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
-                  <li>Fund Transfers</li>
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>
               

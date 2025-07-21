@@ -8,7 +8,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Logo } from "../Icons";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useGSAP } from "@gsap/react";
-import Copy from "../Animations/Copy";
 import HamButton from "../Buttons/HamButton";
 import SocialMediaBtn from '@/components/Footer/SocialMediaBtn'
 import {
@@ -356,7 +355,8 @@ const closeMobileMenu = () => {
     </header>
 
     {/* Mobile Menu */}
-<div className={`fixed  inset-0 z-[400] w-screen origin-top-right overflow-hidden pointer-events-none ${isMobileMenuOpen ? '' : ''} hidden max-md:block max-sm:block`}>
+<div className={`fixed inset-0 z-[400] w-screen origin-top-right overflow-hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'} hidden max-md:block max-sm:block`}>
+
   {/* Backdrop */}
   <div 
     className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${
@@ -426,7 +426,7 @@ const closeMobileMenu = () => {
   </span>
   
   <div className="w-[6vw] h-[6vw] max-md:p-[1.5vw] mobile-nav-item max-sm:p-[1vw] text-white">
-    <Image src='assets/icons/header/arrow.svg' alt='' width={900} height={900} />
+    <Image src='/assets/icons/header/arrow.svg' alt='' width={900} height={900} />
   </div>
   
   

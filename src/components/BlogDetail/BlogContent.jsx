@@ -13,16 +13,16 @@ const BlogContent = () => {
     <section data-theme="white"
       className={`w-screen h-fit bg-white pt-[25%] mt-[-25%] text-black-1 max-sm:pt-[50%] max-sm:mt-[-50%] ${styles.blogContent}`}
     >
-      <div className="py-[10%] h-full w-full flex justify-between px-[5vw] max-sm:px-[5.5vw] max-sm:flex-col max-sm:gap-[15vw]">
-        <div className="w-[20%] h-fit sticky max-md:hidden top-[10%] max-sm:static max-sm:w-full">
+      <div className="py-[10%] h-full w-full flex justify-between px-[5vw] max-sm:px-[5.5vw] max-md:flex-col max-sm:flex-col max-sm:gap-[15vw]">
+        <div className="w-[20%] h-fit sticky  top-[10%] max-sm:static max-sm:w-full">
           <div className="w-full flex flex-col gap-[3vw] max-sm:gap-[8vw]">
             <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw] fadeupanim">
-              <span className="text-[1.5vw] max-sm:text-head-50">Posted On:</span>
-              <p className="">June 6 , 2024</p>
+              <span className="text-[1.5vw] max-md:text-[3.5vw] max-sm:text-head-50">Posted On:</span>
+              <p className="max-sm:text-[2vw] max-md:text-[3vw]">June 6 , 2024</p>
             </div>
             <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw] fadeupanim">
-              <span className="text-[1.5vw] max-sm:text-head-50">Share Article:</span>
-              <div className="w-fit flex gap-[1vw]">
+              <span className="text-[1.5vw] max-md:text-nowrap max-md:text-[3.5vw] max-sm:text-head-50">Share Article:</span>
+              <div className="w-fit flex gap-[1vw] max-md:gap-[3vw] max-sm:gap-[2.5vw] max-sm:pb-[1vw] max-md:pb-[5vw]">
                 {socials.map((item, index) => (
                   <div key={index}>
                     <a
@@ -31,9 +31,9 @@ const BlogContent = () => {
                       aria-label="Read More"
                       target="_blank"
                     >
-                      <div className="text-[#050505] group-hover:text-[#FF5100] duration-300 transition-colors relative flex items-center justify-center w-[4.2vw] max-sm:w-[14vw]">
+                      <div className="text-[#050505] max-sm:pb-[1vw] group-hover:text-[#FF5100] duration-300 transition-colors relative flex items-center justify-center w-[4.2vw] max-sm:w-[16vw] max-md:w-[9vw]">
                         <svg
-                          className="w-full h-full"
+                          className="w-full h-full "
                           width="77"
                           height="67"
                           viewBox="0 0 77 67"
@@ -46,13 +46,13 @@ const BlogContent = () => {
                           />
                         </svg>
 
-                        <div className="absolute inset-[6%]">
+                        <div className="absolute inset-[6%] ">
                           <div
                             style={{
                               clipPath:
                                 "polygon(100% 0%, 100% 66%, 71% 100%, 0% 100%, 0% 33%, 28% 0%)",
                             }}
-                            className="w-full absolute flex items-center justify-center h-full bg-[#636363]/20 group-hover:scale-100 scale-50 transition-all duration-400 opacity-0 group-hover:opacity-100"
+                            className="w-full  absolute flex items-center justify-center h-full bg-[#636363]/20 group-hover:scale-100 scale-50 transition-all duration-400 opacity-0 group-hover:opacity-100"
                           />
                           <div className="w-full h-full py-[28%] group-hover:scale-110 duration-300">
                             {item.icon}

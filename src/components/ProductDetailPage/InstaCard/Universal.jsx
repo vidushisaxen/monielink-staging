@@ -92,7 +92,7 @@ const Universal = () => {
               </h2>
             </Copy>
           </div>
-          <div className='w-screen  overflow-x-scroll flex flex-col items-center max-sm:items-start  max-sm:pr-[5vw]'>
+          <div className='w-screen  max-md:overflow-x-scroll flex flex-col items-center max-sm:items-start  max-sm:pr-[5vw]'>
           <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[0%] max-sm:w-[280%]" ref={svgContainer}>
             <svg
               className=" h-full w-full"

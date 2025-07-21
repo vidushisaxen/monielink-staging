@@ -100,12 +100,12 @@ export default function Solutions() {
                 // centeredSlides: true,
               },
             }}
-            className="mySwiper !px-[10vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
+            className="mySwiper !px-[10vw] max-md:!px-[3vw]  w-screen !overflow-y-visible max-sm:h-[55vh]"
           >
             {data.map((card, cardIndex) => (
               <SwiperSlide
                 key={cardIndex}
-                className="w-full h-full swiper-slides-anim !origin-top"
+                className="w-full h-full max-sm:!mr-[21vw] max-md:!mr-[8vw] swiper-slides-anim !origin-top"
               >
                 <SwiperCard
                   title={card.title}
@@ -120,7 +120,7 @@ export default function Solutions() {
             ))}
           </Swiper>
 
-          <div className="flex items-start max-sm:mt-0 max-md:mt-[5vw] justify-center gap-5 max-sm:w-full">
+          <div className="flex items-start max-sm:mt-0 max-md:mt-[8vw] justify-center gap-5 max-sm:w-full">
             <ArrowButton
               onClick={handlePrevClick}
               arrowColor={"#ffffff"}
@@ -151,8 +151,8 @@ const SwiperCard = ({
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-fit max-sm:py-0 max-md:py-[1vw] w-full active:scale-95 duration-300 transition-scale">
-      <div className="absolute h-full w-full max-md:w-[42vw] max-md:h-[100%] max-sm:w-[100%] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:pl-[1vw] ">
+    <div className="card relative h-fit max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale">
+      <div className="absolute h-full w-full max-md:w-[42vw] max-md:pb-[1vw] max-md:h-[38vh] max-sm:w-[85vw] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:px-[1vw] ">
         <svg
           width="466"
           height="638"
@@ -214,7 +214,7 @@ const SwiperCard = ({
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] relative z-10 gap-y-[3vw] flex-col flex items-start ml-[2vw] justify-between h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-sm:py-[8vw]">
+      <div className="py-[3vw] relative z-10 gap-y-[3vw] flex-col flex items-start ml-[2vw] justify-between h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw]">
         <div className=" w-[60%] max-sm:mx-0">
           <p className="text-head-60 font-display">{title}</p>
         </div>

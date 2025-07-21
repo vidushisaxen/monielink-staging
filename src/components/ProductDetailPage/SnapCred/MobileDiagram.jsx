@@ -500,30 +500,30 @@ const MobileDiagram = () => {
             <div className="w-full flex max-sm:translate-x-0 max-md:translate-x-[-30vw] max-md:gap-[37vw] items-start justify-start py-[2vw] max-sm:px-[5vw] max-md:px-[2vw] max-sm:justify-start max-sm:gap-[30vw]">
               <div className=" w-[18%] max-md:w-[30%] max-sm:w-[25%]">
                 <ul className="max-sm:pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim max-md:text-content-20 max-sm:pt-0 max-md:pt-[3vw]  max-sm:text-content-20 max-sm:text-left max-md:text-left">
-                  <li>Fund Transfers</li>
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>
-              <div className=" w-[15%] max-md:w-[20vw] max-sm:w-[25%] max-sm:pl-[2vw] max-md:pl-[4vw] max-sm:pt-0 max-md:pt-[2vw]">
-                <ul className="pl-[2vw]  list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
-                  <li>Fund Transfers</li>
+              <div className=" w-[15%] max-md:w-[20vw] max-sm:w-[30%] max-sm:ml-[7vw] max-md:pl-[4vw] max-sm:pt-0 max-md:pt-[2vw]">
+                <ul className="max-sm:pl-[8vw]  list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[15%] max-md:w-[20vw] max-sm:w-[25%] max-sm:pl-[2vw] max-md:pl-[6vw] max-sm:pt-0 max-md:pt-[2vw]">
-                <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
-                  <li>Fund Transfers</li>
+              <div className=" w-[15%] max-md:w-[20vw] max-sm:w-[30%] max-sm:ml-[7vw] max-md:pl-[2vw] max-sm:pt-0 max-md:pt-[2vw]">
+                <ul className="max-sm:pl-[8vw] max-md:pl-0 list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>{" "}
-              <div className=" w-[18%] max-md:w-[20vw] max-sm:w-[25%] max-sm:pl-[2vw] max-md:pl-[8vw] max-sm:pt-0 max-md:pt-[2vw]">
+              <div className=" w-[18%] max-md:w-[20vw] max-sm:w-[30%] max-sm:ml-[10vw] max-md:pl-0 max-sm:pt-0 max-md:pt-[2vw]">
                 <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim  max-sm:text-content-20 max-md:text-content-20 max-sm:text-left max-md:text-left">
-                  <li>Fund Transfers</li>
+                  <li className="max-md:text-nowrap">Fund Transfers</li>
                   <li>Collect payments / Settlements</li>
-                  <li>Digital Payments</li>
+                  <li className="max-md:text-nowrap">Digital Payments</li>
                 </ul>
               </div>{" "}
              

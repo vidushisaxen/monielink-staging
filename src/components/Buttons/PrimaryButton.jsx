@@ -4,24 +4,24 @@ import React from "react";
 function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }) {
     const sharedContent = (
         <>
-            <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
+            <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] max-md:w-[15vw] max-md:h-[5vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
                 <div className="absolute left-0 top-0 flex justify-start">
-                    <svg className="w-[5.5vw] h-auto max-sm:w-[23vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-[5.5vw] h-auto max-md:scale-[1.2] max-sm:scale-[1] max-sm:w-[23vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#FF5100" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>
-                <div className="absolute right-0 bottom-0 flex justify-end">
-                    <svg className="w-[5.5vw] h-auto rotate-180 max-sm:w-[23vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="absolute right-0 max-sm:right-0 max-md:right-[15%] bottom-0 flex justify-end">
+                    <svg className="w-[5.5vw] max-md:scale-[1.2] max-sm:scale-[1] h-auto rotate-180 max-sm:w-[23vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#FF5100" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>
                 <div className="absolute inset-0 z-10">
                     <div className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-gradient transition-all rounded-xs scale-x-[92%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] scale-y-[82%] group-hover:scale-100 duration-400" />
-                    <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
+                    <div className="w-[80%] max-md:w-[100%] max-sm:w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
                         <span className="text-content-18">{text}</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg
-                                className="arrow primera next"
+                                className="arrow primera next max-md:scale-[1.1] max-sm:scale-[1]"
                                 width="8"
                                 height="15"
                                 viewBox="0 0 8 15"
@@ -34,7 +34,7 @@ function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }
                                 />
                             </svg>
                             <svg
-                                className="arrow segunda next"
+                                className="arrow segunda next max-md:scale-[1.1] max-sm:scale-[1]"
                                 width="8"
                                 height="15"
                                 viewBox="0 0 8 15"

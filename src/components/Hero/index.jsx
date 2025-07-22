@@ -36,6 +36,15 @@ export default function Hero({ heading, para , breadcrumb}) {
       duration: 0.5,
       delay: 2,
     })
+    tl.fromTo(".breadcrumbsContainer", {
+      y: 50,
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      delay:-0.2
+    })
   });
 
   fadeUpAnim();
@@ -67,8 +76,8 @@ export default function Hero({ heading, para , breadcrumb}) {
           </div>
         </div>
         {breadcrumb && (
-        <div className="breadcrumbs w-full flex items-start justify-start text-content-20 text-gray-4  absolute left-[5%] bottom-[4%] max-sm:bottom-[-20%]">
-          <div className="flex gap-3  ">
+        <div className="breadcrumbs overflow-hidden w-full flex items-start justify-start text-content-20 text-gray-4  absolute left-[5%] bottom-[4%] max-sm:bottom-[-20%]">
+          <div className="flex gap-3  breadcrumbsContainer">
             <a onClick={(e) => {
               e.preventDefault();
               navigateTo('/')

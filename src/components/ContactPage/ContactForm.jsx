@@ -158,9 +158,7 @@ export default function ContactForm() {
     </FormItem>
   )}
 />
-
-
-              <div className="mt-[2vw] w-full flex justify-start max-md:pt-[5vw] max-sm:pt-[10vw]">
+            <div className="mt-[2vw] w-full flex justify-start max-md:pt-[5vw] max-sm:pt-[10vw]">
         <SecondaryButton href={"/"} text="Submit" className=" text-white" />
              
               </div>

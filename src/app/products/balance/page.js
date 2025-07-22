@@ -15,7 +15,7 @@ export default function Balance() {
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Digital Banking with Balance"} para={"Deliver modern financial services — from onboarding to transactions — inside your mobile app using Moneylink’s Super SDK."} breadcrumb={true}/>
+        <Hero heading={"Seamless Digital Banking with Balance"} para={"Deliver modern financial services — from onboarding to transactions — inside your mobile app using Moneylink’s Super SDK.Deliver modern financial services — from onboarding to transactions — inside your mobile app."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
         <Infrastructure2/>

@@ -83,8 +83,8 @@ export default function Solutions() {
               setActiveIndex(swiper.activeIndex);
             }}
             // centeredSlides={true}
-            slidesPerView={3}
-            spaceBetween={80}
+            slidesPerView={3.5}
+            spaceBetween={40}
             speed={500}
             breakpoints={{
               0: {

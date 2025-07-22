@@ -117,7 +117,7 @@ const BlogList = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="absolute top-0 left-0 w-full  h-fit max-md:top-[2.5%] max-sm:top-[3%]">
+              <div className="absolute top-0 left-0 w-full  h-fit max-md:top-[2.5%] max-sm:top-[3%] group/card">
                 <div className="w-full h-full px-[2.5vw]  pt-[3vw] flex flex-col gap-[2vw] max-sm:px-0 max-sm:pt-0 max-md:pt-[6vw] max-md:gap-[3vw] max-sm:gap-[7vw]">
                   <div className="flex justify-between max-sm:flex-col max-sm:gap-[6vw]">
                     <div className="flex flex-col gap-[1.5vw] w-[40%] max-md:w-[50%] max-sm:order-1 max-sm:w-full max-sm:px-[4vw] max-sm:gap-[4vw]">
@@ -132,7 +132,7 @@ const BlogList = () => {
                         alt=""
                         width={700}
                         height={400}
-                        className="w-full h-full object-cover scale-[1.1] group-hover:scale-100 duration-300 ease-in-out"
+                        className="w-full h-full object-cover scale-[1.1] group-hover/card:scale-100 duration-300 ease-in-out"
                       />
                     </div>
                   </div>

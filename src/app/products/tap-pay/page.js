@@ -19,7 +19,7 @@ export default function TapPay() {
         <Intro content={introData}/>
         <Wallet heading={"Enable merchants to accept payments instantly using interoperable static or dynamic QR codes — compatible with all major banks and wallets. Fast, secure, and frictionless for both merchants and customers."}/>
        <Diagram/>
-       <Process/>
+       {/* <Process/> */}
         <Values data={valuesData}/>
         <Products  heading={"Explore Other Products"}/>
         <FAQs data={faqData} />

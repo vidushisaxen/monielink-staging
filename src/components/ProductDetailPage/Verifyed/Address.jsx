@@ -63,9 +63,9 @@ const Address = () => {
                     .to(rects, {
                         opacity: 1,
                         duration: 1,
-                        stagger: 0.01,
+                        stagger: 0.08,
                         ease: "power2.out"
-                    }, "-=1");
+                    }, "-=0.8");
                     
                     // Text animations - only if corresponding texts exist
                     if (correspondingTexts && correspondingTexts.length > 0) {

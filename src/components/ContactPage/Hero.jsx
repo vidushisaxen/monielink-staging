@@ -12,23 +12,20 @@ gsap.registerPlugin(useGSAP);
 
 export default function Hero() {
     fadeUpAnim();
-    const btnContainer = useRef();
+    const contactContainer = useRef();
 
     useGSAP(() => {
         const tl = gsap.timeline();
-        // gsap.to('#loader', {
-        //     duration: 0.5,
-        //     opacity: 0,
-        //     delay: 1.5,
-        // })
-        tl.fromTo(btnContainer.current, {
+      
+        tl.fromTo(".contactContainer", {
             y: 50,
             opacity: 0,
         }, {
             y: 0,
             opacity: 1,
             duration: 0.5,
-            delay: 2,
+            delay: 1,
+            stagger:0.08
         })
     });
 
@@ -40,14 +37,14 @@ export default function Hero() {
                 <div
                     className={`h-fit pointer-events-none w-full !pt-[15vw] flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
                 >
-                    <Copy delay={1.2}>
+                    <Copy delay={1}>
                         <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}>
                             Get in Touch
                         </h1>
                     </Copy>
                     <div
                         className={`w-[50%] max-md:w-[60%] pt-5 max-md:pt-[5vw] text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-sm:pt-[10vw]`}>
-                        <Copy delay={1.5}>
+                        <Copy delay={1.2}>
                             <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
                                 We&apos;re here to help you launch, scale, and grow in the digital finance economy. Whether you're a bank, fintech, merchant, or partner — let&apos;s connect and build the future of finance together.
                             </p>
@@ -57,9 +54,9 @@ export default function Hero() {
                 </div>
 
                 <div className="flex items-center  max-sm:hidden max-md:flex-wrap  max-md:flex-row-reverse justify-center gap-[3vw] z-[99]">
-                    <div className="relative w-[18vw] max-md:w-[40vw] max-md:h-[40vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
+                    <div  className=" contactContainer relative w-[18vw] max-md:w-[40vw] max-md:h-[40vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw]  pointer-events-none rounded-[1vw]">
                         <Image
-                            src="/assets/icons/contact/card-frame.svg"
+                            src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
                             fill
                             className="object-contain "
@@ -82,10 +79,9 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
-
+                    <div  className=" contactContainer relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] pointer-events-none rounded-[1vw] ">
                         <Image
-                            src="/assets/icons/contact/card-frame.svg"
+                            src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
                             fill
                             className="object-contain"
@@ -108,10 +104,9 @@ export default function Hero() {
                             </Copy>
                         </div>
                     </div>
-                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] fadeupanim">
-
+                    <div  className=" contactContainer relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99]  pointer-events-none rounded-[1vw] ">
                         <Image
-                            src="/assets/icons/contact/card-frame.svg"
+                            src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
                             fill
                             className="object-contain"

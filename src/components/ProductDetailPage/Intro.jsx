@@ -65,11 +65,11 @@ const Intro = ({ content }) => {
               {content.list.map((item, index) => (
                 <div
                   key={index}
-                  className="w-full flex gap-[1.5vw] max-md:items-start items-center overflow-hidden max-md:gap-[5vw] max-sm:gap-[5vw]"
+                  className="w-full flex gap-[1.5vw] items-start max-md:items-start overflow-hidden max-md:gap-[5vw] max-sm:gap-[5vw]"
                 >
                   <span className="h-[2vw] w-[0.6vw]  max-md:h-[5vw] max-md:w-[1vw] max-sm:h-[10vw] max-sm:w-[2vw]  bg-[#FE6E00] bar-anim inline-block" />
                   <Copy>
-                    <p className="text-content-20 text-black-1 max-md:w-full font-body w-[75%] max-sm:w-full">
+                    <p className="text-content-20 items-start text-black-1 max-md:w-full font-body w-[75%] max-sm:w-full">
                       {item}
                     </p>
                   </Copy>

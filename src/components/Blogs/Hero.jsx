@@ -68,7 +68,7 @@ export default function Hero({ heading, para, breadcrumb }) {
             <h1
               className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}
             >
-              Ideas, Insights & Innovation
+              Ideas, Insights <br/> & Innovation
             </h1>
           </Copy>
           <div

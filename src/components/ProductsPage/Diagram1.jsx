@@ -75,9 +75,9 @@ const Diagram1 = () => {
                     .to(rects, {
                         opacity: 1,
                         duration: 1,
-                        stagger: 0.01,
+                        stagger: 0.08,
                         ease: "power2.out"
-                    }, "-=1");
+                    }, "-=0.8");
                     
                     if (correspondingTexts && correspondingTexts.length > 0) {
                         tl.to(correspondingTexts, {
@@ -147,7 +147,7 @@ const Diagram1 = () => {
 <clipPath id="bgblur_0_122_607_clip_path" transform="translate(-0.466213 -0.934198)"><path d="M389.04 35.7422C391.586 35.7424 393.649 37.8067 393.649 40.3525V88.9969C393.649 89.84 393.303 90.646 392.692 91.2263L354.786 127.196C354.215 127.738 353.458 128.04 352.67 128.04H42.958C40.412 128.04 38.3478 125.976 38.3477 123.43V76.8654C38.3477 76.0224 38.694 75.2163 39.3055 74.636L79.4035 36.5862C79.9746 36.0443 80.7319 35.7422 81.5191 35.7422H389.04Z"/>
 </clipPath></defs>
 </svg>
-<div className='absolute top-[40%] left-[40%] max-md:left-[36%] max-sm:left-[32%] overflow-hidden'>
+<div className='absolute top-[42%] left-[40%] max-md:left-[36%] max-sm:left-[32%] overflow-hidden'>
     <Copy>
                                 <p className='text-content-20 max-sm:text-content-20 max-md:text-[2.5vw] font-body text-center'>SDK Integration</p>
                                 </Copy>

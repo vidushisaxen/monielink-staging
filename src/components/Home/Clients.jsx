@@ -103,7 +103,7 @@ export default function Clients() {
 }, []);
   useGSAP(() => {
     const activeAnimsRef = { current: [] };
-    const DURATION = 4;
+    const DURATION = 3;
     const REVEAL_DURATION = 4;
     curveIDs.forEach((id) => {
       const gradient = document.getElementById(id);
@@ -150,7 +150,7 @@ export default function Clients() {
               attr: { gradientTransform: "translate(1200, 0)" },
               duration: DURATION,
               ease: "linear",
-              delay: 1.35,
+              delay: 1.15,
             }
           );
           activeAnimsRef.current.push(anim);
@@ -169,10 +169,10 @@ export default function Clients() {
         tl.fromTo(
           lineGradient,
           {
-            attr: { gradientTransform: "translate(-1920, 0)" },
+            attr: { gradientTransform: "translate(-1000, 0)" },
           },
           {
-            attr: { gradientTransform: "translate(1920, 0)" },
+            attr: { gradientTransform: "translate(1000, 0)" },
             duration: DURATION,
             ease: "linear",
           }

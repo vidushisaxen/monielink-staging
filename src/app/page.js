@@ -17,8 +17,9 @@ import Loader2 from "@/components/Loader/Loader2";
 export default function HomePage() {
   return (
     <>
-      <Layout delay={10}>
-        <Loader />
+      {/* <Layout delay={10}> */}
+      <Layout >
+        {/* <Loader /> */}
         <HomePageHero
           heading={" Powerful Neobank Platform"}
           para={

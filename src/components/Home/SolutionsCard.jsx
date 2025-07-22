@@ -233,7 +233,7 @@ const SolutionsCard = ({ solutionsRef }) => {
             className="border-l py-5 w-[15vw] max-sm:min-w-[45vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw]  max-sm:w-full"
             onClick={() => handleCardClick(index)}
           >
-            <ScrambleText text={item} speed={0.5} charType={"lowerCase"}/>
+            <ScrambleText text={item} speed={0.6} charType={"lowerCase"}/>
           </div>
         ))}
       </div>
@@ -273,11 +273,65 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
             <div className="flex items-start justify-between gap-10">
               <div className="flex items-start justify-start gap-10">
                 <div className="h-full w-[2vw]">
-                  <img
+                <svg
+  className="w-full h-[70%]"
+  width="38"
+  height="291"
+  viewBox="0 0 38 291"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g filter="url(#filter0_f_73_814920)">
+    <rect className="bar bar-3" x="13.9219" y="124.314" width="10.6121" height="41.7132" fill="#FF2900"/>
+  </g>
+  <rect className="bar bar-3" x="13.9219" y="126.44" width="10.6121" height="37.461" fill="#FF2900"/>
+
+  <g filter="url(#filter1_f_73_814920)">
+    <rect className="bar bar-2" x="13.9219" y="84.2959" width="10.6121" height="37.461" fill="#FF5100"/>
+  </g>
+  <rect className="bar bar-2" x="13.9219" y="84.2959" width="10.6121" height="37.461" fill="#FF5100"/>
+  {/* <rect className="" x="13.9219" y="252.871" width="10.6121" height="37.461" fill="#000000"/> */}
+
+
+  <rect className="bar bar-1" x="13.9219" y="42.1526" width="10.6121" height="37.461" fill="#8F2E00"/>
+  <rect className="bar bar-0" x="13.9219" y="0.00878906" width="10.6121" height="37.461" fill="#3F1C00"/>
+
+  <g filter="url(#filter2_f_73_814920)">
+    <rect className="bar bar-4" x="13.9219" y="168.583" width="10.6121" height="37.461" fill="#FF5100"/>
+  </g>
+  <rect className="bar bar-4" x="13.9219" y="168.583" width="10.6121" height="37.461" fill="#FF5100"/>
+
+  <rect className="bar bar-5" x="13.9219" y="210.727" width="10.6121" height="37.461" fill="#8F2E00"/>
+  <rect className="bar bar-6" x="13.9219" y="252.871" width="10.6121" height="37.461" fill="#3F1C00"/>
+
+ 
+
+
+  <defs>
+    <filter id="filter0_f_73_814920" x="0.500343" y="110.892" width="37.4549" height="68.5562" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="6.71077" result="effect1_foregroundBlur_73_814920"/>
+    </filter>
+    <filter id="filter1_f_73_814920" x="5.86896" y="76.243" width="26.7177" height="53.5668" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="4.02646" result="effect1_foregroundBlur_73_814920"/>
+    </filter>
+    <filter id="filter2_f_73_814920" x="5.86896" y="160.531" width="26.7177" height="53.5668" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="4.02646" result="effect1_foregroundBlur_73_814920"/>
+    </filter>
+  </defs>
+</svg>
+
+
+                  {/* <img
                     className="w-full h-[70%]"
                     src="/assets/images/solutionsLights.png"
-                    alt="solutionLights"
-                  />
+                    alt="solutionLights" */}
+                  {/* /> */}
                 </div>
                 <div className="w-[65%] flex flex-col items-start justify-center">
                   <p className="text-[#D6D6D6] font-display leading-none text-[3.12vw] max-sm:text-[4vw]">

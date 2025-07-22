@@ -22,7 +22,7 @@ function WhiteButton({ href, onClick, rotate, text, className = "", ...props }) 
                     >
                     </div>
                     <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-5 justify-center">
-                        <span className="text-content-18 text-end">{text}</span>
+                        <span className="text-content-18 text-end capitalize">{text}</span>
                         <div className="rotate-180 text-black flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next"

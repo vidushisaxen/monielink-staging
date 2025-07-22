@@ -20,8 +20,8 @@ function BlackButton({ href, onClick, rotate, text, className = "", ...props }) 
                         className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-black transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] duration-400 border border-[#a8a8a8] after:h-[1.2px] after:bg-[#A8a8a8] after:w-[2vw] after:-rotate-[47.2deg] after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.2px] before:w-[2vw] before:bg-[#A8a8a8] before:-rotate-[48.3deg] before:right-[-3.4%] before:bottom-[14%]"
                     >
                     </div>
-                    <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
-                        <span className="text-content-18 text-end">{text}</span>
+                    <div className="w-[90%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
+                        <span className="text-content-18 text-end capitalize">{text}</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next"

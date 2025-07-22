@@ -389,6 +389,24 @@ li .link-line::after {
     1.3vw 0%
   );
 }
+@keyframes darkToLight {
+  0% { fill: #3F1C00; }
+  50% { fill: #FF5100; }
+  100% { fill: #3F1C00; }
+}
+
+.bar {
+  animation: darkToLight 2s infinite ease-in-out;
+}
+
+.bar-0 { animation-delay: 0s; }
+.bar-1 { animation-delay: 0.2s; }
+.bar-2 { animation-delay: 0.4s; }
+.bar-3 { animation-delay: 0.6s; }
+.bar-4 { animation-delay: 0.8s; }
+.bar-5 { animation-delay: 1s; }
+.bar-6 { animation-delay: 1.2s; }
+
 
 
 /* Tablet responsve */

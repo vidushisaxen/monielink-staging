@@ -201,7 +201,7 @@ export default function Solutions() {
                   }`}
                   onClick={() => goToSlide(i)}
                 >
-                  <ScrambleText text={f.title} speed={0.5}/>
+                  <ScrambleText text={f.title} speed={0.7}/>
                 </button>
               ))}
             </div>
@@ -246,12 +246,12 @@ export default function Solutions() {
                 </div>
               ))}
             </div>
-            <button
-          onClick={handleSkip}
-          className="text-[#A8A8A8] absolute bottom-10 right-0 z-30 text-[0.9vw] flex items-center gap-1 group  cursor-pointer"
-        >
-          Skip
-          <div className="-rotate-90 text-[#A8A8A8] flex items-center justify-center gap-0 w-[1vw] h-[1vw]">
+           
+        <button  onClick={handleSkip} className="round absolute bottom-0 right-[-5%] ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] cursor-pointer">
+                <div className="absolute inset-0 z-10">
+                    <div className="w-[80%] mx-auto h-full text-[#A8A8A8] relative z-10 flex items-center gap-3 justify-center">
+                        <span className="text-content-18">Skip</span>
+                        <div className="-rotate-90 text-[#A8A8A8] flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
                             <svg
                                 className="arrow primera next"
                                 width="8"
@@ -279,8 +279,9 @@ export default function Solutions() {
                                 />
                             </svg>
                         </div>
-         
-        </button>
+                    </div>
+                </div>
+            </button>
           </div>
          
         </section>

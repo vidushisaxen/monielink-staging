@@ -221,7 +221,7 @@ const closeMobileMenu = () => {
     <>
     <header
       id="nav"
-      className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] bg-black/10 max-md:backdrop-blur-[1vw]
+      className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-sm:bg-black/10 max-md:backdrop-blur-[1vw]
  ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
@@ -333,7 +333,7 @@ const closeMobileMenu = () => {
                       >
                         <ScrambleText
                           text={item.name}
-                          speed={0.4}
+                          speed={0.8}
                           charType={"lowercase"}
                         />
                       </span>

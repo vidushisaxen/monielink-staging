@@ -9,7 +9,7 @@ const TeamCard = ({ name, position, info, image, isOpen, onClick }) => {
         overflow: 'hidden',
         clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0% 3vw, 3vw 0%)',
       }}
-      className={`fadeupanim w-[49vw] h-full bg-white-3 overflow-hidden p-[1px] rounded-[16px] flex items-center relative justify-center after:absolute after:bg-white-3 after:top-[1.5vw] after:left-[-0.75vw] after:-rotate-45 after:h-[1.5px] after:w-[4.5vw]`}
+      className={` w-[49vw] h-full bg-white-3 overflow-hidden p-[1px] rounded-[16px] flex items-center relative justify-center after:absolute after:bg-white-3 after:top-[1.5vw] after:left-[-0.75vw] after:-rotate-45 after:h-[1.5px] after:w-[4.5vw]`}
       onClick={onClick}
     >
       <div className={`bg-white-2 relative p-[1.2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] flex justify-end text-black-1 transition-all duration-300 ${isOpen ? 'text-white' : 'text-black-1'}`}>

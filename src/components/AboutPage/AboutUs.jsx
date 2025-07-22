@@ -86,7 +86,7 @@ const AboutUs = () => {
             </Copy>
            
             <Copy>
-              <p className="text-content-20 max-sm:leading-[1.5]">
+              <p className="text-content-20 leading-[1.5] max-sm:leading-[1.5]">
                 Our Dedicated Instance SaaS model replicates the control and
                 security of an on-premise setup — hosted on Monielink&apos;s secure
                 cloud infrastructure. Each partner operates within a fully

@@ -26,18 +26,10 @@ const WhyUsSwiper = () => {
     swiperRef.current.slideNext();
   };
 
-
   useEffect(() => {
-
-    
-    
-    
     if (!swiperRef.current) return;
     
-    const ctx = gsap.context(() => {
-
-      
-      
+    const ctx = gsap.context(() => {      
       const swiperEl = swiperRef.current.el;
       const wrapper = swiperEl.querySelector(".swiper-wrapper");
       const slideEls = Array.from(wrapper.querySelectorAll(".swiper-slide"));
@@ -101,16 +93,11 @@ const WhyUsSwiper = () => {
     return () => ctx.revert();
   }, []);
 
-
-
-
-
   useGSAP(() => {
 
     if (globalThis.innerWidth < 1024) {
       return;
     }
-    
     gsap.set(".swiper-container", {
       scale: 0.5,
       xPercent: -15,
@@ -119,6 +106,7 @@ const WhyUsSwiper = () => {
     gsap.to(".swiper-container", {
       scale: 1,
       xPercent: -10,
+      // yPercent:-15,
       duration: 2,
       ease: 'power2.out',
       scrollTrigger: {
@@ -132,9 +120,24 @@ const WhyUsSwiper = () => {
 
   return (
     <>
+     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:mt-0 max-md:mt-[8vw] justify-end gap-5 max-sm:w-full">
+            <ArrowButton
+              onClick={handlePrevClick}
+              arrowColor={"#ffffff"}
+              borderColor={"#ffffff"}
+              hoverColor={"bg-white/20"}
+              rotate={"-rotate-180"}
+            />
+            <ArrowButton
+              onClick={handleNextClick}
+              arrowColor={"#ffffff"}
+              borderColor={"#ffffff"}
+              hoverColor={"bg-white/20"}
+            />
+          </div>
       <div
         ref={containerRef}
-        className="flex justify-start items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] max-md:flex-col max-md:gap-[4vw]"
+        className="flex justify-start relative items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] max-md:flex-col max-md:gap-[4vw]"
       >
         <Swiper
           modules={[Navigation]}
@@ -190,11 +193,11 @@ const WhyUsSwiper = () => {
             );
           })}
         </Swiper>
-          <div className="flex items-center justify-center gap-5 max-sm:pt-[0vw] max-sm:mb-[10vw] max-md:pt-0 max-md:mb-[10vw]">
-          <ArrowButton onClick={handlePrevClick} arrowColor={"#ffffff"} borderColor={"#ffffff"} hoverColor={"bg-[#636363]/20"} rotate={"-rotate-180"} />
-          <ArrowButton onClick={handleNextClick} arrowColor={"#ffffff"} borderColor={"#ffffff"} hoverColor={"bg-[#636363]/20"} />
-        </div>
+        
       </div>
+       
+       
+         
     </>
   );
 };

@@ -138,7 +138,7 @@ import {
                             <span className="text-[#A8A8A8] uppercase text-[2.2vw] ">
                               <ScrambleText
                                 text={item.name}
-                                speed={0.6}
+                                speed={0.8}
                                 charType={"lowercase"}
                               />
                             </span>
@@ -173,7 +173,7 @@ import {
                             <span className="text-[#A8A8A8] uppercase text-[2.2vw]">
                               <ScrambleText
                                 text={item.name}
-                                speed={0.6}
+                                speed={0.8}
                                 charType={"lowercase"}
                               />
                             </span>
@@ -192,7 +192,7 @@ import {
               >
                 <ScrambleText
                   text={"info@monielink.io"}
-                  speed={0.45}
+                  speed={0.8}
                   charType={"lowercase"}
                 />
               </a>

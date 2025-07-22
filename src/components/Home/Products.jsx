@@ -70,7 +70,7 @@ export default function Products({heading}) {
 
         <Swiper
           modules={[Navigation]}
-          initialSlide={1}
+          initialSlide={0}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setActiveIndex(swiper.activeIndex);
@@ -85,7 +85,7 @@ export default function Products({heading}) {
           breakpoints={{
             0: {
               slidesPerView: 1,
-              centeredSlides: true,
+              centeredSlides: false,
             },
             768: {
               slidesPerView: 2,
@@ -93,7 +93,7 @@ export default function Products({heading}) {
             },
             1080: {
               slidesPerView:3,
-              centeredSlides:true,
+              centeredSlides:false,
             }
           }}
           className="mySwiper !px-[4.5vw] max-md:px-0 max-sm:px-[2vw] w-screen !overflow-y-visible"
@@ -196,9 +196,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
             <path d="M511 1C522.046 1 531 9.95436 531 21V657.707C531 668.753 522.046 677.707 511 677.707H21C9.95438 677.707 1 668.753 1 657.707V84.7149C1 79.2288 3.2536 73.9836 7.23317 70.2072L74.3772 6.49226C78.0934 2.96589 83.021 1 88.144 1H511Z" />
           </mask>
           <g
-            className={`${
-              isActive ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-500`}
+            className={`opacity-100 transition-opacity duration-500`}
           >
             <path
               d="M511 1C522.046 1 531 9.95436 531 21V657.707C531 668.753 522.046 677.707 511 677.707H21C9.95438 677.707 1 668.753 1 657.707V84.7149C1 79.2288 3.2536 73.9836 7.23317 70.2072L74.3772 6.49226C78.0934 2.96589 83.021 1 88.144 1H511Z"

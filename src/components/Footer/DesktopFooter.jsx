@@ -178,7 +178,7 @@ export default function DesktopFooter() {
                               <span className="text-[#A8A8A8] uppercase text-[1vw] ">
                                 <ScrambleText
                                   text={item.name}
-                                  speed={0.6}
+                                  speed={0.8}
                                   charType={"lowercase"}
                                 />
                               </span>
@@ -203,7 +203,7 @@ export default function DesktopFooter() {
                               <span className="text-[#A8A8A8] uppercase text-[1vw]">
                                 <ScrambleText
                                   text={item.name}
-                                  speed={0.6}
+                                  speed={0.8}
                                   charType={"lowercase"}
                                 />
                               </span>
@@ -231,7 +231,7 @@ export default function DesktopFooter() {
                   >
                     <ScrambleText
                       text={"info@monielink.io"}
-                      speed={0.6}
+                      speed={0.5}
                       charType={"lowercase"}
                     />
                   </a>

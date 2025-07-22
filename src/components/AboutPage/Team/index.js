@@ -111,7 +111,7 @@ const Team = () => {
               </div>
             </>
           ) : (
-            <div className="flex flex-col items-end justify-start w-full gap-y-[1.5vw]">
+            <div className="flex flex-col items-end justify-start w-full gap-y-[1.5vw] fadeupanim">
               {TeamData.map((item, index) => (
                 <TeamCard
                   key={index}

@@ -64,7 +64,7 @@ const handleCardClick = (index) => {
               onClick={() => handleCardClick(index)}
             >
               <div className="text-[#A8A8A8] text-[0.95vw] max-md:text-[3vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full max-md:w-full">
-                <ScrambleText text={item} speed={0.4}/>
+                <ScrambleText text={item} speed={0.6}/>
               </div>
             </div>
           ))}

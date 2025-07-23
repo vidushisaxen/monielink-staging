@@ -9,15 +9,15 @@ const BlogList = () => {
   return (
     <>
       <section
-      data-theme="white"
+        data-theme="white"
         className="w-screen h-fit py-[7%] bg-white px-[5vw] max-sm:py-[15%] max-sm:px-[5.5vw]"
         id="blog-listing"
       >
         <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[10vw] max-sm:gap-[10vw]">
           <Copy>
-          <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display capitalize flex flex-col max-sm:w-[80%] ">
-            <span>Explore</span> <span>expert insights</span>{" "}
-          </h2>
+            <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display capitalize flex flex-col max-sm:w-[80%] ">
+              <span>Explore</span> <span>expert insights</span>{" "}
+            </h2>
           </Copy>
           <div className="w-full flex justify-between flex-wrap gap-y-[4vw] max-sm:flex-col max-sm:gap-y-[10vw]">
             <div className="w-[66%] fadeupanim max-md:w-[100%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[70vh]">
@@ -77,7 +77,7 @@ const BlogList = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                
+
                   <g data-figma-bg-blur-radius="20">
                     <mask
                       id="path-1-outside-1_754_35752"
@@ -150,7 +150,7 @@ const BlogList = () => {
               </div>
             </div>
             {blogContent.map((blog, index) => (
-              <div key={index} className={`w-[32%] fadeupanim max-md:w-[47%] h-fit relative group max-sm:w-full ${index==0?"max-sm:mt-[4vw]":""}`}>
+              <div key={index} className={`w-[32%] fadeupanim max-md:w-[47%] h-fit relative group max-sm:w-full ${index == 0 ? "max-sm:mt-[4vw]" : ""}`}>
                 <div className="w-full h-fit">
                   <svg
                     width="532"
@@ -229,41 +229,41 @@ const BlogList = () => {
                       <p className="text-content-20">{blog.description}</p>
 
                       <Link href={blog.link} className="round relative ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
-                <div className="absolute inset-0 z-10">
-                    <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center">
-                        <span className="text-content-18">Read More</span>
-                        <div className="rotate-180 text-black flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
-                            <svg
+                        <div className="absolute inset-0 z-10">
+                          <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center">
+                            <span className="text-content-18">Read More</span>
+                            <div className="rotate-180 text-black flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
+                              <svg
                                 className="arrow primera next"
                                 width="8"
                                 height="15"
                                 viewBox="0 0 8 15"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                            >
+                              >
                                 <path
-                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                    fill="currentColor"
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
                                 />
-                            </svg>
-                            <svg
+                              </svg>
+                              <svg
                                 className="arrow segunda next"
                                 width="8"
                                 height="15"
                                 viewBox="0 0 8 15"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                            >
+                              >
                                 <path
-                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                    fill="currentColor"
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
                                 />
-                            </svg>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </Link>
-                     
+                      </Link>
+
                     </div>
                   </div>
                 </div>

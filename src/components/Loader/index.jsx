@@ -9,13 +9,24 @@ export default function Loader() {
   gsap.registerPlugin(SplitText, ScrambleTextPlugin);
   const lenis = useLenis();
 
- useEffect(() => {
+  useEffect(() => {
+    const preloaderShown = sessionStorage.getItem('preloaderShown');
+
+    if (preloaderShown) {
+      const loaderElement = document.getElementById('LoaderScreen');
+      if (loaderElement) {
+        loaderElement.style.display = 'none';
+      }
+      if (lenis) {
+        lenis.start();
+      }
+      return;
+    }
+
     if (lenis) {
       lenis.stop();
     }
-  }, [lenis]);
 
-  useEffect(() => {
     const tl = gsap.timeline();
 
     const splitText = new SplitText(".splitText", {
@@ -64,16 +75,14 @@ export default function Loader() {
         duration: 1,
         opacity: 1,
         filter: "blur(0px)",
-      },
-      "<"
-    );
+      }, "<");
 
     tl.to(".scrambleText", {
-      duration: 3,
+      duration: 2,
+      delay: 0.2,
       filter: "blur(0px)",
       scrambleText: {
-        text: "Design elevated by a tech forward aesthetic.",
-        // chars: "⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟⌜⌞⌝⌟",
+        text: "Power Neobank Platform",
         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
       onComplete: () => {
@@ -82,54 +91,33 @@ export default function Loader() {
           opacity: 0,
         });
       },
-    });
+    }, "<");
     tl.to(
       ".svg-secondPart",
       {
         duration: 1,
         opacity: 1,
-        delay:0.5,
+        delay: 0.5,
         filter: "blur(0px)",
-      },
-      "<"
-    );
+      });
 
     tl.to(".scrambleText2", {
       duration: 1,
-      delay: 1,
-
       scrambleText: {
         text: "By Enigma",
         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
-    });
-    // tl.to([".text-loader", ".plus"], {
-    //   opacity: 0,
-    //   duration: 1,
-    //   delay:.3,
-    // });
-    // tl.to(".mainLogoLoader", {
-    //   y: "-100.5%",
-    //   x: "-52.5%",
-    //   scale:.9,
-    //   duration: 1,
-    //   onComplete: () => {
-    //     gsap.to(".mainLogoLoader", {
-    //       opacity: 0,
-    //       duration: 1,
-    //       ease: "power2.inOut",
-    //     });
-    //   },
-    // });
+    }, "<");
     tl.to("#LoaderScreen", {
       opacity: 0,
       duration: 1,
+      delay: 0.5,
       ease: "power2.inOut",
       onComplete: () => {
         gsap.to("#LoaderScreen", {
           visibility: "hidden",
           onComplete: () => {
-            // Restart lenis after loader is completely hidden
+            sessionStorage.setItem('preloaderShown', 'true');
             if (lenis) {
               lenis.start();
             }

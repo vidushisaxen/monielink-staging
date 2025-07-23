@@ -1,4 +1,3 @@
-import Hero from "../components/Hero";
 import Overview from "../components/Home/Overview";
 import Solutions from "../components/Home/Solutions";
 import USPs from "../components/Home/USPs";
@@ -10,16 +9,12 @@ import Clients from "../components/Home/Clients";
 import CTA from "../components/Footer/CTA";
 import Layout from "../components/Layout";
 import { faqData } from "@/components/SampleFaqData";
-import Loader from "@/components/Loader/Loader";
 import HomePageHero from "@/components/Hero/HomePageHero";
-import Loader2 from "@/components/Loader/Loader2";
 
 export default function HomePage() {
   return (
     <>
-      {/* <Layout delay={10}> */}
-      <Layout >
-        {/* <Loader /> */}
+      <Layout>
         <HomePageHero
           heading={" Powerful Neobank Platform"}
           para={

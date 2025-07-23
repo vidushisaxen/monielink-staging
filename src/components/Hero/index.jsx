@@ -20,13 +20,11 @@ export default function Hero({ heading, para , breadcrumb}) {
   const createBreadcrumbName = (segment) =>
     segment.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 
+  const preloaderShown = typeof window !== 'undefined' ? sessionStorage.getItem('preloaderShown') : null;
+  const baseDelay = preloaderShown ? 0.5 : 7.5;
+
   useGSAP(() => {
     const tl = gsap.timeline();
-    // gsap.to('#loader', {
-    //   duration: 0.5,
-    //   opacity: 0,
-    //   delay: 1.5,
-    // })
     tl.fromTo(btnContainer.current, {
       y: 50,
       opacity: 0,
@@ -34,7 +32,7 @@ export default function Hero({ heading, para , breadcrumb}) {
       y: 0,
       opacity: 1,
       duration: 0.5,
-      delay: 2,
+      delay: baseDelay + 0.8,
     })
     tl.fromTo(".breadcrumbsContainer", {
       y: 50,
@@ -51,20 +49,19 @@ export default function Hero({ heading, para , breadcrumb}) {
 
   return (
     <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
-      {/* <div className="fixed pointer-events-none z-[999] w-screen h-screen max-sm:h-fit bg-black" id="loader" /> */}
       <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
         <HeroBackground />
         <div
           className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[20vw]`}
         >
-          <Copy delay={1.2}>
+          <Copy delay={baseDelay}>
             <h1 className={`text-head-150 font-display w-[80%] max-md:w-[90%] headingText  text-gray-1 max-sm:w-full`}>
               {heading}
             </h1>
           </Copy>
           <div
             className={`w-[55%] max-md:w-[80%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-[99%] max-md:pt-[5vw] max-sm:pt-[10vw]`}>
-            <Copy delay={1.5}>
+            <Copy delay={baseDelay + 0.5}>
               <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
                 {para}
               </p>

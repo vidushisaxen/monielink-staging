@@ -1,11 +1,13 @@
 import localFont from "next/font/local";
 import Header from "../Header";
 import Footer from "../Footer";
+import Loader from "../Loader";
 
-const Layout = ({ children, delay = 0 }) => {
+const Layout = ({ children }) => {
     return (
         <main className={`${Roobert.variable} ${TWK.variable} antialiased`}>
-            <Header delay={delay} />
+            <Loader />
+            <Header />
             {children}
             <Footer />
         </main>

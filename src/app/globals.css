@@ -547,16 +547,16 @@ li .link-line::after {
     clip-path: polygon(100% 0%, 100% 63%, 90% 100%, 0% 100%, 0% 37%, 9.5% 0%);
   }
   .btn-clipPath::after {
-    left: -44.3%;
-    height: 1.2px;
+    left: -44.55%;
+    height: 0.8px;
     width: 100%;
-    rotate: -51deg;
+    rotate: -53deg;
   }
   .btn-clipPath::before {
     width: 100%;
-    height: 1.2px;
-    right: -44%;
-    rotate: -50deg;
+    height: 0.8px;
+    right: -44.4%;
+    rotate: -51.5deg;
   }
 
   .custom-before-after::before,

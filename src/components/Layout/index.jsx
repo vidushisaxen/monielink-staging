@@ -31,9 +31,10 @@ const Roobert = localFont({
 })
 
 const TWK = localFont({
-
     src: [
         { path: "../../app/fonts/TWKLausanne.woff2", weight: "400", style: "normal" },
+        // { path: "../../app/fonts/TWKLausanne-200.woff2", weight: "200", style: "normal" },
+        { path: "../../app/fonts/TWKLausanne-250.woff2", weight: "500", style: "normal" },
     ],
     variable: "--font-display",
     display: "swap",

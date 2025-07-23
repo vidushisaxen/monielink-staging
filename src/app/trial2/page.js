@@ -87,23 +87,23 @@ const ScrambleText = () => {
     const chars = charsRef.current;
   
     // Start glow animation immediately
-    animate(chars, { opacity: '1', color: '#ffffff' }, 0, 10);
+    animate(chars, { opacity: '1', color: '#ffffff' }, 0, 100);
   
     const timeout1 = setTimeout(() => {
       if (isMouseOverRef.current) {
-        animate(chars, { opacity: '0.5' }, 0, 10);
+        animate(chars, { opacity: '0.5' }, 0, 100);
       }
     }, 100);
   
     const timeout2 = setTimeout(() => {
       if (isMouseOverRef.current) {
-        animate(chars, { opacity: '0.7' }, 0, 10);
+        animate(chars, { opacity: '0.7' }, 0, 100);
       }
     }, 200);
   
     const timeout3 = setTimeout(() => {
       if (isMouseOverRef.current) {
-        animate(chars, { opacity: '1' }, 0, 10);
+        animate(chars, { opacity: '1' }, 0, 100);
       }
     }, 400);
   
@@ -121,11 +121,10 @@ const ScrambleText = () => {
     }, scrambleDelay + scrambleDuration + 100);
   };
   
-  
   const handleMouseLeave = () => {
     isMouseOverRef.current = false;
     clearOpacityTimeouts();
-    animate(charsRef.current, { opacity: '0.5', color: '#ffffff' }, 0, 15);
+    animate(charsRef.current, { opacity: '0.5', color: '#ffffff' }, 0, 50);
   };
 
   return (

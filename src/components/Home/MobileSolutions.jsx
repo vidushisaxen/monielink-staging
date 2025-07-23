@@ -217,41 +217,41 @@ const cardsData = [
     title: "Digital Account",
     description:
       "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "#",
+    link: "/solutions/digital-accounts",
   },
   {
     id: "002",
     title: "Loyalty",
     description:
       "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "#",
+    link: "/solutions/digital-accounts",
   },
   {
     id: "003",
     title: "Merchant Acquiring",
     description:
       "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "#",
+    link: "/solutions/digital-accounts",
   },
   {
     id: "004",
     title: "Digital Lending",
     description:
       "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "#",
+    link: "/solutions/digital-accounts",
   },
   {
     id: "005",
     title: "Card Issuing",
     description:
       "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "#",
+    link: "/solutions/digital-accounts",
   },
   {
     id: "006",
     title: "KYC",
     description:
       "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "#",
+    link: "/solutions/digital-accounts",
   },
 ];

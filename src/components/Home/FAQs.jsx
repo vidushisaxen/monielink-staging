@@ -51,7 +51,7 @@ export default function FAQs({data}) {
                     
                   >
                     <AccordionItem value={itemKey} >
-                      <AccordionTrigger index={index} className=" max-sm:text-content-18 font-display  max-md:text-[2.5vw] max-sm:text-left">
+                      <AccordionTrigger index={index} className=" max-sm:text-content-18 font-display font-medium  max-md:text-[2.5vw] max-sm:text-left">
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="font-body text-[1.05vw] max-sm:text-content-20 max-md:text-content-20">

@@ -19,7 +19,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       description:
         "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
       cardClass: "card-1",
-      link: "#",
+      link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[0],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -32,7 +32,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       description:
         "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
       cardClass: "card-2",
-      link: "#",
+      link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[1],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -45,7 +45,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       description:
         "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
       cardClass: "card-3",
-      link: "#",
+      link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[2],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -58,7 +58,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       description:
         "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
       cardClass: "card-4",
-      link: "#",
+      link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[3],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -71,7 +71,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       description:
         "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
       cardClass: "card-5",
-      link: "#",
+      link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[4],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -84,7 +84,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       description:
         "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
       cardClass: "card-6",
-      link: "#",
+      link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[5],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -249,6 +249,7 @@ const SolutionsCard = ({ solutionsRef }) => {
           svgRight={item.svgRight}
           y={item.y}
           svgRightRef={item.svgRightRef}
+          link={item.link}
         />
 
       ))}

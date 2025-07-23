@@ -13,7 +13,7 @@ const features = [
     description:
       "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/digital-account",
+    href: "/solutions/digital-accounts",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const features = [
     description:
       "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/loyalty",
+    href: "/solutions/digital-accounts",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const features = [
     description:
       "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/merchant-acquiring",
+    href: "/solutions/digital-accounts",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const features = [
     description:
       "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/digital-lending",
+    href: "/solutions/digital-accounts",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const features = [
     description:
       "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/card-issuing",
+    href: "/solutions/digital-accounts",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const features = [
     description:
       "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/kyc",
+    href: "/solutions/digital-accounts",
   },
 ];
 

@@ -11,7 +11,7 @@ const Partner = () => {
             <Copy>
               <h2 className='text-head-100 font-display'>Partner With Us</h2>
             </Copy>
-            <div className='w-[68%] max-sm:w-[80%] max-md:w-[85%]'>
+            <div className='w-[68%] max-sm:w-[85%] max-md:w-[85%]'>
               <Copy>
                 <p className='text-content-20 text-white font-normal'>Looking to integrate our SDKs, explore co-branded solutions, or join the Moneylink ecosystem? We&apos;re excited to hear from you.
                   Fill out our partnership form.</p>

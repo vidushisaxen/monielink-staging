@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import BlackButton from "../Buttons/BlackButton";
 import ScrambleText from "../ScrambleText";
+import ArrowButton from "../Buttons/ArrowButton";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -21,6 +22,15 @@ const handleCardClick = (index) => {
     swiperRef.current.swiper.slideTo(index);
   }
 };
+const [activeIndex, setActiveIndex] = useState(1);
+
+  const handlePrevClick = () => {
+    swiperRef.current.slidePrev();
+  };
+
+  const handleNextClick = () => {
+    swiperRef.current.slideNext();
+  };
   useGSAP(
     () => {
       const container = solutionContainerRef.current;
@@ -47,7 +57,7 @@ const handleCardClick = (index) => {
       id="solutions"
       className="h-full w-screen max-sm:pb-[15vw] max-md:pb-[12vw] relative overflow-hidden bg-[#050505]"
     >
-      <div className="w-screen overflow-x-scroll max-sm:mb-[10vw]">
+      <div className="w-screen overflow-x-scroll max-sm:mb-[10vw] scrollbar-hidden">
         <div className="border-t w-fit flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw]">
           <div className="w-[25vw] max-sm:w-[25vw] max-md:w-[1vw] h-full" />
           {[
@@ -73,11 +83,18 @@ const handleCardClick = (index) => {
       </div>
       <div
         ref={solutionContainerRef}
-        className="relative w-screen overflow-hidden z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw] max-sm:px-0 max-md:px-[3vw]"
+        className="relative w-screen overflow-hidden z-10 flex flex-col items-center justify-center py-[10vw] pt-[0vw] gap-[3vw] max-sm:px-0 max-md:px-[3vw]"
       >
         <Swiper
         ref={swiperRef}
           modules={[Navigation]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+            setActiveIndex(swiper.activeIndex);
+          }}
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.activeIndex);
+          }}
           initialSlide={0}
           centeredSlides={false}
           slidesPerView={2}
@@ -113,6 +130,21 @@ const handleCardClick = (index) => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className=" flex items-center justify-center gap-5 max-sm:pt-[15vw] max-md:pt-[5vw]">
+          <ArrowButton
+            onClick={handlePrevClick}
+            arrowColor={"#ffffff"}
+            borderColor={"#636363"}
+            hoverColor={"bg-[#636363]/20"}
+            rotate={"-rotate-180"}
+          />
+          <ArrowButton
+            onClick={handleNextClick}
+            arrowColor={"#ffffff"}
+            borderColor={"#636363"}
+            hoverColor={"bg-[#636363]/20"}
+          />
+        </div>
       </div>
     </section>
   );

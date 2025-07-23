@@ -427,7 +427,9 @@ li .link-line::after {
 .bar-5 { animation-delay: 1s; }
 .bar-6 { animation-delay: 1.2s; }
 
-
+.scrollbar-hidden::-webkit-scrollbar { 
+  display: none;  /* Older Safari and Chromium */
+}
 
 /* Tablet responsve */
 @media (max-width: 1080px) {
@@ -466,6 +468,27 @@ li .link-line::after {
     right: -0.7%;
     rotate: 54deg;
   }
+
+  .phone-input::before,
+.phone-input::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 4vw;
+  background-color: oklch(0.922 0 0);
+}
+
+.phone-input::before {
+  bottom: 14%;
+  left: -1.3%;
+  rotate: 60deg;
+}
+
+.phone-input::after {
+  top: 13%;
+  right: -1.3%;
+  rotate: 60deg;
+}
 }
 
 /* Mobile Responsive */
@@ -524,16 +547,16 @@ li .link-line::after {
     clip-path: polygon(100% 0%, 100% 63%, 90% 100%, 0% 100%, 0% 37%, 9.5% 0%);
   }
   .btn-clipPath::after {
-    left: -44.6%;
+    left: -44.3%;
     height: 1.2px;
     width: 100%;
-    rotate: -50deg;
+    rotate: -51deg;
   }
   .btn-clipPath::before {
     width: 100%;
     height: 1.2px;
-    right: -44.4%;
-    rotate: -49deg;
+    right: -44%;
+    rotate: -50deg;
   }
 
   .custom-before-after::before,

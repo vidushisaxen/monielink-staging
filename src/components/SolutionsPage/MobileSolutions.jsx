@@ -123,8 +123,8 @@ function Accordion({ title, description, img, href, isOpen, onToggle }) {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="overflow-hidden text-gray-2"
             >
-              <div className="w-full flex flex-col max-sm:gap-[2vw] max-sm:pb-[10vw] max-md:items-center max-md:pb-[5vw] max-md:gap-[3vw]">
-                <div className="max-sm:w-[80%] max-sm:h-[100vw] max-md:w-[45%] max-md:h-[50vw] max-md:ml-[-10vw] max-sm:ml-0">
+              <div className="w-full flex flex-col max-sm:gap-[2vw] max-sm:pb-[5vw] max-md:items-center max-md:pb-[5vw] max-md:gap-[3vw]">
+                <div className="max-sm:w-[80%] max-sm:h-[70vw] max-md:w-[45%] max-md:h-[50vw] max-md:ml-[-10vw] max-sm:ml-0">
                   <Image
                     src={img}
                     alt=""

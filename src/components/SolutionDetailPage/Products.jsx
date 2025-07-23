@@ -7,7 +7,7 @@ const Products = () => {
     <section
       data-theme="white"
       id="features"
-      className="bg-white-1 text-black-1 w-screen overflow-hidden h-screen"
+      className="bg-white-1 text-black-1 w-screen overflow-hidden h-screen max-sm:h-full"
     >
       <div className="px-[4.5vw] py-[8vw] w-full space-y-[8vw] max-sm:px-[5.5vw] max-sm:py-[15%] max-md:py-[15%] max-sm:space-y-[12vw]">
         <div className="w-full flex items-center justify-between max-sm:flex-col max-sm:items-start max-md:items-start max-md:flex-col">

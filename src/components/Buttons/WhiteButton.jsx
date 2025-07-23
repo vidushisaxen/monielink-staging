@@ -17,8 +17,7 @@ function WhiteButton({ href, onClick, rotate, text, className = "", ...props }) 
                 </div>
                 <div className="absolute inset-0 z-10">
                     <div
-                        
-                        className=" btn-clipPath w-full absolute flex items-center justify-center h-full bg-trasnparent transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] group-hover:bg-white duration-400 border border-[#a8a8a8] after:h-[1.5px] after:bg-[#A8a8a8] after:w-[2vw] after:-rotate-45 after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.5px] before:w-[2vw] before:bg-[#A8a8a8] before:-rotate-45 before:right-[-3%] before:bottom-[14%]"
+                        className=" btn-clipPath w-full absolute flex items-center justify-center h-full bg-trasnparent transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] group-hover:bg-white duration-400 border border-[#a8a8a8] after:h-[1.5px] after:bg-[#A8a8a8] after:w-[2vw] after:-rotate-45 after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.5px] before:w-[2vw] before:bg-[#A8a8a8] before:-rotate-45 before:right-[-3%] before:bottom-[14%] after:max-sm:top-[14.5%] before:max-sm:bottom-[15%]"
                     >
                     </div>
                     <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-5 justify-center">

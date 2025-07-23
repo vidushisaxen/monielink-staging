@@ -33,6 +33,9 @@ export default function Hero() {
 
     return (
         <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
+            <div className="absolute top-0 left-0 h-full !w-full hidden max-sm:block max-md:block">
+                            <Image src={"/assets/images/hero-bg.png"} height={852} width={393} alt="hero-bg" className="h-full w-full"/>
+                          </div>
             <div className="relative h-screen space-y-[7vw] max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
                 <HeroBackground />
                 <div
@@ -46,7 +49,7 @@ export default function Hero() {
                     <div
                         className={`w-[50%] max-md:w-[60%] pt-5 max-md:pt-[5vw] text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-sm:pt-[10vw]`}>
                         <Copy delay={baseDelay + 0.5}>
-                            <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
+                            <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5] max-sm:pr-[5vw]">
                                 We&apos;re here to help you launch, scale, and grow in the digital finance economy. Whether you're a bank, fintech, merchant, or partner — let&apos;s connect and build the future of finance together.
                             </p>
                         </Copy>
@@ -55,9 +58,9 @@ export default function Hero() {
                 </div>
 
                 <div ref={contactRef} className="flex items-center  max-sm:hidden max-md:flex-wrap  max-md:flex-row-reverse justify-center gap-[3vw] z-[99]">
-                    <div className="relative w-[18vw] max-md:w-[40vw] max-md:h-[40vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw] backdrop-blur-md pointer-events-none rounded-[1vw] hero-fadeup-contact">
+                    <div className="relative w-[18vw] max-md:w-[40vw] max-md:h-[40vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw]  pointer-events-none rounded-[1vw] hero-fadeup-contact">
                         <Image
-                            src="/assets/icons/contact/card-frame.png"
+                            src="/assets/icons/contact/card-frame.svg"
                             alt="card-frame"
                             fill
                             className="object-contain "
@@ -81,7 +84,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] hero-fadeup-contact">
+                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] pointer-events-none rounded-[1vw] hero-fadeup-contact">
                         <Image
                             src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
@@ -106,7 +109,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] backdrop-blur-md pointer-events-none rounded-[1vw] hero-fadeup-contact">
+                    <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] pointer-events-none rounded-[1vw] hero-fadeup-contact">
                         <Image
                             src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
@@ -132,15 +135,15 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="max-sm:flex max-sm:items-start hidden  justify-center gap-[3vw] z-[99] max-sm:flex-col max-sm:w-full max-sm:px-[5.5vw]">
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw] backdrop-blur-lg fadeupanim">
+                <div className="max-sm:flex max-sm:items-start hidden  justify-center gap-[3vw] z-[99] max-sm:flex-col max-sm:w-full max-sm:px-[5.5vw] max-sm:gap-0">
+                    <div className="relative w-[25vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[30vw] backdrop-blur-lg fadeupanim">
                         <Image
-                            src="/assets/icons/contact/card-frame-mobile.svg"
+                            src="/assets/icons/contact/contact-frame-mobile.svg"
                             alt="card-frame"
                             fill
                             className="object-contain"
                         />
-                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                        <div className="relative z-10 flex  items-center justify-center w-full h-full text-center p-4 space-y-[3vw] max-sm:space-y-0 max-sm:gap-[5vw] max-sm:justify-start">
                             <div className="h-[5vw] w-[5vw] max-sm:w-[12vw] max-sm:h-[12vw]">
                                 <Image
                                     src="/assets/icons/contact/location.svg"
@@ -150,19 +153,19 @@ export default function Hero() {
                                     className="w-full h-full"
                                 />
                             </div>
-                            <p className="text-content-20 text-gray-2">
+                            <p className="text-content-20 text-gray-2 max-sm:text-left">
                                 23 Adeola Odeku Street, <br /> Victoria Island, Lagos, Nigeria
                             </p>
                         </div>
                     </div>
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw] backdrop-blur-lg fadeupanim">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[30vw] backdrop-blur-lg fadeupanim">
                         <Image
-                            src="/assets/icons/contact/card-frame-mobile.svg"
+                            src="/assets/icons/contact/contact-frame-mobile.svg"
                             alt="card-frame"
                             fill
                             className="object-contain"
                         />
-                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                        <div className="relative z-10 flex items-center justify-center w-full h-full text-center p-4 space-y-[3vw] max-sm:space-y-0 max-sm:gap-[5vw] max-sm:justify-start">
                             <div className="h-[5vw] w-[5vw] max-sm:w-[12vw] max-sm:h-[12vw]">
                                 <Image
                                     src="/assets/icons/contact/mail.svg"
@@ -177,14 +180,14 @@ export default function Hero() {
                             </p>
                         </div>
                     </div>
-                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[70vw] max-sm:h-[35vw] backdrop-blur-lg fadeupanim">
+                    <div className="relative w-[18vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[30vw] backdrop-blur-lg fadeupanim">
                         <Image
-                            src="/assets/icons/contact/card-frame-mobile.svg"
+                            src="/assets/icons/contact/contact-frame-mobile.svg"
                             alt="card-frame"
                             fill
                             className="object-contain"
                         />
-                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center p-4 space-y-[3vw]">
+                        <div className="relative z-10 flex f items-center justify-center w-full h-full text-center p-4 space-y-[3vw] max-sm:space-y-0 max-sm:gap-[5vw] max-sm:justify-start">
                             <div className="h-[5vw] w-[5vw] max-sm:w-[12vw] max-sm:h-[12vw]">
                                 <Image
                                     src="/assets/icons/contact/phone.svg"

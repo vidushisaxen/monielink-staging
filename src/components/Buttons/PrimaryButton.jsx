@@ -18,7 +18,7 @@ function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }
                 <div className="absolute inset-0 z-10">
                     <div className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-gradient transition-all rounded-xs scale-x-[92%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] scale-y-[82%] group-hover:scale-100 duration-400" />
                     <div className="w-[90%] max-md:w-[100%] max-sm:w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
-                        <span className="text-content-18 capitalize">{text}</span>
+                        <span className="text-content-18 capitalize pl-[0.2vw]">{text}</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next max-md:scale-[1.1] max-sm:scale-[1]"

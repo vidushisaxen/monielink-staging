@@ -39,7 +39,7 @@ PhoneInput.displayName = "PhoneInput";
 
 const InputComponent = React.forwardRef(({ className, ...props }, ref) => (
   <>
-  <div style={{clipPath:"polygon(66% 0, 98% 0, 100% 25%, 100% 100%, 2% 100%, 0 75%, 0 0);"}} className="relative w-full h-full overflow-hidden  phone-input">
+  <div style={{clipPath:"polygon(66% 0, 98% 0, 100% 25%, 100% 100%, 2% 100%, 0 75%, 0 0)"}} className="relative w-full h-full overflow-hidden  phone-input">
       <input
         data-slot="input"
         className={cn(

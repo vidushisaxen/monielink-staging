@@ -16,8 +16,7 @@ const WhyUsSwiper = () => {
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
-
+ 
   const handlePrevClick = () => {
     swiperRef.current.slidePrev();
   };
@@ -120,7 +119,7 @@ const WhyUsSwiper = () => {
 
   return (
     <>
-     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:mt-0 max-md:mt-[8vw] justify-end gap-5 max-sm:w-full">
+     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:top-[63%] max-sm:right-[35%]  max-md:mt-[8vw] justify-end gap-5 max-sm:w-full fadeupanim">
             <ArrowButton
               onClick={handlePrevClick}
               arrowColor={"#ffffff"}
@@ -137,7 +136,7 @@ const WhyUsSwiper = () => {
           </div>
       <div
         ref={containerRef}
-        className="flex justify-start relative items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] max-md:flex-col max-md:gap-[4vw]"
+        className="flex justify-start relative items-center gap-10 max-sm:flex-col max-sm:gap-[4vw] max-md:flex-col max-md:gap-[4vw] max-sm:pl-[4vw]"
       >
         <Swiper
           modules={[Navigation]}
@@ -212,7 +211,7 @@ const SwiperCard = ({ id, title, description, index, activeIndex }) => {
       style={{
         clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
       }}
-      className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[45vh] ${
+      className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[45vh] max-sm:w-[90%] ${
         isActive ? "h-[28vw] max-sm:h-[110vw] max-md:h-[30vh]" : ""
       }`}
     >

@@ -20,7 +20,7 @@ const BlogList = () => {
             </h2>
           </Copy>
           <div className="w-full flex justify-between flex-wrap gap-y-[4vw] max-sm:flex-col max-sm:gap-y-[10vw]">
-            <div className="w-[66%] fadeupanim max-md:w-[100%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[70vh]">
+            <div className="w-[66%] fadeupanim max-md:w-[100%] h-fit  flex justify-between relative text-white max-sm:w-full max-sm:h-[73vh] max-sm:pb-[5vw]">
               <div className="w-full  flex justify-between max-sm:hidden">
                 <svg
                   width="1110"
@@ -117,7 +117,7 @@ const BlogList = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="absolute top-0 left-0 w-full  h-fit max-md:top-[2.5%] max-sm:top-[3%] group/card">
+              <div className="absolute top-0 left-0 w-full  h-fit max-md:top-[2.5%] max-sm:top-[3%] group/card ">
                 <div className="w-full h-full px-[2.5vw]  pt-[3vw] flex flex-col gap-[2vw] max-sm:px-0 max-sm:pt-0 max-md:pt-[6vw] max-md:gap-[3vw] max-sm:gap-[7vw]">
                   <div className="flex justify-between max-sm:flex-col max-sm:gap-[6vw]">
                     <div className="flex flex-col gap-[1.5vw] w-[40%] max-md:w-[50%] max-sm:order-1 max-sm:w-full max-sm:px-[4vw] max-sm:gap-[4vw]">
@@ -129,7 +129,7 @@ const BlogList = () => {
                     <div className="w-[55%] max-md:w-[50%] h-[40%] rounded-[1.2vw] overflow-hidden max-md:rounded-[3vw] max-sm:rounded-[4vw] max-sm:w-full">
                       <Image
                         src={"/assets/images/blogs/blog-img-1.png"}
-                        alt=""
+                        alt="featured-blog"
                         width={700}
                         height={400}
                         className="w-full h-full object-cover scale-[1.1] group-hover/card:scale-100 duration-300 ease-in-out"
@@ -144,7 +144,42 @@ const BlogList = () => {
                       is the next era of the internet in which blockchain
                       technology
                     </p>
-                    <SecondaryButton href={"#"} text={"Read More"} />
+                    <SecondaryButton href={"/blogs/blog-detail"} text={"Read More"} className="max-sm:hidden max-md:hidden"/>
+                    <Link href={"/blogs/blog-detail"} className="hidden max-sm:flex max-md:flex round relative ml-[-1vw] items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
+                        <div className="absolute inset-0 z-10">
+                          <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-3 justify-center">
+                            <span className="text-content-18">Read More</span>
+                            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
+                              <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                              <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
                   </div>
                 </div>
               </div>
@@ -216,7 +251,7 @@ const BlogList = () => {
                     <div className="w-full rounded-[1.2vw] overflow-hidden h-[30%] max-sm:rounded-[4vw]">
                       <Image
                         src={blog.img}
-                        alt=""
+                        alt={blog.title}
                         width={500}
                         height={400}
                         className="w-full h-full scale-[1.1] group-hover:scale-100 duration-500 ease-in-out"
@@ -299,35 +334,35 @@ const blogContent = [
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-3.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-4.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-5.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-6.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
 
   {
@@ -335,34 +370,34 @@ const blogContent = [
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-8.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-9.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-10.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
   {
     img: "/assets/images/blogs/blog-img-2.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "#",
+    link: "/blogs/blog-detail",
   },
 ];

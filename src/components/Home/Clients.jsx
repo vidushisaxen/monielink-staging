@@ -232,7 +232,7 @@ export default function Clients() {
     <section
       id="clients"
       ref={container}
-      className="h-[130vh] w-screen overflow-hidden flex items-center justify-center relative bg-[#050505] pb-[4vw] max-sm:py-[15%] max-md:h-[150vh] max-sm:h-[100vh]"
+      className="h-[130vh] w-screen overflow-hidden flex items-center justify-center relative bg-[#050505] pb-[4vw] max-sm:py-[15%]  max-md:h-[150vh] max-sm:h-[110vh]"
     >
       <div className="w-full h-full max-sm:h-[100vw] max-md:h-[100vh] max-sm:w-[100vw] max-md:scale-[2] max-md:translate-x-[-40%] max-sm:scale-[2.2] max-sm:translate-x-[-50%] max-sm:translate-y-[30%]">
         <svg

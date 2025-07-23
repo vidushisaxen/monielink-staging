@@ -8,7 +8,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Diagram = () => {
-  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
+  const stickyRef = useRef(null);
   const imageRefs = useRef([]);
   const textRefs = useRef([]);
 
@@ -34,65 +35,64 @@ const Diagram = () => {
   };
 
   useGSAP(() => {
-    const section = sectionRef.current;
+    const container = containerRef.current;
     const imageElements = imageRefs.current;
     const textElements = textRefs.current;
-
-    if (!section || !imageElements.length || !textElements.length) return;
-
-    gsap.set(imageElements.slice(1), { opacity: 0 ,scale:0.5});
-    gsap.set(textElements.slice(1), { opacity: 0 });
-
+    if (!container || !imageElements.length || !textElements.length) return;
+    gsap.set([imageElements[0], textElements[0]], { opacity: 1, scale: 1 });
+    gsap.set([...imageElements.slice(1), ...textElements.slice(1)], { opacity: 0, scale: 0.8 });
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: section,
+        trigger: container,
         start: "top top",
-        end: "+=300vh",
+        end: "bottom bottom",
         scrub: 1,
-      },
+      }
+    });
+    paymentMethods.forEach((_, index) => {
+      if (index === 0) {
+        tl.to({}, { duration: 1 });
+      } else {
+        tl
+          .to([imageElements[index - 1], textElements[index - 1]], {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.3,
+            ease: "power3.out"
+          })
+          .to([imageElements[index], textElements[index]], {
+            opacity: 1,
+            scale: 1,
+            duration: 0.3,
+            ease: "power3.out"
+          }, "-=0.1") 
+          .to({}, { duration: 1.2 }); 
+      }
     });
 
-    paymentMethods.forEach((method, index) => {
-      if (index === 0) return;
-
-      tl.to([imageElements[index - 1], textElements[index - 1]], {
-        opacity: 0,
-        scale:0.5,
-        duration: 1,
-        ease: "power2.out",
-      })
-        .to([imageElements[index], textElements[index]], {
-          opacity: 1,
-          scale:1,
-          duration: 1,
-          ease: "power2.out",
-        })
-        .to({}, { duration: 1 });
-    });
-
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="w-screen h-[120vh] bg-gradient relative pb-[5vw]"
+    <section 
+      ref={containerRef}
+      className="relative bg-gradient"
+      style={{ height: `${100 + (paymentMethods.length * 100)}vh` }}
     >
-      {/* Heading (normal scroll) */}
-      <div className="px-[4vw] py-[7vw] max-md:py-[10vw] max-sm:px-[5.5vw]">
-        <div className="w-[70%] max-md:w-[95%] max-sm:w-full mx-auto">
+      <div 
+        ref={stickyRef}
+        className="sticky top-0 h-screen w-full flex flex-col items-center justify-center gap-[2vw] px-[4vw] py-[7vw] max-md:py-[10vw] max-sm:px-[5.5vw]"
+      >
+        <div className="w-[70%] max-md:w-[95%] max-sm:w-full mx-auto mb-[3vw]">
           <Copy>
             <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left">
               Flexible Card Payments with Tap, Dip, or Swipe
             </h2>
           </Copy>
         </div>
-      </div>
-
-      {/* Sticky Image & Text */}
-      <div className="sticky top-[20vh] h-[60vh] flex flex-col items-center justify-center gap-[2vw]">
-        {/* Images */}
-        <div className="relative w-2/5 h-[393px] flex items-center justify-center">
+        <div className="relative w-2/5 h-[393px] flex items-center justify-center max-sm:h-[80vw] max-sm:w-[75vw]">
           {paymentMethods.map((method, index) => (
             <div
               key={`image-${index}`}
@@ -107,8 +107,6 @@ const Diagram = () => {
             </div>
           ))}
         </div>
-
-        {/* Text */}
         <div className="relative h-[60px] flex items-center justify-center">
           {paymentMethods.map((method, index) => (
             <div
@@ -117,7 +115,7 @@ const Diagram = () => {
               className="absolute inset-0 flex items-center justify-center"
             >
               <Copy>
-                <p className="capitalize text-head-40 font-display">
+                <p className="capitalize text-head-40 font-display max-sm:text-[6vw]">
                   {method.text}
                 </p>
               </Copy>

@@ -73,7 +73,7 @@ const Clients = () => {
   }, []);
   return (
     <section
-      className="w-screen px-[4vw] overflow-hidden max-md:py-[15%] max-sm:px-[5.5vw] max-sm:py-[15%]"
+      className="w-screen px-[4vw] overflow-hidden max-md:py-[15%] max-sm:px-[5.5vw] max-sm:py-[15%] max-sm:pb-[25%]"
       id="clients"
     >
       <div className="w-full h-[90vh] flex justify-between max-md:flex-col max-md:items-start max-md:h-fit max-md:gap-[12vw] items-center max-sm:flex-col max-sm:items-start max-sm:h-fit max-sm:px-0 max-md:px-[5vw] max-sm:gap-[12vw]">

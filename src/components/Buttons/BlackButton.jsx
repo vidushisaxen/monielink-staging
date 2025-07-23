@@ -21,7 +21,7 @@ function BlackButton({ href, onClick, rotate, text, className = "", ...props }) 
                     >
                     </div>
                     <div className="w-[90%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
-                        <span className="text-content-18 text-end capitalize">{text}</span>
+                        <span className="text-content-18 text-end capitalize pl-[0.2vw]">{text}</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg
                                 className="arrow primera next"

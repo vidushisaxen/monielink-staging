@@ -49,6 +49,9 @@ export default function Hero({ heading, para , breadcrumb}) {
 
   return (
     <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden">
+      <div className="absolute top-0 left-0 h-full !w-full hidden max-sm:block max-md:block">
+                      <Image src={"/assets/images/hero-bg.png"} height={852} width={393} alt="hero-bg" className="h-full w-full"/>
+                    </div>
       <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
         <HeroBackground />
         <div
@@ -62,7 +65,7 @@ export default function Hero({ heading, para , breadcrumb}) {
           <div
             className={`w-[55%] max-md:w-[80%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-[99%] max-md:pt-[5vw] max-sm:pt-[10vw]`}>
             <Copy delay={baseDelay + 0.5}>
-              <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5]">
+              <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5] max-sm:pr-[5vw]">
                 {para}
               </p>
             </Copy>

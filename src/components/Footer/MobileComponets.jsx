@@ -24,7 +24,7 @@ export default function MobileFooter() {
   }, [isMobile]);
   return (
     <div className="relative max-md:hidden hidden max-sm:block" id="footer">
-      <div className="max-sm:h-[100vh]">
+      <div className="max-sm:hidden">
         <BackgroundLine />
       </div>
       <footer
@@ -127,15 +127,15 @@ export default function MobileFooter() {
                   together.
                 </p>
               </div>
-              <div className="w-full flex flex-col gap-[4vw] uppercase items-center">
-                <Link href={"#"}>HOME</Link>
-                <Link href={"#"}>About us</Link>
-                <Link href={"#"}>solutions</Link>
-                <Link href={"#"}>product</Link>
-                <Link href={"#"}>resources</Link>
-                <Link href={"#"}>Contact</Link>
+              <div className="w-full flex flex-col gap-[4vw] uppercase items-center relative z-[10]">
+                <Link href={"/"}>HOME</Link>
+                <Link href={"/about"}>About us</Link>
+                <Link href={"/solutions"}>solutions</Link>
+                <Link href={"/products"}>product</Link>
+                <Link href={"/blogs"}>resources</Link>
+                <Link href={"/contact"}>Contact</Link>
               </div>
-              <div className="w-full flex flex-col gap-[4vw] uppercase items-center">
+              <div className="w-full flex flex-col gap-[4vw] uppercase items-center relative z-[10]">
                 <Link href={"#"}>LEGAL</Link>
                 <Link href={"#"}>TERMS & CONDITIONS</Link>
                 <Link href={"#"}>PRIVACY POLICY</Link>

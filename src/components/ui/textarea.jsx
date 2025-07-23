@@ -7,7 +7,7 @@ function Textarea({
   ...props
 }) {
   return (
-    (<div style={{clipPath:"polygon(66% 0, 98% 0, 100% 18%, 100% 100%, 2% 100%, 0 85%, 0 0);"}} className="relative w-full h-full overflow-hidden text-area">
+    (<div style={{clipPath:"polygon(66% 0, 98% 0, 100% 18%, 100% 100%, 2% 100%, 0 85%, 0 0)"}} className="relative w-full h-full overflow-hidden text-area">
     <textarea
       data-slot="textarea"
       className={cn(

@@ -100,12 +100,12 @@ export default function Solutions() {
                 // centeredSlides: true,
               },
             }}
-            className="mySwiper !px-[10vw] max-md:!px-[3vw]  w-screen !overflow-y-visible max-sm:h-[55vh]"
+            className="mySwiper !px-[10vw] max-md:!px-[3vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
           >
             {data.map((card, cardIndex) => (
               <SwiperSlide
                 key={cardIndex}
-                className="w-full h-full max-sm:!mr-[21vw] max-md:!mr-[8vw] swiper-slides-anim !origin-top"
+                className="w-full h-full max-sm:!mr-[10vw] max-sm:pl-[5vw] max-md:!mr-[8vw] swiper-slides-anim !origin-top"
               >
                 <SwiperCard
                   title={card.title}

@@ -2,11 +2,15 @@ import HeroBackground from "../Hero/HeroBackground";
 import Copy from "../Animations/Copy";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import BlackButton from "../Buttons/BlackButton";
+import Image from "next/image";
 
 export default function CTA() {
 
   return (
     <section id="cta" className="w-screen max-md:h-[80vh] relative h-screen bg-background max-sm:h-fit max-sm:py-[25%]">
+      <div className="absolute top-0 left-0 h-full !w-full hidden max-sm:block max-md:block">
+                <Image src={"/assets/images/hero-bg.png"} height={852} width={393} alt="hero-bg" className="h-full w-full"/>
+              </div>
       <div className="relative h-screen w-full flex flex-col items-center justify-center max-sm:h-fit">
         
         <HeroBackground />

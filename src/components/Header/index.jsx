@@ -234,7 +234,7 @@ export default function Header() {
     <>
       <header
         id="nav"
-        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 max-sm:bg-black/10 max-md:backdrop-blur-[1vw]
+        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 max-sm:bg-black/40 max-md:backdrop-blur-[1vw]
  ${hidden ? "-translate-y-full" : "translate-y-0"} ${menuOpen ? "max-md:backdrop-blur-none" : ""}`}
       >
         <div id="inner-nav" className="inner-nav">
@@ -303,7 +303,7 @@ export default function Header() {
               {/* Logo */}
               <Link
                 href={"/"}
-                className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${isInverted ? " brightness-[16]" : ""
+                className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${isInverted ? " brightness-[16] max-sm:brightness-0 max-sm:invert-100" : ""
                   }`}
               >
                 <Logo className="h-full w-full" />
@@ -315,7 +315,9 @@ export default function Header() {
                   onClick={handleMenuButtonClick}
                   disabled={buttonDisabled}
                   menuOpen={menuOpen}
-                  borderColor={"#636363"}
+                  isInverted={isInverted}
+                  isWhite = {isWhite}
+                  borderColor={"#ffffff"}
                 />
               </div>
               <nav className="flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden max-md:hidden">
@@ -382,7 +384,7 @@ export default function Header() {
                 <Link
                   href={item.link}
                   key={index}
-                  className={`overflow-hidden transition-all duration-200 group ${isActive ? "text-primary-1" : "text-white"
+                  className={`overflow-hidden transition-all duration-200 group ${isActive ? "text-primary-2" : "text-white"
                     }`}
                 >
                   <div className="flex items-center gap-3 m-nav-links translate-y-full opacity-0">

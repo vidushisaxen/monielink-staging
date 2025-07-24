@@ -1,6 +1,6 @@
 import React from "react";
 
-function HamButton({ onClick, borderColor, menuOpen, className = "", ...props }) {
+function HamButton({ onClick, borderColor, menuOpen, className = "" , isInverted, isWhite, ...props }) {
 
     return (
         <button
@@ -9,13 +9,13 @@ function HamButton({ onClick, borderColor, menuOpen, className = "", ...props })
             {...props}
             aria-label="Open Menu"
         >
-            <div className="relative flex items-center justify-center max-sm:w-[12vw] max-md:w-[8vw]">
+            <div className="relative flex items-center justify-center max-sm:w-[13vw] max-md:w-[8vw]">
                 <svg
                     className="w-full h-full"
                     width="77"
                     height="67"
                     viewBox="0 0 77 67"
-                    fill="none"
+                    fill={`${isInverted || isWhite?"white":"[#050505]" }`}
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
@@ -26,9 +26,9 @@ function HamButton({ onClick, borderColor, menuOpen, className = "", ...props })
 
                 <div className="absolute max-sm:inset-[20%] max-md:inset-[25%]">
                     <div className="h-full w-full flex items-center justify-center flex-col max-sm:gap-1.5 max-md:gap-2" >
-                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:translate-y-[7px] rotate-45 max-md:translate-y-[9px]" : ""}`} />
-                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "scale-x-0" : ""}`} />
-                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:-translate-y-[7px] -rotate-45 max-md:-translate-y-[9px]" : ""}`} />
+                        <span className={`block h-[1.5px] w-[80%]  duration-300  ${menuOpen ? "max-sm:translate-y-[7px] rotate-45 max-md:translate-y-[9px]" : ""} ${isWhite ||isInverted ? "bg-[#050505]" :" bg-white"}`} />
+                        <span className={`block h-[1.5px] w-[80%]  duration-300 ${menuOpen ? "scale-x-0" : ""} ${isWhite ||isInverted ? "bg-[#050505]" :" bg-white"} `} />
+                        <span className={`block h-[1.5px] w-[80%]  duration-300 ${menuOpen ? "max-sm:-translate-y-[7px] -rotate-45 max-md:-translate-y-[9px]" : ""}  ${isWhite ||isInverted ? "bg-[#050505]" :" bg-white"}`} />
                     </div>
                 </div>
             </div>

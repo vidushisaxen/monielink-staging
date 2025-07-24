@@ -53,7 +53,7 @@ export default function Loader() {
         });
       },
     });
-
+ if(globalThis.innerWidth>1024){
     tl.to(".loader-container", {
       opacity: 1,
       duration: 1,
@@ -125,6 +125,92 @@ export default function Loader() {
         });
       },
     });
+  }
+  else{
+    gsap.set(".svg-firstPart",{
+      xPercent:150
+    })
+    tl.to(".loader-container", {
+      opacity: 1,
+      duration: 1,
+      delay: 0.5,
+      onComplete: () => {
+        gsap.to(".plus", {
+          rotate: 360,
+          duration: 1,
+          delay: 2,
+          repeat: 2,
+          repeatDelay: 1.5,
+          ease: "power2.inOut",
+        });
+      },
+    });
+    tl.to(
+      ".mainLogoLoader",
+      {
+        duration: 1,
+        opacity: 1,
+        filter: "blur(0px)",
+      }, "<");
+
+    tl.to(".scrambleText", {
+      duration: 2,
+      delay: 0.2,
+      filter: "blur(0px)",
+      scrambleText: {
+        text: "Power Neobank Platform",
+        chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      },
+      onComplete: () => {
+        gsap.to(".scrambleText", {
+          duration: 0.5,
+          opacity: 0,
+        });
+      },
+    }, "<");
+    tl.to(".svg-firstPart",{
+      duration:0.8,
+      xPercent:0,
+      
+    })
+    .to(
+      ".svg-secondPart",
+      {
+        duration: 1,
+        opacity: 1,
+        delay: -0.5,
+        // xPercent:50,
+      //  scaleX:1,
+      //  transformOrigin:"left",
+        filter: "blur(0px)",
+      });
+
+    tl.to(".scrambleText2", {
+      duration: 1,
+      scrambleText: {
+        text: "By Enigma",
+        chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      },
+    }, "<");
+    tl.to("#LoaderScreen", {
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      ease: "power2.inOut",
+      onComplete: () => {
+        gsap.to("#LoaderScreen", {
+          visibility: "hidden",
+          onComplete: () => {
+            sessionStorage.setItem('preloaderShown', 'true');
+            if (lenis) {
+              lenis.start();
+            }
+          },
+        });
+      },
+    });
+
+  }
   }, [lenis]);
 
   return (
@@ -134,12 +220,12 @@ export default function Loader() {
     >
       <div className="w-[70%] max-sm:w-[100%] h-[40%] relative flex">
         <div className="opacity-0 text-wrap-loader bg-gray-500">
-          <p className=" absolute  w-[68%] max-sm:w-[72%] left-1/2 -translate-x-1/2 max-md:text-[3.5vw] max-md:w-[72%]  top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] max-sm:text-[5vw]  tracking-widest font-mono font-medium uppercase  splitText">
+          <p className=" absolute  w-[68%] max-sm:w-[55%] left-1/2 -translate-x-1/2 max-md:text-[3.2vw] max-md:w-[73%]  top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] max-sm:text-[3.5vw]  tracking-widest font-mono font-medium uppercase  splitText max-sm:leading-[1.5]">
             Design elevated by a tech forward aesthetic.
           </p>
         </div>
         <div className="flex max-sm:flex-col max-sm:gap-[20vw] max-md:gap-[2vw] max-sm:py-[10vw] w-full h-full opacity-0 loader-container">
-          <div className="flex w-full max-sm:w-full max-md:w-[60vw]  blur-[10px] max-sm:pt-[10%] mainLogoLoader  items-center justify-start">
+          <div className="flex w-full max-sm:w-full max-md:w-[60vw]  blur-[10px] max-sm:pt-[10%] mainLogoLoader items-center justify-start max-sm:justify-center">
             <svg
               className="h-full w-full max-sm:h-[10vw] max-md:h-[10vw]"
               width="200"
@@ -183,7 +269,7 @@ export default function Loader() {
           </div>
           <div className=" h-full w-full flex max-sm:flex-col max-sm:gap-[10vw] text-loader  relative items-center max-sm:justify-center max-md:justify-start justify-end max-sm:w-full max-md:w-[60%]">
             <p className="text-left text-zinc-400 max-sm:text-[3.5vw] w-[68%] text-[1vw] max-md:text-[2.5vw]  max-md:w-[30vw] max-md:overflow-hidden  tracking-widest max-sm:w-[50%] max-sm:overflow-hidden font-mono scrambleText max-sm:text-center max-md:text-center font-medium uppercase"></p>
-            <p className="text-left absolute right-0 max-md:right-[30%] max-sm:right-[18%] text-zinc-400 w-[40%] max-md:text-nowrap max-sm:text-[4vw] max-md:text-[2.5vw] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
+            <p className="text-left absolute right-0 max-md:right-[30%] max-sm:right-[22%] text-zinc-400 w-[40%] max-md:text-nowrap max-sm:text-[4vw] max-md:text-[2.5vw] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
           </div>
         </div>
       </div>

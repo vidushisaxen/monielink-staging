@@ -410,25 +410,45 @@ li .link-line::after {
   );
 }
 @keyframes darkToLight {
-  0% { fill: #3F1C00; }
-  50% { fill: #FF5100; }
-  100% { fill: #3F1C00; }
+  0% {
+    fill: #3f1c00;
+  }
+  50% {
+    fill: #ff5100;
+  }
+  100% {
+    fill: #3f1c00;
+  }
 }
 
 .bar {
   animation: darkToLight 2s infinite ease-in-out;
 }
 
-.bar-0 { animation-delay: 0s; }
-.bar-1 { animation-delay: 0.2s; }
-.bar-2 { animation-delay: 0.4s; }
-.bar-3 { animation-delay: 0.6s; }
-.bar-4 { animation-delay: 0.8s; }
-.bar-5 { animation-delay: 1s; }
-.bar-6 { animation-delay: 1.2s; }
+.bar-0 {
+  animation-delay: 0s;
+}
+.bar-1 {
+  animation-delay: 0.2s;
+}
+.bar-2 {
+  animation-delay: 0.4s;
+}
+.bar-3 {
+  animation-delay: 0.6s;
+}
+.bar-4 {
+  animation-delay: 0.8s;
+}
+.bar-5 {
+  animation-delay: 1s;
+}
+.bar-6 {
+  animation-delay: 1.2s;
+}
 
-.scrollbar-hidden::-webkit-scrollbar { 
-  display: none;  /* Older Safari and Chromium */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Older Safari and Chromium */
 }
 
 /* Tablet responsve */
@@ -440,12 +460,12 @@ li .link-line::after {
     --head-60: 6vw;
     --head-100: 6.5vw;
     --head-120: 12vw;
-    --head-140:6vw;
+    --head-140: 6vw;
     --head-80: 5vw;
-    --head-40:3vw;
+    --head-40: 3vw;
     --content-18: 2vw;
     --content-30: 3vw;
-    --head-50:3vw;
+    --head-50: 3vw;
   }
 
   .custom-before-after::before,
@@ -470,25 +490,41 @@ li .link-line::after {
   }
 
   .phone-input::before,
-.phone-input::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 4vw;
-  background-color: oklch(0.922 0 0);
-}
+  .phone-input::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 4vw;
+    background-color: oklch(0.922 0 0);
+  }
 
-.phone-input::before {
-  bottom: 14%;
-  left: -1.3%;
-  rotate: 60deg;
-}
+  .phone-input::before {
+    bottom: 14%;
+    left: -1.3%;
+    rotate: 60deg;
+  }
 
-.phone-input::after {
-  top: 13%;
-  right: -1.3%;
-  rotate: 60deg;
-}
+  .phone-input::after {
+    top: 13%;
+    right: -1.3%;
+    rotate: 60deg;
+  }
+
+  .btn-clipPath {
+    clip-path: polygon(100% 0%, 100% 75%, 92% 100%, 0% 100%, 0% 25%, 8% 0%);
+  }
+  .btn-clipPath::after {
+    left: -47.2%;
+    height: 1px;
+    width: 100%;
+    rotate: -50deg;
+  }
+  .btn-clipPath::before {
+    width: 100%;
+    height: 1px;
+    right: -47.2%;
+    rotate: -50deg;
+  }
 }
 
 /* Mobile Responsive */
@@ -508,8 +544,6 @@ li .link-line::after {
     --content-20: 3.8vw;
     --content-18: 4.1vw;
   }
-
-  
 
   body {
     width: 100%;

@@ -4,14 +4,14 @@ import React from "react";
 function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }) {
     const sharedContent = (
         <>
-            <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] max-md:w-[15vw] max-md:h-[5vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
+            <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] max-md:w-[27vw] max-md:h-[7vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
                 <div className="absolute left-0 top-0 flex justify-start">
-                    <svg className="w-[5.5vw] h-auto max-md:scale-[1.2] max-sm:scale-[1] max-sm:w-[23vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-[5.5vw] h-auto max-sm:w-[23vw] max-md:w-[10vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#FF5100" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>
-                <div className="absolute right-0 max-sm:right-0 max-md:right-[15%] bottom-0 flex justify-end">
-                    <svg className="w-[5.5vw] max-md:scale-[1.2] max-sm:scale-[1] h-auto rotate-180 max-sm:w-[23vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="absolute right-0 bottom-0 flex justify-end">
+                    <svg className="w-[5.5vw] h-auto rotate-180 max-sm:w-[23vw] max-md:w-[10vw] " width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#FF5100" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>

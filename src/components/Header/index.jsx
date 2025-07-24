@@ -234,13 +234,13 @@ export default function Header() {
     <>
       <header
         id="nav"
-        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-sm:bg-black/10 max-md:backdrop-blur-[1vw]
+        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 max-sm:bg-black/10 max-md:backdrop-blur-[1vw]
  ${hidden ? "-translate-y-full" : "translate-y-0"} ${menuOpen ? "max-md:backdrop-blur-none" : ""}`}
       >
         <div id="inner-nav" className="inner-nav">
           <div
             id="header-inner"
-            className="relative flex items-center justify-center h-full w-full px-[1.25vw] py-[1.7vw]"
+            className="relative flex items-center justify-center h-full w-full px-[1.25vw] py-[1.7vw] max-md:p-0"
           >
             {/* Background SVG */}
             <div className="w-full h-auto absolute top-0 left-0 max-sm:hidden max-md:hidden">
@@ -303,7 +303,7 @@ export default function Header() {
               {/* Logo */}
               <Link
                 href={"/"}
-                className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[12vw] ${isInverted ? " brightness-[16]" : ""
+                className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${isInverted ? " brightness-[16]" : ""
                   }`}
               >
                 <Logo className="h-full w-full" />

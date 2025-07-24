@@ -9,7 +9,7 @@ function HamButton({ onClick, borderColor, menuOpen, className = "", ...props })
             {...props}
             aria-label="Open Menu"
         >
-            <div className="relative flex items-center justify-center max-sm:w-[12vw] max-md:w-[11vw]">
+            <div className="relative flex items-center justify-center max-sm:w-[12vw] max-md:w-[8vw]">
                 <svg
                     className="w-full h-full"
                     width="77"
@@ -24,11 +24,11 @@ function HamButton({ onClick, borderColor, menuOpen, className = "", ...props })
                     />
                 </svg>
 
-                <div className="absolute inset-[20%]">
-                    <div className="h-full w-full flex items-center justify-center flex-col max-sm:gap-1.5 max-md:gap-3" >
-                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:translate-y-[7px] rotate-45 max-md:translate-y-[13px]" : ""}`} />
+                <div className="absolute max-sm:inset-[20%] max-md:inset-[25%]">
+                    <div className="h-full w-full flex items-center justify-center flex-col max-sm:gap-1.5 max-md:gap-2" >
+                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:translate-y-[7px] rotate-45 max-md:translate-y-[9px]" : ""}`} />
                         <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "scale-x-0" : ""}`} />
-                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:-translate-y-[7px] -rotate-45 max-md:-translate-y-[13px]" : ""}`} />
+                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:-translate-y-[7px] -rotate-45 max-md:-translate-y-[9px]" : ""}`} />
                     </div>
                 </div>
             </div>

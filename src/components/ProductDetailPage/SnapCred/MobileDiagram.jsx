@@ -19,15 +19,15 @@ const MobileDiagram = () => {
             </h2>
           </Copy>
         </div>
-        <div className="w-screen overflow-x-scroll   flex flex-col items-center max-sm:items-start max-sm:px-[5vw]">
+        <div className="w-screen overflow-x-scroll   flex flex-col items-center max-sm:items-start max-sm:px-[5vw] scrollbar-hidden">
           <div
-            className="w-[85%] max-sm:translate-x-0 max-md:translate-x-[40vw] max-sm:w-[300%] max-md:py-[2vw] max-sm:py-0 fadeupanim"
+            className="w-[85%] max-sm:translate-x-[10%] max-md:translate-x-[40vw] max-sm:w-[300%] max-md:py-[2vw] max-sm:py-0 fadeupanim"
           >
             <svg
               width="1116"
               height="165"
 
-              className="max-sm:scale-[1] max-md:scale-[1.5]"
+              className="max-sm:scale-[1.2] max-md:scale-[1.5]"
               viewBox="0 0 1116 165"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -497,7 +497,7 @@ const MobileDiagram = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex max-sm:translate-x-0 max-md:translate-x-[-30vw] max-md:gap-[37vw] items-start justify-start py-[2vw] max-sm:px-[5vw] max-md:px-[2vw] max-sm:justify-start max-sm:gap-[30vw]">
+            <div className="w-full flex max-sm:translate-x-[-9%] max-md:translate-x-[-40%] max-md:gap-[37vw] items-start justify-start py-[2vw] max-sm:px-[5vw] max-md:px-[2vw] max-sm:justify-between  max-sm:w-[120%]">
               <div className=" w-[18%] max-md:w-[30%] max-sm:w-[25%]">
                 <ul className="max-sm:pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim max-md:text-content-20 max-sm:pt-0 max-md:pt-[3vw]  max-sm:text-content-20 max-sm:text-left max-md:text-left">
                   <li className="max-md:text-nowrap">Fund Transfers</li>

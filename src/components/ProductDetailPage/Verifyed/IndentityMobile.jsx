@@ -37,12 +37,12 @@ const IndentityMobile = () => {
               </h3>
             </Copy>
           </div>
-          <div className="w-screen overflow-x-scroll  flex flex-col items-center max-sm:items-start max-sm:px-[5vw] max-md:py-[5vw] max-sm:gap-[8vw] max-md:px-[5vw]">
-            <div className="w-[85%] max-sm:w-[230%] max-md:w-[180%] max-md:translate-x-[35%] max-sm:translate-x-0 max-md:px-[5vw] fadeupanim">
+          <div className="w-screen overflow-x-scroll  flex flex-col items-center max-sm:items-start max-sm:px-[5vw] max-md:py-[5vw] max-sm:gap-[8vw] max-md:px-[5vw] scrollbar-hidden">
+            <div className="w-[85%] max-sm:w-[250%] max-md:w-[180%] max-md:translate-x-[35%] max-sm:translate-x-[0%] max-md:px-[5vw] fadeupanim max-sm:ml-[15vw]">
               <svg
                 width="805"
                 height="165"
-                className=" max-md:scale-[1.5] max-sm:scale-[1]"
+                className=" max-md:scale-[1.5] max-sm:scale-[1.2]"
                 viewBox="0 0 805 165"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +395,7 @@ const IndentityMobile = () => {
                 </defs>
               </svg>
 
-              <div className="w-full flex max-md:translate-x-[-15%] max-sm:translate-x-0 max-md:mt-[5vw] items-start justify-between py-[2vw] max-sm:px-[5vw] max-md:px-[3vw] max-md:gap-[10vw] max-sm:justify-start max-md:justify-start max-sm:gap-[20vw]">
+              <div className="w-full flex max-md:translate-x-[-15%] max-sm:translate-x-0 max-md:mt-[5vw] items-start justify-between py-[2vw]  max-md:px-[3vw] max-md:gap-[10vw] max-sm:justify-start max-md:justify-start max-sm:gap-[20vw] max-sm:ml-[-13vw]">
                 <div className=" w-[18%] max-md:w-[30%] max-sm:w-[90vw]">
                   <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-left">
                     <li>Customer scans or inputs NIN</li>
@@ -460,14 +460,14 @@ const IndentityMobile = () => {
             </h3>
             </Copy>
           </div>
-          <div className="w-screen overflow-x-scroll flex flex-col items-center  max-sm:items-start max-sm:px-[5vw] max-sm:gap-[8vw] max-md:px-[5vw]">
-            <div className="w-[85%] max-sm:w-[150%] max-md:translate-x-[15%]  max-sm:translate-x-0 max-md:py-[10vw] max-md:w-[100%] max-md:px-[5vw] fadeupanim">
+          <div className="w-screen overflow-x-scroll flex flex-col items-center  max-sm:items-start max-sm:px-[5vw] max-sm:gap-[8vw] max-md:px-[5vw] scrollbar-hidden">
+            <div className="w-[85%] max-sm:w-[150%] max-md:translate-x-[15%]  max-sm:translate-x-0 max-md:py-[10vw] max-md:w-[100%] max-md:px-[5vw] fadeupanim max-sm:ml-[10vw]">
               <svg
                 width="493"
                 height="164"
                 viewBox="0 0 493 164"
                 fill="none"
-                className="max-md:scale-[1.5] max-sm:scale-[1]"
+                className="max-md:scale-[1.5] max-sm:scale-[1.2]"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <line
@@ -701,7 +701,7 @@ const IndentityMobile = () => {
                 </defs>
               </svg>
 
-              <div className="w-full flex items-start justify-between max-md:justify-start max-md:gap-[18vw]  max-md:px-[2vw] py-[2vw] max-sm:px-[5vw] max-md:mt-[5vw] max-md:translate-x-[-20%] max-sm:translate-x-0 max-sm:justify-start max-sm:gap-[25vw]">
+              <div className="w-full flex items-start justify-between max-md:justify-start max-md:gap-[18vw]  max-md:px-[2vw] py-[2vw] max-sm:px-[5vw] max-md:mt-[5vw] max-md:translate-x-[-20%] max-sm:translate-x-[-7%] max-sm:justify-between max-sm:w-[115%] max-sm:gap-[30vw]">
                 <div className=" w-[18%] max-md:w-[50%]  max-sm:w-[90vw]">
                   <ul className="pl-[2vw] max-md:w-full max-md:pl-[3vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center   max-sm:text-content-20 max-sm:text-left max-md:text-content-20 max-md:text-left">
                     <li>Customer scans or inputs NIN</li>

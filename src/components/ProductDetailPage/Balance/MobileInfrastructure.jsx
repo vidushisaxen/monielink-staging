@@ -728,7 +728,7 @@ const MobileInfrastructure = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-between  max-sm:w-[140%] max-md:shrink-0 max-sm:gap-0 max-md:gap-[35vw]  max-md:translate-x-[-60%] max-sm:translate-x-0 max-md:mt-[5vw]">
+            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-between  max-sm:w-[130%] max-md:shrink-0 max-sm:gap-0 max-md:gap-[35vw]  max-md:translate-x-[-60%] max-sm:translate-x-0 max-md:mt-[5vw]">
               <div className=" w-[18%] max-md:w-[30%] ">
                 <ul className="pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  max-md:w-full text-center text1 textanim  max-sm:text-content-20 max-sm:text-left max-md:text-left max-md:text-content-20">
                   <li  className="max-md:text-nowrap">Fund Transfers</li>

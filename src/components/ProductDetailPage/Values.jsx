@@ -28,7 +28,7 @@ const Values = ({ data }) => {
             scrollTrigger: {
               trigger: bar,
               start: 'top 80%',
-              toggleActions: 'play none none reverse',
+              // toggleActions: 'play none none reverse',
             },
           }
         );

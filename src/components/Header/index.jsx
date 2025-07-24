@@ -368,10 +368,10 @@ export default function Header() {
       </header>
 
       <div ref={navigationRef} className={`fixed inset-0 z-[299] hidden max-md:block h-screen w-screen overflow-hidden top-0 left-0 ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}>
-        <div className="w-screen h-[109vw] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
+        <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
           <Image className="w-full h-full object-cover object-bottom" src={"/assets/shapes/menu-svg-t.svg"} alt="menu background image" width={400} height={600} />
         </div>
-        <div className="w-screen h-[109vw] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
+        <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
           <Image className="w-full h-full object-cover object-top" src={"/assets/shapes/menu-svg-b.svg"} alt="menu background image" width={400} height={600} />
         </div>
         <div className="relative w-screen h-screen flex items-end">

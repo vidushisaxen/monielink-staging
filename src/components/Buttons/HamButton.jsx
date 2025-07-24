@@ -1,9 +1,14 @@
-import Link from "next/link";
 import React from "react";
 
-function HamButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, className = "", ...props }) {
-    const sharedContent = (
-        <>
+function HamButton({ onClick, borderColor, menuOpen, className = "", ...props }) {
+
+    return (
+        <button
+            onClick={onClick}
+            className={`text-white group bg-transparent border-none cursor-pointer p-0 ${className}`}
+            {...props}
+            aria-label="Open Menu"
+        >
             <div className="relative flex items-center justify-center max-sm:w-[12vw] max-md:w-[11vw]">
                 <svg
                     className="w-full h-full"
@@ -19,71 +24,15 @@ function HamButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, cl
                     />
                 </svg>
 
-                <div className="absolute inset-[6%]">
-                    <div
-                        style={{
-                            clipPath:
-                                "polygon(100% 0%, 100% 66%, 71% 100%, 0% 100%, 0% 33%, 28% 0%)",
-                        }}
-                        className={`w-full absolute flex items-center justify-center h-full  group-hover:scale-100 scale-50 transition-all duration-400 opacity-0 group-hover:opacity-100 ${hoverColor}`}
-                    ></div>
-
-                    <div className="rotate-180 w-full h-full ">
-                        <div
-                            className={`round flex items-center justify-center gap-0 w-full h-full ${rotate}`}
-                        >
-                           <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="0.276306" y1="1.3634" x2="28.1103" y2="1.3634" stroke="white"/>
-<line x1="0.276306" y1="7.66467" x2="28.1103" y2="7.66467" stroke="white"/>
-<line x1="0.276306" y1="13.9659" x2="28.1103" y2="13.9659" stroke="white"/>
-</svg>
-
-                        </div>
+                <div className="absolute inset-[20%]">
+                    <div className="h-full w-full flex items-center justify-center flex-col max-sm:gap-1.5 max-md:gap-3" >
+                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:translate-y-[7px] rotate-45 max-md:translate-y-[13px]" : ""}`} />
+                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "scale-x-0" : ""}`} />
+                        <span className={`block h-[1px] w-full bg-white duration-300 ${menuOpen ? "max-sm:-translate-y-[7px] -rotate-45 max-md:-translate-y-[13px]" : ""}`} />
                     </div>
                 </div>
             </div>
-        </>
-    );
-
-    // Use <Link> only when it's a valid internal route
-    if (href && typeof href === "string" && !href.startsWith("javascript")) {
-        return (
-            <Link
-                href={href}
-                className={`text-white group ${className}`}
-                {...props}
-                aria-label="Read More"
-            >
-                {sharedContent}
-            </Link>
-        );
-    }
-
-    // Use <button> when no href is provided
-    if (typeof onClick === "function") {
-        return (
-            <button
-                onClick={onClick}
-                className={`text-white group bg-transparent border-none cursor-pointer p-0 ${className}`}
-                {...props}
-                aria-label="Read More"
-            >
-                {sharedContent}
-            </button>
-        );
-    }
-
-    // Fallback to <a> if href is present but not usable in <Link>
-    return (
-        <a
-            href={href || "#"}
-            onClick={(e) => e.preventDefault()}
-            className={`text-white group ${className}`}
-            {...props}
-            aria-label="Read More"
-        >
-            {sharedContent}
-        </a>
+        </button>
     );
 }
 

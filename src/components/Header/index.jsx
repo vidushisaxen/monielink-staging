@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -8,7 +8,7 @@ import { Logo } from "../Icons";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useGSAP } from "@gsap/react";
 import HamButton from "../Buttons/HamButton";
-import SocialMediaBtn from '@/components/Footer/SocialMediaBtn'
+import SocialMediaBtn from "@/components/Footer/SocialMediaBtn";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -18,7 +18,7 @@ import {
 import ScrambleText from "../ScrambleText";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { useLenis } from 'lenis/react';
+import { useLenis } from "lenis/react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -66,8 +66,8 @@ const links = [
 
 const links2 = [
   {
-    name: 'Home',
-    link: '/',
+    name: "Home",
+    link: "/",
   },
   {
     name: "About Us",
@@ -94,55 +94,78 @@ const links2 = [
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [lastY, setLastY] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
   const [isInverted, setIsInverted] = useState(false);
   const [isWhite, setIsWhite] = useState(false);
   const pathname = usePathname();
   const lenis = useLenis();
+  const navigationRef = useRef(null);
 
-  const preloaderShown = typeof window !== 'undefined' ? sessionStorage.getItem('preloaderShown') : null;
+  const preloaderShown = typeof window !== "undefined" ? sessionStorage.getItem("preloaderShown") : null;
   const baseDelay = preloaderShown ? 0.5 : 7.5;
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (isMobileMenuOpen) {
-        gsap.from('.mobile-nav-item', {
-          delay: 0.5,
-          yPercent: 100,
-          opacity: 0,
-          stagger: 0.05,
-          duration: 0.4,
-        })
-        gsap.fromTo('.mobile-nav-lines', {
-          width: '0%',
-        }, {
-          width: '93%',
-          delay: 0.2,
-          duration: 0.8,
-          stagger: 0.2,
-        })
-        gsap.from('.mobile-social-btn', {
-          yPercent: 100,
-          opacity: 0,
-          delay: 1,
-          duration: 0.8,
-          stagger: 0.1,
-        })
-      }
-    })
-
-    return () => ctx.revert();
-  })
-
-  useEffect(() => {
-
-    if (isMobileMenuOpen) {
-      lenis && lenis.stop();
-    } else {
-      lenis && lenis.start();
+  const handleMenuButtonClick = () => {
+    setButtonDisabled(true);
+    if (globalThis.innerWidth < 541) {
+      lenis.stop();
     }
 
-  }, [isMobileMenuOpen, lenis]);
+    setMenuOpen((prevState) => {
+      const newState = !prevState;
+
+      if (!newState && globalThis.innerWidth < 541) {
+        lenis.start();
+      }
+
+      return newState;
+    });
+
+    setTimeout(() => {
+      setButtonDisabled(false);
+    }, 700);
+  };
+
+  useEffect(() => {
+    const navBgT = navigationRef.current.querySelectorAll('.nav-bg-t');
+    const navBgB = navigationRef.current.querySelectorAll('.nav-bg-b');
+    const links = navigationRef.current.querySelectorAll(".m-nav-links");
+
+    if (menuOpen) {
+      gsap.timeline()
+        .to([navBgT, navBgB], {
+          y: "0",
+          duration: 1,
+          ease: "power2.out",
+        })
+        .to(links, {
+          y: "0",
+          opacity: 1,
+          delay: -0.4,
+          ease: "power2.out",
+          stagger: 0.05
+        })
+    } else {
+      gsap.timeline()
+        .to(links, {
+          y: "100%",
+          opacity: 0,
+          duration: 0.7,
+          ease: "power2.out",
+        })
+        .to(navBgT, {
+          y: "-100%",
+          duration: 1,
+          delay: -0.5,
+          ease: "power2.out",
+        })
+        .to(navBgB, {
+          y: "100%",
+          duration: 1,
+          ease: "power2.out",
+        }, "<")
+    }
+  }, [menuOpen]);
 
   useGSAP(() => {
     const triggers = [];
@@ -174,6 +197,7 @@ export default function Header() {
       triggers.push(trigger);
     });
   }, []);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -206,25 +230,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastY]);
 
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    // lenis.stop();
-
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-    // lenis.start();
-  };
-
   return (
     <>
       <header
         id="nav"
         className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-sm:bg-black/10 max-md:backdrop-blur-[1vw]
- ${hidden ? "-translate-y-full" : "translate-y-0"
-          }`}
+ ${hidden ? "-translate-y-full" : "translate-y-0"} ${menuOpen ? "max-md:backdrop-blur-none" : ""}`}
       >
         <div id="inner-nav" className="inner-nav">
           <div
@@ -241,7 +252,12 @@ export default function Header() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <foreignObject x="-40" y="-39.6064" width="1898" height="213.852">
+                <foreignObject
+                  x="-40"
+                  y="-39.6064"
+                  width="1898"
+                  height="213.852"
+                >
                   <div
                     xmlns="http://www.w3.org/1999/xhtml"
                     style={{
@@ -292,13 +308,14 @@ export default function Header() {
               >
                 <Logo className="h-full w-full" />
               </Link>
-              <div className="hidden max-md:block max-sm:block" onClick={toggleMobileMenu}>
+              <div
+                className="hidden max-md:block max-sm:block"
+              >
                 <HamButton
-                  // href={"/"}
-                  rotate={""}
-                  arrowColor={"#ffffff"}
+                  onClick={handleMenuButtonClick}
+                  disabled={buttonDisabled}
+                  menuOpen={menuOpen}
                   borderColor={"#636363"}
-                  hoverColor={"bg-[#ffffff]/10"}
                 />
               </div>
               <nav className="flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden max-md:hidden">
@@ -350,103 +367,38 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
-      <div className={`fixed inset-0 z-[400] w-screen origin-top-right overflow-hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'} hidden max-md:block max-sm:block`}>
-
-        {/* Backdrop */}
-        <div
-          className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
-            }`}
-          onClick={closeMobileMenu}
-        />
-
-
-
-        {/* Mobile Menu Panel */}
-        <div className={`absolute top-[2%] right-[4%] max-sm:w-[75%] max-md:w-[50%] max-sm:h-[55vh] bg-black max-md:rounded-[2.5vw] max-sm:rounded-[5vw] shadow-2xl border border-neutral-600 z-[2] transform transition-all duration-500 ease-in-out origin-top-right  ${isMobileMenuOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
-          }`}
-        // style={{
-        //   clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
-        // }}
-        >
-          <div >
-
-
-
-
-
-            {/* Close Button */}
-            <button
-              onClick={closeMobileMenu}
-              className="absolute max-sm:top-4 max-sm:right-4 max-md:top-[6%] max-md:right-[12%] w-8 h-8 flex items-center justify-center rounded-full bg-black hover:bg-gray-200 transition-colors"
-            >
-              <svg className="max-sm:w-[5vw] max-md:w-[10vw] max-md:h-[10vw] max-sm:h-[5vw] text-gray-500" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4L4 12M4 4L12 12" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-
-            {/* Menu Content */}
-            <div className="flex flex-col h-full p-6 max-md:pt-[10vw] max-sm:pt-[15vw]">
-              {/* Navigation Links */}
-              <div className="flex">
-
-
-                <nav className="flex flex-col relative max-md:gap-[0.2vw] max-sm:gap-[0.5vw] flex-grow">
-                  {links2.map((item, index) => {
-                    const isActive = pathname === item.link;
-                    return (
-                      <Link
-                        href={item.link}
-                        key={index}
-                        onClick={closeMobileMenu}
-                        className={`flex items-center justify-between max-md:p-[1vw] max-sm:p-[2.5vw]   transition-all duration-200 group hover:bg-gray-50 ${isActive ? '' : ''
-                          }`}
-                      >
-
-                        <div className="h-[0.2vw] top-[13.5%] left-[3%] w-[58vw] absolute bg-neutral-800 mobile-nav-lines" />
-                        <div className="h-[0.2vw] top-[30.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800" />
-                        <div className="h-[0.2vw] top-[47.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800" />
-                        <div className="h-[0.2vw] top-[62.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800" />
-                        <div className="h-[0.2vw] top-[79.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800" />
-                        <div className="h-[0.2vw] top-[96.5%] mobile-nav-lines left-[3%] w-[58vw] absolute bg-neutral-800" />
-
-
-
-                        <span className={`max-sm:text-[4.5vw] mobile-nav-item uppercase text-[2.5vw] font-medium ${isActive ? 'text-gray-200' : 'text-gray-400'
-                          }`}>
-                          {item.name}
-                        </span>
-
-                        <div className="w-[6vw] h-[6vw] max-md:p-[1.5vw] mobile-nav-item max-sm:p-[1vw] text-white">
-                          <Image src='/assets/icons/header/arrow.svg' alt='' width={900} height={900} />
-                        </div>
-
-
-                      </Link>
-
-                    );
-                  })}
-
-
-                </nav>
-
-              </div>
-
-
-              <div className="mt-auto max-md:pt-[4vw] max-sm:pt-[2vw] ">
-
-
-                {/* Social Icons */}
-                <div className="pt-2 flex  items-start max-md:gap-[2.5vw] gap-2 fadeupanim">
-                  {socials.map((item, index) => (
-                    <SocialMediaBtn className="mobile-social-btn" key={index} href={item.href}>
-                      {item.icon}
-                    </SocialMediaBtn>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+      <div ref={navigationRef} className={`fixed inset-0 z-[299] hidden max-md:block h-screen w-screen overflow-hidden top-0 left-0 ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}>
+        <div className="w-screen h-[109vw] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
+          <Image className="w-full h-full object-cover object-bottom" src={"/assets/shapes/menu-svg-t.svg"} alt="menu background image" width={400} height={600} />
+        </div>
+        <div className="w-screen h-[109vw] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
+          <Image className="w-full h-full object-cover object-top" src={"/assets/shapes/menu-svg-b.svg"} alt="menu background image" width={400} height={600} />
+        </div>
+        <div className="relative w-screen h-screen flex items-end">
+          <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow px-14 pt-24">
+            {links2.map((item, index) => {
+              const isActive = pathname === item.link;
+              return (
+                <Link
+                  href={item.link}
+                  key={index}
+                  className={`overflow-hidden transition-all duration-200 group ${isActive ? "text-primary-1" : "text-white"
+                    }`}
+                >
+                  <div className="flex items-center gap-3 m-nav-links translate-y-full opacity-0">
+                    <span>
+                      <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5195 0H17.5195L7.51953 22.1687H0.519531L10.5195 0Z" fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span className={`max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[4vw] font-medium`}>
+                      {item.name}
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </nav>
         </div>
       </div>
     </>

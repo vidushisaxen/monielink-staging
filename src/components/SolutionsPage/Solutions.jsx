@@ -7,7 +7,8 @@ import SplitText from "gsap/SplitText";
 import Image from "next/image";
 import SegmentedProgressBar from "./SegmntedProgressBar";
 import PrimaryButton from "../Buttons/PrimaryButton";
-import ScrambleText from "../ScrambleText";
+import ScrambleText from "../h/ScrambleText";
+
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 
@@ -192,16 +193,18 @@ export default function Solutions() {
         >
           <div className="sticky h-screen top-0 py-[5vw]">
             {/* buttons + progress bar */}
-            <div className="flex justify-between mb-6">
+            <div className="flex justify-between mb-6 pr-[4vw]">
               {features.map((f, i) => (
                 <button
                   key={i}
-                  className={`w-[10vw] first:text-left text-center last:text-right cursor-pointer font-body transition-all duration-300 text-content-18 ${
+                  className={`w-[10vw] first:text-left text-center last:text-right cursor-pointer font-body transition-all duration-300 text-content-18  ${
                     i === activeSlide ? "text-white" : "text-gray-2"
                   }`}
                   onClick={() => goToSlide(i)}
                 >
-                  <ScrambleText text={f.title} speed={0.7}/>
+                  <ScrambleText onHover={true} centerd speed={0.45} className="min-w-[14vw]">
+                                                 {f.title}
+                                             </ScrambleText>
                 </button>
               ))}
             </div>

@@ -1,5 +1,6 @@
 import "./globals.css";
 import LenisSmoothScroll from "../components/LenisSmoothScroll";
+import LayoutTransition from "@/components/LayoutTransition";
 
 export const metadata = {
   title: "MONIELINK",
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
       <LenisSmoothScroll />
       <html lang="en">
         <body>
+          <LayoutTransition>
           {children}
+          </LayoutTransition>
         </body>
       </html>
     </>

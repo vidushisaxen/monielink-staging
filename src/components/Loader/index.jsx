@@ -82,7 +82,7 @@ export default function Loader() {
       delay: 0.2,
       filter: "blur(0px)",
       scrambleText: {
-        text: "Power Neobank Platform",
+        text: "Offering Plug & Play SDKs that 6x Your Revenue",
         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
       onComplete: () => {
@@ -104,7 +104,7 @@ export default function Loader() {
     tl.to(".scrambleText2", {
       duration: 1,
       scrambleText: {
-        text: "By Enigma",
+        text: "By Montra, Inc.",
         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
     }, "<");
@@ -158,7 +158,7 @@ export default function Loader() {
       delay: 0.2,
       filter: "blur(0px)",
       scrambleText: {
-        text: "Power Neobank Platform",
+        text: "Offering Plug & Play SDKs that 6x Your Revenue",
         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
       onComplete: () => {
@@ -188,7 +188,7 @@ export default function Loader() {
     tl.to(".scrambleText2", {
       duration: 1,
       scrambleText: {
-        text: "By Enigma",
+        text: "By Montra, Inc.",
         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       },
     }, "<");
@@ -221,7 +221,7 @@ export default function Loader() {
       <div className="w-[70%] max-sm:w-[100%] h-[40%] relative flex">
         <div className="opacity-0 text-wrap-loader bg-gray-500">
           <p className=" absolute  w-[68%] max-sm:w-[55%] left-1/2 -translate-x-1/2 max-md:text-[3.2vw] max-md:w-[73%]  top-1/2 -translate-y-1/2 text-center text-zinc-400 text-[1vw] max-sm:text-[3.5vw]  tracking-widest font-mono font-medium uppercase  splitText max-sm:leading-[1.5]">
-            Design elevated by a tech forward aesthetic.
+          Powerful Neobank Platform for Banks & Fintechs
           </p>
         </div>
         <div className="flex max-sm:flex-col max-sm:gap-[20vw] max-md:gap-[2vw] max-sm:py-[10vw] w-full h-full opacity-0 loader-container">
@@ -268,8 +268,8 @@ export default function Loader() {
             </div>
           </div>
           <div className=" h-full w-full flex max-sm:flex-col max-sm:gap-[10vw] text-loader  relative items-center max-sm:justify-center max-md:justify-start justify-end max-sm:w-full max-md:w-[60%]">
-            <p className="text-left text-zinc-400 max-sm:text-[3.5vw] w-[68%] text-[1vw] max-md:text-[2.5vw]  max-md:w-[30vw] max-md:overflow-hidden  tracking-widest max-sm:w-[50%] max-sm:overflow-hidden font-mono scrambleText max-sm:text-center max-md:text-center font-medium uppercase"></p>
-            <p className="text-left absolute right-0 max-md:right-[30%] max-sm:right-[22%] text-zinc-400 w-[40%] max-md:text-nowrap max-sm:text-[4vw] max-md:text-[2.5vw] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
+            <p className="text-left text-zinc-400 max-sm:text-[3.5vw] w-[68%] text-[1vw] max-md:text-[2.5vw]  max-md:w-[40vw] max-md:overflow-hidden  tracking-widest max-sm:w-[50%] max-sm:overflow-hidden font-mono scrambleText max-sm:text-center max-md:text-center font-medium uppercase"></p>
+            <p className="text-left absolute right-0 max-md:right-[30%] max-sm:right-[15%] text-zinc-400 w-[50%] max-md:text-nowrap max-sm:text-[4vw] max-md:text-[2.5vw] text-[1vw] tracking-widest font-mono scrambleText2 font-medium uppercase"></p>
           </div>
         </div>
       </div>

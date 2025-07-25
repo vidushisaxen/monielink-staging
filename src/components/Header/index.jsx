@@ -15,10 +15,11 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from "../Icons";
-import ScrambleText from "../ScrambleText";
+
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useLenis } from "lenis/react";
+import ScrambleText from "../h/ScrambleText";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -200,17 +201,17 @@ export default function Header() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        "#inner-nav",
-        {
-          yPercent: -110,
-        },
-        {
-          yPercent: 0,
-          duration: 1,
-          delay: baseDelay,
-        }
-      );
+      // gsap.fromTo(
+      //   "#inner-nav",
+      //   {
+      //     yPercent: -110,
+      //   },
+      //   {
+      //     yPercent: 0,
+      //     duration: 1,
+      //     delay: baseDelay,
+      //   }
+      // );
     });
     return () => ctx.revert();
   }, []);
@@ -316,7 +317,7 @@ export default function Header() {
                   disabled={buttonDisabled}
                   menuOpen={menuOpen}
                   isInverted={isInverted}
-                  isWhite = {isWhite}
+                  isWhite={isWhite}
                   borderColor={"#ffffff"}
                 />
               </div>
@@ -346,11 +347,9 @@ export default function Header() {
                           className={`uppercase  text-[.9vw] text-left ${isWhite ? "text-white" : "text-[#D6D6D6]"
                             }`}
                         >
-                          <ScrambleText
-                            text={item.name}
-                            speed={0.8}
-                            charType={"lowercase"}
-                          />
+                          <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                            {item.name}
+                          </ScrambleText>
                         </span>
                       </div>
                     </Link>

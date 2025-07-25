@@ -26,8 +26,10 @@ export default function HomePage() {
         <USPs />
         <Products  heading={"Everything needed to Power Digital Banking"}/>
         <Intro />
+        <div className="clients-transition">
         <Clients />
         <Blogs />
+        </div>
         <FAQs data={faqData} />
         <CTA />
       </Layout>

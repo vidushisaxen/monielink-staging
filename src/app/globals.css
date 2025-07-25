@@ -151,6 +151,7 @@ body {
   height: 100%;
   font-family: var(--font-body);
   overflow-x: hidden;
+  background-color: var(--black-1);
 }
 p {
   letter-spacing: 0.3px;

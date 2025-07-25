@@ -6,7 +6,7 @@ import BlackButton from "../Buttons/BlackButton";
 import { SVGLeft, SVGRight } from "../Icons";
 import { useGSAP } from "@gsap/react";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import ScrambleText from "../ScrambleText";
+import ScrambleText from "../h/ScrambleText";
 gsap.registerPlugin(ScrollTrigger, useGSAP, DrawSVGPlugin);
 
 const SolutionsCard = ({ solutionsRef }) => {
@@ -233,7 +233,9 @@ const SolutionsCard = ({ solutionsRef }) => {
             className="border-l py-5 w-[15vw] max-sm:min-w-[45vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw]  max-sm:w-full"
             onClick={() => handleCardClick(index)}
           >
-            <ScrambleText text={item} speed={0.6} charType={"lowerCase"}/>
+             <ScrambleText onHover={true} speed={0.35} className="min-w-[15vw]">
+                                            {item}
+                                        </ScrambleText>
           </div>
         ))}
       </div>

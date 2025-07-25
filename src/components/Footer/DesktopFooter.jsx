@@ -11,7 +11,7 @@ import {
 } from "../Icons";
 import SocialMediaBtn from "./SocialMediaBtn";
 import { useEffect, useState } from "react";
-import ScrambleText from "../ScrambleText";
+import ScrambleText from "../h/ScrambleText";
 
 export default function DesktopFooter() {
   const [isMobile, setIsMobile] = useState(false);
@@ -176,11 +176,9 @@ export default function DesktopFooter() {
                             ></div>
                             <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7.5vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw] ">
-                                <ScrambleText
-                                  text={item.name}
-                                  speed={0.8}
-                                  charType={"lowercase"}
-                                />
+                                <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                                  {item.name}
+                                </ScrambleText>
                               </span>
                             </div>
                           </div>
@@ -201,11 +199,9 @@ export default function DesktopFooter() {
                             ></div>
                             <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw]">
-                                <ScrambleText
-                                  text={item.name}
-                                  speed={0.8}
-                                  charType={"lowercase"}
-                                />
+                                <ScrambleText onHover={true} centerd speed={0.6} className="min-w-[8vw]">
+                                  {item.name}
+                                </ScrambleText>
                               </span>
                             </div>
                           </div>
@@ -229,11 +225,10 @@ export default function DesktopFooter() {
                     href="mailto:info@monielink.io"
                     className="text-[3.125vw] font-display"
                   >
-                    <ScrambleText
-                      text={"info@monielink.io"}
-                      speed={0.5}
-                      charType={"lowercase"}
-                    />
+                    <ScrambleText lowercase onHover={true} centerd speed={0.4} className="min-w-[8vw]">
+                    {"info@monielink.io"}
+                    </ScrambleText>
+                   
                   </a>
                   <div className="pt-2 flex  items-start gap-2 fadeupanim">
                     {socials.map((item, index) => (

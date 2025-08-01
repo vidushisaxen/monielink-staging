@@ -130,6 +130,13 @@ export default function ProductSlider() {
                     start: 'top top',
                     end: "bottom bottom",
                     scrub: true,
+                    snap: {
+                        snapTo: [0, 0.2, 0.34, 0.48, 0.60, 0.75, 0.87, 1],
+                        duration: { min: 0.1, max: 0.3 },
+                        ease: 'power1.inOut',
+                        delay: 0,
+                        directional: false,
+                    },
                     onUpdate: self => {
                         setScrollProgress(self.progress);
                         setActiveSlide(Math.min(total - 1, Math.floor(self.progress * total)));

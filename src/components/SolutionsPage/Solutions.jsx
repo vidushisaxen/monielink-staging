@@ -84,22 +84,21 @@ export default function Solutions() {
         });
       });
 
+      const snapPoints = [0, 0.223, 0.411, 0.6, 0.78, 1]
+
       const tl = gsap.timeline({
         scrollTrigger: {
           id: "solutions-slider-solutions-page",
           trigger: containerRef.current,
           start: "top top",
           end: "bottom bottom",
-          // markers:true,
-          // snap: {
-          //   snapTo: (progress) => {
-          //     const snapIndex = Math.round(progress * (total - 1));
-          //     return snapIndex / (total - 1);
-          //   },
-          //   duration: { min: 0.5, max: 1 },
-          //   ease: "power2.out",  
-          // },
           scrub: true,
+          snap: {
+            snapTo: snapPoints,
+            delay: 0,
+            duration: { min: 0.1, max: 0.3 },
+            ease: "power1.inOut",
+          },
           onUpdate: (self) => {
             setScrollProgress(self.progress);
             setActiveSlide(

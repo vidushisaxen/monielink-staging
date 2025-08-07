@@ -1,6 +1,6 @@
 import Hero from "@/components/ContactPage/Hero";
 import Partner from "@/components/ContactPage/Partner";
-import CTA from "@/components/Footer/CTA";
+import ContactCTA from "@/components/Footer/ContactCTA";
 import Layout from "@/components/Layout";
 
 export default function HomePage() {
@@ -10,7 +10,7 @@ export default function HomePage() {
       <Layout>
       <Hero/>
       <Partner/>
-        <CTA/>
+       <ContactCTA/>
       </Layout>
     </>
   );

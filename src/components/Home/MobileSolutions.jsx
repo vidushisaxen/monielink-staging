@@ -61,12 +61,13 @@ const [activeIndex, setActiveIndex] = useState(1);
         <div className="border-t w-fit flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw]">
           <div className="w-[25vw] max-sm:w-[25vw] max-md:w-[1vw] h-full" />
           {[
-            "Digital Account",
-            "Loyalty",
-            "Merchant Acquiring",
+            "Digital Banking ",
+            "Merchant Acquiring ",
+            "Card Issuing ",
             "Digital Lending",
-            "Card Issuing",
-            "KYC",
+            "Dual Transaction Service ",
+            "KYC & Soft Token ",
+            "Loyalty"
           ].map((item, index) => (
             <div
               key={index}
@@ -214,44 +215,51 @@ const SwiperCard = ({ title, id, description, link }) => {
 const cardsData = [
   {
     id: "001",
-    title: "Digital Account",
+    title: "Digital Banking & Payments",
     description:
-      "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/solutions/digital-accounts",
+      "Build a digital wallet ecosystem that supports Consumers, Merchants, Multiple Currencies, and Instant Virtual Card Issuance. Our Digital Account Management solution is supported by digital KYC management & Soft-Token authentication security .",
+    link: "/#",
   },
   {
     id: "002",
-    title: "Loyalty",
+    title: "Merchant Acquiring ",
     description:
-      "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/solutions/digital-accounts",
+      "Monielink SDK facilitates instant and digital onboarding of merchants while equipping them with interoperable QR code and Soft-POS capabilities. Additionally, merchants can apply for POS issuance through Banks and FinTechs, leveraging our SDK to evaluate and process their requests for POS issuance if they meet the eligibility criteria",
+    link: "/#",
   },
   {
     id: "003",
-    title: "Merchant Acquiring",
+    title: "Card Issuing ",
     description:
-      "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/solutions/digital-accounts",
+      "Issuers can seamlessly issue virtual Debit, Credit, and Prepaid cards instantly through their Mobile App integrated with the Monielink Super SDK. These cards are securely stored in a Digital Card Wallet, allowing users easy access for both online and offline payments. Additionally, our Universal Physical Card solution enables users to purchase and link virtual cards to a physical universal card for immediate use in physical form. Users can also unlink a previously linked virtual card from the Universal Card and link it to another virtual card within seconds.",
+    link: "/#",
   },
   {
     id: "004",
     title: "Digital Lending",
     description:
-      "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/solutions/digital-accounts",
+      "Our SDK platform can help our Partners offer a variety of loan products to their customers on their Mobile Banking app. Monielink underwrites these loans instantly based on the  rules that they set-up on our Web Portal. Monielink platform can instantly disburse once they are approved digitally. Lenders can set-up underwriting & collection rules besides accessing the dashboards and variety of reports to analyze and manage the Loan & Credit Card Portfolio.",
+    link: "/",
   },
   {
     id: "005",
-    title: "Card Issuing",
+    title: "Dual Transaction Service ",
     description:
-      "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/solutions/digital-accounts",
+      "DUO features the groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits—set on a virtual credit card—using their existing debit cards. Customers can Simply Activate DTS on our Partner’s  Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards.",
+    link: "/#",
   },
   {
     id: "006",
-    title: "KYC",
+    title: "KYC & Soft Token ",
     description:
-      "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/solutions/digital-accounts",
+      "Enable fast, secure KYC verification — allowing customers to sign up, get verified, and start using financial services in minutes. From facial biometrics to NIN, BVN, and ID validation, every step is streamlined for compliance, speed, and a seamless user experience protected with built-in 2FA soft token. ",
+    link: "/#",
+  },
+  {
+    id: "007",
+    title: "Loyalty",
+    description:
+      "Design a customized Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK. Reward points can be redeemed for cash under a tailored loyalty program, with funds credited to a dedicated reward redemption account. ",
+    link: "/#",
   },
 ];

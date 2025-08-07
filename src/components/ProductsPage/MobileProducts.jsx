@@ -13,10 +13,9 @@ const products = [
     title: "Balance",
     width:"w-[60%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "Monielink powers you to build a full-featured digital wallet ecosystem for both consumers and merchants, with support for multiple currencies. Instantly issue virtual Debit, Credit, or Prepaid cards through our integrated card issuing platform and SDK.",
+      "You can also assign NUBAN account numbers linked to verified mobile numbers, allowing customers to receive inflow transfers using just their phone number."
+  ],
     img: "/assets/images/products/product-balance.svg",
     href: "/products/balance",
   },
@@ -25,10 +24,9 @@ const products = [
     title: "ScanPay",
     width:"w-[60%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "Merchants can instantly self-onboard to start accepting digital and card payments directly into their settlement accounts. Each merchant is issued an interoperable QR code compatible with any bank, ensuring seamless and universal payment acceptance via ScanPay.",
+      "They receive instant payment notifications and can view all transactions in real time through the dashboard and account statement — fully accessible via our SDK within your mobile app."
+  ],
     img: "/assets/images/products/product-scanpay.svg",
     href: "/products/scanpay",
   },
@@ -37,10 +35,10 @@ const products = [
     title: "TapPay",
     width:"w-[60%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "With TapPay, merchants can digitally self-onboard and start accepting contactless card payments using Soft-POS directly on their NFC-enabled Android phones all within your mobile app via Monielink’s SDK.",
+      "Merchants can also request a physical POS terminal. Eligibility is automatically scored based on rules set by your institution, with approvals handled seamlessly through the SDK.",
+      "Every TapPay transaction triggers instant notifications, with real-time visibility into payments via the dashboard and collection account statement — all accessible through your app."
+  ],
     img: "/assets/images/products/product-tappay.svg",
     href: "/products/tap-pay",
   },
@@ -49,10 +47,10 @@ const products = [
     title: "Instacard",
     width:"w-[60%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "Issue virtual debit, credit, prepaid, and universal cards instantly via your mobile app. Instacard supports online and offline use, with enhanced security through dynamic CVV and tokenized contactless payments.",
+      "Customers can link virtual cards to a physical Universal Instacard for global ATM and POS use",
+      "All card controls including limits, block & unblock card, and instant linking are managed seamlessly through your app via our SDK."
+   ],
     img: "/assets/images/products/product-instacard.svg",
     href: "/products/instacard",
   },
@@ -61,10 +59,9 @@ const products = [
     title: "Verifyed",
     width:"w-[45%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "Verifyed simplifies digital KYC with instant onboarding, facial recognition, passive liveness detection, and soft-token-based two-factor authentication — all via the Monielink SDK.",
+      " It supports ID and address verification, location checks, and CAC-based business verification for secure, compliant onboarding."
+   ],
     img: "/assets/images/products/product-verifyed.svg",
     href: "/products/verifyed",
   },
@@ -73,22 +70,22 @@ const products = [
     title: "SnapCred",
     width:"w-[60%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "SnapCred is Monielink’s cloud-based credit infrastructure that enables lenders and issuers to originate, disburse, manage, and collect towards creating profitable credit programs.",
+      "Using our SDK and web portal, you can configure underwriting and collection rules, launch credit products, and automate disbursements directly through your mobile app.",
+      "Borrowers can view statements, make repayments from any linked bank account, and manage obligations with ease",
+      "SnapCred supports real-time portfolio tracking, automated collections (including from non-host banks via GSI), and full lifecycle management — from origination to recovery."
+  ],
     img: "/assets/images/products/product-snapcred.svg",
     href: "/products/snapcred",
   },
   {
     id: 7,
-    title: "Reward",
+    title: "Reward+",
     width:"w-[50%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "Boost adoption and engagement with Reward+ — a customizable loyalty program that credits usage-based points to a dedicated rewards account.",
+      "Customers can view and track their points in real time through your mobile app via the Monielink SDK."
+  ],
     img: "/assets/images/products/product-reward.svg",
     href: "/products/reward",
   },
@@ -97,10 +94,9 @@ const products = [
     title: "ChatBox",
     width:"w-[50%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "Enhance user experience with interactive FAQs, product guides, and self-training videos — all accessible via the Monielink Super SDK. ",
+      "Chatbox helps users explore features, get instant answers, and learn how to use services with ease, making it an essential support tool for banks and issuers."
+  ],
     img: "/assets/images/products/product-chatbox.svg",
     href: "/products/chatbox",
   },
@@ -109,10 +105,10 @@ const products = [
     title: "DUO",
     width:"w-[45%]",
     description: [
-      "Merchants can instantly self-onboard to start accepting digital and card payments into their own settlement accounts. Each merchant receives an open-loop, interoperable QR code that works with any bank — enabling seamless, universal payment acceptance.",
-      "Merchants receive instant notifications for every payment received via ScanPay.",
-      "Merchants can instantly view received payments on the dashboard and account statement—seamlessly accessible via our SDK within the partner's mobile app.",
-    ],
+      "DUO transforms existing debit cards into powerful virtual credit cards using our patented Dual Transaction Service (DTS). ",
+      "With DTS, pre-approved customers can access their virtual credit limit through their existing Visa, Mastercard, or Verve debit cards — without needing a new physical credit card.",
+      "Once activated via your mobile app (using our SDK), users simply select 'Credit' when prompted at any POS or ATM. The transaction is seamlessly processed against the balance Credit Limit  offered on DUO virtual credit card."
+  ],
     img: "/assets/icons/duo-logo.svg",
     href: "/products/duo",
   },

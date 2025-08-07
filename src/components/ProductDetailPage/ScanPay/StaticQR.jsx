@@ -79,8 +79,8 @@ const StaticQR = () => {
                 <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]'>
                     <div className='w-[60%] max-md:w-[100%] max-sm:w-full'>
                         <Copy>
-                            <h2 className='text-head-100 font-display text-center capitalize max-sm:text-left max-md:text-left'>
-                                Instant Payments with Static QR Codes
+                            <h2 className='text-head-100 font-display text-center max-sm:text-left max-md:text-left'>
+                            Instant Payments with Static QR Codes
                             </h2>
                         </Copy>
                     </div>
@@ -297,16 +297,16 @@ const StaticQR = () => {
 
                             <div className='w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]'>
                                 <div className=' w-[18%] overflow-hidden max-sm:w-[18%]'>
-                                    <p className='font-medium text-content-24 font-body  text-center text1 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left '>Merchant presents a Static QR Code</p>
+                                    <p className='font-medium text-content-24 font-body  text-center text1 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left '>1.Merchant presents a Static QR Code  </p>
                                 </div>
                                 <div className=' w-[15%] overflow-hidden max-sm:w-[18%]'>
-                                    <p className='font-medium text-content-24 font-body  text-center text2 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left '>Customer Scans Static QR</p>
+                                    <p className='font-medium text-content-24 font-body  text-center text2 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left '>2. Customer Scans Static QR  </p>
                                 </div> <div className=' w-[20%] overflow-hidden max-sm:w-[20%]'>
-                                    <p className='font-medium text-content-24 font-body  text-center text3 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>Customer enters Payment Amount followed by PIN for authentication</p>
+                                    <p className='font-medium text-content-24 font-body  text-center text3 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>3. Customer enters Payment Amount & PIN for authentication </p>
                                 </div> <div className=' w-[18%] overflow-hidden'>
-                                    <p className='font-medium text-content-24 font-body  text-center text4 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>Payment  Successful</p>
+                                    <p className='font-medium text-content-24 font-body  text-center text4 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>4. Payment  Successful </p>
                                 </div> <div className=' w-[18%] overflow-hidden'>
-                                    <p className='font-medium text-content-24 font-body  text-center text5 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>Payment  Successful</p>
+                                    <p className='font-medium text-content-24 font-body  text-center text5 textanim max-sm:text-content-20 max-md:text-content-20 max-sm:text-left'>5. Payment Acknowledged </p>
                                 </div>
                             </div>
 

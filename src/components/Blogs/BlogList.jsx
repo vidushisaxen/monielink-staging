@@ -15,7 +15,7 @@ const BlogList = () => {
       >
         <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[10vw] max-sm:gap-[10vw]">
           <Copy>
-            <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display capitalize flex flex-col max-sm:w-[80%] ">
+            <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display  flex flex-col max-sm:w-[80%] ">
               <span>Explore</span> <span>expert insights</span>{" "}
             </h2>
           </Copy>

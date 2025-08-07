@@ -2,22 +2,21 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";
-import { faqData } from "@/components/SampleFaqData";
 import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
-import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
+import Wallet from "@/components/ProductDetailPage/Duo/Wallet";
 
 export default function Duo() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Merchant Onboarding"} para={"Digitally onboard merchants in minutes and enable instant acceptance of digital and card payments. With interoperable QR codes and real-time activation, offer a frictionless setup that enhances customer experience and accelerates merchant adoption."} breadcrumb={true}/>
+        <Hero heading={"Patented Dual Transaction Service"} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
         <Intro content={introData}/>
-        <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
+       <Wallet/>
         <Values data={valuesData}/>
-        <Products  heading={"Explore Other Products"}/>
+        <Products productsData={productsData}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>
@@ -26,20 +25,164 @@ export default function Duo() {
 };
 const introData ={
   logo:"/assets/icons/duo-logo.svg",
-  heading:"One Platform. Every Retail Banking Service.",
+  width:"w-[95%]",
+  heading:"Dual Access. Instantly Credit-Enabled.",
   list:[
-    "Digital Account Management with integrated KYC and soft-token authentication",
-    "Instant Card Issuance for virtual debit, credit, and prepaid cards via SDK",
-    "NUBAN Account Linking to verified mobile numbers for easy fund transfers",
-    "Unified Payments including QR payments, bank transfers, inflows, and merchant collections"
+    "DUO enables you offer pre-approved customers access to credit on their debit card via a virtual Card , all powered by Monielink’s Super SDK – No extra plastic required",
+    "Customers can choose “Credit” as account type option at an ATM or POS in Nigeria to access Credit Amount routed through an issuer ",
+    "Customers can access Virtual Credit Card on Partner’s Mobile App integrated with our SDK to make online payments, secured by Dynamic CVV.",
+    "Regardless of whether the debit card is Visa Mastercard or Verve , DUO can process transactions requested with 'Credit' account type, by the customers from their existing Debit Cards against the available credit limit balance on the DUO virtual Credit Cards."
   ]
 }
 
 const valuesData = {
   heading:"Creating Lasting Value, Together",
   list:[
-      "<p>Nigeria’s retail banking income per user is just $33 — far behind India ($350), China ($750), and the U.S. ($4,500).<b> By 2030, it’s projected to rise to $200.</b></p>",
-      "<p>Over <b>40 MN </b>Unbanked Nigerian Adults are likely to <b> start banking by 2030. </b></p>",
-      "<p><b>Average cross selling ratio </b> of banks is likely to increase from 1.6 to <b> 3.4 </b>by 2030.</p></p>"
+      "<p>By 2030, Nigeria is projected to issue <b> 10 million </b> credit cards</p>",
+      "<p>Credit Card businesses would generate over <b> ₦ 160 BN </b> revenue by 2030</p>",
   ]
 }
+const productsData={
+  heading:"Explore Other Products",
+  cards: [
+    {
+      logo: "/assets/icons/logo/balance-white.svg",
+      features: [
+        "Digital Accounts",
+        "Pre-paid Card Accounts",
+        "Credit Card Accounts",
+        "Loan Accounts",
+        "Reward Accounts",
+        "Redemption Accounts ",
+      ],
+      link:"/products/balance"
+    },
+    {
+      logo: "/assets/icons/logo/scanpay-white.svg",
+      features: [
+        "Digital Merchant Onboarding",
+        "Interoperable QR",
+        "Static QR Codes",
+        "Dynamic QR Codes ",
+        "Payment Collection Account ",
+        "Instant Settlement",
+      ],
+      link:"/products/scanpay"
+  
+    },
+    {
+      logo: "/assets/icons/logo/tap-pay-white.svg",
+      features: [
+        "Digital Merchant Onboarding",
+        "Soft-POS",
+        "POS Terminals ",
+        "Payment Collection Account ",
+        "Instant Settlement"
+      ],
+      link:"/products/tap-pay"
+  
+    },
+    {
+      logo: "/assets/icons/logo/instacard-white.svg",
+      features: [
+        "Issue Virtual Cards",
+        "Digital Card Wallet",
+        "Dynamic CVV",
+        "Contactless Payments",
+        "Universal Card",
+        
+      ],
+      link:"/products/instacard"
+  
+    },
+    {
+      logo: "/assets/icons/logo/snapcred-white.svg",
+      features: [
+        "Credit Origination ",
+        "Credit Disbursement",
+        "Credit lifecycle Management ",
+        "Repayments",
+        "Due & Delinquent Amount Collections",
+        "GSI Collection automation",
+      ],
+      link:"/products/snapcred"
+  
+    },
+    // {
+    //   logo: "/assets/icons/logo/duo-white.svg",
+    //   features: [
+    //     "Dual Transaction Service ",
+    //     "Virtual Credit Cards",
+    //     "Credit Card Portfolio Management ",
+    //     "Collections & Repayments ",
+    //   ],
+    //   link:"/products/duo"
+  
+    // },
+    {
+      logo: "/assets/icons/verifyed-logo.svg",
+      features: [
+        "KYC Management",
+        "Liveness Detection ",
+        "Facial Recognition ",
+        "Business Verification ",
+        "Address Verification",
+        "Soft – Token issuance for 2FA"
+      ],
+      link:"/products/verifyed"
+  
+    },
+    {
+      logo: "/assets/icons/logo/chatbox-white.svg",
+      features: [
+        "Interactive FAQs ",
+        "Help Topics ",
+        "Help Videos ",
+      ],
+      link:"/products/chatbox"
+    },
+    {
+      logo: "/assets/icons/logo/reward-white.svg",
+      features: [
+        "Tailored  Reward Program ",
+        "Reward Point Account ",
+        "Reward Redemption Accounts ",
+        "Usage of Redeemed value",
+      ],
+      link:"/products/reward"
+  
+    }
+  ]
+}
+const faqData = [
+  {
+    question: "What is DUO and how does it work?",
+    answer:
+      "DUO is a patented card innovation that enables customers to access pre-approved credit limits using their existing debit cards. It connects a virtual credit card to the debit card and processes transactions using the virtual limit when the customer selects 'Credit' at POS or ATM.",
+  },
+  {
+    question: "How do Banks and Fintechs integrate DUO?",
+    answer:
+      "DUO is delivered via Monielink’s plug-and-play SDK. Partners can embed it into their mobile apps, offering activation, credit card linking, and transaction tracking with minimal development effort.",
+  },
+  {
+    question: "What happens when a debit card is renewed or replaced?",
+    answer:
+      "Using PAN Remapping via our SDK, renewed debit cards can be re-linked to the original DUO virtual credit card, preserving credit access and transaction continuity.",
+  },
+  {
+    question: " Is DUO compatible with all card schemes?",
+    answer:
+      "Yes. DUO supports debit cards from Visa, Mastercard, and Verve, and functions wherever 'Credit’ account type selection is enabled on on POS terminals or ATMs.",
+  },
+  {
+    question: "How does DUO enhance security?",
+    answer:
+      "DUO offers real-time credit control with no exposure of full PAN details. It supports tokenization, dynamic limit setting, and integrates with 2FA, helping issuers reduce fraud risk.",
+  },
+  {
+    question: "Can users track their credit card activity via DUO?",
+    answer:
+      "Yes. Customers can view credit balances, transaction history, and manage their virtual credit cards directly within the partner’s mobile app using our SDK.",
+  }
+]

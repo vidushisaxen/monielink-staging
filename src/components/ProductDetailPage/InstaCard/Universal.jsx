@@ -346,28 +346,27 @@ const Universal = () => {
               <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[20vw]">
                 <div className=" w-[18%] overflow-hidden max-sm:w-[30%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text1 textanim max-sm:text-left">
-                    Customer Purchase Universal Card
+                  1. Customer Purchase Universal Card
                   </p>
                 </div>
                 <div className=" w-[20%] overflow-hidden max-sm:w-[35%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text2 textanim max-sm:text-left">
-                    Customer Activates Universal Card on Issuer&apos;s App Using SDK
+                  2. Customer Activates Universal Card on Issuer’s App Using SDK
                   </p>
                 </div>{" "}
                 <div className=" w-[20%] overflow-hidden max-sm:w-[35%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text3 textanim max-sm:text-left">
-                    Customer Selects Virtual Instacard for Linking to Universal
-                    Card
+                  3. Customer Selects Virtual Instacard for Linking to Universal Card
                   </p>
                 </div>{" "}
                 <div className=" w-[18%] overflow-hidden max-sm:w-[36%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text4 textanim max-sm:text-left">
-                    Virtual Instacard is Linked to Universal Instacard
+                  4. Virtual Instacard is Linked to Universal Instacard
                   </p>
                 </div>{" "}
                 <div className=" w-[18%] overflow-hidden max-sm:w-[38%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text5 textanim max-sm:text-left">
-                    Customer use Universal Instacard on POS / ATM
+                  5. Customer use Universal Instacard on POS / ATM
                   </p>
                 </div>
               </div>

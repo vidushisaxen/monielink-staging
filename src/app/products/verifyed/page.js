@@ -2,39 +2,34 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";
-import { faqData } from "@/components/SampleFaqData";
 import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
-import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
 import Identity from "@/components/ProductDetailPage/Verifyed/Identity";
 import Address from "@/components/ProductDetailPage/Verifyed/Address";
 import Biometrics from "@/components/ProductDetailPage/Verifyed/Biometrics";
 import IndentityMobile from "@/components/ProductDetailPage/Verifyed/IndentityMobile";
+import Wallet from "@/components/ProductDetailPage/Verifyed/Wallet";
 
 export default function Verifyed() {
   return (
     <>
       <Layout>
         <Hero
-          heading={"Seamless Digital KYC for Instant Onboarding"}
+          heading={"Turn on 2FA to add an extra layer of security."}
           para={
-            "Monielink’s SDK enables fast, secure KYC verification — allowing customers to sign up, get verified, and start using financial services in minutes. From facial biometrics to NIN, BVN, and ID validation, every step is streamlined for compliance, speed, and a seamless user experience."
+            "With Verifyed Authenticator, turn on 2-Step Verification. When you enable 2-Step Verification (also known as two-factor authentication), you add an extra layer of security to your account."
           }
           breadcrumb={true}
         />
         <Intro content={introData} />
-        <Wallet
-          heading={
-            "Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."
-          }
-        />
+        <Wallet/>
         <IndentityMobile/>
         <Identity />
         <Address />
         <Biometrics />
         <Values data={valuesData} />
-        <Products  heading={"Explore Other Products"}/>
+        <Products  productsData={productsData}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>
@@ -43,20 +38,150 @@ export default function Verifyed() {
 }
 const introData = {
   logo: "/assets/icons/verifyed-logo.svg",
-  heading: "One Platform. Every Retail Banking Service.",
+  heading: "Add 2FA protection against fraudsters. ",
+  width:"w-[90%]",
   list: [
-    "Digital Account Management with integrated KYC and soft-token authentication",
-    "Instant Card Issuance for virtual debit, credit, and prepaid cards via SDK",
-    "NUBAN Account Linking to verified mobile numbers for easy fund transfers",
-    "Unified Payments including QR payments, bank transfers, inflows, and merchant collections",
+    "Enable 2FA on any account through easy, self-guided onboarding using multiple authentication options.",
+    "Face-ID, Touch-ID, Encrypted Backups and more to keep users secure.",
+    "Prevents account from getting locked when a user lose phone with secure Backup",
+    "Sync Verifyed 2FA across mobile, tablet and desktop. Customers who carry more than one phone & prefer the availability of Soft Token on multiple devices, can access their Verifyed Soft Token accounts on multiple devices.",
+    "Offline Mode enables users to use Verifyed even when the device is not connected to the internet."
   ],
 };
 
 const valuesData = {
   heading: "Creating Lasting Value, Together",
   list: [
-    "<p>Nigeria’s retail banking income per user is just $33 — far behind India ($350), China ($750), and the U.S. ($4,500).<b> By 2030, it’s projected to rise to $200.</b></p>",
-    "<p>Over <b>40 MN </b>Unbanked Nigerian Adults are likely to <b> start banking by 2030. </b></p>",
-    "<p><b>Average cross selling ratio </b> of banks is likely to increase from 1.6 to <b> 3.4 </b>by 2030.</p></p>",
+    "<p>Nigeria may see payment fraud exposure surging to <b> ₦ 1 trillion </b> by 2030</p>",
+    "<p>Securing payment transactions to prevent fraud will be critical to unlocking digital growth.</p>",
   ],
 };
+const productsData={
+  heading:"Explore Other Products",
+  cards: [
+    {
+      logo: "/assets/icons/logo/balance-white.svg",
+      features: [
+        "Digital Accounts",
+        "Pre-paid Card Accounts",
+        "Credit Card Accounts",
+        "Loan Accounts",
+        "Reward Accounts",
+        "Redemption Accounts ",
+      ],
+      link:"/products/balance"
+    },
+    {
+      logo: "/assets/icons/logo/scanpay-white.svg",
+      features: [
+        "Digital Merchant Onboarding",
+        "Interoperable QR",
+        "Static QR Codes",
+        "Dynamic QR Codes ",
+        "Payment Collection Account ",
+        "Instant Settlement",
+      ],
+      link:"/products/scanpay"
+  
+    },
+    {
+      logo: "/assets/icons/logo/tap-pay-white.svg",
+      features: [
+        "Digital Merchant Onboarding",
+        "Soft-POS",
+        "POS Terminals ",
+        "Payment Collection Account ",
+        "Instant Settlement"
+      ],
+      link:"/products/tap-pay"
+  
+    },
+    {
+      logo: "/assets/icons/logo/instacard-white.svg",
+      features: [
+        "Issue Virtual Cards",
+        "Digital Card Wallet",
+        "Dynamic CVV",
+        "Contactless Payments",
+        "Universal Card",
+        
+      ],
+      link:"/products/instacard"
+  
+    },
+    {
+      logo: "/assets/icons/logo/snapcred-white.svg",
+      features: [
+        "Credit Origination ",
+        "Credit Disbursement",
+        "Credit lifecycle Management ",
+        "Repayments",
+        "Due & Delinquent Amount Collections",
+        "GSI Collection automation",
+      ],
+      link:"/products/snapcred"
+  
+    },
+    {
+      logo: "/assets/icons/logo/duo-white.svg",
+      features: [
+        "Dual Transaction Service ",
+        "Virtual Credit Cards",
+        "Credit Card Portfolio Management ",
+        "Collections & Repayments ",
+      ],
+      link:"/products/duo"
+  
+    },
+    // {
+    //   logo: "/assets/icons/verifyed-logo.svg",
+    //   features: [
+    //     "KYC Management",
+    //     "Liveness Detection ",
+    //     "Facial Recognition ",
+    //     "Business Verification ",
+    //     "Address Verification",
+    //     "Soft – Token issuance for 2FA"
+    //   ],
+    //   link:"/products/verifyed"
+  
+    // },
+    {
+      logo: "/assets/icons/logo/chatbox-white.svg",
+      features: [
+        "Interactive FAQs ",
+        "Help Topics ",
+        "Help Videos ",
+      ],
+      link:"/products/chatbox"
+    },
+    {
+      logo: "/assets/icons/logo/reward-white.svg",
+      features: [
+        "Tailored  Reward Program ",
+        "Reward Point Account ",
+        "Reward Redemption Accounts ",
+        "Usage of Redeemed value",
+      ],
+      link:"/products/reward"
+  
+    }
+  ]
+}
+const faqData = [
+  {
+    question: "How is 2FA handled within Verifyed?",
+    answer:
+      "The Verifyed SDK includes optional soft-token generation. This adds a second layer of security for sensitive actions like logins, payments, and PIN resets—fully manageable within your app.",
+  },
+  {
+    question: "Does Verifyed App work in offline mode?",
+    answer:
+      "Yes. Customers can access your Soft-Token accounts set-up on Verifyed App even in offline mode. However, when you set-up a new Soft-Token account, users will have to be online.",
+  },
+  {
+    question: "Can Verifyed soft-token accounts be synced to additional phone or tablet the user may have ?",
+    answer:
+      "Yes. Customers can sync their Verifyed 2FA accounts to an additional device through a safe & secure authentication process.",
+  }
+]

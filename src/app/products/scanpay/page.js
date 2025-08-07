@@ -2,13 +2,12 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";
-import { faqData } from "@/components/SampleFaqData";
 import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
-import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
 import StaticQR from "@/components/ProductDetailPage/ScanPay/StaticQR";
 import DynamicQR from "@/components/ProductDetailPage/ScanPay/DynamicQR";
+import Wallet from "@/components/ProductDetailPage/ScanPay/Wallet";
 
 
 export default function ScanPay() {
@@ -16,13 +15,13 @@ export default function ScanPay() {
   return (
     <>
       <Layout>
-        <Hero heading={"Seamless Merchant Onboarding"} para={"Digitally onboard merchants in minutes and enable instant acceptance of digital and card payments. With interoperable QR codes and real-time activation, offer a frictionless setup that enhances customer experience and accelerates merchant adoption."} breadcrumb={true}/>
+        <Hero heading={"Modern Merchant Acquiring, Built for you"} para={"Give your merchants the tools to accept payments instantly with ScanPay. From seamless self-onboarding to real-time settlements and dashboard visibility.  Monielink makes it easy to scale collections, improve cash flow, and deliver a frictionless payment experience."} breadcrumb={true}/>
         <Intro content={introData}/>
-        <Wallet heading={"Enable merchants to accept payments instantly using interoperable static or dynamic QR codes — compatible with all major banks and wallets. Fast, secure, and frictionless for both merchants and customers."}/>
+        <Wallet/>
        <StaticQR/>
         <DynamicQR/>
         <Values data={valuesData}/>
-        <Products  heading={"Explore Other Products"}/>
+        <Products productsData={productsData}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>
@@ -31,20 +30,174 @@ export default function ScanPay() {
 };
 const introData ={
     logo:"/assets/icons/scanpay-logo.svg",
-    heading:"One Platform. Every Retail Banking Service.",
+    width:"w-[80%]",
+    heading:"Seamless Onboarding. Instantly Scalable.",
     list:[
-      "Digital Account Management with integrated KYC and soft-token authentication",
-      "Instant Card Issuance for virtual debit, credit, and prepaid cards via SDK",
-      "NUBAN Account Linking to verified mobile numbers for easy fund transfers",
-      "Unified Payments including QR payments, bank transfers, inflows, and merchant collections"
+      "Digital  & Instants merchant onboarding, supported with Digital KYC management & dedicated payment collection Account",
+      "Digital Payments via interoperable QR codes",
+      "Instant Payment Acceptance Notifications ",
+      "Smart Dashboard to track payments and collected accounts statements  with our  SDK integration"
     ]
   }
 
   const valuesData = {
     heading:"Creating Lasting Value, Together",
     list:[
-        "<p>Nigeria’s retail banking income per user is just $33 — far behind India ($350), China ($750), and the U.S. ($4,500).<b> By 2030, it’s projected to rise to $200.</b></p>",
-        "<p>Over <b>40 MN </b>Unbanked Nigerian Adults are likely to <b> start banking by 2030. </b></p>",
-        "<p><b>Average cross selling ratio </b> of banks is likely to increase from 1.6 to <b> 3.4 </b>by 2030.</p></p>"
+        "<p>Over 60% of Payments transactions in India & China are QR Scan based.</p>",
+        "<p>Nigeria is likely to process over 125 Billion Digital Payment Transactions per year by 2030. </p>",
     ]
   }
+  const productsData={
+    heading:"Explore Other Products",
+    cards: [
+      {
+        logo: "/assets/icons/logo/balance-white.svg",
+        features: [
+          "Digital Accounts",
+          "Pre-paid Card Accounts",
+          "Credit Card Accounts",
+          "Loan Accounts",
+          "Reward Accounts",
+          "Redemption Accounts ",
+        ],
+        link:"/products/balance"
+      },
+      // {
+      //   logo: "/assets/icons/logo/scanpay-white.svg",
+      //   features: [
+      //     "Digital Merchant Onboarding",
+      //     "Interoperable QR",
+      //     "Static QR Codes",
+      //     "Dynamic QR Codes ",
+      //     "Payment Collection Account ",
+      //     "Instant Settlement",
+      //   ],
+      //   link:"/products/scanpay"
+    
+      // },
+      {
+        logo: "/assets/icons/logo/tap-pay-white.svg",
+        features: [
+          "Digital Merchant Onboarding",
+          "Soft-POS",
+          "POS Terminals ",
+          "Payment Collection Account ",
+          "Instant Settlement"
+        ],
+        link:"/products/tap-pay"
+    
+      },
+      {
+        logo: "/assets/icons/logo/instacard-white.svg",
+        features: [
+          "Issue Virtual Cards",
+          "Digital Card Wallet",
+          "Dynamic CVV",
+          "Contactless Payments",
+          "Universal Card",
+          
+        ],
+        link:"/products/instacard"
+    
+      },
+      {
+        logo: "/assets/icons/logo/snapcred-white.svg",
+        features: [
+          "Credit Origination ",
+          "Credit Disbursement",
+          "Credit lifecycle Management ",
+          "Repayments",
+          "Due & Delinquent Amount Collections",
+          "GSI Collection automation",
+        ],
+        link:"/products/snapcred"
+    
+      },
+      {
+        logo: "/assets/icons/logo/duo-white.svg",
+        features: [
+          "Dual Transaction Service ",
+          "Virtual Credit Cards",
+          "Credit Card Portfolio Management ",
+          "Collections & Repayments ",
+        ],
+        link:"/products/duo"
+    
+      },
+      {
+        logo: "/assets/icons/verifyed-logo.svg",
+        features: [
+          "KYC Management",
+          "Liveness Detection ",
+          "Facial Recognition ",
+          "Business Verification ",
+          "Address Verification",
+          "Soft – Token issuance for 2FA"
+        ],
+        link:"/products/verifyed"
+    
+      },
+      {
+        logo: "/assets/icons/logo/chatbox-white.svg",
+        features: [
+          "Interactive FAQs ",
+          "Help Topics ",
+          "Help Videos ",
+        ],
+        link:"/products/chatbox"
+      },
+      {
+        logo: "/assets/icons/logo/reward-white.svg",
+        features: [
+          "Tailored  Reward Program ",
+          "Reward Point Account ",
+          "Reward Redemption Accounts ",
+          "Usage of Redeemed value",
+        ],
+        link:"/products/reward"
+    
+      }
+    ]
+  }
+  const faqData = [
+    {
+      question: "How does ScanPay work for merchants?",
+      answer:
+        "ScanPay enables merchants to accept payments instantly via QR codes—either static (printed) or dynamic (generated per transaction). Once onboarded, each merchant receives an interoperable QR linked to their dedicated settlement account created by Monielink upon their self-assited and seamless onboarding.",
+    },
+    {
+      question: "Is ScanPay interoperable across banks and apps?",
+      answer:
+        "Yes. ScanPay is based on open-loop QR standards and works with all Nigerian banks and wallets that support QR transfers. This ensures wide compatibility and acceptance.",
+    },
+    {
+      question: "How are merchants notified of payments?",
+      answer:
+        "Every successful transaction triggers an instant payment notification via the partner’s app (powered by our SDK). Transaction history and account statements are also available for viewing in real-time.",
+    },
+    {
+      question: "Can we brand the QR code and payment experience?",
+      answer:
+        "Yes. Partners can fully customize the merchant-facing interface, payment success screens, and even QR code designs to reflect their branding.",
+    },
+    {
+      question: "What’s the advantage of ScanPay over POS devices?",
+      answer:
+        "ScanPay reduces hardware costs, enables faster onboarding, and expands reach to micro and mobile merchants who may not qualify or afford traditional POS devices.",
+    },
+    {
+      question: "What is the difference between Static & Dynamic QR Code?",
+      answer:
+        "Static QR codes are fixed and reusable, while dynamic QR codes are unique to each transaction and include metadata like amount, merchant ID, or product info. Dynamic QR enhances traceability and automates reconciliation.",
+    },{
+      question: "What are the benefits of a Dynamic QR Code?",
+      answer:
+        "Dynamic QR codes enable a faster and more accurate checkout experience per transaction",
+    },
+    {
+      question: " What are the benefits of a Static QR Code?",
+      answer:
+        "Static QR codes are easy to deploy, low-cost, and ideal for micro-merchants. They don't require internet or apps to generate and can be printed or displayed as signage.",
+    },
+    
+  ]

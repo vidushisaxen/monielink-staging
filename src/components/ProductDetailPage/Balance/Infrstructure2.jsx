@@ -92,8 +92,8 @@ const Infrastructure2 = () => {
             <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
                 <div className='w-[80%]'>
                     <Copy>
-                        <h2 className='text-head-100 font-display text-center capitalize'>
-                            All-in-One Wallet Infrastructure for Cards, Lending & Rewards
+                        <h2 className='text-head-100 font-display text-center '>
+                        All-in-One Wallet Infrastructure for Cards, Lending & Rewards
                         </h2>
                     </Copy>
                 </div>

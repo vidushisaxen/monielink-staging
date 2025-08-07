@@ -153,9 +153,7 @@ import {
               <div className="w-1/2 h-full flex flex-col pb-[12%] py-[5vw] pr-[5vw] justify-evenly items-start ">
                 <div>
                   <p>
-                    Integrate the Moneylink Super SDK and start delivering
-                    seamless, scalable banking services within your mobile app —
-                    faster than ever. Let’s build the future of finance together.
+                  Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app — faster than ever. Let’s build the future of finance together.
                   </p>
                 </div>
                 <div className="">
@@ -187,7 +185,7 @@ import {
             </div>
             <div className="w-full h-[20%] flex flex-col  -mt-[5vw] justify-start items-end px-[5vw] pr-[10%] py-[2vw] ">
               <a
-                href="mailto:info@monielink.io"
+                href="mailto:info@monielink.org"
                 className="text-head-80 font-display"
               >
                 <ScrambleText

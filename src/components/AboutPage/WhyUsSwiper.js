@@ -119,7 +119,7 @@ const WhyUsSwiper = () => {
 
   return (
     <>
-     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:top-[63%] max-sm:right-[35%]  max-md:mt-[8vw] justify-end gap-5 max-sm:w-full fadeupanim">
+     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:top-[68%] max-sm:right-[35%]  max-md:mt-[8vw] justify-end gap-5 max-sm:w-full fadeupanim z-[99]">
             <ArrowButton
               onClick={handlePrevClick}
               arrowColor={"#ffffff"}
@@ -187,6 +187,7 @@ const WhyUsSwiper = () => {
                   description={item.description}
                   index={cardIndex}
                   activeIndex={activeIndex}
+                  height={item.height}
                 />
               </SwiperSlide>
             );
@@ -203,7 +204,7 @@ const WhyUsSwiper = () => {
 
 export default WhyUsSwiper;
 
-const SwiperCard = ({ id, title, description, index, activeIndex }) => {
+const SwiperCard = ({ id, title, description, index, activeIndex,height }) => {
   const isActive = activeIndex === index;
 
   return (
@@ -212,20 +213,20 @@ const SwiperCard = ({ id, title, description, index, activeIndex }) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
       }}
       className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[45vh] max-sm:w-[90%] ${
-        isActive ? "h-[28vw] max-sm:h-[110vw] max-md:h-[30vh]" : ""
+        isActive ? `${height || "h-[28vw]"} max-sm:h-[120vw] max-md:h-[30vh]` : ""
       }`}
     >
-      <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[10vw] max-md:p-[5vw]">
+      <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[10vw]  max-md:p-[5vw]">
         <p className="max-sm:text-[4vw] max-md:text-[2.7vw]">00{id}</p>
         <div
-          className={`space-y-[5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[10vw] max-sm:mt-[12vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] ${
+          className={`space-y-[5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[5vw] max-sm:mt-[5vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] ${
             isActive ? "opacity-100" : "opacity-0 max-md:opacity-100"
           }`}
         >
           <h4 className="w-[80%] text-content-30 font-display max-md:text-head-80 max-sm:text-head-80 capitalize">
             {title}
           </h4>
-          <p className="text-content-20 mb-[3.5vw]">{description}</p>
+          <p className="text-content-20 mb-[3.5vw]" dangerouslySetInnerHTML={{__html:description}}/>
         </div>
       </div>
     </div>
@@ -235,50 +236,42 @@ const SwiperCard = ({ id, title, description, index, activeIndex }) => {
 const SwiperData = [
   {
     id: 1,
-    title: "Faster Time to Market",
+    title: "Super SDK offering",
     description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
+      "Our Plug & Play SDK can be Easily Integrated into Mobile Apps of Banks & FinTechs to deliver a wide variety of use cases without requiring them to build these functionalities from scratch. ",
+      
   },
   {
     id: 2,
-    title: "Faster Time to Market",
+    title: "Dedicated Instance deployment ",
     description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
+      "Our Back-End Applications may be deployed in a dedicated instance on our Cloud Infrastructure providing our partners full control over its access, management , security , data-protection & business continuity.",
   },
   {
     id: 3,
-    title: "Faster Time to Market",
+    title: "Revenue Share Model",
     description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
+      "Our partnership goes beyond Tech — it’s about Growing Revenue For Our Partners. Our Revenue share model ensures: <ul class='list-disc px-[1vw]'><li>Low Initial Investment.</li><li>Revenue Tied to the Success of the Partner.</li><li>End-to-end Business & Process Enablement.</li></ul>",
+      height:"h-[32vw]"
   },
   {
     id: 4,
-    title: "Faster Time to Market",
+    title: "Superior Customer Experience",
     description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
+      "Our suite of offerings include Digital Banking, Card Issuing & Acquiring and Digital Lending services supported with Digital KYC Management, Soft-Token for 2FA, Loyalty Management & Chatbot service. Together, these end-to-end solutions help drive scalable growth, operational efficiency, and a superior customer experience.",
+       height:"h-[34vw]"
   },
   {
     id: 5,
-    title: "Faster Time to Market",
+    title: "Infrastructure Security",
     description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
+      "The tenant has full control over the infrastructure's security configuration, including network access, firewalls, and operating system security. They are responsible for implementing security measures to protect their own data and application from unauthorised access.",
+       height:"h-[30vw]"
   },
   {
     id: 6,
-    title: "Faster Time to Market",
+    title: "Regulatory Compliance",
     description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
-  },
-  {
-    id: 7,
-    title: "Faster Time to Market",
-    description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
-  },
-  {
-    id: 8,
-    title: "Faster Time to Market",
-    description:
-      "Launch your card program in days, not months. Our end-to-end platform handles everything — from issuance to compliance — so you can focus on growth.",
-  },
+      "Dedicated instance deployments enable tenants / partners meet regulatory compliance & security control standards.",
+  }
 ];

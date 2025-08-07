@@ -78,7 +78,7 @@ const Rewards = () => {
           <div className='w-[65%] space-y-[9vw]'>
             <Copy>
               <h2 className='text-head-100 font-display text-center '>
-                Boost Engagement & Revenue with Reward+
+              Boost Engagement & Revenue with Reward+
               </h2>
             </Copy>
 

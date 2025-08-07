@@ -21,7 +21,7 @@ const Launch = () => {
     {
       title: "Cloud Based Implementation",
       description:
-        "Deploy dedicated cloud instances with partner-managed access control and firewalls.",
+        "Deploy dedicated cloud instances with partner-managed access, security controls, and custom firewalls.",
       width: "w-[40%]",
       svg: svgRefs[0],
       svgElement: <CloudImplementationIcon />,
@@ -35,9 +35,9 @@ const Launch = () => {
       svgElement: <DedicatedSaaSIcon />,
     },
     {
-      title: "secure environments",
+      title: "Secure Environments",
       description:
-        "Meet regulatory compliance with secure, isolated environments at lower cost and higher efficiency than on-premise systems.",
+        "Maintain regulatory compliance through isolated, cloud-based environments designed for high efficiency and reduced operational costs compared to on-premise infrastructure.",
       width: "w-[40%]",
       svg: svgRefs[2],
       svgElement: <SecureEnvironmentIcon />,
@@ -45,7 +45,7 @@ const Launch = () => {
     {
       title: "Seamless integration",
       description:
-        "Seamlessly integrate digital banking experiences using our Super SDK front-end and dedicated cloud back-end — fully managed on Monielink Infrastructure.",
+        "Seamlessly integrate digital banking experiences using our Super SDK front-end and dedicated cloud back-end — fully managed on Monielink’s Infrastructure.",
       width: "w-[55%]",
       svg: svgRefs[3],
       svgElement: <SeamlessIntegrationIcon />,
@@ -130,7 +130,7 @@ const Launch = () => {
         <div className="text-center text-white w-[80%] max-sm:w-full  ">
           <Copy>
             <h2 className="text-head-60 font-display max-md:text-head-60 max-sm:text-head-100">
-              Everything You Need to Launch & Scale
+            Everything You Need to Launch & Scale
             </h2>
           </Copy>
         </div>

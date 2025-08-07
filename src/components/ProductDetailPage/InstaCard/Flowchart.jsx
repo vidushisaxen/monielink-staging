@@ -17,7 +17,7 @@ const Flowchart = () => {
                 <div className='w-[95%] max-sm:w-full'>
                     <Copy>
                         <h2 className='text-head-100 font-display text-center capitalize max-sm:text-left'>
-                        Turn Any NFC-Enabled Phone into a Contactless Payment Terminal
+                        Virtual Instacard 
                         </h2>
                     </Copy>
                 </div>

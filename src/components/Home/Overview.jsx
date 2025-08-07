@@ -22,7 +22,7 @@ export default function Overview() {
       <div className="pt-[5vw] flex items-center flex-col justify-center gap-[2vw]">
         <Copy>
           <h2 className="text-gray-1 text-center text-head-60 w-[55%] capitalize font-display overviewText max-sm:w-3/4 max-md:w-[70%] max-sm:head-140">
-            Enabling Digital Transformation to help You Realize 6X Revenue Growth
+          Enabling Digital Transformation that helps you Realize 6X Revenue Growth
           </h2>
         </Copy>
         <div className="flex items-center justify-between w-[60%] pt-10 relative z-[2] max-sm:flex-col max-sm:gap-16 max-md:gap-[5vw]  max-md:w-[70%]">
@@ -90,17 +90,15 @@ export default function Overview() {
           <div className="pb-[3.5vw] w-[50%] max-md:w-full max-sm:pt-[10vh]">
             <Copy>
               <p className="font-display text-gray-1 text-head-100">
-                Find the Right Solution for You
+              Find the Right Solution for You
               </p>
             </Copy>
           </div>
           <div className="h-fit w-[35%] max-md:w-[85%]">
             <Copy>
               <p className="text-content-20 text-gray-2 ">
-                Enable seamless digital banking experiences for your customers
-                through your mobile app. The Moneylink Super SDK empowers banks
-                and fintechs to launch B2B2C services quickly, securely, and at
-                scale — all from a single integration.
+              Our comprehensive suite covers digital banking, payments, card issuance, merchant acquiring, digital lending, and credit card management. It&apos;s supported by powerful enablers like digital KYC, secure soft-token 2FA, personalized loyalty programs, and chatbot-based customer support. Together, these solutions drive scalable growth, boost operational efficiency, and deliver a superior customer experience.
+
               </p>
             </Copy>
           </div>

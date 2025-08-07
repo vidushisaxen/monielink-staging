@@ -1,0 +1,99 @@
+import Hero from "@/components/Hero";
+import Layout from "@/components/Layout";
+import FAQs from "@/components/Home/FAQs";
+import CTA from "@/components/Footer/CTA";
+import Intro from "@/components/SolutionDetailPage/Intro";
+import Products from "@/components/SolutionDetailPage/Products";
+import Solutions from "@/components/SolutionDetailPage/Solutions";
+import { DigitalAccounts1 } from "@/components/Icons";
+import IntroCardIssuing from "@/components/SolutionDetailPage/IntroCardIssuing";
+
+
+export default function SolutionDetail() {
+
+  return (
+    <>
+      <Layout>
+        <Hero heading={"Launch faster with instant card issuing"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
+        <IntroCardIssuing/>
+        <Products/>
+        <Solutions solutionsData={solutionsData}/>
+        <FAQs data={faqData} />
+        <CTA />
+      </Layout>
+    </>
+  );
+};
+
+
+const productsData ={
+  heading:"Creating Lasting Value, Together"
+}
+const solutionsData ={
+  headline:"Next-gen virtual card issuance enabling both online & offline payments, with the convenience of linking multiple virtual cards  to a Universal Card for usage from a single Physical Card",
+  heading:"Explore More of our solutions",
+  cards:[
+    {
+      title: "Digital Account",
+      para: "Monielink powers you to build a full-featured digital account ecosystem for offering Digital Banking & all use cases of account management for Credit & Pre-paid card, Loan and Reward accounts.",
+      link: "/solutions/digital-accounts",
+    },
+    {
+      title: "Merchant Acquiring",
+      para: "We support you with the tools and infrastructure to onboard merchants instantly, accept all major payment types, and manage terminals from a single, secure dashboard.",
+      link: "/solutions/merchant-acquiring",
+      
+    },
+    {
+      title: "Digital Lending",
+      para: "We help you build and scale profitable lending portfolio. From credit card issuance to loan disbursement and recovery — all managed on a compliant, cloud-based system.",
+      link: "/solutions/digital-lending",
+      
+    },
+    {
+      title: "Dual Transaction Service",
+      para: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.",
+      link: "/solutions/dual-transaction-service",
+      
+    },
+    {
+      title: "KYC Management ",
+      para: "We make identity verification effortless with AI-driven facial recognition, liveness detection, and two-factor authentication — helping you onboard users securely and at scale.",
+      link: "/solutions/kyc-and-soft-token",
+      
+    },
+    {
+      title: "Loyalty Management",
+      para: "We enable you to design, launch, and manage custom loyalty programs that reward usage, increase customer engagement, and deliver real-time visibility into earned points.",
+      link: "/solutions/loyalty-management",
+    },
+  ]
+}
+
+const faqData = [
+  {
+    question: "What is Card Issuing Solution from Monielink?",
+    answer:
+      "<p>Our Instant Virtual Card issuing product <span class='font-medium'>“Instacard”</span> supports issuance of all card forms (Debit, Credit & Pre-paid cards) for all payment use cases for making online & offline payments using Monielink SDK integrated within the Mobile Apps of our partner Banks & FinTechs. Using Card Control settings, customers can set-up daily transaction limits for online & offline usage (POS & ATMs), both for domestic & international transactions. Customers can access their card account statements & transaction history through Monielink SDK. Further, customers can purchase our <span class='font-medium'>“Universal Instacard”</span> to link any virtual card that has been issued to them through Monielink SDK, to start using them through a single Physical Card for making offline transactions on any POS or ATM.</p>",
+  },
+  {
+    question: "Why should you choose our Card Issuing Solution?",
+    answer:
+      "<p>Each partner or tenant operates within a dedicated, isolated environment encompassing the Monielink platforms, databases, and supporting infrastructure. This setup ensures heightened security, privacy, and control by eliminating resource and data sharing with other tenants. Responsibility for securing the infrastructure and application data within this exclusive environment lies with the tenant.</p> <p> Additionally, our Card Issuing platform enables instant issuance of Virtual Cards for secure online & offline usage through Monielink SDK besides linking them to a Universal Card for offline usage through a single physical card. Built on a scalable and elastic cloud backend, it enables faster transaction processing, reduces infrastructure costs, and delivers an enhanced customer experience.</p>",
+  },
+  {
+    question: "What makes Monielink different?",
+    answer:
+      "Monielink goes beyond back-end support by offering a fully integrated front-end solution through its Super SDK, allowing seamless integration with partners' mobile banking apps to ensure a smooth and efficient customer experience. This plug-and-play integration approach ensures quicker implementation, while Monielink provides end-to-end solutions for every use case it offers to its partners.",
+  },
+  {
+    question: "How secure is Card Issuing offering from Monielink?",
+    answer:
+      "Our partner Bank / FinTech has full control over the infrastructure's security configuration, including network access, firewalls, and operating system security. They are responsible for implementing security measures to protect their own data and application from unauthorized access.",
+  },
+  {
+    question: "How does Monielink take care of Compliance requirements?",
+    answer:
+      "Dedicated instance deployments enable tenants / partners meet regulatory compliance & security control standards.",
+  }
+]

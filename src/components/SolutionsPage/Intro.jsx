@@ -51,10 +51,10 @@ const Intro = () => {
             <div className="px-[4vw] flex justify-center items-center h-full w-full relative">
                 <div className="text-center text-white w-1/2 flex flex-col items-center gap-10 max-sm:w-full">
                     <Copy>
-                        <h2 className="text-head-100 font-display">Find the Right Solution for You</h2>
+                        <h2 className="text-head-100 font-display">Find the Right Solution for You                        </h2>
                     </Copy>
                     <Copy>
-                        <p className="text-content-20 w-3/5 max-sm:w-[85%]">Enable seamless digital banking experiences for your customers through your mobile app. The Moneylink Super SDK empowers banks and fintechs to launch B2B2C services quickly, securely, and at scale — all from a single integration.</p>
+                        <p className="text-content-20 w-3/5 max-sm:w-[85%]">A comprehensive suite of solutions, supported by powerful enablers like digital KYC, secure soft-token 2FA, personalized loyalty programs, and chatbot-based customer support. Together, our solutions drive scalable growth, boost operational efficiency, and deliver a superior customer experience. </p>
                     </Copy>
                 </div>
                 <div className="absolute w-[75%] max-sm:w-[190%] max-md:w-[120vw]">

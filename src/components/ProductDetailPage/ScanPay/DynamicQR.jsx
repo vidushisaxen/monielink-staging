@@ -86,8 +86,8 @@ const DynamicQR = () => {
         <div className="px-[4vw] py-[7vw] flex flex-col  items-center  gap-[10vw] max-md:py-[10vw] max-md:px-[5vw] max-sm:px-[5.5vw]">
           <div className="w-[80%] max-md:w-[100%] max-sm:w-full">
             <Copy>
-              <h2 className="text-head-100 font-display text-center capitalize  max-sm:text-left max-md:text-left">
-                and dynamic QR Codes
+              <h2 className="text-head-100 font-display text-center max-sm:text-left max-md:text-left">
+              Secure & Fast Payments with Dynamic QR Codes
               </h2>
             </Copy>
           </div>
@@ -307,27 +307,28 @@ const DynamicQR = () => {
               <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
                 <div className=" w-[20%] overflow-hidden max-sm:w-[18%]">
                   <p className="font-medium text-content-24 font-body  text-center text-1 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
-                    Merchant enters Payment Amount to generate a Dynamic QR Code
+                  1. Merchant enters Payment Amount to generate a Dynamic QR Code
                   </p>
                 </div>
                 <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
                   <p className="font-medium text-content-24 font-body  text-center text-2 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
-                    Merchant presents a Dynamic  QR Code
+                  2. Merchant presents a Dynamic  QR Code
                   </p>
                 </div>{" "}
                 <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
                   <p className="font-medium text-content-24 font-body  text-center text-3 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
-                    Customer Scans QR Code & enters PIN for authentication
+                  3. Customer scans QR Code
                   </p>
                 </div>{" "}
                 <div className=" w-[18%] overflow-hidden">
                   <p className="font-medium text-content-24 font-body  text-center text-4 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
-                    Payment  Successful
+                  4. Customer enters PIN for authentication
                   </p>
                 </div>{" "}
                 <div className=" w-[18%] overflow-hidden">
                   <p className="font-medium text-content-24 font-body  text-center text-5 max-sm:text-content-20 max-md:text-content-20  max-sm:text-left">
-                    Payment received confirmation
+                  5. Payment  
+Successful
                   </p>
                 </div>
               </div>

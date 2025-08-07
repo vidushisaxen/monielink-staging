@@ -26,16 +26,13 @@ export default function Hero() {
             <h1
               className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}
             >
-              Ideas, Insights <br/> & Innovation
+              Ideas, Insights <br/>& Innovation
             </h1>
           </Copy>
           <div className={`w-[60%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-[90%] max-sm:pt-[10vw] max-md:pt-[5vw]`}>
             <Copy delay={baseDelay + 0.5}>
               <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5] max-sm:pr-[5vw]">
-                Explore expert insights, product updates, market trends, and
-                thought leadership from the team driving the future of digital
-                banking in Africa. Stay informed on what&apos;s shaping fintech,
-                financial inclusion, and scalable innovation — all in one place.
+              Explore expert insights, product updates, market trends, and thought leadership from the team driving the future of digital banking in Africa. Stay informed on what&apos;s shaping fintech, financial inclusion, and scalable innovation — all in one place.
               </p>
             </Copy>
           </div>

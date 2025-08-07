@@ -43,14 +43,14 @@ export default function Hero() {
                 >
                     <Copy delay={baseDelay}>
                         <h1 className={`text-head-150 font-display w-[80%] headingText  text-gray-1 max-sm:w-[90%]`}>
-                            Get in Touch
+                        Get in Touch
                         </h1>
                     </Copy>
                     <div
                         className={`w-[50%] max-md:w-[60%] pt-5 max-md:pt-[5vw] text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-sm:pt-[10vw]`}>
                         <Copy delay={baseDelay + 0.5}>
                             <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5] max-sm:pr-[5vw]">
-                                We&apos;re here to help you launch, scale, and grow in the digital finance economy. Whether you're a bank, fintech, merchant, or partner — let&apos;s connect and build the future of finance together.
+                            We&apos;re here to help you launch, scale, and grow in the digital finance economy. Whether you're a bank, fintech, merchant, or partner — let&apos;s connect and build the future of finance together.
                             </p>
                         </Copy>
                     </div>
@@ -78,7 +78,7 @@ export default function Hero() {
                             </div>
                             <Copy>
                                 <p className="text-content-20  text-gray-2">
-                                    23 Adeola Odeku Street, <br /> Victoria Island, Lagos, Nigeria
+                                20, Layi Yusuf Crescent, Off Admiralty road, Lekki Phae 1, Lagos, Nigeria
                                 </p>
                             </Copy>
                         </div>
@@ -103,7 +103,7 @@ export default function Hero() {
                             </div>
                             <Copy>
                                 <p className="text-content-20 text-gray-2">
-                                    contact@monielink.io
+                                info@monielink.io
                                 </p>
                             </Copy>
                         </div>
@@ -128,7 +128,7 @@ export default function Hero() {
                             </div>
                             <Copy>
                                 <p className="text-content-20 text-gray-2">
-                                    +2348023970955
+                                +2348023970955
                                 </p>
                             </Copy>
                         </div>

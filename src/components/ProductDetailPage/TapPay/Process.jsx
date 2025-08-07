@@ -87,8 +87,8 @@ const Diagram = () => {
       >
         <div className="w-[70%] max-md:w-[95%] max-sm:w-full mx-auto mb-[3vw]">
           <Copy>
-            <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left">
-              Flexible Card Payments with Tap, Dip, or Swipe
+            <h2 className="text-head-100 font-display text-center max-sm:text-left">
+            Flexible Card Payments with a POS Terminal
             </h2>
           </Copy>
         </div>

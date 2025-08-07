@@ -11,49 +11,57 @@ const features = [
     id: 1,
     title: "Digital Account",
     description:
-      "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
+      "<p>Monielink powers you to build a full-featured digital wallet ecosystem for both consumers and merchants, with support for multiple currencies. Instantly issue virtual Debit, Credit, or Prepaid cards through our integrated card issuing platform and SDK.</p><p>You can also assign NUBAN account numbers linked to verified mobile numbers, allowing customers to receive inflow transfers using just their phone number.</p>",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
+    href: "/#",
   },
   {
     id: 2,
-    title: "Loyalty",
+    title: "Merchant Acquiring ",
     description:
-      "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
+      "<p>Monielink enables instant, digital onboarding for merchants directly through your mobile app. Using SoftPOS on NFC-enabled Android phones, merchants can start accepting contactless card payments without additional hardware.</p><p>Our platform also supports ScanPay with static and dynamic QR codes, and traditional POS terminals for card dipping, tapping, or swiping</p>",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
+    href: "/#",
   },
   {
     id: 3,
-    title: "Merchant Acquiring",
+    title: "Card Issuing",
     description:
-      "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
+      "<p>Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction limits across POS, ATM, and online channels. </p><p>With our Universal Instacard, users can access multiple virtual cards through a single physical card — delivering flexibility, security, and a superior user experience.</p>",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
+    href: "/#",
   },
   {
     id: 4,
     title: "Digital Lending",
     description:
-      "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
+      "<p>End-to-end loan and credit card management through SnapCred — a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.</p><p>With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections — all on a secure, cloud-based infrastructure.</p>",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
+    href: "/#",
   },
   {
     id: 5,
-    title: "Card Issuing",
+    title: "Dual Transaction Service",
     description:
-      "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
+      "<p>You can unlock new revenue by transforming debit cards into virtual credit cards.</p><p>With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.</p>",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
+    href: "/#",
   },
   {
     id: 6,
-    title: "KYC",
+    title: "KYC & Soft Token",
     description:
-      "Comprehensive solution for building a Digital Wallet Ecosystem Serving Both Consumers, & Merchants supporting multiple currencies. Comes with option to offer a Virtual Debit, Credit & Pre-Paid Card instantly through Card Issuing Platform & SDK integration. Customers can be offered a NUBAN Account Number Linked to a Verified Mobile Number such that customer can use this Mobile Number for receiving Inflow Transfers.",
+      "<p>Monielink Super SDK, enables instant customer onboarding with:</p> <ul class='list-disc space-y-[0.5vw] pl-[3vw]'><li>Face capture supported with liveness detection which confirms that the captured face belongs to a live individual — preventing spoofing and impersonation.</li><li>Facial recognition technology to match live captures against BVN, NIN, or photo ID records in real time, ensuring high-confidence identity verification. </li><li>ID Verifications to verify NIN, Driver’s License, International Passport etc.</li><li>Digital Business Verification for a registered business</li><li>Address Verification  for digitally verifying residence & business address</li><li>KYC Upgrades</li></ul><p>The solution also includes soft token- 2FA, adding an extra layer of security for account activation and ongoing transactions through a soft-token set-up on Verifyed App</p>",
     img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
+    href: "/#",
+  },
+  {
+    id: 7,
+    title: "Loyalty Management ",
+    description:
+      "<p>Boost adoption and engagement by offering a customized loyalty program for all products & services offered on by Monielink. With Monielink’s SDK, you can reward customers with usage-based points credited to a dedicated rewards account, complete with real-time reward statements and transaction visibility.</p>",
+    img: "/assets/images/solutions/slide-1.svg",
+    href: "/#",
   },
 ];
 

@@ -54,7 +54,7 @@ const Intro = ({ content }) => {
           </div>
         </div>
         <div className="w-1/2 flex items-start justify-start max-sm:w-full">
-          <div className="flex flex-col w-[70%] max-md:w-[100%] space-y-[5vw] max-sm:w-full max-sm:space-y-[12vw]">
+          <div className={`flex flex-col  max-md:w-[100%] space-y-[5vw] max-sm:w-full max-sm:space-y-[12vw] ${content.width || "w-[70%]"}`}>
             <Copy>
               <h2 className="text-head-60 font-display text-black-1 max-sm:w-[90%]">
                 {content.heading}
@@ -69,7 +69,7 @@ const Intro = ({ content }) => {
                 >
                   <span className="h-[2vw] w-[0.6vw]  max-md:h-[5vw] max-md:w-[1vw] max-sm:h-[7vw] max-sm:w-[2vw]  bg-[#FE6E00] bar-anim inline-block" />
                   <Copy>
-                    <p className="text-content-20 items-start text-black-1 max-md:w-full font-body w-[75%] max-sm:w-full">
+                    <p className={`text-content-20 items-start text-black-1 max-md:w-full font-body  max-sm:w-full ${content.width || "w-[75%]"}`}>
                       {item}
                     </p>
                   </Copy>

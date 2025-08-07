@@ -2,25 +2,23 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";
-import { faqData } from "@/components/SampleFaqData";
 import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
-import Wallet from "@/components/ProductDetailPage/Wallet";
 import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/ChatBox/Diagram";
-
+import Wallet from "@/components/ProductDetailPage/ChatBox/Wallet";
 
 export default function ChatBox() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Learn with FAQs & Videos"} para={"Help users explore and understand Monielink Super SDK’s features with engaging FAQs and video content. Empower them with the knowledge they need to use your digital services confidently and effectively."} breadcrumb={true}/>
+        <Hero heading={"Learn with FAQs & Videos"} para={"Help users explore and understand Monielink’s Super SDK products with engaging FAQs and video content. Empower them with the knowledge they need to use your digital services confidently and effectively."} breadcrumb={true}/>
         <Intro content={introData}/>
-        <Wallet heading={"Build a powerful, multi-currency digital wallet ecosystem that connects consumers and merchants with seamless payments, security, and scale."}/>
+        <Wallet/>
        <Diagram/>
         <Values data={valuesData}/>
-        <Products  heading={"Explore Other Products"}/>
+        <Products  productsData={productsData}/>
         <FAQs data={faqData} />
         <CTA />
       </Layout>
@@ -29,20 +27,149 @@ export default function ChatBox() {
 };
 const introData ={
     logo:"/assets/icons/chatbox-logo.svg",
-    heading:"One Platform. Every Retail Banking Service.",
+    heading:"Interactive Help. Smart Support.",
     list:[
-      "Digital Account Management with integrated KYC and soft-token authentication",
-      "Instant Card Issuance for virtual debit, credit, and prepaid cards via SDK",
-      "NUBAN Account Linking to verified mobile numbers for easy fund transfers",
-      "Unified Payments including QR payments, bank transfers, inflows, and merchant collections"
+      "Guide customers to choose relevant HELP TOPICS for Monielink super SDK products and services.",
+      "Provide Interactive Support & Self training Videos ",
+      "Automated 24/7 Customer Support ",
+      "Save on Operational Costs on Physical training & Onboarding "
     ]
   }
 
   const valuesData = {
     heading:"Creating Lasting Value, Together",
     list:[
-        "<p>Nigeria’s retail banking income per user is just $33 — far behind India ($350), China ($750), and the U.S. ($4,500).<b> By 2030, it’s projected to rise to $200.</b></p>",
-        "<p>Over <b>40 MN </b>Unbanked Nigerian Adults are likely to <b> start banking by 2030. </b></p>",
-        "<p><b>Average cross selling ratio </b> of banks is likely to increase from 1.6 to <b> 3.4 </b>by 2030.</p></p>"
+        "<p>Serving as a bot, the Chatbox instantly answers questions to improve customer knowledge of Monielink super SDK’s products and services, offering a more engaging and convenient experience</p>"
     ]
   }
+
+  const productsData={
+    heading:"Explore Other Products",
+    cards: [
+      {
+        logo: "/assets/icons/logo/balance-white.svg",
+        features: [
+          "Digital Accounts",
+          "Pre-paid Card Accounts",
+          "Credit Card Accounts",
+          "Loan Accounts",
+          "Reward Accounts",
+          "Redemption Accounts ",
+        ],
+        link:"/products/balance"
+      },
+      {
+        logo: "/assets/icons/logo/scanpay-white.svg",
+        features: [
+          "Digital Merchant Onboarding",
+          "Interoperable QR",
+          "Static QR Codes",
+          "Dynamic QR Codes ",
+          "Payment Collection Account ",
+          "Instant Settlement",
+        ],
+        link:"/products/scanpay"
+    
+      },
+      {
+        logo: "/assets/icons/logo/tap-pay-white.svg",
+        features: [
+          "Digital Merchant Onboarding",
+          "Soft-POS",
+          "POS Terminals ",
+          "Payment Collection Account ",
+          "Instant Settlement"
+        ],
+        link:"/products/tap-pay"
+    
+      },
+      {
+        logo: "/assets/icons/logo/instacard-white.svg",
+        features: [
+          "Issue Virtual Cards",
+          "Digital Card Wallet",
+          "Dynamic CVV",
+          "Contactless Payments",
+          "Universal Card",
+          
+        ],
+        link:"/products/instacard"
+    
+      },
+      {
+        logo: "/assets/icons/logo/snapcred-white.svg",
+        features: [
+          "Credit Origination ",
+          "Credit Disbursement",
+          "Credit lifecycle Management ",
+          "Repayments",
+          "Due & Delinquent Amount Collections",
+          "GSI Collection automation",
+        ],
+        link:"/products/snapcred"
+    
+      },
+      {
+        logo: "/assets/icons/logo/duo-white.svg",
+        features: [
+          "Dual Transaction Service ",
+          "Virtual Credit Cards",
+          "Credit Card Portfolio Management ",
+          "Collections & Repayments ",
+        ],
+        link:"/products/duo"
+    
+      },
+      {
+        logo: "/assets/icons/verifyed-logo.svg",
+        features: [
+          "KYC Management",
+          "Liveness Detection ",
+          "Facial Recognition ",
+          "Business Verification ",
+          "Address Verification",
+          "Soft – Token issuance for 2FA"
+        ],
+        link:"/products/verifyed"
+    
+      },
+      {
+        logo: "/assets/icons/logo/reward-white.svg",
+        features: [
+          "Tailored  Reward Program ",
+          "Reward Point Account ",
+          "Reward Redemption Accounts ",
+          "Usage of Redeemed value",
+        ],
+        link:"/products/reward"
+    
+      }
+    ]
+  }
+  const faqData = [
+    {
+      question: "What makes Chatbox different from standard bots?",
+      answer:
+        "Chatbox is pre-set on your SDK modules and FAQs, offering contextual support, product walkthroughs, and customer education. It serves as both an assistant and an onboarding tool.",
+    },
+    {
+      question: "Can Chatbox promote product features?",
+      answer:
+        "Yes. Chatbox intelligently nudges users toward underused SDK capabilities, promotes relevant offers, and provides demos to drive adoption.",
+    },
+    {
+      question: "Is the experience multilingual and brandable?",
+      answer:
+        "Yes. Chatbox supports multiple languages and fully customizable UI, making it adaptable for local markets and brand tone.",
+    },
+    {
+      question: "How do we update or manage Chatbox content?",
+      answer:
+        "Through a central content management portal. You can update FAQs, insert new training videos, and A/B test responses to improve helpfulness.",
+    },
+    {
+      question: " Can Chatbox reduce operational support costs?",
+      answer:
+        "Yes. With contextual help, guided flows, and low-code implementation, Chatbox offloads significant ticket volume from support teams—improving NPS while reducing cost per resolution.",
+    }
+  ]

@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";
-import { faqData } from "@/components/SampleFaqData";
 import Overview from "@/components/ProductsPage/Overview";
 import ProductSlider from "@/components/ProductsPage/ProductSlider";
 import Copy from "@/components/Animations/Copy";
@@ -38,3 +37,36 @@ export default function ProductsPage() {
     </>
   );
 };
+
+const faqData = [
+  {
+    question: "What is Monielink?",
+    answer:
+      "Monielink is a unified Super SDK that enables banks and fintechs to embed digital banking, card issuance, payments, and lending services directly into their mobile apps — all from a single integration.",
+  },
+  {
+    question: "Who can use Monielink’s services?",
+    answer:
+      "Monielink is built for licensed banks, fintechs, microfinance institutions, and payment service providers looking to deliver or scale digital banking services.",
+  },
+  {
+    question: "What services can I offer with Monielink?",
+    answer:
+      "With Monielink, you can offer a wide range of services — including digital account onboarding, card issuance, payments (QR, contactless, in-app), lending, wallets, merchant acquiring, and more — all through your mobile app.",
+  },
+  {
+    question: "How long does it take to go live with Monielink?",
+    answer:
+      "Go-to-market timelines vary, but with our plug-and-play SDK and dedicated support, most partners launch within 6 weeks — not months.",
+  },
+  {
+    question: "Can we customize the features and branding?",
+    answer:
+      "Absolutely. Monielink supports branded card issuance, UI customization, and configurable workflows to match your customer and compliance needs.",
+  },
+  {
+    question: "What kind of support do you provide?",
+    answer:
+      "We offer full onboarding, integration support, compliance guidance, and ongoing technical maintenance.",
+  }
+]

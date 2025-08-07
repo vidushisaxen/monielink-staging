@@ -11,7 +11,7 @@ export default function Solutions() {
       className="w-screen h-fit flex flex-col bg-background relative z-[2] pb-[10%] max-md:pb-0 max-sm:pb-0"
       id="solutions"
     >
-      <div className="w-screen h-[700vh] relative z-[1] max-md:hidden" ref={solutionsRef}>
+      <div className="w-screen h-[800vh] relative z-[1] max-md:hidden" ref={solutionsRef}>
         <SolutionsCard solutionsRef={solutionsRef} />
       </div>
       <div className="max-md:block hidden">

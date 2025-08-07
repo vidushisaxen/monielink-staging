@@ -13,7 +13,7 @@ import SecondaryButton from "../Buttons/SecondaryButton";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-export default function Solutions() {
+export default function Solutions({solutionsData}) {
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -56,9 +56,8 @@ export default function Solutions() {
       <div className="w-full flex flex-col items-center ">
         <div className="text-center w-[70%] py-[10vw] max-sm:w-full max-md:w-[80%] max-sm:py-[50%] max-sm:px-[5vw] ">
           <Copy>
-            <p className="text-head-60 font-display capitalize">
-              All-in-one Digital Account Management solution supported with
-              digital KYC management & Soft-Token authentication security{" "}
+            <p className="text-head-60 font-display">
+            {solutionsData.headline}
             </p>
           </Copy>
         </div>
@@ -68,7 +67,7 @@ export default function Solutions() {
         >
           <Copy>
             <h2 className="text-foreground productsText text-head-100  text-center leading-[1.25] font-display capitalize pb-[5vw] max-sm:px-[5vw] max-sm:text-left">
-              Explore More of our solutions
+            {solutionsData.heading}
             </h2>
           </Copy>
 
@@ -102,7 +101,7 @@ export default function Solutions() {
             }}
             className="mySwiper !px-[10vw] max-md:!px-[3vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
           >
-            {data.map((card, cardIndex) => (
+            {solutionsData.cards.map((card, cardIndex) => (
               <SwiperSlide
                 key={cardIndex}
                 className="w-full h-full max-sm:!mr-[10vw] max-sm:pl-[5vw] max-md:!mr-[8vw] swiper-slides-anim !origin-top"
@@ -110,11 +109,9 @@ export default function Solutions() {
                 <SwiperCard
                   title={card.title}
                   para={card.para}
-                  logo={card.logo}
-                  features={card.features}
                   index={cardIndex}
                   activeIndex={activeIndex}
-                  link="#"
+                  link={card.link}
                 />
               </SwiperSlide>
             ))}
@@ -151,7 +148,7 @@ const SwiperCard = ({
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-fit max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale">
+    <div className="card relative h-[70vh] max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale max-sm:h-[50vh]">
       <div className="absolute h-full w-full max-md:w-[42vw] max-md:pb-[1vw] max-md:h-[38vh] max-sm:w-[85vw] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:px-[1vw] ">
         <svg
           width="466"
@@ -214,11 +211,11 @@ const SwiperCard = ({
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] relative z-10 gap-y-[3vw] flex-col flex items-start ml-[2vw] justify-between h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw]">
+      <div className="py-[3vw] relative z-10 justify-center flex-col flex items-start ml-[2vw] gap-y-[2vw] h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw] max-sm:gap-y-[7vw]">
         <div className=" w-[60%] max-sm:mx-0">
           <p className="text-head-60 font-display">{title}</p>
         </div>
-        <div className="py-[1vw] w-[60%] max-sm:w-[60%] max-md:w-[80%]">
+        <div className="py-[1vw] w-[80%] max-sm:w-[60%] max-md:w-[80%]">
           <p className="text-content-20">{para}</p>
         </div>
 
@@ -227,90 +224,3 @@ const SwiperCard = ({
     </div>
   );
 };
-
-const data = [
-  {
-    title: "Merchant Acquiring",
-    para: "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/",
-    logo: "/assets/icons/logo/scanPay.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-  },
-  {
-    title: "Digital Lending",
-    para: "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/",
-    logo: "/assets/icons/logo/Balance.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-  },
-  {
-    title: "Card Issuing",
-    para: "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/",
-    logo: "/assets/icons/logo/snapCreed.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-  },
-  {
-    title: "Merchant Acquiring",
-    para: "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/",
-    logo: "/assets/icons/logo/scanPay.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-  },
-  {
-    title: "Digital Lending",
-    para: "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/",
-    logo: "/assets/icons/logo/Balance.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-  },
-  {
-    title: "Card Issuing",
-    para: "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
-    link: "/",
-    logo: "/assets/icons/logo/snapCreed.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-  },
-];

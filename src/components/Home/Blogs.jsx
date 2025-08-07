@@ -31,17 +31,17 @@ export default function Blogs() {
         <div className="space-y-[1vw] w-1/2 max-md:w-[70%] max-sm:w-[90%]">
           <Copy>
             <h2 className="text-[5.2vw] text max-sm:text-head-100 max-md:text-head-100 font-display leading-[1.2]">
-              <span className="inline-block max-sm:block">Insights That</span>
+              <span className="inline-block max-sm:block">Insights That 
+              </span>
 
               <span className="inline-block max-sm:block">
-                Drive Innovation
+              Drive Innovation
               </span>
             </h2>
           </Copy>
           <Copy>
             <p className="text-[1vw] w-[88%] leading-[1.5] max-sm:text-content-20 max-sm:w-full max-sm:py-[3vw] max-sm:text-[3.7vw] max-md:text-[2.5vw]">
-              Stay ahead of the curve with expert insights, industry trends, and
-              actionable tips from the world of technology and business.
+            Stay ahead of the curve with expert insights, industry trends, and actionable tips from the world of technology and business.
             </p>
           </Copy>
         </div>

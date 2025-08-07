@@ -214,10 +214,8 @@ export default function DesktopFooter() {
               <div className="w-[45%] max-md:gap-[4vw]  z-[100]   text-[#A8A8A8] pb-[5vw] pt-[3vw] flex flex-col h-[80%] items-start justify-between gap-0">
                 <Copy>
                   <p className=" text-[1.05vw] max-md:text-[1.35vw] w-full">
-                    Integrate the Moneylink Super SDK and start delivering
-                    seamless, scalable banking services within your mobile app —
-                    faster than ever. Let&apos;s build the future of finance
-                    together.
+                  Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app — faster than ever. Let’s build the future of finance together.
+
                   </p>
                 </Copy>
                 <div className="w-full flex  items-start justify-center flex-col">
@@ -226,7 +224,7 @@ export default function DesktopFooter() {
                     className="text-[3.125vw] font-display"
                   >
                     <ScrambleText lowercase onHover={true} centerd speed={0.4} className="min-w-[8vw]">
-                    {"info@monielink.io"}
+                    {"info@monielink.org"}
                     </ScrambleText>
                    
                   </a>

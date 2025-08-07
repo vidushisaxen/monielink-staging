@@ -15,7 +15,7 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-export default function Products({heading}) {
+export default function Products({productsData}) {
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -64,7 +64,7 @@ export default function Products({heading}) {
       >
         <Copy>
           <h2 className="text-foreground productsText text-[5.2vw] max-md:w-[80%]  w-[60%] max-sm:w-[90%] max-sm:text-center max-md:text-head-100 max-sm:text-head-100 text-center leading-[1.25] font-display capitalize pb-[5vw]">
-           {heading}
+           {productsData.heading}
           </h2>
         </Copy>
 
@@ -98,7 +98,7 @@ export default function Products({heading}) {
           }}
           className="mySwiper !px-[4.5vw] max-md:px-0 max-sm:px-[2vw] w-screen !overflow-y-visible"
         >
-          {data.map((card, cardIndex) => (
+          {productsData.cards.map((card, cardIndex) => (
             <SwiperSlide
               key={cardIndex}
               className="w-full h-full swiper-slides-anim !origin-top"
@@ -138,7 +138,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-fit w-full active:scale-95 duration-300 transition-scale max-sm:active:scale-100">
+    <div className="card relative h-[75vh]  w-full active:scale-95 duration-300 transition-scale max-sm:active:scale-100 max-sm:h-[65vh]">
       <div className="absolute h-full w-full">
         <svg
           className="h-full w-full"
@@ -240,7 +240,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] max-sm:py-[10vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between h-full w-full max-sm:gap-y-[5vw]">
+      <div className="py-[3vw] pt-[5vw] max-sm:py-[10vw] max-sm:pt-[15vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between min-h-[38vw] w-full max-sm:gap-y-[5vw]">
         <div className="h-[3.5vw] max-md:h-[5.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw] max-md:mb-[1vw]">
           <Image
             src={logo}
@@ -250,98 +250,21 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
             className="w-full h-full"
           />
         </div>
-        <ul className="py-[1vw] text-[#A8A8A8]  max-md:mb-[0.5vw]  text-center space-y-4 w-2/4 max-sm:space-y-[5vw]">
+        <ul className="py-[0.8vw] text-[#A8A8A8]  max-md:mb-[0.5vw]  text-center space-y-[1vw] w-2/3 max-sm:space-y-[3.5vw]">
           {features.map((item, index) => (
             <li
               key={index}
-              className={`w-full border-b border-[#282828] text-gray-2 last:border-0 text-[0.95vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-2`}
+              className={`w-full border-b border-[#282828] text-gray-2 last:border-0 text-[0.93vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-[0.3vw]`}
             >
               {item}
             </li>
           ))}
         </ul>
+        <div className="">
         <PrimaryButton href={link} text="Know More" />
+        </div>
       </div>
     </div>
   );
 };
 
-const data = [
-  {
-    logo: "/assets/icons/logo/scanPay.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-    link:"/products/scanpay"
-  },
-  {
-    logo: "/assets/icons/logo/Balance.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-    link:"/products/balance"
-
-  },
-  {
-    logo: "/assets/icons/logo/snapCreed.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-    link:"/products/snapcred"
-
-  },
-  {
-    logo: "/assets/icons/logo/scanPay.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-    link:"/products/scanpay"
-
-  },
-  {
-    logo: "/assets/icons/logo/Balance.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-    link:"/products/balance"
-
-  },
-  {
-    logo: "/assets/icons/logo/snapCreed.svg",
-    features: [
-      "Digital Accounts",
-      "Pre-Paid Accounts",
-      "Reward Account Loyalty",
-      "Redemption Account",
-      "Credit Card Account",
-      "Loan Account",
-    ],
-    link:"/products/snapcred"
-
-  },
-];

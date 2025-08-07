@@ -19,28 +19,28 @@ export default function USPs() {
 const uspData = [
   {
     title: "Cloud Based Implementation",
-    description: "Deploy dedicated cloud instances with partner- managed access control and firewalls.",
-    width: "w-[48%]",
+    description: "Deploy dedicated cloud instances with partner-managed access, security controls, and custom firewalls.",
+    width: "w-[45%]",
     svg: svgRefs[0],
     svgElement: <CloudImplementationIcon />
   },
   {
-    title: "Secure environments",
-    description: "Meet regulatory compliance with secure, isolated environments at lower cost and higher efficiency than on-premise systems.",
-    width: "w-[45%]",
+    title: "Secure Environments",
+    description: "Each partner maintains full control over their infrastructure’s security settings — including network access, firewalls, and operating system configurations. They are responsible for enforcing measures that protect their data and applications from unauthorized access.",
+    width: "w-[55%]",
     svg: svgRefs[1],
     svgElement: <SecureEnvironmentIcon />
   },
   {
     title: "Dedicated Instant SaaS",
-    description: "Eliminate heavy upfront licensing costs with our revenue-sharing SaaS model.",
-    width: "w-[40%]",
+    description: "Eliminate heavy upfront licensing costs with our revenue-sharing SaaS model. Each partner operates in a secure, isolated environment with full control over their data and infrastructure — ensuring compliance, privacy, and operational flexibility.",
+    width: "w-[55%]",
     svg: svgRefs[2],
     svgElement: <DedicatedSaaSIcon />
   },
   {
     title: "Seamless integration",
-    description: "Seamlessly integrate digital banking experiences using our Super SDK front-end and dedicated cloud back-end — fully managed on Monielink Infrastructure.",
+    description: "Seamlessly integrate digital banking experiences using our Super SDK front-end and dedicated cloud back-end — fully managed on Monielink’s Infrastructure through deployment on  a dedicated Instance. ",
     width: "w-[55%]",
     svg: svgRefs[3],
     svgElement: <SeamlessIntegrationIcon />
@@ -74,7 +74,7 @@ useGSAP(() => {
         <div className="w-[80%] max-sm:w-[90%]">
           <Copy>
             <h2 className="text-white text-[5vw] max-sm:text-[10.5vw] max-sm:head-140 max-md:head-140 text-center font-display leading-[1.25]">
-              Scalable, Secure, and Cost- Efficient Banking Infrastructure
+            Scalable, Secure, and Cost-Efficient Banking Infrastructure
             </h2>
           </Copy>
         </div>
@@ -108,9 +108,9 @@ useGSAP(() => {
         <div className="py-[8vw]">
           <Copy>
             <h2 className="text-[7.3vw] max-md:text-head-140 text-center max-sm:py-[20vw] max-md:py-[5vw] leading-[1.2] font-display">
-              <span>One SDK.</span><br />
+              <span>One SDK. </span><br />
               <span className="inline-block max-sm:block">Endless </span> {" "}
-              <span className="inline-block"> Possibilities.</span>
+              <span className="inline-block"> Possibilities. </span>
             </h2>
           </Copy>
         </div>

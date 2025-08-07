@@ -15,9 +15,9 @@ const SolutionsCard = ({ solutionsRef }) => {
   const cardsData = [
     {
       id: "001",
-      title: "Digital Account",
+      title: "Digital Banking & Payments",
       description:
-        "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
+        "Build a digital wallet ecosystem that supports Consumers, Merchants, Multiple Currencies, and Instant Virtual Card Issuance. Our Digital Account Management solution is supported by digital KYC management & Soft-Token authentication security ",
       cardClass: "card-1",
       link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[0],
@@ -28,11 +28,11 @@ const SolutionsCard = ({ solutionsRef }) => {
     },
     {
       id: "002",
-      title: "Loyalty",
+      title: "Merchant Acquiring ",
       description:
-        "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
+        "Monielink SDK facilitates instant and digital onboarding of merchants while equipping them with interoperable QR code and Soft-POS capabilities. Additionally, merchants can apply for POS issuance through Banks and FinTechs, leveraging our SDK to evaluate and process their requests for POS issuance if they meet the eligibility criteria",
       cardClass: "card-2",
-      link: "/solutions/digital-accounts",
+      link: "/solutions/merchant-acquiring",
       svgRightRef: svgRightRefs[1],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -41,11 +41,11 @@ const SolutionsCard = ({ solutionsRef }) => {
     },
     {
       id: "003",
-      title: "Merchant Acquiring",
+      title: "Card Issuing ",
       description:
-        "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
+        "Issuers can seamlessly issue virtual Debit, Credit, and Prepaid cards instantly through their Mobile App integrated with the Monielink Super SDK. These cards are securely stored in a Digital Card Wallet, allowing users easy access for both online and offline payments. Additionally, our Universal Physical Card solution enables users to purchase and link virtual cards to a physical universal card for immediate use in physical form. Users can also unlink a previously linked virtual card from the Universal Card and link it to another virtual card within seconds.",
       cardClass: "card-3",
-      link: "/solutions/digital-accounts",
+      link: "/solutions/card-issuing",
       svgRightRef: svgRightRefs[2],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -56,9 +56,9 @@ const SolutionsCard = ({ solutionsRef }) => {
       id: "004",
       title: "Digital Lending",
       description:
-        "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
+        "Our SDK platform can help our Partners offer a variety of loan products to their customers on their Mobile Banking app. Monielink underwrites these loans instantly based on the  rules that they set-up on our Web Portal. Monielink platform can instantly disburse once they are approved digitally. Lenders can set-up underwriting & collection rules besides accessing the dashboards and variety of reports to analyze and manage the Loan & Credit Card Portfolio.",
       cardClass: "card-4",
-      link: "/solutions/digital-accounts",
+      link: "/solutions/digital-lending",
       svgRightRef: svgRightRefs[3],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -67,11 +67,11 @@ const SolutionsCard = ({ solutionsRef }) => {
     },
     {
       id: "005",
-      title: "Card Issuing",
+      title: "Dual Transaction Service ",
       description:
-        "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
+        "DUO features the groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits—set on a virtual credit card—using their existing debit cards. Customers can Simply Activate DTS on our Partner’s  Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards.",
       cardClass: "card-5",
-      link: "/solutions/digital-accounts",
+      link: "/solutions/dual-transaction-service",
       svgRightRef: svgRightRefs[4],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
@@ -80,15 +80,28 @@ const SolutionsCard = ({ solutionsRef }) => {
     },
     {
       id: "006",
-      title: "KYC",
+      title: "KYC & Soft Token ",
       description:
-        "From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions. From strategy to execution, we help businesses thrive with expert IT consulting and cutting-edge technology solutions.",
+        "Enable fast, secure KYC verification — allowing customers to sign up, get verified, and start using financial services in minutes. From facial biometrics to NIN, BVN, and ID validation, every step is streamlined for compliance, speed, and a seamless user experience protected with built-in 2FA soft token. ",
       cardClass: "card-6",
-      link: "/solutions/digital-accounts",
+      link: "/solutions/kyc-and-soft-token",
       svgRightRef: svgRightRefs[5],
       svgLeft: <SVGLeft />,
       svgRight: <SVGRight />,
       y: 'translate-y-[-400%]',
+      zIndex: 4,
+    },
+    {
+      id: "007",
+      title: "Loyalty",
+      description:
+        "Design a customized Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK. Reward points can be redeemed for cash under a tailored loyalty program, with funds credited to a dedicated reward redemption account.",
+      cardClass: "card-7",
+      link: "/solutions/loyalty-management",
+      svgRightRef: svgRightRefs[5],
+      svgLeft: <SVGLeft />,
+      svgRight: <SVGRight />,
+      y: 'translate-y-[-500%]',
       zIndex: 4,
     },
   ];
@@ -189,6 +202,31 @@ const SolutionsCard = ({ solutionsRef }) => {
           scale: 0.5,
           yPercent: -24,
           delay: -0.5,
+        }).to(".card-7", {
+          yPercent: -100
+        }) .to(".card-6", {
+          scale: 0.9,
+          yPercent: -106,
+          delay: -0.5,
+        })
+        .to(".card-5", {
+          yPercent: -111,
+          scale: 0.8,
+          delay: -0.5,
+        })
+        .to(".card-4", {
+          scale: 0.7,
+          yPercent: -116,
+          delay: -0.5,
+        })
+        .to(".card-3", {
+          scale: 0.6,
+          yPercent: -120,
+          delay: -0.5,
+        }).to(".card-2", {
+          // scale: 0.5,
+          // yPercent: -24,
+          // delay: -0.5,
         })
     });
     return () => ctx.revert();
@@ -221,12 +259,13 @@ const SolutionsCard = ({ solutionsRef }) => {
     <div className="w-full  h-[90vh]  flex flex-col sticky top-[5%]">
       <div className="border-t w-full flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw] max-sm:mb-[20vw]">
         {[
-          "Digital Account",
-          "Loyalty",
-          "Merchant Acquiring",
+          "Digital Banking ",
+          "Merchant Acquiring ",
+          "Card Issuing ",
           "Digital Lending",
-          "Card Issuing",
-          "KYC",
+          "Dual Transaction ",
+          "KYC & Soft Token ",
+          "Loyalty"
         ].map((item, index) => (
           <div
             key={index}

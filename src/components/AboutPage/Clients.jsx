@@ -204,7 +204,7 @@ const Clients = () => {
             </div>
             <div className="col-start-1 p-[4vw] max-sm:p-[4vw] max-md:p-[7.5vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/1.svg"}
+                src={"/assets/icons/clients/fcmb.svg"}
                 width={200}
                 height={200}
                 alt=""
@@ -213,52 +213,52 @@ const Clients = () => {
             </div>
             <div className="col-start-2 max-sm:p-[10vw] max-md:p-[6.5vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/2.svg"}
+                src={"/assets/icons/clients/visa.svg"}
                 width={200}
                 height={200}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-1 p-[4vw] max-sm:p-[4vw] max-md:p-[7vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:p-[10vw] max-md:p-[7vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/3.svg"}
+                src={"/assets/icons/clients/mastercard.svg"}
                 width={200}
                 height={200}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-2 max-sm:p-[10vw] max-md:p-[4vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-2 max-sm:p-[4vw] max-md:p-[4vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/4.svg"}
+                src={"/assets/icons/clients/tranzact.svg"}
                 width={200}
                 height={200}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-1 p-[4vw] max-sm:p-[4vw] max-md:p-[8vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:p-[8vw] max-md:p-[8vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/5.svg"}
+                src={"/assets/icons/clients/interswitch.svg"}
                 width={200}
                 height={200}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-2 max-sm:p-[10vw] max-md:p-[4vw]  max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-2 max-sm:p-[8vw] max-md:p-[4vw]  max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/6.svg"}
+                src={"/assets/icons/clients/NIBSS.svg"}
                 width={200}
                 height={200}
                 alt=""
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="col-start-1 p-[4vw] max-sm:p-[4vw] max-md:p-[7.5vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
+            <div className="col-start-1 p-[4vw] max-sm:p-[7vw] max-md:p-[7.5vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/7.svg"}
+                src={"/assets/icons/clients/unified.svg"}
                 width={200}
                 height={200}
                 alt=""
@@ -267,7 +267,7 @@ const Clients = () => {
             </div>
             <div className="col-start-2 max-sm:p-[10vw] max-md:p-[7vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/logo/8.svg"}
+                src={"/assets/icons/clients/access.svg"}
                 width={200}
                 height={200}
                 alt=""

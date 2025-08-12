@@ -306,16 +306,67 @@ export default function Header() {
   }, [lastY, hoveredItem]);
 
   const solutionsDropdown = (
-    <div className="absolute top-full mt-3 z-10">
+    <div 
+      className="absolute top-full mt-3 z-10"
+      ref={(el) => {
+        if (el) {
+          // Check if GSAP is available
+          if (typeof gsap !== 'undefined' || (window && window.gsap)) {
+            const GSAP = window.gsap || gsap;
+            const tl = GSAP.timeline();
+            const svg = el.querySelector('.dropdown-svg');
+            const items = el.querySelectorAll('.dropdown-item');
+            
+            if (svg && items.length > 0) {
+              GSAP.set(svg, { 
+                height: 0,
+                opacity: 1
+              });
+              GSAP.set(items, { 
+                opacity: 0,
+                y: 20
+              });
+             
+              tl.to(svg, { 
+                height: '100%',
+                duration: 0.5,
+                ease: 'power2.out'
+              });
+              tl.to(items, {
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                stagger: 0.05,
+                ease: 'power2.out'
+              }, '-=0.1'); 
+            }
+          }
+        }
+      }}
+    >
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
-
+  
       <div className="relative w-[20vw]">
         {/* SVG Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-
-          <svg className="h-full w-full" width="367" height="363" viewBox="0 0 367 363" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <foreignObject x="-79.3594" y="-79.9844" width="525.672" height="522.578"><div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(40px)', clipPath: 'url(#bgblur_0_182_10_clip_path)', height: '100%', width: '100%' }}></div></foreignObject><g data-figma-bg-blur-radius="80">
+          <svg 
+            className="h-full w-full dropdown-svg" 
+            width="367" 
+            height="363" 
+            viewBox="0 0 367 363" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <foreignObject x="-79.3594" y="-79.9844" width="525.672" height="522.578">
+              <div xmlns="http://www.w3.org/1999/xhtml" style={{ 
+                backdropFilter: 'blur(40px)', 
+                clipPath: 'url(#bgblur_0_182_10_clip_path)', 
+                height: '100%', 
+                width: '100%' 
+              }}></div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="80">
               <mask id="path-1-inside-1_182_10" fill="white">
                 <path d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z" />
               </mask>
@@ -323,29 +374,32 @@ export default function Header() {
               <path d="M366.311 20.0156L367.311 20.0156L367.311 20.0156L366.311 20.0156ZM0.640625 20.0156L-0.359375 20.0156V20.0156H0.640625ZM293.46 357.102L294.148 357.828L293.46 357.102ZM360.077 293.887L359.389 293.161L360.077 293.887ZM346.311 0.015625V1.01562C356.804 1.01562 365.31 9.52248 365.311 20.0157L366.311 20.0156L367.311 20.0156C367.31 8.41796 357.908 -0.984375 346.311 -0.984375V0.015625ZM366.311 20.0156H365.311V279.379H366.311H367.311V20.0156H366.311ZM360.077 293.887L359.389 293.161L292.771 356.377L293.46 357.102L294.148 357.828L360.766 294.612L360.077 293.887ZM279.693 362.595V361.595H20.6406V362.595V363.595H279.693V362.595ZM20.6406 362.595V361.595C10.1472 361.595 1.64062 353.088 1.64062 342.595H0.640625H-0.359375C-0.359375 354.193 9.04265 363.595 20.6406 363.595V362.595ZM0.640625 342.595H1.64062V20.0156H0.640625H-0.359375V342.595H0.640625ZM0.640625 20.0156L1.64062 20.0157C1.64094 9.52248 10.1475 1.01562 20.6406 1.01562V0.015625V-0.984375C9.04282 -0.984375 -0.359022 8.41795 -0.359375 20.0156L0.640625 20.0156ZM20.6406 0.015625V1.01562H346.311V0.015625V-0.984375H20.6406V0.015625ZM293.46 357.102L292.771 356.377C289.241 359.727 284.56 361.595 279.693 361.595V362.595V363.595C285.072 363.595 290.246 361.531 294.148 357.828L293.46 357.102ZM366.311 279.379H365.311C365.311 284.591 363.17 289.574 359.389 293.161L360.077 293.887L360.766 294.612C364.944 290.647 367.311 285.139 367.311 279.379H366.311Z" fill="#C1C1C1" fillOpacity="0.38" mask="url(#path-1-inside-1_182_10)" />
             </g>
             <defs>
-              <clipPath id="bgblur_0_182_10_clip_path" transform="translate(79.3594 79.9844)"><path d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z" />
-              </clipPath></defs>
+              <clipPath id="bgblur_0_182_10_clip_path" transform="translate(79.3594 79.9844)">
+                <path d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z" />
+              </clipPath>
+            </defs>
           </svg>
         </div>
-
-
+  
         {/* Foreground content */}
         <div
-          className={`relative z-10 p-[2vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"
-            }`}
+          className={`relative z-10 p-[2vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
         >
           <ul className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}>
             {solutions.map((item, index) => {
               const isActive = pathname === item.link;
               return (
-                <li key={index} className="group">
+                <li 
+                  key={index} 
+                  className="group dropdown-item"
+                >
                   <Link href={item.link} className="flex items-center gap-[0.5vw] justify-start">
                     <div
                       style={{ animation: "pulse .5s infinite" }}
                       className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
-                    transition-all duration-200 
-                    ${isInverted ? "bg-white" : "group-hover:bg-orange-500"} 
-                    ${isActive && !isInverted ? "bg-orange-500" : ""}`}
+                        transition-all duration-200 
+                        ${isInverted ? "bg-white" : "group-hover:bg-orange-500"} 
+                        ${isActive && !isInverted ? "bg-orange-500" : ""}`}
                     ></div>
                     <span className="uppercase text-[.9vw] text-left">
                       <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
@@ -367,32 +421,86 @@ export default function Header() {
 
 
   const productsDropdown = (
-
-    <div className="absolute top-full mt-3 z-0">
+    <div 
+      className="absolute top-full mt-3 z-0"
+      ref={(el) => {
+        if (el) {
+          // Check if GSAP is available
+          if (typeof gsap !== 'undefined' || (window && window.gsap)) {
+            const GSAP = window.gsap || gsap;
+            const tl = GSAP.timeline();
+            
+            // Reset initial states
+            const svg = el.querySelector('.dropdown-svg');
+            const items = el.querySelectorAll('.dropdown-item');
+            
+            if (svg && items.length > 0) {
+              // Set initial states
+              GSAP.set(svg, { 
+                height: 0,
+                opacity: 1
+              });
+              GSAP.set(items, { 
+                opacity: 0,
+                y: 20
+              });
+              tl.to(svg, { 
+                height: '100%',
+                duration: 0.5,
+                ease: 'power2.out'
+              });
+              tl.to(items, {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                stagger: 0.05,
+                ease: 'power2.out'
+              }, '-=0.1');
+            }
+          }
+        }
+      }}
+    >
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
-
+  
       <div className="relative w-[20vw]">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <div style={{ clipPath: "inset(0% 0% 0% 0%)" }} className="h-full w-full" >
-          <svg className="h-full w-full" width="392" height="346" viewBox="0 0 392 346" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <foreignObject x="-79.3594" y="-79.4844" width="551.234" height="504.828"><div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(40px)', clipPath: 'url(#bgblur_0_182_2_clip_path)', height: '100%', width: '100%' }}></div></foreignObject><g data-figma-bg-blur-radius="80">
-              <mask id="path-1-inside-1_182_2" fill="white">
-                <path d="M371.879 0.515625C382.924 0.515626 391.879 9.47022 391.879 20.5156V267.084C391.879 272.57 389.625 277.815 385.646 281.592L324.247 339.855C320.531 343.382 315.603 345.348 310.48 345.348H20.6406C9.59501 345.348 0.640749 336.393 0.640625 325.348V20.5156C0.640977 9.47023 9.59515 0.515626 20.6406 0.515625H371.879Z" />
-              </mask>
-              <path d="M371.879 0.515625C382.924 0.515626 391.879 9.47022 391.879 20.5156V267.084C391.879 272.57 389.625 277.815 385.646 281.592L324.247 339.855C320.531 343.382 315.603 345.348 310.48 345.348H20.6406C9.59501 345.348 0.640749 336.393 0.640625 325.348V20.5156C0.640977 9.47023 9.59515 0.515626 20.6406 0.515625H371.879Z" fill="black" fillOpacity="0.32" />
-              <path d="M371.879 0.515625L371.879 -0.484375H371.879V0.515625ZM391.879 20.5156L392.879 20.5156L392.879 20.5156L391.879 20.5156ZM20.6406 345.348L20.6406 346.348H20.6406V345.348ZM0.640625 325.348L-0.359375 325.348L-0.359375 325.348L0.640625 325.348ZM0.640625 20.5156L-0.359375 20.5156V20.5156H0.640625ZM20.6406 0.515625L20.6406 -0.484375L20.6406 -0.484375L20.6406 0.515625ZM324.247 339.855L323.558 339.13L324.247 339.855ZM385.646 281.592L386.334 282.317L385.646 281.592ZM371.879 0.515625L371.879 1.51562C382.372 1.51563 390.879 10.0225 390.879 20.5157L391.879 20.5156L392.879 20.5156C392.879 8.91796 383.477 -0.484374 371.879 -0.484375L371.879 0.515625ZM391.879 20.5156H390.879V267.084H391.879H392.879V20.5156H391.879ZM385.646 281.592L384.957 280.866L323.558 339.13L324.247 339.855L324.935 340.581L386.334 282.317L385.646 281.592ZM310.48 345.348V344.348H20.6406V345.348V346.348H310.48V345.348ZM20.6406 345.348L20.6406 344.348C10.1473 344.348 1.64074 335.841 1.64062 325.348L0.640625 325.348L-0.359375 325.348C-0.359245 336.946 9.04271 346.348 20.6406 346.348L20.6406 345.348ZM0.640625 325.348H1.64062V20.5156H0.640625H-0.359375V325.348H0.640625ZM0.640625 20.5156L1.64062 20.5157C1.64096 10.0225 10.1475 1.51563 20.6406 1.51562L20.6406 0.515625L20.6406 -0.484375C9.04283 -0.484374 -0.359005 8.91797 -0.359375 20.5156L0.640625 20.5156ZM20.6406 0.515625V1.51562H371.879V0.515625V-0.484375H20.6406V0.515625ZM324.247 339.855L323.558 339.13C320.028 342.48 315.347 344.348 310.48 344.348V345.348V346.348C315.859 346.348 321.033 344.283 324.935 340.581L324.247 339.855ZM391.879 267.084H390.879C390.879 272.296 388.738 277.279 384.957 280.866L385.646 281.592L386.334 282.317C390.513 278.352 392.879 272.844 392.879 267.084H391.879Z" fill="#C1C1C1" fillOpacity="0.38" mask="url(#path-1-inside-1_182_2)" />
-            </g>
-            <defs>
-              <clipPath id="bgblur_0_182_2_clip_path" transform="translate(79.3594 79.4844)"><path d="M371.879 0.515625C382.924 0.515626 391.879 9.47022 391.879 20.5156V267.084C391.879 272.57 389.625 277.815 385.646 281.592L324.247 339.855C320.531 343.382 315.603 345.348 310.48 345.348H20.6406C9.59501 345.348 0.640749 336.393 0.640625 325.348V20.5156C0.640977 9.47023 9.59515 0.515626 20.6406 0.515625H371.879Z" />
-              </clipPath></defs>
-          </svg>
+          <div style={{ clipPath: "inset(0% 0% 0% 0%)" }} className="h-full w-full">
+            <svg 
+              className="h-full w-full dropdown-svg" 
+              width="392" 
+              height="346" 
+              viewBox="0 0 392 346" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <foreignObject x="-79.3594" y="-79.4844" width="551.234" height="504.828">
+                <div xmlns="http://www.w3.org/1999/xhtml" style={{ 
+                  backdropFilter: 'blur(40px)', 
+                  clipPath: 'url(#bgblur_0_182_2_clip_path)', 
+                  height: '100%', 
+                  width: '100%' 
+                }}></div>
+              </foreignObject>
+              <g data-figma-bg-blur-radius="80">
+                <mask id="path-1-inside-1_182_2" fill="white">
+                  <path d="M371.879 0.515625C382.924 0.515626 391.879 9.47022 391.879 20.5156V267.084C391.879 272.57 389.625 277.815 385.646 281.592L324.247 339.855C320.531 343.382 315.603 345.348 310.48 345.348H20.6406C9.59501 345.348 0.640749 336.393 0.640625 325.348V20.5156C0.640977 9.47023 9.59515 0.515626 20.6406 0.515625H371.879Z" />
+                </mask>
+                <path d="M371.879 0.515625C382.924 0.515626 391.879 9.47022 391.879 20.5156V267.084C391.879 272.57 389.625 277.815 385.646 281.592L324.247 339.855C320.531 343.382 315.603 345.348 310.48 345.348H20.6406C9.59501 345.348 0.640749 336.393 0.640625 325.348V20.5156C0.640977 9.47023 9.59515 0.515626 20.6406 0.515625H371.879Z" fill="black" fillOpacity="0.32" />
+                <path d="M371.879 0.515625L371.879 -0.484375H371.879V0.515625ZM391.879 20.5156L392.879 20.5156L392.879 20.5156L391.879 20.5156ZM20.6406 345.348L20.6406 346.348H20.6406V345.348ZM0.640625 325.348L-0.359375 325.348L-0.359375 325.348L0.640625 325.348ZM0.640625 20.5156L-0.359375 20.5156V20.5156H0.640625ZM20.6406 0.515625L20.6406 -0.484375L20.6406 -0.484375L20.6406 0.515625ZM324.247 339.855L323.558 339.13L324.247 339.855ZM385.646 281.592L386.334 282.317L385.646 281.592ZM371.879 0.515625L371.879 1.51562C382.372 1.51563 390.879 10.0225 390.879 20.5157L391.879 20.5156L392.879 20.5156C392.879 8.91796 383.477 -0.484374 371.879 -0.484375L371.879 0.515625ZM391.879 20.5156H390.879V267.084H391.879H392.879V20.5156H391.879ZM385.646 281.592L384.957 280.866L323.558 339.13L324.247 339.855L324.935 340.581L386.334 282.317L385.646 281.592ZM310.48 345.348V344.348H20.6406V345.348V346.348H310.48V345.348ZM20.6406 345.348L20.6406 344.348C10.1473 344.348 1.64074 335.841 1.64062 325.348L0.640625 325.348L-0.359375 325.348C-0.359245 336.946 9.04271 346.348 20.6406 346.348L20.6406 345.348ZM0.640625 325.348H1.64062V20.5156H0.640625H-0.359375V325.348H0.640625ZM0.640625 20.5156L1.64062 20.5157C1.64096 10.0225 10.1475 1.51563 20.6406 1.51562L20.6406 0.515625L20.6406 -0.484375C9.04283 -0.484374 -0.359005 8.91797 -0.359375 20.5156L0.640625 20.5156ZM20.6406 0.515625V1.51562H371.879V0.515625V-0.484375H20.6406V0.515625ZM324.247 339.855L323.558 339.13C320.028 342.48 315.347 344.348 310.48 344.348V345.348V346.348C315.859 346.348 321.033 344.283 324.935 340.581L324.247 339.855ZM391.879 267.084H390.879C390.879 272.296 388.738 277.279 384.957 280.866L385.646 281.592L386.334 282.317C390.513 278.352 392.879 272.844 392.879 267.084H391.879Z" fill="#C1C1C1" fillOpacity="0.38" mask="url(#path-1-inside-1_182_2)" />
+              </g>
+              <defs>
+                <clipPath id="bgblur_0_182_2_clip_path" transform="translate(79.3594 79.4844)">
+                  <path d="M371.879 0.515625C382.924 0.515626 391.879 9.47022 391.879 20.5156V267.084C391.879 272.57 389.625 277.815 385.646 281.592L324.247 339.855C320.531 343.382 315.603 345.348 310.48 345.348H20.6406C9.59501 345.348 0.640749 336.393 0.640625 325.348V20.5156C0.640977 9.47023 9.59515 0.515626 20.6406 0.515625H371.879Z" />
+                </clipPath>
+              </defs>
+            </svg>
           </div>
         </div>
-
+  
         <div
-          className={`relative z-10 p-[2vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"
-            }`}
+          className={`relative z-10 p-[2vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
         >
           <div className="flex">
             {/* First Half */}
@@ -400,14 +508,14 @@ export default function Header() {
               {firstHalf.map((item, index) => {
                 const isActive = pathname === item.link;
                 return (
-                  <li key={index} className="group">
+                  <li key={index} className="group dropdown-item">
                     <Link href={item.link} className="flex items-center gap-[0.5vw] justify-start">
                       <div
                         style={{ animation: "pulse .5s infinite" }}
                         className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
-                transition-all duration-200 
-                ${isInverted ? "bg-white" : "group-hover:bg-orange-500"} 
-                ${isActive && !isInverted ? "bg-orange-500" : ""}`}
+                          transition-all duration-200 
+                          ${isInverted ? "bg-white" : "group-hover:bg-orange-500"} 
+                          ${isActive && !isInverted ? "bg-orange-500" : ""}`}
                       ></div>
                       <span className="uppercase text-[.9vw] text-left">
                         <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
@@ -419,20 +527,20 @@ export default function Header() {
                 );
               })}
             </ul>
-
+  
             {/* Second Half */}
             <ul className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}>
               {secondHalf.map((item, index) => {
                 const isActive = pathname === item.link;
                 return (
-                  <li key={index} className="group">
+                  <li key={index} className="group dropdown-item">
                     <Link href={item.link} className="flex items-center gap-[0.5vw] justify-start">
                       <div
                         style={{ animation: "pulse .5s infinite" }}
                         className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
-                transition-all duration-200 
-                ${isInverted ? "bg-white" : "group-hover:bg-orange-500"} 
-                ${isActive && !isInverted ? "bg-orange-500" : ""}`}
+                          transition-all duration-200 
+                          ${isInverted ? "bg-white" : "group-hover:bg-orange-500"} 
+                          ${isActive && !isInverted ? "bg-orange-500" : ""}`}
                       ></div>
                       <span className="uppercase text-[.9vw] text-left">
                         <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
@@ -445,7 +553,6 @@ export default function Header() {
               })}
             </ul>
           </div>
-
         </div>
       </div>
     </div>

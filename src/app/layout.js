@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         <GoogleTagManager gtmId="GTM-T53Z2STS" />
         <body>
           <LayoutTransition>
-          {children}
+            {children}
           </LayoutTransition>
         </body>
         <GoogleAnalytics gaId="G-1BGD0MT8D6" />

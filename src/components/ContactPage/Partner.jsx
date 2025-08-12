@@ -14,11 +14,11 @@ const Partner = () => {
             <div className='w-[68%] max-sm:w-[85%] max-md:w-[85%] space-y-[1vw]'>
               <Copy>
                 <p className='text-content-20 text-white font-normal'>Looking to integrate our SDKs, explore co-branded solutions, or join the Moneylink ecosystem? We’re excited to hear from you.
-</p>
+                </p>
               </Copy>
               <Copy>
-                <p  className='text-content-20 text-white font-normal'>
-                Fill out our partnership form.
+                <p className='text-content-20 text-white font-normal'>
+                  Fill out our partnership form.
                 </p>
               </Copy>
             </div>

@@ -32,5 +32,5 @@ export function removeExtraSpaces(text) {
   return text.replace(/\s+/g, ' ').trim();
 }
 
-export const homepage = process.env.NEXT_PUBLIC_HOMEPAGE;
+export const homepage = "https://www.monielink.io";
 export const faviconPath = 'favicon.ico';

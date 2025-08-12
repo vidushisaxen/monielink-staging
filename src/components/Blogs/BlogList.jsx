@@ -144,8 +144,8 @@ const BlogList = () => {
                       is the next era of the internet in which blockchain
                       technology
                     </p>
-                    <SecondaryButton href={"/blogs/blog-detail"} text={"Read More"} className="max-sm:hidden max-md:hidden"/>
-                    <Link href={"/blogs/blog-detail"} className="hidden max-sm:flex max-md:flex round relative ml-[-1vw] items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
+                    <SecondaryButton href={"#"} text={"Read More"} className="max-sm:hidden max-md:hidden"/>
+                    <Link href={"#"} className="hidden max-sm:flex max-md:flex round relative ml-[-1vw] items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
                         <div className="absolute inset-0 z-10">
                           <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-3 justify-center">
                             <span className="text-content-18">Read More</span>
@@ -334,35 +334,35 @@ const blogContent = [
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-3.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-4.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-5.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-6.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
 
   {
@@ -370,34 +370,34 @@ const blogContent = [
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-8.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-9.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-10.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
   {
     img: "/assets/images/blogs/blog-img-2.png",
     title: "Your passport to the web3 economy",
     description:
       "If you’ve read this far and you’re wondering what “web3” is exactly, this is one of those need-to-knows, and it’s pretty simple.",
-    link: "/blogs/blog-detail",
+    link: "#",
   },
 ];

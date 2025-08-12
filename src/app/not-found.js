@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import Link from "next/link";
 
 export default function NotFoundPage(){
-  return ( <>
+  return ( 
+  <>
   <Header/>
     <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden" id='404'>
        <div className="absolute top-0 left-0 h-full !w-full hidden max-sm:block max-md:block">
@@ -28,7 +29,8 @@ export default function NotFoundPage(){
           </Copy>
         </div>
       </div>
-    </section> </>
+    </section>
+     </>
   );
 }
 

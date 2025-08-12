@@ -1,36 +1,44 @@
-import Image from "next/image";
-import Copy from "@/components/Animations/Copy";
-import HeroBackground from "@/components/Hero/HeroBackground";
-import Header from "@/components/Header";
+import { getPageMetadata } from "@/lib/seo.config";
 import Link from "next/link";
+import { homepage } from "@/lib/util";
+import Header from "@/components/Header";
 
-export default function NotFoundPage(){
-  return ( 
-  <>
-  <Header/>
-    <section className="w-screen relative h-screen  max-sm:pb-0 bg-background overflow-hidden" id='404'>
-       <div className="absolute top-0 left-0 h-full !w-full hidden max-sm:block max-md:block">
-                <Image src={"/assets/images/hero-bg.png"} height={852} width={393} alt="hero-bg" className="h-full w-full"/>
-              </div>
-      <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
-        <HeroBackground />
-        <div
-          className={` pointer-events-none w-full text-center mx-auto  relative z-[99999999] text-foreground max-sm:items-start max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[0vw]`}
-        >
-          <Copy >
-            <h1
-              className={`text-[18vw] font-display  text-gray-1 max-sm:w-[90%] leading-[1]`}
-            >
-             404
-            </h1>
-          </Copy>
-          <Copy>
-            <Link href={"/"}> <p className="leading-[1.2]">Go Back to Homepage!!</p></Link>
-          </Copy>
-        </div>
-      </div>
-    </section>
-     </>
-  );
+export const metadata = getPageMetadata({
+    title: "404 | Page Not Found",
+    description: "Empower fintechs & banks with MonieLink neobank Super SDK for digital banking, payments, card issuing & lending. Drive 6X revenue growth via scalable solutions.",
+    alternates: {
+        canonical: "/404",
+        languages: {
+            "x-default": "/404",
+        },
+    },
+    openGraph: {
+        url: "404",
+        images: [
+            {
+                url: `${homepage}/assets/images/seo/homepage.png`,
+                width: 1200,
+                height: 630,
+            },
+        ],
+    },
+});
+
+export default function NotFoundPage() {
+
+    return (
+        <>
+        <Header/>
+            <div id="hero" className=" h-screen w-screen">
+                <div className="flex w-full items-center justify-center h-full z-10">
+                    <div className="text-center">
+                        <h1 className="font-medium text-[20vw] max-sm:text-[40vw] max-md:text-[25vw] leading-[1.1]">
+                            404
+                        </h1>
+                        <p>Go back to <Link href="/" className="link-line">Homepage!!!</Link></p>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
-

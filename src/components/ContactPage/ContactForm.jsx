@@ -46,8 +46,6 @@ export default function ContactForm() {
     },
   })
 
-
-  
   return (
     <section className="mobile:pt-0 overflow-hidden" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
@@ -58,112 +56,109 @@ export default function ContactForm() {
               className="space-y-[2vw] max-sm:space-y-[7vw] max-md:space-y-[4vw] tablet:space-y-[5vw]  mobile:pt-[5vw]"
             >
               <FormField
-  control={form.control}
-  name="name"
-  render={({ field }) => (
-    <FormItem>
-      <label className="block text-sm uppercase font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
-      Full name*
-      </label>
-      <FormControl>
-        <Input
-          autoComplete="off"
-          {...field}
-          className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
-        />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <label className="block text-sm uppercase font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
+                      Full name*
+                    </label>
+                    <FormControl>
+                      <Input
+                        autoComplete="off"
+                        {...field}
+                        className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
 
-<FormField
-  control={form.control}
-  name="email"
-  render={({ field }) => (
-    <FormItem>
-      <label className="block text-sm font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
-      EMAIL*
-      </label>
-      <FormControl>
-        <Input
-          autoComplete="off"
-          {...field}
-          className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
-        />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <label className="block text-sm font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
+                      EMAIL*
+                    </label>
+                    <FormControl>
+                      <Input
+                        autoComplete="off"
+                        {...field}
+                        className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-<FormField
-  control={form.control}
-  name="number"
-  render={({ field }) => (
-    <FormItem>
-      <label className="block text-sm uppercase font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
-        Phone Number*
-      </label>
-      <FormControl>
-        <PhoneInput
-          defaultCountry="IN"
-          international
-          {...field}
-          className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
-        />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
+              <FormField
+                control={form.control}
+                name="number"
+                render={({ field }) => (
+                  <FormItem>
+                    <label className="block text-sm uppercase font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
+                      Phone Number*
+                    </label>
+                    <FormControl>
+                      <PhoneInput
+                        defaultCountry="NG"
+                        international
+                        {...field}
+                        className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-<FormField
-  control={form.control}
-  name="company"
-  render={({ field }) => (
-    <FormItem>
-      <label className="block text-sm font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
-      COMPANY NAME*
-      </label>
-      <FormControl>
-        <Input
-          autoComplete="off"
-          {...field}
-          className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
-        />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
+              <FormField
+                control={form.control}
+                name="company"
+                render={({ field }) => (
+                  <FormItem>
+                    <label className="block text-sm font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
+                      COMPANY NAME*
+                    </label>
+                    <FormControl>
+                      <Input
+                        autoComplete="off"
+                        {...field}
+                        className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-<FormField
-  control={form.control}
-  name="message"
-  render={({ field }) => (
-    <FormItem>
-      <label className="block text-sm font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
-      MESSAGE*
-      </label>
-      <FormControl>
-        <Textarea
-          autoComplete="off"
-          {...field}
-          className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
-        />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
-            <div className="mt-[2vw] w-full flex justify-start max-md:pt-[5vw] max-sm:pt-[10vw]">
-        <SecondaryButton href={"/"} text="Submit" className=" text-white" />
-             
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <label className="block text-sm font-medium mb-1 tablet:text-[1.2vw] mobile:text-[3.5vw]">
+                      MESSAGE*
+                    </label>
+                    <FormControl>
+                      <Textarea
+                        autoComplete="off"
+                        {...field}
+                        className="mobile:text-[4.5vw] tablet:text-[2.2vw]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className="mt-[2vw] w-full flex justify-start max-md:pt-[5vw] max-sm:pt-[10vw]">
+                <SecondaryButton href={"/"} text="Submit" className=" text-white" />
               </div>
-            
-             
             </form>
           </Form>
         </div>

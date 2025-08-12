@@ -7,16 +7,21 @@ import WhyUs from "@/components/AboutPage/WhyUs";
 import Team from "@/components/AboutPage/Team";
 import Clients from "@/components/AboutPage/Clients";
 
+export const metadata = {
+  title: "About MonieLink: Our Mission",
+  description: "Learn about MonieLink's mission to simplify payments with secure, user-friendly solutions for all your financial needs.",
+};
+
 export default function About() {
 
   return (
     <>
       <Layout>
-        <Hero heading={"Powering the Future of Digital Banking"} para={"We’re here to close the gap between legacy banking systems and today’s digital demands. Whether you're launching a digital-first product or expanding existing services, Monielink provides the tools you need to deliver seamless retail experiences through a simple integration of our Monielink Super SDK with your Mobile app. "}/>
+        <Hero heading={"Powering the Future of Digital Banking"} para={"We’re here to close the gap between legacy banking systems and today’s digital demands. Whether you're launching a digital-first product or expanding existing services, Monielink provides the tools you need to deliver seamless retail experiences through a simple integration of our Monielink Super SDK with your Mobile app. "} />
         <AboutUs />
         <WhyUs />
         {/* <Team /> */}
-        <Clients/>
+        <Clients />
         <FAQs data={faqData} />
         <CTA />
       </Layout>

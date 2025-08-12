@@ -7,7 +7,12 @@ import Features from "@/components/SolutionsPage/Features";
 import Solutions from "@/components/SolutionsPage/Solutions";
 import MobileSolutions from "@/components/SolutionsPage/MobileSolutions";
 
-export default function About() {
+export const metadata = {
+  title: "MonieLink Services: Pay & Transfer",
+  description: "Explore MonieLink's payment and transfer services. Secure, fast, and easy solutions for personal and business needs.",
+};
+
+export default function SolutionsPage() {
   return (
     <>
       <Layout>

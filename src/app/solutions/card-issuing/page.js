@@ -16,7 +16,7 @@ export default function SolutionDetail() {
       <Layout>
         <Hero heading={"Launch faster with instant card issuing"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
         <IntroCardIssuing/>
-        <Products/>
+        <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
         <FAQs data={faqData} />
         <CTA />
@@ -27,7 +27,30 @@ export default function SolutionDetail() {
 
 
 const productsData ={
-  heading:"Creating Lasting Value, Together"
+  heading:"Creating Lasting Value, Together",
+  cards:[
+    {
+      img:"/assets/icons/balance-logo.svg",
+      para:"Balance Wallet & Account Management System for management of Credit Card & Pre-paid Card Accounts, offering Card Lifecycle Management that includes credit card repayments, prepaid wallet top-ups, and access to card statements."
+    },
+    {
+      img:"/assets/icons/verifyed-logo.svg",
+      para:"Each Virtual Card issued on Monielink SDK comes with a Dynamic CVV that is authenticated by Monielink for every online usage using Verifyed authenticator."
+    },
+    {
+      img:"/assets/icons/reward-logo.svg",
+      para:"Boost digital adoption with Reward+ -  a tailored loyalty program that credits usage-based points to a dedicated rewards account. Customers can earn, track and redeem their points directly from your app via our integrated SDK."
+    },
+    {
+      img:"/assets/icons/instacard-logo.svg",
+      para:"Offer instant virtual cards (Debit, Credit & Pre-paid forms) for both online and offline transactions. With our Universal Instacard solution, multiple virtual cards can be securely accessed through a single physical card - delivering convenience, control, and a seamless payment experience."
+    },
+    {
+      img:"/assets/icons/snapcred-logo.svg",
+      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products — from instant origination to collection services that include due and delinquent payments as well as multi-bank collections."
+    },
+
+  ]
 }
 const solutionsData ={
   headline:"Next-gen virtual card issuance enabling both online & offline payments, with the convenience of linking multiple virtual cards  to a Universal Card for usage from a single Physical Card",

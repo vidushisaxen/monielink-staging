@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import BlackButton from "../Buttons/BlackButton";
-import { SVGLeft, SVGRight } from "../Icons";
+import { CardIssuing, DigitalBanking, DigitalLending, DualTransaction, KYC, Loyalty, MerchantAcquiring, SVGLeft, SVGRight } from "../Icons";
 import { useGSAP } from "@gsap/react";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import ScrambleText from "../h/ScrambleText";
@@ -22,7 +22,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/digital-accounts",
       svgRightRef: svgRightRefs[0],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <DigitalBanking />,
       y: "",
       zIndex: 1,
     },
@@ -35,7 +35,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/merchant-acquiring",
       svgRightRef: svgRightRefs[1],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <MerchantAcquiring/>,
       y: "",
       zIndex: 2,
     },
@@ -48,7 +48,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/card-issuing",
       svgRightRef: svgRightRefs[2],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <CardIssuing/>,
       y: 'translate-y-[-100%]',
       zIndex: 3,
     },
@@ -61,7 +61,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/digital-lending",
       svgRightRef: svgRightRefs[3],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <DigitalLending />,
       y: 'translate-y-[-200%]',
       zIndex: 4,
     },
@@ -74,7 +74,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/dual-transaction-service",
       svgRightRef: svgRightRefs[4],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <DualTransaction />,
       y: 'translate-y-[-300%]',
       zIndex: 4,
     },
@@ -87,7 +87,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/kyc-and-soft-token",
       svgRightRef: svgRightRefs[5],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <KYC/>,
       y: 'translate-y-[-400%]',
       zIndex: 4,
     },
@@ -100,7 +100,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/loyalty-management",
       svgRightRef: svgRightRefs[5],
       svgLeft: <SVGLeft />,
-      svgRight: <SVGRight />,
+      svgRight: <Loyalty />,
       y: 'translate-y-[-500%]',
       zIndex: 4,
     },
@@ -233,13 +233,17 @@ const SolutionsCard = ({ solutionsRef }) => {
   }, []);
 
   useGSAP(() => {
-    svgRightRefs.forEach((ref) => {
+    svgRightRefs.forEach((ref, index) => {
       const paths = ref.current?.querySelectorAll(".path-draw");
       if (paths) {
+        
+        const offsetPercent = 0 + index * 100;
+  
         gsap.from(paths, {
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 80%",
+            start: `top+=${offsetPercent}% 80%`,
+            // markers: true
           },
           duration: 2,
           drawSVG: 0,
@@ -247,6 +251,8 @@ const SolutionsCard = ({ solutionsRef }) => {
       }
     });
   });
+  
+  
   const handleCardClick = (index) => {
     if (!solutionsRef.current) return;
     const sectionTop =
@@ -389,7 +395,7 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
               </div>
 
               <div className="flex items-center justify-end pt-[3vw]">
-                <div className="h-[14vw] w-[14vw]">
+                <div className="h-[14vw] w-[20vw]">
                   <svg
                   className="h-full w-full"
                     width="251"

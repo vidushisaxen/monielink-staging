@@ -15,34 +15,34 @@ export default function Clients() {
 
   const logos = [
     {
-      src: "/assets/icons/logo/1.svg",
-      width: "8vw",
-      right: "20%",
+      src: "/assets/icons/clients/fcmb.svg",
+      width: "10vw",
+      right: "5%",
       top: "5%",
       mobileRight: isTab ?"-5%": "15%",
       mobileTop: "-40%",
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/logo/2.svg",
-      width: "5vw",
-      right: "35%",
-      top: "22%",
+      src: "/assets/icons/clients/tranzact.svg",
+      width: "10vw",
+      right: "25%",
+      top: "25%",
       mobileRight: isTab ?"25%": "30%",
       mobileTop: "-20%",
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/logo/3.svg",
-      width: "9vw",
+      src: "/assets/icons/clients/mastercard.svg",
+      width: "7vw",
       right: "10%",
-      top: "40%",
+      top: "35%",
       mobileRight: "5%",
       mobileTop: "5%",
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/logo/4.svg",
+      src: "/assets/icons/clients/access.svg",
       width: "10vw",
       right: "40%",
       top: "50%",
@@ -51,28 +51,37 @@ export default function Clients() {
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/logo/5.svg",
-      width: "7vw",
-      right: "35%",
-      top: "67.5%",
+      src: "/assets/icons/clients/NIBSS.svg",
+      width: "8vw",
+      right: "30%",
+      top: "63%",
       mobileRight: isTab ?"15%": "30%",
       mobileTop: isTab ?"56%": "35%",
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/logo/6.svg",
-      width: "9vw",
-      right: "15%",
-      top: "80.5%",
+      src: "/assets/icons/clients/VISA.svg",
+      width: "6vw",
+      right: "3%",
+      top: "75%",
       mobileRight: isTab ?"-10%": "5%",
       mobileTop: isTab ? "90%": "55%",
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/logo/7.svg",
-      width: "8vw",
+      src: "/assets/icons/clients/unified.svg",
+      width: "10vw",
       right: "20%",
-      top: "100%",
+      top: "90%",
+      mobileRight: isTab ?"15%": "20%",
+      mobileTop: isTab ?"110%": "75%",
+      mobileWidth: "15vw",
+    },
+    {
+      src: "/assets/icons/clients/interswitch.svg",
+      width: "13vw",
+      right: "5%",
+      top: "105%",
       mobileRight: isTab ?"15%": "20%",
       mobileTop: isTab ?"110%": "75%",
       mobileWidth: "15vw",
@@ -226,16 +235,16 @@ export default function Clients() {
         },
       }
     );
-    gsap.to(".clients-transition",{
-      backgroundColor:"#F5F5F5",
-      scrollTrigger:{
-        trigger:"#blogs",
-        start:"top 90%",
-        end:"30% 70%",
-        scrub:true,
-        // markers:true,
-      }
-    })
+    // gsap.to(".clients-transition",{
+    //   backgroundColor:"#F5F5F5",
+    //   scrollTrigger:{
+    //     trigger:"#blogs",
+    //     start:"30% 90%",
+    //     end:"30% 70%",
+    //     scrub:true,
+    //     markers:true,
+    //   }
+    // })
   }, []);
 
   return (

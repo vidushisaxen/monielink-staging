@@ -61,7 +61,7 @@ export default function HomePageHero({ heading, para, breadcrumb }) {
             </h1>
           </Copy>
           <div
-            className={`w-[55%] max-md:w-[80%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-md:pt-[5vw] max-sm:pt-[10vw]`}
+            className={`w-[60%] max-md:w-[80%] pt-5 text-content-20 max-sm:text-left text-gray-2 max-sm:w-full max-md:pt-[5vw] max-sm:pt-[10vw]`}
           >
             <Copy delay={baseDelay + 0.5}>
               <p className="descriptionText max-sm:text-left max-sm:text-content-20 max-sm:leading-[1.5] max-sm:pr-[5vw]">

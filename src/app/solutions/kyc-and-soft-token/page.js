@@ -13,7 +13,7 @@ export default function SolutionDetail() {
       <Layout>
         <Hero heading={"Enabling immediate onboarding "} para={"VERIFYED enables banks and FinTechs to complete customer onboarding through a digital KYC process in seconds, while also providing KYC upgrade services for existing customers. Enable 2FA on any account through easy, self-guided onboarding using multiple authentication options."} breadcrumb={true}/>
        <IntroKYC/>
-        <Products/>
+        <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
         <FAQs data={faqData} />
         <CTA />
@@ -24,7 +24,13 @@ export default function SolutionDetail() {
 
 
 const productsData ={
-  heading:"Creating Lasting Value, Together"
+  heading:"Creating Lasting Value, Together",
+  cards:[
+    {
+      img:"/assets/icons/verifyed-logo.svg",
+      para:"Automate your KYC process with AI-powered verification for faster onboarding, lower costs, and stronger fraud prevention. With Verifyed Authenticator, enhance user security through seamless SaaS-based two-factor authentication - all built to scale with your operations."
+    },
+  ]
 }
 const solutionsData ={
   headline:"Enabling Digital KYC for immediate onboarding, activation, and usage. With Verifyed Authenticator, enhance user security by turning on two-factor authentication",

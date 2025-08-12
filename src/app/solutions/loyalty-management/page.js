@@ -15,7 +15,7 @@ export default function SolutionDetail() {
       <Layout>
         <Hero heading={"Implementing a tailored loyalty program"} para={"Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK."} breadcrumb={true}/>
        <IntroLoyalty/>
-        <Products/>
+        <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
         <FAQs data={faqData} />
         <CTA />
@@ -26,7 +26,19 @@ export default function SolutionDetail() {
 
 
 const productsData ={
-  heading:"Creating Lasting Value, Together"
+  heading:"Creating Lasting Value, Together",
+  cards:[
+    {
+      img:"/assets/icons/balance-logo.svg",
+      para:"Balance Wallet & Account Management System supports overall rewards strategy through Reward Point & Redemption Accounts. Customers can track account statement for the reward points they earn & redeemed point to spend on select services offered on partners platform."
+    },
+    {
+      img:"/assets/icons/reward-logo.svg",
+      para:"Boost digital adoption with Reward+, a tailored loyalty program that credits usage-based points to a dedicated rewards account. Customers can track and redeem their points directly from your app via our integrated SDK."
+    },
+   
+
+  ]
 }
 const solutionsData ={
   headline:"Reward strategy is a powerful way to boost the usage of digital banking services",

@@ -224,7 +224,7 @@ export default function DesktopFooter() {
                     className="text-[3.125vw] font-display"
                   >
                     <ScrambleText lowercase onHover={true} centerd speed={0.4} className="min-w-[8vw]">
-                    {"info@monielink.org"}
+                    {"info@monielink.io"}
                     </ScrambleText>
                    
                   </a>

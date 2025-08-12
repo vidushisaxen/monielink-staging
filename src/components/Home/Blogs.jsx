@@ -25,7 +25,7 @@ export default function Blogs() {
     <section
       data-theme="white"
       id="blogs"
-      className="h-fit py-[5vw] text-background overflow-hidden "
+      className="h-fit py-[5vw] text-background overflow-hidden bg-[#F5F5F5]"
     >
       <div className="flex max-sm:flex-col max-sm:items-start max-sm:py-[12vw] max-md:py-[5vw] pb-[3vw] px-[3.75vw] max-sm:px-[6vw] items-end justify-between">
         <div className="space-y-[1vw] w-1/2 max-md:w-[70%] max-sm:w-[90%]">

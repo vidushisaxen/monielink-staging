@@ -310,7 +310,7 @@ export default function Header() {
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
 
-      <div className="relative w-[19vw]">
+      <div className="relative w-[20vw]">
         {/* SVG Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
 
@@ -372,7 +372,7 @@ export default function Header() {
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
 
-      <div className="relative w-[19vw]">
+      <div className="relative w-[20vw]">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div style={{ clipPath: "inset(0% 0% 0% 0%)" }} className="h-full w-full" >
           <svg className="h-full w-full" width="392" height="346" viewBox="0 0 392 346" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -489,7 +489,7 @@ export default function Header() {
                       backgroundColor:
                         isInverted || isWhite
                           ? "rgba(0, 0, 0, 0.3)"
-                          : "transparent",
+                          : "#000000",
                     }}
                   />
                 </foreignObject>
@@ -617,7 +617,7 @@ export default function Header() {
         </div>
       </header>
 
-      <div ref={navigationRef} className={`fixed inset-0 z-[299] hidden max-md:block h-screen w-screen overflow-hidden top-0 left-0 ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}>
+      <div ref={navigationRef} className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen overflow-hidden top-0 left-0 ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}>
         <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
           <Image className="w-full h-full object-cover object-bottom" src={"/assets/shapes/menu-svg-t.svg"} alt="menu background image" width={400} height={600} />
         </div>

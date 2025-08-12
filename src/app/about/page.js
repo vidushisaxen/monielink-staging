@@ -15,7 +15,7 @@ export default function About() {
         <Hero heading={"Powering the Future of Digital Banking"} para={"We’re here to close the gap between legacy banking systems and today’s digital demands. Whether you're launching a digital-first product or expanding existing services, Monielink provides the tools you need to deliver seamless retail experiences through a simple integration of our Monielink Super SDK with your Mobile app. "}/>
         <AboutUs />
         <WhyUs />
-        <Team />
+        {/* <Team /> */}
         <Clients/>
         <FAQs data={faqData} />
         <CTA />

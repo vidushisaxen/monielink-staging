@@ -100,7 +100,7 @@ const Clients = () => {
           </div>
           <div className="col-start-2 col-span-1 row-start-2 border border-l-[0.5px] border-r-[0.5px] border-white/10 client p-[2vw]">
             <Image
-              src={"/assets/icons/logo/1.svg"}
+              src={"/assets/icons/clients/fcmb.svg"}
               width={200}
               height={200}
               alt=""
@@ -109,14 +109,14 @@ const Clients = () => {
           </div>
           <div className="col-start-3 col-span-1 row-start-2 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[3vw]">
             <Image
-              src={"/assets/icons/logo/2.svg"}
+              src={"/assets/icons/clients/visa.svg"}
               width={200}
               height={200}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="col-start-4 col-span-1 row-start-2 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
+          {/* <div className="col-start-4 col-span-1 row-start-2 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
             <Image
               src={"/assets/icons/logo/3.svg"}
               width={200}
@@ -124,19 +124,19 @@ const Clients = () => {
               alt=""
               className="w-full h-full object-contain"
             />
-          </div>
-          <div className="col-start-1 col-span-1 row-start-3 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
+          </div> */}
+          <div className="col-start-1 col-span-1 row-start-3 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2.5vw]">
             <Image
-              src={"/assets/icons/logo/4.svg"}
-              width={200}
-              height={200}
+              src={"/assets/icons/clients/mastercard.svg"}
+              width={150}
+              height={150}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
           <div className="col-start-2 col-span-1 row-start-3 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
             <Image
-              src={"/assets/icons/logo/5.svg"}
+              src={"/assets/icons/clients/tranzact.svg"}
               width={200}
               height={200}
               alt=""
@@ -145,7 +145,7 @@ const Clients = () => {
           </div>
           <div className="col-start-3 col-span-1 row-start-3 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
             <Image
-              src={"/assets/icons/logo/6.svg"}
+              src={"/assets/icons/clients/interswitch.svg"}
               width={200}
               height={200}
               alt=""
@@ -154,14 +154,14 @@ const Clients = () => {
           </div>
           <div className="col-start-4 col-span-1 row-start-3 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
             <Image
-              src={"/assets/icons/logo/8.svg"}
+              src={"/assets/icons/clients/NIBSS.svg"}
               width={200}
               height={200}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="col-start-1 col-span-1 row-start-4 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[3vw]">
+          {/* <div className="col-start-1 col-span-1 row-start-4 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[3vw]">
             <Image
               src={"/assets/icons/logo/9.svg"}
               width={200}
@@ -169,10 +169,10 @@ const Clients = () => {
               alt=""
               className="w-full h-full object-contain"
             />
-          </div>
+          </div> */}
           <div className="col-start-2 col-span-1 row-start-4 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
             <Image
-              src={"/assets/icons/logo/10.svg"}
+              src={"/assets/icons/clients/unified.svg"}
               width={200}
               height={200}
               alt=""
@@ -181,7 +181,7 @@ const Clients = () => {
           </div>
           <div className="col-start-3 col-span-1 row-start-4 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[2vw]">
             <Image
-              src={"/assets/icons/logo/11.svg"}
+              src={"/assets/icons/clients/access.svg"}
               width={200}
               height={200}
               alt=""

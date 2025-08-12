@@ -16,7 +16,7 @@ export default function SolutionDetail() {
       <Layout>
         <Hero heading={"Scalable digital lending designed "} para={"Monielink enables end-to-end loan and credit card management, helping lenders Create & Grow Profitable Portfolios through a complete cloud-based ecosystem"} breadcrumb={true}/>
        <IntroDigitalLending/>
-        <Products/>
+        <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
         <FAQs data={faqData} />
         <CTA />
@@ -27,7 +27,17 @@ export default function SolutionDetail() {
 
 
 const productsData ={
-  heading:"Creating Lasting Value, Together"
+  heading:"Creating Lasting Value, Together",
+  cards:[
+    {
+      img:"/assets/icons/balance-logo.svg",
+      para:"Balance Wallet & Account Management System supports diverse use cases across digital payments, card transactions, lending, and loyalty - all from one powerful, unified platform. "
+    },
+    {
+      img:"/assets/icons/snapcred-logo.svg",
+      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products — from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections,"
+    }
+  ]
 }
 const solutionsData ={
   headline:"A complete cloud-based ecosystem that enables full-spectrum loan and credit card management, helping lenders grow profitable portfolios",

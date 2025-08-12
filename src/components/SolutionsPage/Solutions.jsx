@@ -8,89 +8,108 @@ import Image from "next/image";
 import SegmentedProgressBar from "./SegmntedProgressBar";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import ScrambleText from "../h/ScrambleText";
+import { CardIssuing, DigitalBanking, DigitalLending, DualTransaction, KYC, Loyalty, MerchantAcquiring } from "../Icons";
+import { useGSAP } from "@gsap/react";
 
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 
-const features = [
-  {
-    id: 1,
-    title: "Digital Account",
-    description:
-      "Monielink powers you to build a full-featured digital wallet ecosystem for both consumers and merchants, with support for multiple currencies. Instantly issue virtual Debit, Credit, or Prepaid cards through our integrated card issuing platform and SDK.",
-    description2: "You can also assign NUBAN account numbers linked to verified mobile numbers, allowing customers to receive inflow transfers using just their phone number.",
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-accounts",
-  },
-  {
-    id: 2,
-    title: "Merchant Acquiring ",
-    description:
-      "Monielink enables instant, digital onboarding for merchants directly through your mobile app. Using SoftPOS on NFC-enabled Android phones, merchants can start accepting contactless card payments without additional hardware.",
-    description2: "Our platform also supports ScanPay with static and dynamic QR codes, and traditional POS terminals for card dipping, tapping, or swiping",
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/merchant-acquiring",
-  },
-  {
-    id: 3,
-    title: "Card Issuing",
-    description:
-      "Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction limits across POS, ATM, and online channels. ",
-    description2: "With our Universal Instacard, users can access multiple virtual cards through a single physical card — delivering flexibility, security, and a superior user experience.",
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/card-issuing",
-  },
-  {
-    id: 4,
-    title: "Digital Lending",
-    description:
-      "End-to-end loan and credit card management through SnapCred — a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.",
-    description2: "With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections — all on a secure, cloud-based infrastructure.",
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/digital-lending",
-  },
-  {
-    id: 5,
-    title: "Dual Transaction Service",
-    description:
-      "You can unlock new revenue by transforming debit cards into virtual credit cards.",
-    description2: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.",
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/dual-transaction-service",
-  },
-  {
-    id: 6,
-    title: "KYC & Soft Token",
-    description:
-      "Monielink Super SDK, enables instant customer onboarding with:",
-    description2: "The solution also includes soft token- 2FA, adding an extra layer of security for account activation and ongoing transactions through a soft-token set-up on Verifyed App",
-    list:[
-"Face capture supported with liveness detection which confirms that the captured face belongs to a live individual — preventing spoofing and impersonation.",
-"Facial recognition technology to match live captures against BVN, NIN, or photo ID records in real time, ensuring high-confidence identity verification. ",
-"ID Verifications to verify NIN, Driver’s License, International Passport etc.",
-"Digital Business Verification for a registered business",
-"Address Verification  for digitally verifying residence & business address",
-"KYC Upgrades"
-    ],
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/kyc-and-soft-token",
-  },
-  {
-    id: 7,
-    title: "Loyalty Management ",
-    description:
-      "Boost adoption and engagement by offering a customized loyalty program for all products & services offered on by Monielink. With Monielink’s SDK, you can reward customers with usage-based points credited to a dedicated rewards account, complete with real-time reward statements and transaction visibility.",
-    description2: "",
-    img: "/assets/images/solutions/slide-1.svg",
-    href: "/solutions/loyalty-management",
-  },
-];
+
 
 export default function Solutions() {
   const containerRef = useRef(null);
 
   const [activeSlide, setActiveSlide] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const svgRightRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  const features = [
+    {
+      id: 1,
+      title: "Digital Account",
+      description:
+        "Monielink powers you to build a full-featured digital wallet ecosystem for both consumers and merchants, with support for multiple currencies. Instantly issue virtual Debit, Credit, or Prepaid cards through our integrated card issuing platform and SDK.",
+      description2: "You can also assign NUBAN account numbers linked to verified mobile numbers, allowing customers to receive inflow transfers using just their phone number.",
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/digital-accounts",
+      svgRightRef: svgRightRefs[0],
+     svgRight: <DigitalBanking />,
+    },
+    {
+      id: 2,
+      title: "Merchant Acquiring ",
+      description:
+        "Monielink enables instant, digital onboarding for merchants directly through your mobile app. Using SoftPOS on NFC-enabled Android phones, merchants can start accepting contactless card payments without additional hardware.",
+      description2: "Our platform also supports ScanPay with static and dynamic QR codes, and traditional POS terminals for card dipping, tapping, or swiping",
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/merchant-acquiring",
+      svgRightRef: svgRightRefs[1],
+      svgRight: <MerchantAcquiring/>,
+    },
+    {
+      id: 3,
+      title: "Card Issuing",
+      description:
+        "Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction limits across POS, ATM, and online channels. ",
+      description2: "With our Universal Instacard, users can access multiple virtual cards through a single physical card — delivering flexibility, security, and a superior user experience.",
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/card-issuing",
+      svgRightRef: svgRightRefs[2],
+      svgRight: <CardIssuing />,
+    },
+    {
+      id: 4,
+      title: "Digital Lending",
+      description:
+        "End-to-end loan and credit card management through SnapCred — a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.",
+      description2: "With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections — all on a secure, cloud-based infrastructure.",
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/digital-lending",
+      svgRightRef: svgRightRefs[3],
+      svgRight: <DigitalLending />,
+    },
+    {
+      id: 5,
+      title: "Dual Transaction Service",
+      description:
+        "You can unlock new revenue by transforming debit cards into virtual credit cards.",
+      description2: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.",
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/dual-transaction-service",
+      svgRightRef: svgRightRefs[4],
+      svgRight: <DualTransaction />,
+    },
+    {
+      id: 6,
+      title: "KYC & Soft Token",
+      description:
+        "Monielink Super SDK, enables instant customer onboarding with:",
+      description2: "The solution also includes soft token- 2FA, adding an extra layer of security for account activation and ongoing transactions through a soft-token set-up on Verifyed App",
+      list:[
+  "Face capture supported with liveness detection which confirms that the captured face belongs to a live individual — preventing spoofing and impersonation.",
+  "Facial recognition technology to match live captures against BVN, NIN, or photo ID records in real time, ensuring high-confidence identity verification. ",
+  "ID Verifications to verify NIN, Driver’s License, International Passport etc.",
+  "Digital Business Verification for a registered business",
+  "Address Verification  for digitally verifying residence & business address",
+  "KYC Upgrades"
+      ],
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/kyc-and-soft-token",
+      svgRightRef: svgRightRefs[4],
+      svgRight: <KYC />,
+    },
+    {
+      id: 7,
+      title: "Loyalty Management ",
+      description:
+        "Boost adoption and engagement by offering a customized loyalty program for all products & services offered on by Monielink. With Monielink’s SDK, you can reward customers with usage-based points credited to a dedicated rewards account, complete with real-time reward statements and transaction visibility.",
+      description2: "",
+      img: "/assets/images/solutions/slide-1.svg",
+      href: "/solutions/loyalty-management",
+      svgRightRef: svgRightRefs[5],
+      svgRight: <Loyalty/>,
+    },
+  ];
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -107,7 +126,7 @@ export default function Solutions() {
         });
       });
 
-      const snapPoints = [0, 0.223, 0.411, 0.6, 0.78, 1]
+      const snapPoints = [0, 0.180, 0.347,0.505, 0.65, 0.8235, 1]
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -133,7 +152,7 @@ export default function Solutions() {
 
       slides.forEach((slide, i) => {
         const currSplit = splits[i];
-        const imgCurr = slide.querySelector("img");
+        const imgCurr = slide.querySelector("svg");
         const btnCurr = slide.querySelector(".btnFade");
 
         if (i < total - 1) {
@@ -158,7 +177,7 @@ export default function Solutions() {
 
           // animate next slide in
           const nextSplit = splits[i + 1];
-          const imgNext = slides[i + 1].querySelector("img");
+          const imgNext = slides[i + 1].querySelector("svg");
           const btnNext = slides[i + 1].querySelector(".btnFade");
 
           tl.from(
@@ -187,7 +206,6 @@ export default function Solutions() {
 
     return () => ctx.revert();
   }, []);
-
   const handleSkip = () => {
     const next = document.getElementById("features");
     if (next) next.scrollIntoView({ behavior: "smooth" });
@@ -243,16 +261,29 @@ export default function Solutions() {
                   }`}
               >
                 <div className="w-1/2 flex justify-center">
-                  <Image
+                  {/* <Image
                     src={f.img}
                     alt={f.title}
                     width={500}
                     height={500}
                     className="object-contain"
-                  />
+                  /> */}
+                   <div className="h-[14vw] w-[20vw]">
+                  <svg
+                  className="h-full w-full"
+                    width="251"
+                    height="252"
+                    viewBox="0 0 251 252"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ref={f.svgRightRef}
+                  >
+                    {f.svgRight}
+                  </svg>
+                </div>
                 </div>
 
-                <div className="w-1/2 flex flex-col gap-[2.5vw]">
+                <div className="w-1/2 flex flex-col gap-[2vw]">
                   <div className="splitLines titleFade">
                     <span className="!inline-block mr-[0.5vw] h-[2.2vw] w-[0.5vw] bg-primary-2"></span>
                     <h3 className="!inline-block text-head-60 font-display font-light">

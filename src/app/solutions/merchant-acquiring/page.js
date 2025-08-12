@@ -16,7 +16,7 @@ export default function SolutionDetail() {
       <Layout>
         <Hero heading={"Seamless Merchant Onboarding"} para={"Effortlessly integrate the Monielink SDK into your mobile app for seamless merchant onboarding. Equip merchants with an interoperable QR code for digital payments, along with access to the Soft-POS feature, turning NFC-enabled mobile phones into POS terminals, allowing them to accept contactless card payments in addition to using traditional POS devices "} breadcrumb={true}/>
         <IntroMerchnatAcquiring/>
-        <Products/>
+        <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
         <FAQs data={faqData} />
         <CTA />
@@ -25,9 +25,26 @@ export default function SolutionDetail() {
   );
 };
 
-
 const productsData ={
-  heading:"Creating Lasting Value, Together"
+  heading:"Creating Lasting Value, Together",
+  cards:[
+    {
+      img:"/assets/icons/balance-logo.svg",
+      para:"Monielink creates a Payment Collection Account for each onboarded merchant, hosted on a dedicated instance of the Balance Digital Account System, tailored for our partner Banks and FinTechs. "
+    },
+    {
+      img:"/assets/icons/scanpay-logo.svg",
+      para:"Enabling Digital Payments via interoperable QR codes issued to merchants through a Seamless & Digital onboarding process. Customers can scan these QR codes using their Mobile Banking apps for making instant payments from their Bank Accounts. "
+    },
+    {
+      img:"/assets/icons/tap-pay-logo.svg",
+      para:"Merchants can start collecting contactless Card payments using Soft-POS functionality on Partner’s Mobile App (using NFC enabled Android Phones) integrated with our our SDK. Merchants can also request for issuance of a POS Terminals."
+    },
+    {
+      img:"/assets/icons/reward-logo.svg",
+      para:"Boost digital adoption with Reward+ -  a tailored loyalty program that credits usage-based points to a dedicated rewards account. Merchants  can earn, track and redeem their points directly from your app via our integrated SDK."
+    }
+  ]
 }
 const solutionsData ={
   headline:"All-in-one Merchant Acquiring Solution for seamless merchant onboarding, enabling digital and card payments with instant settlement ",

@@ -15,7 +15,7 @@ export default function SolutionDetail() {
       <Layout>
         <Hero heading={"A single DUO card solution"} para={"DUO offers end to end solutions for Issuers to launch, manage & scale Credit Card issuance, activations, usage & collections towards enabling them create a profitable portfolio."} breadcrumb={true}/>
        <IntroDualTransaction/>
-        <Products/>
+        <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
         <FAQs data={faqData} />
         <CTA />
@@ -25,8 +25,32 @@ export default function SolutionDetail() {
 };
 
 
+
 const productsData ={
-  heading:"Creating Lasting Value, Together"
+  heading:"Creating Lasting Value, Together",
+  cards:[
+    {
+      img:"/assets/icons/balance-logo.svg",
+      para:"Balance Wallet & Account Management System for management of Credit Card Accounts, offering Card Lifecycle Management that includes credit card repayments, card control settings & access to credit card statements."
+    },
+    {
+      img:"/assets/icons/verifyed-logo.svg",
+      para:"Each Virtual Card issued on Monielink SDK comes with a Dynamic CVV that is authenticated by Monielink for every online usage using Verifyed authenticator."
+    },
+    {
+      img:"/assets/icons/reward-logo.svg",
+      para:"Boost digital adoption with Reward+ — a tailored loyalty program that credits usage-based points to a dedicated rewards account. Customers can track and redeem their points directly from your app via our integrated SDK."
+    },
+    {
+      img:"/assets/icons/instacard-logo.svg",
+      para:"Offer instant virtual credit cards for both online and offline transactions. Customers can access the virtual credit card using our SDK on Issuers mobile app to make a secure online transactions using Dynamic CVV. DTS enables the usage of the virtual credit card through the existing physical cards the use has."
+    },
+    {
+      img:"/assets/icons/snapcred-logo.svg",
+      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products — from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections."
+    },
+
+  ]
 }
 const solutionsData ={
   headline:"Our patented Dual Transaction Service transforms your existing debit cards for seamless Virtual Credit Card usage.",

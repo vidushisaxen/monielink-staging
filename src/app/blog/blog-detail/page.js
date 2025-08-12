@@ -15,7 +15,7 @@ const page = () => {
         <CTA />
       </Layout>
     </>
-  );x
+  );
 };
 
 export default page;

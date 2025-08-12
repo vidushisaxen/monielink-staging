@@ -30,7 +30,7 @@ export default function Loader() {
     const tl = gsap.timeline();
 
     const splitText = new SplitText(".splitText", {
-      type: "chars",
+      type: "words , chars",
     });
     gsap.set(splitText.chars, {
       opacity: 0,

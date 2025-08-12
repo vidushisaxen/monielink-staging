@@ -260,7 +260,7 @@ export default function Solutions() {
                 className={`slide absolute inset-0 flex items-center justify-between gap-[3vw] py-[8vw] transition-all duration-300 z-0 pointer-events-none ${i === activeSlide ? "z-10 pointer-events-auto" : ""
                   }`}
               >
-                <div className="w-1/2 flex justify-center">
+                <div className="w-1/2 flex">
                   {/* <Image
                     src={f.img}
                     alt={f.title}
@@ -268,7 +268,7 @@ export default function Solutions() {
                     height={500}
                     className="object-contain"
                   /> */}
-                   <div className="h-[14vw] w-[20vw]">
+                   <div className="h-[20vw] w-auto mx-auto">
                   <svg
                   className="h-full w-full"
                     width="251"

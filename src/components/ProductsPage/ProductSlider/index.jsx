@@ -138,7 +138,7 @@ export default function ProductSlider() {
                     end: "bottom bottom",
                     scrub: true,
                     snap: {
-                        snapTo: [0, 0.2, 0.34, 0.48, 0.60, 0.75, 0.87, 1],
+                        snapTo: [0, 0.17, 0.29, 0.41, 0.53, 0.65, 0.75, 0.88, 1],
                         duration: { min: 0.1, max: 0.3 },
                         ease: 'power1.inOut',
                         delay: 0,
@@ -237,13 +237,14 @@ export default function ProductSlider() {
                         progress={scrollProgress * 100}
                         labels={[
                             { text: '001', index: 2 },
-                            { text: '002', index: 13 },
-                            { text: '003', index: 26 },
-                            { text: '004', index: 39 },
-                            { text: '005', index: 52 },
-                            { text: '006', index: 65 },
-                            { text: '007', index: 82 },
-                            { text: '008', index: 96 },
+                            { text: '002', index: 12 },
+                            { text: '003', index: 24 },
+                            { text: '004', index: 36 },
+                            { text: '005', index: 48 },
+                            { text: '006', index: 60 },
+                            { text: '007', index: 72 },
+                            { text: '008', index: 84 }, 
+                            { text: '009', index: 96 },
                         ]}
                     />
                 </div>

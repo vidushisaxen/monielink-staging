@@ -6,6 +6,8 @@ import Products from "@/components/Home/Products";
 import Intro from "@/components/ProductDetailPage/Intro";
 import Values from "@/components/ProductDetailPage/Values";
 import Wallet from "@/components/ProductDetailPage/Duo/Wallet";
+import CustomerBenefits from "@/components/ProductDetailPage/Duo/CustomerBenefits";
+import IssuerBenefits from "@/components/ProductDetailPage/Duo/IssuerBenefits";
 
 export default function Duo() {
 
@@ -15,6 +17,8 @@ export default function Duo() {
         <Hero heading={"Patented Dual Transaction Service"} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
         <Intro content={introData}/>
        <Wallet/>
+       <CustomerBenefits/>
+       <IssuerBenefits/>
         <Values data={valuesData}/>
         <Products productsData={productsData}/>
         <FAQs data={faqData} />

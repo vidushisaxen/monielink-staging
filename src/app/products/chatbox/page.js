@@ -7,6 +7,7 @@ import Intro from "@/components/ProductDetailPage/Intro";
 import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/ChatBox/Diagram";
 import Wallet from "@/components/ProductDetailPage/ChatBox/Wallet";
+import Videos from "@/components/ProductDetailPage/ChatBox/Videos";
 
 export default function ChatBox() {
 
@@ -17,6 +18,7 @@ export default function ChatBox() {
         <Intro content={introData}/>
         <Wallet/>
        <Diagram/>
+       <Videos/>
         <Values data={valuesData}/>
         <Products  productsData={productsData}/>
         <FAQs data={faqData} />

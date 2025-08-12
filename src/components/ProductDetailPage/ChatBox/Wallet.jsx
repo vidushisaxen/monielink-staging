@@ -8,33 +8,33 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3 } from '@/components/Icons';
+import { USP12, USP15, USP9 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 const Wallet = () => {
     lineAnim();
-    const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+    const svgRefs = [useRef(null), useRef(null), useRef(null)];
 
     const uspData = [
         {
             description: "24/7 Interactive Support ",
             width: "w-[48%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP9/>
         },
         {
             description: "Help Videos & Topics",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts3 />
+            svgElement: <USP12 />
         },
         {
             description: "Self training Automated Responses",
             width: "w-[40%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts2 />
+            svgElement: <USP15/>
         },
     ];
 

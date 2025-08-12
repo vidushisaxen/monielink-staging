@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4 } from '@/components/Icons';
+import { USP15, USP8 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -22,13 +22,13 @@ const Wallet = () => {
             description: "Self assisted Soft-Token set-up on VERIFYED app for 2FA",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1 />
+            svgElement: <USP8/>
         },
         {
             description: "Omnichannel 2FA solution for Fraud Protection",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts3 />
+            svgElement: <USP15 />
         },
     ];
 

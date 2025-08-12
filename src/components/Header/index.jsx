@@ -45,7 +45,7 @@ const socials = [
 const links = [
   {
     name: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Solutions",
@@ -57,11 +57,11 @@ const links = [
   },
   {
     name: "Resources",
-    link: "/blogs",
+    link: "/blog",
   },
   {
     name: "Contact Us",
-    link: "/contact",
+    link: "/contact-us",
   },
 ];
 
@@ -72,7 +72,7 @@ const links2 = [
   },
   {
     name: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Solutions",
@@ -84,11 +84,11 @@ const links2 = [
   },
   {
     name: "Resources",
-    link: "/blogs",
+    link: "/blog",
   },
   {
     name: "Contact Us",
-    link: "/contact",
+    link: "/contact-us",
   },
 ];
 
@@ -335,7 +335,7 @@ export default function Header() {
               tl.to(items, {
                 opacity: 1,
                 y: 0,
-                duration: 0.7,
+                duration: 1,
                 stagger: 0.05,
                 ease: 'power2.out'
               }, '-=0.1'); 
@@ -430,12 +430,10 @@ export default function Header() {
             const GSAP = window.gsap || gsap;
             const tl = GSAP.timeline();
             
-            // Reset initial states
             const svg = el.querySelector('.dropdown-svg');
             const items = el.querySelectorAll('.dropdown-item');
             
             if (svg && items.length > 0) {
-              // Set initial states
               GSAP.set(svg, { 
                 height: 0,
                 opacity: 1
@@ -452,7 +450,7 @@ export default function Header() {
               tl.to(items, {
                 opacity: 1,
                 y: 0,
-                duration: 0.3,
+                duration: 0.7,
                 stagger: 0.05,
                 ease: 'power2.out'
               }, '-=0.1');
@@ -500,7 +498,7 @@ export default function Header() {
         </div>
   
         <div
-          className={`relative z-10 p-[2vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
+          className={`relative z-10 py-[2vw] px-[3vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
         >
           <div className="flex">
             {/* First Half */}

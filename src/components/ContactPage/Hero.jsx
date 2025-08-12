@@ -60,7 +60,7 @@ export default function Hero() {
                 <div ref={contactRef} className="flex items-center  max-sm:hidden max-md:flex-wrap  max-md:flex-row-reverse justify-center gap-[3vw] z-[99]">
                     <div className="relative w-[18vw] max-md:w-[40vw] max-md:h-[40vw] h-[18vw] z-[99] max-sm:w-[80vw] max-sm:h-[60vw]  pointer-events-none rounded-[1vw] hero-fadeup-contact">
                         <Image
-                            src="/assets/icons/contact/card-frame.svg"
+                            src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
                             fill
                             className="object-contain "
@@ -86,7 +86,7 @@ export default function Hero() {
 
                     <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] pointer-events-none rounded-[1vw] hero-fadeup-contact">
                         <Image
-                            src="/assets/icons/contact/card-frame.svg"
+                            src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
                             fill
                             className="object-contain"
@@ -111,7 +111,7 @@ export default function Hero() {
 
                     <div className="relative max-md:w-[40vw] max-md:h-[40vw] w-[18vw] h-[18vw] z-[99] pointer-events-none rounded-[1vw] hero-fadeup-contact">
                         <Image
-                            src="/assets/icons/contact/card-frame.svg"
+                            src="/assets/icons/contact/card-frame.png"
                             alt="card-frame"
                             fill
                             className="object-contain"

@@ -2,15 +2,22 @@ import localFont from "next/font/local";
 import Header from "../Header";
 import Footer from "../Footer";
 import Loader from "../Loader";
+import { ImageObjectJsonLd, LocalBusiness, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
 
 const Layout = ({ children }) => {
     return (
+        <>
+        <OrganizationJsonLd />
+      <LocalBusiness />
+      <ImageObjectJsonLd />
+      <WebsiteJsonLd />
         <main className={`${Roobert.variable} ${TWK.variable} antialiased`}>
             <Loader />
             <Header />
             {children}
             <Footer />
         </main>
+        </>
     )
 }
 

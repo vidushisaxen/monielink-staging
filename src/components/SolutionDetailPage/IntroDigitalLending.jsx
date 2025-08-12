@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4} from "../Icons";
+import { USP11, USP12, USP13, USP14} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -18,25 +18,25 @@ const IntroDigitalLending = () => {
             description: "Credit Origination with instant under-writing based on customized rules",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP11/>
         },
         {
             description: "Credit Disbursement with instant & work-flow based approval process",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts2/>
+            svgElement: <USP12/>
         },
         {
             description: "Loan Management over the lifecycle of Credit Products",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svgElement: <USP13/>
         },
         {
             description: "Collection services for due & delinquent payments as well as multi-bank collections ",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svgElement: <USP14/>
         },
     ];
 

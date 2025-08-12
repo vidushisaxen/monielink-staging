@@ -59,7 +59,7 @@ import {
       },
       {
         name: "About Us",
-        link: "/about",
+        link: "/about-us",
       },
       {
         name: "Solutions",
@@ -71,11 +71,11 @@ import {
       },
       {
         name: "Resources",
-        link: "/blogs",
+        link: "/blog",
       },
       {
         name: "Contact",
-        link: "/contact",
+        link: "/contact-us",
       },
     ];
     return (

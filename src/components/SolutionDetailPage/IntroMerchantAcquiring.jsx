@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4} from "../Icons";
+import {USP13, USP15, USP7, USP8} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -18,25 +18,25 @@ const IntroMerchnatAcquiring = () => {
             description: "Seamless Merchant Onboarding",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP7/>
         },
         {
             description: "Digital Account for collection of Payments",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts2/>
+            svgElement: <USP8/>
         },
         {
             description: "Accept payments using QR Code, Soft-POS solution & POS  terminals",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svgElement: <USP13/>
         },
         {
             description: "Transaction processing & Settlement",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svgElement: <USP15/>
         }
     ];
 

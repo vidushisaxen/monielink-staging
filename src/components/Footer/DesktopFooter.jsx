@@ -265,7 +265,7 @@ const links = [
   },
   {
     name: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Solutions",
@@ -277,11 +277,11 @@ const links = [
   },
   {
     name: "Resources",
-    link: "/blogs",
+    link: "/blog",
   },
   {
     name: "Contact",
-    link: "/contact",
+    link: "/contact-us",
   },
 ];
 const links2 = [

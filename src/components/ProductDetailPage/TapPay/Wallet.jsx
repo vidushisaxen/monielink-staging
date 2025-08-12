@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4 } from '@/components/Icons';
+import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4, USP12, USP3, USP6, USP9 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -22,25 +22,25 @@ const Wallet = ({heading}) => {
             description: "Digital Onboarding of Merchants, supported with Digital KYC & Business verifications",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1 />
+            svgElement: <USP3/>
         },
         {
             description: "Dedicated Digital Settlement Account for instant settlements",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts3 />
+            svgElement: <USP6 />
         },
         {
             description: "Soft-POS for accepting Contactless Payments ",
             width: "w-[40%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts2 />
+            svgElement: <USP9 />
         },
         {
             description: "POS Terminals for accepting card present payments",
             width: "w-[40%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4 />
+            svgElement: <USP12 />
         }
     ];
 

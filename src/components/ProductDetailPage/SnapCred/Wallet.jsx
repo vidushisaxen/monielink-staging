@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4 } from '@/components/Icons';
+import { USP10, USP14, USP2, USP6 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -22,25 +22,25 @@ const Wallet = ({heading}) => {
             description: "Loan Disbursements & Credit Card issuance",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1 />
+            svgElement: <USP2 />
         },
         {
             description: "Credit Lifecycle & Portfolio Management ",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts3 />
+            svgElement: <USP6 />
         },
         {
             description: "Credit Repayments ",
             width: "w-[40%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts2 />
+            svgElement: <USP10 />
         },
         {
             description: "Collections for Due & Delinquent amounts",
             width: "w-[40%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4 />
+            svgElement: <USP14/>
         }
     ];
 

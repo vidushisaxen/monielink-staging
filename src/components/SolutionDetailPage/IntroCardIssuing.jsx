@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4} from "../Icons";
+import { USP1, USP2, USP3, USP4, USP5, USP6} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -11,44 +11,44 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 const IntroCardIssuing = () => {
-    const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+    const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null),useRef(null),useRef(null)];
 
     const uspData = [
         {
             description: "Instant issuance of Virtual Cards (Debit, Credit & Prepaid Cards)",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP1/>
         },
         {
             description: "Secure Online Payments using Virtual Cards with Dynamic CVV",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts2/>
+            svgElement: <USP2/>
         },
         {
             description: "Secure Contactless Payments using Virtual Cards",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svgElement: <USP3/>
         },
         {
             description: "Card Control Settings to set transaction limits for Online & Offline usage",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svgElement: <USP4/>
         },
         {
             description: "Card Lifecycle Management that includes credit card repayments, prepaid wallet top-ups, and access to card statements",
             width: "w-[45%]",
-            svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svg: svgRefs[4],
+            svgElement: <USP5/>
         },
         {
             description: "Universal Card for offline payments using a single physical card that can be instantly linked to any Virtual Card, issued on Monielink SDK",
             width: "w-[45%]",
-            svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svg: svgRefs[5],
+            svgElement: <USP6/>
         }
     ];
 

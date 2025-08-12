@@ -8,10 +8,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
 import {
-  DigitalAccounts1,
-  DigitalAccounts2,
-  DigitalAccounts3,
-  DigitalAccounts4,
+  USP11,
+  USP12,
+  USP13,
+  USP14,
+  USP15,
 } from '@/components/Icons';
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
@@ -26,27 +27,27 @@ const Wallet = () => {
     {
       description:
         'Issue Virtual Instacards in a Digital card Wallet – Debit, Credit & pre-paid forms',
-      svgElement: <DigitalAccounts1 />,
+      svgElement: <USP15 />,
     },
     {
       description:
         'Secure online payments from virtual Instcards using Dynamic CVV ',
-      svgElement: <DigitalAccounts3 />,
+      svgElement: <USP14 />,
     },
     {
       description:
         'Offline contactless Payments using virtual Instacards',
-      svgElement: <DigitalAccounts2 />,
+      svgElement: <USP13 />,
     },
     {
       description:
         'Universal Instacard – pay using linked virtual Instcards to a single physical universal Instacard',
-      svgElement: <DigitalAccounts4 />,
+      svgElement: <USP12 />,
     },
     {
       description:
         'Card Control settings – for setting up daily transaction limits, blocking & unblocking virtual Instcards',
-      svgElement: <DigitalAccounts4 />,
+      svgElement: <USP11/>,
     },
   ];
 

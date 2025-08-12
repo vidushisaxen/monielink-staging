@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4} from "../Icons";
+import { USP11, USP13, USP15, USP4, USP5, USP6, USP8} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -11,44 +11,44 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 const IntroKYC = () => {
-    const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+    const svgRefs = [useRef(null), useRef(null), useRef(null), useRef(null),useRef(null),useRef(null)];
 
     const uspData = [
         {
             description: "Face Capture & Liveness Detection",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP5/>
         },
         {
             description: "Face Match for real time  Identity Verifications",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts2/>
+            svgElement: <USP6/>
         },
         {
             description: "OCR for ID verifications for verification of  scanned ID cards & documents",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svgElement: <USP13/>
         },
         {
             description: "Digital Address & Business Verifications",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svgElement: <USP8/>
         },
         {
             description: "Upgrade KYC digitally",
             width: "w-[45%]",
-            svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svg: svgRefs[4],
+            svgElement: <USP11/>
         },
         {
             description: "Self assisted issuance of Soft Tokens for 2FA security",
             width: "w-[45%]",
-            svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svg: svgRefs[5],
+            svgElement: <USP4/>
         },
     ];
 

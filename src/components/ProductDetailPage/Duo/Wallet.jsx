@@ -8,10 +8,14 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
 import {
-  DigitalAccounts1,
-  DigitalAccounts2,
-  DigitalAccounts3,
-  DigitalAccounts4,
+  USP10,
+  USP11,
+  USP12,
+  USP5,
+  USP6,
+  USP7,
+  USP8,
+  USP9,
 } from '@/components/Icons';
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
@@ -26,42 +30,42 @@ const Wallet = () => {
     {
       description:
         'Instant Virtual Credit Card Issuance',
-      svgElement: <DigitalAccounts1 />,
+      svgElement: <USP5 />,
     },
     {
       description:
         'DTS enabling usage of issued virtual Credit Cards from existing Debit Cards',
-      svgElement: <DigitalAccounts3 />,
+      svgElement: <USP6 />,
     },
     {
       description:
         'Access DUO virtual credit card on the SDK for making online payments',
-      svgElement: <DigitalAccounts2 />,
+      svgElement: <USP8 />,
     },
     {
       description:
         'Access Credit Card statement & card control settings for setting up of transaction limits',
-      svgElement: <DigitalAccounts4 />,
+      svgElement: <USP7/>,
     },
     {
       description:
         'Pan remapping service to link newly issued Debit Cards to an existing DUO card',
-      svgElement: <DigitalAccounts4 />,
+      svgElement: <USP10 />,
     },
     {
         description:
           'Process repayment requested by customers on the SDK',
-        svgElement: <DigitalAccounts1 />,
+        svgElement: <USP9 />,
       },
       {
         description:
           'Collection of Due & Delinquent amount',
-        svgElement: <DigitalAccounts3 />,
+        svgElement: <USP11 />,
       },
       {
         description:
           'Dynamic Limit Management',
-        svgElement: <DigitalAccounts3 />,
+        svgElement: <USP12/>,
       },
   ];
 

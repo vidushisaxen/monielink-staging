@@ -1,11 +1,10 @@
 import "./globals.css";
 import LenisSmoothScroll from "../components/LenisSmoothScroll";
 import LayoutTransition from "@/components/LayoutTransition";
+import { defaultMetadata } from "@/lib/seo.config";
 
-export const metadata = {
-  title: "MonieLink: Fast & Secure Payments",
-  description: "Discover MonieLink's secure payment solutions. Send & receive money easily. Join now for fast, reliable transactions.",
-};
+
+export const metadata = defaultMetadata;
 
 export default function RootLayout({ children }) {
   return (

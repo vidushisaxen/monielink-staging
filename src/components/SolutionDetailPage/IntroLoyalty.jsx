@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4} from "../Icons";
+import {USP10, USP11, USP8, USP9} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -18,25 +18,25 @@ const IntroLoyalty = () => {
             description: "Tailored Loyalty Program for services offered through Monielink SDK",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP8/>
         },
         {
             description: "Reward Point Account for user to access reward point statement",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts2/>
+            svgElement: <USP9/>
         },
         {
             description: "Redemption Account for user to access redemption statement",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svgElement: <USP10/>
         },
         {
             description: "Usage of Redeemed points – enables customer to use balance available in redemption account ",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svgElement: <USP11/>
         },
        
     ];

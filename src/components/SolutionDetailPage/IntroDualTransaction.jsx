@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4} from "../Icons";
+import { USP1, USP10, USP14, USP2} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -18,25 +18,25 @@ const IntroDualTransaction = () => {
             description: "Instant issuance of Virtual Credit Cards ",
             width: "w-[40%]",
             svg: svgRefs[0],
-            svgElement: <DigitalAccounts1/>
+            svgElement: <USP1/>
         },
         {
             description: "Use existing physical Debit Cards for usage of Virtual DUC Credit Card",
             width: "w-[45%]",
             svg: svgRefs[1],
-            svgElement: <DigitalAccounts2/>
+            svgElement: <USP2/>
         },
         {
             description: "Secure Online Payments using Virtual Cards with Dynamic CVV",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <DigitalAccounts3/>
+            svgElement: <USP10/>
         },
         {
             description: "Credit Card lifecycle management",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <DigitalAccounts4/>
+            svgElement: <USP14/>
         },
     ];
 

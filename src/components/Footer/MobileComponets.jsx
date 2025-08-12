@@ -127,11 +127,11 @@ export default function MobileFooter() {
               </div>
               <div className="w-full flex flex-col gap-[4vw] uppercase items-center relative z-[10]">
                 <Link href={"/"}>HOME</Link>
-                <Link href={"/about"}>About us</Link>
+                <Link href={"/about-us"}>About us</Link>
                 <Link href={"/solutions"}>solutions</Link>
                 <Link href={"/products"}>product</Link>
-                <Link href={"/blogs"}>resources</Link>
-                <Link href={"/contact"}>Contact</Link>
+                <Link href={"/blog"}>resources</Link>
+                <Link href={"/contact-us"}>Contact</Link>
               </div>
               <div className="w-full flex flex-col gap-[4vw] uppercase items-center relative z-[10]">
                 <Link href={"#"}>LEGAL</Link>
@@ -177,7 +177,7 @@ const links = [
   },
   {
     name: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Solutions",
@@ -189,11 +189,11 @@ const links = [
   },
   {
     name: "Resources",
-    link: "/blogs",
+    link: "/blog",
   },
   {
     name: "Contact",
-    link: "/contact",
+    link: "/contact-us",
   },
 ];
 const links2 = [

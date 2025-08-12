@@ -6,16 +6,40 @@ import AboutUs from "@/components/AboutPage/AboutUs";
 import WhyUs from "@/components/AboutPage/WhyUs";
 import Team from "@/components/AboutPage/Team";
 import Clients from "@/components/AboutPage/Clients";
+import { getPageMetadata } from "@/lib/seo.config";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { homepage } from "@/lib/util";
 
-export const metadata = {
+
+export const metadata = getPageMetadata({
   title: "About MonieLink: Our Mission",
   description: "Learn about MonieLink's mission to simplify payments with secure, user-friendly solutions for all your financial needs.",
-};
+  url: "company",
+  date_published: "2025-06-20T00:00",
+  date_modified: "2025-06-20T00:00",
+  alternates: {
+    canonical: "/company",
+    languages: {
+      "x-default": "/company",
+    },
+  },
+  openGraph: {
+    url: "company",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/company.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function About() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero heading={"Powering the Future of Digital Banking"} para={"We’re here to close the gap between legacy banking systems and today’s digital demands. Whether you're launching a digital-first product or expanding existing services, Monielink provides the tools you need to deliver seamless retail experiences through a simple integration of our Monielink Super SDK with your Mobile app. "} />
         <AboutUs />

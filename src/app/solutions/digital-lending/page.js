@@ -6,15 +6,41 @@ import Intro from "@/components/SolutionDetailPage/Intro";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroDigitalLending from "@/components/SolutionDetailPage/IntroDigitalLending";
+import { getPageMetadata } from "@/lib/seo.config";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { homepage } from "@/lib/util";
 
-
+export const metadata = getPageMetadata({
+  title: "MonieLink Digital Lending: Loan SDK Management",
+  description: "Revolutionize lending with MonieLink neobank SnapCred. Instant underwriting, disbursements & collections via Super SDK for fintechs & banks profitability.",
+  url: "solutions/digital-lending",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/solutions/digital-lending",
+    languages: {
+      "x-default": "/solutions/digital-lending",
+    },
+  },
+  openGraph: {
+    url: "solutions/digital-lending",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/digital-lending.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function SolutionDetail() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Scalable digital lending designed "} para={"Monielink enables end-to-end loan and credit card management, helping lenders Create & Grow Profitable Portfolios through a complete cloud-based ecosystem"} breadcrumb={true}/>
+        <Hero heading={"Scalable Digital Lending for Real-Time Credit"} para={"Monielink enables end-to-end loan and credit card management, helping lenders Create & Grow Profitable Portfolios through a complete cloud-based ecosystem"} breadcrumb={true}/>
        <IntroDigitalLending/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

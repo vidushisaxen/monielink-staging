@@ -188,21 +188,31 @@ const Diagram = () => {
                                         <path d="M616.304 811.664H760.731C765.978 811.664 770.231 815.917 770.231 821.164V935.126C770.231 937.633 769.24 940.037 767.475 941.816L740.588 968.915L712.748 996.864C710.965 998.654 708.543 999.66 706.018 999.66H563.251C558.004 999.66 553.751 995.407 553.751 990.16L553.75 876.042C553.75 873.596 554.694 871.244 556.385 869.476L585.98 838.535L585.979 838.534L609.519 814.515C611.305 812.691 613.751 811.664 616.304 811.664Z" stroke="white" />
                                     </g>
                                 </g>
-                                <path d="M85.4023 823.027H74.7903L92.7903 850.488H103.402L85.4023 823.027Z" fill="white" className='rect' />
-                                <path d="M71.0977 823.027H60.4856L78.4856 850.488H89.0977L71.0977 823.027Z" fill="white" className='rect' />
-                                <path d="M56.7891 823.027H46.177L64.177 850.488H74.7891L56.7891 823.027Z" fill="white" className='rect' />
-                                <path d="M42.4844 823.027H31.8723L49.8723 850.488H60.4844L42.4844 823.027Z" fill="white" className='rect' />
-                                <path d="M97.2402 849.488H380.04L530.427 914.837" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line1' />
-                                <path d="M1298.75 933.777H1309.36L1291.36 961.238H1280.75L1298.75 933.777Z" fill="white" className='rect' />
-                                <path d="M1313.05 933.777H1323.66L1305.66 961.238H1295.05L1313.05 933.777Z" fill="white" className='rect' />
-                                <path d="M1327.36 933.777H1337.97L1319.97 961.238H1309.36L1327.36 933.777Z" fill="white" className='rect' />
-                                <path d="M1341.67 933.777H1352.28L1334.28 961.238H1323.67L1341.67 933.777Z" fill="white" className='rect' />
-                                <path d="M801.605 910.289L1042.96 960.248H1286.44" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line' />
-                                <path d="M1189.42 758.027H1200.03L1182.03 785.488H1171.42L1189.42 758.027Z" fill="white" className='rect' />
-                                <path d="M1203.72 758.027H1214.33L1196.33 785.488H1185.72L1203.72 758.027Z" fill="white" className='rect' />
-                                <path d="M1218.03 758.027H1228.64L1210.64 785.488H1200.03L1218.03 758.027Z" fill="white" className='rect' />
-                                <path d="M1232.34 758.027H1242.95L1224.95 785.488H1214.34L1232.34 758.027Z" fill="white" className='rect' />
-                                <path d="M803.137 862.783L968.578 784.885C969.111 784.634 969.693 784.504 970.282 784.504H1178.22" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line' />
+                                <path d="M85.4022 822.527H74.7901L92.7901 849.988H103.402L85.4022 822.527Z" fill="white" className='rect' />
+                                <path d="M71.0975 822.527H60.4855L78.4854 849.988H89.0975L71.0975 822.527Z" fill="white" className='rect' />
+                                <path d="M56.7889 822.527H46.1769L64.1769 849.988H74.7889L56.7889 822.527Z" fill="white" className='rect' />
+                                <path d="M42.4842 822.527H31.8722L49.8722 849.988H60.4842L42.4842 822.527Z" fill="white" className='rect' />
+                                <path d="M97.2415 848.988L441.79 848.988L530.428 914.337" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line1' />
+                                <path d="M1278.75 993.277H1289.36L1271.36 1020.74H1260.75L1278.75 993.277Z" fill="white" className='rect' />
+                                <path d="M1293.05 993.277H1303.66L1285.66 1020.74H1275.05L1293.05 993.277Z" fill="white" className='rect' />
+                                <path d="M1307.36 993.277H1317.97L1299.97 1020.74H1289.36L1307.36 993.277Z" fill="white" className='rect' />
+                                <path d="M1321.66 993.277H1332.28L1314.28 1020.74H1303.66L1321.66 993.277Z" fill="white" className='rect' />
+                                <path d="M781.604 969.791L1022.96 1019.75H1266.43" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line' />
+                                <path d="M1398.75 863.277H1409.36L1391.36 890.738H1380.75L1398.75 863.277Z" fill="white" className='rect' />
+                                <path d="M1413.05 863.277H1423.66L1405.66 890.738H1395.05L1413.05 863.277Z" fill="white" className='rect' />
+                                <path d="M1427.36 863.277H1437.97L1419.97 890.738H1409.36L1427.36 863.277Z" fill="white" className='rect' />
+                                <path d="M1441.66 863.277H1452.28L1434.28 890.738H1423.66L1441.66 863.277Z" fill="white" className='rect' />
+                                <path d="M808.535 928.887L1092.95 889.749L1386.43 889.749" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line' />
+                                <path d="M1189.42 757.527H1200.03L1182.03 784.988H1171.42L1189.42 757.527Z" fill="white" className='rect' />
+                                <path d="M1203.72 757.527H1214.33L1196.33 784.988H1185.72L1203.72 757.527Z" fill="white" className='rect' />
+                                <path d="M1218.03 757.527H1228.64L1210.64 784.988H1200.03L1218.03 757.527Z" fill="white" className='rect' />
+                                <path d="M1232.34 757.527H1242.95L1224.95 784.988H1214.34L1232.34 757.527Z" fill="white" className='rect' />
+                                <path d="M803.136 862.283L968.577 784.385C969.11 784.134 969.692 784.003 970.281 784.003H1178.22" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line' />
+                                <path d="M55.7107 1002.99H45.0987L63.0987 1030.45H73.7107L55.7107 1002.99Z" fill="white" className='rect' />
+                                <path d="M41.406 1002.99H30.794L48.794 1030.45H59.406L41.406 1002.99Z" fill="white" className='rect' />
+                                <path d="M27.0974 1002.99H16.4854L34.4854 1030.45H45.0974L27.0974 1002.99Z" fill="white" className='rect' />
+                                <path d="M12.7888 1002.99H2.1768L20.1768 1030.45H30.7888L12.7888 1002.99Z" fill="white" className='rect' />
+                                <path d="M67.3866 1029.45L266.583 1029.45L530.431 968.871" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line1' />
                             </g>
 
                             <g className='svgFourth'>
@@ -372,12 +382,18 @@ const Diagram = () => {
                         </div>
                         <div>
                             <div className='absolute top-[65%] left-[19%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgThird'>Repayments & Statements</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Loan/Credit Card Eligibility Check</p>
+                            </div>
+                            <div className='absolute top-[73.5%] left-[17%] overflow-hidden'>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Loan Management</p>
                             </div>
                             <div className='absolute top-[62%] left-[61.5%] overflow-hidden'>
                                 <p className='text-content-20 font-body text-center textanim svgThird'>Loan Disbursement</p>
                             </div>
-                            <div className='absolute top-[70%] left-[65%] overflow-hidden'>
+                            <div className='absolute top-[67%] left-[68.5%] overflow-hidden'>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Repayments & Statements</p>
+                            </div>
+                            <div className='absolute top-[73%] left-[64%] overflow-hidden'>
                                 <p className='text-content-20 font-body text-center textanim svgThird'>Ongoing Loan Tracking</p>
                             </div>
                         </div>

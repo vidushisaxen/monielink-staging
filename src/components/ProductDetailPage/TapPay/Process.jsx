@@ -77,6 +77,7 @@ const Diagram = () => {
 
   return (
     <section 
+    data-theme="orange"
       ref={containerRef}
       className="relative bg-gradient"
       style={{ height: `${100 + (paymentMethods.length * 100)}vh` }}

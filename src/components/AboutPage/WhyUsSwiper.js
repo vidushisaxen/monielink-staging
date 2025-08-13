@@ -226,7 +226,7 @@ const SwiperCard = ({ id, title, description, index, activeIndex,height }) => {
           <h4 className="w-[80%] text-content-30 font-display max-md:text-head-80 max-sm:text-head-80 capitalize">
             {title}
           </h4>
-          <p className="text-content-20 mb-[3.5vw]" dangerouslySetInnerHTML={{__html:description}}/>
+          <div className="text-content-20 mb-[3.5vw]" dangerouslySetInnerHTML={{__html:description}}/>
         </div>
       </div>
     </div>

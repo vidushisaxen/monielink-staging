@@ -7,14 +7,42 @@ import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import { DigitalAccounts1 } from "@/components/Icons";
 import IntroCardIssuing from "@/components/SolutionDetailPage/IntroCardIssuing";
+import { getPageMetadata } from "@/lib/seo.config";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { homepage } from "@/lib/util";
 
+
+export const metadata = getPageMetadata({
+  title: "MonieLink Card Issuing: Virtual Debit Cards SDK ",
+  description: "Issue virtual & physical cards via MonieLink neobank. Debit, credit, prepaid with controls, loyalty & Super SDK for banks & fintechs growth.",
+  url: "solutions/card-issuing",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/solutions/card-issuing",
+    languages: {
+      "x-default": "/solutions/card-issuing",
+    },
+  },
+  openGraph: {
+    url: "solutions/card-issuing",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/card-issuing.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function SolutionDetail() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Launch faster with instant card issuing"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
+        <Hero heading={"Launch Fast with Scalable Card Issuing"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
         <IntroCardIssuing/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

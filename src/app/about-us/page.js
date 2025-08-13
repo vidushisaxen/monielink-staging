@@ -12,22 +12,22 @@ import { homepage } from "@/lib/util";
 
 
 export const metadata = getPageMetadata({
-  title: "About MonieLink: Our Mission",
-  description: "Learn about MonieLink's mission to simplify payments with secure, user-friendly solutions for all your financial needs.",
-  url: "company",
-  date_published: "2025-06-20T00:00",
-  date_modified: "2025-06-20T00:00",
+  title: "About MonieLink: Neobank SDK for Fintech Growth",
+  description: "Explore MonieLink neobank mission: Secure SaaS platform & Super SDK for banks & fintechs. Boost digital banking efficiency, compliance & 6X revenue with innovative solutions.",
+  url: "about-us",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
   alternates: {
-    canonical: "/company",
+    canonical: "/about-us",
     languages: {
-      "x-default": "/company",
+      "x-default": "/about-us",
     },
   },
   openGraph: {
-    url: "company",
+    url: "about-us",
     images: [
       {
-        url: `${homepage}/assets/images/seo/company.png`,
+        url: `${homepage}/assets/images/seo/about-us.png`,
         width: 1200,
         height: 630,
       },

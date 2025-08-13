@@ -5,13 +5,41 @@ import CTA from "@/components/Footer/CTA";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroKYC from "@/components/SolutionDetailPage/IntroKYC";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
 
+
+export const metadata = getPageMetadata({
+  title: "MonieLink KYC: Verification & 2FA Neobank",
+  description: "Secure digital onboarding with MonieLink neobank KYC & soft token. AI facial recognition, ID checks & 2FA via Super SDK for fintechs & banks fraud prevention.",
+  url: "solutions/kyc-and-soft-token",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/solutions/kyc-and-soft-token",
+    languages: {
+      "x-default": "/solutions/kyc-and-soft-token",
+    },
+  },
+  openGraph: {
+    url: "solutions/kyc-and-soft-token",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/kyc.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function SolutionDetail() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Enabling immediate onboarding "} para={"VERIFYED enables banks and FinTechs to complete customer onboarding through a digital KYC process in seconds, while also providing KYC upgrade services for existing customers. Enable 2FA on any account through easy, self-guided onboarding using multiple authentication options."} breadcrumb={true}/>
+        <Hero heading={"Instant Digital KYC with Soft Token 2FA"} para={"VERIFYED enables banks and FinTechs to complete customer onboarding through a digital KYC process in seconds, while also providing KYC upgrade services for existing customers. Enable 2FA on any account through easy, self-guided onboarding using multiple authentication options."} breadcrumb={true}/>
        <IntroKYC/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

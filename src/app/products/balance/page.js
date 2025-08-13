@@ -8,13 +8,42 @@ import Values from "@/components/ProductDetailPage/Values";
 import Infrastructure2 from "@/components/ProductDetailPage/Balance/Infrstructure2";
 import MobileInfrastructure from "@/components/ProductDetailPage/Balance/MobileInfrastructure";
 import Wallet from "@/components/ProductDetailPage/Balance/Wallet";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
+
+
+export const metadata = getPageMetadata({
+  title: "MonieLink Balance: Digital Wallets Neobank SDK",
+  description: "Launch multi-currency digital wallets with MonieLink Balance. KYC onboarding, card issuing & payments via Super SDK for fintechs & banks revenue boost. ",
+  url: "products/balance",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/balance",
+    languages: {
+      "x-default": "/products/balance",
+    },
+  },
+  openGraph: {
+    url: "products/balance",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/balance.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function Balance() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Digital Banking with Balance"} para={"Deliver modern financial services from onboarding to transactions seamlessly within your mobile app using Monielink’s Super SDK."} breadcrumb={true}/>
+        <Hero heading={"Reimagining Digital Banking with Balance"} para={"Deliver modern financial services from onboarding to transactions seamlessly within your mobile app using Monielink’s Super SDK."} breadcrumb={true}/>
         <Intro content={introData}/>
         <Wallet/>
         <Infrastructure2/>

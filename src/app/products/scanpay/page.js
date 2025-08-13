@@ -8,12 +8,39 @@ import Values from "@/components/ProductDetailPage/Values";
 import StaticQR from "@/components/ProductDetailPage/ScanPay/StaticQR";
 import DynamicQR from "@/components/ProductDetailPage/ScanPay/DynamicQR";
 import Wallet from "@/components/ProductDetailPage/ScanPay/Wallet";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
 
+export const metadata = getPageMetadata({
+  title: "MonieLink ScanPay: QR Merchant Payments Fintech",
+  description: "Enable instant QR payments with MonieLink ScanPay. Digital onboarding, static/dynamic codes & settlements via SDK for neobank merchant acquiring growth.",
+  url: "products/scanpay",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/scanpay",
+    languages: {
+      "x-default": "/products/scanpay",
+    },
+  },
+  openGraph: {
+    url: "products/scanpay",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/scanpay.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function ScanPay() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero heading={"Modern Merchant Acquiring, Built for you"} para={"Give your merchants the tools to accept payments instantly with ScanPay. From seamless self-onboarding to real-time settlements and dashboard visibility.  Monielink makes it easy to scale collections, improve cash flow, and deliver a frictionless payment experience."} breadcrumb={true}/>
         <Intro content={introData}/>

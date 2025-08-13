@@ -5,6 +5,33 @@ import CTA from "@/components/Footer/CTA";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroDualTransaction from "@/components/SolutionDetailPage/IntroDualTransaction";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
+
+export const metadata = getPageMetadata({
+  title: "MonieLink DTS: Dual Credit Debit Cards Fintech",
+  description: "Unlock dual transaction service with MonieLink neobank. Convert debit to credit cards via Super SDK for banks & fintechs, enhancing revenue & security.",
+  url: "solutions/dual-transaction-service",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/solutions/dual-transaction-service",
+    languages: {
+      "x-default": "/solutions/dual-transaction-service",
+    },
+  },
+  openGraph: {
+    url: "solutions/dual-transaction-service",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/dual-transaction.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 
 
@@ -12,8 +39,9 @@ export default function SolutionDetail() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"A single DUO card solution"} para={"DUO offers end to end solutions for Issuers to launch, manage & scale Credit Card issuance, activations, usage & collections towards enabling them create a profitable portfolio."} breadcrumb={true}/>
+        <Hero heading={"Seamless Credit & Debit with One DUO Card"} para={"DUO offers end to end solutions for Issuers to launch, manage & scale Credit Card issuance, activations, usage & collections towards enabling them create a profitable portfolio."} breadcrumb={true}/>
        <IntroDualTransaction/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

@@ -8,11 +8,39 @@ import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/TapPay/Diagram";
 import Process from "@/components/ProductDetailPage/TapPay/Process";
 import Wallet from "@/components/ProductDetailPage/TapPay/Wallet";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
+
+export const metadata = getPageMetadata({
+  title: "MonieLink Tap Pay: Contactless POS Neobank ",
+  description: "Accept contactless cards with MonieLink Tap Pay. Soft-POS on Android, digital onboarding & settlements via Super SDK for fintechs & banks scalability.",
+  url: "products/tap-pay",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/tap-pay",
+    languages: {
+      "x-default": "/products/tap-pay",
+    },
+  },
+  openGraph: {
+    url: "products/tap-pay",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/tap-pay.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function TapPay() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero heading={"Accept Card Payments Anywhere"} para={"Empower every merchant, from street vendors to retail stores to accept card payments using our POS terminals and Soft-POS solutions. Easy setup, and full integration with settlement accounts for real-time visibility and control."} breadcrumb={true}/>
         <Intro content={introData}/>

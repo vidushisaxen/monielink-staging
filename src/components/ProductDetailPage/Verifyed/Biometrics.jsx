@@ -77,14 +77,7 @@ const Biometrics = () => {
         className="w-screen h-full max-md:mt-[-1px] overflow-hidden bg-gradient relative"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[20%] max-md:px-[5vw] max-sm:gap-[15vw]">
-          <div className="max-md:w-[100%]">
-            <Copy>
-              <h2 className="text-[5vw] font-display text-center max-sm:text-head-100 max-sm:text-left max-sm:px-[5.5vw]  ">
-                Facial Biometrics & Liveness Detection
-              </h2>
-            </Copy>
-          </div>
+        <div className="px-[4vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[20%] max-md:px-[5vw] max-sm:gap-[15vw]">
             <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-sm:pl-[10vw] scrollbar-hidden'>
 
           <div className="w-[50%] max-md:w-[80%] max-sm:w-[150%]" ref={svgContainer}>

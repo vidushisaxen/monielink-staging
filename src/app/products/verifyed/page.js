@@ -7,13 +7,42 @@ import Intro from "@/components/ProductDetailPage/Intro";
 import Values from "@/components/ProductDetailPage/Values";
 import Identity from "@/components/ProductDetailPage/Verifyed/Identity";
 import Address from "@/components/ProductDetailPage/Verifyed/Address";
-import Biometrics from "@/components/ProductDetailPage/Verifyed/Biometrics";
 import IndentityMobile from "@/components/ProductDetailPage/Verifyed/IndentityMobile";
 import Wallet from "@/components/ProductDetailPage/Verifyed/Wallet";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
+import SelfService from "@/components/ProductDetailPage/Verifyed/SelfService";
+import SelfToken from "@/components/ProductDetailPage/Verifyed/SelfToken";
 
+
+export const metadata = getPageMetadata({
+  title: "MonieLink Verifyed: KYC & 2FA Verification SDK",
+  description: "Secure onboarding with MonieLink Verifyed. Digital KYC, facial biometrics & soft token 2FA via neobank Super SDK for banks & fintechs fraud protection. ",
+  url: "products/verifyed",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/verifyed",
+    languages: {
+      "x-default": "/products/verifyed",
+    },
+  },
+  openGraph: {
+    url: "products/verifyed",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/verifyed.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function Verifyed() {
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero
           heading={"Turn on 2FA to add an extra layer of security."}
@@ -27,7 +56,8 @@ export default function Verifyed() {
         <IndentityMobile/>
         <Identity />
         <Address />
-        <Biometrics />
+        {/* <SelfService/> */}
+        <SelfToken/>
         <Values data={valuesData} />
         <Products  productsData={productsData}/>
         <FAQs data={faqData} />

@@ -8,13 +8,41 @@ import Values from "@/components/ProductDetailPage/Values";
 import Wallet from "@/components/ProductDetailPage/Duo/Wallet";
 import CustomerBenefits from "@/components/ProductDetailPage/Duo/CustomerBenefits";
 import IssuerBenefits from "@/components/ProductDetailPage/Duo/IssuerBenefits";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { homepage } from "@/lib/util";
+import { getPageMetadata } from "@/lib/seo.config";
+
+export const metadata = getPageMetadata({
+  title: "MonieLink Duo: Dual Credit Debit Cards DTS",
+  description: "Transform debit to credit with MonieLink Duo DTS. Patented service, virtual cards & limits via Super SDK for neobank fintech revenue acceleration. ",
+  url: "products/duo",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/duo",
+    languages: {
+      "x-default": "/products/duo",
+    },
+  },
+  openGraph: {
+    url: "products/duo",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/duo.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 
 export default function Duo() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Patented Dual Transaction Service"} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
+        <Hero heading={"DTS for Virtual Credit via Debit Cards"} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
         <Intro content={introData}/>
        <Wallet/>
        <CustomerBenefits/>

@@ -9,12 +9,38 @@ import Rewards from "@/components/ProductDetailPage/Reward/Rewards";
 import Redemptions from "@/components/ProductDetailPage/Reward/Redemptions";
 import Usage from "@/components/ProductDetailPage/Reward/Usage";
 import Wallet from "@/components/ProductDetailPage/Reward/Wallet";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { homepage } from "@/lib/util";
+import { getPageMetadata } from "@/lib/seo.config";
 
-
+export const metadata = getPageMetadata({
+  title: "MonieLink Reward: Loyalty Programs Fintech SDK",
+  description: "Boost retention with MonieLink Reward+. Custom points, redemptions & tracking via neobank Super SDK for banks & fintechs engagement & revenue.",
+  url: "products/reward",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/reward",
+    languages: {
+      "x-default": "/products/reward",
+    },
+  },
+  openGraph: {
+    url: "products/reward",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/reward.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function Reward() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero heading={"Drive Engagement with Loyalty Rewards"} para={"Encourage digital service adoption with personalized loyalty programs. Offer rewards that match customer behaviour to boost retention and long-term value."} breadcrumb={true}/>
         <Intro content={introData}/>

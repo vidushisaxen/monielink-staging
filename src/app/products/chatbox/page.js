@@ -8,11 +8,38 @@ import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/ChatBox/Diagram";
 import Wallet from "@/components/ProductDetailPage/ChatBox/Wallet";
 import Videos from "@/components/ProductDetailPage/ChatBox/Videos";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
+import { WebpageJsonLd } from "@/lib/json-ld";
 
+export const metadata = getPageMetadata({
+  title: "MonieLink ChatBox: AI Customer Support Neobank",
+  description: "Provide 24/7 support with MonieLink ChatBox. Interactive AI bot, FAQs & training via Super SDK for fintechs & banks enhanced user experience.",
+  url: "products/chatbox",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/chatbox",
+    languages: {
+      "x-default": "/products/chatbox",
+    },
+  },
+  openGraph: {
+    url: "products/chatbox",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/chatbox.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function ChatBox() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero heading={"Learn with FAQs & Videos"} para={"Help users explore and understand Monielink’s Super SDK products with engaging FAQs and video content. Empower them with the knowledge they need to use your digital services confidently and effectively."} breadcrumb={true}/>
         <Intro content={introData}/>

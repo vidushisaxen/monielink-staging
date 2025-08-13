@@ -8,13 +8,40 @@ import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/SnapCred/Diagram";
 import MobileDiagram from "@/components/ProductDetailPage/SnapCred/MobileDiagram";
 import Wallet from "@/components/ProductDetailPage/SnapCred/Wallet";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { homepage } from "@/lib/util";
+import { getPageMetadata } from "@/lib/seo.config";
 
+export const metadata = getPageMetadata({
+  title: "MonieLink SnapCred: Digital Loan Management",
+  description: "Manage loans & credit with MonieLink SnapCred. Instant origination, automated collections & portfolios via neobank Super SDK for banks & fintechs.",
+  url: "products/snapcred",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products/snapcred",
+    languages: {
+      "x-default": "/products/snapcred",
+    },
+  },
+  openGraph: {
+    url: "products/snapcred",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/snapcred.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function SnapCred() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Comprehensive Credit Management "} para={"Our cloud-based loan management system enables lenders to Instantly Originate and Disburse / Issue loans & credit cards, Manage them throughout their lifecycle, and collect both due and delinquent payments from customers’ bank accounts across multiple banks."} breadcrumb={true}/>
+        <Hero heading={"Comprehensive Credit Lifecycle Management"} para={"Our cloud-based loan management system enables lenders to Instantly Originate and Disburse / Issue loans & credit cards, Manage them throughout their lifecycle, and collect both due and delinquent payments from customers’ bank accounts across multiple banks."} breadcrumb={true}/>
         <Intro content={introData}/>
        <Wallet/>
         <Diagram/>

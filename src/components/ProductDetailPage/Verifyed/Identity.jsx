@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Biometrics from './Biometrics';
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
 
 
@@ -86,7 +87,7 @@ const Identity = () => {
 
     return (
         <section data-theme="orange" className='w-screen h-full bg-gradient relative max-sm:hidden max-md:hidden' ref={sectionRef}>
-            <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] '>
+            <div className='px-[4vw] pt-[7vw] flex flex-col items-center  gap-[10vw] '>
                 <div className='w-[80%] space-y-[7vw]'>
                     <Copy>
                         <h2 className='text-head-100 font-display text-center capitalize'>
@@ -102,9 +103,13 @@ const Identity = () => {
                     </Copy>
                     </div>
                     <Copy>
-                        <p className='text-head-60 font-display text-center font-light'>Step 2: Identity Capture & Matching</p>
+                        <p className='text-head-60 font-display text-center font-light'>Step 2: Facial Biometrics & Liveness Detection</p>
                     </Copy>
                 </div>
+                <Biometrics/>
+                <Copy>
+                        <p className='text-head-60 font-display text-center font-light'>Step 3: Identity Capture & Matching (KYC Level 1 & 2)</p>
+                    </Copy>
                 <div className='h-full w-full '>
                     <div className="svg-section flex flex-col items-center justify-center w-[85%] mx-auto" >
                         <svg className='w-full h-full' ref={svgRef} width="1527" height="869" viewBox="0 0 1527 869" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,31 +172,7 @@ const Identity = () => {
                             </g>
 
 
-                            <g className='svgThird'>
-                                <g className='center-group'>
-                                    <g filter="url(#filter6_f_92_553)">
-                                        <path d="M658.159 662.121L684.736 635.001C686.616 633.082 689.191 632 691.878 632L854.477 632C860 632 864.477 636.477 864.477 642V770.634C864.477 773.273 863.435 775.804 861.576 777.677L831.276 808.216L799.911 839.704C798.034 841.588 795.485 842.647 792.826 842.647H632.083C626.561 842.647 622.083 838.17 622.083 832.647L622.082 703.851C622.082 701.275 623.076 698.799 624.856 696.938L658.159 662.121Z" fill="#FF5E01" />
-                                    </g>
-                                    <path d="M691.878 632.5H854.478C859.724 632.5 863.978 636.753 863.978 642V770.634C863.978 773.14 862.986 775.546 861.221 777.325L830.921 807.863L799.557 839.352C797.774 841.141 795.352 842.147 792.826 842.147H632.083C626.837 842.147 622.583 837.894 622.583 832.647L622.582 703.851C622.582 701.404 623.526 699.052 625.217 697.284L658.516 662.471L658.517 662.472L685.093 635.351C686.88 633.527 689.325 632.5 691.878 632.5Z" fill="#FF5100" stroke="white" />
-                                    <g filter="url(#filter7_f_92_553)">
-                                        <path d="M666.908 669.852L690.451 645.827C692.331 643.908 694.906 642.826 697.593 642.826L842.02 642.826C847.543 642.826 852.02 647.303 852.02 652.826V766.788C852.02 769.426 850.977 771.958 849.119 773.831L822.231 800.93L794.391 828.88C792.515 830.764 789.965 831.822 787.306 831.822H644.54C639.017 831.822 634.54 827.345 634.54 821.823L634.539 707.704C634.539 705.129 635.533 702.653 637.313 700.792L666.908 669.852Z" fill="#FF833B" />
-                                    </g>
-                                    <g filter="url(#filter8_d_92_553)">
-                                        <path d="M666.908 669.85L690.451 645.825C692.331 643.906 694.906 642.824 697.593 642.824L842.02 642.824C847.543 642.824 852.02 647.301 852.02 652.824V766.786C852.02 769.424 850.977 771.956 849.119 773.829L822.231 800.928L794.391 828.878C792.515 830.762 789.965 831.821 787.306 831.821H644.54C639.017 831.821 634.54 827.343 634.54 821.821L634.539 707.702C634.539 705.127 635.533 702.651 637.313 700.79L666.908 669.85Z" fill="#FF5100" />
-                                        <path d="M697.593 643.324H842.021C847.267 643.324 851.521 647.578 851.521 652.824V766.786C851.52 769.293 850.529 771.697 848.764 773.477L821.877 800.575L794.037 828.524C792.255 830.314 789.833 831.32 787.307 831.32H644.54C639.293 831.32 635.04 827.067 635.04 821.82L635.039 707.702C635.039 705.256 635.983 702.904 637.674 701.136L667.27 670.195L667.269 670.194L690.808 646.175C692.594 644.352 695.04 643.324 697.593 643.324Z" stroke="white" />
-                                    </g>
-                                </g>
-                                <path d="M1444.01 598.865H1454.62L1436.62 626.326H1426.01L1444.01 598.865Z" fill="white" className='rect' />
-                                <path d="M1458.31 598.865H1468.92L1450.92 626.326H1440.31L1458.31 598.865Z" fill="white" className='rect' />
-                                <path d="M1472.62 598.865H1483.23L1465.23 626.326H1454.62L1472.62 598.865Z" fill="white" className='rect' />
-                                <path d="M1486.93 598.865H1497.54L1479.54 626.326H1468.93L1486.93 598.865Z" fill="white" className='rect' />
-                                <path d="M880.594 721.291L1058.12 625.324H1430.11" stroke="white" strokeWidth="2" strokeLinecap="round" className='path-line' />
-                                <path d="M59.3164 783.379H48.7044L66.7044 810.84H77.3164L59.3164 783.379Z" fill="white" className='rect' />
-                                <path d="M45.0098 783.379H34.3977L52.3977 810.84H63.0098L45.0098 783.379Z" fill="white" className='rect' />
-                                <path d="M30.7031 783.379H20.0911L38.0911 810.84H48.7031L30.7031 783.379Z" fill="white" className='rect' />
-                                <path d="M16.3965 783.379H5.78443L23.7844 810.84H34.3965L16.3965 783.379Z" fill="white" className='rect' />
-                                <path d="M475.657 809.842V810.842H475.833L475.999 810.782L475.657 809.842ZM609.015 762.324C609.534 762.135 609.802 761.561 609.613 761.042C609.424 760.524 608.85 760.256 608.331 760.445L609.015 762.324ZM71.2441 809.842V810.842H475.657V809.842V808.842H71.2441V809.842ZM475.657 809.842L475.999 810.782L609.015 762.324L608.673 761.385L608.331 760.445L475.315 808.903L475.657 809.842Z" fill="white" className='path-line' />
-                            </g>
+                           
                             <defs>
                                 <filter id="filter0_f_92_553" x="617.385" y="110.129" width="258.395" height="226.646" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
@@ -257,48 +238,35 @@ const Identity = () => {
                         </svg>
                     </div>
                     <div>
-                        <div className='absolute top-[61%] left-[44%] w-[10%] overflow-hidden'>
+                        <div className='absolute top-[76.5%] left-[44%] w-[10%] overflow-hidden'>
                             <p className='font-medium text-content-20 font-body  text-center textanim svgFirst'>NIN Verification
                                 (KYC Level 1)</p>
                         </div>
-                        <div className='absolute top-[73%] left-[53%] w-[10%] overflow-hidden'>
+                        <div className='absolute top-[85%] left-[53%] w-[10%] overflow-hidden'>
                             <p className='font-medium text-content-20 font-body  text-center textanim svgSecond'>BVN Verification
                                 (KYC Level 2)</p>
                         </div>
-                        <div className='absolute top-[85.2%] left-[45%] w-[8%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim  svgThird'>ID Document
-                                Verification (KYC Level 3)</p>
-                        </div>
-
                     </div>
                     <div>
                         <div>
-                            <div className='absolute top-[51.5%] left-[24%] overflow-hidden'>
+                            <div className='absolute top-[69.2%] left-[24%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>Customer scans or inputs NIN</p>
                             </div>
-                            <div className='absolute top-[65.5%] left-[15.5%] overflow-hidden'>
+                            <div className='absolute top-[80%] left-[15.5%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>Facial biometrics used to verify identity</p>
                             </div>
-                            <div className='absolute top-[54.5%] left-[63%] overflow-hidden'>
+                            <div className='absolute top-[71.5%] left-[63%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>OCR captures and matches data to NIMC</p>
                             </div>
                         </div>
                         <div>
-                            <div className='absolute top-[76%] left-[29%] overflow-hidden w-[15%]'>
+                            <div className='absolute top-[87.2%] left-[29%] overflow-hidden w-[15%]'>
                                 <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Customer enters BVN; details fetched from NIBSS</p>
                             </div>
-                            <div className='absolute top-[66.3%] left-[72%] overflow-hidden w-[13%]'>
+                            <div className='absolute top-[80.1%] left-[72%] overflow-hidden w-[13%]'>
                                 <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Facial biometrics matched with BVN profile</p>
                             </div>
-                        </div>
-                        <div>
-                            <div className='absolute top-[89%] left-[15%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim  svgThird'>OCR reads ID; facial biometrics matched</p>
-                            </div>
-                            <div className='absolute top-[80.5%] left-[66%] overflow-hidden w-[18%]'>
-                                <p className='text-content-18 font-body  textanim leading-[1.5] svgThird'>Customer scans acceptable ID (e.g., driver&apos;s license, voter&apos;s card)</p>
-                            </div>
-                        </div>
+                      </div>
                     </div>
                 </div>
 

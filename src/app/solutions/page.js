@@ -6,15 +6,39 @@ import Intro from "@/components/SolutionsPage/Intro";
 import Features from "@/components/SolutionsPage/Features";
 import Solutions from "@/components/SolutionsPage/Solutions";
 import MobileSolutions from "@/components/SolutionsPage/MobileSolutions";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
 
-export const metadata = {
-  title: "MonieLink Services: Pay & Transfer",
-  description: "Explore MonieLink's payment and transfer services. Secure, fast, and easy solutions for personal and business needs.",
-};
+export const metadata = getPageMetadata({
+  title: "MonieLink Solutions: Digital Fintech Services",
+  description: "Discover MonieLink neobank solutions for fintechs & banks: Digital accounts, card issuing, merchant acquiring, lending, KYC & loyalty via Super SDK for growth. ",
+  url: "solutions",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/solutions",
+    languages: {
+      "x-default": "/solutions",
+    },
+  },
+  openGraph: {
+    url: "solutions",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/solutions.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
+
 
 export default function SolutionsPage() {
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero
           heading={"Smart Solutions for Modern Banking"}

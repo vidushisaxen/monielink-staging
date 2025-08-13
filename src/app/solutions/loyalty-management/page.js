@@ -6,14 +6,40 @@ import CTA from "@/components/Footer/CTA";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroLoyalty from "@/components/SolutionDetailPage/IntroLoyalty";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
 
-
+export const metadata = getPageMetadata({
+  title: "MonieLink Loyalty: Reward Programs SDK Fintech",
+  description: " Customize loyalty with MonieLink neobank. Points, redemptions & tracking via Super SDK for banks & fintechs to boost engagement & revenue growth.",
+  url: "solutions/loyalty-management",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/solutions/loyalty-management",
+    languages: {
+      "x-default": "/solutions/loyalty-management",
+    },
+  },
+  openGraph: {
+    url: "solutions/loyalty-management",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/loyalty.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function SolutionDetail() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Implementing a tailored loyalty program"} para={"Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK."} breadcrumb={true}/>
+        <Hero heading={"Boost Digital Adoption with Tailored Loyalty"} para={"Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK."} breadcrumb={true}/>
        <IntroLoyalty/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

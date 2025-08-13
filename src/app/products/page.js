@@ -1,4 +1,3 @@
-'use client'
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
@@ -10,11 +9,39 @@ import Launch from "@/components/ProductsPage/Launch";
 import MobileProducts from "@/components/ProductsPage/MobileProducts";
 import Diagram1 from "@/components/ProductsPage/Diagram1";
 import Diagram2 from "@/components/ProductsPage/Diagram2";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import { getPageMetadata } from "@/lib/seo.config";
+import { homepage } from "@/lib/util";
 
+
+export const metadata = getPageMetadata({
+  title: "MonieLink Products: Neobank SDK for Banking",
+  description: "Explore MonieLink neobank products for fintechs & banks: Digital wallets, payments, card issuing, lending & loyalty via Super SDK. Scale secure financial services. ",
+  url: "products",
+  date_published: "2025-08-13T00:00",
+  date_modified: "2025-08-13T00:00",
+  alternates: {
+    canonical: "/products",
+    languages: {
+      "x-default": "/products",
+    },
+  },
+  openGraph: {
+    url: "products",
+    images: [
+      {
+        url: `${homepage}/assets/images/seo/products.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+});
 export default function ProductsPage() {
 
   return (
     <>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero heading={"Products Built for Digital Finance"} para={"Whether you're building for consumers, merchants, or agents, Monielink gives you the tools to deliver seamless, modern financial experiences at scale. From digital wallets and embedded credit to contactless payments and loyalty programs — Monielink offers a modular, API-ready product stack designed to help banks, fintechs, and platforms launch, scale, and grow smarter."} />
         <Overview />

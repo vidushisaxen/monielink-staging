@@ -15,11 +15,9 @@ import {
 } from "@/components/ui/form"
 import { PhoneInput } from "@/components/ui/phone-input"
 import { Input } from "@/components/ui/input";
-import { useState } from "react"
 import { isValidPhoneNumber } from "react-phone-number-input"
-import PrimaryButton from "../Buttons/PrimaryButton"
-import WhiteButton from "../Buttons/WhiteButton"
-import SecondaryButton from "../Buttons/SecondaryButton"
+import { useState } from "react"
+
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
@@ -39,24 +37,71 @@ export default function ContactForm() {
       email: "",
       number: "",
       company: "",
-      designation: "",
       message: "",
-      terms: false,
-      pageURL: typeof window !== 'undefined' ? window.location.href : '',
     },
   })
+    const { control, handleSubmit } = form;
+  const [isLoading, setIsLoading] = useState(false);
+   const [submitted, setIsSubmitted] = useState(false);
+  const [notsubmitted, setIsNotSubmitted] = useState(false);
+
+
+  const onSubmit = async (data) => {
+    // if (!domainsLoaded) {
+    //   form.setError("email", { type: "manual", message: "Please wait until the page is fully loaded." });
+    //   return;
+    // }
+
+    // const emailDomain = data.email.split("@")[1]?.toLowerCase();
+    // if (!emailDomain || blockedDomains.includes(emailDomain)) {
+    //   form.setError("email", { type: "manual", message: "Enter a business email." });
+    //   return;
+    // }
+
+    setIsLoading(true);
+
+    const formattedData = {
+      ...data
+    };
+
+    // console.log(data);
+
+    try {
+      const res = await fetch("/api/contactform", {
+        method: "POST",
+        body: JSON.stringify(formattedData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      setIsSubmitted(true);
+      setTimeout(() => setIsSubmitted(false), 7000);
+      // console.log(data)
+      form.reset();
+    } catch (error) {
+      setIsNotSubmitted(true);
+      setTimeout(() => setIsNotSubmitted(false), 7000);
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section className="mobile:pt-0 overflow-hidden" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
         <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] max-md:px-[2vw] mobile:py-[5vw]">
-          <Form {...form}>
+          <Form {...form} >
             <form
               autoComplete="off"
               className="space-y-[2vw] max-sm:space-y-[7vw] max-md:space-y-[4vw] tablet:space-y-[5vw]  mobile:pt-[5vw]"
+              onSubmit={handleSubmit(onSubmit)}
             >
               <FormField
-                control={form.control}
+                 control={control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
@@ -77,7 +122,7 @@ export default function ContactForm() {
 
 
               <FormField
-                control={form.control}
+                 control={control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
@@ -97,7 +142,7 @@ export default function ContactForm() {
               />
 
               <FormField
-                control={form.control}
+                 control={control}
                 name="number"
                 render={({ field }) => (
                   <FormItem>
@@ -118,7 +163,7 @@ export default function ContactForm() {
               />
 
               <FormField
-                control={form.control}
+                 control={control}
                 name="company"
                 render={({ field }) => (
                   <FormItem>
@@ -138,7 +183,7 @@ export default function ContactForm() {
               />
 
               <FormField
-                control={form.control}
+                 control={control}
                 name="message"
                 render={({ field }) => (
                   <FormItem>
@@ -156,9 +201,63 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
+               <Button
+              type="submit"
+              aria-label="submit form"
+              >
               <div className="mt-[2vw] w-full flex justify-start max-md:pt-[5vw] max-sm:pt-[10vw]">
-                <SecondaryButton href={"/"} text="Submit" className=" text-white" />
+                <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[50vw]">
+                <div className="absolute left-0 top-0 flex justify-start">
+                    <svg className="w-[5.5vw] h-auto max-sm:w-[25vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </div>
+                <div className="absolute right-0 bottom-0 flex justify-end">
+                    <svg className="w-[5.5vw] h-auto rotate-180 max-sm:w-[25vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </div>
+                <div className="absolute inset-0 z-10">
+                    <div
+                        
+                        className=" btn-clipPath w-full absolute flex items-center justify-center h-full bg-white transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] group-hover:bg-white duration-400 after:h-[1.5px] after:bg-[#A8a8a8] after:w-[2vw] after:-rotate-45 after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.5px] before:w-[2vw] before:bg-[#A8a8a8] before:-rotate-45 before:right-[-3%] before:bottom-[14%]"
+                    >
+                    </div>
+                    <div className="w-[90%] mx-auto h-full text-primary-1 relative z-10 flex items-center gap-5 justify-center">
+                        <span className="text-content-18 capitalize">Submit</span>
+                        <div className="rotate-180 text-primary-1 flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
               </div>
+              </Button>
             </form>
           </Form>
         </div>

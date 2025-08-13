@@ -125,8 +125,8 @@ const Diagram = () => {
       
 
     return (
-        <div className='relative'>
-            <svg ref={svgRef} className='h-full w-full' width="1380" height="2130" viewBox="0 0 1380 2130" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='relative h-[200vh]'>
+            <svg ref={svgRef} className='h-full w-full' width="1380" height="2130" viewBox="0 0 1380 2130" fill="none" xmlns="http://www.w3.org/2000/svg" >
 
          //Path pathLines
 

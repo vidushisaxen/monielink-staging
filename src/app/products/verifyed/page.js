@@ -56,7 +56,7 @@ export default function Verifyed() {
         <IndentityMobile/>
         <Identity />
         <Address />
-        {/* <SelfService/> */}
+        <SelfService/>
         <SelfToken/>
         <Values data={valuesData} />
         <Products  productsData={productsData}/>

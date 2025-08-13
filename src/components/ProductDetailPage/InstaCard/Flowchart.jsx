@@ -23,7 +23,6 @@ const Flowchart = () => {
                 </div>
                 <div className='h-full w-full'>
                     <div className="svg-section flex flex-col items-center justify-center w-[80%] mx-auto max-md:hidden max-sm:hidden" >
-                   {/* <Image src={"/assets/icons/diagrams/instacard.svg"} className='h-full w-full' height={100} width={100} alt='instacard'/> */}
                    <Diagram/>
                     </div>
                     <div className='w-full h-auto hidden max-md:block max-sm:block'>

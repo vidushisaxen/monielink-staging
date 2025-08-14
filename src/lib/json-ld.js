@@ -93,7 +93,7 @@ export function LocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Monielink",
-    "image": `https://www.monielink.io/logoM.svg`,
+    "image": `https://www.monielink.io/logo.png`,
     "@id": "",
     "url": `${homepage}`,
     "telephone": "",

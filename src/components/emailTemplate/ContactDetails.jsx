@@ -12,7 +12,7 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={"https://www.hiveminds.in/logo.png"}
+            src={"https://www.monielink.io/logo.png"}
             width="140"
             height="40"
             alt="Logo"

@@ -317,10 +317,10 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
 
         <div className="h-full w-full flex items-center justify-center absolute top-0 left-0 inset-0 z-10  !px-[4vw] !pr-[8vw]">
           <div className="flex flex-col items-start px-[12vw] justify-evenly h-[80%] w-full">
-            <p className="text-[#A8A8A8] text-content-20 mt-[-6vw]">{id}</p>
+            <p className="text-[#A8A8A8] text-content-20 absolute top-[12%] left-[16%]">{id}</p>
             <div className="flex items-start justify-between gap-10">
               <div className="flex items-start justify-start gap-10">
-                <div className="h-full w-[2vw]">
+                <div className="h-full w-[2vw] ">
                 <svg
   className="w-full h-[70%]"
   width="38"
@@ -381,7 +381,7 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
                     alt="solutionLights" */}
                   {/* /> */}
                 </div>
-                <div className="w-[65%] flex flex-col items-start justify-center">
+                <div className="w-[80%] flex flex-col items-start justify-center">
                   <p className="text-[#D6D6D6] font-display leading-none text-[3.12vw] max-sm:text-[4vw]">
                     {title}
                   </p>

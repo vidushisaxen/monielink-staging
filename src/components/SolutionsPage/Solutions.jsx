@@ -261,14 +261,7 @@ export default function Solutions() {
                   }`}
               >
                 <div className="w-1/2 flex">
-                  {/* <Image
-                    src={f.img}
-                    alt={f.title}
-                    width={500}
-                    height={500}
-                    className="object-contain"
-                  /> */}
-                   <div className="h-[20vw] w-auto mx-auto">
+                   <div className="h-[20vw] w-full mx-auto">
                   <svg
                   className="h-full w-full"
                     width="251"

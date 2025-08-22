@@ -69,7 +69,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       id: "005",
       title: "Dual Transaction Service ",
       description:
-        "DUO features the groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits—set on a virtual credit card—using their existing debit cards. Customers can Simply Activate DTS on our Partner’s  Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards.",
+        "DUO features the groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits set on a virtual credit card using their existing debit cards. Customers can Simply Activate DTS on our Partner’s Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards.",
       cardClass: "card-5",
       link: "/solutions/dual-transaction-service",
       svgRightRef: svgRightRefs[4],
@@ -82,7 +82,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       id: "006",
       title: "KYC & Soft Token ",
       description:
-        "Enable fast, secure KYC verification — allowing customers to sign up, get verified, and start using financial services in minutes. From facial biometrics to NIN, BVN, and ID validation, every step is streamlined for compliance, speed, and a seamless user experience protected with built-in 2FA soft token. ",
+        "Enable fast, secure KYC verification allowing customers to sign up, get verified, and start using financial services in minutes. From facial biometrics to NIN, BVN, and ID validation, every step is streamlined for compliance, speed, and a seamless user experience protected with built-in 2FA soft token.",
       cardClass: "card-6",
       link: "/solutions/kyc-and-soft-token",
       svgRightRef: svgRightRefs[5],
@@ -389,7 +389,7 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
                     {description}
                   </p>
                   <div className="pt-10">
-                    <BlackButton href={link} text={"Talk to an expert"} />
+                    <BlackButton href={link} text={"Read More"} />
                   </div>
                 </div>
               </div>

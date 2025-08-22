@@ -725,7 +725,7 @@ const Diagram = () => {
             <div>
                         <div className='absolute top-[-3%] left-[39%] w-[25%] overflow-hidden '>
                             <Copy delay={1}>
-                            <p className='font-medium text-content-24 font-body  text-center'>Customer Request for Instacard Issuance</p>
+                            <p className='font-medium text-content-24 font-body  text-center'>Customer requests for Instacard Issuance</p>
                             </Copy>
                         </div>
                         <div className='absolute top-[19.7%] left-[10%]  overflow-hidden '>
@@ -755,7 +755,7 @@ const Diagram = () => {
                         </div>
                         <div className='absolute top-[72%] left-[37%] w-[25%] overflow-hidden '>
                             <Copy delay={1.5}>
-                            <p className='font-medium text-content-24 font-body  text-center '>Customer access Digital Card Wallet for:   </p>
+                            <p className='font-medium text-content-24 font-body  text-center '>Customer accesses digital card wallet for:   </p>
                             </Copy>
                         </div>
 

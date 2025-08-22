@@ -153,7 +153,7 @@ import {
               <div className="w-1/2 h-full flex flex-col pb-[12%] py-[5vw] pr-[5vw] justify-evenly items-start ">
                 <div>
                   <p>
-                  Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app — faster than ever. Let’s build the future of finance together.
+                 Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app, faster than ever. Let&apos;s build the future of finance together.
                   </p>
                 </div>
                 <div className="">

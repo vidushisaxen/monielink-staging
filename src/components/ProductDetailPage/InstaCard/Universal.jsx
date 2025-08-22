@@ -346,7 +346,7 @@ const Universal = () => {
               <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[20vw]">
                 <div className=" w-[18%] overflow-hidden max-sm:w-[30%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text1 textanim max-sm:text-left">
-                  1. Customer Purchase Universal Card
+                  1. Customer purchases Universal Card
                   </p>
                 </div>
                 <div className=" w-[20%] overflow-hidden max-sm:w-[35%]">
@@ -366,7 +366,7 @@ const Universal = () => {
                 </div>{" "}
                 <div className=" w-[18%] overflow-hidden max-sm:w-[38%]">
                   <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text5 textanim max-sm:text-left">
-                  5. Customer use Universal Instacard on POS / ATM
+                  5. Customer uses Universal Instacard on POS/ATM
                   </p>
                 </div>
               </div>

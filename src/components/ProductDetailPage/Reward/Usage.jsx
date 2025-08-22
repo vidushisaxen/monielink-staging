@@ -236,10 +236,11 @@ const Usage = () => {
                 <p className=' text-content-24 font-body  text-center texts-1  '>Partner defines the rule-logic for usage of balance in redemption Account</p>
               </div>
               <div className=' w-[28%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center texts-2  '>Partner defines the rule-logic for usage of balance in redemption Account</p>
+                <p className=' text-content-24 font-body  text-center texts-2  '>Customer is able to use balance
+available in redemption account </p>
               </div>
               <div className=' w-[28%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center texts-3  '>Partner defines the rule-logic for usage of balance in redemption Account</p>
+                <p className=' text-content-24 font-body  text-center texts-3  '>Customer can access redemption account statement to track usage</p>
               </div>
 
             </div>

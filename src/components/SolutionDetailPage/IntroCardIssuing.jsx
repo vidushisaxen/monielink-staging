@@ -95,9 +95,9 @@ const IntroCardIssuing = () => {
                                         </div>
                                     ))}
                                 </div>
-                <div className="text-center w-[85%] max-sm:text-left max-sm:w-full ">
+                <div className="text-center w-[80%] max-sm:text-left max-sm:w-full ">
                     <Copy>
-                    <p className="text-head-60 max-sm:text-head-60 max-md:text-[4.5vw] max-sm:pt-0 max-md:pt-[4vw] font-display ">Empowering Banks and FinTechs with a comprehensive end-to-end Merchant Acquiring Solution for merchant onboarding, as well as the acquisition, processing, and settlement of digital and card payments into a dedicated digital collection account
+                    <p className="text-head-60 max-sm:text-head-60 max-md:text-[4.5vw] max-sm:pt-0 max-md:pt-[4vw] font-display ">Instant virtual card issuance for both online and offline payments via Monielink SDK, with the option to link them to a Universal Card for use through a single physical card.
                     </p>
                     </Copy>
                 </div>

@@ -59,7 +59,7 @@ const Wallet = () => {
                 <div className='w-[90%] max-md:w-[95%] max-sm:w-full'>
                     <Copy>
                         <h2 className='text-head-60 font-display text-center max-sm:text-head-80 capitalize max-sm:text-left max-md:text-left'>
-                        Chatbox acts as an instant support bot, answering questions and guiding users through Monielink’s Super SDK products and services — creating a more engaging, informed, and seamless experience.
+                        Chatbox acts as an instant support bot, answering questions and guiding users through Monielink’s Super SDK products and services, creating a more engaging, informed, and seamless experience.
                         </h2>
                     </Copy>
                 </div>

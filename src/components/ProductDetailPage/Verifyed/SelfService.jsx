@@ -265,7 +265,7 @@ const SelfService = () => {
 </svg>
             <div className='w-full flex items-start justify-between py-[2vw]'>
               <div className=' w-[18%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text1  '>Customer Sign-up on Partner’s Mobile App</p>
+                <p className=' text-content-24 font-body  text-center text1  '>Customer signs up on partner’s mobile app</p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
                 <p className=' text-content-24 font-body  text-center text2  '>SDK generates a QR code to be scanned using VERIFYED App </p>

@@ -32,8 +32,8 @@ export default function CTA() {
             </Copy>
           </div>
           <div className="flex items-center pt-[3vw] gap-5 fadeupanim max-sm:flex-col">
-            <PrimaryButton text="Talk to an expert" href="#" />
-            <BlackButton text="Talk to an expert" href="#" />
+            <PrimaryButton text="Talk to an expert" href="/contact-us" />
+            <BlackButton text="Talk to an expert" href="/contact-us" />
           </div>
         </div>
       </div>

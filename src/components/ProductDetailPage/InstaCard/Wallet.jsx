@@ -85,10 +85,7 @@ const Wallet = () => {
         <div className="w-[90%] max-md:w-[95%] max-sm:w-full">
           <Copy>
             <h2 className="text-head-60 font-display text-center max-sm:text-head-80 capitalize max-sm:text-left max-md:text-left">
-              Empowering issuers to enable instant issuance of virtual cards for
-              making online and offline payments, the Universal Instacard links
-              multiple virtual cards to a single secure physical card — delivering
-              seamless, secure, and flexible usage.
+             Empowering issuers to enable instant issuance of virtual cards for making online and offline payments, the Universal Instacard links multiple virtual cards to a single secure physical card - delivering seamless, secure, and flexible usage.
             </h2>
           </Copy>
         </div>

@@ -16,7 +16,7 @@ const CustomerBenefits = () => {
                     01
                 </div>
                 <Copy delay={0.5}>
-                    <p className='text-content-20'>Instant issuance & Activation of a Virtual Credit Card as against weeks that delivery of a Physical Card MAY take. </p>
+                    <p className='text-content-20'>Instantly issue and activate virtual credit cards, no credit underwriting or sales channels required. </p>
                 </Copy>
             </div>
              <div className='flex flex-col items-start justify-center gap-[3vw] w-[28%]'>
@@ -24,7 +24,7 @@ const CustomerBenefits = () => {
                     02
                 </div>
                 <Copy  delay={0.5}>
-                    <p className='text-content-20'>Skip the paperwork—no forms or documents required for credit evaluation.</p>
+                    <p className='text-content-20'>Skip the paperwork, no forms or documents required for credit evaluation.</p>
                 </Copy>
             </div>
              <div className='flex flex-col items-start justify-center gap-[3vw] w-[28%]'>
@@ -32,7 +32,7 @@ const CustomerBenefits = () => {
                     03
                 </div>
                 <Copy  delay={0.5}>
-                    <p className='text-content-20'>No need to visit a branch—get DUO credit card and activate it instantly, right from your device.</p>
+                    <p className='text-content-20'>No need to visit a branch. Get DUO credit card and activate it instantly, right from your device .</p>
                 </Copy>
             </div>
              <div className='flex flex-col items-start justify-center gap-[3vw] w-[28%]'>
@@ -48,7 +48,7 @@ const CustomerBenefits = () => {
                     05
                 </div>
                 <Copy  delay={0.5}>
-                    <p className='text-content-20'>Make online purchases using the Virtual Credit Card on partner apps integrated with our SDK. One card, dual purpose—use your debit card as a credit card.</p>
+                    <p className='text-content-20'>Make online purchases using the Virtual Credit Card on partner apps integrated with our SDK. One card, dual purpose. Use your debit card as a credit card.</p>
                 </Copy>
             </div>
 

@@ -61,7 +61,7 @@ const productsData ={
     },
     {
       img:"/assets/icons/snapcred-logo.svg",
-      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products — from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections,"
+      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections."
     }
   ]
 }

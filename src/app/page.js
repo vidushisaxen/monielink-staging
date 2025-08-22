@@ -36,7 +36,7 @@ export default function HomePage() {
         <Intro />
         <div className="clients-transition">
         <Clients />
-        <Blogs />
+        {/* <Blogs /> */}
         </div>
         <FAQs data={faqData} />
         <CTA />
@@ -48,7 +48,7 @@ const faqData = [
   {
     question: "What is Monielink Super SDK offering?",
     answer:
-      "Monielink is a unified Super SDK that enables banks and FinTechs to embed digital banking, card issuance, digital payments, and lending services directly into their mobile apps — all from a single integration.",
+      "Monielink is a unified Super SDK that enables banks and FinTechs to embed digital banking, card issuance, digital payments, and lending services directly into their mobile apps, all from a single integration",
   },
   {
     question: "Who can use Monielink’s services?",
@@ -63,7 +63,7 @@ const faqData = [
   {
     question: "How long does it take to go live with Monielink?",
     answer:
-      "Go-to-market timelines vary, but with our plug-and-play SDK and dedicated support, most partners launch within 6 weeks — not months.",
+      "Go-to-market timelines vary, but with our plug-and-play SDK and dedicated support, most partners launch within 6 weeks, not months",
   },
   {
     question: "Can we customize the features and branding?",
@@ -73,7 +73,7 @@ const faqData = [
   {
     question: "What kind of support do you provide?",
     answer:
-      "Our partnership goes beyond Tech — it’s about Growing Revenue For Our Partners. Monielink offers end-to-end, plug & play solution to our partners, for them to build a profitable business with  full onboarding, integration support, compliance guidance, and ongoing technical maintenance.",
+      "Our partnership goes beyond Tech. It’s about Growing Revenue For Our Partners. Monielink offers end-to-end, plug & play solution to our partners, for them to build a profitable business with full onboarding, integration support, compliance guidance, and ongoing technical maintenance.",
   },
 ]
 const productsData={

@@ -71,8 +71,8 @@ const introData ={
   const valuesData = {
     heading:"Creating Lasting Value, Together",
     list:[
-        "<p>Nigeria is expected to have over <b> 300 million Cards </b> In Force, by 2030</p>",
-        "<p>Nigeria is expected to have over 300 million Cards In Force, by 2030</p>",
+        "<p>Nigeria is expected to have over <b> 300 million Cards </b> In Force, by 2030.</p>",
+        "<p>The Nigerian market is projected to shift from physical cards to a growing preference for virtual card issuance. </p>",
         "<p>However, the usage of Physical Cards would remain relevant for ATM transactions & availability of a reliable offline payment method.</p>"
     ]
   }

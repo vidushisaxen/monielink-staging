@@ -713,7 +713,7 @@ export default function Header() {
               </nav>
               {/* CTA */}
               <PrimaryButton
-                href={"#"}
+                href={"/contact-us"}
                 text="Get In Touch"
                 className="max-sm:hidden max-md:hidden"
               />

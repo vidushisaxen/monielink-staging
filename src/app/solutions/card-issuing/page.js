@@ -42,7 +42,7 @@ export default function SolutionDetail() {
     <>
     <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Launch Fast with Scalable Card Issuing"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
+        <Hero heading={"Launch faster Scalable card issuing program"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
         <IntroCardIssuing/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
@@ -75,7 +75,7 @@ const productsData ={
     },
     {
       img:"/assets/icons/snapcred-logo.svg",
-      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products — from instant origination to collection services that include due and delinquent payments as well as multi-bank collections."
+      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections."
     },
 
   ]

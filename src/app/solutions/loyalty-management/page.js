@@ -111,7 +111,7 @@ const faqData = [
   {
     question: "What is Rewards+ solution from Monielink?",
     answer:
-      "Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK. Reward points can be redeemed for cash under a tailored loyalty program, with funds credited to a dedicated reward redemption account. Allow customers to use their redeemed points for airtime, data, or utility payments, with options customized to match your mobile App offerings. Customers can monitor their reward points and redemptions through reward & redemption account statements available via the SDK integrated into your mobile app, helping them engage more effectively with the loyalty program.",
+      "Rewards+ helps banks & Fintechs design a customized Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK. Reward points can be redeemed for cash under a tailored loyalty program, with funds credited to a dedicated reward redemption account. Allow customers to use their redeemed points for airtime, data, or utility payments, with options customized to match your mobile App offerings. Customers can monitor their reward points and redemptions through reward & redemption account statements available via the SDK integrated into your mobile app, helping them engage more effectively with the loyalty program.",
   },
   {
     question: "Why should you choose our Rewards+?",

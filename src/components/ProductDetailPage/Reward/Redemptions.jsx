@@ -236,8 +236,8 @@ const Redemptions = () => {
                         <div className=' w-[20%] overflow-hidden'>
                             <p className=' text-content-24 font-body  text-center text2  '>Customer converts reward points to cash</p>
                         </div> 
-                        <div className=' w-[20%] overflow-hidden'>
-                            <p className=' text-content-24 font-body  text-center text3  '>Customer converts reward points to cash</p>
+                        <div className=' w-[25%] overflow-hidden'>
+                            <p className=' text-content-24 font-body  text-center text3  '>Customer can access redemptions account statement</p>
                         </div> 
                         
                         </div>

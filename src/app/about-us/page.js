@@ -77,6 +77,6 @@ const faqData = [
   {
     question: "What makes Monielink different?",
     answer:
-      "Monielink offers a modular yet unified SDK infrastructure that lets Banks and FinTechs launch full-scale digital banking services faster. Unlike traditional service providers, Monielink supports rapid go-to-market, local compliance, embedded fraud prevention, and end-to-end partner support through a revenue sharing model—ensuring you're always in control of your customer experience.",
+      "Monielink offers a modular yet unified SDK infrastructure that lets Banks and FinTechs launch full-scale digital banking services faster. Unlike traditional service providers, Monielink supports rapid go-tomarket, local compliance, embedded fraud prevention, and end-to-end partner support through a revenue sharing model ensuring you're always in control of your customer experience.",
   }
 ]

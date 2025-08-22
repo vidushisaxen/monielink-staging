@@ -99,7 +99,7 @@ const Identity = () => {
                         <p className='text-head-60 font-display text-center font-light'>Step 1: Sign-up</p>
                     </Copy>
                     <Copy>
-                        <p className='text-content-20 text-center font-body'>Customers start the onboarding process on Partner&apos;s Mobile App.</p>
+                        <p className='text-content-20 text-center font-body'>Customer starts the onboarding process on Partner&apos;s Mobile App</p>
                     </Copy>
                     </div>
                     <Copy>

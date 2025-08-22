@@ -71,8 +71,8 @@ export default function Hero({ heading, para , breadcrumb}) {
             </Copy>
           </div>
           <div ref={btnContainer} className="flex items-center pt-12 gap-5 max-sm:flex-col max-sm:gap-[5vw] max-sm:pt-[10vw]">
-            <PrimaryButton text="Talk to an expert" href={"#"} />
-            <BlackButton text="Talk to an expert" href={"#"} />
+            <PrimaryButton text="Talk to an expert" href={"/contact-us"} />
+            <BlackButton text="Talk to an expert" href={"/contact-us"} />
           </div>
         </div>
         {breadcrumb && (

@@ -42,7 +42,7 @@ export default function Duo() {
     <>
     <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"DTS for Virtual Credit via Debit Cards"} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
+        <Hero heading={"Enable DTS Virtual Credit via Debit Cards "} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
         <Intro content={introData}/>
        <Wallet/>
        <CustomerBenefits/>

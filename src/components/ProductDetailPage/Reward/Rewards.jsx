@@ -268,11 +268,11 @@ const Rewards = () => {
 
 
             <div className='w-full flex items-start justify-between py-[2vw]'>
-              <div className=' w-[18%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text1  '>Partner define the reward point rules for all usage scenarios</p>
+              <div className=' w-[20%] overflow-hidden'>
+                <p className=' text-content-24 font-body  text-center text1  '>Partner defies the reward point rules for all usage scenarios</p>
               </div>
-              <div className=' w-[15%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text2  '>Customer use Monielink services</p>
+              <div className=' w-[18%] overflow-hidden'>
+                <p className=' text-content-24 font-body  text-center text2  '>Customer uses Monielink services </p>
               </div>
               <div className=' w-[15%] overflow-hidden'>
                 <p className=' text-content-24 font-body  text-center text3  '>Customer earns reward points </p>

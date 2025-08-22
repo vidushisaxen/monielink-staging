@@ -121,8 +121,7 @@ export default function MobileFooter() {
               <div className="w-full flex justify-center">
                 <p className="text-content-20 text-center leading-[1.5] w-[90%] ">
                   {" "}
-                  Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app — faster than ever. Let’s build the future of finance together.
-
+                  Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app, faster than ever. Let&apos;s build the future of finance together.
                 </p>
               </div>
               <div className="w-full flex flex-col gap-[4vw] uppercase items-center relative z-[10]">

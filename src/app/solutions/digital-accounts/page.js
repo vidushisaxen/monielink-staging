@@ -39,7 +39,7 @@ export default function SolutionDetail() {
     <>
     <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Scalable Digital Banking Infrastructure"} para={"Everything you need to launch and grow digital financial services — digital banking, cards, payments, lending, compliance, and more  through one powerful platform."} breadcrumb={true}/>
+        <Hero heading={"Scalable Digital Banking Infrastructure"} para={"Everything you need to launch and grow digital financial services - digital banking, cards, payments, lending, compliance, and more through one powerful platform."} breadcrumb={true}/>
         <IntroDigitalAccounts/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>
@@ -55,23 +55,23 @@ const productsData ={
   cards:[
     {
       img:"/assets/icons/balance-logo.svg",
-      para:"Balance Wallet & Account Management System supports diverse use cases across digital payments, card transactions, lending, and loyalty — all from one powerful, unified platform."
+      para:"Balance Wallet & Account Management System supports diverse use cases across digital payments, card transactions, lending, and loyalty, all from one powerful, unified platform."
     },
     {
       img:"/assets/icons/verifyed-logo.svg",
-      para:"Automate your KYC process with AI-powered verification for faster onboarding, lower costs, and stronger fraud prevention. With Verifyed Authenticator, enhance user security through seamless SaaS-based two-factor authentication — all built to scale with your operations."
+      para:"Automate your KYC process with AIpowered verification for faster onboarding, lower costs, and stronger fraud prevention. With Verifyed Authenticator, enhance user security through seamless SaaS-based twofactor authentication, all built to scale with your operations."
     },
     {
       img:"/assets/icons/reward-logo.svg",
-      para:"Boost digital adoption with Reward+ — a tailored loyalty program that credits usage-based points to a dedicated rewards account. Customers can earn, track and redeem their points directly from your app via our integrated SDK."
+      para:"Boost digital adoption with Reward+ - a tailored loyalty program that credits usagebased points to a dedicated rewards account. Customers can earn, track and redeem their points directly from your app via our integrated SDK"
     },
     {
       img:"/assets/icons/instacard-logo.svg",
-      para:"Offer instant virtual cards (Debit, Credit & Pre-paid forms) for both online and offline transactions. With our Universal Instacard solution, multiple virtual cards can be securely accessed through a single physical card — delivering convenience, control, and a seamless payment experience."
+      para:"Offer instant virtual cards (Debit, Credit & Prepaid forms) for both online and offline transactions. With our Universal Instacard solution, multiple virtual cards can be securely accessed through a single physical card delivering convenience, control, and a seamless payment experience."
     },
     {
       img:"/assets/icons/snapcred-logo.svg",
-      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products — from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections,"
+      para:"SnapCred is a cloud-based lending platform that supports the full lifecycle of credit products from instant origination and disbursement to loan management and collection services that include due and delinquent payments as well as multi-bank collections."
     },
 
   ]
@@ -93,19 +93,19 @@ const solutionsData ={
     },
     {
       title: "Digital Lending",
-      para: "We help you build and scale profitable lending portfolio. From credit card issuance to loan disbursement and recovery — all managed on a compliant, cloud-based system.",
+      para: "We help you build and scale profitable lending portfolio. From credit card issuance to loan disbursement and recovery, all managed on a compliant, cloudbased system.",
       link: "/solutions/digital-lending",
       
     },
     {
       title: "Dual Transaction Service",
-      para: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.",
+      para: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards. No new plastic required. Drive engagement and grow income with ease.",
       link: "/solutions/dual-transaction-service",
       
     },
     {
       title: "KYC Management ",
-      para: "We make identity verification effortless with AI-driven facial recognition, liveness detection, and two-factor authentication — helping you onboard users securely and at scale.",
+      para: "We make identity verification effortless with AI-driven facial recognition, liveness detection, and two-factor authentication, helping you onboard users securely and at scale.",
       link: "/solutions/kyc-and-soft-token",
       
     },

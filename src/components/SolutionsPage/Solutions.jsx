@@ -126,7 +126,7 @@ export default function Solutions() {
         });
       });
 
-      const snapPoints = [0, 0.180, 0.347,0.505, 0.65, 0.8235, 1]
+      const snapPoints = [0, 0.185, 0.349,0.505, 0.65, 0.8235, 1]
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -184,7 +184,7 @@ export default function Solutions() {
             nextSplit.lines,
             {
               yPercent: 100,
-              stagger: 0.05,
+              // stagger: 0.01,
               duration: 0.5,
               ease: "power1.inOut",
             },
@@ -295,14 +295,14 @@ export default function Solutions() {
                   <div className="text-content-20 text-gray-2 w-9/10 paraFade splitLines">{f.description2}</div>
 
                   <div className="w-fit btnFade">
-                    <PrimaryButton text="Know More" href={f.href} />
+                    <PrimaryButton text="Know More" href={f.href}  className={`${i === activeSlide ? "pointer-events-auto" : "pointer-events-none"}`} />
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <button onClick={handleSkip} className="round absolute bottom-0 right-[-5%] ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] cursor-pointer">
+          <button onClick={handleSkip} className="round absolute bottom-[5%] right-[-5%] ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] cursor-pointer">
             <div className="absolute inset-0 z-10">
               <div className="w-[80%] mx-auto h-full text-[#A8A8A8] relative z-10 flex items-center gap-3 justify-center">
                 <span className="text-content-18">Skip</span>

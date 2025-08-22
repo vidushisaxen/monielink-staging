@@ -65,7 +65,7 @@ export default function Features() {
     return (
         <section data-theme="white" id="features" className="bg-white-1 text-black-1 py-[3vw]">
             <div className="px-[4.5vw] pt-[8vw] max-md:py-[15%] w-full max-sm:py-[15%] max-sm:px-[6vw]">
-                <div className="w-[52%] max-md:w-[100%] max-md:text-center max-sm:text-left text-left mb-[4vw] max-sm:w-full max-sm:mb-[12vw]">
+                <div className="w-[60%] max-md:w-[100%] max-md:text-center max-sm:text-left text-left mb-[4vw] max-sm:w-full max-sm:mb-[12vw]">
                     <Copy>
                         <h2 className="text-head-60 font-display">
                         Scalable, Secure, and Cost-Efficient Banking Infrastructure

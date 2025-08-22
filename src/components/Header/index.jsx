@@ -593,8 +593,8 @@ export default function Header() {
                       width: "100%",
                       backgroundColor:
                         isInverted || isWhite
-                          ? "rgba(0, 0, 0, 0.1)"
-                          : "rgba(0, 0, 0, 0.1)",
+                          ? "rgba(0, 0, 0, 0.3)"
+                          : "rgba(0, 0, 0, 0.3)",
                     }}
                   />
                 </foreignObject>

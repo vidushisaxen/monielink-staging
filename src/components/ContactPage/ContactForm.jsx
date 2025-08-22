@@ -216,7 +216,7 @@ export default function ContactForm() {
                 </div>
                 <div className="absolute inset-0 z-10">
                     <div
-                        className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-white transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] duration-400 border border-[#a8a8a8] after:h-[1.2px] after:bg-[#ffffff] after:w-[2vw] after:-rotate-[47.2deg] after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.2px] before:w-[2vw] before:bg-[#ffffff] before:-rotate-[48.3deg] before:right-[-3.4%] before:bottom-[14%]"
+                        className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-white transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] duration-400 border border-[#ffffff] after:h-[1.2px] after:bg-[#ffffff] after:w-[2vw] after:-rotate-[47.2deg] after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.2px] before:w-[2vw] before:bg-[#ffffff] before:-rotate-[48.3deg] before:right-[-3.4%] before:bottom-[14%]"
                     >
                     </div>
                     <div className="w-[90%] mx-auto h-full text-primary-1 relative z-10 flex items-center gap-5 justify-center">

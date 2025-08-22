@@ -85,7 +85,7 @@ const Diagram2 = () => {
 
     return (
         <section data-theme="orange" className='w-screen overflow-hidden h-full bg-gradient relative max-sm:block max-md:block ' ref={sectionRef}>
-            <div className='px-[4vw] py-[7vw] max-sm:py-[15vw] flex flex-col items-center gap-[10vw] max-sm:gap-[4vw] '>
+            <div className='px-[4vw] py-[7vw] max-sm:py-[15vw] flex flex-col items-center gap-[7vw] max-sm:gap-[4vw] '>
                 <div className='w-[80%] max-sm:w-[80%] max-md:w-[60%]'>
                     <Copy>
                         <h2 className='text-head-60 font-display text-center capitalize'>
@@ -189,10 +189,10 @@ const Diagram2 = () => {
 
                     </div>
                     <div>
-                        <div className='absolute top-[52%] left-[38%] w-[10%] overflow-hidden'>
+                        <div className='absolute top-[48.5%] left-[38%] w-[10%] overflow-hidden'>
                             <p className='font-medium text-content-24 font-body  text-center text-anim svg-first '>Partner Infrastructure</p>
                         </div>
-                        <div className='absolute top-[73.5%] left-[47.5%] w-[10%] overflow-hidden'>
+                        <div className='absolute top-[72.4%] left-[47.5%] w-[10%] overflow-hidden'>
                             <p className='font-medium text-content-24 font-body  text-center text-anim svg-second'>Secure VPN Tunnel</p>
                         </div>
                         
@@ -200,17 +200,17 @@ const Diagram2 = () => {
                     </div>
                     <div>
                         <div>
-                            <div className='absolute top-[34%] left-[15%] overflow-hidden w-[15%]'>
+                            <div className='absolute top-[30%] left-[15%] overflow-hidden w-[15%]'>
                                 <p className='text-content-18 font-body text-center text-anim leading-[1.5] svg-first'>Core Banking System</p>
                             </div>
-                            <div className='absolute top-[39%] left-[58%] overflow-hidden'>
+                            <div className='absolute top-[36.5%] left-[58%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center text-anim svg-first'>On-Premise Applications (Apps + Storage)</p>
                             </div>
                             
                         </div>
                         <div>
-                            <div className='absolute top-[71.4%] left-[17%] w-[20%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-anim svg-second leading-[1.5]'>Connects Partner Infra with MoneyLink Backend for data exchange and operations</p>
+                            <div className='absolute top-[69.5%] left-[17%] w-[20%] overflow-hidden'>
+                                <p className='text-content-18 font-body text-anim svg-second leading-[1.8]'>Connects Partner Infra with MoneyLink Backend for data exchange and operations</p>
                             </div>
                            
                         </div>

@@ -96,14 +96,14 @@ const Diagram1 = () => {
 
     return (
         <section data-theme="orange" className='w-screen h-full bg-gradient relative overflow-x-hidden max-sm:visible max-md:block' ref={sectionRef}>
-            <div className='px-[4vw] py-[7vw] flex flex-col items-center gap-[10vw]  max-sm:gap-[4vw]'>
+            <div className='px-[4vw] py-[7vw] flex flex-col items-center gap-[6vw]  max-sm:gap-[4vw]'>
                 <div className='w-[80%] space-y-[7vw] flex flex-col items-center max-sm:w-full'>
                     <Copy>
                         <h2 className='text-head-100 font-display text-center capitalize'>
                             Simplified System Architecture: MoneyLink Integration
                         </h2>
                     </Copy>
-                    <div className='space-y-[2vw] max-sm:pb-[10vw]'>
+                    <div className='mb-[10vw] max-sm:pb-[10vw]'>
                         <Copy>
                             <p className='text-head-60 font-display text-center font-light'>Frontend</p>
                         </Copy>
@@ -266,10 +266,10 @@ const Diagram1 = () => {
 
                     </div>
                     <div>
-                        <div className='absolute top-[73.6%] left-[37%] w-[10%] overflow-hidden'>
+                        <div className='absolute top-[72.4%] left-[37.5%] w-[10%] overflow-hidden'>
                             <p className='font-medium text-content-20 font-body  text-center textanim svgFirst'>Main Instance (Managed by MoneyLink)</p>
                         </div>
-                        <div className='absolute top-[85%] left-[46.5%] w-[10%] overflow-hidden'>
+                        <div className='absolute top-[84%] left-[46.5%] w-[10%] overflow-hidden'>
                             <p className='font-medium text-content-20 font-body  text-center textanim svgSecond'>DR Instance (Managed by MoneyLink)</p>
                         </div>
 
@@ -277,22 +277,22 @@ const Diagram1 = () => {
                     </div>
                     <div>
                         <div>
-                            <div className='absolute top-[64%] left-[16%] overflow-hidden'>
+                            <div className='absolute top-[62%] left-[16%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>Applications</p>
                             </div>
-                            <div className='absolute top-[77%] left-[16%] overflow-hidden'>
+                            <div className='absolute top-[76%] left-[16%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>Storage</p>
                             </div>
-                            <div className='absolute top-[65%] left-[53%] overflow-hidden'>
+                            <div className='absolute top-[63%] left-[53%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>Services</p>
                             </div>
-                            <div className='absolute top-[75%] left-[58%] overflow-hidden'>
+                            <div className='absolute top-[73.5%] left-[58%] overflow-hidden'>
                                 <p className='text-content-18 font-body text-center textanim svgFirst'>Security (Access Control + Firewall)</p>
                             </div>
                         </div>
                         <div>
-                            <div className='absolute top-[88.3%] left-[68%] overflow-hidden w-[20%]'>
-                                <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Mirrors the main instance for high availability and fault tolerance</p>
+                            <div className='absolute top-[87.4%] left-[68%] overflow-hidden w-[20%]'>
+                                <p className='text-content-18 font-body textanim leading-[1.8] svgSecond'>Mirrors the main instance for high availability and fault tolerance</p>
                             </div>
 
                         </div>

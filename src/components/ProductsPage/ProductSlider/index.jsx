@@ -94,7 +94,7 @@ const products = [
             "Chatbox helps users explore features, get instant answers, and learn how to use services with ease, making it an essential support tool for banks and issuers."
         ],
         img: "/assets/images/products/product-chatbox.svg",
-        href: '/proucts/chatbox'
+        href: '/products/chatbox'
     },
     {
         id: 9,
@@ -105,7 +105,7 @@ const products = [
             "Once activated via your mobile app (using our SDK), users simply select 'Credit' when prompted at any POS or ATM. The transaction is seamlessly processed against the balance Credit Limit  offered on DUO virtual credit card."
         ],
         img: "/assets/icons/duo-logo.svg",
-        href: '/proucts/duo'
+        href: '/products/duo'
     },
 ]
 
@@ -275,7 +275,7 @@ export default function ProductSlider() {
                                     ))}
                                 </div>
                                 <div className='w-fit btnFade'>
-                                    <PrimaryButton text="Know More" href={f.href} />
+                                    <PrimaryButton text="Know More" href={f.href}  className={`${i === activeSlide ? "pointer-events-auto" : "pointer-events-none"}`} />
                                 </div>
                             </div>
                         </div>

@@ -113,7 +113,7 @@ const SolutionsCard = ({ solutionsRef }) => {
           start: "top top",
           end: "bottom bottom",
           scrub: true,
-          //   markers:true
+            // markers:true
         },
         //   defaults:"none"
       });
@@ -223,10 +223,6 @@ const SolutionsCard = ({ solutionsRef }) => {
           scale: 0.6,
           yPercent: -120,
           delay: -0.5,
-        }).to(".card-2", {
-          // scale: 0.5,
-          // yPercent: -24,
-          // delay: -0.5,
         })
     });
     return () => ctx.revert();
@@ -257,7 +253,7 @@ const SolutionsCard = ({ solutionsRef }) => {
     if (!solutionsRef.current) return;
     const sectionTop =
       solutionsRef.current.getBoundingClientRect().top + window.pageYOffset;
-    const scrollY = sectionTop + window.innerHeight * index * 1.24;
+    const scrollY = sectionTop + window.innerHeight * index * 1.19;
     window.scrollTo({ top: scrollY, behavior: "smooth" });
   };
 

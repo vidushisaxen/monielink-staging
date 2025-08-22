@@ -70,8 +70,8 @@ useGSAP(() => {
 
   return (
     <section data-theme="orange" id="usps" className="bg-gradient-to-r max-sm:w-screen from-[#FF5100] to-[#FE6E00] max-sm:py-[15%]">
-      <div className="px-[4.5vw] py-[8vw] max-sm:py-[8vw] max-md:py-[12vw] w-full flex flex-col items-center justify-center space-y-[8vw] ">
-        <div className="w-[80%] max-sm:w-[90%]">
+      <div className="px-[4.5vw] py-[10%] max-sm:py-[8vw] max-md:py-[12vw] w-full flex flex-col items-center justify-center space-y-[8vw] ">
+        <div className="w-[90%] max-sm:w-[90%]">
           <Copy>
             <h2 className="text-white text-[5vw] max-sm:text-[10.5vw] max-sm:head-140 max-md:head-140 text-center font-display leading-[1.25]">
             Scalable, Secure, and Cost-Efficient Banking Infrastructure
@@ -79,7 +79,7 @@ useGSAP(() => {
           </Copy>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full  gap-[10vw]">
+        <div className="flex flex-col items-center justify-center w-full  gap-[7vw]">
           {uspData.map(({ title, description, width, svg, svgElement }, index) => (
             <div key={index} className="flex items-center max-sm:flex-col gap-20 max-md:gap-[12vw] max-sm:gap-0 w-full justify-center">
               <div className="w-[40%] max-md:w-[30%] max-sm:w-full flex items-end max-sm:items-center max-sm:justify-center justify-end h-full max-sm:h-fit max-sm:py-[4vw] ">
@@ -95,7 +95,7 @@ useGSAP(() => {
               </div>
               <div className="flex flex-col gap-6 max-sm:gap-[5vw] max-md:gap-[1vw] h-full text-white w-[60%] max-md:w-[65%] max-sm:w-full font-body iconText justify-center items-start max-sm:items-center max-sm:text-center">
                 <Copy>
-                  <h3 className="text-[1.56vw] max-sm:w-[90%] capitalize max-sm:leading-[1.1] max-sm:text-center max-md:text-[3.5vw] max-sm:text-[8vw] subText font-display">{title}</h3>
+                  <h3 className="text-[1.56vw] max-sm:w-[90%] capitalize max-sm:leading-[1.1] max-sm:text-center max-md:text-[3.5vw] max-sm:text-[8vw] subText font-display font-medium">{title}</h3>
                 </Copy>
                 <Copy>
                   <p className={`text-[1.04vw] max-sm:text-[4vw] max-md:text-[2vw] max-sm:text-center ${width} subText tracking-wide max-sm:w-[95%] max-md:w-full`}>{description}</p>
@@ -105,7 +105,7 @@ useGSAP(() => {
           ))}
         </div>
 
-        <div className="py-[8vw]">
+        <div className="pt-[8vw] pb-[3%]">
           <Copy>
             <h2 className="text-[7.3vw] max-md:text-head-140 text-center max-sm:py-[20vw] max-md:py-[5vw] leading-[1.2] font-display">
               <span>One SDK. </span><br />

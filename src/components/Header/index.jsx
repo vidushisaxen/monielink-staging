@@ -239,36 +239,36 @@ export default function Header() {
     }
   }, [menuOpen]);
 
-  useGSAP(() => {
-    const triggers = [];
-    document.querySelectorAll("[data-theme]").forEach((section) => {
-      const theme = section.dataset.theme;
+  // useGSAP(() => {
+  //   const triggers = [];
+  //   document.querySelectorAll("[data-theme]").forEach((section) => {
+  //     const theme = section.dataset.theme;
 
-      const trigger = ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: "bottom top",
-        onEnter: () => {
-          if (theme === "orange") setIsInverted(true);
-          if (theme === "white") setIsWhite(true);
-        },
-        onEnterBack: () => {
-          if (theme === "orange") setIsInverted(true);
-          if (theme === "white") setIsWhite(true);
-        },
-        onLeave: () => {
-          if (theme === "orange") setIsInverted(false);
-          if (theme === "white") setIsWhite(false);
-        },
-        onLeaveBack: () => {
-          if (theme === "orange") setIsInverted(false);
-          if (theme === "white") setIsWhite(false);
-        },
-      });
+  //     const trigger = ScrollTrigger.create({
+  //       trigger: section,
+  //       start: "top top",
+  //       end: "bottom top",
+  //       onEnter: () => {
+  //         if (theme === "orange") setIsInverted(true);
+  //         if (theme === "white") setIsWhite(true);
+  //       },
+  //       onEnterBack: () => {
+  //         if (theme === "orange") setIsInverted(true);
+  //         if (theme === "white") setIsWhite(true);
+  //       },
+  //       onLeave: () => {
+  //         if (theme === "orange") setIsInverted(false);
+  //         if (theme === "white") setIsWhite(false);
+  //       },
+  //       onLeaveBack: () => {
+  //         if (theme === "orange") setIsInverted(false);
+  //         if (theme === "white") setIsWhite(false);
+  //       },
+  //     });
 
-      triggers.push(trigger);
-    });
-  }, []);
+  //     triggers.push(trigger);
+  //   });
+  // }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -593,8 +593,8 @@ export default function Header() {
                       width: "100%",
                       backgroundColor:
                         isInverted || isWhite
-                          ? "rgba(0, 0, 0, 0.3)"
-                          : "#000000",
+                          ? "rgba(0, 0, 0, 0.1)"
+                          : "rgba(0, 0, 0, 0.1)",
                     }}
                   />
                 </foreignObject>

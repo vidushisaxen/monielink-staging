@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4, USP12, USP3, USP6, USP9 } from '@/components/Icons';
+import { DigitalAccounts1, DigitalAccounts2, DigitalAccounts3, DigitalAccounts4, USP1, USP12, USP3, USP6, USP9 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -28,7 +28,7 @@ const Wallet = ({heading}) => {
             description: "Dedicated Digital Settlement Account for instant settlements",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <USP6 />
+            svgElement: <USP1/>
         },
         {
             description: "Soft-POS for accepting Contactless Payments ",
@@ -79,7 +79,7 @@ const Wallet = ({heading}) => {
                                 </svg>
                             </div>
                             <Copy>
-                                <p className={`text-content-20 max-md:text-center`}>{description}</p>
+                                <p className={`text-content-20 max-md:text-center max-sm:text-left`}>{description}</p>
                             </Copy>
                         </div>
                     ))}

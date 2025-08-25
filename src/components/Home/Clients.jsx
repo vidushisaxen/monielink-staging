@@ -60,7 +60,7 @@ export default function Clients() {
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/clients/VISA.svg",
+      src: "/assets/icons/clients/visa.svg",
       width: "6vw",
       right: "3%",
       top: "75%",

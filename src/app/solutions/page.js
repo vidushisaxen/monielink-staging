@@ -43,7 +43,7 @@ export default function SolutionsPage() {
         <Hero
           heading={"Smart Solutions for Modern Banking"}
           para={
-            "Monielink offers end-to-end digital banking capabilities designed to help you launch, scale, and optimize financial services delivery. From customer onboarding, payments, and card issuance to lending, merchant acquiring, and account management — our platform delivers secure, scalable solutions tailored to today’s banking landscape. Built for speed. Backed by compliance. Powered by flexibility."
+            "Monielink offers end-to-end digital banking capabilities designed to help you launch, scale, and optimize financial services delivery. From customer onboarding, payments, and card issuance to lending, merchant acquiring, and account management, our platform delivers secure, scalable solutions tailored to today’s banking landscape. Built for speed. Backed by compliance. Powered by flexibility."
           }
         />
         <Intro />

@@ -115,8 +115,8 @@ export default function ProductSlider() {
     const [scrollProgress, setScrollProgress] = useState(0)
 
     useEffect(() => {
+        if(globalThis.innerWidth>1024){
         let ctx = gsap.context(() => {
-
             const slides = gsap.utils.toArray('.slide');
             const total = slides.length;
 
@@ -175,6 +175,7 @@ export default function ProductSlider() {
         }, containerRef);
 
         return () => ctx.revert();
+    }
     }, []);
 
     useGSAP(() => {

@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { USP1, USP10, USP14, USP2} from "../Icons";
+import { USP1, USP2, USP3, USP4} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -30,13 +30,13 @@ const IntroDualTransaction = () => {
             description: "Secure Online Payments using Virtual Cards with Dynamic CVV",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <USP10/>
+            svgElement: <USP3/>
         },
         {
             description: "Credit Card lifecycle management",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <USP14/>
+            svgElement: <USP4/>
         },
     ];
 

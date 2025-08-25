@@ -240,7 +240,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] pt-[5vw] max-sm:py-[10vw] max-sm:pt-[15vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between min-h-[38vw] w-full max-sm:gap-y-[5vw]">
+      <div className="py-[3vw] pt-[5vw] max-sm:py-[10vw] max-sm:pt-[15vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between min-h-[38vw] w-full max-sm:gap-y-[5vw] max-sm:min-h-[60vh]">
         <div className="h-[3.5vw] max-md:h-[5.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw] max-md:mb-[1vw]">
           <Image
             src={logo}

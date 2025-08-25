@@ -51,7 +51,7 @@
   --primary-2: #fe6e00;
 
   --head-200: 10.4vw;
-  --head-150: 7.815vw;
+  --head-150: 7vw;
   --head-140: 7.3vw;
   --head-100: 5.2vw;
   --head-80: 4.5vw;
@@ -455,7 +455,7 @@ li .link-line::after {
 /* Tablet responsve */
 @media (max-width: 1080px) {
   :root {
-    --head-150: 10vw;
+    --head-150: 8vw;
     --content-30: 3.5vw;
     --content-20: 2.2vw;
     --head-60: 6vw;
@@ -532,7 +532,7 @@ li .link-line::after {
 @media (max-width: 768px) {
   :root {
     --head-200: 20.513vw;
-    --head-150: 14.4vw;
+    --head-150: 12vw;
     --head-140: 12.5vw;
     --head-120: 10.5vw;
     --head-100: 10.25vw;
@@ -541,7 +541,7 @@ li .link-line::after {
     --head-50: 5vw;
     --head-40: 3vw;
     --content-30: 5.5vw;
-    --content-24: 2vw;
+    --content-24: 4.2vw;
     --content-20: 3.8vw;
     --content-18: 4.1vw;
   }

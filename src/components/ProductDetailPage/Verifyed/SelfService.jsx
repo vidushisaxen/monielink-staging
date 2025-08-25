@@ -13,7 +13,7 @@ const SelfService = () => {
   const svgContainerRef = useRef(null);
 
   useGSAP(() => {
-    const svgGroups = ['.svg-First', '.svg-Second', '.svg-Third', '.svg-Fourth'];
+    const svgGroups = ['.svgFirst', '.svgSecond', '.svgThird', '.svgFourth'];
 
     // Initial states
     gsap.set(svgGroups, { opacity: 0 });
@@ -21,17 +21,17 @@ const SelfService = () => {
     svgGroups.forEach((group, index) => {
       gsap.set(`${group} .outer-paths`, { scale: 1, opacity: 0 });
       gsap.set(`${group} .center-group`, { scale: 1, opacity: 0 });
-      gsap.set(`.line${index + 1}`, { drawSVG: '0%' });
-      gsap.set(`.text${index + 1}`, { opacity: 0, y: 10 });
+      gsap.set(`.line-${index + 1}`, { drawSVG: '0%' });
+      gsap.set(`.text-${index + 1}`, { opacity: 0, y: 10 });
     });
 
     svgGroups.forEach((group, index) => {
       const outerPaths = `${group} .outer-paths`;
       const centerGroup = `${group} .center-group`;
-      const lineSelector = `.line${index + 1}`;
-      const textSelector = `.text${index + 1}`; 
-      const start = `${index * 20 + 10}% 75%`; 
-          const end = `${index * 20 + 30}% center`;
+      const lineSelector = `.line-${index + 1}`;
+      const textSelector = `.text-${index + 1}`; 
+      const start = `${index * 10 + 10}% 75%`; 
+          const end = `${index * 20 + 20}% center`;
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: svgContainerRef.current,
@@ -86,11 +86,11 @@ const SelfService = () => {
 
 
           <svg className='h-full w-full' width="1200" height="264" viewBox="0 0 1200 264" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="266.803" y1="143.5" x2="326.803" y2="143.5" stroke="white" className='line1'/>
-<line x1="569.803" y1="143.5" x2="629.803" y2="143.5" stroke="white" className='line2'/>
-<line x1="872.803" y1="143.5" x2="932.803" y2="143.5" stroke="white" className='line3'/>
+<line x1="266.803" y1="143.5" x2="326.803" y2="143.5" stroke="white" className='line-1'/>
+<line x1="569.803" y1="143.5" x2="629.803" y2="143.5" stroke="white" className='line-2'/>
+<line x1="872.803" y1="143.5" x2="932.803" y2="143.5" stroke="white" className='line-3'/>
 
-<g className='svg-First'>
+<g className='svgFirst'>
     <g className='outer-paths'>
 <g filter="url(#filter0_f_200_489)">
 <path d="M60.8797 57.1214L87.4562 30.0009C89.3371 28.0816 91.9113 27 94.5986 27L257.198 27C262.721 27 267.198 31.4772 267.198 37V165.634C267.198 168.273 266.155 170.804 264.297 172.677L233.996 203.216L202.631 234.704C200.755 236.588 198.205 237.647 195.546 237.647H34.804C29.2812 237.647 24.8041 233.17 24.8041 227.647L24.8028 98.8506C24.8027 96.2753 25.7963 93.7992 27.5764 91.9382L60.8797 57.1214Z" fill="#FF5E01"/>
@@ -112,7 +112,7 @@ const SelfService = () => {
 </g>
 </g>
 </g>
-<g className='svg-Second'>
+<g className='svgSecond'>
 <g className='outer-paths'>
 <g filter="url(#filter3_f_200_489)">
 <path d="M362.88 57.1214L389.456 30.0009C391.337 28.0816 393.911 27 396.599 27L559.198 27C564.721 27 569.198 31.4772 569.198 37V165.634C569.198 168.273 568.155 170.804 566.297 172.677L535.996 203.216L504.631 234.704C502.755 236.588 500.205 237.647 497.546 237.647H336.804C331.281 237.647 326.804 233.17 326.804 227.647L326.803 98.8506C326.803 96.2753 327.796 93.7992 329.576 91.9382L362.88 57.1214Z" fill="#FF5E01"/>
@@ -131,7 +131,7 @@ const SelfService = () => {
 </g>
 </g>
 
-<g className='svg-Third'>
+<g className='svgThird'>
 <g className='outer-paths'>
 <g filter="url(#filter6_f_200_489)">
 <path d="M665.88 57.1214L692.456 30.0009C694.337 28.0816 696.911 27 699.599 27L862.198 27C867.721 27 872.198 31.4772 872.198 37V165.634C872.198 168.273 871.155 170.804 869.297 172.677L838.996 203.216L807.631 234.704C805.755 236.588 803.205 237.647 800.546 237.647H639.804C634.281 237.647 629.804 233.17 629.804 227.647L629.803 98.8506C629.803 96.2753 630.796 93.7992 632.576 91.9382L665.88 57.1214Z" fill="#FF5E01"/>
@@ -151,7 +151,7 @@ const SelfService = () => {
 </g>
 </g>
 
-<g className='svg-Fourth'>
+<g className='svgFourth'>
 <g className='outer-paths'>
 <g filter="url(#filter9_f_200_489)">
 <path d="M968.88 57.1214L995.456 30.0009C997.337 28.0816 999.911 27 1002.6 27L1165.2 27C1170.72 27 1175.2 31.4772 1175.2 37V165.634C1175.2 168.273 1174.16 170.804 1172.3 172.677L1142 203.216L1110.63 234.704C1108.75 236.588 1106.21 237.647 1103.55 237.647H942.804C937.281 237.647 932.804 233.17 932.804 227.647L932.803 98.8506C932.803 96.2753 933.796 93.7992 935.576 91.9382L968.88 57.1214Z" fill="#FF5E01"/>
@@ -263,18 +263,18 @@ const SelfService = () => {
 </clipPath>
 </defs>
 </svg>
-            <div className='w-full flex items-start justify-between py-[2vw]'>
-              <div className=' w-[18%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text1  '>Customer signs up on partner’s mobile app</p>
+            <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw]'>
+              <div className=' w-[20%] overflow-hidden'>
+                <p className=' text-content-24 font-body  text-1  '>Customer signs up on partner’s mobile app</p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text2  '>SDK generates a QR code to be scanned using VERIFYED App </p>
+                <p className=' text-content-24 font-body  text-2  '>SDK generates a QR code to be scanned using VERIFYED App </p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text3  '>Self-assisted process of verifying customer </p>
+                <p className=' text-content-24 font-body  text-3  '>Self-assisted process of verifying customer </p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-center text3  '>Soft-Token account is ready for use</p>
+                <p className=' text-content-24 font-body  text-4  '>Soft-Token account is ready for use</p>
               </div>
             </div>
 

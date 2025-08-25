@@ -267,10 +267,10 @@ const Diagram1 = () => {
                     </div>
                     <div>
                         <div className='absolute top-[72.4%] left-[37.5%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim svgFirst'>Main Instance (Managed by MoneyLink)</p>
+                            <p className='font-medium text-content-20 font-body  text-center textanim svgFirst'>Main Instance (Managed by MonieLink)</p>
                         </div>
                         <div className='absolute top-[84%] left-[46.5%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim svgSecond'>DR Instance (Managed by MoneyLink)</p>
+                            <p className='font-medium text-content-20 font-body  text-center textanim svgSecond'>DR Instance (Managed by MonieLink)</p>
                         </div>
 
 
@@ -374,29 +374,28 @@ const Diagram1 = () => {
                         <div>
 
                             <div >
-                                <div className='absolute max-md:w-[25%] max-md:top-[15%] max-sm:top-[25%] max-sm:left-[11.5%] max-md:left-[10%] max-sm:w-[20%] overflow-hidden'>
+                                <div className='absolute max-md:w-[25%] max-md:top-[15%] max-sm:top-[19%] max-sm:left-[11.5%] max-md:left-[10%] max-sm:w-[20%] overflow-hidden'>
                                     <Copy>
-                                        <p className="max-md:text-content-20 max-sm:text-[4vw] text-center">Main Instance (Managed by MoneyLink)</p>
+                                        <p className="max-md:text-content-20 max-sm:text-[4vw] text-center">Main Instance (Managed by MonieLink)</p>
                                     </Copy>
                                 </div>
-                                <div className='absolute max-md:w-[20%] max-sm:w-[20%] max-sm:top-[23%] max-md:top-[17%] max-sm:right-[11.5%] max-md:right-[18%] w-[25%] overflow-hidden'>
-                                    <p className='max-md:text-content-20 max-sm:text-[4vw] text-center'>DR Instance (Managed by MoneyLink)</p>
+                                <div className='absolute max-md:w-[20%] max-sm:w-[20%] max-sm:top-[19%] max-md:top-[17%] max-sm:right-[11.5%] max-md:right-[18%] w-[25%] overflow-hidden'>
+                                    <p className='max-md:text-content-20 max-sm:text-[4vw] text-center'>DR Instance (Managed by MonieLink)</p>
                                 </div>
 
                             </div>
                             <div className='flex justify-between max-sm:gap-[25vw] max-sm:px-0 max-md:px-[8vw] max-sm:pt-[5vw] max-md:pt-[5vw] w-full max-sm:w-[115%]'>
                                 <div className="max-sm:ml-[-15vw] w-[18%] max-md:w-[30%] max-sm:w-[60vw]">
                                     <ul className="max-sm:pl-0 max-md:pl-0  list-disc space-y-[0.5vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full font-body  text-center max-sm:text-[4vw]  max-sm:text-content-20 max-sm:text-left max-md:text-left">
-                                        <li>Fund Transfers</li>
-                                        <li>Collect payments/ Settlements</li>
-                                        <li>Digital Payments</li>
+                                        <li>Applications</li>
+                                        <li>Services</li>
+                                        <li>Storage</li>
+                                        <li>Security (Access Control + Firewall)</li>
                                     </ul>
                                 </div>
                                 <div className=" w-[18%] max-md:w-[32%] max-sm:w-[80vw] overflow-visible">
                                     <ul className=" max-md:pl-[0vw] list-disc space-y-[0.5vw] font-medium text-content-24 w-full max-md:text-content-20 max-md:w-full font-body  text-center   max-sm:text-[4vw] max-sm:text-left max-md:text-left">
-                                        <li>Fund Transfers</li>
-                                        <li>Collect payments/ Settlements</li>
-                                        <li>Digital Payments</li>
+                                        <li>Mirrors the main instance for high availability and fault tolerance</li>
                                     </ul>
                                 </div>
                             </div>

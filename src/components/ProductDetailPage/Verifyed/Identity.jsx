@@ -14,7 +14,7 @@ const Identity = () => {
     const sectionRef = useRef(null);
 
     useGSAP(() => {
-        const groups = ['svgFirst', 'svgSecond', 'svgThird'];
+        const groups = ['svg_First', 'svg_Second'];
 
         groups.forEach(groupName => {
             const groupElement = svgRef.current?.querySelector(`.${groupName}`);
@@ -87,7 +87,7 @@ const Identity = () => {
 
     return (
         <section data-theme="orange" className='w-screen h-full bg-gradient relative max-sm:hidden max-md:hidden' ref={sectionRef}>
-            <div className='px-[4vw] pt-[7vw] flex flex-col items-center  gap-[10vw] '>
+            <div className='px-[4vw] pt-[7vw] flex flex-col items-center  gap-[7vw] '>
                 <div className='w-[80%] space-y-[7vw]'>
                     <Copy>
                         <h2 className='text-head-100 font-display text-center capitalize'>
@@ -99,7 +99,7 @@ const Identity = () => {
                         <p className='text-head-60 font-display text-center font-light'>Step 1: Sign-up</p>
                     </Copy>
                     <Copy>
-                        <p className='text-content-20 text-center font-body'>Customer starts the onboarding process on Partner&apos;s Mobile App</p>
+                        <p className='text-content-20 text-center font-body'>Customer starts the onboarding process on Partners Mobile App</p>
                     </Copy>
                     </div>
                     <Copy>
@@ -113,7 +113,7 @@ const Identity = () => {
                 <div className='h-full w-full '>
                     <div className="svg-section flex flex-col items-center justify-center w-[85%] mx-auto" >
                         <svg className='w-full h-full' ref={svgRef} width="1527" height="869" viewBox="0 0 1527 869" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g className='svgFirst'>
+                            <g className='svg_First'>
                                 <g className='center-group'>
                                     <g filter="url(#filter0_f_92_553)">
                                         <path d="M661.462 148.25L688.038 121.13C689.919 119.21 692.493 118.129 695.181 118.129L857.78 118.129C863.303 118.129 867.78 122.606 867.78 128.129V256.763C867.78 259.402 866.737 261.933 864.879 263.806L834.578 294.345L803.213 325.833C801.337 327.717 798.787 328.776 796.128 328.776H635.386C629.863 328.776 625.386 324.299 625.386 318.776L625.385 189.979C625.385 187.404 626.378 184.928 628.158 183.067L661.462 148.25Z" fill="#FF5E01" />
@@ -145,7 +145,7 @@ const Identity = () => {
 
                             </g>
 
-                            <g className='svgSecond'>
+                            <g className='svg_Second'>
                                 <g className='center-group'>
                                     <g filter="url(#filter3_f_92_553)">
                                         <path d="M836.907 388.899L863.484 361.778C865.364 359.859 867.939 358.777 870.626 358.777L1033.23 358.777C1038.75 358.777 1043.23 363.255 1043.23 368.777V497.411C1043.23 500.05 1042.18 502.582 1040.32 504.455L1010.02 534.993L978.659 566.482C976.782 568.366 974.233 569.425 971.574 569.425H810.831C805.309 569.425 800.831 564.947 800.831 559.425L800.83 430.628C800.83 428.053 801.824 425.577 803.604 423.716L836.907 388.899Z" fill="#FF5E01" />
@@ -238,33 +238,33 @@ const Identity = () => {
                         </svg>
                     </div>
                     <div>
-                        <div className='absolute top-[76.5%] left-[44%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim svgFirst'>NIN Verification
+                        <div className='absolute top-[75%] left-[44%] w-[10%] overflow-hidden'>
+                            <p className='font-medium text-content-20 font-body  text-center textanim svg_First'>NIN Verification
                                 (KYC Level 1)</p>
                         </div>
-                        <div className='absolute top-[85%] left-[53%] w-[10%] overflow-hidden'>
-                            <p className='font-medium text-content-20 font-body  text-center textanim svgSecond'>BVN Verification
+                        <div className='absolute top-[84%] left-[53%] w-[10%] overflow-hidden'>
+                            <p className='font-medium text-content-20 font-body  text-center textanim svg_Second'>BVN Verification
                                 (KYC Level 2)</p>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <div className='absolute top-[69.2%] left-[24%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim svgFirst'>Customer scans or inputs NIN</p>
+                            <div className='absolute top-[68%] left-[24%] overflow-hidden'>
+                                <p className='text-content-18 font-body text-center textanim svg_First'>Customer scans or inputs NIN</p>
                             </div>
-                            <div className='absolute top-[80%] left-[15.5%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim svgFirst'>Facial biometrics used to verify identity</p>
+                            <div className='absolute top-[79%] left-[15.5%] overflow-hidden'>
+                                <p className='text-content-18 font-body text-center textanim svg_First'>Facial biometrics used to verify identity</p>
                             </div>
-                            <div className='absolute top-[71.5%] left-[63%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-center textanim svgFirst'>OCR captures and matches data to NIMC</p>
+                            <div className='absolute top-[70.2%] left-[63%] overflow-hidden'>
+                                <p className='text-content-18 font-body text-center textanim svg_First'>OCR captures and matches data to NIMC</p>
                             </div>
                         </div>
                         <div>
-                            <div className='absolute top-[87.2%] left-[29%] overflow-hidden w-[15%]'>
-                                <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Customer enters BVN; details fetched from NIBSS</p>
+                            <div className='absolute top-[86.45%] left-[29%] overflow-hidden w-[15%]'>
+                                <p className='text-content-18 font-body textanim leading-[1.5] svg_Second'>Customer enters BVN; details fetched from NIBSS</p>
                             </div>
-                            <div className='absolute top-[80.1%] left-[72%] overflow-hidden w-[13%]'>
-                                <p className='text-content-18 font-body textanim leading-[1.5] svgSecond'>Facial biometrics matched with BVN profile</p>
+                            <div className='absolute top-[79%] left-[72%] overflow-hidden w-[13%]'>
+                                <p className='text-content-18 font-body textanim leading-[1.5] svg_Second'>Facial biometrics matched with BVN profile</p>
                             </div>
                       </div>
                     </div>

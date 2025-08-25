@@ -460,55 +460,55 @@ const Infrastructure2 = () => {
                         </div>
                         <div>
                             <div className='absolute top-[33.5%] left-[21.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgThird'>Load Money</p>
+                                <p className='text-content-20 font-body text-center textanim svgSecond'>Load Money</p>
                             </div>
                             <div className='absolute top-[39.5%] left-[29%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgThird'>Spends</p>
+                                <p className='text-content-20 font-body text-center textanim svgSecond'>Spends</p>
                             </div>
                             <div className='absolute top-[30.8%] left-[60.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgThird'>Card Controls</p>
+                                <p className='text-content-20 font-body text-center textanim svgSecond'>Card Controls</p>
                             </div>
                             <div className='absolute top-[38.3%] left-[61%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgThird'>Card Statements</p>
+                                <p className='text-content-20 font-body text-center textanim svgSecond'>Card Statements</p>
                             </div>
                         </div>
                           <div>
                             <div className='absolute top-[43.8%] left-[37.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgFourth'>Card Statement</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Card Statement</p>
                             </div>
                             <div className='absolute top-[47.2%] left-[25%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgFourth'>Limit Management</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Limit Management</p>
                             </div>
                             <div className='absolute top-[53.3%] left-[23.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgFourth'>Collection of Delinquent Amounts</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Collection of Delinquent Amounts</p>
                             </div>
                             <div className='absolute top-[45.5%] left-[76%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgFourth'>Card Controls</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Card Controls</p>
                             </div>
                             <div className='absolute top-[50%] left-[69.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgFourth'>Spends</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Spends</p>
                             </div>
                             <div className='absolute top-[55%] left-[69%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgFourth'>Repayments</p>
+                                <p className='text-content-20 font-body text-center textanim svgThird'>Repayments</p>
                             </div>
                         </div>
                          <div>
                             <div className='absolute top-[63%] left-[18.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgSixth'>Loan Repayments</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Loan Repayments</p>
                             </div>
                             <div className='absolute top-[68.5%] left-[23%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgSixth'>Loan Disbursement</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Loan Disbursement</p>
                             </div>
                             <div className='absolute top-[58.5%] left-[60%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgSixth'>Collection of Delinquent Amount</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Collection of Delinquent Amount</p>
                             </div>
                             <div className='absolute top-[68%] left-[58%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgSixth'>Loan Statements</p>
+                                <p className='text-content-20 font-body text-center textanim svgFourth'>Loan Statements</p>
                             </div>
                         </div>
                         <div>
-                            <div className='absolute top-[74.8%] left-[21%] overflow-hidden w-[10%]'>
-                                <p className='text-content-20 font-body text-left textanim svgFifth'>Reward Points account Statement</p>
+                            <div className='absolute top-[74.65%] left-[21%] overflow-hidden w-[10%]'>
+                                <p className='text-content-20 font-body text-left textanim svgFifth leading-[1.5]'>Reward Points account Statement</p>
                             </div>
                             <div className='absolute top-[81.3%] left-[16.8%] overflow-hidden'>
                                 <p className='text-content-20 font-body text-center textanim svgFifth'>Tailored Loyalty Program</p>
@@ -519,10 +519,10 @@ const Infrastructure2 = () => {
                         </div>
                         <div>
                             <div className='absolute top-[90.5%] left-[20.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgSecond'>Usage of Redeemed Amount</p>
+                                <p className='text-content-20 font-body text-center textanim svgSixth'>Usage of Redeemed Amount</p>
                             </div>
                             <div className='absolute top-[86%] left-[60.5%] overflow-hidden'>
-                                <p className='text-content-20 font-body text-center textanim svgSecond'>Redeem Reward Points</p>
+                                <p className='text-content-20 font-body text-center textanim svgSixth'>Redeem Reward Points</p>
                             </div>
                         </div>
                         

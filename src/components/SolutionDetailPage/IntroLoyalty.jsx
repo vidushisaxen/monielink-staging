@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import {USP10, USP11, USP8, USP9} from "../Icons";
+import {USP1, USP11, USP8, USP9} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -30,7 +30,7 @@ const IntroLoyalty = () => {
             description: "Redemption Account for user to access redemption statement",
             width: "w-[45%]",
             svg: svgRefs[2],
-            svgElement: <USP10/>
+            svgElement: <USP1/>
         },
         {
             description: "Usage of Redeemed points – enables customer to use balance available in redemption account ",

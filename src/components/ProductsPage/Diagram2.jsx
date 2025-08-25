@@ -210,7 +210,7 @@ const Diagram2 = () => {
                         </div>
                         <div>
                             <div className='absolute top-[69.5%] left-[17%] w-[20%] overflow-hidden'>
-                                <p className='text-content-18 font-body text-anim svg-second leading-[1.8]'>Connects Partner Infra with MoneyLink Backend for data exchange and operations</p>
+                                <p className='text-content-18 font-body text-anim svg-second leading-[1.8]'>Connects Partner Infra with MonieLink Backend for data exchange and operations</p>
                             </div>
                            
                         </div>
@@ -307,16 +307,13 @@ const Diagram2 = () => {
                                     <div className='flex justify-between max-sm:gap-[25vw] max-sm:px-0 max-md:px-[8vw] max-sm:pt-[5vw] max-md:pt-[5vw] w-full max-sm:w-[115%]'>
                                          <div className="max-sm:ml-[-15vw] w-[18%] max-md:w-[30%] max-sm:w-[60vw]">
                                   <ul className="max-sm:pl-0 max-md:pl-0  list-disc space-y-[0.5vw] font-medium text-content-24 max-md:text-content-20 max-md:w-full font-body  text-center max-sm:text-[4vw]  max-sm:text-content-20 max-sm:text-left max-md:text-left">
-                                    <li>Fund Transfers</li>
-                                    <li>Collect payments/ Settlements</li>
-                                    <li>Digital Payments</li>
+                                    <li>Core Banking System</li>
+                                    <li>On-Premise Applications (Apps + Storage)</li>
                                   </ul>
                                 </div>
-                                <div className=" w-[18%] max-md:w-[32%] max-sm:w-[80vw] overflow-visible">
+                                <div className=" w-[18%] max-md:w-[32%] max-sm:w-[70vw] overflow-visible">
                                   <ul className=" max-md:pl-[0vw] list-disc space-y-[0.5vw] font-medium text-content-24 w-full max-md:text-content-20 max-md:w-full font-body  text-center   max-sm:text-[4vw] max-sm:text-left max-md:text-left">
-                                    <li>Fund Transfers</li>
-                                    <li>Collect payments/ Settlements</li>
-                                    <li>Digital Payments</li>
+                                    <li>Connects Partner Infra with MonieLink Backend for data exchange and operations</li>
                                   </ul>
                                 </div>
                                     </div>

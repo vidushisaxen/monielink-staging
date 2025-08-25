@@ -29,8 +29,8 @@ const Biometrics = () => {
       const centerGroup = `${group} .center-Group`;
       const lineSelector = `.line${index + 1}`;
       const textSelector = `.text${index + 1}`;
-      const start = `${index * 20 + 10}% 75%`; 
-      const end = `${index * 20 + 30}% center`;
+      const start = `${index * 10 + 10}% 75%`; 
+      const end = `${index * 20 + 20}% center`;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: svgContainer.current,
@@ -233,19 +233,19 @@ const Biometrics = () => {
 </svg>
 
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-md:gap-[5vw]  max-sm:translate-x-[-7%] max-sm:w-[115%]">
-              <div className="max-md:pl-[2vw]  overflow-hidden max-sm:w-[35%] max-md:w-[20%]">
-                <p className=" text-content-24  font-body  text-center text1   max-sm:text-content-20 max-md:text-content-20  max-sm:text-left ">
+            <div className="w-full flex items-start gap-[5vw] justify-between py-[2vw] pl-[2vw] max-sm:px-[5vw] max-sm:justify-start max-md:gap-[5vw]  max-sm:translate-x-[-7%] max-sm:w-[115%]">
+              <div className="w-[20%] max-md:pl-[2vw]  overflow-hidden max-sm:w-[35%] max-md:w-[20%]">
+                <p className=" text-content-24  font-body  text1   max-sm:text-content-20 max-md:text-content-20  max-sm:text-left ">
                   Customers submit a selfie
                 </p>
               </div>
-              <div className=" w-[35%] overflow-hidden max-sm:w-[30%] max-md:w-[35%]">
-                <p className=" text-content-24  font-body   text-center text2  max-sm:text-content-20 max-md:text-content-20  max-sm:text-left  ">
+              <div className=" w-[30%] overflow-hidden max-sm:w-[30%] max-md:w-[35%]">
+                <p className=" text-content-24  font-body   text2  max-sm:text-content-20 max-md:text-content-20  max-sm:text-left  ">
                   System detects liveness and matches with profile image{" "}
                 </p>
               </div>{" "}
               <div className=" w-[25%] overflow-hidden max-sm:w-[30%] max-md:w-[25%]  ">
-                <p className=" text-content-24  font-body  text-center text3  max-sm:text-content-20 max-md:text-content-20  max-sm:text-left ">
+                <p className=" text-content-24  font-body  text3  max-sm:text-content-20 max-md:text-content-20  max-sm:text-left ">
                   Used across NIN, BVN, and ID steps
                 </p>
               </div>

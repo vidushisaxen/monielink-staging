@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { USP15, USP8 } from '@/components/Icons';
+import { USP8, USP9 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -28,7 +28,7 @@ const Wallet = () => {
             description: "Omnichannel 2FA solution for Fraud Protection",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <USP15 />
+            svgElement: <USP9 />
         },
     ];
 
@@ -67,7 +67,7 @@ const Wallet = () => {
                                 </svg>
                             </div>
                             <Copy>
-                                <p className={`text-content-20 max-md:text-center`}>{description}</p>
+                                <p className={`text-content-20 max-md:text-center max-sm:text-left`}>{description}</p>
                             </Copy>
                         </div>
                     ))}

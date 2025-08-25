@@ -28,7 +28,7 @@ const Diagram = () => {
           </div>
             <div className='w-screen  overflow-x-scroll flex flex-col items-center max-sm:items-start  max-sm:pr-[5vw] scrollbar-hidden'>
 
-          <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[0%] max-sm:w-[250%] fadeupanim" ref={svgContainer}>
+          <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[2%] max-sm:w-[300%] fadeupanim" ref={svgContainer}>
            
            <svg className="h-full w-full" width="1582" height="426" viewBox="0 0 1582 426" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.800781" y="0.712402" width="224.875" height="424.075" rx="20.0516" stroke="white"/>
@@ -93,29 +93,29 @@ const Diagram = () => {
 </svg>
 
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
-              <div className=" w-[13%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text1 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left">
+            <div className="w-full flex items-start justify-between py-[2vw] gap-[3vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
+              <div className=" w-[17%] overflow-hidden max-sm:w-[18%]">
+                <p className="font-medium text-content-24 font-body  text1 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left">
                   Open the Mobile App
                 </p>
               </div>
               <div className=" w-[15%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text2 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
+                <p className="font-medium text-content-24 font-body  text2 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Enter Payment Amount
                 </p>
               </div>{" "}
-              <div className=" w-[15%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text3 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
+              <div className=" w-[18%] overflow-hidden max-sm:w-[20%] pl-[1%] max-sm:pl-[0%]">
+                <p className="font-medium text-content-24 font-body text3 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Offer Phone to Customer to Tap
                 </p>
               </div>{" "}
-              <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text4 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
+              <div className=" w-[20%] overflow-hidden max-sm:w-[18%] !pl-[8%]">
+                <p className="font-medium  text-content-24 font-body text4 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Enter Pin
                 </p>
               </div>{" "}
-              <div className=" w-[15%] overflow-hidden max-sm:w-[18%]">
-                <p className="font-medium text-content-24 font-body  text-center text5 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
+              <div className=" w-[18%] overflow-hidden max-sm:w-[18%] pl-[4%]">
+                <p className="font-medium text-content-24 font-body  text5 textanim max-md:text-content-20  max-sm:text-content-20 max-sm:text-left ">
                   Transaction Completed
                 </p>
               </div>

@@ -63,10 +63,10 @@ export default function Solutions({solutionsData}) {
         </div>
         <div
           ref={containerRef}
-          className="relative w-screen overflow-hidden z-10 flex flex-col items-center justify-center py-[10vw] gap-[3vw] max-sm:items-start max-sm:py-[15%]"
+          className="relative w-screen overflow-hidden z-10 flex flex-col items-center justify-center py-[10vw]  gap-[3vw] max-sm:items-start max-sm:py-[15%]"
         >
           <Copy>
-            <h2 className="text-foreground productsText text-head-100  text-center leading-[1.25] font-display capitalize pb-[5vw] max-sm:px-[5vw] max-sm:text-left">
+            <h2 className="text-foreground productsText text-head-100  text-center leading-[1.25] font-display capitalize pb-[2vw]  max-sm:px-[5vw] max-sm:text-left">
             {solutionsData.heading}
             </h2>
           </Copy>
@@ -82,6 +82,7 @@ export default function Solutions({solutionsData}) {
               setActiveIndex(swiper.activeIndex);
             }}
             // centeredSlides={true}
+            freeMode={true}
             slidesPerView={3.5}
             spaceBetween={40}
             speed={500}
@@ -99,7 +100,7 @@ export default function Solutions({solutionsData}) {
                 // centeredSlides: true,
               },
             }}
-            className="mySwiper !px-[10vw] max-md:!px-[3vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
+            className="mySwiper !px-[10vw] translate-x-[-5%] max-md:!px-[3vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
           >
             {solutionsData.cards.map((card, cardIndex) => (
               <SwiperSlide
@@ -148,7 +149,7 @@ const SwiperCard = ({
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-[70vh] max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale max-sm:h-[50vh]">
+    <div className="card relative h-[65vh] max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale max-sm:h-[50vh]">
       <div className="absolute h-full w-full max-md:w-[42vw] max-md:pb-[1vw] max-md:h-[38vh] max-sm:w-[85vw] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:px-[1vw] ">
         <svg
           width="466"

@@ -50,8 +50,8 @@ export default function Solutions() {
       id: 3,
       title: "Card Issuing",
       description:
-        "Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction limits across POS, ATM, and online channels. ",
-      description2: "With our Universal Instacard, users can access multiple virtual cards through a single physical card — delivering flexibility, security, and a superior user experience.",
+        "Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction limits across POS, ATM, and online channels.",
+      description2: "With our Universal Instacard, users can access multiple virtual cards through a single physical card. delivering flexibility, security, and a superior user experience.",
       img: "/assets/images/solutions/slide-1.svg",
       href: "/solutions/card-issuing",
       svgRightRef: svgRightRefs[2],
@@ -61,8 +61,8 @@ export default function Solutions() {
       id: 4,
       title: "Digital Lending",
       description:
-        "End-to-end loan and credit card management through SnapCred — a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.",
-      description2: "With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections — all on a secure, cloud-based infrastructure.",
+        "End-to-end loan and credit card management through SnapCred, a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.",
+      description2: "With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections, all on a secure, cloud-based infrastructure.",
       img: "/assets/images/solutions/slide-1.svg",
       href: "/solutions/digital-lending",
       svgRightRef: svgRightRefs[3],
@@ -73,7 +73,7 @@ export default function Solutions() {
       title: "Dual Transaction Service",
       description:
         "You can unlock new revenue by transforming debit cards into virtual credit cards.",
-      description2: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.",
+      description2: "With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards. No new plastic required. Drive engagement and grow income with ease.",
       img: "/assets/images/solutions/slide-1.svg",
       href: "/solutions/dual-transaction-service",
       svgRightRef: svgRightRefs[4],
@@ -86,11 +86,11 @@ export default function Solutions() {
         "Monielink Super SDK, enables instant customer onboarding with:",
       description2: "The solution also includes soft token- 2FA, adding an extra layer of security for account activation and ongoing transactions through a soft-token set-up on Verifyed App",
       list:[
-  "Face capture supported with liveness detection which confirms that the captured face belongs to a live individual — preventing spoofing and impersonation.",
+  "Face capture supported with liveness detection which confirms that the captured face belongs to a live individual preventing spoofing and impersonation.",
   "Facial recognition technology to match live captures against BVN, NIN, or photo ID records in real time, ensuring high-confidence identity verification. ",
   "ID Verifications to verify NIN, Driver’s License, International Passport etc.",
   "Digital Business Verification for a registered business",
-  "Address Verification  for digitally verifying residence & business address",
+  "Address Verification for digitally verifying residence & business address",
   "KYC Upgrades"
       ],
       img: "/assets/images/solutions/slide-1.svg",
@@ -112,6 +112,7 @@ export default function Solutions() {
   ];
 
   useEffect(() => {
+    if(globalThis.innerWidth>1024){
     let ctx = gsap.context(() => {
       const slides = gsap.utils.toArray(".slide");
       const total = slides.length;
@@ -205,6 +206,8 @@ export default function Solutions() {
     }, containerRef);
 
     return () => ctx.revert();
+
+  }
   }, []);
   const handleSkip = () => {
     const next = document.getElementById("features");

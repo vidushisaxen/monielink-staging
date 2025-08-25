@@ -42,7 +42,7 @@ export default function SolutionDetail() {
     <>
     <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Launch faster Scalable card issuing program"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
+        <Hero heading={"Launch faster with Scalable Card issuing programs"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
         <IntroCardIssuing/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

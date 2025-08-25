@@ -125,7 +125,7 @@ const faqData = [
   {
     question: "What is Dual Transaction Service from Monielink?",
     answer:
-      "DUO features the groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits set on a virtual credit card- using their existing debit cards. Customers can Simply Activate DTS on our Partner’s Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards. After DTS activation, customers simply choose ‘Credit’ when prompted during the usage on any POS or ATM. The request is routed through the issuer to our system, which seamlessly processes wthe payment using the Virtual Credit Card Limit.",
+      "DUO features groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits set on a virtual credit card- using their existing debit cards. Customers can Simply Activate DTS on our Partner’s Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards. After DTS activation, customers simply choose ‘Credit’ when prompted during the usage on any POS or ATM. The request is routed through the issuer to our system, which seamlessly processes the payment using the Virtual Credit Card Limit.",
   },
   {
     question: "Why should you choose our DTS?",

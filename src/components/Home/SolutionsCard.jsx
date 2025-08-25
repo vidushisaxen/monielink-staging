@@ -228,26 +228,36 @@ const SolutionsCard = ({ solutionsRef }) => {
     return () => ctx.revert();
   }, []);
 
-  useGSAP(() => {
-    svgRightRefs.forEach((ref, index) => {
-      const paths = ref.current?.querySelectorAll(".path-draw");
-      if (paths) {
-        
-        const offsetPercent = 0 + index * 100;
-  
-        gsap.from(paths, {
-          scrollTrigger: {
-            trigger: ref.current,
-            start: `top+=${offsetPercent}% 80%`,
-            // markers: true
-          },
-          duration: 2,
-          drawSVG: 0,
-        });
-      }
-    });
+useGSAP(() => {
+  svgRightRefs.forEach((ref, index) => {
+    const paths = ref.current?.querySelectorAll(".path-draw");
+    if (paths) {
+      gsap.set(paths, { drawSVG: "0%" });
+
+      ScrollTrigger.create({
+        trigger: "#solutions",
+        start: "5% 70%",
+        end: "bottom bottom",
+        // markers:"true",
+        onUpdate: (self) => {
+          const cardTriggerPoints = [0, 0.13, 0.26, 0.39, 0.52, 0.85, 1];
+          const triggerPoint = cardTriggerPoints[index] || 0;
+          if (self.progress >= triggerPoint && !ref.current?.classList.contains('animated')) {
+            ref.current?.classList.add('animated');
+            gsap.fromTo(paths, {
+              drawSVG: "0%"
+            }, {
+              drawSVG: "100%",
+              duration: 2,
+              ease: "power2.out",
+              stagger: 0.05
+            });
+          }
+        }
+      });
+    }
   });
-  
+});
   
   const handleCardClick = (index) => {
     if (!solutionsRef.current) return;
@@ -314,7 +324,7 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
         <div className="h-full w-full flex items-center justify-center absolute top-0 left-0 inset-0 z-10  !px-[4vw] !pr-[8vw]">
           <div className="flex flex-col items-start px-[12vw] justify-evenly h-[80%] w-full">
             <p className="text-[#A8A8A8] text-content-20 absolute top-[12%] left-[16%]">{id}</p>
-            <div className="flex items-start justify-between gap-10">
+            <div className="flex items-start justify-between gap-10 pt-[5vw]">
               <div className="flex items-start justify-start gap-10">
                 <div className="h-full w-[2vw] ">
                 <svg
@@ -369,15 +379,8 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
     </filter>
   </defs>
 </svg>
-
-
-                  {/* <img
-                    className="w-full h-[70%]"
-                    src="/assets/images/solutionsLights.png"
-                    alt="solutionLights" */}
-                  {/* /> */}
                 </div>
-                <div className="w-[80%] flex flex-col items-start justify-center">
+                <div className="w-[80%] flex flex-col items-start justify-center ">
                   <p className="text-[#D6D6D6] font-display leading-none text-[3.12vw] max-sm:text-[4vw]">
                     {title}
                   </p>

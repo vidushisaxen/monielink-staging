@@ -29,8 +29,8 @@ const Diagram = () => {
       const centerGroup = `${group} .center-group`;
       const lineSelector = `.line${index + 1}`;
       const textSelector = `.text${index + 1}`; 
-      const start = `${index * 20 + 10}% 75%`; 
-      const end = `${index * 20 + 30}% center`;
+      const start = `${index * 10 + 10}% 75%`; 
+      const end = `${index * 20 + 20}% center`;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: svgContainer.current,
@@ -77,7 +77,7 @@ const Diagram = () => {
         className="w-screen h-full overflow-hidden bg-gradient relative max-md:mt-[-1px] max-sm:pb-[15%]"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw] max-sm:px-[5.5vw]">
+        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw] max-sm:px-[5.5vw]">
           <div className="w-[90%] space-y-[9vw] max-md:w-[100%] max-sm:w-full">
             <Copy>
               <h2 className="text-head-100 font-display text-center capitalize max-sm:text-left max-md:text-left">
@@ -92,7 +92,7 @@ const Diagram = () => {
             </Copy>
           </div>
           <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw] scrollbar-hidden'>
-          <div className="w-[55%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[5%] max-sm:w-[200%]" ref={svgContainer}>
+          <div className="w-[60%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[5%] max-sm:w-[200%]" ref={svgContainer}>
            
             <svg className="h-full w-full" width="994" height="265" viewBox="0 0 994 265" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -227,19 +227,19 @@ const Diagram = () => {
 </svg>
 
 
-            <div className="w-full flex items-start justify-between py-[2vw] max-sm:justify-start max-sm:gap-[18vw]">
-              <div className=" w-[22%] max-md:w-[30%] overflow-hidden max-sm:w-[30%]">
-                <p className=" text-content-24 font-body max-md:text-content-20 text-center text1  ">
+            <div className="w-full flex items-start justify-between gap-[6vw] py-[2vw] max-sm:justify-start max-sm:gap-[18vw]">
+              <div className=" w-[33%] max-md:w-[30%] overflow-hidden max-sm:w-[30%]">
+                <p className=" text-content-24 font-body max-md:text-content-20  text1  ">
                 1. Users can choose a help topic to get assistance with any services offered on SDK
                 </p>
               </div>
-              <div className=" w-[22%] max-md:w-[30%] overflow-hidden max-sm:w-[25%]">
-                <p className=" text-content-24 font-body max-md:text-content-20 text-center text2  ">
+              <div className=" w-[33%] max-md:w-[30%] overflow-hidden max-sm:w-[25%]">
+                <p className=" text-content-24 font-body max-md:text-content-20  text2  ">
                 2. Chatbot presents questions for users to select
                 </p>
               </div>{" "}
-              <div className=" w-[25%] max-md:w-[30%] overflow-hidden max-sm:w-[35%]">
-                <p className=" text-content-24 font-body max-md:text-content-20 text-center text3  ">
+              <div className=" w-[33%] max-md:w-[30%] overflow-hidden max-sm:w-[35%]">
+                <p className=" text-content-24 font-body max-md:text-content-20  text3  ">
                 3. The bot advances the conversation by asking follow up questions and providing answers when prompted
                 </p>
               </div>

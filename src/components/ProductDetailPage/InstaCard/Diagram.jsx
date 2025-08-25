@@ -135,6 +135,8 @@ const Diagram = () => {
                     <path d="M1198.35 390.422V182.422C1198.35 154.808 1175.96 132.422 1148.35 132.422H797.02" stroke="white" className='fc-pathLine2' />
                     <path d="M706.852 391.422L706.852 236.922" stroke="white" className='fc-pathLine3' />
                     <path d="M216.352 484.922L216.352 1133.42C216.352 1161.04 238.737 1183.42 266.352 1183.42H706.372" stroke="white" className='fc-pathLine4' />
+<path d="M706.85 700.134L706.85 483.92" stroke="white" className='fc-pathLine5'/>
+
                     <line x1="1197.85" y1="703.422" x2="1197.85" y2="484.422" stroke="white" className='fc-pathLine5' />
                     <path d="M1199.35 1066.42V1133.42C1199.35 1161.04 1176.97 1183.42 1149.35 1183.42H707.277" stroke="white" className='fc-pathLine6' />
                     <path d="M216.352 1693.42V1454.42C216.352 1426.81 238.737 1404.42 266.352 1404.42H567.852" stroke="white" className='fc-pathLine7' />
@@ -145,14 +147,6 @@ const Diagram = () => {
                     <path d="M706.852 1892.92L706.852 1786.42" stroke="white" className='fc-pathLine12' />
                     <path d="M1196.85 1892.92L1196.85 1786.42" stroke="white" className='fc-pathLine13' />
                 </g>
-
-
-                {/* <g filter="url(#filter0_f_118_394)">
-<path d="M604.429 56.5433L631.005 29.4228C632.886 27.5035 635.46 26.4219 638.147 26.4219L800.747 26.4219C806.27 26.4219 810.747 30.899 810.747 36.4219V165.056C810.747 167.695 809.704 170.226 807.846 172.099L777.545 202.638L746.18 234.126C744.304 236.01 741.754 237.069 739.095 237.069H578.353C572.83 237.069 568.353 232.592 568.353 227.069L568.352 98.2725C568.352 95.6971 569.345 93.2211 571.125 91.3601L604.429 56.5433Z" fill="#FF5E01"/>
-</g> */}
-
-
-//SVGS
 
                 <g className='fc-svgFirst'>
                     <g className='fc-outerPaths1 '>
@@ -439,6 +433,8 @@ const Diagram = () => {
                     </g>
                 </g>
 
+
+
 //DEFS
                 <defs>
                     <filter id="filter0_f_118_394" x="560.352" y="18.4219" width="258.395" height="226.648" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -721,6 +717,7 @@ const Diagram = () => {
                     </clipPath>
                 </defs>
             </svg>
+
 
             <div>
                         <div className='absolute top-[-3%] left-[39%] w-[25%] overflow-hidden '>

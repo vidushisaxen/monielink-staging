@@ -39,7 +39,7 @@ export default function SolutionDetail() {
     <>
     <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero heading={"Boost Digital Adoption with Tailored Loyalty"} para={"Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK."} breadcrumb={true}/>
+        <Hero heading={"Boost Digital Service Adoption with Tailored Loyalty Programs"} para={"Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK."} breadcrumb={true}/>
        <IntroLoyalty/>
         <Products productData={productsData}/>
         <Solutions solutionsData={solutionsData}/>

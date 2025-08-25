@@ -34,8 +34,8 @@ const DynamicQR = () => {
       const centerGroup = `${group} .center-group`;
       const lineSelector = `.line-${index + 1}`;
       const textSelector = `.text-${index + 1}`;
-      const start = `${index * 20 + 10}% 75%`;
-      const end = `${index * 20 + 30}% center`;
+      const start = `${index * 10 + 10}% 75%`;
+      const end = `${index * 20 + 20}% center`;
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -93,7 +93,7 @@ const DynamicQR = () => {
           </div>
           <div className="w-screen max-md:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw] scrollbar-hidden">
             <div
-              className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[3%] max-sm:w-[250%]"
+              className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[3%] max-sm:w-[300%]"
               ref={svgRefContainer}
             >
               <svg className="h-full w-full" width="1502" height="264" viewBox="0 0 1502 264" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -317,29 +317,29 @@ const DynamicQR = () => {
               </svg>
 
 
-              <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
+              <div className="w-full flex items-start justify-between gap-[4vw] py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[15vw]">
                 <div className=" w-[20%] overflow-hidden max-sm:w-[18%]">
-                  <p className="font-medium text-content-24 font-body  text-center text-1 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
+                  <p className="font-medium text-content-24 font-body  text-1 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
                   1. Merchant enters Payment Amount to generate a Dynamic QR Code
                   </p>
                 </div>
-                <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
-                  <p className="font-medium text-content-24 font-body  text-center text-2 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
+                <div className=" w-[20%] overflow-hidden max-sm:w-[18%]">
+                  <p className="font-medium text-content-24 font-body  text-2 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
                   2. Merchant presents a Dynamic  QR Code
                   </p>
                 </div>{" "}
-                <div className=" w-[18%] overflow-hidden max-sm:w-[18%]">
-                  <p className="font-medium text-content-24 font-body  text-center text-3 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
+                <div className=" w-[20%] overflow-hidden max-sm:w-[18%]">
+                  <p className="font-medium text-content-24 font-body  text-3 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
                   3. Customer scans QR Code
                   </p>
                 </div>{" "}
-                <div className=" w-[18%] overflow-hidden">
-                  <p className="font-medium text-content-24 font-body  text-center text-4 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
+                <div className=" w-[20%] overflow-hidden">
+                  <p className="font-medium text-content-24 font-body  text-4 max-sm:text-content-20 max-md:text-content-20 max-sm:text-left">
                   4. Customer enters PIN for authentication
                   </p>
                 </div>{" "}
-                <div className=" w-[18%] overflow-hidden">
-                  <p className="font-medium text-content-24 font-body  text-center text-5 max-sm:text-content-20 max-md:text-content-20  max-sm:text-left">
+                <div className=" w-[20%] overflow-hidden">
+                  <p className="font-medium text-content-24 font-body  text-5 max-sm:text-content-20 max-md:text-content-20  max-sm:text-left">
                   5. Payment  
 Successful
                   </p>

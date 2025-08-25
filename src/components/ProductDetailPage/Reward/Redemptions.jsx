@@ -30,8 +30,8 @@ const Redemptions = () => {
         const centerGroup = `${group} .centerGroup`;
         const lineSelector = `.line-${index + 1}`;
         const textSelector = `.text-${index + 1}`; 
-        const start = `${index * 20 + 10}% 75%`; 
-        const end = `${index * 20 + 30}% center`;
+        const start = `${index * 10 + 10}% 75%`; 
+        const end = `${index * 20 + 20}% center`;
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: svgRefContainer.current,
@@ -73,14 +73,15 @@ const Redemptions = () => {
     
     return (
         <>
-            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative max-sm:hidden max-md:hidden' ref={sectionRef}>
-                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
+            <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient relative max-sm:pb-[10vw]' ref={sectionRef}>
+                <div className='px-[4vw]  flex flex-col items-center  gap-[7vw]'>
                     <div className='w-[65%] '>
                         <Copy>
                             <p className='text-head-60 font-display text-center'>Redemptions</p>
                         </Copy>
                     </div>
-                    <div className='w-[60%]' ref={svgRefContainer}>
+                     <div className='w-screen max-md:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw] scrollbar-hidden'>
+                    <div className='w-[60%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[3%] max-sm:w-[200%] ' ref={svgRefContainer}>
                     
 <svg className='h-full w-full' width="994" height="264" viewBox="0 0 994 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -229,19 +230,51 @@ const Redemptions = () => {
 
 
 
-<div className='w-full flex items-start justify-between py-[2vw]'>
-                        <div className=' w-[28%] overflow-hidden'>
-                            <p className=' text-content-24 font-body  text-center text1  '>Partner defines the redemption rules for converting reward points to cash</p>
+<div className='w-full flex items-start justify-between gap-[4vw] py-[2vw] max-sm:pl-[5vw]'>
+                        <div className=' w-[30%] overflow-hidden'>
+                            <p className=' text-content-24 font-body text1  '>Partner defines the redemption rules for converting reward points to cash</p>
                         </div>
-                        <div className=' w-[20%] overflow-hidden'>
-                            <p className=' text-content-24 font-body  text-center text2  '>Customer converts reward points to cash</p>
+                        <div className=' w-[30%] overflow-hidden'>
+                            <p className=' text-content-24 font-body text2  '>Customer converts reward points to cash</p>
                         </div> 
-                        <div className=' w-[25%] overflow-hidden'>
-                            <p className=' text-content-24 font-body  text-center text3  '>Customer can access redemptions account statement</p>
+                        <div className=' w-[30%] overflow-hidden'>
+                            <p className=' text-content-24 font-body text3  '>Customer can access redemptions account statement</p>
                         </div> 
                         
                         </div>
 
+                    </div>
+                    </div>
+                    <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-md:flex max-sm:flex">
+                        <span className="text-content-18 max-md:text-content-20">Swipe</span>
+                        <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </section>

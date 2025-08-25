@@ -109,7 +109,7 @@ const Clients = () => {
           </div>
           <div className="col-start-3 col-span-1 row-start-2 border border-white/10 border-l-[0.5px] border-r-[0.5px] client p-[3vw]">
             <Image
-              src={"/assets/icons/clients/visa.svg"}
+              src={"/assets/icons/clients/visa2.svg"}
               width={200}
               height={200}
               alt=""
@@ -213,7 +213,7 @@ const Clients = () => {
             </div>
             <div className="col-start-2 max-sm:p-[10vw] max-md:p-[6.5vw] max-sm:h-[20vh] max-md:h-[15vh] border border-l-[0.5px] border-r-[0.5px] border-white/10">
               <Image
-                src={"/assets/icons/clients/visa.svg"}
+                src={"/assets/icons/clients/visa2.svg"}
                 width={200}
                 height={200}
                 alt=""

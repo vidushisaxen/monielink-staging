@@ -35,8 +35,8 @@ const Universal = () => {
       const centerGroup = `${group} .center-group`;
       const lineSelector = `.line${index + 1}`;
       const textSelector = `.text${index + 1}`;
-      const start = `${index * 20 + 10}% 75%`;
-      const end = `${index * 20 + 30}% center`;
+      const start = `${index * 10 + 10}% 75%`;
+      const end = `${index * 20 + 20}% center`;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: svgContainer.current,
@@ -92,7 +92,7 @@ const Universal = () => {
             </Copy>
           </div>
           <div className='w-screen  max-md:overflow-x-scroll flex flex-col items-center max-sm:items-start  max-sm:pr-[5vw] scrollbar-hidden'>
-            <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[3%] max-sm:w-[280%]" ref={svgContainer}>
+            <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[3%] max-sm:w-[300%]" ref={svgContainer}>
 
               <svg className="h-full w-full" width="1502" height="264" viewBox="0 0 1502 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -343,29 +343,29 @@ const Universal = () => {
               </svg>
 
 
-              <div className="w-full flex items-start justify-between py-[2vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[20vw]">
-                <div className=" w-[18%] overflow-hidden max-sm:w-[30%]">
-                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text1 textanim max-sm:text-left">
+              <div className="w-full flex items-start justify-between py-[2vw] gap-[4vw] max-sm:px-[5vw] max-sm:justify-start max-sm:gap-[20vw]">
+                <div className=" w-[20%] overflow-hidden max-sm:w-[30%]">
+                  <p className="font-medium text-content-24 max-md:text-content-20 font-body text1 textanim max-sm:text-left">
                   1. Customer purchases Universal Card
                   </p>
                 </div>
                 <div className=" w-[20%] overflow-hidden max-sm:w-[35%]">
-                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text2 textanim max-sm:text-left">
+                  <p className="font-medium text-content-24 max-md:text-content-20 font-body text2 textanim max-sm:text-left">
                   2. Customer Activates Universal Card on Issuer’s App Using SDK
                   </p>
                 </div>{" "}
                 <div className=" w-[20%] overflow-hidden max-sm:w-[35%]">
-                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text3 textanim max-sm:text-left">
+                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text3 textanim max-sm:text-left">
                   3. Customer Selects Virtual Instacard for Linking to Universal Card
                   </p>
                 </div>{" "}
-                <div className=" w-[18%] overflow-hidden max-sm:w-[36%]">
-                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text4 textanim max-sm:text-left">
+                <div className=" w-[20%] overflow-hidden max-sm:w-[36%]">
+                  <p className="font-medium text-content-24 max-md:text-content-20 font-body text4 textanim max-sm:text-left">
                   4. Virtual Instacard is Linked to Universal Instacard
                   </p>
                 </div>{" "}
-                <div className=" w-[18%] overflow-hidden max-sm:w-[38%]">
-                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text-center text5 textanim max-sm:text-left">
+                <div className=" w-[20%] overflow-hidden max-sm:w-[38%]">
+                  <p className="font-medium text-content-24 max-md:text-content-20 font-body  text5 textanim max-sm:text-left">
                   5. Customer uses Universal Instacard on POS/ATM
                   </p>
                 </div>

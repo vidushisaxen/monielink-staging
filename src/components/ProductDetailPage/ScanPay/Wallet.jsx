@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import {  USP5, USP6, USP7, USP8 } from '@/components/Icons';
+import {  USP2, USP5, USP6, USP7, USP8 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -28,7 +28,7 @@ const Wallet = ({heading}) => {
             description: "Static QR Code ",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <USP6 />
+            svgElement: <USP2 />
         },
         {
             description: "Dynamic QR Code ",
@@ -80,7 +80,7 @@ const Wallet = ({heading}) => {
                                 </svg>
                             </div>
                             <Copy>
-                                <p className={`text-content-20 max-md:text-center`}>{description}</p>
+                                <p className={`text-content-20 max-md:text-center max-sm:text-left`}>{description}</p>
                             </Copy>
                         </div>
                     ))}

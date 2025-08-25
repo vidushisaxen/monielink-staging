@@ -14,7 +14,7 @@ const SelfToken = () => {
     return (
         <>
             <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient max-md:mt-[-1px] relative max-sm:hidden max-md:hidden' ref={sectionRef}>
-                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
+                <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[7vw]'>
                     <div className='w-[95%] space-y-[9vw]'>
                         <Copy>
                             <h2 className='text-head-100 font-display text-center '>
@@ -187,18 +187,18 @@ const SelfToken = () => {
                         </svg>
 
 
-                        <div className='w-full flex items-start justify-between py-[2vw]'>
-                            <div className=' w-[18%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text1  '>Online Banking</p>
+                        <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw] pl-[1vw]'>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body text1  '>Online Banking</p>
                             </div>
-                            <div className=' w-[15%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text2  '>Mobile Banking</p>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body text2  '>Mobile Banking</p>
                             </div>
-                            <div className=' w-[15%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text3  '>ATM</p>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body text3  '>ATM</p>
                             </div>
-                            <div className=' w-[20%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text3  '>Contact Centre</p>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body text3  '>Contact Centre</p>
                             </div>
                         </div>
 
@@ -376,18 +376,18 @@ const SelfToken = () => {
 
 
 
-                        <div className='w-full flex items-start justify-between py-[2vw]'>
-                            <div className=' w-[18%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text1  '>Transaction Authentication</p>
+                        <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw] pl-[1vw]'>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body  text1  '>Transaction Authentication</p>
                             </div>
-                            <div className=' w-[15%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text2  '>2FA for Platform Sign-in</p>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body  text2  '>2FA for Platform Sign-in</p>
                             </div>
-                            <div className=' w-[15%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text3  '>Forgot Password / PIN</p>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body  text3  '>Forgot Password / PIN</p>
                             </div>
-                            <div className=' w-[20%] overflow-hidden'>
-                                <p className=' text-content-24 font-body  text-center text3  '>3DS – Web Payments</p>
+                            <div className=' w-[25%] overflow-hidden'>
+                                <p className=' text-content-24 font-body  text3  '>3DS – Web Payments</p>
                             </div>
                         </div>
 

@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { USP11, USP12, USP13, USP14} from "../Icons";
+import { USP11, USP12, USP13, USP14, USP8} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -36,7 +36,7 @@ const IntroDigitalLending = () => {
             description: "Collection services for due & delinquent payments as well as multi-bank collections ",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <USP14/>
+            svgElement: <USP8/>
         },
     ];
 

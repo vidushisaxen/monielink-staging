@@ -1,6 +1,6 @@
 'use client'
 import Copy from "../Animations/Copy";
-import { USP10, USP7, USP8, USP9} from "../Icons";
+import { USP1, USP7, USP8, USP9} from "../Icons";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -36,7 +36,7 @@ const IntroDigitalAccounts = ({introData}) => {
             description: "Rewards & Redemption Accounts",
             width: "w-[45%]",
             svg: svgRefs[3],
-            svgElement: <USP10/>
+            svgElement: <USP1/>
         }
     ];
 

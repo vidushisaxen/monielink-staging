@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import { USP10, USP14, USP2, USP6 } from '@/components/Icons';
+import { USP2, USP3, USP6, USP9 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -34,13 +34,13 @@ const Wallet = ({heading}) => {
             description: "Credit Repayments ",
             width: "w-[40%]",
             svg: svgRefs[2],
-            svgElement: <USP10 />
+            svgElement: <USP9 />
         },
         {
             description: "Collections for Due & Delinquent amounts",
             width: "w-[40%]",
             svg: svgRefs[3],
-            svgElement: <USP14/>
+            svgElement: <USP3/>
         }
     ];
 
@@ -79,7 +79,7 @@ const Wallet = ({heading}) => {
                                 </svg>
                             </div>
                             <Copy>
-                                <p className={`text-content-20 max-md:text-center`}>{description}</p>
+                                <p className={`text-content-20 max-md:text-center max-sm:text-left`}>{description}</p>
                             </Copy>
                         </div>
                     ))}

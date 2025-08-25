@@ -71,7 +71,7 @@ const Videos = () => {
         className="w-screen h-full overflow-hidden bg-gradient relative max-md:mt-[-1px] max-sm:pb-[15%]"
         ref={sectionRef}
       >
-        <div className="px-[4vw] py-[7vw] flex flex-col items-center  gap-[5vw] max-sm:px-[5.5vw]">
+        <div className="px-[4vw] pb-[7vw] flex flex-col items-center  gap-[5vw] max-sm:px-[5.5vw]">
           <div className="w-[90%] max-md:w-[100%] max-sm:w-full">
             
             <Copy>
@@ -81,7 +81,7 @@ const Videos = () => {
             </Copy>
           </div>
           <div className='w-screen overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-md:pr-[2vw] scrollbar-hidden'>
-          <div className="w-[18%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[5%] max-sm:w-[200%]" ref={svgContainer}>
+          <div className="w-[18%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-1/2 max-sm:w-[55%]" ref={svgContainer}>
            
             <svg className="h-full w-full" width="292" height="263" viewBox="0 0 292 263" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g className="svg-First">
@@ -131,7 +131,7 @@ const Videos = () => {
 
 
             <div className="w-full flex items-start justify-between py-[2vw] max-sm:justify-start max-sm:gap-[18vw]">
-              <div className=" w-full max-md:w-[30%] overflow-hidden max-sm:w-[30%]">
+              <div className=" w-full max-md:w-[30%] overflow-hidden max-sm:w-full">
                 <p className=" text-content-24 font-body max-md:text-content-20 text-center text-1  ">
                 Users can watch help videos to learn how to use products or services offered through the Monielink super SDK
 

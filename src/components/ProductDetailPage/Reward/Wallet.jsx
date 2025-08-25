@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Copy from '@/components/Animations/Copy';
 import { lineAnim } from '@/components/Animations/gsapAnimations';
-import {  USP10, USP11, USP12, USP9 } from '@/components/Icons';
+import {USP11, USP12, USP3, USP9 } from '@/components/Icons';
 
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -28,7 +28,7 @@ const Wallet = ({heading}) => {
             description: "Earn & Track  Reward Points for services offered through Monielink SDK ",
             width: "w-[40%]",
             svg: svgRefs[1],
-            svgElement: <USP10/>
+            svgElement: <USP3/>
         },
         {
             description: "Redeem earned Reward Points in a dedicated Reward Redemption Accounts",
@@ -79,7 +79,7 @@ const Wallet = ({heading}) => {
                                 </svg>
                             </div>
                             <Copy>
-                                <p className={`text-content-20 max-md:text-center`}>{description}</p>
+                                <p className={`text-content-20 max-md:text-center max-sm:text-left`}>{description}</p>
                             </Copy>
                         </div>
                     ))}

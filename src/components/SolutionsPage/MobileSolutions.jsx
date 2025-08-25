@@ -30,7 +30,7 @@ const features = [
     id: 3,
     title: "Card Issuing",
     description:
-      "<p>Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction limits across POS, ATM, and online channels.</p><p>With our Universal Instacard, users can access multiple virtual cards through a single physical card — delivering flexibility, security, and a superior user experience.</p>",
+      "<p>Monielink enables instant issuance of virtual Debit, Credit, Prepaid, and Universal cards directly within your mobile app through our Super SDK. Each card is securely stored in a digital card wallet for seamless online and offline use. Card control settings on the SDK allows customers to set-up transaction.</p><p>With our Universal Instacard, users can access multiple virtual cards through a single physical card. delivering flexibility, security, and a superior user experience.</p>",
     img: "/assets/images/solutions/slide-1.svg",
     href: "/solutions/card-issuing",
     svgRight: <CardIssuing/>,
@@ -39,7 +39,7 @@ const features = [
     id: 4,
     title: "Digital Lending",
     description:
-      "<p>End-to-end loan and credit card management through SnapCred — a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.</p><p>With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections — all on a secure, cloud-based infrastructure.</p>",
+      "<p>End-to-end loan and credit card management through SnapCred, a purpose-built solution that helps lenders and issuers create and scale high-performing credit portfolios.</p><p>With full-spectrum service delivery, SnapCred supports everything from origination and disbursement to repayment and collections, all on a secure, cloud-based infrastructure.</p>",
     img: "/assets/images/solutions/slide-1.svg",
     href: "/solutions/digital-lending",
     svgRight: <DigitalLending/>,
@@ -48,7 +48,7 @@ const features = [
     id: 5,
     title: "Dual Transaction Service",
     description:
-     "<p>You can unlock new revenue by transforming debit cards into virtual credit cards.</p><p>With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards — no new plastic required. Drive engagement and grow income with ease.</p>",
+     "<p>You can unlock new revenue by transforming debit cards into virtual credit cards.</p><p>With our patented Dual Transaction Service, you can offer instant credit card access through existing debit cards. No new plastic required. Drive engagement and grow income with ease.</p>",
     img: "/assets/images/solutions/slide-1.svg",
     href: "/solutions/dual-transaction-service",
     svgRight: <DualTransaction />,
@@ -57,7 +57,7 @@ const features = [
     id: 6,
     title: "KYC & Soft Token",
     description:
-      "<p>Monielink Super SDK, enables instant customer onboarding with:</p> <ul class='list-disc space-y-[0.5vw] pl-[3vw]'><li>Face capture supported with liveness detection which confirms that the captured face belongs to a live individual — preventing spoofing and impersonation.</li><li>Facial recognition technology to match live captures against BVN, NIN, or photo ID records in real time, ensuring high-confidence identity verification.  </li><li>ID Verifications to verify NIN, Driver’s License, International Passport etc.</li><li>Digital Business Verification for a registered business</li><li>Address Verification  for digitally verifying residence & business address</li><li>KYC Upgrades</li></ul><p>The solution also includes soft token- 2FA, adding an extra layer of security for account activation and ongoing transactions through a soft-token set-up on Verifyed App.</p>",
+      "<p>Monielink Super SDK, enables instant customer onboarding with:</p> <ul class='list-disc space-y-[0.5vw] pl-[3vw]'><li>Face capture supported with liveness detection which confirms that the captured face belongs to a live individual preventing spoofing and impersonation.</li><li>Facial recognition technology to match live captures against BVN, NIN, or photo ID records in real time, ensuring high-confidence identity verification.</li><li>ID Verifications to verify NIN, Driver’s License, International Passport etc.</li><li>Digital Business Verification for a registered business</li><li>Address Verification for digitally verifying residence & business address</li><li>KYC Upgrades</li></ul><p>The solution also includes soft token- 2FA, adding an extra layer of security for account activation and ongoing transactions through a soft-token set-up on Verifyed App.</p>",
     img: "/assets/images/solutions/slide-1.svg",
     href: "/solutions/kyc-and-soft-token",
     svgRight: <KYC/>,
@@ -141,7 +141,7 @@ function Accordion({ title, description, img, href, isOpen, onToggle, svgRight }
               className="overflow-hidden text-gray-2"
             >
               <div className="w-full flex flex-col max-sm:gap-[2vw] max-sm:pb-[5vw] max-md:items-center max-md:pb-[5vw] max-md:gap-[3vw]">
-                <div className="h-[50vw] w-auto mx-auto">
+                <div className="h-[50vw] w-[60vw] mx-auto ">
                   <svg
                   className="h-full w-full"
                     width="251"

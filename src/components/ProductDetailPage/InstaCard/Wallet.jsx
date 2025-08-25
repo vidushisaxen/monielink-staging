@@ -13,6 +13,7 @@ import {
   USP13,
   USP14,
   USP15,
+  USP4,
 } from '@/components/Icons';
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
@@ -32,7 +33,7 @@ const Wallet = () => {
     {
       description:
         'Secure online payments from virtual Instcards using Dynamic CVV ',
-      svgElement: <USP14 />,
+      svgElement: <USP4 />,
     },
     {
       description:
@@ -116,7 +117,7 @@ const Wallet = () => {
                     </svg>
                   </div>
                   <Copy>
-                    <p className="text-content-20 max-md:text-center">{description}</p>
+                    <p className="text-content-20 max-md:text-center max-sm:text-left">{description}</p>
                   </Copy>
                 </div>
               ))}

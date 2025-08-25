@@ -197,7 +197,7 @@ const introData ={
     {
       question: "How secure are Instacards?",
       answer:
-        "<p><ul class='list-disc px-[3vw] space-y-[1vw]'><li>Virtual Instacard features use of dynamic CVV for online usage, tokenized PANs for making contactless payments by tapping phone on POS terminals, and SDK-based card controls settings (limit setting, block/unblock, etc.) for fraud prevention. This makes Virtual Instcards way more secure in comparison with the physical card issuance.</li><li>Universal Instacards (Physical form) can be purchased by customers from bank branches, agents, retail locations such as  Airports, Grocery stores, drug stores etc besides ordering it online. Customers can link any of their virtual Instacards to a single Universal Instacard to start using it on any POS or ATM internationally.   </li></ul></p>",
+        "<p><ul class='list-disc px-[3vw] space-y-[1vw] max-sm:space-y-[2.5vw]'><li>Virtual Instacard features use of dynamic CVV for online usage, tokenized PANs for making contactless payments by tapping phone on POS terminals, and SDK-based card controls settings (limit setting, block/unblock, etc.) for fraud prevention. This makes Virtual Instcards way more secure in comparison with the physical card issuance.</li><li>Universal Instacards (Physical form) can be purchased by customers from bank branches, agents, retail locations such as  Airports, Grocery stores, drug stores etc besides ordering it online. Customers can link any of their virtual Instacards to a single Universal Instacard to start using it on any POS or ATM internationally.   </li></ul></p>",
     },
     {
       question: "Can one physical card link to multiple virtual cards?",

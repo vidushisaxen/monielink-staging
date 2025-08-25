@@ -50,7 +50,7 @@ const Values = ({ data }) => {
           </div>
         </div>
         <div className="w-[40%] pt-[5vw] max-sm:w-full max-md:w-[45%] max-sm:mt-[12vw]">
-          <div className="space-y-[10vw] ">
+          <div className="space-y-[7vw] ">
             {data.list.map((item, index) => (
               <div
                 key={index}

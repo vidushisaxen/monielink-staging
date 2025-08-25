@@ -25,21 +25,21 @@ export default function Features() {
         },
         {
             title: "Secure Environments",
-            description: "Each partner maintains full control over their infrastructure’s security settings — including network access, firewalls, and operating system configurations. They are responsible for enforcing measures that protect their data and applications from unauthorized access.",
+            description: "Each partner maintains full control over their infrastructure’s security settings including network access, firewalls, and operating system configurations. They are responsible for enforcing measures that protect their data and applications from unauthorized access.",
             width: "w-[45%]",
             svg: svgRefs[1],
             svgElement: <SecureEnvironmentIcon />
         },
         {
             title: "Dedicated Instant SaaS",
-            description: "Eliminate heavy upfront licensing costs with our revenue-sharing SaaS model. Each partner operates in a secure, isolated environment with full control over their data and infrastructure — ensuring compliance, privacy, and operational flexibility.",
+            description: "Eliminate heavy upfront licensing costs with our revenue-sharing SaaS model. Each partner operates in a secure, isolated environment with full control over their data and infrastructure ensuring compliance, privacy, and operational flexibility.",
             width: "w-[40%]",
             svg: svgRefs[2],
             svgElement: <DedicatedSaaSIcon />
         },
         {
             title: "Seamless integration",
-            description: "Seamlessly integrate digital banking experiences using our Super SDK front-end and dedicated cloud back-end — fully managed on Monielink’s Infrastructure through deployment on  a dedicated Instance. ",
+            description: "Seamlessly integrate digital banking experiences using our Super SDK front-end and dedicated cloud back-end fully managed on Monielink’s Infrastructure through deployment on a dedicated Instance.",
             width: "w-[55%]",
             svg: svgRefs[3],
             svgElement: <SeamlessIntegrationIcon />

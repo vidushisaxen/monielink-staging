@@ -831,7 +831,7 @@ export default function Header() {
           })}
 
           {/* Submenu */}
-          {menuOpen && openMenu && (
+          {/* {menuOpen && openMenu && (
             <div className={`absolute max-sm:left-[50%] transition-all duration-300 max-md:left-[45%]`}>
               {openMenu === "products" ? (
                 <ul className="grid grid-cols-2 gap-x-8 gap-y-4 text-white">
@@ -862,7 +862,7 @@ export default function Header() {
                 </ul>
               )}
             </div>
-          )}
+          )} */}
         </nav>
       </div>
     </div>

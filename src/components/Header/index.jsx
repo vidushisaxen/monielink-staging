@@ -575,7 +575,7 @@ export default function Header() {
     <>
       <header
         id="nav"
-        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 bg-black/40  max-md:backdrop-blur-[1vw]
+        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 max-md:bg-black/40  max-md:backdrop-blur-[1vw]
  ${hidden ? "-translate-y-full" : "translate-y-0"} ${menuOpen ? "max-md:backdrop-blur-none " : ""}`}
       >
         <div id="inner-nav" className="inner-nav">

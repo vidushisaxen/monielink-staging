@@ -54,7 +54,7 @@ export default function Solutions({solutionsData}) {
       className="h-full w-screen relative bg-gradient "
     >
       <div className="w-full flex flex-col items-center ">
-        <div className="text-center w-[70%] py-[10vw] max-sm:w-full max-md:w-[80%] max-sm:py-[50%] max-sm:px-[5vw] ">
+        <div className="text-center w-[70%] py-[10vw] max-sm:w-full max-md:w-[80%] max-sm:py-[30%] max-sm:px-[5vw] ">
           <Copy>
             <p className="text-head-60 font-display">
             {solutionsData.headline}
@@ -213,10 +213,10 @@ const SwiperCard = ({
         </svg>
       </div>
       <div className="py-[3vw] relative z-10 justify-center flex-col flex items-start ml-[2vw] gap-y-[2vw] h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw] max-sm:gap-y-[7vw]">
-        <div className=" w-[60%] max-sm:mx-0">
-          <p className="text-head-60 font-display">{title}</p>
+        <div className=" w-[60%] max-sm:mx-0 max-sm:w-[70w%]">
+          <p className="text-head-60 font-display max-sm:text-[7vw]">{title}</p>
         </div>
-        <div className="py-[1vw] w-[80%] max-sm:w-[60%] max-md:w-[80%]">
+        <div className="py-[1vw] w-[80%] max-sm:w-[70%] max-md:w-[80%]">
           <p className="text-content-20">{para}</p>
         </div>
 

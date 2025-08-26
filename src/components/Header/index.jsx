@@ -23,25 +23,6 @@ import ScrambleText from "../h/ScrambleText";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const socials = [
-  {
-    icon: <FacebookIcon />,
-    link: "/#",
-  },
-  {
-    icon: <LinkedinIcon />,
-    link: "/#",
-  },
-  {
-    icon: <InstagramIcon />,
-    link: "/#",
-  },
-  {
-    icon: <TwitterIcon />,
-    link: "/#",
-  },
-];
-
 const links = [
   {
     name: "About Us",
@@ -163,6 +144,7 @@ const products = [
 ]
 
 export default function Header() {
+   const [openMenu, setOpenMenu] = useState(null);
   const [hidden, setHidden] = useState(false);
   const [lastY, setLastY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -202,8 +184,11 @@ export default function Header() {
     const navBgT = navigationRef.current.querySelectorAll('.nav-bg-t');
     const navBgB = navigationRef.current.querySelectorAll('.nav-bg-b');
     const links = navigationRef.current.querySelectorAll(".m-nav-links");
+    const arrow = navigationRef.current.querySelectorAll(".m-nav-arrow");
 
-    if (menuOpen) {
+    
+
+    if (menuOpen ) {
       gsap.timeline()
         .to([navBgT, navBgB], {
           y: "0",
@@ -217,12 +202,25 @@ export default function Header() {
           ease: "power2.out",
           stagger: 0.05
         })
+        .to(arrow, {
+          y: "0",
+          opacity: 1,
+          delay: 0.35,
+          ease: "power2.out",
+          
+        })
     } else {
       gsap.timeline()
         .to(links, {
           y: "100%",
           opacity: 0,
-          duration: 0.7,
+          duration: 1,
+          ease: "power2.out",
+        })
+         .to(arrow, {
+          y: "105%",
+          opacity: 0,
+          duration: 1,
           ease: "power2.out",
         })
         .to(navBgT, {
@@ -238,6 +236,28 @@ export default function Header() {
         }, "<")
     }
   }, [menuOpen]);
+
+  // Animate submenu items when openMenu changes
+  useEffect(() => {
+    if (navigationRef.current && openMenu) {
+      const submenuItems = navigationRef.current.querySelectorAll(".submenu-item");
+      
+      gsap.fromTo(submenuItems, 
+        {
+          y: "100%",
+          opacity: 0
+        },
+        {
+          y: "0",
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          stagger: 0.03,
+          delay: 0.1
+        }
+      );
+    }
+  }, [openMenu]);
 
   // useGSAP(() => {
   //   const triggers = [];
@@ -304,6 +324,8 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastY, hoveredItem]);
+
+  
 
   const solutionsDropdown = (
     <div 
@@ -543,6 +565,11 @@ export default function Header() {
       </div>
     </div>
   );
+  useEffect(() => {
+  if (!menuOpen) {
+    setOpenMenu(null); 
+  }
+}, [menuOpen])
 
   return (
     <>
@@ -710,40 +737,140 @@ export default function Header() {
         </div>
       </header>
 
-      <div ref={navigationRef} className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen overflow-hidden top-0 left-0 ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}>
-        <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
-          <Image className="w-full h-full object-cover object-bottom" src={"/assets/shapes/menu-svg-t.svg"} alt="menu background image" width={400} height={600} />
-        </div>
-        <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
-          <Image className="w-full h-full object-cover object-top" src={"/assets/shapes/menu-svg-b.svg"} alt="menu background image" width={400} height={600} />
-        </div>
-        <div className="relative w-screen h-screen flex items-end">
-          <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow px-14 pt-24">
-            {links2.map((item, index) => {
-              const isActive = pathname === item.link;
-              return (
+<div ref={navigationRef}
+      className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen overflow-hidden top-0 left-0 transition-opacity duration-300 ${
+        menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+      }`}
+    >
+      <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
+        <Image
+          className="w-full h-full object-cover object-bottom"
+          src={"/assets/shapes/menu-svg-t.svg"}
+          alt="menu background image"
+          width={400}
+          height={600}
+        />
+      </div>
+
+      {/* Bottom background */}
+      <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
+        <Image
+          className="w-full h-full object-cover object-top"
+          src={"/assets/shapes/menu-svg-b.svg"}
+          alt="menu background image"
+          width={400}
+          height={600}
+        />
+      </div>
+
+      {/* Main Nav */}
+      <div className="relative w-screen h-screen flex items-end">
+        <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow px-14 pt-24">
+          {links2.map((item, index) => {
+            const isActive = pathname === item.link;
+            const hasSubmenu =
+              item.name.toLowerCase() === "products" ||
+              item.name.toLowerCase() === "solutions";
+
+            return (
+              <div
+                key={index}
+                className="flex justify-start items-center overflow-hidden transition-all duration-200 group"
+              >
                 <Link
                   href={item.link}
-                  key={index}
-                  className={`overflow-hidden transition-all duration-200 group ${isActive ? "text-primary-2" : "text-white"
-                    }`}
+                  className={`flex items-center gap-3 m-nav-links translate-y-full opacity-0 transition-all duration-500 ${
+                    isActive ? "text-primary-2" : "text-white"
+                  }`}
+                  style={{
+                    transitionDelay: menuOpen ? `${300 + index * 100}ms` : "0ms"
+                  }}
                 >
-                  <div className="flex items-center gap-3 m-nav-links translate-y-full opacity-0">
-                    <span>
-                      <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.5195 0H17.5195L7.51953 22.1687H0.519531L10.5195 0Z" fill="currentColor" />
-                      </svg>
-                    </span>
-                    <span className={`max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[4vw] font-medium`}>
-                      {item.name}
-                    </span>
-                  </div>
+                  <span>
+                    <svg
+                      width="18"
+                      height="23"
+                      viewBox="0 0 18 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.5195 0H17.5195L7.51953 22.1687H0.519531L10.5195 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span className="max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[4vw] font-medium">
+                    {item.name}
+                  </span>
                 </Link>
-              );
-            })}
-          </nav>
-        </div>
+
+                {hasSubmenu && (
+                  <button
+                    onClick={() =>
+                      setOpenMenu(
+                        openMenu === item.name.toLowerCase()
+                          ? null
+                          : item.name.toLowerCase()
+                      )
+                    }
+                    className={`ml-2 text-white transform duration-300 h-[3vw] w-[3vw] m-nav-arrow opacity-0 `}
+                  >
+                     <svg
+                                className="arrow next rotate-180 h-full w-full"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                  </button>
+                )}
+              </div>
+            );
+          })}
+
+          {/* Submenu */}
+          {menuOpen && openMenu && (
+            <div className={`absolute max-sm:left-[55%] transition-all duration-300 max-md:left-[40%]`}>
+              {openMenu === "products" ? (
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-4 text-white">
+                  {products.map((sub, i) => (
+                    <li key={i} className="flex items-center gap-2 submenu-item translate-y-full opacity-0 max-md:gap-4">
+                      <Link
+                        href={sub.link}
+                        className="text-content-16 !font-body capitalize max-md:text-[3vw]"
+                      >
+                        {sub.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="flex flex-col gap-4 text-white">
+                  {solutions.map((sub, i) => (
+                    <li key={i} className="flex items-center gap-2 submenu-item translate-y-full opacity-0">
+                     
+                      <Link
+                        href={sub.link}
+                        className="text-content-16 !font-body capitalize max-md:text-[3vw]"
+                      >
+                        {sub.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+        </nav>
       </div>
+    </div>
     </>
-  );
+  )
 }

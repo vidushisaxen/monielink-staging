@@ -100,7 +100,7 @@ const Diagram1 = () => {
                 <div className='w-[80%] space-y-[7vw] flex flex-col items-center max-sm:w-full'>
                     <Copy>
                         <h2 className='text-head-100 font-display text-center capitalize'>
-                            Simplified System Architecture: MoneyLink Integration
+                            Simplified System Architecture: MonieLink Integration
                         </h2>
                     </Copy>
                     <div className='mb-[10vw] max-sm:pb-[10vw]'>

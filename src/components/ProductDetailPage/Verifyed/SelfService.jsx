@@ -13,6 +13,7 @@ const SelfService = () => {
   const svgContainerRef = useRef(null);
 
   useGSAP(() => {
+    if(globalThis.innerWidth>1024){
     const svgGroups = ['.svgFirst', '.svgSecond', '.svgThird', '.svgFourth'];
 
     // Initial states
@@ -69,20 +70,23 @@ const SelfService = () => {
               ease: 'power2.out',
             }, '-=1');
         });
+      }
       }, []);
 
   return (
     <>
-      <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient max-md:mt-[-1px] relative max-sm:hidden max-md:hidden' ref={sectionRef}>
+      <section data-theme="orange" className='w-screen h-full overflow-hidden bg-gradient max-md:mt-[-1px] relative  max-sm:py-[5vw]' ref={sectionRef}>
         <div className='px-[4vw] py-[7vw] flex flex-col items-center  gap-[10vw]'>
-          <div className='w-[65%] space-y-[9vw]'>
+          <div className='w-[65%] space-y-[9vw] max-sm:w-full'>
             <Copy>
-              <h2 className='text-head-100 font-display text-center '>
+              <h2 className='text-head-100 font-display text-center  max-sm:text-left'>
             Self-Service Soft-Token Account Setup
               </h2>
             </Copy>
           </div>
-          <div className='w-[75%]' ref={svgContainerRef}>
+            <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-sm:pl-[10vw] scrollbar-hidden'>
+
+          <div className='w-[75%] max-sm:w-[250%]' ref={svgContainerRef}>
 
 
           <svg className='h-full w-full' width="1200" height="264" viewBox="0 0 1200 264" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,6 +283,38 @@ const SelfService = () => {
             </div>
 
           </div>
+          </div>
+          <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex max-sm:pr-[5.5vw]">
+                        <span className="text-content-18">Swipe</span>
+                        <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
+                            <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                            <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </div>
+                    </div>
         </div>
       </section>
     </>

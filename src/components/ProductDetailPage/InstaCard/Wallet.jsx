@@ -101,7 +101,7 @@ const Wallet = () => {
               {[...uspData, ...uspData].map(({ description, svgElement }, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-start gap-[1vw] flex-shrink-0 w-[300px] max-sm:w-[85%] max-md:w-[45%] max-md:flex-col max-sm:flex-row max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw]"
+                  className="flex items-center justify-start gap-[1vw] flex-shrink-0 w-[25vw] max-sm:w-[85%] max-md:w-[45%] max-md:flex-col max-sm:flex-row max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw]"
                 >
                   <div className="text-primary-2 mb-1 flex-shrink-0">
                     <svg

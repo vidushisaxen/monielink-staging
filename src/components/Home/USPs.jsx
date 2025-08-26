@@ -71,9 +71,9 @@ useGSAP(() => {
   return (
     <section data-theme="orange" id="usps" className="bg-gradient-to-r max-sm:w-screen from-[#FF5100] to-[#FE6E00] max-sm:py-[15%]">
       <div className="px-[4.5vw] py-[10%] max-sm:py-[8vw] max-md:py-[12vw] w-full flex flex-col items-center justify-center space-y-[8vw] ">
-        <div className="w-[90%] max-sm:w-[90%]">
+        <div className="w-[90%] max-sm:w-[100%]">
           <Copy>
-            <h2 className="text-white text-[5vw] max-sm:text-[10.5vw] max-sm:head-140 max-md:head-140 text-center font-display leading-[1.25]">
+            <h2 className="text-white text-[5vw] max-sm:text-[10.5vw] max-sm:text-head-140 max-md:head-140 text-center font-display leading-[1.25]">
             Scalable, Secure, and Cost-Efficient Banking Infrastructure
             </h2>
           </Copy>

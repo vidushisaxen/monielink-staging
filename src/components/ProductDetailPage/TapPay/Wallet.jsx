@@ -72,7 +72,7 @@ const Wallet = ({heading}) => {
                 <div className='w-full space-y-[3vw]'>
                 <div className="flex items-center justify-between gap-y-[5vw] w-full max-sm:flex-col max-md:justify-center max-md:gap-[4vw] max-md:gap-y-[8vw]  max-md:flex-wrap max-sm:items-start   max-sm:gap-y-[8vw] max-sm:py-[10vw] ">
                     {uspData.map(({ description, svg, svgElement }, index) => (
-                        <div key={index} className="flex items-center w-[23%] justify-start gap-[1vw] max-sm:w-[85%] max-md:w-[45%] max-md:flex-col max-sm:flex-row max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw]">
+                        <div key={index} className="flex items-center w-[25%] justify-start gap-[1vw] max-sm:w-[85%] max-md:w-[45%] max-md:flex-col max-sm:flex-row max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw]">
                             <div className="text-primary-2 mb-1">
                                 <svg width="105" height="85" viewBox="0 0 105 85" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[5vw] w-[5vw] max-md:h-[15vw] max-md:w-[15vw] max-sm:w-[18vw] max-sm:h-auto" ref={svg}>
                                     {svgElement}

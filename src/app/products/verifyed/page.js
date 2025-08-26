@@ -7,13 +7,13 @@ import Intro from "@/components/ProductDetailPage/Intro";
 import Values from "@/components/ProductDetailPage/Values";
 import Identity from "@/components/ProductDetailPage/Verifyed/Identity";
 import Address from "@/components/ProductDetailPage/Verifyed/Address";
-import IndentityMobile from "@/components/ProductDetailPage/Verifyed/IndentityMobile";
 import Wallet from "@/components/ProductDetailPage/Verifyed/Wallet";
 import { WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 import SelfService from "@/components/ProductDetailPage/Verifyed/SelfService";
 import SelfToken from "@/components/ProductDetailPage/Verifyed/SelfToken";
+import IdentityMobile from "@/components/ProductDetailPage/Verifyed/IdentityMobile";
 
 
 export const metadata = getPageMetadata({
@@ -53,7 +53,7 @@ export default function Verifyed() {
         />
         <Intro content={introData} />
         <Wallet/>
-        <IndentityMobile/>
+       <IdentityMobile/>
         <Identity />
         <Address />
         <SelfService/>

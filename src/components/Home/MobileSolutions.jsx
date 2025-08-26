@@ -246,6 +246,8 @@ const cardsData = [
     title: "Dual Transaction Service ",
     description:
       "DUO features the groundbreaking, patented Dual Transaction Service (DTS), which allows pre-approved customers to access their approved credit limits set on a virtual credit card using their existing debit cards. Customers can Simply Activate DTS on our Partner’s Mobile App integrated with our SDK to start using their virtual credit card using their existing Debit Cards.",
+    link: "/solutions/dual-transaction-service",
+
   },
   {
     id: "006",

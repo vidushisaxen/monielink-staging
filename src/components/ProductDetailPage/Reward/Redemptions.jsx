@@ -232,13 +232,13 @@ const Redemptions = () => {
 
 <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw] max-sm:pl-[5vw]'>
                         <div className=' w-[30%] overflow-hidden'>
-                            <p className=' text-content-24 font-body text1  '>Partner defines the redemption rules for converting reward points to cash</p>
+                            <p className=' text-content-24 font-body text1  max-md:text-content-20'>Partner defines the redemption rules for converting reward points to cash</p>
                         </div>
                         <div className=' w-[30%] overflow-hidden'>
-                            <p className=' text-content-24 font-body text2  '>Customer converts reward points to cash</p>
+                            <p className=' text-content-24 font-body text2 max-md:text-content-20 '>Customer converts reward points to cash</p>
                         </div> 
                         <div className=' w-[30%] overflow-hidden'>
-                            <p className=' text-content-24 font-body text3  '>Customer can access redemptions account statement</p>
+                            <p className=' text-content-24 font-body text3  max-md:text-content-20'>Customer can access redemptions account statement</p>
                         </div> 
                         
                         </div>

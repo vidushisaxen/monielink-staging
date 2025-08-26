@@ -202,7 +202,7 @@ export default function ContactForm() {
                 )}
               />
               <Button type="submit"
-              aria-label="submit form" className="cursor-pointer max-sm:mt-[10vw]">
+              aria-label="submit form" className="cursor-pointer max-sm:mt-[10vw] max-md:mt-[8vw]">
                <div className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]">
                 <div className="absolute left-0 top-0 flex justify-start">
                     <svg className="w-[5.5vw] h-auto max-sm:w-[25vw] max-md:w-[10vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">

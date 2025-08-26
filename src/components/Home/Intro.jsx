@@ -18,7 +18,7 @@ export default function Intro() {
       </div>
       <div className=" w-full flex items-center justify-center h-fit">
         <Copy>
-          <p className="text-[#A8A8A8] introTextDescription text-[1.04vw] max-sm:text-[4vw] w-[50%] max-md:w-[80%] max-sm:w-[90%] max-sm:text-left text-center font-display max-sm:py-[5vw] max-md:py-[5vw] max-md:text-[3vw]">
+          <p className="text-[#A8A8A8] introTextDescription text-[1.04vw] max-sm:text-[4vw] w-[50%] max-md:w-[85%] max-sm:w-[90%] max-sm:text-left text-center font-display max-sm:py-[5vw] max-md:py-[5vw] max-md:text-[3vw]">
           Our Plug & Play SDK can be Easily Integrated into Mobile Apps of Banks & FinTechs to deliver a wide variety of use cases without requiring them to build these functionalities from scratch. Our Backend Applications may be deployed in a dedicated instance on our Cloud Infrastructure providing our partners full control over its access, management , security , data-protection & business continuity.
           </p>
         </Copy>

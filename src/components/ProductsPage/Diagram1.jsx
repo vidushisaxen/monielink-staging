@@ -408,7 +408,7 @@ const Diagram1 = () => {
                     </div>
 
                 </div>
-                <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-3 justify-end hidden max-sm:flex max-md:flex max-sm:mt-[10vw]">
+                <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-3 justify-end hidden max-sm:flex max-sm:mt-[10vw] max-md:hidden">
                     <span className="text-content-18 max-md:text-content-20">Swipe</span>
                     <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                         <svg

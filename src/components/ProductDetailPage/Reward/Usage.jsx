@@ -234,14 +234,14 @@ const Usage = () => {
 
             <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw] max-sm:pl-[5vw]'>
               <div className=' w-[33%] overflow-hidden'>
-                <p className=' text-content-24 font-body  texts-1  '>Partner defines the rule-logic for usage of balance in redemption Account</p>
+                <p className=' text-content-24 font-body  texts-1  max-md:text-content-20'>Partner defines the rule-logic for usage of balance in redemption Account</p>
               </div>
               <div className=' w-[30%] overflow-hidden'>
-                <p className=' text-content-24 font-body  texts-2  '>Customer is able to use balance
+                <p className=' text-content-24 font-body  texts-2  max-md:text-content-20'>Customer is able to use balance
 available in redemption account </p>
               </div>
               <div className=' w-[30%] overflow-hidden'>
-                <p className=' text-content-24 font-body  texts-3  '>Customer can access redemption account statement to track usage</p>
+                <p className=' text-content-24 font-body  texts-3  max-md:text-content-20'>Customer can access redemption account statement to track usage</p>
               </div>
 
             </div>

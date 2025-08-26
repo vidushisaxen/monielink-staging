@@ -40,9 +40,9 @@ const CustomerBenefits = () => {
           {benefits.map((item, index) => (
             <div
               key={item.id}
-              className="flex flex-col items-start justify-center gap-[3vw] w-[28%] max-sm:w-full max-sm:gap-[5vw]"
+              className="flex flex-col items-start justify-center gap-[3vw] w-[28%] max-sm:w-full max-sm:gap-[5vw] max-md:w-[45%]"
             >
-              <div className="rounded-full h-[3.5vw] w-[3.5vw] flex items-center justify-center fadeupanim text-content-20 border border-white fadeupanim max-sm:h-[10vw] max-sm:w-[10vw]">
+              <div className="rounded-full h-[3.5vw] w-[3.5vw] flex items-center justify-center fadeupanim text-content-20 border border-white fadeupanim max-sm:h-[10vw] max-sm:w-[10vw] max-md:h-[5vw] max-md:w-[5vw]">
                 {item.id}
               </div>
               <Copy delay={0.5 + index * 0.1}>

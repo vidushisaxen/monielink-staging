@@ -484,7 +484,7 @@ export default function Header() {
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
   
-      <div className="relative h-[17vw] w-auto mx-auto ml-[-2vw]">
+      <div className="relative h-[17vw] w-auto mx-auto pl-[1vw] ml-[-3vw]">
          <div className="absolute inset-0 z-0 pointer-events-none h-full w-full">
           <svg className="h-full w-full dropdown-svg" width="419" height="369" viewBox="0 0 419 369" fill="none" xmlns="http://www.w3.org/2000/svg">
 <foreignObject x="-84.804" y="-84.9251" width="588.755" height="539.19"><div xmlns="http://www.w3.org/1999/xhtml" style={{
@@ -567,7 +567,7 @@ export default function Header() {
   );
   useEffect(() => {
   if (!menuOpen) {
-    setOpenMenu(null); 
+    setOpenMenu(false); 
   }
 }, [menuOpen])
 
@@ -575,8 +575,8 @@ export default function Header() {
     <>
       <header
         id="nav"
-        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 max-sm:bg-black/40 max-md:backdrop-blur-[1vw]
- ${hidden ? "-translate-y-full" : "translate-y-0"} ${menuOpen ? "max-md:backdrop-blur-none" : ""}`}
+        className={`fixed px-[2.55vw] py-[1.51vw] top-0 left-0 w-screen  z-[300] transform transition-transform   duration-300  max-sm:px-[6vw] max-md:px-[6vw] max-md:py-4 bg-black/40  max-md:backdrop-blur-[1vw]
+ ${hidden ? "-translate-y-full" : "translate-y-0"} ${menuOpen ? "max-md:backdrop-blur-none " : ""}`}
       >
         <div id="inner-nav" className="inner-nav">
           <div
@@ -640,7 +640,7 @@ export default function Header() {
                 </defs>
               </svg>
             </div>
-            <div className="flex items-center justify-between w-full h-full relative z-10 pointer-events-auto">
+            <div className="flex items-center justify-between w-full h-full relative z-10 pointer-events-auto ">
               {/* Logo */}
               <Link
                 href={"/"}
@@ -650,7 +650,7 @@ export default function Header() {
                 <Logo className="h-full w-full" />
               </Link>
               <div
-                className="hidden max-md:block max-sm:block"
+                className="hidden max-md:block max-sm:block "
               >
                 <HamButton
                   onClick={handleMenuButtonClick}
@@ -738,8 +738,8 @@ export default function Header() {
       </header>
 
 <div ref={navigationRef}
-      className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen overflow-hidden top-0 left-0 transition-opacity duration-300 ${
-        menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+      className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen bg-black/40 overflow-hidden top-0 left-0 transition-opacity duration-300 ${
+        menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 "
       }`}
     >
       <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
@@ -752,7 +752,6 @@ export default function Header() {
         />
       </div>
 
-      {/* Bottom background */}
       <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
         <Image
           className="w-full h-full object-cover object-top"
@@ -763,10 +762,9 @@ export default function Header() {
         />
       </div>
 
-      {/* Main Nav */}
       <div className="relative w-screen h-screen flex items-end">
-        <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow px-14 pt-24">
-          {links2.map((item, index) => {
+        <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow max-sm:px-8 max-sm:pt-14 max-md:px-12 max-md:pt-20">
+          { menuOpen && links2.map((item, index) => {
             const isActive = pathname === item.link;
             const hasSubmenu =
               item.name.toLowerCase() === "products" ||
@@ -782,9 +780,6 @@ export default function Header() {
                   className={`flex items-center gap-3 m-nav-links translate-y-full opacity-0 transition-all duration-500 ${
                     isActive ? "text-primary-2" : "text-white"
                   }`}
-                  style={{
-                    transitionDelay: menuOpen ? `${300 + index * 100}ms` : "0ms"
-                  }}
                 >
                   <span>
                     <svg
@@ -837,14 +832,14 @@ export default function Header() {
 
           {/* Submenu */}
           {menuOpen && openMenu && (
-            <div className={`absolute max-sm:left-[55%] transition-all duration-300 max-md:left-[40%]`}>
+            <div className={`absolute max-sm:left-[50%] transition-all duration-300 max-md:left-[45%]`}>
               {openMenu === "products" ? (
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-4 text-white">
+                <ul className="grid grid-cols-2 gap-x-8 gap-y-4 text-white">
                   {products.map((sub, i) => (
                     <li key={i} className="flex items-center gap-2 submenu-item translate-y-full opacity-0 max-md:gap-4">
                       <Link
                         href={sub.link}
-                        className="text-content-16 !font-body capitalize max-md:text-[3vw]"
+                        className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
                       >
                         {sub.name}
                       </Link>
@@ -858,7 +853,7 @@ export default function Header() {
                      
                       <Link
                         href={sub.link}
-                        className="text-content-16 !font-body capitalize max-md:text-[3vw]"
+                        className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
                       >
                         {sub.name}
                       </Link>

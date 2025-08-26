@@ -100,7 +100,7 @@ export default function Solutions({solutionsData}) {
                 // centeredSlides: true,
               },
             }}
-            className="mySwiper !px-[10vw] translate-x-[-5%] max-md:!px-[3vw] w-screen !overflow-y-visible max-sm:h-[55vh]"
+            className="mySwiper !px-[10vw] translate-x-[-5%] max-md:!px-[3vw] max-sm:translate-x-0 w-screen !overflow-y-visible max-sm:h-[55vh] max-md:translate-x-[5%] max-md:mr-[10vw] "
           >
             {solutionsData.cards.map((card, cardIndex) => (
               <SwiperSlide
@@ -149,8 +149,8 @@ const SwiperCard = ({
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-[65vh] max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale max-sm:h-[50vh]">
-      <div className="absolute h-full w-full max-md:w-[42vw] max-md:pb-[1vw] max-md:h-[38vh] max-sm:w-[85vw] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:px-[1vw] ">
+    <div className="card relative h-[65vh] max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale max-sm:h-[50vh] max-md:h-[45vh]">
+      <div className="absolute h-full w-full max-md:w-[42vw] max-md:pb-[1vw] max-md:h-[45vh] max-sm:w-[85vw] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:px-[1vw] ">
         <svg
           width="466"
           height="638"
@@ -213,8 +213,8 @@ const SwiperCard = ({
         </svg>
       </div>
       <div className="py-[3vw] relative z-10 justify-center flex-col flex items-start ml-[2vw] gap-y-[2vw] h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw] max-sm:gap-y-[7vw]">
-        <div className=" w-[60%] max-sm:mx-0 max-sm:w-[70w%]">
-          <p className="text-head-60 font-display max-sm:text-[7vw]">{title}</p>
+        <div className=" w-[60%] max-sm:mx-0 max-sm:w-[70%] max-md:w-[80%]">
+          <p className="text-head-60 font-display max-sm:text-[7vw] max-md:text-[5vw]">{title}</p>
         </div>
         <div className="py-[1vw] w-[80%] max-sm:w-[70%] max-md:w-[80%]">
           <p className="text-content-20">{para}</p>

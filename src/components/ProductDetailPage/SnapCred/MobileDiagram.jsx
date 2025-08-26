@@ -497,7 +497,7 @@ const MobileDiagram = () => {
               </defs>
             </svg>
 
-            <div className="w-full flex max-sm:translate-x-[-8%] max-md:translate-x-[-40%] max-md:gap-[37vw] items-start justify-start py-[2vw] max-sm:px-[5vw] max-md:px-[2vw] max-sm:justify-between  max-sm:w-[130%] max-sm:gap-[10vw]">
+            <div className="w-full flex max-sm:translate-x-[-8%] max-md:translate-x-[-40%] max-md:gap-[35vw] items-start justify-start py-[2vw] max-sm:px-[5vw] max-md:px-[2vw] max-sm:justify-between  max-sm:w-[130%] max-sm:gap-[10vw]">
               <div className=" w-[18%] max-md:w-[30%] max-sm:w-[25%]">
                 <ul className="max-sm:pl-[2vw] list-disc space-y-[0.8vw] font-medium text-content-24 font-body  text-center text1 textanim max-md:text-content-20 max-sm:pt-0 max-md:pt-[3vw]  max-sm:text-content-20 max-sm:text-left max-md:text-left">
                   <li className="max-md:text-nowrap">Loan/Credit Card Eligibility Check</li>

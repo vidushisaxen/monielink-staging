@@ -93,7 +93,7 @@ export default function MobileSolutions({ allowMultiple = false }) {
   return (
     <section
       ref={sectionRef}
-      className="px-[7vw] max-sm:py-[15%] w-screen max-sm:overflow-x-hidden h-fit relative max-md:py-[7%] hidden max-md:block "
+      className="px-[7vw] max-sm:py-[15%] w-screen max-sm:overflow-x-hidden h-fit relative max-md:py-[15%] hidden max-md:block "
     >
       <div className="w-full space-y-[2vw]">
         {features.map((f, i) => (
@@ -141,7 +141,7 @@ function Accordion({ title, description, img, href, isOpen, onToggle, svgRight }
               className="overflow-hidden text-gray-2"
             >
               <div className="w-full flex flex-col max-sm:gap-[2vw] max-sm:pb-[5vw] max-md:items-center max-md:pb-[5vw] max-md:gap-[3vw]">
-                <div className="h-[50vw] w-[60vw] mx-auto ">
+                <div className="h-[50vw] w-[60vw] mx-auto  max-md:h-[30vw]">
                   <svg
                   className="h-full w-full"
                     width="251"

@@ -267,16 +267,16 @@ const Rewards = () => {
             </svg>
             <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw] max-sm:pl-[5vw]'>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text1  '>Partner defines the reward point rules for all usage scenarios</p>
+                <p className=' text-content-24 font-body  text1  max-md:text-content-20'>Partner defines the reward point rules for all usage scenarios</p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text2  '>Customer uses Monielink services </p>
+                <p className=' text-content-24 font-body  text2  max-md:text-content-20'>Customer uses Monielink services </p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text3  '>Customer earns reward points </p>
+                <p className=' text-content-24 font-body  text3 max-md:text-content-20 '>Customer earns reward points </p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text3  '>Customer can access  reward points statement</p>
+                <p className=' text-content-24 font-body  text3  max-md:text-content-20'>Customer can access  reward points statement</p>
               </div>
             </div>
 

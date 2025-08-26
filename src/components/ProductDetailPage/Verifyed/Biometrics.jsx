@@ -82,9 +82,9 @@ if(globalThis.innerWidth>1024){
         ref={sectionRef}
       >
         <div className="px-[4vw] flex flex-col items-center  gap-[7vw] max-sm:px-[0vw] max-sm:items-start max-sm:pb-[20%] max-md:px-[5vw] max-sm:gap-[15vw]">
-            <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-sm:pl-[10vw] scrollbar-hidden'>
+            <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-sm:pl-[10vw] scrollbar-hidden max-md:overflow-x-scroll'>
 
-          <div className="w-[50%] max-md:w-[80%] max-sm:w-[180%]" ref={svgContainer}>
+          <div className="w-[50%] max-md:w-[120%] max-sm:w-[180%] max-sm:translate-x-0 max-md:translate-x-[15%]" ref={svgContainer}>
            
             <svg className="w-full h-full max-sm:scale-[1.1]" width="884" height="264" viewBox="0 0 884 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -284,7 +284,7 @@ if(globalThis.innerWidth>1024){
           </div>
 
             </div>
-  <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex max-sm:pr-[5.5vw]">
+  <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex max-md:flex max-sm:pr-[5.5vw]">
                         <span className="text-content-18">Swipe</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg

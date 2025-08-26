@@ -28,7 +28,7 @@ const Diagram = () => {
           </div>
             <div className='w-screen  overflow-x-scroll flex flex-col items-center max-sm:items-start  max-sm:pr-[5vw] scrollbar-hidden'>
 
-          <div className="w-[85%] max-md:w-[150%] max-md:pr-[10vw] max-md:translate-x-[20%] max-sm:translate-x-[2%] max-sm:w-[300%] fadeupanim" ref={svgContainer}>
+          <div className="w-[85%] max-md:w-[180%] max-md:pr-[10vw] max-md:translate-x-[30%] max-sm:translate-x-[2%] max-sm:w-[300%] fadeupanim" ref={svgContainer}>
            
            <svg className="h-full w-full" width="1582" height="426" viewBox="0 0 1582 426" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.800781" y="0.712402" width="224.875" height="424.075" rx="20.0516" stroke="white"/>

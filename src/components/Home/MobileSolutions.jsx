@@ -58,8 +58,8 @@ const [activeIndex, setActiveIndex] = useState(1);
       className="h-full w-screen max-sm:pb-[15vw] max-md:pb-[12vw] relative overflow-hidden bg-[#050505]"
     >
       <div className="w-screen overflow-x-scroll max-sm:mb-[10vw] scrollbar-hidden">
-        <div className="border-t w-fit flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw]">
-          <div className="w-[25vw] max-sm:w-[25vw] max-md:w-[1vw] h-full" />
+        <div className="border-t w-fit flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw] max-md:mb-[10vw] max-sm:mb-[3vw]">
+          <div className="w-[25vw] max-sm:w-[25vw] max-md:w-[1vw] h-full " />
           {[
             "Digital Banking ",
             "Merchant Acquiring ",
@@ -71,7 +71,7 @@ const [activeIndex, setActiveIndex] = useState(1);
           ].map((item, index) => (
             <div
               key={index}
-              className="border-l py-5 w-[15vw] max-sm:min-w-[50vw] max-md:w-[32vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] active-title"
+              className="border-l py-5 w-[15vw] max-sm:min-w-[50vw] max-md:w-[38vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] active-title "
               onClick={() => handleCardClick(index)}
             >
               <div className="text-[#A8A8A8] text-[0.95vw] max-md:text-[3vw] max-sm:text-[4vw] !text-center w-[15vw] max-sm:w-full max-md:w-full">
@@ -131,7 +131,7 @@ const [activeIndex, setActiveIndex] = useState(1);
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className=" flex items-center justify-center gap-5 max-sm:pt-[15vw] max-md:pt-[5vw]">
+        <div className=" flex items-center justify-center gap-5 max-sm:pt-[15vw] max-md:pt-[25vw]">
           <ArrowButton
             onClick={handlePrevClick}
             arrowColor={"#ffffff"}
@@ -155,7 +155,7 @@ const SwiperCard = ({ title, id, description, link }) => {
 
   return (
     <div className="card relative h-fit  w-full max-sm:px-0 max-md:px-0">
-      <div className="absolute h-[105%] max-md:w-[65vw] max-sm:h-[105%] max-sm:w-full w-full">
+      <div className="absolute h-[105%] max-md:w-[65vw] max-sm:h-[105%] max-sm:w-full w-full max-md:h-[120%]">
         <svg
           width="330"
           height="530"
@@ -196,12 +196,12 @@ const SwiperCard = ({ title, id, description, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="w-full h-[60vh] max-sm:h-[60vh] max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw]  flex flex-col justify-between max-sm:justify-between max-md:justify-start max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[8vw] relative z-[10] pt-[10vw]">
+      <div className="w-full h-[60vh] max-sm:h-[60vh] max-md:pt-[13vw]   max-sm:pt-[10vw] max-sm:px-[15vw]  flex flex-col justify-between max-sm:justify-between max-md:justify-between max-sm:gap-0 max-md:gap-[4vw] px-[15vw] max-md:px-[8vw] relative z-[10] pt-[10vw]">
         <p className="text-[#A8A8A8] max-sm:text-[3.5vw] max-md:text-[2.5vw]">{id}</p>
 
         <div className="w-full flex flex-col gap-[5vw] max-sm:gap-[5vw] max-md:gap-[2vw]">
-          <h4 className="text-head-60 font-light w-[70vw]">{title}</h4>
-          <p className="text-[#A8A8A8] max-sm:text-[3.25vw] max-md:text-[2.5vw]">{description}</p>
+          <h4 className="text-head-60 font-light w-[70vw] max-md:w-[50vw]">{title}</h4>
+          <p className="text-[#A8A8A8] max-sm:text-[3.25vw] max-md:text-[2.2vw]">{description}</p>
         </div>
         <div className="max-sm:py-0 max-md:py-[10vw]">
 

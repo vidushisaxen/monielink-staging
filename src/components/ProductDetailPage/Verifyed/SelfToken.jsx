@@ -63,7 +63,7 @@ const SelfToken = () => {
                         <div className='w-[70%] fadeupanim flex items-center justify-center max-sm:flex-wrap max-sm:w-full max-sm:gap-[5vw] max-sm:gap-y-[10vw]' ref={svgContainer}>
                             {data.slice(0, 4).map((item, index) => (
                                 <div key={index} className='max-sm:w-[40vw] max-sm:h-auto'>
-                                    <div className='max-sm:h-[42vw] max-sm:w-[42vw]'>
+                                    <div className='max-sm:h-[42vw] max-sm:w-[42vw] max-md:h-[20vw] max-md:w-[20vw]'>
                                     <Image
                                         src={item.svg}
                                         height={210}
@@ -71,7 +71,7 @@ const SelfToken = () => {
                                         alt={item.title}
                                     />
                                     </div>
-                                    <p className="text-content-24 font-body mx-[1vw] max-sm:w-[80%] max-sm:text-content-20 max-sm:ml-[5vw]">{item.title}</p>
+                                    <p className="text-content-24 font-body mx-[1vw] max-sm:w-[80%] max-sm:text-content-20 max-sm:ml-[5vw] max-md:text-content-20">{item.title}</p>
                                 </div>
                             ))}
 
@@ -84,7 +84,7 @@ const SelfToken = () => {
 
                             {data.slice(4, 8).map((item, index) => (
                                 <div key={index} className='max-sm:w-[40vw] max-sm:h-auto'>
-                                    <div className='max-sm:h-[42vw] max-sm:w-[42vw]'>
+                                    <div className='max-sm:h-[42vw] max-sm:w-[42vw] max-md:h-[20vw] max-md:w-[20vw]'>
                                     <Image
                                         src={item.svg}
                                         height={210}
@@ -92,7 +92,7 @@ const SelfToken = () => {
                                         alt={item.title}
                                     />
                                     </div>
-                                    <p className="text-content-24 font-body mx-[1vw] max-sm:w-[80%] max-sm:text-content-20 max-sm:ml-[5vw]">{item.title}</p>
+                                    <p className="text-content-24 font-body mx-[1vw] max-sm:w-[80%] max-sm:text-content-20 max-sm:ml-[5vw] max-md:text-content-20">{item.title}</p>
                                 </div>
                             ))}
                         </div>

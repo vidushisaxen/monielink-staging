@@ -145,9 +145,9 @@ const BlogList = () => {
                       technology
                     </p>
                     <SecondaryButton href={"#"} text={"Read More"} className="max-sm:hidden max-md:hidden"/>
-                    <Link href={"#"} className="hidden max-sm:flex max-md:flex round relative ml-[-1vw] items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
+                    <Link href={"#"} className="hidden max-sm:flex max-md:flex round relative ml-[-1vw] items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] max-md:min-w-[16vw]">
                         <div className="absolute inset-0 z-10">
-                          <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-3 justify-center">
+                          <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-3 justify-center ">
                             <span className="text-content-18">Read More</span>
                             <div className="rotate-180 text-white flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
                               <svg
@@ -263,7 +263,7 @@ const BlogList = () => {
                       </h4>
                       <p className="text-content-20">{blog.description}</p>
 
-                      <Link href={blog.link} className="round relative ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw]">
+                      <Link href={blog.link} className="round relative ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] max-md:min-w-[16vw]">
                         <div className="absolute inset-0 z-10">
                           <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center">
                             <span className="text-content-18">Read More</span>

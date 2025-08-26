@@ -84,9 +84,9 @@ const SelfService = () => {
               </h2>
             </Copy>
           </div>
-            <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-sm:pl-[10vw] scrollbar-hidden'>
+            <div className='w-screen max-sm:overflow-x-scroll flex flex-col items-center max-sm:items-start max-sm:pr-[5vw] max-sm:pl-[10vw] scrollbar-hidden max-md:overflow-x-scroll '>
 
-          <div className='w-[75%] max-sm:w-[250%]' ref={svgContainerRef}>
+          <div className='w-[75%] max-sm:w-[250%] max-md:w-[150%] max-sm:translate-x-0 max-md:translate-x-[20%]' ref={svgContainerRef}>
 
 
           <svg className='h-full w-full' width="1200" height="264" viewBox="0 0 1200 264" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,22 +269,22 @@ const SelfService = () => {
 </svg>
             <div className='w-full flex items-start justify-between gap-[4vw] py-[2vw]'>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-1  '>Customer signs up on partner’s mobile app</p>
+                <p className=' text-content-24 font-body  text-1  max-md:text-content-20'>Customer signs up on partner’s mobile app</p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-2  '>SDK generates a QR code to be scanned using VERIFYED App </p>
+                <p className=' text-content-24 font-body  text-2  max-md:text-content-20'>SDK generates a QR code to be scanned using VERIFYED App </p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-3  '>Self-assisted process of verifying customer </p>
+                <p className=' text-content-24 font-body  text-3  max-md:text-content-20'>Self-assisted process of verifying customer </p>
               </div>
               <div className=' w-[20%] overflow-hidden'>
-                <p className=' text-content-24 font-body  text-4  '>Soft-Token account is ready for use</p>
+                <p className=' text-content-24 font-body  text-4  max-md:text-content-20'>Soft-Token account is ready for use</p>
               </div>
             </div>
 
           </div>
           </div>
-          <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex max-sm:pr-[5.5vw]">
+          <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-5 justify-end hidden max-sm:flex max-sm:pr-[5.5vw] max-md:flex">
                         <span className="text-content-18">Swipe</span>
                         <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
                             <svg

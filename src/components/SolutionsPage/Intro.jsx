@@ -49,15 +49,15 @@ const Intro = () => {
     return (
         <section data-theme="orange" className="bg-gradient overflow-hidden h-screen max-md:h-[70vh] max-sm:h-[85vh] relative">
             <div className="px-[4vw] flex justify-center items-center h-full w-full relative">
-                <div className="text-center text-white w-1/2 flex flex-col items-center gap-10 max-sm:w-full">
+                <div className="text-center text-white w-1/2 flex flex-col items-center gap-10 max-sm:w-full max-md:w-[60%]">
                     <Copy>
-                        <h2 className="text-head-100 font-display">Find the Right Solution for You                        </h2>
+                        <h2 className="text-head-100 font-display">Find the Right Solution for You  </h2>
                     </Copy>
                     <Copy>
-                        <p className="text-content-20 w-3/5 max-sm:w-[85%]">A comprehensive suite of solutions, supported by powerful enablers like digital KYC, secure soft-token 2FA, personalized loyalty programs, and chatbot-based customer support. Together, our solutions drive scalable growth, boost operational efficiency, and deliver a superior customer experience. </p>
+                        <p className="text-content-20 w-3/5 max-sm:w-[85%] max-md:w-full">A comprehensive suite of solutions, supported by powerful enablers like digital KYC, secure soft-token 2FA, personalized loyalty programs, and chatbot-based customer support. Together, our solutions drive scalable growth, boost operational efficiency, and deliver a superior customer experience. </p>
                     </Copy>
                 </div>
-                <div className="absolute w-[75%] max-sm:w-[190%] max-md:w-[120vw]">
+                <div className="absolute w-[75%] max-sm:w-[190%] max-md:w-[150%]">
 <svg ref={svgRef} className="h-full w-full" width="1453" height="1453" viewBox="0 0 1453 1453" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g ref={group1Ref}>
 <path className="svg-path" d="M487.521 380.821C542.618 285.376 664.669 252.686 760.096 307.815L1071.63 487.793C1167.02 542.898 1199.69 664.884 1144.61 760.285L964.693 1071.93C909.599 1167.36 787.57 1200.05 692.147 1144.94L380.598 965.015C285.198 909.92 252.513 787.926 307.59 692.516L487.521 380.821Z" stroke="#FF8A4A"/>

@@ -19,8 +19,8 @@ export default function Clients() {
       width: "10vw",
       right: "5%",
       top: "5%",
-      mobileRight: isTab ?"-5%": "15%",
-      mobileTop: "-30%",
+      mobileRight: isTab ?"-20%": "15%",
+      mobileTop: isTab?"-40%":"-30%",
       mobileWidth: "18vw",
     },
     {
@@ -29,7 +29,7 @@ export default function Clients() {
       right: "25%",
       top: "25%",
       mobileRight: isTab ?"25%": "20%",
-      mobileTop: "-10%",
+      mobileTop: isTab?"-10%":"-10%",
       mobileWidth: "15vw",
     },
     {
@@ -37,7 +37,7 @@ export default function Clients() {
       width: "7vw",
       right: "10%",
       top: "35%",
-      mobileRight: "5%",
+      mobileRight: isTab?"-15%":"5%",
       mobileTop: "5%",
       mobileWidth: "10vw",
     },
@@ -47,7 +47,7 @@ export default function Clients() {
       right: "40%",
       top: "50%",
       mobileRight: isTab ?"43%": "50%",
-      mobileTop: isTab ?"27%": "20%",
+      mobileTop: isTab ?"35%": "20%",
       mobileWidth: "15vw",
     },
     {
@@ -60,12 +60,12 @@ export default function Clients() {
       mobileWidth: "15vw",
     },
     {
-      src: "/assets/icons/clients/visa.svg",
+      src: "/assets/icons/clients/visa2.svg",
       width: "6vw",
       right: "3%",
       top: "75%",
       mobileRight: isTab ?"-10%": "5%",
-      mobileTop: isTab ? "90%": "55%",
+      mobileTop: isTab ? "80%": "55%",
       mobileWidth: "15vw",
     },
     {
@@ -73,8 +73,8 @@ export default function Clients() {
       width: "10vw",
       right: "20%",
       top: "90%",
-      mobileRight: isTab ?"15%": "20%",
-      mobileTop: isTab ?"110%": "75%",
+      mobileRight: isTab ?"-35%": "20%",
+      mobileTop: isTab ?"100%": "75%",
       mobileWidth: "18vw",
     },
     {
@@ -83,7 +83,7 @@ export default function Clients() {
       right: "5%",
       top: "105%",
       mobileRight: isTab ?"15%": "10%",
-      mobileTop: isTab ?"110%": "90%",
+      mobileTop: isTab ?"120%": "90%",
       mobileWidth: "15vw",
     },
   ];
@@ -471,7 +471,7 @@ export default function Clients() {
             <div
               key={index}
               className={`absolute h-auto  flex items-end justify-end logoanim ${
-                index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw] max-md:!w-[20vw]"
+                index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw] max-md:!w-[25vw]"
               }`}
               style={{
                 width: logo.width,

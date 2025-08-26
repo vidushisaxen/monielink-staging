@@ -131,7 +131,7 @@ const Launch = () => {
             </h2>
           </Copy>
         </div>
-        <div className="flex flex-row flex-wrap  items-center justify-between max-md:justify-evenly max-md:w-full  w-[85%]  gap-y-[10vw] max-md:gap-y-[5vw] mx-auto">
+        <div className="flex flex-row flex-wrap  items-center justify-between max-md:justify-between max-md:w-full  w-[85%]  gap-y-[10vw] max-md:gap-y-[5vw] mx-auto">
           {uspData.map(({ title, description, svg, svgElement }, index) => (
             <div
               key={index}
@@ -149,13 +149,13 @@ const Launch = () => {
                 </svg>
               </div>
               <Copy>
-                <h3 className="text-content-30 font-medium font-display mb-5 w-[50%] text-center capitalize max-sm:text-head-80 max-md:w-[70%] max-sm:w-full max-sm:!leading-[1.2] max-sm:mb-[4vw]">
+                <h3 className="text-content-30 font-medium font-display mb-5 w-[50%] text-center capitalize max-sm:text-head-80 max-md:w-[85%] max-sm:w-full max-sm:!leading-[1.2] max-sm:mb-[4vw]">
                   {title}
                 </h3>
               </Copy>
               <Copy>
                 <p
-                  className={`text-content-20 text-center w-[98%] max-md:w-[70%] `}
+                  className={`text-content-20 text-center w-[98%] max-md:w-[85%] `}
                 >
                   {description}
                 </p>

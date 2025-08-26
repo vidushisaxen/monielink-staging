@@ -138,7 +138,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
   const isActive = activeIndex === index;
 
   return (
-    <div className="card relative h-[75vh]  w-full active:scale-95 duration-300 transition-scale max-sm:active:scale-100 max-sm:h-[65vh]">
+    <div className="card relative h-[75vh]  w-full active:scale-95 duration-300 transition-scale max-sm:active:scale-100 max-sm:h-[65vh] max-md:h-[40vh]">
       <div className="absolute h-full w-full">
         <svg
           className="h-full w-full"
@@ -240,7 +240,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           </defs>
         </svg>
       </div>
-      <div className="py-[3vw] pt-[5vw] max-sm:py-[10vw] max-sm:pt-[15vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between min-h-[38vw] w-full max-sm:gap-y-[5vw] max-sm:min-h-[60vh]">
+      <div className="py-[3vw] pt-[5vw] max-sm:py-[10vw] max-sm:pt-[15vw] max-md:pt-[3vw] max-md:py-[2vw] relative z-10 gap-y-[2vw] flex-col flex items-center justify-between min-h-[38vw] w-full max-sm:gap-y-[5vw] max-sm:min-h-[60vh] max-md:min-h-[30vh] max-md:gap-y-[2vw]">
         <div className="h-[3.5vw] max-md:h-[5.5vw] max-sm:h-[12vw] w-auto max-sm:mb-[5vw] max-md:mb-[1vw]">
           <Image
             src={logo}
@@ -254,7 +254,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           {features.map((item, index) => (
             <li
               key={index}
-              className={`w-full border-b border-[#282828] text-gray-2 last:border-0 text-[0.93vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-[0.3vw]`}
+              className={`w-full border-b border-[#282828] text-gray-2 last:border-0 text-[0.93vw] max-md:pb-[0.7vw] max-sm:text-content-18 pb-[0.3vw] max-md:text-[1.7vw]`}
             >
               {item}
             </li>

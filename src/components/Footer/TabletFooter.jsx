@@ -79,10 +79,10 @@ import {
       },
     ];
     return (
-      <div className="bg-black max-sm:hidden max-md:flex  hidden text-[#A8A8A8] relative h-screen  items-center justify-center w-full">
-        <div className="absolute top-0 left-0 w-full h-full">
+      <div className="bg-black max-sm:hidden max-md:flex  hidden text-[#A8A8A8] relative h-[85vh]  items-center justify-center w-full">
+        {/* <div className="absolute top-0 left-0 w-full h-full">
           <BackgroundLine />
-        </div>
+        </div> */}
         <Image
           className="h-full pl-[1vw] pb-[2vw] absolute top-0 left-0 z-[0] w-full"
           src={"/assets/icons/Tablet-Footer.svg"}
@@ -94,7 +94,7 @@ import {
           <div className="w-full h-[85%]  ">
             <div className="w-full h-[80%] flex">
               {/* left */}
-              <div className="w-1/2 h-full flex flex-col justify-between pb-[15%] px-[5vw] py-[5.5vw] ">
+              <div className="w-1/2 h-[46vh] flex flex-col justify-between pb-[15%] px-[5vw] py-[5.5vw]">
                 <svg
                   width="200"
                   height="60"
@@ -123,10 +123,10 @@ import {
                     fill="#FE6E00"
                   />
                 </svg>
-                <div className="">
+                <div className="!mt-[10vw]">
                   {links.map((item, index) => (
                     <Link href={item.link} key={index}>
-                      <div className="text-white mb-[1vw] text-[1.05vw] font-medium">
+                      <div className="text-white mb-[1vw] text-[1.05vw] font-medium pl-[3vw] ">
                         <div className="flex items-center gap-[.5vw] group justify-start">
                           <div
                             style={{
@@ -136,11 +136,7 @@ import {
                           ></div>
                           <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden ">
                             <span className="text-[#A8A8A8] uppercase text-[2.2vw] ">
-                              <ScrambleText
-                                text={item.name}
-                                speed={0.8}
-                                charType={"lowercase"}
-                              />
+                              {item.name}
                             </span>
                           </div>
                         </div>
@@ -169,11 +165,7 @@ import {
                           ></div>
                           <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                             <span className="text-[#A8A8A8] uppercase text-[2.2vw]">
-                              <ScrambleText
-                                text={item.name}
-                                speed={0.8}
-                                charType={"lowercase"}
-                              />
+                              {item.name}
                             </span>
                           </div>
                         </div>
@@ -183,18 +175,14 @@ import {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[20%] flex flex-col  -mt-[5vw] justify-start items-end px-[5vw] pr-[10%] py-[2vw] ">
+            <div className="w-full h-[20%] flex flex-col  -mt-[8vw] justify-start items-end px-[5vw] pr-[10%] py-[2vw] ">
               <a
                 href="mailto:info@monielink.org"
                 className="text-head-80 font-display"
               >
-                <ScrambleText
-                  text={"info@monielink.io"}
-                  speed={0.8}
-                  charType={"lowercase"}
-                />
+                info@monielink.io
               </a>
-              <div className="items-end justify-end pr-[8%]  w-full flex gap-[1vw]">
+              <div className="items-end justify-end pr-[3%] pt-[3vw] w-full flex gap-[1vw]">
                 {socials.map((item, index) => (
                   <SocialMediaBtn className="" key={index} href={item.href}>
                     {item.icon}

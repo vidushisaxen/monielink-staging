@@ -85,7 +85,7 @@ const Diagram2 = () => {
 
     return (
         <section data-theme="orange" className='w-screen overflow-hidden h-full bg-gradient relative max-sm:block max-md:block ' ref={sectionRef}>
-            <div className='px-[4vw] py-[7vw] max-sm:py-[15vw] flex flex-col items-center gap-[7vw] max-sm:gap-[4vw] '>
+            <div className='px-[4vw] py-[7vw] max-sm:py-[15vw] max-md:py-[10vw] flex flex-col items-center gap-[7vw] max-sm:gap-[4vw] '>
                 <div className='w-[80%] max-sm:w-[80%] max-md:w-[60%]'>
                     <Copy>
                         <h2 className='text-head-60 font-display text-center capitalize'>
@@ -294,12 +294,12 @@ const Diagram2 = () => {
                             <div>
                 
                                 <div >
-                                        <div className='absolute max-md:w-[25%] max-md:top-[15%] max-sm:top-[28%] max-sm:left-[11%] max-md:left-[10%] max-sm:w-[20%] overflow-hidden'>
+                                        <div className='absolute max-md:w-[15%] max-md:top-[20%] max-sm:top-[28%] max-sm:left-[11%] max-md:left-[15%] max-sm:w-[20%] overflow-hidden'>
                                             <Copy>
                                                         <p className="max-md:text-content-20 max-sm:text-[4vw] text-center">Partner Infrastructure</p>
                                                         </Copy>
                                         </div>
-                                        <div className='absolute max-md:w-[20%] max-sm:w-[15%] max-sm:top-[26%] max-md:top-[18%] max-sm:right-[14%] max-md:right-[18%] w-[25%] overflow-hidden'>
+                                        <div className='absolute max-md:w-[15%] max-sm:w-[15%] max-sm:top-[26%] max-md:top-[20%] max-sm:right-[14%] max-md:right-[20%] w-[25%] overflow-hidden'>
                                             <p className='max-md:text-content-20 max-sm:text-[4vw] text-center'>Secure VPN Tunnel</p>
                                         </div>
                                         
@@ -326,7 +326,7 @@ const Diagram2 = () => {
                                 </div>
                                 
                                 </div>
-                                <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-3 justify-end hidden max-sm:flex max-md:flex max-sm:mt-[10vw]">
+                                <div className="w-full mx-auto h-full text-white relative z-10  items-center gap-3 justify-end hidden max-sm:flex max-md:hidden max-sm:mt-[10vw]">
           <span className="text-content-18 max-md:text-content-20">Swipe</span>
           <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
             <svg

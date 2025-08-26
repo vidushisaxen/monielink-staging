@@ -119,7 +119,7 @@ const WhyUsSwiper = () => {
 
   return (
     <>
-     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:top-[68%] max-sm:right-[35%]  max-md:mt-[8vw] justify-end gap-5 max-sm:w-full fadeupanim z-[99]">
+     <div className="flex absolute top-[50%] right-[5%]   items-start max-sm:top-[68%] max-sm:right-[35%]  max-md:top-[70%] justify-end gap-5 max-sm:w-full fadeupanim z-[99]">
             <ArrowButton
               onClick={handlePrevClick}
               arrowColor={"#ffffff"}
@@ -212,11 +212,11 @@ const SwiperCard = ({ id, title, description, index, activeIndex,height }) => {
       style={{
         clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 80% 100%, 0% 100%)",
       }}
-      className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[45vh] max-sm:w-[90%] ${
+      className={`overflow-hidden p-[1px] rounded-[16px] bg-gradient-to-br from-white/50 to-[#FE701A] flex items-center justify-center duration-500 transition-all h-[14vw] max-sm:h-[110vw] max-md:h-[50vh] max-sm:w-[90%] ${
         isActive ? `${height || "h-[28vw]"} max-sm:h-[105vw] max-md:h-[30vh]` : ""
       }`}
     >
-      <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[7vw]  max-md:p-[5vw]">
+      <div className="bg-[#FE701A] p-[2vw] rounded-[15px] w-[calc(100%-1px)] h-[calc(100%-1px)] space-y-[3.5vw] max-sm:p-[7vw]  max-md:p-[5vw] ">
         <p className="max-sm:text-[4vw] max-md:text-[2.7vw]">00{id}</p>
         <div
           className={`space-y-[5vw] duration-500 w-[18vw] transition-all max-sm:w-full max-sm:space-y-[5vw] max-sm:mt-[5vw] max-md:w-full max-md:space-y-[7vw] max-md:mt-[12vw] `}

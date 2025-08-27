@@ -14,67 +14,69 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
   const lines = useRef([]);
 
   useEffect(() => {
-
     if (!containerRef.current) return;
-
+    
     splitRefs.current = [];
     lines.current = [];
     elementRefs.current = [];
-
+    // Wait for fonts to be loaded before splitting
     let elements = [];
     if (containerRef.current.hasAttribute("data-copy-wrapper")) {
       elements = Array.from(containerRef.current.children);
     } else {
       elements = [containerRef.current];
     }
+    document.fonts.ready.then(() => {
 
-    elements.forEach((element) => {
-      elementRefs.current.push(element);
 
-      const split = SplitText.create(element, {
-        type: "lines",
-        mask: "lines",
-        linesClass: "line++",
-        lineThreshold: 0.1,
-      });
+      elements.forEach((element) => {
+        elementRefs.current.push(element);
 
-      splitRefs.current.push(split);
+        const split = SplitText.create(element, {
+          type: "lines",
+          mask: "lines",
+          linesClass: "line++",
+          lineThreshold: 0.1,
+        });
 
-      const computedStyle = window.getComputedStyle(element);
-      const textIndent = computedStyle.textIndent;
+        splitRefs.current.push(split);
 
-      if (textIndent && textIndent !== "0px") {
-        if (split.lines.length > 0) {
-          split.lines[0].style.paddingLeft = textIndent;
+        const computedStyle = window.getComputedStyle(element);
+        const textIndent = computedStyle.textIndent;
+
+        if (textIndent && textIndent !== "0px") {
+          if (split.lines.length > 0) {
+            split.lines[0].style.paddingLeft = textIndent;
+          }
+          element.style.textIndent = "0";
         }
-        element.style.textIndent = "0";
-      }
 
-      lines.current.push(...split.lines);
-    });
-
-    gsap.set(lines.current, { y: "100%" });
-
-    const animationProps = {
-      y: "-10%",
-      duration: 1.4,
-      stagger: 0.15,
-      ease: "power4.out",
-      delay: delay,
-    };
-
-    if (animateOnScroll) {
-      gsap.to(lines.current, {
-        ...animationProps,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 90%",
-          once: true,
-        },
+        lines.current.push(...split.lines);
       });
-    } else {
-      gsap.to(lines.current, animationProps);
-    }
+
+      gsap.set(lines.current, { y: "100%" });
+
+      const animationProps = {
+        y: "-10%",
+        duration: 1.4,
+        stagger: 0.15,
+        ease: "power4.out",
+        delay: delay,
+      };
+
+      if (animateOnScroll) {
+        gsap.to(lines.current, {
+          ...animationProps,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 90%",
+            once: true,
+          },
+        });
+      } else {
+        gsap.to(lines.current, animationProps);
+      }
+    });
 
     return () => {
       splitRefs.current.forEach((split) => {

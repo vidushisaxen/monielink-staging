@@ -10,7 +10,7 @@ import ScrambleText from "../h/ScrambleText";
 gsap.registerPlugin(ScrollTrigger, useGSAP, DrawSVGPlugin);
 
 const SolutionsCard = ({ solutionsRef }) => {
-  const svgRightRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+  const svgRightRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null),useRef(null)];
 
   const cardsData = [
     {
@@ -98,7 +98,7 @@ const SolutionsCard = ({ solutionsRef }) => {
         "Design a customized Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK. Reward points can be redeemed for cash under a tailored loyalty program, with funds credited to a dedicated reward redemption account.",
       cardClass: "card-7",
       link: "/solutions/loyalty-management",
-      svgRightRef: svgRightRefs[5],
+      svgRightRef: svgRightRefs[6],
       svgLeft: <SVGLeft />,
       svgRight: <Loyalty />,
       y: 'translate-y-[-500%]',
@@ -240,7 +240,7 @@ useGSAP(() => {
         end: "bottom bottom",
         // markers:"true",
         onUpdate: (self) => {
-          const cardTriggerPoints = [0, 0.13, 0.26, 0.39, 0.52, 0.85, 1];
+          const cardTriggerPoints = [0, 0.13, 0.26, 0.39, 0.52, 0.80, 0.90];
           const triggerPoint = cardTriggerPoints[index] || 0;
           if (self.progress >= triggerPoint && !ref.current?.classList.contains('animated')) {
             ref.current?.classList.add('animated');

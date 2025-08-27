@@ -24,7 +24,6 @@ const Layout = ({ children }) => {
 export default Layout;
 
 const Roobert = localFont({
-
     src: [
         { path: "../../app/fonts/RoobertTRIAL-Light.woff2", weight: "300", style: "normal" },
         { path: "../../app/fonts/RoobertTRIAL-Regular.woff2", weight: "400", style: "normal" },

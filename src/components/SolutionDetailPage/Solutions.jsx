@@ -213,10 +213,10 @@ const SwiperCard = ({
         </svg>
       </div>
       <div className="py-[3vw] relative z-10 justify-center flex-col flex items-start ml-[2vw] gap-y-[2vw] h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw] max-sm:gap-y-[7vw]">
-        <div className=" w-[60%] max-sm:mx-0 max-sm:w-[70%] max-md:w-[80%]">
-          <p className="text-head-60 font-display max-sm:text-[7vw] max-md:text-[5vw]">{title}</p>
+        <div className=" w-[60%] max-sm:mx-0 max-sm:w-[70%] max-md:w-[85%]">
+          <p className="text-head-60 font-display max-sm:text-[7vw] max-md:text-[4.5vw]">{title}</p>
         </div>
-        <div className="py-[1vw] w-[80%] max-sm:w-[70%] max-md:w-[80%]">
+        <div className="py-[1vw] w-[80%] max-sm:w-[70%] max-md:w-[85%]">
           <p className="text-content-20">{para}</p>
         </div>
 

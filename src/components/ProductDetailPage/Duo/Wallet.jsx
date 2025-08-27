@@ -104,7 +104,7 @@ const Wallet = () => {
 
     // Marquee animation
      if(globalThis.innerWidth>1024){
-    const marqueeWidth = marqueeRef.current.scrollWidth / 2; // Because we duplicate the content
+    const marqueeWidth = marqueeRef.current.scrollWidth / 2; 
     gsap.to(marqueeRef.current, {
       x: -marqueeWidth,
       duration: 30, // Adjust speed here
@@ -129,13 +129,13 @@ const Wallet = () => {
           {/* Marquee container */}
           <div className="w-full overflow-hidden">
             <div
-              className="marquee-track flex items-center gap-[8vw] max-sm:flex-col max-md:flex-col max-sm:gap-[15vw] max-sm:items-center"
+              className="marquee-track w-fit flex-nowrap flex items-center gap-[8vw] max-sm:flex-col max-md:flex-col max-sm:gap-[15vw] max-sm:items-center max-md:w-full"
               ref={marqueeRef}
             >
               {dataToRender.map(({ description, svgElement }, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-start gap-[1vw] !w-[50vw] max-sm:w-full max-md:w-[50%] max-md:flex-col max-sm:flex-col max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw] max-md:flex-wrap"
+                  className="flex items-center justify-start gap-[1vw] w-[25vw] max-sm:w-full max-md:w-full max-md:flex-col max-sm:flex-col max-md:items-center max-md:gap-[5vw] max-sm:gap-[6vw] max-md:flex-wrap"
                 >
                   <div className="text-primary-2 mb-1">
                     <svg
@@ -151,7 +151,7 @@ const Wallet = () => {
                     </svg>
                   </div>
                   <Copy>
-                    <p className="text-content-20 max-sm:text-content-20  max-md:text-center max-sm:text-center max-sm:w-[95%] max-md:text-[2.5vw] w-full">{description}</p>
+                    <p className="text-content-20 max-sm:text-content-20  max-md:text-center max-sm:text-center max-sm:w-full max-md:text-[2.5vw] max-md:w-[60%]">{description}</p>
                   </Copy>
                 </div>
               ))}

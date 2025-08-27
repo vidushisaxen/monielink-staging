@@ -391,6 +391,7 @@ export default function Header() {
                 <li key={index} className="group dropdown-item">
                   <Link
                     href={item.link}
+                    aria-label={item.name}
                     className="flex items-center gap-[0.5vw] justify-start"
                   >
                     <div
@@ -954,6 +955,7 @@ export default function Header() {
                         className="flex items-center gap-2 submenu-item translate-y-full opacity-0"
                       >
                         <Link
+                          aria-label={sub.name}
                           href={sub.link}
                           className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
                         >

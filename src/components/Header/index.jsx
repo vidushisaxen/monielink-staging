@@ -102,49 +102,49 @@ const solutions = [
     name: "Loyalty Management",
     link: "/solutions/loyalty-management",
   },
-]
+];
 
 const products = [
   {
     name: "Balance",
-    link: "/products/balance"
+    link: "/products/balance",
   },
   {
     name: "ScanPay",
-    link: "/products/scanpay"
+    link: "/products/scanpay",
   },
   {
     name: "TapPay",
-    link: "/products/tap-pay"
+    link: "/products/tap-pay",
   },
   {
     name: "InstaCard",
-    link: "/products/instacard"
+    link: "/products/instacard",
   },
   {
     name: "snapCred",
-    link: "/products/snapcred"
+    link: "/products/snapcred",
   },
   {
     name: "DUO",
-    link: "/products/duo"
+    link: "/products/duo",
   },
   {
     name: "Verifyed",
-    link: "/products/verifyed"
+    link: "/products/verifyed",
   },
   {
     name: "Reward+",
-    link: "/products/reward"
+    link: "/products/reward",
   },
   {
     name: "ChatBox",
-    link: "/products/chatbox"
+    link: "/products/chatbox",
   },
-]
+];
 
 export default function Header() {
-   const [openMenu, setOpenMenu] = useState(null);
+  const [openMenu, setOpenMenu] = useState(null);
   const [hidden, setHidden] = useState(false);
   const [lastY, setLastY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -156,7 +156,10 @@ export default function Header() {
   const lenis = useLenis();
   const navigationRef = useRef(null);
 
-  const preloaderShown = typeof window !== "undefined" ? sessionStorage.getItem("preloaderShown") : null;
+  const preloaderShown =
+    typeof window !== "undefined"
+      ? sessionStorage.getItem("preloaderShown")
+      : null;
   const baseDelay = preloaderShown ? 0.5 : 7.5;
 
   const handleMenuButtonClick = () => {
@@ -177,75 +180,73 @@ export default function Header() {
 
     setTimeout(() => {
       setButtonDisabled(false);
-    }, 700);
+    }, 1000);
   };
 
   useEffect(() => {
-    const navBgT = navigationRef.current.querySelectorAll('.nav-bg-t');
-    const navBgB = navigationRef.current.querySelectorAll('.nav-bg-b');
+    const navBgT = navigationRef.current.querySelectorAll(".nav-bg-t");
+    const navBgB = navigationRef.current.querySelectorAll(".nav-bg-b");
     const links = navigationRef.current.querySelectorAll(".m-nav-links");
     const arrow = navigationRef.current.querySelectorAll(".m-nav-arrow");
 
-    
-
-    if (menuOpen ) {
-      gsap.timeline()
+    if (menuOpen) {
+      gsap
+        .timeline()
         .to([navBgT, navBgB], {
           y: "0",
           duration: 1,
           ease: "power2.out",
         })
         .to(links, {
-          y: "0",
+          // y: "0",
           opacity: 1,
           delay: -0.4,
+          duration: 0.3,
           ease: "power2.out",
-          stagger: 0.05
+          stagger: 0.02,
         })
         .to(arrow, {
           y: "0",
           opacity: 1,
-          delay: 0.35,
+          duration:0.3,
+          // delay: 0.35,
           ease: "power2.out",
-          
-        })
+        });
     } else {
-      gsap.timeline()
-        .to(links, {
-          y: "100%",
-          opacity: 0,
-          duration: 1,
-          ease: "power2.out",
-        })
-         .to(arrow, {
-          y: "105%",
-          opacity: 0,
-          duration: 1,
-          ease: "power2.out",
-        })
-        .to(navBgT, {
-          y: "-100%",
-          duration: 1,
-          delay: -0.5,
-          ease: "power2.out",
-        })
-        .to(navBgB, {
-          y: "100%",
-          duration: 1,
-          ease: "power2.out",
-        }, "<")
+      gsap.to(links, {
+        // y: "100%",
+        opacity: 0,
+        duration: 0.2,
+      });
+      gsap.to(arrow, {
+        // y: "105%",
+        opacity: 0,
+        duration: 0.2,
+      });
+      gsap.to(navBgT, {
+        y: "-100%",
+        duration: 0.9,
+        delay: 0.5,
+      });
+      gsap.to(navBgB, {
+        y: "100%",
+        duration: 0.9,
+        delay: 0.5,
+      });
     }
   }, [menuOpen]);
 
   // Animate submenu items when openMenu changes
   useEffect(() => {
     if (navigationRef.current && openMenu) {
-      const submenuItems = navigationRef.current.querySelectorAll(".submenu-item");
-      
-      gsap.fromTo(submenuItems, 
+      const submenuItems =
+        navigationRef.current.querySelectorAll(".submenu-item");
+
+      gsap.fromTo(
+        submenuItems,
         {
           y: "100%",
-          opacity: 0
+          opacity: 0,
         },
         {
           y: "0",
@@ -253,59 +254,11 @@ export default function Header() {
           duration: 0.5,
           ease: "power2.out",
           stagger: 0.03,
-          delay: 0.1
+          delay: 0.1,
         }
       );
     }
   }, [openMenu]);
-
-  // useGSAP(() => {
-  //   const triggers = [];
-  //   document.querySelectorAll("[data-theme]").forEach((section) => {
-  //     const theme = section.dataset.theme;
-
-  //     const trigger = ScrollTrigger.create({
-  //       trigger: section,
-  //       start: "top top",
-  //       end: "bottom top",
-  //       onEnter: () => {
-  //         if (theme === "orange") setIsInverted(true);
-  //         if (theme === "white") setIsWhite(true);
-  //       },
-  //       onEnterBack: () => {
-  //         if (theme === "orange") setIsInverted(true);
-  //         if (theme === "white") setIsWhite(true);
-  //       },
-  //       onLeave: () => {
-  //         if (theme === "orange") setIsInverted(false);
-  //         if (theme === "white") setIsWhite(false);
-  //       },
-  //       onLeaveBack: () => {
-  //         if (theme === "orange") setIsInverted(false);
-  //         if (theme === "white") setIsWhite(false);
-  //       },
-  //     });
-
-  //     triggers.push(trigger);
-  //   });
-  // }, []);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // gsap.fromTo(
-      //   "#inner-nav",
-      //   {
-      //     yPercent: -110,
-      //   },
-      //   {
-      //     yPercent: 0,
-      //     duration: 1,
-      //     delay: baseDelay,
-      //   }
-      // );
-    });
-    return () => ctx.revert();
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -325,42 +278,44 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastY, hoveredItem]);
 
-  
-
   const solutionsDropdown = (
-    <div 
+    <div
       className="absolute top-full mt-3 z-10"
       ref={(el) => {
         if (el) {
           // Check if GSAP is available
-          if (typeof gsap !== 'undefined' || (window && window.gsap)) {
+          if (typeof gsap !== "undefined" || (window && window.gsap)) {
             const GSAP = window.gsap || gsap;
             const tl = GSAP.timeline();
-            const svg = el.querySelector('.dropdown-svg');
-            const items = el.querySelectorAll('.dropdown-item');
-            
+            const svg = el.querySelector(".dropdown-svg");
+            const items = el.querySelectorAll(".dropdown-item");
+
             if (svg && items.length > 0) {
-              GSAP.set(svg, { 
+              GSAP.set(svg, {
                 height: 0,
-                opacity: 1
-              });
-              GSAP.set(items, { 
-                opacity: 0,
-                y: 20
-              });
-             
-              tl.to(svg, { 
-                height: '100%',
-                duration: 0.5,
-                ease: 'power2.out'
-              });
-              tl.to(items, {
                 opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.05,
-                ease: 'power2.out'
-              }, '-=0.1'); 
+              });
+              GSAP.set(items, {
+                opacity: 0,
+                y: 20,
+              });
+
+              tl.to(svg, {
+                height: "100%",
+                duration: 0.5,
+                ease: "power2.out",
+              });
+              tl.to(
+                items,
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 1,
+                  stagger: 0.05,
+                  ease: "power2.out",
+                },
+                "-=0.1"
+              );
             }
           }
         }
@@ -368,54 +323,76 @@ export default function Header() {
     >
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
-  
+
       <div className="relative w-[20vw]">
         {/* SVG Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <svg 
-            className="h-full w-full dropdown-svg" 
-            width="367" 
-            height="363" 
-            viewBox="0 0 367 363" 
-            fill="none" 
+          <svg
+            className="h-full w-full dropdown-svg"
+            width="367"
+            height="363"
+            viewBox="0 0 367 363"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignObject x="-79.3594" y="-79.9844" width="525.672" height="522.578">
-              <div xmlns="http://www.w3.org/1999/xhtml" style={{ 
-                backdropFilter: 'blur(40px)', 
-                clipPath: 'url(#bgblur_0_182_10_clip_path)', 
-                height: '100%', 
-                width: '100%' 
-              }}></div>
+            <foreignObject
+              x="-79.3594"
+              y="-79.9844"
+              width="525.672"
+              height="522.578"
+            >
+              <div
+                xmlns="http://www.w3.org/1999/xhtml"
+                style={{
+                  backdropFilter: "blur(40px)",
+                  clipPath: "url(#bgblur_0_182_10_clip_path)",
+                  height: "100%",
+                  width: "100%",
+                }}
+              ></div>
             </foreignObject>
             <g data-figma-bg-blur-radius="80">
               <mask id="path-1-inside-1_182_10" fill="white">
                 <path d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z" />
               </mask>
-              <path d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z" fill="black" fillOpacity="0.32" />
-              <path d="M366.311 20.0156L367.311 20.0156L367.311 20.0156L366.311 20.0156ZM0.640625 20.0156L-0.359375 20.0156V20.0156H0.640625ZM293.46 357.102L294.148 357.828L293.46 357.102ZM360.077 293.887L359.389 293.161L360.077 293.887ZM346.311 0.015625V1.01562C356.804 1.01562 365.31 9.52248 365.311 20.0157L366.311 20.0156L367.311 20.0156C367.31 8.41796 357.908 -0.984375 346.311 -0.984375V0.015625ZM366.311 20.0156H365.311V279.379H366.311H367.311V20.0156H366.311ZM360.077 293.887L359.389 293.161L292.771 356.377L293.46 357.102L294.148 357.828L360.766 294.612L360.077 293.887ZM279.693 362.595V361.595H20.6406V362.595V363.595H279.693V362.595ZM20.6406 362.595V361.595C10.1472 361.595 1.64062 353.088 1.64062 342.595H0.640625H-0.359375C-0.359375 354.193 9.04265 363.595 20.6406 363.595V362.595ZM0.640625 342.595H1.64062V20.0156H0.640625H-0.359375V342.595H0.640625ZM0.640625 20.0156L1.64062 20.0157C1.64094 9.52248 10.1475 1.01562 20.6406 1.01562V0.015625V-0.984375C9.04282 -0.984375 -0.359022 8.41795 -0.359375 20.0156L0.640625 20.0156ZM20.6406 0.015625V1.01562H346.311V0.015625V-0.984375H20.6406V0.015625ZM293.46 357.102L292.771 356.377C289.241 359.727 284.56 361.595 279.693 361.595V362.595V363.595C285.072 363.595 290.246 361.531 294.148 357.828L293.46 357.102ZM366.311 279.379H365.311C365.311 284.591 363.17 289.574 359.389 293.161L360.077 293.887L360.766 294.612C364.944 290.647 367.311 285.139 367.311 279.379H366.311Z" fill="#C1C1C1" fillOpacity="0.38" mask="url(#path-1-inside-1_182_10)" />
+              <path
+                d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z"
+                fill="black"
+                fillOpacity="0.32"
+              />
+              <path
+                d="M366.311 20.0156L367.311 20.0156L367.311 20.0156L366.311 20.0156ZM0.640625 20.0156L-0.359375 20.0156V20.0156H0.640625ZM293.46 357.102L294.148 357.828L293.46 357.102ZM360.077 293.887L359.389 293.161L360.077 293.887ZM346.311 0.015625V1.01562C356.804 1.01562 365.31 9.52248 365.311 20.0157L366.311 20.0156L367.311 20.0156C367.31 8.41796 357.908 -0.984375 346.311 -0.984375V0.015625ZM366.311 20.0156H365.311V279.379H366.311H367.311V20.0156H366.311ZM360.077 293.887L359.389 293.161L292.771 356.377L293.46 357.102L294.148 357.828L360.766 294.612L360.077 293.887ZM279.693 362.595V361.595H20.6406V362.595V363.595H279.693V362.595ZM20.6406 362.595V361.595C10.1472 361.595 1.64062 353.088 1.64062 342.595H0.640625H-0.359375C-0.359375 354.193 9.04265 363.595 20.6406 363.595V362.595ZM0.640625 342.595H1.64062V20.0156H0.640625H-0.359375V342.595H0.640625ZM0.640625 20.0156L1.64062 20.0157C1.64094 9.52248 10.1475 1.01562 20.6406 1.01562V0.015625V-0.984375C9.04282 -0.984375 -0.359022 8.41795 -0.359375 20.0156L0.640625 20.0156ZM20.6406 0.015625V1.01562H346.311V0.015625V-0.984375H20.6406V0.015625ZM293.46 357.102L292.771 356.377C289.241 359.727 284.56 361.595 279.693 361.595V362.595V363.595C285.072 363.595 290.246 361.531 294.148 357.828L293.46 357.102ZM366.311 279.379H365.311C365.311 284.591 363.17 289.574 359.389 293.161L360.077 293.887L360.766 294.612C364.944 290.647 367.311 285.139 367.311 279.379H366.311Z"
+                fill="#C1C1C1"
+                fillOpacity="0.38"
+                mask="url(#path-1-inside-1_182_10)"
+              />
             </g>
             <defs>
-              <clipPath id="bgblur_0_182_10_clip_path" transform="translate(79.3594 79.9844)">
+              <clipPath
+                id="bgblur_0_182_10_clip_path"
+                transform="translate(79.3594 79.9844)"
+              >
                 <path d="M346.311 0.015625C357.356 0.015625 366.31 8.97022 366.311 20.0156V279.379C366.311 284.865 364.057 290.11 360.077 293.887L293.46 357.102C289.744 360.629 284.816 362.595 279.693 362.595H20.6406C9.59493 362.595 0.640625 353.64 0.640625 342.595V20.0156C0.640961 8.97022 9.59514 0.015625 20.6406 0.015625H346.311Z" />
               </clipPath>
             </defs>
           </svg>
         </div>
-  
+
         {/* Foreground content */}
         <div
           className={`relative z-10 p-[2vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
         >
-          <ul className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}>
+          <ul
+            className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
+          >
             {solutions.map((item, index) => {
               const isActive = pathname === item.link;
               return (
-                <li 
-                  key={index} 
-                  className="group dropdown-item"
-                >
-                  <Link href={item.link} className="flex items-center gap-[0.5vw] justify-start">
+                <li key={index} className="group dropdown-item">
+                  <Link
+                    href={item.link}
+                    className="flex items-center gap-[0.5vw] justify-start"
+                  >
                     <div
                       style={{ animation: "pulse .5s infinite" }}
                       className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
@@ -424,13 +401,18 @@ export default function Header() {
                         ${isActive && !isInverted ? "bg-orange-500" : ""}`}
                     ></div>
                     <span className="uppercase text-[.9vw] text-left">
-                      <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                      <ScrambleText
+                        onHover={true}
+                        centerd
+                        speed={0.5}
+                        className="min-w-[8vw]"
+                      >
                         {item.name}
                       </ScrambleText>
                     </span>
                   </Link>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
@@ -441,41 +423,44 @@ export default function Header() {
   const firstHalf = products.slice(0, midIndex);
   const secondHalf = products.slice(midIndex);
 
-
   const productsDropdown = (
-    <div 
+    <div
       className="absolute top-full mt-3 z-0"
       ref={(el) => {
         if (el) {
           // Check if GSAP is available
-          if (typeof gsap !== 'undefined' || (window && window.gsap)) {
+          if (typeof gsap !== "undefined" || (window && window.gsap)) {
             const GSAP = window.gsap || gsap;
             const tl = GSAP.timeline();
-            
-            const svg = el.querySelector('.dropdown-svg');
-            const items = el.querySelectorAll('.dropdown-item');
-            
+
+            const svg = el.querySelector(".dropdown-svg");
+            const items = el.querySelectorAll(".dropdown-item");
+
             if (svg && items.length > 0) {
-              GSAP.set(svg, { 
+              GSAP.set(svg, {
                 height: 0,
-                opacity: 1
-              });
-              GSAP.set(items, { 
-                opacity: 0,
-                y: 20
-              });
-              tl.to(svg, { 
-                height: '100%',
-                duration: 0.5,
-                ease: 'power2.out'
-              });
-              tl.to(items, {
                 opacity: 1,
-                y: 0,
-                duration: 0.7,
-                stagger: 0.05,
-                ease: 'power2.out'
-              }, '-=0.1');
+              });
+              GSAP.set(items, {
+                opacity: 0,
+                y: 20,
+              });
+              tl.to(svg, {
+                height: "100%",
+                duration: 0.5,
+                ease: "power2.out",
+              });
+              tl.to(
+                items,
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.7,
+                  stagger: 0.05,
+                  ease: "power2.out",
+                },
+                "-=0.1"
+              );
             }
           }
         }
@@ -483,41 +468,76 @@ export default function Header() {
     >
       {/* Hover spacer */}
       <div className="h-[2vw] w-full" />
-  
+
       <div className="relative h-[17vw] w-auto mx-auto pl-[1vw] ml-[-3vw]">
-         <div className="absolute inset-0 z-0 pointer-events-none h-full w-full">
-          <svg className="h-full w-full dropdown-svg" width="419" height="369" viewBox="0 0 419 369" fill="none" xmlns="http://www.w3.org/2000/svg">
-<foreignObject x="-84.804" y="-84.9251" width="588.755" height="539.19"><div xmlns="http://www.w3.org/1999/xhtml" style={{
-    backdropFilter: "blur(42.72px)",
-    clipPath: "url(#bgblur_0_2085_240_clip_path)",
-    height: "100%",
-    width: "100%",
-  }}></div></foreignObject>
-          <g data-figma-bg-blur-radius="85.4446">
-<mask id="path-1-inside-1_2085_240" fill="white">
-<path d="M397.145 0.519531C408.942 0.519531 418.506 10.0836 418.506 21.8809V285.231C418.506 291.09 416.099 296.692 411.849 300.726L346.272 362.954C342.303 366.721 337.039 368.82 331.568 368.82H22.002C10.2046 368.82 0.640741 359.256 0.640625 347.459V21.8809C0.640889 10.0836 10.2047 0.519531 22.002 0.519531H397.145Z"/>
-</mask>
-<path d="M397.145 0.519531C408.942 0.519531 418.506 10.0836 418.506 21.8809V285.231C418.506 291.09 416.099 296.692 411.849 300.726L346.272 362.954C342.303 366.721 337.039 368.82 331.568 368.82H22.002C10.2046 368.82 0.640741 359.256 0.640625 347.459V21.8809C0.640889 10.0836 10.2047 0.519531 22.002 0.519531H397.145Z" fill="black" fillOpacity="0.32"/>
-<path d="M418.506 21.8809H419.574V21.8808L418.506 21.8809ZM0.640625 347.459H-0.427433H0.640625ZM0.640625 21.8809L-0.427433 21.8808V21.8809H0.640625ZM346.272 362.954L347.007 363.729L346.272 362.954ZM411.849 300.726L412.584 301.5L411.849 300.726ZM397.145 0.519531V1.58759C408.352 1.58759 417.438 10.6735 417.438 21.8809L418.506 21.8809L419.574 21.8808C419.574 9.49377 409.532 -0.548527 397.145 -0.548527V0.519531ZM418.506 21.8809H417.438V285.231H418.506H419.574V21.8809H418.506ZM411.849 300.726L411.113 299.951L345.536 362.179L346.272 362.954L347.007 363.729L412.584 301.5L411.849 300.726ZM331.568 368.82V367.752H22.002V368.82V369.888H331.568V368.82ZM22.002 368.82V367.752C10.7945 367.752 1.70879 358.666 1.70868 347.459H0.640625H-0.427433C-0.427311 359.846 9.6147 369.888 22.002 369.888V368.82ZM0.640625 347.459H1.70868V21.8809H0.640625H-0.427433V347.459H0.640625ZM0.640625 21.8809L1.70868 21.8809C1.70893 10.6735 10.7946 1.58759 22.002 1.58759V0.519531V-0.548527C9.61478 -0.548527 -0.427155 9.49379 -0.427433 21.8808L0.640625 21.8809ZM22.002 0.519531V1.58759H397.145V0.519531V-0.548527H22.002V0.519531ZM346.272 362.954L345.536 362.179C341.766 365.758 336.766 367.752 331.568 367.752V368.82V369.888C337.313 369.888 342.839 367.684 347.007 363.729L346.272 362.954ZM418.506 285.231H417.438C417.438 290.797 415.151 296.119 411.113 299.951L411.849 300.726L412.584 301.5C417.047 297.265 419.574 291.383 419.574 285.231H418.506Z" fill="#C1C1C1" fillOpacity="0.38" mask="url(#path-1-inside-1_2085_240)"/>
-</g>
+        <div className="absolute inset-0 z-0 pointer-events-none h-full w-full">
+          <svg
+            className="h-full w-full dropdown-svg"
+            width="419"
+            height="369"
+            viewBox="0 0 419 369"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <foreignObject
+              x="-84.804"
+              y="-84.9251"
+              width="588.755"
+              height="539.19"
+            >
+              <div
+                xmlns="http://www.w3.org/1999/xhtml"
+                style={{
+                  backdropFilter: "blur(42.72px)",
+                  clipPath: "url(#bgblur_0_2085_240_clip_path)",
+                  height: "100%",
+                  width: "100%",
+                }}
+              ></div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="85.4446">
+              <mask id="path-1-inside-1_2085_240" fill="white">
+                <path d="M397.145 0.519531C408.942 0.519531 418.506 10.0836 418.506 21.8809V285.231C418.506 291.09 416.099 296.692 411.849 300.726L346.272 362.954C342.303 366.721 337.039 368.82 331.568 368.82H22.002C10.2046 368.82 0.640741 359.256 0.640625 347.459V21.8809C0.640889 10.0836 10.2047 0.519531 22.002 0.519531H397.145Z" />
+              </mask>
+              <path
+                d="M397.145 0.519531C408.942 0.519531 418.506 10.0836 418.506 21.8809V285.231C418.506 291.09 416.099 296.692 411.849 300.726L346.272 362.954C342.303 366.721 337.039 368.82 331.568 368.82H22.002C10.2046 368.82 0.640741 359.256 0.640625 347.459V21.8809C0.640889 10.0836 10.2047 0.519531 22.002 0.519531H397.145Z"
+                fill="black"
+                fillOpacity="0.32"
+              />
+              <path
+                d="M418.506 21.8809H419.574V21.8808L418.506 21.8809ZM0.640625 347.459H-0.427433H0.640625ZM0.640625 21.8809L-0.427433 21.8808V21.8809H0.640625ZM346.272 362.954L347.007 363.729L346.272 362.954ZM411.849 300.726L412.584 301.5L411.849 300.726ZM397.145 0.519531V1.58759C408.352 1.58759 417.438 10.6735 417.438 21.8809L418.506 21.8809L419.574 21.8808C419.574 9.49377 409.532 -0.548527 397.145 -0.548527V0.519531ZM418.506 21.8809H417.438V285.231H418.506H419.574V21.8809H418.506ZM411.849 300.726L411.113 299.951L345.536 362.179L346.272 362.954L347.007 363.729L412.584 301.5L411.849 300.726ZM331.568 368.82V367.752H22.002V368.82V369.888H331.568V368.82ZM22.002 368.82V367.752C10.7945 367.752 1.70879 358.666 1.70868 347.459H0.640625H-0.427433C-0.427311 359.846 9.6147 369.888 22.002 369.888V368.82ZM0.640625 347.459H1.70868V21.8809H0.640625H-0.427433V347.459H0.640625ZM0.640625 21.8809L1.70868 21.8809C1.70893 10.6735 10.7946 1.58759 22.002 1.58759V0.519531V-0.548527C9.61478 -0.548527 -0.427155 9.49379 -0.427433 21.8808L0.640625 21.8809ZM22.002 0.519531V1.58759H397.145V0.519531V-0.548527H22.002V0.519531ZM346.272 362.954L345.536 362.179C341.766 365.758 336.766 367.752 331.568 367.752V368.82V369.888C337.313 369.888 342.839 367.684 347.007 363.729L346.272 362.954ZM418.506 285.231H417.438C417.438 290.797 415.151 296.119 411.113 299.951L411.849 300.726L412.584 301.5C417.047 297.265 419.574 291.383 419.574 285.231H418.506Z"
+                fill="#C1C1C1"
+                fillOpacity="0.38"
+                mask="url(#path-1-inside-1_2085_240)"
+              />
+            </g>
             <defs>
-<clipPath id="bgblur_0_2085_240_clip_path" transform="translate(84.804 84.9251)"><path d="M397.145 0.519531C408.942 0.519531 418.506 10.0836 418.506 21.8809V285.231C418.506 291.09 416.099 296.692 411.849 300.726L346.272 362.954C342.303 366.721 337.039 368.82 331.568 368.82H22.002C10.2046 368.82 0.640741 359.256 0.640625 347.459V21.8809C0.640889 10.0836 10.2047 0.519531 22.002 0.519531H397.145Z"/>
-</clipPath></defs>
+              <clipPath
+                id="bgblur_0_2085_240_clip_path"
+                transform="translate(84.804 84.9251)"
+              >
+                <path d="M397.145 0.519531C408.942 0.519531 418.506 10.0836 418.506 21.8809V285.231C418.506 291.09 416.099 296.692 411.849 300.726L346.272 362.954C342.303 366.721 337.039 368.82 331.568 368.82H22.002C10.2046 368.82 0.640741 359.256 0.640625 347.459V21.8809C0.640889 10.0836 10.2047 0.519531 22.002 0.519531H397.145Z" />
+              </clipPath>
+            </defs>
           </svg>
-       
         </div>
-  
+
         <div
           className={`relative z-10 py-[2vw] px-[3vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
         >
           <div className="flex">
             {/* First Half */}
-            <ul className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}>
+            <ul
+              className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
+            >
               {firstHalf.map((item, index) => {
                 const isActive = pathname === item.link;
                 return (
                   <li key={index} className="group dropdown-item">
-                    <Link href={item.link} className="flex items-center gap-[0.5vw] justify-start">
+                    <Link
+                      href={item.link}
+                      className="flex items-center gap-[0.5vw] justify-start"
+                    >
                       <div
                         style={{ animation: "pulse .5s infinite" }}
                         className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
@@ -526,7 +546,12 @@ export default function Header() {
                           ${isActive && !isInverted ? "bg-orange-500" : ""}`}
                       ></div>
                       <span className="uppercase text-[.9vw] text-left">
-                        <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                        <ScrambleText
+                          onHover={true}
+                          centerd
+                          speed={0.5}
+                          className="min-w-[8vw]"
+                        >
                           {item.name}
                         </ScrambleText>
                       </span>
@@ -535,14 +560,19 @@ export default function Header() {
                 );
               })}
             </ul>
-  
+
             {/* Second Half */}
-            <ul className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}>
+            <ul
+              className={`space-y-[1vw] ${isInverted ? "text-black" : "text-[#D6D6D6]"}`}
+            >
               {secondHalf.map((item, index) => {
                 const isActive = pathname === item.link;
                 return (
                   <li key={index} className="group dropdown-item">
-                    <Link href={item.link} className="flex items-center gap-[0.5vw] justify-start">
+                    <Link
+                      href={item.link}
+                      className="flex items-center gap-[0.5vw] justify-start"
+                    >
                       <div
                         style={{ animation: "pulse .5s infinite" }}
                         className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
@@ -551,7 +581,12 @@ export default function Header() {
                           ${isActive && !isInverted ? "bg-orange-500" : ""}`}
                       ></div>
                       <span className="uppercase text-[.9vw] text-left">
-                        <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                        <ScrambleText
+                          onHover={true}
+                          centerd
+                          speed={0.5}
+                          className="min-w-[8vw]"
+                        >
                           {item.name}
                         </ScrambleText>
                       </span>
@@ -566,10 +601,10 @@ export default function Header() {
     </div>
   );
   useEffect(() => {
-  if (!menuOpen) {
-    setOpenMenu(false); 
-  }
-}, [menuOpen])
+    if (!menuOpen) {
+      setOpenMenu(false);
+    }
+  }, [menuOpen]);
 
   return (
     <>
@@ -644,14 +679,15 @@ export default function Header() {
               {/* Logo */}
               <Link
                 href={"/"}
-                className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${isInverted ? " brightness-[16] max-sm:brightness-0 max-sm:invert-100" : ""
-                  }`}
+                className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${
+                  isInverted
+                    ? " brightness-[16] max-sm:brightness-0 max-sm:invert-100"
+                    : ""
+                }`}
               >
                 <Logo className="h-full w-full" />
               </Link>
-              <div
-                className="hidden max-md:block max-sm:block "
-              >
+              <div className="hidden max-md:block max-sm:block "   style={{ pointerEvents: buttonDisabled ? "none" : "auto" }}>
                 <HamButton
                   onClick={handleMenuButtonClick}
                   disabled={buttonDisabled}
@@ -664,14 +700,21 @@ export default function Header() {
               <nav className="relative flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden max-md:hidden">
                 {links.map((item, index) => {
                   const isActive = pathname === item.link;
-                  const isDropdownItem = item.name.toLowerCase() === "solutions" || item.name.toLowerCase() === "products";
+                  const isDropdownItem =
+                    item.name.toLowerCase() === "solutions" ||
+                    item.name.toLowerCase() === "products";
 
                   return (
                     <div
                       key={index}
                       className="relative"
-                      onMouseEnter={() => isDropdownItem && setHoveredItem(item.name.toLowerCase())}
-                      onMouseLeave={() => isDropdownItem && setHoveredItem(null)}
+                      onMouseEnter={() =>
+                        isDropdownItem &&
+                        setHoveredItem(item.name.toLowerCase())
+                      }
+                      onMouseLeave={() =>
+                        isDropdownItem && setHoveredItem(null)
+                      }
                     >
                       <Link
                         href={item.link}
@@ -689,7 +732,12 @@ export default function Header() {
                           <span
                             className={`uppercase text-[.9vw] text-left ${isWhite ? "text-white" : "text-[#D6D6D6]"}`}
                           >
-                            <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                            <ScrambleText
+                              onHover={true}
+                              centerd
+                              speed={0.5}
+                              className="min-w-[8vw]"
+                            >
                               {item.name}
                             </ScrambleText>
                           </span>
@@ -698,8 +746,12 @@ export default function Header() {
 
                       {isDropdownItem && (
                         <>
-                          {hoveredItem === "solutions" && item.name.toLowerCase() === "solutions" && solutionsDropdown}
-                          {hoveredItem === "products" && item.name.toLowerCase() === "products" && productsDropdown}
+                          {hoveredItem === "solutions" &&
+                            item.name.toLowerCase() === "solutions" &&
+                            solutionsDropdown}
+                          {hoveredItem === "products" &&
+                            item.name.toLowerCase() === "products" &&
+                            productsDropdown}
 
                           <div className="round absolute top-[-80%] bottom-auto left-[45%] ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] cursor-pointer">
                             <div className="-rotate-90 text-[#D6D6D6] flex items-center justify-center gap-0 w-[0.9vw] h-full max-sm:w-[3vw]">
@@ -716,12 +768,10 @@ export default function Header() {
                                   fill="currentColor"
                                 />
                               </svg>
-
                             </div>
                           </div>
                         </>
                       )}
-
                     </div>
                   );
                 })}
@@ -737,135 +787,183 @@ export default function Header() {
         </div>
       </header>
 
-<div ref={navigationRef}
-      className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen bg-black/40 overflow-hidden top-0 left-0 transition-opacity duration-300 ${
-        menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 "
-      }`}
-    >
-      <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute top-0 left-0 m-nav-bg -translate-y-full nav-bg-t">
-        <Image
-          className="w-full h-full object-cover object-bottom"
-          src={"/assets/shapes/menu-svg-t.svg"}
-          alt="menu background image"
-          width={400}
-          height={600}
-        />
-      </div>
+      <div
+        ref={navigationRef}
+        className={`fixed inset-0 z-[299] hidden max-md:block h-dvh w-screen  overflow-hidden top-0 left-0 transition-opacity duration-300 ${
+          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none "
+        }`}
+      >
+        <div className="w-screen max-md:h-[60vh] max-sm:h-[47vh] max-sm:w-[102vw] absolute top-0 left-[-1%] m-nav-bg -translate-y-full nav-bg-t">
+          <Image
+            className="w-full h-full object-cover object-bottom"
+            src={"/assets/shapes/menu-svg-t.svg"}
+            alt="menu background image"
+            width={400}
+            height={600}
+          />
+        </div>
 
-      <div className="w-screen max-md:h-[60vh] max-sm:h-[50vvh] absolute bottom-0 left-0 m-nav-bg translate-y-full nav-bg-b">
-        <Image
-          className="w-full h-full object-cover object-top"
-          src={"/assets/shapes/menu-svg-b.svg"}
-          alt="menu background image"
-          width={400}
-          height={600}
-        />
-      </div>
+        <div className="w-screen max-md:h-[60vh] max-sm:h-[65vh] absolute bottom-[-2%] left-0 m-nav-bg translate-y-full nav-bg-b">
+          <Image
+            className="w-full h-full object-cover object-top"
+            src={"/assets/shapes/menu-svg-b.svg"}
+            alt="menu background image"
+            width={400}
+            height={600}
+          />
+        </div>
 
-      <div className="relative w-screen h-screen flex items-end">
-        <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow max-sm:px-8 max-sm:pt-14 max-md:px-12 max-md:pt-20">
-          { menuOpen && links2.map((item, index) => {
-            const isActive = pathname === item.link;
-            const hasSubmenu =
-              item.name.toLowerCase() === "products" ||
-              item.name.toLowerCase() === "solutions";
+        <div className="relative w-screen h-screen flex items-end">
+          <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow max-sm:px-8 max-sm:pt-0 max-md:px-12 max-md:pt-20">
+            {links2.map((item, index) => {
+              const isActive = pathname === item.link;
+              const hasSubmenu =
+                item.name.toLowerCase() === "products" ||
+                item.name.toLowerCase() === "solutions";
 
-            return (
-              <div
-                key={index}
-                className="flex justify-start items-center overflow-hidden transition-all duration-200 group"
-              >
-                <Link
-                  href={item.link}
-                  className={`flex items-center gap-3 m-nav-links translate-y-full opacity-0 transition-all duration-500 ${
-                    isActive ? "text-primary-2" : "text-white"
-                  }`}
+              return (
+                <div
+                  key={index}
+                  className={`flex justify-start items-center overflow-hidden transition-all group ${openMenu?"opacity-0 duration-300":"opacity-100 duration-300"}`}
                 >
-                  <span>
-                    <svg
-                      width="18"
-                      height="23"
-                      viewBox="0 0 18 23"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.5195 0H17.5195L7.51953 22.1687H0.519531L10.5195 0Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  <span className="max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[4vw] font-medium">
-                    {item.name}
-                  </span>
-                </Link>
-
-                {hasSubmenu && (
-                  <button
-                    onClick={() =>
-                      setOpenMenu(
-                        openMenu === item.name.toLowerCase()
-                          ? null
-                          : item.name.toLowerCase()
-                      )
-                    }
-                    className={`ml-2 text-white transform duration-300 h-[3vw] w-[3vw] m-nav-arrow opacity-0 `}
+                  <Link
+                    href={item.link}
+                    className={`flex items-center gap-3 m-nav-links opacity-0 transition-color duration-500 ${
+                      isActive ? "text-primary-2" : "text-white"
+                    }`}
                   >
-                     <svg
-                                className="arrow next rotate-180 h-full w-full"
-                                width="8"
-                                height="15"
-                                viewBox="0 0 8 15"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                  </button>
+                    <span>
+                      <svg
+                        width="18"
+                        height="23"
+                        viewBox="0 0 18 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.5195 0H17.5195L7.51953 22.1687H0.519531L10.5195 0Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                    <span className="max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[4vw] font-medium">
+                      {item.name}
+                    </span>
+                  </Link>
+
+                  {hasSubmenu && (
+                    <button
+                      onClick={() =>
+                        setOpenMenu(
+                          openMenu === item.name.toLowerCase()
+                            ? null
+                            : item.name.toLowerCase()
+                        )
+                      }
+                      className={`ml-[3vw] text-white transform duration-300 h-[5vw] w-[5vw] m-nav-arrow opacity-0 rounded-[1.2vw]  relative flex justify-center items-center`}
+                    >
+                      {/* <svg
+                        className="arrow next rotate-180 h-full w-full"
+                        width="8"
+                        height="15"
+                        viewBox="0 0 8 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                          fill="currentColor"
+                        />
+                      </svg> */}
+                      <span
+                        className={`w-[4vw] h-[1.5px] rounded-full ${
+                          isActive ? "bg-primary-2" : "bg-white"
+                        }`}
+                      />
+                      <span
+                        className={`w-[4vw] h-[1.5px] rotate-90 absolute rounded-full ${
+                          isActive ? "bg-primary-2" : "bg-white"
+                        } `}
+                      />
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+
+            {/* Submenu */}
+            {menuOpen && openMenu && (
+              <div
+                className={`absolute`}
+              >
+                <div className={`flex gap-[5vw] text-[5.5vw] items-center mb-[5vw]  submenu-item`}>
+                <div className="w-[4vw] h-[4vw] " onClick={()=>{setOpenMenu(false)}}>
+                 <svg
+                        className="arrow prev h-full w-full"
+                        width="8"
+                        height="15"
+                        viewBox="0 0 8 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+
+                </div>
+                <div>
+                {
+                  openMenu==="products"?<p>Products</p>:<p>Solutions</p>
+                }
+
+                </div>
+
+                </div>
+
+                {openMenu === "products" ? (
+                  <>
+
+                  <ul className="grid grid-cols-2 gap-x-8 gap-y-[2vw] text-white ml-[9vw]">
+                    {products.map((sub, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 submenu-item translate-y-full opacity-0 max-md:gap-4"
+                      >
+                        <Link
+                          href={sub.link}
+                          className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
+                        >
+                          {sub.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  </>
+                ) : (
+                  <ul className="flex flex-col gap-y-[2vw] text-white ml-[9vw]">
+                    {solutions.map((sub, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 submenu-item translate-y-full opacity-0"
+                      >
+                        <Link
+                          href={sub.link}
+                          className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
+                        >
+                          {sub.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
-            );
-          })}
-
-          {/* Submenu */}
-          {/* {menuOpen && openMenu && (
-            <div className={`absolute max-sm:left-[50%] transition-all duration-300 max-md:left-[45%]`}>
-              {openMenu === "products" ? (
-                <ul className="grid grid-cols-2 gap-x-8 gap-y-4 text-white">
-                  {products.map((sub, i) => (
-                    <li key={i} className="flex items-center gap-2 submenu-item translate-y-full opacity-0 max-md:gap-4">
-                      <Link
-                        href={sub.link}
-                        className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
-                      >
-                        {sub.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <ul className="flex flex-col gap-4 text-white">
-                  {solutions.map((sub, i) => (
-                    <li key={i} className="flex items-center gap-2 submenu-item translate-y-full opacity-0">
-                     
-                      <Link
-                        href={sub.link}
-                        className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
-                      >
-                        {sub.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          )} */}
-        </nav>
+            )}
+          </nav>
+        </div>
       </div>
-    </div>
     </>
-  )
+  );
 }

@@ -394,6 +394,7 @@ export default function Header() {
                     className="flex items-center gap-[0.5vw] justify-start"
                   >
                     <div
+                      aria-hidden="true"
                       style={{ animation: "pulse .5s infinite" }}
                       className={`w-[.3vw] ${isActive ? "h-[1vw]" : "h-[0vw] group-hover:h-[1vw]"}
                         transition-all duration-200 
@@ -406,6 +407,7 @@ export default function Header() {
                         centerd
                         speed={0.5}
                         className="min-w-[8vw]"
+                        aria-label={item.name}
                       >
                         {item.name}
                       </ScrambleText>
@@ -678,6 +680,7 @@ export default function Header() {
             <div className="flex items-center justify-between w-full h-full relative z-10 pointer-events-auto ">
               {/* Logo */}
               <Link
+                 aria-label="Home"
                 href={"/"}
                 className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${
                   isInverted
@@ -685,7 +688,7 @@ export default function Header() {
                     : ""
                 }`}
               >
-                <Logo className="h-full w-full" />
+                <Logo className="h-full w-full" aria-hidden="true" />
               </Link>
               <div className="hidden max-md:block max-sm:block "   style={{ pointerEvents: buttonDisabled ? "none" : "auto" }}>
                 <HamButton
@@ -852,40 +855,41 @@ export default function Header() {
                   </Link>
 
                   {hasSubmenu && (
-                    <button
-                      onClick={() =>
-                        setOpenMenu(
-                          openMenu === item.name.toLowerCase()
-                            ? null
-                            : item.name.toLowerCase()
-                        )
-                      }
-                      className={`ml-[3vw] text-white transform duration-300 h-[5vw] w-[5vw] m-nav-arrow opacity-0 rounded-[1.2vw]  relative flex justify-center items-center`}
-                    >
-                      {/* <svg
-                        className="arrow next rotate-180 h-full w-full"
-                        width="8"
-                        height="15"
-                        viewBox="0 0 8 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <button
+                        onClick={() =>
+                          setOpenMenu(
+                            openMenu === item.name.toLowerCase()
+                              ? null
+                              : item.name.toLowerCase()
+                          )
+                        }
+                        aria-label={openMenu === item.name.toLowerCase() ? "Close menu" : "Open menu"}
+                        className={`ml-[3vw] text-white transform duration-300 h-[5vw] w-[5vw] m-nav-arrow opacity-0 rounded-[1.2vw]  relative flex justify-center items-center`}
                       >
-                        <path
-                          d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                          fill="currentColor"
+                        {/* <svg
+                          className="arrow next rotate-180 h-full w-full"
+                          width="8"
+                          height="15"
+                          viewBox="0 0 8 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                            fill="currentColor"
+                          />
+                        </svg> */}
+                        <span
+                          className={`w-[4vw] h-[1.5px] rounded-full ${
+                            isActive ? "bg-primary-2" : "bg-white"
+                          }`}
                         />
-                      </svg> */}
-                      <span
-                        className={`w-[4vw] h-[1.5px] rounded-full ${
-                          isActive ? "bg-primary-2" : "bg-white"
-                        }`}
-                      />
-                      <span
-                        className={`w-[4vw] h-[1.5px] rotate-90 absolute rounded-full ${
-                          isActive ? "bg-primary-2" : "bg-white"
-                        } `}
-                      />
-                    </button>
+                        <span
+                          className={`w-[4vw] h-[1.5px] rotate-90 absolute rounded-full ${
+                            isActive ? "bg-primary-2" : "bg-white"
+                          } `}
+                        />
+                      </button>
                   )}
                 </div>
               );

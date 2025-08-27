@@ -40,7 +40,7 @@ export default function Overview() {
               </p>
             </div>
             <Copy>
-              <p className="text-gray-2 text-center text-content-20 tracking-wider font-display">
+              <p className="text-gray-2 text-center text-content-20 tracking-wider font-display" aria-label="Your Retail Customers">
                 Your Retail Customers
               </p>
             </Copy>
@@ -59,7 +59,7 @@ export default function Overview() {
               </p>
             </div>
             <Copy>
-              <p className="text-gray-2 subtitle text-center text-content-20 tracking-wider font-display">
+              <p className="text-gray-2 subtitle text-center text-content-20 tracking-wider font-display" aria-label="Your X-Selling Ratio">
                 Your X-Selling Ratio
               </p>
             </Copy>
@@ -78,7 +78,7 @@ export default function Overview() {
               </p>
             </div>
             <Copy>
-              <p className="text-gray-2 subtitle  text-center text-content-20 tracking-wider font-display max-sm:w-fit">
+              <p  aria-label="Revenue from Retail Products" className="text-gray-2 subtitle  text-center text-content-20 tracking-wider font-display max-sm:w-fit">
                 Revenue from Retail Products
               </p>
             </Copy>
@@ -89,14 +89,14 @@ export default function Overview() {
         <div className="flex gap-2 w-screen px-[4.5vw] items-end justify-between pb-[5vw] max-md:pb-[10vw] max-md:flex-col max-md:text-center max-md:items-center max-sm:pb-[15vw]">
           <div className="pb-[3.5vw] w-[50%] max-md:w-full max-sm:pt-[10vh]">
             <Copy>
-              <p className="font-display text-gray-1 text-head-100">
+              <p className="font-display text-gray-1 text-head-100" aria-label="Right Solution">
               Find the Right Solution for You
               </p>
             </Copy>
           </div>
           <div className="h-fit w-[35%] max-md:w-[85%]">
             <Copy>
-              <p className="text-content-20 text-gray-2 ">
+              <p className="text-content-20 text-gray-2 " aria-label="Our comprehensive">
               Our comprehensive suite covers digital banking, payments, card issuance, merchant acquiring, digital lending, and credit card management. It&apos;s supported by powerful enablers like digital KYC, secure soft-token 2FA, personalized loyalty programs, and chatbot-based customer support. Together, these solutions drive scalable growth, boost operational efficiency, and deliver a superior customer experience.
 
               </p>

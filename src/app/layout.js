@@ -2,24 +2,22 @@ import "./globals.css";
 import LenisSmoothScroll from "../components/LenisSmoothScroll";
 import LayoutTransition from "@/components/LayoutTransition";
 import { defaultMetadata } from "@/lib/seo.config";
-import { GoogleTagManager } from '@next/third-parties/google'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = defaultMetadata;
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <LenisSmoothScroll />
-      <html lang="en">
+    <html lang="en">
+      <head />
+      <body>
         <GoogleTagManager gtmId="GTM-T53Z2STS" />
-        <body>
-          <LayoutTransition>
-            {children}
-          </LayoutTransition>
-        </body>
+
+        <LenisSmoothScroll />
+        <LayoutTransition>{children}</LayoutTransition>
+
         <GoogleAnalytics gaId="G-1BGD0MT8D6" />
-      </html>
-    </>
+      </body>
+    </html>
   );
 }

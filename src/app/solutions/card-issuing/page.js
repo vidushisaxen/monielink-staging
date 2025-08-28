@@ -8,7 +8,7 @@ import Solutions from "@/components/SolutionDetailPage/Solutions";
 import { DigitalAccounts1 } from "@/components/Icons";
 import IntroCardIssuing from "@/components/SolutionDetailPage/IntroCardIssuing";
 import { getPageMetadata } from "@/lib/seo.config";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 
 
@@ -41,6 +41,8 @@ export default function SolutionDetail() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Launch faster with Scalable Card issuing programs"} para={"Enabling instant issuance of Virtual Cards that delivers both Online & Offline Usage through an All-in-one card-issuing platform for issuing virtual cards instantly on the Mobile Apps integrated with Monielink super SDK"} breadcrumb={true}/>
         <IntroCardIssuing/>

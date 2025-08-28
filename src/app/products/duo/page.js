@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import Wallet from "@/components/ProductDetailPage/Duo/Wallet";
 import CustomerBenefits from "@/components/ProductDetailPage/Duo/CustomerBenefits";
 import IssuerBenefits from "@/components/ProductDetailPage/Duo/IssuerBenefits";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 import { getPageMetadata } from "@/lib/seo.config";
 
@@ -41,6 +41,8 @@ export default function Duo() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Enable DTS Virtual Credit via Debit Cards "} para={"DUO leverages our patented Dual Transaction Service (DTS) to transform existing debit cards into virtual credit cards. Pre-approved customers can seamlessly access their credit limits using their current debit cards"} breadcrumb={true}/>
         <Intro content={introData}/>

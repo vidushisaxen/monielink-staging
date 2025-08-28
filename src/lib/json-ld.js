@@ -217,16 +217,21 @@ export function BreadcrumbsJSONLD({ pathname}) {
   );
 }
 
+function stripHTML(html) {
+  if (!html) return "";
+  return html.replace(/<[^>]+>/g, "").trim();
+}
+
 export function FAQJSONLD({ faqs }) {
   const faqJSONLD = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map((faq) => ({
       "@type": "Question",
-      "name": faqs[0].question,
+      "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": faq.answer,
+        "text": stripHTML(faq.answer),
       },
     })),
   };

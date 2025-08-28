@@ -6,7 +6,7 @@ import CTA from "@/components/Footer/CTA";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroLoyalty from "@/components/SolutionDetailPage/IntroLoyalty";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -38,6 +38,8 @@ export default function SolutionDetail() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Boost Digital Service Adoption with Tailored Loyalty Programs"} para={"Design a customised Loyalty Program that rewards customers with usage-based points credited to a dedicated rewards account. Customers can view their reward point statements on our Partner’s Mobile App integrated with our SDK."} breadcrumb={true}/>
        <IntroLoyalty/>

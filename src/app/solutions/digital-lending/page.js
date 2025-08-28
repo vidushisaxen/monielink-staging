@@ -7,7 +7,7 @@ import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroDigitalLending from "@/components/SolutionDetailPage/IntroDigitalLending";
 import { getPageMetadata } from "@/lib/seo.config";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 
 export const metadata = getPageMetadata({
@@ -39,6 +39,8 @@ export default function SolutionDetail() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Scalable Digital Lending for Real-Time Credit"} para={"Monielink enables end-to-end loan and credit card management, helping lenders Create & Grow Profitable Portfolios through a complete cloud-based ecosystem"} breadcrumb={true}/>
        <IntroDigitalLending/>

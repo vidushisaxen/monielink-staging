@@ -9,7 +9,7 @@ import Clients from "../components/Home/Clients";
 import CTA from "../components/Footer/CTA";
 import Layout from "../components/Layout";
 import HomePageHero from "@/components/Hero/HomePageHero";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 
 export const metadata = {
     title: "MonieLink: Secure Neobank Platform for Fintechs.",
@@ -18,7 +18,33 @@ export const metadata = {
     date_published: "2025-08-12T00:00",
     date_modified: "2025-08-12T00:00",
   }
-
+export default function HomePage() {
+  return (
+    <>
+    <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+      <Layout>
+        <HomePageHero
+          heading={" A Powerful Neobank Platform"}
+          para={
+            "Enabling Banks & FinTechs offer digital banking services within their Mobile Apps using single Monielink Super SDK. Increase adoption of your Mobile App delivering superior experience across all categories of retail products & services."
+          }
+        />
+        <Overview />
+        <Solutions />
+        <USPs />
+        <Products productsData={productsData}/>
+        <Intro />
+        <div className="clients-transition">
+        <Clients />
+        {/* <Blogs /> */}
+        </div>
+        <FAQs data={faqData} />
+        <CTA />
+      </Layout>
+    </>
+  );
+}
 const faqData = [
   {
     question: "What is Monielink Super SDK offering?",

@@ -9,7 +9,7 @@ import Rewards from "@/components/ProductDetailPage/Reward/Rewards";
 import Redemptions from "@/components/ProductDetailPage/Reward/Redemptions";
 import Usage from "@/components/ProductDetailPage/Reward/Usage";
 import Wallet from "@/components/ProductDetailPage/Reward/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 import { getPageMetadata } from "@/lib/seo.config";
 
@@ -41,6 +41,8 @@ export default function Reward() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Drive Engagement with Loyalty Rewards"} para={"Encourage digital service adoption with personalized loyalty programs. Offer rewards that match customer behaviour to boost retention and long-term value."} breadcrumb={true}/>
         <Intro content={introData}/>

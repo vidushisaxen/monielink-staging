@@ -9,7 +9,7 @@ const Features = dynamic(() => import("@/components/SolutionsPage/Features"), { 
 const Solutions = dynamic(() => import("@/components/SolutionsPage/Solutions"), { ssr: true });
 const MobileSolutions = dynamic(() => import("@/components/SolutionsPage/MobileSolutions"), { ssr: true });
 
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -42,6 +42,7 @@ export default function SolutionsPage() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
       <Layout>
         <Hero
           heading={"Smart Solutions for Modern Banking"}

@@ -10,7 +10,7 @@ import Wallet from "@/components/ProductDetailPage/ChatBox/Wallet";
 import Videos from "@/components/ProductDetailPage/ChatBox/Videos";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 
 export const metadata = getPageMetadata({
   title: "MonieLink ChatBox: AI Customer Support Neobank",
@@ -40,6 +40,8 @@ export default function ChatBox() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Learn with FAQs & Videos"} para={"Help users explore and understand Monielink’s Super SDK products with engaging FAQs and video content. Empower them with the knowledge they need to use your digital services confidently and effectively."} breadcrumb={true}/>
         <Intro content={introData}/>

@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import StaticQR from "@/components/ProductDetailPage/ScanPay/StaticQR";
 import DynamicQR from "@/components/ProductDetailPage/ScanPay/DynamicQR";
 import Wallet from "@/components/ProductDetailPage/ScanPay/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -41,6 +41,8 @@ export default function ScanPay() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+     <FAQJSONLD faqs={faqData}/>
+        <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Modern Merchant Acquiring, Built for you"} para={"Give your merchants the tools to accept payments instantly with ScanPay. From seamless self-onboarding to real-time settlements and dashboard visibility.  Monielink makes it easy to scale collections, improve cash flow, and deliver a frictionless payment experience."} breadcrumb={true}/>
         <Intro content={introData}/>

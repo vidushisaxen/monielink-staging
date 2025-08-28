@@ -5,7 +5,7 @@ import CTA from "@/components/Footer/CTA";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroKYC from "@/components/SolutionDetailPage/IntroKYC";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -38,6 +38,8 @@ export default function SolutionDetail() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Instant Digital KYC with Soft Token 2FA"} para={"VERIFYED enables banks and FinTechs to complete customer onboarding through a digital KYC process in seconds, while also providing KYC upgrade services for existing customers. Enable 2FA on any account through easy, self-guided onboarding using multiple authentication options."} breadcrumb={true}/>
        <IntroKYC/>

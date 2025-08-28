@@ -9,7 +9,7 @@ import Launch from "@/components/ProductsPage/Launch";
 import MobileProducts from "@/components/ProductsPage/MobileProducts";
 import Diagram1 from "@/components/ProductsPage/Diagram1";
 import Diagram2 from "@/components/ProductsPage/Diagram2";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -42,6 +42,7 @@ export default function ProductsPage() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
       <Layout>
         <Hero heading={"Products Built for Digital Finance"} para={"Whether you're building for consumers, merchants, or agents, Monielink gives you the tools to deliver seamless, modern financial experiences at scale. From digital wallets and embedded credit to contactless payments and loyalty programs — Monielink offers a modular, API-ready product stack designed to help banks, fintechs, and platforms launch, scale, and grow smarter."} />
         <Overview />

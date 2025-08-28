@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import Infrastructure2 from "@/components/ProductDetailPage/Balance/Infrstructure2";
 import MobileInfrastructure from "@/components/ProductDetailPage/Balance/MobileInfrastructure";
 import Wallet from "@/components/ProductDetailPage/Balance/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -42,6 +42,8 @@ export default function Balance() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Reimagining Digital Banking with Balance"} para={"Deliver modern financial services from onboarding to transactions seamlessly within your mobile app using Monielink’s Super SDK."} breadcrumb={true}/>
         <Intro content={introData}/>

@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/SnapCred/Diagram";
 import MobileDiagram from "@/components/ProductDetailPage/SnapCred/MobileDiagram";
 import Wallet from "@/components/ProductDetailPage/SnapCred/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 import { getPageMetadata } from "@/lib/seo.config";
 
@@ -40,6 +40,8 @@ export default function SnapCred() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+     <FAQJSONLD faqs={faqData}/>
+        <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Comprehensive Credit Lifecycle Management"} para={"Our cloud-based loan management system enables lenders to Instantly Originate and Disburse / Issue loans & credit cards, Manage them throughout their lifecycle, and collect both due and delinquent payments from customers’ bank accounts across multiple banks."} breadcrumb={true}/>
         <Intro content={introData}/>

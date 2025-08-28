@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import Identity from "@/components/ProductDetailPage/Verifyed/Identity";
 import Address from "@/components/ProductDetailPage/Verifyed/Address";
 import Wallet from "@/components/ProductDetailPage/Verifyed/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 import SelfService from "@/components/ProductDetailPage/Verifyed/SelfService";
@@ -43,6 +43,8 @@ export default function Verifyed() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+     <FAQJSONLD faqs={faqData}/>
+        <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero
           heading={"Turn on 2FA to add an extra layer of security."}

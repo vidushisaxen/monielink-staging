@@ -7,7 +7,7 @@ import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import { DigitalAccounts1 } from "@/components/Icons";
 import IntroMerchnatAcquiring from "@/components/SolutionDetailPage/IntroMerchantAcquiring";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -40,6 +40,8 @@ export default function SolutionDetail() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Seamless Merchant Onboarding"} para={"Effortlessly integrate the Monielink SDK into your mobile app for seamless merchant onboarding. Equip merchants with an interoperable QR code for digital payments, along with access to the Soft-POS feature, turning NFC-enabled mobile phones into POS terminals, allowing them to accept contactless card payments in addition to using traditional POS devices "} breadcrumb={true}/>
         <IntroMerchnatAcquiring/>

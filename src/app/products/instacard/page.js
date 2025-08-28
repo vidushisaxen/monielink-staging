@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import Flowchart from "@/components/ProductDetailPage/InstaCard/Flowchart";
 import Universal from "@/components/ProductDetailPage/InstaCard/Universal";
 import Wallet from "@/components/ProductDetailPage/InstaCard/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 import { getPageMetadata } from "@/lib/seo.config";
 
@@ -41,6 +41,8 @@ export default function TapPay() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Instant Virtual Cards for Seamless Payments"} para={"All-in-one card-issuing platform for issuing virtual cards of all forms Debit, Credit & Pre-paid instantly on the Mobile Apps integrated with Monielink super SDK. All issued Instacards are saved in a Digital Wallet on the SDK for a Secure & Easy Access."} breadcrumb={true}/>
         <Intro content={introData}/>

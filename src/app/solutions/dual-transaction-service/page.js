@@ -5,7 +5,7 @@ import CTA from "@/components/Footer/CTA";
 import Products from "@/components/SolutionDetailPage/Products";
 import Solutions from "@/components/SolutionDetailPage/Solutions";
 import IntroDualTransaction from "@/components/SolutionDetailPage/IntroDualTransaction";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -40,6 +40,8 @@ export default function SolutionDetail() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+    <FAQJSONLD faqs={faqData}/>
+    <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Seamless Credit & Debit with One DUO Card"} para={"DUO offers end to end solutions for Issuers to launch, manage & scale Credit Card issuance, activations, usage & collections towards enabling them create a profitable portfolio."} breadcrumb={true}/>
        <IntroDualTransaction/>

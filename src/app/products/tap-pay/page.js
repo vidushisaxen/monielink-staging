@@ -8,7 +8,7 @@ import Values from "@/components/ProductDetailPage/Values";
 import Diagram from "@/components/ProductDetailPage/TapPay/Diagram";
 import Process from "@/components/ProductDetailPage/TapPay/Process";
 import Wallet from "@/components/ProductDetailPage/TapPay/Wallet";
-import { WebpageJsonLd } from "@/lib/json-ld";
+import { BreadcrumbsJSONLD, FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { getPageMetadata } from "@/lib/seo.config";
 import { homepage } from "@/lib/util";
 
@@ -41,6 +41,8 @@ export default function TapPay() {
   return (
     <>
     <WebpageJsonLd metadata={metadata}/>
+     <FAQJSONLD faqs={faqData}/>
+        <BreadcrumbsJSONLD pathname={metadata.url}/>
       <Layout>
         <Hero heading={"Accept Card Payments Anywhere"} para={"Empower every merchant, from street vendors to retail stores to accept card payments using our POS terminals and Soft-POS solutions. Easy setup, and full integration with settlement accounts for real-time visibility and control."} breadcrumb={true}/>
         <Intro content={introData}/>

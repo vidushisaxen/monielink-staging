@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }) {
+function PrimaryButton({ href, onClick, rotate, ariaLabel, text, className = "", ...props }) {
     const sharedContent = (
         <>
             <div className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] max-md:w-[27vw] max-md:h-[7vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]">
@@ -49,6 +49,7 @@ function PrimaryButton({ href, onClick, rotate, text, className = "", ...props }
                         </div>
                     </div>
                 </div>
+                <div className="w-[1px] h-[1px] overflow-hidden">{ariaLabel}</div>
                 
             </div>
         </>

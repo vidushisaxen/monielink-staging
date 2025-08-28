@@ -161,7 +161,7 @@ function Accordion({ title, description, img, href, isOpen, onToggle, svgRight }
 
                 <div className="w-full">
                   {/* <LinkButton text={"Learn More"} href={contentLink} /> */}
-                  <PrimaryButton text={"Learn More"} href={href}/>
+                  <PrimaryButton text={"Learn More"} href={href} ariaLabel='learn more about solutions' />
                 </div>
               </div>
             </motion.div>

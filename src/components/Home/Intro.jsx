@@ -25,7 +25,7 @@ export default function Intro() {
       </div>
       <div className="w-full flex justify-center items-center max-sm:justify-start max-sm:pl-[4vw]">
 
-      <PrimaryButton text="Learn More" href="/solutions" />
+      <PrimaryButton text="Learn More" href="/solutions" ariaLabel='learn in detail about solutions' />
       </div>
       {/* <ButtonComponent text="Learn More" bgColor={false} borderColor="white" /> */}
     </section>

@@ -180,30 +180,3 @@ const productsData = {
   ]
 };
 
-const heroHeading = " A Powerful Neobank Platform";
-const heroPara = "Enabling Banks & FinTechs offer digital banking services within their Mobile Apps using single Monielink Super SDK. Increase adoption of your Mobile App delivering superior experience across all categories of retail products & services.";
-
-export default function HomePage() {
-  return (
-    <>
-      <WebpageJsonLd metadata={metadata} />
-      <Layout>
-        <HomePageHero
-          heading={heroHeading}
-          para={heroPara}
-        />
-        <Overview />
-        <Solutions />
-        <USPs />
-        <Products productsData={productsData} />
-        <Intro />
-        <div className="clients-transition">
-          <Clients />
-          {/* <Blogs /> */}
-        </div>
-        <FAQs data={faqData} />
-        <CTA />
-      </Layout>
-    </>
-  );
-}

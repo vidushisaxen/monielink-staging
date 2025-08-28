@@ -18,32 +18,7 @@ export const metadata = {
     date_published: "2025-08-12T00:00",
     date_modified: "2025-08-12T00:00",
   }
-export default function HomePage() {
-  return (
-    <>
-    <WebpageJsonLd metadata={metadata}/>
-      <Layout>
-        <HomePageHero
-          heading={" A Powerful Neobank Platform"}
-          para={
-            "Enabling Banks & FinTechs offer digital banking services within their Mobile Apps using single Monielink Super SDK. Increase adoption of your Mobile App delivering superior experience across all categories of retail products & services."
-          }
-        />
-        <Overview />
-        <Solutions />
-        <USPs />
-        <Products productsData={productsData}/>
-        <Intro />
-        <div className="clients-transition">
-        <Clients />
-        {/* <Blogs /> */}
-        </div>
-        <FAQs data={faqData} />
-        <CTA />
-      </Layout>
-    </>
-  );
-}
+
 const faqData = [
   {
     question: "What is Monielink Super SDK offering?",
@@ -75,9 +50,10 @@ const faqData = [
     answer:
       "Our partnership goes beyond Tech. It’s about Growing Revenue For Our Partners. Monielink offers end-to-end, plug & play solution to our partners, for them to build a profitable business with full onboarding, integration support, compliance guidance, and ongoing technical maintenance.",
   },
-]
-const productsData={
-  heading:"Everything You Need to Power Digital Banking",
+];
+
+const productsData = {
+  heading: "Everything You Need to Power Digital Banking",
   cards: [
     {
       logo: "/assets/icons/logo/balance-white.svg",
@@ -89,7 +65,7 @@ const productsData={
         "Reward Accounts",
         "Redemption Accounts ",
       ],
-      link:"/products/balance"
+      link: "/products/balance"
     },
     {
       logo: "/assets/icons/logo/scanpay-white.svg",
@@ -99,7 +75,7 @@ const productsData={
         "Dynamic QR Codes ",
         "Digital Business Accounts for settlements",
       ],
-      link:"/products/scanpay"
+      link: "/products/scanpay"
     },
     {
       logo: "/assets/icons/logo/tap-pay-white.svg",
@@ -108,8 +84,7 @@ const productsData={
         "POS Terminals ",
         "Digital Business Accounts for settlements",
       ],
-      link:"/products/tap-pay"
-  
+      link: "/products/tap-pay"
     },
     {
       logo: "/assets/icons/logo/instacard-white.svg",
@@ -119,10 +94,8 @@ const productsData={
         "Universal Physical Card",
         "Dynamic CVV for online payments",
         "Contactless payments using Virtual Cards",
-        
       ],
-      link:"/products/instacard"
-  
+      link: "/products/instacard"
     },
     {
       logo: "/assets/icons/logo/snapcred-white.svg",
@@ -134,8 +107,7 @@ const productsData={
         "Credit Card Portfolio Management ",
         "Collections & Repayments ",
       ],
-      link:"/products/snapcred"
-  
+      link: "/products/snapcred"
     },
     {
       logo: "/assets/icons/logo/duo-white.svg",
@@ -146,8 +118,7 @@ const productsData={
         "Collections & Repayments ",
         "Dynamic Limit Management",
       ],
-      link:"/products/duo"
-  
+      link: "/products/duo"
     },
     {
       logo: "/assets/icons/verifyed-logo.svg",
@@ -160,8 +131,7 @@ const productsData={
         "Address Verification",
         "Soft – Token issuance for 2FA"
       ],
-      link:"/products/verifyed"
-  
+      link: "/products/verifyed"
     },
     {
       logo: "/assets/icons/logo/reward-white.svg",
@@ -170,7 +140,7 @@ const productsData={
         " Redemption Accounts ",
         "Usage of Redeemed value",
       ],
-      link:"/products/reward"
+      link: "/products/reward"
     },
     {
       logo: "/assets/icons/logo/chatbox-white.svg",
@@ -179,8 +149,35 @@ const productsData={
         "Help Videos for Self training ",
         "Help & Support on all products & services offered on Monielink SDK ",
       ],
-      link:"/products/chatbox"
-  
+      link: "/products/chatbox"
     },
   ]
+};
+
+const heroHeading = " A Powerful Neobank Platform";
+const heroPara = "Enabling Banks & FinTechs offer digital banking services within their Mobile Apps using single Monielink Super SDK. Increase adoption of your Mobile App delivering superior experience across all categories of retail products & services.";
+
+export default function HomePage() {
+  return (
+    <>
+      <WebpageJsonLd metadata={metadata} />
+      <Layout>
+        <HomePageHero
+          heading={heroHeading}
+          para={heroPara}
+        />
+        <Overview />
+        <Solutions />
+        <USPs />
+        <Products productsData={productsData} />
+        <Intro />
+        <div className="clients-transition">
+          <Clients />
+          {/* <Blogs /> */}
+        </div>
+        <FAQs data={faqData} />
+        <CTA />
+      </Layout>
+    </>
+  );
 }

@@ -15,7 +15,7 @@ import Layout from "../components/Layout";
 import HomePageHero from "@/components/Hero/HomePageHero";
 import { WebpageJsonLd } from "@/lib/json-ld";
 
-const metadata = {
+export const metadata = {
     title: "MonieLink: Secure Neobank Platform for Fintechs.",
     description: "Empower fintechs & banks with MonieLink neobank Super SDK for digital banking, payments, card issuing & lending. Drive 6X revenue growth via scalable solutions.",
     url: "",

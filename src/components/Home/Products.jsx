@@ -261,7 +261,7 @@ const SwiperCard = ({ logo, activeIndex, index, features, link }) => {
           ))}
         </ul>
         <div className="">
-        <PrimaryButton href={link} text="Know More" />
+        <PrimaryButton href={link} text="Know More" ariaLabel='products data' />
         </div>
       </div>
     </div>

@@ -205,7 +205,7 @@ const SwiperCard = ({ title, id, description, link }) => {
         </div>
         <div className="max-sm:py-0 max-md:py-[10vw]">
 
-        <BlackButton text={"Read More"} href={link} />
+        <BlackButton text={"Read More"} href={link} ariaLabel='read more about solutions' />
         </div>
       </div>
     </div>

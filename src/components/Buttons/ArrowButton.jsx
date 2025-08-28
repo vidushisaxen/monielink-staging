@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, className = "", ...props }) {
+function ArrowButton({ href, onClick, rotate,arrowColor, ariaLabel ,borderColor,hoverColor, className = "", ...props }) {
     const sharedContent = (
         <>
             <div className="relative flex items-center justify-center max-sm:w-[14vw]">
@@ -61,6 +61,7 @@ function ArrowButton({ href, onClick, rotate,arrowColor,borderColor,hoverColor, 
                         </div>
                     </div>
                 </div>
+                <div className="w-[1px] h-[1px] overflow-hidden">{ariaLabel}</div>
             </div>
         </>
     );

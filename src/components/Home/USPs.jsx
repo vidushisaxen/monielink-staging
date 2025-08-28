@@ -98,7 +98,7 @@ useGSAP(() => {
                   <h3 className="text-[1.56vw] max-sm:w-[90%] capitalize max-sm:leading-[1.1] max-sm:text-center max-md:text-[3.5vw] max-sm:text-[8vw] subText font-display font-medium">{title}</h3>
                 </Copy>
                 <Copy>
-                  <p aria-label="usp features" className={`text-[1.04vw] max-sm:text-[4vw] max-md:text-[2vw] max-sm:text-center ${width} subText tracking-wide max-sm:w-[95%] max-md:w-full`}>{description}</p>
+                  <p className={`text-[1.04vw] max-sm:text-[4vw] max-md:text-[2vw] max-sm:text-center ${width} subText tracking-wide max-sm:w-[95%] max-md:w-full`}>{description}</p>
                 </Copy>
               </div>
             </div>

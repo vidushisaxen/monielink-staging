@@ -388,7 +388,9 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
                     {description}
                   </p>
                   <div className="pt-10">
-                    <BlackButton href={link} text={"Read More"} />
+                    <BlackButton href={link} text={"Read More"}
+                      ariaLabel={`Read more about ${title}`} 
+                    />
                   </div>
                 </div>
               </div>

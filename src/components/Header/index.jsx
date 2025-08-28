@@ -394,6 +394,7 @@ export default function Header() {
                     aria-label={item.name}
                     className="flex items-center gap-[0.5vw] justify-start"
                   >
+                    
                     <div
                       aria-hidden="true"
                       style={{ animation: "pulse .5s infinite" }}
@@ -940,6 +941,7 @@ export default function Header() {
                           href={sub.link}
                           className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
                         >
+                          
                           {sub.name}
                         </Link>
                       </li>
@@ -959,6 +961,7 @@ export default function Header() {
                           href={sub.link}
                           className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
                         >
+                            
                           {sub.name}
                         </Link>
                       </li>

@@ -118,15 +118,26 @@ export default function Solutions() {
       const total = slides.length;
 
       const splits = slides.map((slide) => {
-        const elems = slide.querySelectorAll(".splitLines");
-        return new SplitText(elems, {
-          type: "lines",
-          mask: "lines",
-          linesClass: "line",
-          lineThreshold: 0.1,
-        });
-      });
+  const elems = slide.querySelectorAll(".splitLines");
+  const split = new SplitText(elems, {
+    type: "lines",
+    mask: "lines",
+    linesClass: "line",
+    lineThreshold: 0.1,
+  });
 
+  // Remove aria-label from elements that have splitLines class
+  elems.forEach(elem => {
+    elem.removeAttribute('aria-label');
+  });
+
+  // Also remove from split lines if they have it
+  split.lines.forEach(line => {
+    line.removeAttribute('aria-label');
+  });
+
+  return split;
+});
       const snapPoints = [0, 0.185, 0.349,0.505, 0.65, 0.8235, 1]
 
       const tl = gsap.timeline({

@@ -1,16 +1,12 @@
-
-import dynamic from "next/dynamic"
-
-const Overview = dynamic(() => import("../components/Home/Overview"), { ssr: true })
-const Solutions = dynamic(() => import("../components/Home/Solutions"), { ssr: true })
-const USPs = dynamic(() => import("../components/Home/USPs"), { ssr: true })
-const Products = dynamic(() => import("../components/Home/Products"), { ssr: true })
-const Intro = dynamic(() => import("../components/Home/Intro"), { ssr: true })
-const Clients = dynamic(() => import("../components/Home/Clients"), { ssr: true })
-const FAQs = dynamic(() => import("../components/Home/FAQs"), { ssr: true })
-const CTA = dynamic(() => import("../components/Footer/CTA"), { ssr: true })
-
+import Overview from "../components/Home/Overview";
+import Solutions from "../components/Home/Solutions";
+import USPs from "../components/Home/USPs";
+import Products from "../components/Home/Products";
+import Intro from "../components/Home/Intro";
+import FAQs from "../components/Home/FAQs";
 import Blogs from "../components/Home/Blogs";
+import Clients from "../components/Home/Clients";
+import CTA from "../components/Footer/CTA";
 import Layout from "../components/Layout";
 import HomePageHero from "@/components/Hero/HomePageHero";
 import { WebpageJsonLd } from "@/lib/json-ld";

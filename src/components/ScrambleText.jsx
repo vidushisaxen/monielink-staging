@@ -43,6 +43,15 @@ const ScrambleText = ({
       const ctx = gsap.context(() => {
         const split = new SplitText(elRef.current, { type: 'chars' });
         splitRef.current = split;
+
+       
+          elRef.current.removeAttribute('aria-label');
+
+
+          split.chars.forEach(char => {
+              char.removeAttribute('aria-label');
+          });
+
         gsap.set(split.chars, { opacity: 0.7 });
         setChars(split.chars);
       }, elRef);

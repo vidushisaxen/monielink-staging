@@ -39,6 +39,13 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
           lineThreshold: 0.1,
         });
 
+        element.removeAttribute('aria-label');
+
+
+        split.lines.forEach(line => {
+          line.removeAttribute('aria-label');
+        } );
+
         splitRefs.current.push(split);
 
         const computedStyle = window.getComputedStyle(element);

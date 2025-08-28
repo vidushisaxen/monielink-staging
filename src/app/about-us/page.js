@@ -2,13 +2,13 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 
 
-const Layout = dynamic(() => import("@/components/Layout"), { ssr: true });
-const FAQs = dynamic(() => import("@/components/Home/FAQs"), { ssr: true });
-const CTA = dynamic(() => import("@/components/Footer/CTA"), { ssr: true });
-const AboutUs = dynamic(() => import("@/components/AboutPage/AboutUs"), { ssr: true });
-const WhyUs = dynamic(() => import("@/components/AboutPage/WhyUs"), { ssr: true });
-const Team = dynamic(() => import("@/components/AboutPage/Team"), { ssr: true });
-const Clients = dynamic(() => import("@/components/AboutPage/Clients"), { ssr: true });
+import Layout from "@/components/Layout";
+import FAQs from "@/components/Home/FAQs";
+import CTA from "@/components/Footer/CTA";
+import AboutUs from "@/components/AboutPage/AboutUs";
+import WhyUs from "@/components/AboutPage/WhyUs";
+import Team from "@/components/AboutPage/Team";
+import Clients from "@/components/AboutPage/Clients";
 
 import { getPageMetadata } from "@/lib/seo.config";
 import { FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";

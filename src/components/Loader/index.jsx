@@ -30,13 +30,23 @@ export default function Loader() {
     const tl = gsap.timeline();
 
     const splitText = new SplitText(".splitText", {
-      type: "words , chars",
-    });
-    gsap.set(splitText.chars, {
-      opacity: 0,
-      filter: "blur(10px)",
-    });
-    tl.to(splitText.chars, {
+  type: "words , chars",
+});
+
+
+document.querySelectorAll('.splitText').forEach(elem => {
+  elem.removeAttribute('aria-label');
+});
+
+splitText.chars.forEach(char => {
+  char.removeAttribute('aria-label');
+});
+
+gsap.set(splitText.chars, {
+  opacity: 0,
+  filter: "blur(10px)",
+});
+tl.to(splitText.chars, {
       onStart: () => {
         gsap.to(".text-wrap-loader", {
           opacity: 1,

@@ -143,6 +143,7 @@ export default function MobileFooter() {
                 <a
                   href="mailto:info@monielink.io"
                   className="text-content-30 font-display"
+                  aria-label="Email MonieLink support at info@monielink.io"
                 >
                   <ScrambleText
                     text={"info@monielink.io"}

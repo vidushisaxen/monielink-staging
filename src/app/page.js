@@ -100,7 +100,6 @@ const productsData={
         "Digital Business Accounts for settlements",
       ],
       link:"/products/scanpay"
-  
     },
     {
       logo: "/assets/icons/logo/tap-pay-white.svg",

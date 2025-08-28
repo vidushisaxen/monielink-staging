@@ -121,14 +121,24 @@ export default function ProductSlider() {
             const total = slides.length;
 
             const splits = slides.map(slide => {
-                const elems = slide.querySelectorAll('.splitLines');
-                return new SplitText(elems, {
-                    type: 'lines',
-                    mask: 'lines',
-                    linesClass: 'line',
-                    lineThreshold: 0.1,
-                });
-            });
+    const elems = slide.querySelectorAll('.splitLines');
+    const split = new SplitText(elems, {
+        type: 'lines',
+        mask: 'lines',
+        linesClass: 'line',
+        lineThreshold: 0.1,
+    });
+    elems.forEach(elem => {
+        elem.removeAttribute('aria-label');
+    });
+
+   
+    split.lines.forEach(line => {
+        line.removeAttribute('aria-label');
+    });
+
+    return split;
+});
 
             const tl = gsap.timeline({
                 scrollTrigger: {

@@ -13,8 +13,10 @@ export async function POST(req) {
     }
 
     const { error } = await resend.emails.send({
+      // from: "Montra Webforms <no-reply@montra.>",
       from: "Acme <onboarding@resend.dev>",
       to: ["vidushi@weareenigma.com"],
+      // to:["info@montra.org"],
       subject: "New Contact Form Submission",
       react: ContactDetails({
         userName: name,

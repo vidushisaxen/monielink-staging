@@ -1,3 +1,5 @@
+'use client'
+import { useHoverSound, useTickSound } from "@/fancy/SFX/SFX";
 import Link from "next/link";
 import React from "react";
 
@@ -10,9 +12,16 @@ function BlackButton({
   className = "",
   ...props
 }) {
+  const { playSoundTick } = useTickSound();
+  const {playSoundHover } =useHoverSound()
+
   const sharedContent = (
     <>
-      <div className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]">
+      <div
+        onMouseEnter={playSoundHover}
+        onClick={playSoundTick}
+        className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]"
+      >
         <div className="absolute left-0 top-0 flex justify-start">
           <svg
             className="w-[5.5vw] h-auto max-sm:w-[25vw] max-md:w-[10vw]"

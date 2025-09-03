@@ -12,9 +12,12 @@ import {
 import SocialMediaBtn from "./SocialMediaBtn";
 import { useEffect, useState } from "react";
 import ScrambleText from "../h/ScrambleText";
+import { useHoverSound, useTickSound } from "@/fancy/SFX/SFX";
 
 export default function DesktopFooter() {
   const [isMobile, setIsMobile] = useState(false);
+  const { playSoundTick } = useTickSound();
+  const { playSoundHover } = useHoverSound();
   useEffect(() => {
     if (globalThis.innerWidth > 640) {
       setIsMobile(false);
@@ -176,7 +179,12 @@ export default function DesktopFooter() {
                             ></div>
                             <div className="flex flex-col cursor-pointer relative items-start justify-start overflow-hidden  w-[7.5vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw] ">
-                                <ScrambleText onHover={true} centerd speed={0.5} className="min-w-[8vw]">
+                                <ScrambleText
+                                  onHover={true}
+                                  centerd
+                                  speed={0.5}
+                                  className="min-w-[8vw]"
+                                >
                                   {item.name}
                                 </ScrambleText>
                               </span>
@@ -199,7 +207,12 @@ export default function DesktopFooter() {
                             ></div>
                             <div className="flex flex-col cursor-pointer relative items-start justify-center overflow-hidden min-w-[8vw] ">
                               <span className="text-[#A8A8A8] uppercase text-[1vw]">
-                                <ScrambleText onHover={true} centerd speed={0.6} className="min-w-[8vw]">
+                                <ScrambleText
+                                  onHover={true}
+                                  centerd
+                                  speed={0.6}
+                                  className="min-w-[8vw]"
+                                >
                                   {item.name}
                                 </ScrambleText>
                               </span>
@@ -213,8 +226,11 @@ export default function DesktopFooter() {
               </div>
               <div className="w-[45%] max-md:gap-[4vw]  z-[100]   text-[#A8A8A8] pb-[5vw] pt-[3vw] flex flex-col h-[80%] items-start justify-between gap-0">
                 <Copy>
-                  <p className=" text-[1.05vw] max-md:text-[1.35vw] w-full" >
-                 Integrate the Monielink Super SDK and start delivering seamless, scalable banking services within your mobile app, faster than ever. Let&apos;s build the future of finance together.
+                  <p className=" text-[1.05vw] max-md:text-[1.35vw] w-full">
+                    Integrate the Monielink Super SDK and start delivering
+                    seamless, scalable banking services within your mobile app,
+                    faster than ever. Let&apos;s build the future of finance
+                    together.
                   </p>
                 </Copy>
                 <div className="w-full flex  items-start justify-center flex-col">
@@ -222,14 +238,25 @@ export default function DesktopFooter() {
                     href="mailto:info@monielink.io"
                     className="text-[3.125vw] font-display"
                   >
-                    <ScrambleText lowercase onHover={true} centerd speed={0.4} className="min-w-[8vw]">
-                    {"info@monielink.io"}
+                    <ScrambleText
+                      lowercase
+                      onHover={true}
+                      centerd
+                      speed={0.4}
+                      className="min-w-[8vw]"
+                    >
+                      {"info@monielink.io"}
                     </ScrambleText>
-                   
                   </a>
                   <div className="pt-2 flex  items-start gap-2 fadeupanim">
                     {socials.map((item, index) => (
-                      <SocialMediaBtn className="" key={index} href={item.href}>
+                      <SocialMediaBtn
+                        onMouseEnter={playSoundHover}
+                        onClick={playSoundTick}
+                        className=""
+                        key={index}
+                        href={item.href}
+                      >
                         {item.icon}
                       </SocialMediaBtn>
                     ))}
@@ -244,7 +271,12 @@ export default function DesktopFooter() {
               <div className="w-fit max-md:w-[50%] max-md:flex max-md:justify-end">
                 <div className="">
                   By :{" "}
-                  <a href={"https://weareenigma.com/"} target="_blank">
+                  <a
+                    onMouseEnter={playSoundHover}
+                    onClick={playSoundTick}
+                    href={"https://weareenigma.com/"}
+                    target="_blank"
+                  >
                     <span className="link-line">Enigma Digital</span>
                   </a>
                 </div>

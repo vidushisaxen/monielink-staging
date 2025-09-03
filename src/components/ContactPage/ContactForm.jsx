@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-"use client"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { Button } from "@/components/ui/button"
+"use client";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
@@ -12,12 +12,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { PhoneInput } from "@/components/ui/phone-input"
+} from "@/components/ui/form";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { Input } from "@/components/ui/input";
-import { isValidPhoneNumber } from "react-phone-number-input"
-import { useState } from "react"
-
+import { isValidPhoneNumber } from "react-phone-number-input";
+import { useState } from "react";
+import { useHoverSound, useTickSound } from "@/fancy/SFX/SFX";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
@@ -39,12 +39,13 @@ export default function ContactForm() {
       company: "",
       message: "",
     },
-  })
+  });
   const { control, handleSubmit } = form;
   const [isLoading, setIsLoading] = useState(false);
   const [submitted, setIsSubmitted] = useState(false);
   const [notsubmitted, setIsNotSubmitted] = useState(false);
-
+  const { playSoundTick } = useTickSound();
+  const { playSoundHover } = useHoverSound();
 
   const onSubmit = async (data) => {
     // if (!domainsLoaded) {
@@ -61,7 +62,7 @@ export default function ContactForm() {
     setIsLoading(true);
 
     const formattedData = {
-      ...data
+      ...data,
     };
 
     // console.log(data);
@@ -94,7 +95,7 @@ export default function ContactForm() {
     <section className="mobile:pt-0 overflow-hidden" id="formoem">
       <div className="w-full h-full mobile:p-0 tablet:p-[6.5vw]">
         <div className="w-full flex flex-col gap-[2vw] mobile:gap-[5vw] tablet:w-full mobile:px-[3vw] max-md:px-[2vw] mobile:py-[5vw]">
-          <Form {...form} >
+          <Form {...form}>
             <form
               autoComplete="off"
               className="space-y-[2vw] max-sm:space-y-[7vw] max-md:space-y-[4vw] tablet:space-y-[5vw]  mobile:pt-[5vw]"
@@ -119,7 +120,6 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-
 
               <FormField
                 control={control}
@@ -201,24 +201,52 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              <Button type="submit"
-                aria-label="submit form" className="cursor-pointer mt-[2vw] max-sm:mt-[10vw] max-md:mt-[8vw]">
-                <div className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]">
+              <Button
+                type="submit"
+                aria-label="submit form"
+                className="cursor-pointer mt-[2vw] max-sm:mt-[10vw] max-md:mt-[8vw]"
+              >
+                <div
+                  onMouseEnter={playSoundHover}
+                  onClick={playSoundTick}
+                  className="round  relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]"
+                >
                   <div className="absolute left-0 top-0 flex justify-start">
-                    <svg className="w-[5.5vw] h-auto max-sm:w-[25vw] max-md:w-[10vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" />
+                    <svg
+                      className="w-[5.5vw] h-auto max-sm:w-[25vw] max-md:w-[10vw]"
+                      width="101"
+                      height="55"
+                      viewBox="0 0 101 55"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242"
+                        stroke="#ffffff"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                   <div className="absolute right-0 bottom-0 flex justify-end">
-                    <svg className="w-[5.5vw] h-auto rotate-180 max-sm:w-[25vw] max-md:w-[10vw]" width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" />
+                    <svg
+                      className="w-[5.5vw] h-auto rotate-180 max-sm:w-[25vw] max-md:w-[10vw]"
+                      width="101"
+                      height="55"
+                      viewBox="0 0 101 55"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 53.7144V27.3059C1 26.7807 1.20654 26.2766 1.57503 25.9025L25.5126 1.59662C25.8886 1.21493 26.4019 1 26.9376 1H100.242"
+                        stroke="#ffffff"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                   <div className="absolute inset-0 z-10">
-                    <div
-                      className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-white transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] duration-400 border border-[#ffffff] after:h-[1.2px] after:bg-[#ffffff] after:w-[2vw] after:-rotate-[47.2deg] after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.2px] before:w-[2vw] before:bg-[#ffffff] before:-rotate-[48.3deg] before:right-[-3.4%] before:bottom-[14%]"
-                    >
-                    </div>
+                    <div className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-white transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] duration-400 border border-[#ffffff] after:h-[1.2px] after:bg-[#ffffff] after:w-[2vw] after:-rotate-[47.2deg] after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.2px] before:w-[2vw] before:bg-[#ffffff] before:-rotate-[48.3deg] before:right-[-3.4%] before:bottom-[14%]"></div>
                     <div className="w-[90%] mx-auto h-full text-primary-1 relative z-10 flex items-center gap-5 justify-center">
                       {/* <span className="text-content-18 text-end capitalize pl-[0.2vw]">Submit</span> */}
                       <span className="text-content-18 text-end capitalize pl-[0.2vw]">
@@ -253,10 +281,8 @@ export default function ContactForm() {
                         </svg>
                       </div>
                     </div>
-
                   </div>
                 </div>
-
               </Button>
               {submitted && (
                 <p className="text-white text-sm mt-2">
@@ -269,7 +295,6 @@ export default function ContactForm() {
                   ❌ Error sending message. Please try again.
                 </p>
               )}
-
             </form>
           </Form>
         </div>

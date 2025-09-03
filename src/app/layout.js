@@ -4,6 +4,7 @@ import LayoutTransition from "@/components/LayoutTransition";
 import { defaultMetadata } from "@/lib/seo.config";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { SoundProvider } from "@/fancy/SFX/SoundProvider";
 
 export const metadata = defaultMetadata;
 
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <GoogleTagManager gtmId="GTM-T53Z2STS" />
         <body>
-          <LayoutTransition>
-            {children}
-          </LayoutTransition>
+          <SoundProvider>
+            <LayoutTransition>
+              {children}
+            </LayoutTransition>
+          </SoundProvider>
         </body>
         <GoogleAnalytics gaId="G-1BGD0MT8D6" />
       </html>

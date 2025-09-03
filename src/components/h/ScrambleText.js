@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import SplitText from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import { useHoverSound,useTickSound} from "@/fancy/SFX/SFX";
 
 // Use CSS module or define these classes in your CSS for fidelity!
 const classNames = {
@@ -22,6 +23,7 @@ const charTypes = {
   upperCase: "upperCase",
   upperAndLowerCase: "upperAndLowerCase",
 };
+
 const getCharType = (lowercase, uppercase) =>
   lowercase ? charTypes.lowerCase : uppercase ? charTypes.upperCase : charTypes.upperAndLowerCase;
 
@@ -48,6 +50,9 @@ const ScrambleText = forwardRef(
     const containerRef = useRef(null);
     const textRef = useRef(null);
     const splitRef = useRef(null);
+    const { playSoundHover } = useHoverSound()
+   const {playSoundTick} = useTickSound()
+
 
     // For on-hover effect
     const { contextSafe } = useGSAP({ scope: containerRef });
@@ -146,12 +151,16 @@ const ScrambleText = forwardRef(
     return (
       <div
         ref={containerRef}
+        onClick={playSoundTick}
         className={[
           classNames.container,
           u ? classNames.centered : "",
           D,
         ].join(" ")}
-        onMouseEnter={i ? animate : undefined}
+        onMouseEnter={i ? ()=>{
+          playSoundHover();
+          animate();
+        } : undefined}
         style={{
           position: "relative",
           display: "inline-block"

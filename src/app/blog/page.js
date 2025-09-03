@@ -1,4 +1,5 @@
 
+
 import BlogList from "@/components/Blogs/BlogList";
 import Hero from "@/components/Blogs/Hero";
 import CTA from "@/components/Footer/CTA";

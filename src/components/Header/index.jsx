@@ -20,6 +20,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useLenis } from "lenis/react";
 import ScrambleText from "../h/ScrambleText";
+import { useHoverSound, useTickSound } from "@/fancy/SFX/SFX";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -155,6 +156,8 @@ export default function Header() {
   const pathname = usePathname();
   const lenis = useLenis();
   const navigationRef = useRef(null);
+  const {playSoundTick} = useTickSound()
+  const {playSoundHover } = useHoverSound()
 
   const preloaderShown =
     typeof window !== "undefined"
@@ -684,6 +687,8 @@ export default function Header() {
               <Link
                  aria-label="Home"
                 href={"/"}
+                onMouseEnter={playSoundHover}
+                onClick={playSoundTick}
                 className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${
                   isInverted
                     ? " brightness-[16] max-sm:brightness-0 max-sm:invert-100"

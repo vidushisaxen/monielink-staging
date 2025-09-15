@@ -1,15 +1,11 @@
-import dynamic from "next/dynamic";
+
 import Hero from "@/components/Hero";
-
-
 import Layout from "@/components/Layout";
 import FAQs from "@/components/Home/FAQs";
 import CTA from "@/components/Footer/CTA";
 import AboutUs from "@/components/AboutPage/AboutUs";
 import WhyUs from "@/components/AboutPage/WhyUs";
-import Team from "@/components/AboutPage/Team";
 import Clients from "@/components/AboutPage/Clients";
-
 import { getPageMetadata } from "@/lib/seo.config";
 import { FAQJSONLD, WebpageJsonLd } from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
@@ -49,7 +45,6 @@ export default function About() {
         <Hero heading={"Powering the Future of Digital Banking"} para={"We’re here to close the gap between legacy banking systems and today’s digital demands. Whether you're launching a digital-first product or expanding existing services, Monielink provides the tools you need to deliver seamless retail experiences through a simple integration of our Monielink Super SDK with your Mobile app. "} />
         <AboutUs />
         <WhyUs />
-        {/* <Team /> */}
         <Clients />
         <FAQs data={faqData} />
         <CTA />

@@ -11,7 +11,7 @@ const products = [
   {
     id: 1,
     title: "Balance",
-    width:"w-[60%]",
+    width:"max-sm:w-[50%]",
     description: [
       "Monielink powers you to build a full-featured digital wallet ecosystem for both consumers and merchants, with support for multiple currencies. Instantly issue virtual Debit, Credit, or Prepaid cards through our integrated card issuing platform and SDK.",
       "You can also assign NUBAN account numbers linked to verified mobile numbers, allowing customers to receive inflow transfers using just their phone number."
@@ -22,7 +22,7 @@ const products = [
   {
     id: 2,
     title: "ScanPay",
-    width:"w-[60%]",
+    width:"max-sm:w-[50%]",
     description: [
       "Merchants can instantly self-onboard to start accepting digital and card payments directly into their settlement accounts. Each merchant is issued an interoperable QR code compatible with any bank, ensuring seamless and universal payment acceptance via ScanPay.",
       "They receive instant payment notifications and can view all transactions in real time through the dashboard and account statement — fully accessible via our SDK within your mobile app."
@@ -33,7 +33,7 @@ const products = [
   {
     id: 3,
     title: "TapPay",
-    width:"w-[60%]",
+    width:"max-sm:w-[50%]",
     description: [
       "With TapPay, merchants can digitally self-onboard and start accepting contactless card payments using Soft-POS directly on their NFC-enabled Android phones all within your mobile app via Monielink’s SDK.",
       "Merchants can also request a physical POS terminal. Eligibility is automatically scored based on rules set by your institution, with approvals handled seamlessly through the SDK.",
@@ -45,7 +45,7 @@ const products = [
   {
     id: 4,
     title: "Instacard",
-    width:"w-[60%]",
+    width:"max-sm:w-[50%]",
     description: [
       "Issue virtual debit, credit, prepaid, and universal cards instantly via your mobile app. Instacard supports online and offline use, with enhanced security through dynamic CVV and tokenized contactless payments.",
       "Customers can link virtual cards to a physical Universal Instacard for global ATM and POS use",
@@ -57,7 +57,7 @@ const products = [
   {
     id: 5,
     title: "Verifyed",
-    width:"w-[45%]",
+    width:"max-sm:w-[40%]",
     description: [
       "Verifyed simplifies digital KYC with instant onboarding, facial recognition, passive liveness detection, and soft-token-based two-factor authentication — all via the Monielink SDK.",
       " It supports ID and address verification, location checks, and CAC-based business verification for secure, compliant onboarding."
@@ -68,7 +68,7 @@ const products = [
   {
     id: 6,
     title: "SnapCred",
-    width:"w-[60%]",
+    width:"max-sm:w-[50%]",
     description: [
       "SnapCred is Monielink’s cloud-based credit infrastructure that enables lenders and issuers to originate, disburse, manage, and collect towards creating profitable credit programs.",
       "Using our SDK and web portal, you can configure underwriting and collection rules, launch credit products, and automate disbursements directly through your mobile app.",
@@ -81,7 +81,7 @@ const products = [
   {
     id: 7,
     title: "Reward+",
-    width:"w-[50%]",
+    width:"max-sm:w-[45%]",
     description: [
       "Boost adoption and engagement with Reward+ — a customizable loyalty program that credits usage-based points to a dedicated rewards account.",
       "Customers can view and track their points in real time through your mobile app via the Monielink SDK."
@@ -92,7 +92,7 @@ const products = [
   {
     id: 8,
     title: "ChatBox",
-    width:"w-[50%]",
+    width:"max-sm:w-[45%]",
     description: [
       "Enhance user experience with interactive FAQs, product guides, and self-training videos — all accessible via the Monielink Super SDK. ",
       "Chatbox helps users explore features, get instant answers, and learn how to use services with ease, making it an essential support tool for banks and issuers."
@@ -103,7 +103,7 @@ const products = [
   {
     id: 8,
     title: "DUO",
-    width:"w-[45%]",
+    width:"max-sm:w-[35%]",
     description: [
       "DUO transforms existing debit cards into powerful virtual credit cards using our patented Dual Transaction Service (DTS). ",
       "With DTS, pre-approved customers can access their virtual credit limit through their existing Visa, Mastercard, or Verve debit cards — without needing a new physical credit card.",
@@ -164,7 +164,7 @@ function Accordion({ title, description, img, href, isOpen, onToggle, width }) {
           aria-expanded={isOpen}
           className="relative cursor-pointer w-full h-full max-sm:pt-[7vw] max-sm:pb-[12vw] flex items-start justify-between max-md:pt-[3vw] max-md:pb-[5vw]"
         >
-          <div className={` w-[44%] max-sm:${width}  max-md:w-[35%] flex gap-[5vw] `}>
+          <div className={` w-[44%] max-md:w-[30%] ${width}   flex gap-[5vw] `}>
             <Image
               src={img}
               alt="products-icons"

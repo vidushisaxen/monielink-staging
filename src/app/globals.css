@@ -151,6 +151,7 @@ body {
   height: 100%;
   font-family: var(--font-body);
   overflow-x: hidden;
+  line-height: 1.4;
   background-color: var(--black-1);
 }
 p {
@@ -404,7 +405,7 @@ li .link-line::after {
   clip-path: polygon(
     100% 0%,
     100% 2.9vw,
-    11.25vw 100%,
+    12.25vw 100%,
     0% 100%,
     0% 1.4vw,
     1.3vw 0%
@@ -453,7 +454,7 @@ li .link-line::after {
 }
 
 /* Tablet responsve */
-@media (max-width: 1080px) {
+@media (max-width: 1024px) {
   :root {
     --head-150: 8vw;
     --content-30: 3.5vw;
@@ -512,7 +513,7 @@ li .link-line::after {
   }
 
   .btn-clipPath {
-    clip-path: polygon(100% 0%, 100% 75%, 95% 100%, 0% 100%, 0% 25%, 8% 0%);
+    clip-path: polygon(100% 0%, 100% 75%, 92.5% 100%, 0% 100%, 0% 25%, 8% 0%);
   }
   .btn-clipPath::after {
     left: -47.2%;
@@ -549,7 +550,7 @@ li .link-line::after {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   :root {
     --head-200: 20.513vw;
     --head-150: 12vw;
@@ -599,7 +600,7 @@ li .link-line::after {
   }
   /* Btn CSS */
   .btn-clipPath {
-    clip-path: polygon(100% 0%, 100% 63%, 89% 100%, 0% 100%, 0% 37%, 10.5% 0%);
+    clip-path: polygon(100% 0%, 100% 63%, 90% 100%, 0% 100%, 0% 37%, 10.5% 0%);
   }
   .btn-clipPath::after {
     left: -44%;

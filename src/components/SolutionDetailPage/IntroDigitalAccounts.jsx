@@ -69,7 +69,7 @@ const IntroDigitalAccounts = ({introData}) => {
                         </p>
                     </Copy>
                 </div>
-                 <div className="flex flex-row max-sm:py-0 max-md:py-[10vw] flex-wrap  items-center justify-between max-sm:px-0 max-md:px-[4vw] w-[50%] max-md:w-full gap-y-[5vw] max-sm:gap-y-[15vw] max-md:gap-y-[10vw] max-sm:w-full max-sm:flex-col max-sm:items-start max-sm:mt-[15vw] max-sm:mb-[20vw] max-md:flex-col">
+                 <div className="flex flex-row max-sm:py-0 max-md:py-[10vw] flex-wrap  items-center justify-between max-sm:px-0 max-md:px-[4vw] w-[50%] max-md:w-full gap-y-[5vw] max-sm:gap-y-[15vw] max-md:gap-y-[7vw] max-sm:w-full max-sm:flex-col max-sm:items-start max-sm:mt-[15vw] max-sm:mb-[20vw] max-md:flex-col">
                                     {uspData.map(({ description, svg, svgElement,width }, index) => (
                                         <div key={index} className={`flex items-center max-sm:flex-col max-md:flex-col  max-md:w-[40%] justify-start gap-[1vw] max-md:gap-[2vw] max-sm:w-full max-sm:gap-[7vw] ${width}`}>
                                             <div className="text-primary-2 mb-1 w-fit">

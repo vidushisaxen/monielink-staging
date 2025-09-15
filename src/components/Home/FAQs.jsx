@@ -54,7 +54,7 @@ export default function FAQs({ data }) {
                     isActive ? "animate-border" : ""
                   }`}
                 >
-                  <div className="relative z-10 bg-[#F0F0F0] p-[2vw] rounded-[1vw] max-sm:px-[4vw] faq-inner max-sm:rounded-[2.5vw]">
+                  <div className="relative z-10 bg-[#F0F0F0] p-[2vw] rounded-[1vw] max-sm:px-[4vw] faq-inner max-sm:rounded-[2.5vw] max-md:p-[4vw]">
                     <AccordionItem value={itemKey}>
                       <AccordionTrigger
                         index={index}

@@ -3,14 +3,32 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import BlackButton from "../Buttons/BlackButton";
-import { CardIssuing, DigitalBanking, DigitalLending, DualTransaction, KYC, Loyalty, MerchantAcquiring, SVGLeft, SVGRight } from "../Icons";
+import {
+  CardIssuing,
+  DigitalBanking,
+  DigitalLending,
+  DualTransaction,
+  KYC,
+  Loyalty,
+  MerchantAcquiring,
+  SVGLeft,
+  SVGRight,
+} from "../Icons";
 import { useGSAP } from "@gsap/react";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import ScrambleText from "../h/ScrambleText";
 gsap.registerPlugin(ScrollTrigger, useGSAP, DrawSVGPlugin);
 
 const SolutionsCard = ({ solutionsRef }) => {
-  const svgRightRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null),useRef(null)];
+  const svgRightRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
 
   const cardsData = [
     {
@@ -35,7 +53,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/merchant-acquiring",
       svgRightRef: svgRightRefs[1],
       svgLeft: <SVGLeft />,
-      svgRight: <MerchantAcquiring/>,
+      svgRight: <MerchantAcquiring />,
       y: "",
       zIndex: 2,
     },
@@ -48,8 +66,8 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/card-issuing",
       svgRightRef: svgRightRefs[2],
       svgLeft: <SVGLeft />,
-      svgRight: <CardIssuing/>,
-      y: 'translate-y-[-100%]',
+      svgRight: <CardIssuing />,
+      y: "translate-y-[-100%]",
       zIndex: 3,
     },
     {
@@ -62,7 +80,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       svgRightRef: svgRightRefs[3],
       svgLeft: <SVGLeft />,
       svgRight: <DigitalLending />,
-      y: 'translate-y-[-200%]',
+      y: "translate-y-[-200%]",
       zIndex: 4,
     },
     {
@@ -75,7 +93,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       svgRightRef: svgRightRefs[4],
       svgLeft: <SVGLeft />,
       svgRight: <DualTransaction />,
-      y: 'translate-y-[-300%]',
+      y: "translate-y-[-300%]",
       zIndex: 4,
     },
     {
@@ -87,8 +105,8 @@ const SolutionsCard = ({ solutionsRef }) => {
       link: "/solutions/kyc-and-soft-token",
       svgRightRef: svgRightRefs[5],
       svgLeft: <SVGLeft />,
-      svgRight: <KYC/>,
-      y: 'translate-y-[-400%]',
+      svgRight: <KYC />,
+      y: "translate-y-[-400%]",
       zIndex: 4,
     },
     {
@@ -101,7 +119,7 @@ const SolutionsCard = ({ solutionsRef }) => {
       svgRightRef: svgRightRefs[6],
       svgLeft: <SVGLeft />,
       svgRight: <Loyalty />,
-      y: 'translate-y-[-500%]',
+      y: "translate-y-[-500%]",
       zIndex: 4,
     },
   ];
@@ -113,7 +131,7 @@ const SolutionsCard = ({ solutionsRef }) => {
           start: "top top",
           end: "bottom bottom",
           scrub: true,
-            // markers:true
+          // markers:true
         },
         //   defaults:"none"
       });
@@ -149,13 +167,14 @@ const SolutionsCard = ({ solutionsRef }) => {
           scale: 0.8,
           yPercent: -111,
           delay: -0.5,
-        }).to(".card-1", {
+        })
+        .to(".card-1", {
           scale: 0.7,
           yPercent: -16,
           delay: -0.5,
         })
         .to(".card-5", {
-          yPercent: -100
+          yPercent: -100,
         })
         .to(".card-4", {
           scale: 0.9,
@@ -171,13 +190,14 @@ const SolutionsCard = ({ solutionsRef }) => {
           scale: 0.7,
           yPercent: -116,
           delay: -0.5,
-        }).to(".card-1", {
+        })
+        .to(".card-1", {
           scale: 0.6,
           yPercent: -20,
           delay: -0.5,
         })
         .to(".card-6", {
-          yPercent: -100
+          yPercent: -100,
         })
         .to(".card-5", {
           scale: 0.9,
@@ -198,13 +218,16 @@ const SolutionsCard = ({ solutionsRef }) => {
           scale: 0.6,
           yPercent: -120,
           delay: -0.5,
-        }).to(".card-1", {
+        })
+        .to(".card-1", {
           scale: 0.5,
           yPercent: -24,
           delay: -0.5,
-        }).to(".card-7", {
-          yPercent: -100
-        }) .to(".card-6", {
+        })
+        .to(".card-7", {
+          yPercent: -100,
+        })
+        .to(".card-6", {
           scale: 0.9,
           yPercent: -106,
           delay: -0.5,
@@ -223,42 +246,49 @@ const SolutionsCard = ({ solutionsRef }) => {
           scale: 0.6,
           yPercent: -120,
           delay: -0.5,
-        })
+        });
     });
     return () => ctx.revert();
   }, []);
 
-useGSAP(() => {
-  svgRightRefs.forEach((ref, index) => {
-    const paths = ref.current?.querySelectorAll(".path-draw");
-    if (paths) {
-      gsap.set(paths, { drawSVG: "0%" });
+  useGSAP(() => {
+    svgRightRefs.forEach((ref, index) => {
+      const paths = ref.current?.querySelectorAll(".path-draw");
+      if (paths) {
+        gsap.set(paths, { drawSVG: "0%" });
 
-      ScrollTrigger.create({
-        trigger: "#solutions",
-        start: "5% 70%",
-        end: "bottom bottom",
-        // markers:"true",
-        onUpdate: (self) => {
-          const cardTriggerPoints = [0, 0.13, 0.26, 0.39, 0.52, 0.80, 0.90];
-          const triggerPoint = cardTriggerPoints[index] || 0;
-          if (self.progress >= triggerPoint && !ref.current?.classList.contains('animated')) {
-            ref.current?.classList.add('animated');
-            gsap.fromTo(paths, {
-              drawSVG: "0%"
-            }, {
-              drawSVG: "100%",
-              duration: 2,
-              ease: "power2.out",
-              stagger: 0.05
-            });
-          }
-        }
-      });
-    }
+        ScrollTrigger.create({
+          trigger: "#solutions",
+          start: "5% 70%",
+          end: "bottom bottom",
+          // markers:"true",
+          onUpdate: (self) => {
+            const cardTriggerPoints = [0, 0.13, 0.26, 0.39, 0.52, 0.8, 0.9];
+            const triggerPoint = cardTriggerPoints[index] || 0;
+            if (
+              self.progress >= triggerPoint &&
+              !ref.current?.classList.contains("animated")
+            ) {
+              ref.current?.classList.add("animated");
+              gsap.fromTo(
+                paths,
+                {
+                  drawSVG: "0%",
+                },
+                {
+                  drawSVG: "100%",
+                  duration: 2,
+                  ease: "power2.out",
+                  stagger: 0.05,
+                }
+              );
+            }
+          },
+        });
+      }
+    });
   });
-});
-  
+
   const handleCardClick = (index) => {
     if (!solutionsRef.current) return;
     const sectionTop =
@@ -268,7 +298,8 @@ useGSAP(() => {
   };
 
   return (
-    <div className="w-full  h-[90vh]  flex flex-col sticky top-[5%]">
+    <div className="w-screen  h-[57vw]  flex flex-col sticky top-[5%] overflow-hidden ">
+      
       <div className="border-t w-full flex items-center justify-center max-sm:items-center max-sm:justify-center border-b border-[#282828] bg-[#050505]  !px-0 mb-[3vw] max-sm:mb-[20vw]">
         {[
           "Digital Banking ",
@@ -277,16 +308,16 @@ useGSAP(() => {
           "Digital Lending",
           "Dual Transaction ",
           "KYC & Soft Token ",
-          "Loyalty"
+          "Loyalty",
         ].map((item, index) => (
           <div
             key={index}
             className="border-l py-5 w-[15vw] max-sm:min-w-[45vw]  text-center border-r border-[#282828] card-tag cursor-pointer max-sm:pl-[-10vw] text-[#A8A8A8] text-[0.95vw] max-sm:text-[4vw]  max-sm:w-full"
             onClick={() => handleCardClick(index)}
           >
-             <ScrambleText onHover={true} speed={0.35} className="min-w-[15vw]">
-                                            {item}
-                                        </ScrambleText>
+            <ScrambleText onHover={true} speed={0.35} className="min-w-[15vw]">
+              {item}
+            </ScrambleText>
           </div>
         ))}
       </div>
@@ -304,81 +335,210 @@ useGSAP(() => {
           svgRightRef={item.svgRightRef}
           link={item.link}
         />
-
       ))}
+
+     
     </div>
   );
 };
 
 export default SolutionsCard;
 
-
-function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft, svgRight, y, svgRightRef }) {
+function SolutionCard({
+  title,
+  description,
+  cardClass,
+  zIndex,
+  id,
+  link,
+  svgLeft,
+  svgRight,
+  y,
+  svgRightRef,
+}) {
   return (
     <>
-      <div className={`h-[85vh] max-sm:h-[90vh] max-sm:py-[20vw] w-full flex items-center justify-center relative ${cardClass} ${zIndex} ${y} `}>
+      <div
+        className={`h-[85vh] max-sm:h-[90vh] max-sm:py-[20vw] w-full flex items-center justify-center relative ${cardClass} ${zIndex} ${y} `}
+      >
         <div className="w-[75vw] max-sm:hidden h-auto flex items-center justify-center z-0">
           {svgLeft}
         </div>
 
         <div className="h-full w-full flex items-center justify-center absolute top-0 left-0 inset-0 z-10  !px-[4vw] !pr-[8vw]">
           <div className="flex flex-col items-start px-[12vw] justify-evenly h-[80%] w-full">
-            <p className="text-[#A8A8A8] text-content-20 absolute top-[12%] left-[16%]">{id}</p>
+            <p className="text-[#A8A8A8] text-content-20 absolute top-[15%] left-[16.2%]">
+              {id}
+            </p>
             <div className="flex items-start justify-between gap-10 pt-[5vw]">
               <div className="flex items-start justify-start gap-10">
                 <div className="h-full w-[2vw] ">
-                <svg
-  className="w-full h-[70%]"
-  width="38"
-  height="291"
-  viewBox="0 0 38 291"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g filter="url(#filter0_f_73_814920)">
-    <rect className="bar bar-3" x="13.9219" y="124.314" width="10.6121" height="41.7132" fill="#FF2900"/>
-  </g>
-  <rect className="bar bar-3" x="13.9219" y="126.44" width="10.6121" height="37.461" fill="#FF2900"/>
+                  <svg
+                    className="w-full h-[70%]"
+                    width="38"
+                    height="291"
+                    viewBox="0 0 38 291"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_f_73_814920)">
+                      <rect
+                        className="bar bar-3"
+                        x="13.9219"
+                        y="124.314"
+                        width="10.6121"
+                        height="41.7132"
+                        fill="#FF2900"
+                      />
+                    </g>
+                    <rect
+                      className="bar bar-3"
+                      x="13.9219"
+                      y="126.44"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#FF2900"
+                    />
 
-  <g filter="url(#filter1_f_73_814920)">
-    <rect className="bar bar-2" x="13.9219" y="84.2959" width="10.6121" height="37.461" fill="#FF5100"/>
-  </g>
-  <rect className="bar bar-2" x="13.9219" y="84.2959" width="10.6121" height="37.461" fill="#FF5100"/>
-  {/* <rect className="" x="13.9219" y="252.871" width="10.6121" height="37.461" fill="#000000"/> */}
+                    <g filter="url(#filter1_f_73_814920)">
+                      <rect
+                        className="bar bar-2"
+                        x="13.9219"
+                        y="84.2959"
+                        width="10.6121"
+                        height="37.461"
+                        fill="#FF5100"
+                      />
+                    </g>
+                    <rect
+                      className="bar bar-2"
+                      x="13.9219"
+                      y="84.2959"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#FF5100"
+                    />
+                    {/* <rect className="" x="13.9219" y="252.871" width="10.6121" height="37.461" fill="#000000"/> */}
 
+                    <rect
+                      className="bar bar-1"
+                      x="13.9219"
+                      y="42.1526"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#8F2E00"
+                    />
+                    <rect
+                      className="bar bar-0"
+                      x="13.9219"
+                      y="0.00878906"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#3F1C00"
+                    />
 
-  <rect className="bar bar-1" x="13.9219" y="42.1526" width="10.6121" height="37.461" fill="#8F2E00"/>
-  <rect className="bar bar-0" x="13.9219" y="0.00878906" width="10.6121" height="37.461" fill="#3F1C00"/>
+                    <g filter="url(#filter2_f_73_814920)">
+                      <rect
+                        className="bar bar-4"
+                        x="13.9219"
+                        y="168.583"
+                        width="10.6121"
+                        height="37.461"
+                        fill="#FF5100"
+                      />
+                    </g>
+                    <rect
+                      className="bar bar-4"
+                      x="13.9219"
+                      y="168.583"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#FF5100"
+                    />
 
-  <g filter="url(#filter2_f_73_814920)">
-    <rect className="bar bar-4" x="13.9219" y="168.583" width="10.6121" height="37.461" fill="#FF5100"/>
-  </g>
-  <rect className="bar bar-4" x="13.9219" y="168.583" width="10.6121" height="37.461" fill="#FF5100"/>
+                    <rect
+                      className="bar bar-5"
+                      x="13.9219"
+                      y="210.727"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#8F2E00"
+                    />
+                    <rect
+                      className="bar bar-6"
+                      x="13.9219"
+                      y="252.871"
+                      width="10.6121"
+                      height="37.461"
+                      fill="#3F1C00"
+                    />
 
-  <rect className="bar bar-5" x="13.9219" y="210.727" width="10.6121" height="37.461" fill="#8F2E00"/>
-  <rect className="bar bar-6" x="13.9219" y="252.871" width="10.6121" height="37.461" fill="#3F1C00"/>
-
- 
-
-
-  <defs>
-    <filter id="filter0_f_73_814920" x="0.500343" y="110.892" width="37.4549" height="68.5562" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="6.71077" result="effect1_foregroundBlur_73_814920"/>
-    </filter>
-    <filter id="filter1_f_73_814920" x="5.86896" y="76.243" width="26.7177" height="53.5668" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="4.02646" result="effect1_foregroundBlur_73_814920"/>
-    </filter>
-    <filter id="filter2_f_73_814920" x="5.86896" y="160.531" width="26.7177" height="53.5668" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="4.02646" result="effect1_foregroundBlur_73_814920"/>
-    </filter>
-  </defs>
-</svg>
+                    <defs>
+                      <filter
+                        id="filter0_f_73_814920"
+                        x="0.500343"
+                        y="110.892"
+                        width="37.4549"
+                        height="68.5562"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                      >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="BackgroundImageFix"
+                          result="shape"
+                        />
+                        <feGaussianBlur
+                          stdDeviation="6.71077"
+                          result="effect1_foregroundBlur_73_814920"
+                        />
+                      </filter>
+                      <filter
+                        id="filter1_f_73_814920"
+                        x="5.86896"
+                        y="76.243"
+                        width="26.7177"
+                        height="53.5668"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                      >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="BackgroundImageFix"
+                          result="shape"
+                        />
+                        <feGaussianBlur
+                          stdDeviation="4.02646"
+                          result="effect1_foregroundBlur_73_814920"
+                        />
+                      </filter>
+                      <filter
+                        id="filter2_f_73_814920"
+                        x="5.86896"
+                        y="160.531"
+                        width="26.7177"
+                        height="53.5668"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                      >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="BackgroundImageFix"
+                          result="shape"
+                        />
+                        <feGaussianBlur
+                          stdDeviation="4.02646"
+                          result="effect1_foregroundBlur_73_814920"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
                 </div>
                 <div className="w-[80%] flex flex-col items-start justify-center ">
                   <p className="text-[#D6D6D6] font-display leading-none text-[3.12vw] max-sm:text-[4vw]">
@@ -388,8 +548,10 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
                     {description}
                   </p>
                   <div className="pt-10">
-                    <BlackButton href={link} text={"Read More"}
-                      ariaLabel={`Read more about ${title}`} 
+                    <BlackButton
+                      href={link}
+                      text={"Read More"}
+                      ariaLabel={`Read more about ${title}`}
                     />
                   </div>
                 </div>
@@ -398,7 +560,7 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
               <div className="flex items-center justify-end pt-[3vw]">
                 <div className="h-[14vw] w-[20vw]">
                   <svg
-                  className="h-full w-full"
+                    className="h-full w-full"
                     width="251"
                     height="252"
                     viewBox="0 0 251 252"
@@ -417,5 +579,3 @@ function SolutionCard({ title, description, cardClass, zIndex, id, link, svgLeft
     </>
   );
 }
-
-

@@ -64,10 +64,10 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
       gsap.set(lines.current, { y: "100%" });
 
       const animationProps = {
-        y: "-10%",
-        duration: 1.4,
-        stagger: 0.15,
-        ease: "power4.out",
+        y: "-7%",
+        duration: 1.2,
+        stagger: 0.08,
+        ease: "power2.out",
         delay: delay,
       };
 

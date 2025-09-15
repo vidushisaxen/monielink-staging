@@ -19,7 +19,7 @@ function PrimaryButton({
       <div
         onMouseEnter={playSoundHover}
         onClick={playSoundTick}
-        className="round relative flex items-center justify-center min-w-[12.5vw] h-[4.3vw] max-md:w-[27vw] max-md:h-[7vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]"
+        className="round relative flex items-center justify-center min-w-[13.5vw] h-[4.3vw] max-md:w-[27vw] max-md:h-[7vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]"
       >
         <div className="absolute left-0 top-0 flex justify-start">
           <svg
@@ -57,11 +57,11 @@ function PrimaryButton({
         </div>
         <div className="absolute inset-0 z-10">
           <div className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-gradient transition-all rounded-xs scale-x-[92%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] scale-y-[82%] group-hover:scale-100 duration-400" />
-          <div className="w-[90%] max-md:w-[100%] max-sm:w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
+          <div className="w-[90%] max-md:w-[100%] max-sm:w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-[1vw] justify-center max-sm:gap-[3vw] max-md:gap-[1.5vw]">
             <span className="text-content-18 capitalize pl-[0.2vw]">
               {text}
             </span>
-            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
+            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[4vw] max-md:w-[1.5vw]">
               <svg
                 className="arrow primera next max-md:scale-[1.1] max-sm:scale-[1]"
                 width="8"

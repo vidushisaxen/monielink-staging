@@ -242,9 +242,9 @@ export default function ProductSlider() {
                         </button>
                     ))}
                 </div> */}
-                <div className='absolute left-[-17%] top-1/2 -translate-y-1/2 radial'>
+                <div className='absolute left-[-17%] top-[45%] -translate-y-1/2 radial w-[30%]'>
                     <RadialSegmentedProgressBar
-                        size={650}
+                        size={550}
                         progress={scrollProgress * 100}
                         labels={[
                             { text: '001', index: 2 },
@@ -259,8 +259,6 @@ export default function ProductSlider() {
                         ]}
                     />
                 </div>
-
-
                 {/* slides container */}
                 <div className="relative h-full w-full">
                     {products.map((f, i) => (

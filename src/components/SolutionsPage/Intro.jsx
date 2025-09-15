@@ -47,7 +47,7 @@ const Intro = () => {
     }, []);
 
     return (
-        <section data-theme="orange" className="bg-gradient overflow-hidden h-screen max-md:h-[70vh] max-sm:h-[85vh] relative">
+        <section data-theme="orange" className="bg-gradient overflow-hidden h-screen max-md:h-[90vh] max-sm:h-[85vh] relative">
             <div className="px-[4vw] flex justify-center items-center h-full w-full relative">
                 <div className="text-center text-white w-1/2 flex flex-col items-center gap-10 max-sm:w-full max-md:w-[60%]">
                     <Copy>

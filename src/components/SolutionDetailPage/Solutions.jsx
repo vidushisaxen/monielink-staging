@@ -10,6 +10,7 @@ import Copy from "../Animations/Copy";
 import { useGSAP } from "@gsap/react";
 import ArrowButton from "../Buttons/ArrowButton";
 import SecondaryButton from "../Buttons/SecondaryButton";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -151,7 +152,7 @@ const SwiperCard = ({
   return (
     <div className="card relative h-[65vh] max-sm:pb-[0.5vw]  max-md:py-[0.5vw] w-full active:scale-95 duration-300 transition-scale max-sm:h-[50vh] max-md:h-[45vh]">
       <div className="absolute h-full w-full max-md:w-[42vw] max-md:pb-[1vw] max-md:h-[45vh] max-sm:w-[85vw] max-sm:h-[100%] max-sm:pb-[1vw] max-sm:px-[1vw] ">
-        <svg
+        {/* <svg
           width="466"
           height="638"
           viewBox="0 0 466 638"
@@ -210,7 +211,8 @@ const SwiperCard = ({
               <stop offset="1" stopColor="white" />
             </linearGradient>
           </defs>
-        </svg>
+        </svg> */}
+        <Image src={"/assets/shapes/bg-frame.png"} alt="bg-frame" width={500} height={600} className="w-full h-full object-fill"/>
       </div>
       <div className="py-[3vw] relative z-10 justify-center flex-col flex items-start ml-[2vw] gap-y-[2vw] h-full w-full max-sm:h-[50vh] max-sm:ml-[14vw] max-md:ml-[5vw] max-sm:py-[8vw] max-sm:gap-y-[7vw]">
         <div className=" w-[60%] max-sm:mx-0 max-sm:w-[70%] max-md:w-[85%]">

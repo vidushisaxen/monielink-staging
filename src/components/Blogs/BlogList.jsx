@@ -11,10 +11,10 @@ const BlogList = () => {
     <>
       <section
         data-theme="white"
-        className="w-screen h-fit py-[7%] bg-white px-[5vw] max-sm:py-[15%] max-sm:px-[5.5vw]"
+        className="w-screen h-fit py-[7%] bg-white px-[5vw] max-sm:py-[15%] max-sm:px-[5.5vw] max-md:py-[10%]"
         id="blog-listing"
       >
-        <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[10vw] max-sm:gap-[10vw]">
+        <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[5vw] max-sm:gap-[10vw]">
           <Copy>
             <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display  flex flex-col max-sm:w-[80%] ">
               <span>Explore</span> <span>expert insights</span>{" "}
@@ -119,15 +119,15 @@ const BlogList = () => {
                 </svg>
               </div>
               <div className="absolute top-0 left-0 w-full  h-fit max-md:top-[2.5%] max-sm:top-[3%] group/card ">
-                <div className="w-full h-full px-[2.5vw]  pt-[3vw] flex flex-col gap-[2vw] max-sm:px-0 max-sm:pt-0 max-md:pt-[6vw] max-md:gap-[3vw] max-sm:gap-[7vw]">
+                <div className="w-full h-full px-[2.5vw]  pt-[3vw] flex flex-col gap-[2vw] max-sm:px-0 max-sm:pt-0 max-md:pt-[10vw] max-md:gap-[7vw] max-sm:gap-[7vw]">
                   <div className="flex justify-between max-sm:flex-col max-sm:gap-[6vw]">
                     <div className="flex flex-col gap-[1.5vw] w-[40%] max-md:w-[50%] max-sm:order-1 max-sm:w-full max-sm:px-[4vw] max-sm:gap-[4vw]">
                       <p className="uppercase max-sm:text-head-50">featured</p>
-                      <h3 className="text-head-60 font-display capitalize max-sm:text-content-30">
+                      <h3 className="text-head-60 font-display capitalize max-sm:text-content-30 max-md:text-[5vw]">
                         Your passport to the web3 economy
                       </h3>
                     </div>
-                    <div className="w-[55%] max-md:w-[50%] h-[40%] rounded-[1.2vw] overflow-hidden max-md:rounded-[3vw] max-sm:rounded-[4vw] max-sm:w-full">
+                    <div className="w-[55%] max-md:w-[50%] h-[40%] rounded-[1.2vw] overflow-hidden max-md:rounded-[1.5vw] max-sm:rounded-[4vw] max-sm:w-full">
                       <Image
                         src={"/assets/images/blogs/blog-img-1.png"}
                         alt="featured-blog"
@@ -148,9 +148,9 @@ const BlogList = () => {
                     <SecondaryButton href={"#"} text={"Read More"} className="max-sm:hidden max-md:hidden"/>
                     <Link href={"#"} className="hidden max-sm:flex max-md:flex round relative ml-[-1vw] items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] max-md:min-w-[16vw]">
                         <div className="absolute inset-0 z-10">
-                          <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-3 justify-center ">
+                          <div className="w-[80%] mx-auto h-full text-white relative z-10 flex items-center gap-3 justify-center max-md:w-full ">
                             <span className="text-content-18">Read More</span>
-                            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
+                            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw] max-md:w-[1.5vw]">
                               <svg
                                 className="arrow primera next"
                                 width="8"
@@ -258,7 +258,7 @@ const BlogList = () => {
                         className="w-full h-full scale-[1.1] group-hover:scale-100 duration-500 ease-in-out"
                       />
                     </div>
-                    <div className="px-[2vw] flex flex-col gap-[3vw] max-sm:px-[4vw] max-sm:gap-[8vw]">
+                    <div className="px-[2vw] flex flex-col gap-[3vw] max-sm:px-[4vw] max-sm:gap-[8vw] max-md:gap-[2vw]">
                       <h4 className="text-content-30 font-display capitalize ">
                         {blog.title}
                       </h4>
@@ -266,9 +266,9 @@ const BlogList = () => {
 
                       <Link href={blog.link} className="round relative ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] max-md:min-w-[16vw]">
                         <div className="absolute inset-0 z-10">
-                          <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center">
+                          <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center max-md:w-full">
                             <span className="text-content-18">Read More</span>
-                            <div className="rotate-180 text-black flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw]">
+                            <div className="rotate-180 text-black flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw] max-md:w-[1.5vw]">
                               <svg
                                 className="arrow primera next"
                                 width="8"

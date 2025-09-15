@@ -116,7 +116,6 @@ export default function Solutions() {
     let ctx = gsap.context(() => {
       const slides = gsap.utils.toArray(".slide");
       const total = slides.length;
-
       const splits = slides.map((slide) => {
   const elems = slide.querySelectorAll(".splitLines");
   const split = new SplitText(elems, {

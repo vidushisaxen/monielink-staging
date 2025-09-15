@@ -6,7 +6,7 @@ const Partner = () => {
   return (
     <>
       <section data-theme="orange" className='w-screen h-full bg-gradient'>
-        <div className='h-full w-full flex items-start justify-between px-[4vw] py-[7vw] max-md:py-[15%] max-md:flex-col max-sm:flex-col max-sm:gap-[15vw] max-md:gap-[10vw] max-sm:px-[5.5vw] max-md:px-[4vw]'>
+        <div className='h-full w-full flex items-start justify-between px-[4vw] py-[7vw] max-md:py-[15%] max-md:flex-col max-sm:flex-col max-sm:gap-[15vw] max-md:gap-[10vw] max-sm:px-[5.5vw] max-md:px-[5vw]'>
           <div className='w-1/2 max-sm:w-full max-md:w-[100%] max-md:space-y-[3vw] max-sm:space-y-[3vw]'>
             <Copy>
               <h2 className='text-head-100 font-display'>Partner With Us</h2>

@@ -20,7 +20,7 @@ function BlackButton({
       <div
         onMouseEnter={playSoundHover}
         onClick={playSoundTick}
-        className="round relative flex items-center justify-center w-[12.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]"
+        className="round relative flex items-center justify-center w-[13.5vw] h-[4.3vw] max-sm:h-[17vw] max-sm:min-w-[55vw] max-md:w-[27vw] max-md:h-[7vh]"
       >
         <div className="absolute left-0 top-0 flex justify-start">
           <svg
@@ -58,11 +58,11 @@ function BlackButton({
         </div>
         <div className="absolute inset-0 z-10">
           <div className="btn-clipPath w-full absolute flex items-center justify-center h-full bg-black transition-all rounded-xs group-hover:scale-100 scale-x-[92%] scale-y-[82%] max-sm:scale-x-[93%] max-sm:scale-y-[80%] duration-400 border border-[#a8a8a8] after:h-[1.2px] after:bg-[#A8a8a8] after:w-[2vw] after:-rotate-[47.2deg] after:top-[14%] after:absolute after:left-[-3%] before:absolute before:h-[1.2px] before:w-[2vw] before:bg-[#A8a8a8] before:-rotate-[48.3deg] before:right-[-3.4%] before:bottom-[14%]"></div>
-          <div className="w-[90%] mx-auto h-full text-white relative z-10 flex items-center gap-5 justify-center">
+          <div className="w-[90%] mx-auto h-full text-white relative z-10 flex items-center gap-[1vw] justify-center max-sm:gap-[3vw] max-md:gap-[1.5vw]">
             <span className="text-content-18 text-end capitalize pl-[0.2vw]">
               {text}
             </span>
-            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-fit h-full">
+            <div className="rotate-180 text-white flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[4vw] max-md:w-[1.5vw]">
               <svg
                 className="arrow primera next"
                 width="8"

@@ -16,7 +16,7 @@ export default function SoundButton() {
         playSoundTick();
       }}
       onMouseEnter={playSoundHover}
-      className="fixed cursor-pointer max-sm:h-[12vw] max-sm:w-[12vw] max-sm:right-[4vw] max-sm:bottom-[4vw] max-sm:rounded-[2vw] max-md:h-[12vw] max-md:w-[12vw] max-md:right-[4vw] max-md:bottom-[4vw] max-md:rounded-[2vw] z-[99] flex items-center justify-center bottom-[1vw] right-[1vw] h-[3vw] w-[3vw] group rounded-[.5vw] text-white"
+      className="fixed cursor-pointer max-sm:h-[12vw] max-sm:w-[12vw] max-sm:right-[4vw] max-sm:bottom-[4vw] max-sm:rounded-[2vw] max-md:h-[8vw] max-md:w-[8vw] max-md:right-[7%] max-md:bottom-[4vw] max-md:rounded-[2vw] z-[99] flex items-center justify-center bottom-[1vw] right-[1vw] h-[3vw] w-[3vw] group rounded-[.5vw] text-white"
     >
       <svg
         className="w-full absolute inset-0 h-full"

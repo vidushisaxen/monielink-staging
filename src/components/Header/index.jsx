@@ -707,7 +707,7 @@ export default function Header() {
                   borderColor={"#ffffff"}
                 />
               </div>
-              <nav className="relative flex items-center gap-[3vw] text-foreground pt-5 max-sm:hidden max-md:hidden">
+              <nav className="relative flex items-center gap-[3vw] text-foreground pt-[1%] max-sm:hidden max-md:hidden">
                 {links.map((item, index) => {
                   const isActive = pathname === item.link;
                   const isDropdownItem =
@@ -763,10 +763,10 @@ export default function Header() {
                             item.name.toLowerCase() === "products" &&
                             productsDropdown}
 
-                          <div className="round absolute top-[-80%] bottom-auto left-[45%] ml-[-1vw] flex items-center justify-center min-w-[9vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] cursor-pointer">
-                            <div className="-rotate-90 text-[#D6D6D6] flex items-center justify-center gap-0 w-[0.9vw] h-full max-sm:w-[3vw]">
+                          <div className="round absolute top-[-80%] bottom-auto left-[80%] ml-[-5vw] flex items-center justify-end min-w-[6vw] h-[270%] w-fit max-sm:h-[17vw] max-sm:min-w-[34vw] cursor-pointer">
+                            <div className="-rotate-90 text-[#D6D6D6] flex items-center justify-end gap-0 w-[0.55vw] h-full max-sm:w-[3vw]">
                               <svg
-                                className="arrow next"
+                                className="arrow next w-full h-full"
                                 width="8"
                                 height="15"
                                 viewBox="0 0 8 15"
@@ -803,7 +803,7 @@ export default function Header() {
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none "
         }`}
       >
-        <div className="w-screen max-md:h-[60vh] max-sm:h-[47vh] max-sm:w-[102vw] absolute top-0 left-[-1%] m-nav-bg -translate-y-full nav-bg-t">
+        <div className="w-screen max-md:h-[48vh] max-sm:h-[47vh] max-sm:w-[102vw] max-md:w-[102vw] absolute top-0 left-[-1%] m-nav-bg -translate-y-full nav-bg-t">
           <Image
             className="w-full h-full object-cover object-bottom"
             src={"/assets/shapes/menu-svg-t.svg"}
@@ -813,7 +813,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="w-screen max-md:h-[60vh] max-sm:h-[65vh] absolute bottom-[-2%] left-0 m-nav-bg translate-y-full nav-bg-b">
+        <div className="w-screen max-md:h-[70vh] max-sm:h-[65vh] absolute bottom-[-2%] max-md:w-[102vw] left-0 m-nav-bg translate-y-full nav-bg-b">
           <Image
             className="w-full h-full object-cover object-top"
             src={"/assets/shapes/menu-svg-b.svg"}
@@ -824,7 +824,7 @@ export default function Header() {
         </div>
 
         <div className="relative w-screen h-screen flex items-end">
-          <nav className="flex h-1/2 flex-col relative max-md:gap-[0.2vw] max-sm:gap-3 flex-grow max-sm:px-8 max-sm:pt-0 max-md:px-12 max-md:pt-20">
+          <nav className="flex h-1/2 flex-col relative max-md:gap-[2vw] max-sm:gap-3 flex-grow max-sm:px-8 max-sm:pt-[7%] max-md:px-12 max-md:pt-[3%]">
             {links2.map((item, index) => {
               const isActive = pathname === item.link;
               const hasSubmenu =
@@ -856,7 +856,7 @@ export default function Header() {
                         />
                       </svg>
                     </span>
-                    <span className="max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[4vw] font-medium">
+                    <span className="max-sm:text-[4.5vw] uppercase text-[2.5vw] max-md:text-[3vw] font-medium">
                       {item.name}
                     </span>
                   </Link>
@@ -871,28 +871,16 @@ export default function Header() {
                           )
                         }
                         aria-label={openMenu === item.name.toLowerCase() ? "Close menu" : "Open menu"}
-                        className={`ml-[3vw] text-white transform duration-300 h-[5vw] w-[5vw] m-nav-arrow opacity-0 rounded-[1.2vw]  relative flex justify-center items-center`}
+                        className={`ml-[3vw] text-white transform duration-300 h-[5vw] w-[5vw] m-nav-arrow opacity-0 rounded-[1.2vw]  relative flex justify-center items-center max-md:w-[3vw] max-md:h-auto`}
                       >
-                        {/* <svg
-                          className="arrow next rotate-180 h-full w-full"
-                          width="8"
-                          height="15"
-                          viewBox="0 0 8 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
-                            fill="currentColor"
-                          />
-                        </svg> */}
+                       
                         <span
-                          className={`w-[4vw] h-[1.5px] rounded-full ${
+                          className={`w-[4vw] h-[1.5px] rounded-full max-md:w-[3vw] ${
                             isActive ? "bg-primary-2" : "bg-white"
                           }`}
                         />
                         <span
-                          className={`w-[4vw] h-[1.5px] rotate-90 absolute rounded-full ${
+                          className={`w-[4vw] h-[1.5px] rotate-90 absolute rounded-full max-md:w-[3vw] ${
                             isActive ? "bg-primary-2" : "bg-white"
                           } `}
                         />
@@ -907,8 +895,8 @@ export default function Header() {
               <div
                 className={`absolute`}
               >
-                <div className={`flex gap-[5vw] text-[5.5vw] items-center mb-[5vw]  submenu-item`}>
-                <div className="w-[4vw] h-[4vw] " onClick={()=>{setOpenMenu(false)}}>
+                <div className={`flex gap-[5vw] max-sm:text-[5.5vw] items-center mb-[5vw]  submenu-item max-md:text-[4vw]`}>
+                <div className="max-sm:w-[4vw] max-sm:h-[4vw] max-md:w-[3vw] max-md:h-[3vw] " onClick={()=>{setOpenMenu(false)}}>
                  <svg
                         className="arrow prev h-full w-full"
                         width="8"
@@ -936,7 +924,7 @@ export default function Header() {
                 {openMenu === "products" ? (
                   <>
 
-                  <ul className="grid grid-cols-2 gap-x-8 gap-y-[2vw] text-white ml-[9vw]">
+                  <ul className="grid grid-cols-2 gap-x-8 gap-y-[2vw] text-white ml-[9vw] max-md:gap-y-[1vw]">
                     {products.map((sub, i) => (
                       <li
                         key={i}
@@ -944,7 +932,7 @@ export default function Header() {
                       >
                         <Link
                           href={sub.link}
-                          className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
+                          className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3vw]"
                         >
                           
                           {sub.name}
@@ -955,7 +943,7 @@ export default function Header() {
                   
                   </>
                 ) : (
-                  <ul className="flex flex-col gap-y-[2vw] text-white ml-[9vw]">
+                  <ul className="flex flex-col gap-y-[2vw] text-white ml-[9vw] max-md:gap-y-[1vw]">
                     {solutions.map((sub, i) => (
                       <li
                         key={i}
@@ -964,7 +952,7 @@ export default function Header() {
                         <Link
                           aria-label={sub.name}
                           href={sub.link}
-                          className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3.5vw]"
+                          className="max-sm:text-[4.2vw] !font-body capitalize max-md:text-[3vw]"
                         >
                             
                           {sub.name}

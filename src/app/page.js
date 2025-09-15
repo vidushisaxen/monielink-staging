@@ -37,7 +37,6 @@ export default function HomePage() {
         <Intro />
         <div className="clients-transition">
         <Clients />
-        {/* <Blogs /> */}
         </div>
         <FAQs data={faqData} />
         <CTA />

@@ -52,7 +52,7 @@ export default function Products({productsData}) {
   return (
     <section
       id="products"
-      className="h-full w-screen relative bg-[#050505] max-md:py-[10%] max-sm:py-[15%]"
+      className="h-full w-screen relative bg-[#050505] max-sm:py-[15%]"
     >
       <div className="sticky h-full  top-0 left-0 max-sm:hidden">
         <BackgroundLine/>
@@ -60,7 +60,7 @@ export default function Products({productsData}) {
 
       <div
         ref={containerRef}
-        className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[1vw] max-sm:mt-0 max-sm:gap-[10vw] max-sm:pb-0"
+        className="relative w-screen overflow-hidden mt-[-100vh] z-10 flex flex-col items-center justify-center py-[10vw] gap-[1vw] max-sm:mt-0 max-sm:gap-[10vw] max-sm:pb-0 max-md:py-[15%]"
       >
         <Copy>
           <h2 className="text-foreground productsText text-[5.2vw] max-md:w-[80%]  w-[60%] max-sm:w-[90%] max-sm:text-center max-md:text-head-100 max-sm:text-head-100 text-center leading-[1.25] font-display capitalize pb-[5vw]">

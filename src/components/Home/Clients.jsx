@@ -3,7 +3,6 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Copy from "../Animations/Copy";
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
@@ -16,7 +15,7 @@ export default function Clients() {
   const logos = [
     {
       src: "/assets/icons/clients/fcmb.svg",
-      width: "10vw",
+      width:isTab?"20vw": "10vw",
       right: "5%",
       top: "5%",
       mobileRight: isTab ?"-20%": "15%",
@@ -25,7 +24,7 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/tranzact.svg",
-      width: "10vw",
+      width:isTab?"20vw": "10vw",
       right: "25%",
       top: "25%",
       mobileRight: isTab ?"25%": "20%",
@@ -34,7 +33,7 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/mastercard.svg",
-      width: "7vw",
+      width:isTab?"16vw": "7vw",
       right: "10%",
       top: "35%",
       mobileRight: isTab?"-15%":"5%",
@@ -43,7 +42,7 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/access.svg",
-      width: "10vw",
+      width:isTab?"20vw": "10vw",
       right: "40%",
       top: "50%",
       mobileRight: isTab ?"43%": "50%",
@@ -52,7 +51,7 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/NIBSS.svg",
-      width: "8vw",
+      width:isTab?"17vw": "8vw",
       right: "30%",
       top: "63%",
       mobileRight: isTab ?"15%": "30%",
@@ -61,7 +60,7 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/visa2.svg",
-      width: "6vw",
+      width:isTab?"14vw": "6vw",
       right: "3%",
       top: "75%",
       mobileRight: isTab ?"-10%": "5%",
@@ -70,7 +69,7 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/unified.svg",
-      width: "10vw",
+      width:isTab?"20vw": "10vw",
       right: "20%",
       top: "90%",
       mobileRight: isTab ?"-35%": "20%",
@@ -79,11 +78,11 @@ export default function Clients() {
     },
     {
       src: "/assets/icons/clients/interswitch.svg",
-      width: "13vw",
+      width:isTab?"22vw": "13vw",
       right: "5%",
       top: "105%",
-      mobileRight: isTab ?"15%": "10%",
-      mobileTop: isTab ?"120%": "90%",
+      mobileRight: isTab ?"9%": "10%",
+      mobileTop: isTab ?"115%": "90%",
       mobileWidth: "15vw",
     },
   ];
@@ -101,8 +100,8 @@ export default function Clients() {
   const handleResize = () => {
     const width = globalThis.innerWidth;
 
-    setIsMobile(width <= 768);
-    setIsTab(width > 768 && width <= 1024);
+    setIsMobile(width < 768);
+    setIsTab(width >= 768 && width <= 1024);
   };
 
   handleResize(); 
@@ -235,16 +234,7 @@ export default function Clients() {
         },
       }
     );
-    // gsap.to(".clients-transition",{
-    //   backgroundColor:"#F5F5F5",
-    //   scrollTrigger:{
-    //     trigger:"#blogs",
-    //     start:"30% 90%",
-    //     end:"30% 70%",
-    //     scrub:true,
-    //     markers:true,
-    //   }
-    // })
+
   }, []);
 
   return (
@@ -471,7 +461,7 @@ export default function Clients() {
             <div
               key={index}
               className={`absolute h-auto  flex items-end justify-end logoanim ${
-                index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw] max-md:!w-[25vw]"
+                index == 1 ? "max-sm:!w-[12vw]" : "max-sm:!w-[22vw]"
               }`}
               style={{
                 width: logo.width,

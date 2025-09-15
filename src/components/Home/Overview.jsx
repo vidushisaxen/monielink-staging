@@ -18,7 +18,7 @@ export default function Overview() {
   }, []);
 
   return (
-    <section id="overview" className="h-fit w-full pt-[10vw] bg-background relative z-[1] max-sm:pt-[15%]">
+    <section id="overview" className="h-fit w-full overflow-hidden pt-[10vw] bg-background relative z-[1] max-sm:pt-[15%]">
       <div className="pt-[5vw] flex items-center flex-col justify-center gap-[2vw]">
         <Copy>
           <h2 className="text-gray-1 text-center text-head-60 w-[55%] font-display overviewText max-sm:w-3/4 max-md:w-[70%] max-sm:head-140">

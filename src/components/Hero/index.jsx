@@ -55,7 +55,7 @@ export default function Hero({ heading, para , breadcrumb}) {
       <div className="relative h-screen max-sm:h-[80vh] max-sm:pt-[15vh] w-full flex flex-col items-center justify-center max-sm:items-start max-sm:px-[2vw]">
         <HeroBackground />
         <div
-          className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[20vw]`}
+          className={`h-fit pointer-events-none w-full pt-20 flex-col flex items-center justify-center z-10 text-foreground max-sm:items-start text-center max-sm:text-left max-sm:pl-[5vw] max-sm:pt-[20vw] max-md:pt-0`}
         >
           <Copy delay={baseDelay}>
             <h1 className={`text-head-150 font-display w-[85%] max-md:w-[90%] headingText  text-gray-1 max-sm:w-full`}>

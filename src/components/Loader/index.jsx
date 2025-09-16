@@ -298,7 +298,7 @@ export default function Loader() {
 
   return (
     <>
-      {/* <div
+      <div
       //  onClick={handleSound}
         style={{
           left: MouseCordinates.x,
@@ -306,8 +306,8 @@ export default function Loader() {
         }}
         className="font-bold opacity-0 max-md:hidden w-[50vw] loader-sound-btn flex-shrink-0  translate-x-[-10%] translate-y-[-50%] text-zinc-400 text-[1vw] z-[9999] absolute cursor-pointer "
       >
-        <p>Click to enable sound</p>
-      </div> */}
+        {/* <p>Click to enable sound</p> */}
+      </div>
       <div
         id="LoaderScreen"
         className="h-screen bg-[#010101] fixed top-0 left-0 z-[9900]  w-full flex items-center justify-center"

@@ -13,9 +13,9 @@ export default function SoundButton() {
     <div
       onClick={() => {
         toggle();
-        playSoundTick();
+        // playSoundTick();
       }}
-      onMouseEnter={playSoundHover}
+      // onMouseEnter={playSoundHover}
       className="fixed cursor-pointer max-sm:h-[12vw] max-sm:w-[12vw] max-sm:right-[4vw] max-sm:bottom-[4vw] max-sm:rounded-[2vw] max-md:h-[8vw] max-md:w-[8vw] max-md:right-[7%] max-md:bottom-[4vw] max-md:rounded-[2vw] z-[99] flex items-center justify-center bottom-[1vw] right-[1vw] h-[3vw] w-[3vw] group rounded-[.5vw] text-white"
     >
       <svg

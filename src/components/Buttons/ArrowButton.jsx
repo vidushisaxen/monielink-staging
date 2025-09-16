@@ -18,8 +18,8 @@ function ArrowButton({
   const sharedContent = (
     <>
       <div
-        onMouseEnter={playSoundHover}
-        onClick={playSoundTick}
+        // onMouseEnter={playSoundHover}
+        // onClick={playSoundTick}
         className="relative flex items-center justify-center max-sm:w-[14vw]"
       >
         <svg

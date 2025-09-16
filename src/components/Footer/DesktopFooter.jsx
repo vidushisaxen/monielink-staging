@@ -251,8 +251,8 @@ export default function DesktopFooter() {
                   <div className="pt-2 flex  items-start gap-2 fadeupanim">
                     {socials.map((item, index) => (
                       <SocialMediaBtn
-                        onMouseEnter={playSoundHover}
-                        onClick={playSoundTick}
+                        // onMouseEnter={playSoundHover}
+                        // onClick={playSoundTick}
                         className=""
                         key={index}
                         href={item.href}
@@ -272,8 +272,8 @@ export default function DesktopFooter() {
                 <div className="">
                   By :{" "}
                   <a
-                    onMouseEnter={playSoundHover}
-                    onClick={playSoundTick}
+                    // onMouseEnter={playSoundHover}
+                    // onClick={playSoundTick}
                     href={"https://weareenigma.com/"}
                     target="_blank"
                   >

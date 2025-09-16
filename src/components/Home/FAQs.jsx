@@ -44,8 +44,8 @@ export default function FAQs({ data }) {
 
             return (
               <div
-              onMouseEnter={playSoundHover}
-              onClick={playSoundTick}
+              // onMouseEnter={playSoundHover}
+              // onClick={playSoundTick}
                 key={index}
                 className="relative mb-[3vw] w-full h-full fadeupanim faq-tab max-sm:mb-[6vw]"
               >

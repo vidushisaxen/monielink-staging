@@ -151,14 +151,14 @@ const ScrambleText = forwardRef(
     return (
       <div
         ref={containerRef}
-        onClick={playSoundTick}
+        // onClick={playSoundTick}
         className={[
           classNames.container,
           u ? classNames.centered : "",
           D,
         ].join(" ")}
         onMouseEnter={i ? ()=>{
-          playSoundHover();
+          // playSoundHover();
           animate();
         } : undefined}
         style={{

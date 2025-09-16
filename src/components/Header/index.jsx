@@ -687,8 +687,8 @@ export default function Header() {
               <Link
                  aria-label="Home"
                 href={"/"}
-                onMouseEnter={playSoundHover}
-                onClick={playSoundTick}
+                // onMouseEnter={playSoundHover}
+                // onClick={playSoundTick}
                 className={`w-[12vw] h-full flex items-center justify-center max-sm:w-auto max-sm:h-[12vw] max-md:w-auto max-md:h-[8vw] ${
                   isInverted
                     ? " brightness-[16] max-sm:brightness-0 max-sm:invert-100"

@@ -17,8 +17,8 @@ function PrimaryButton({
   const sharedContent = (
     <>
       <div
-        onMouseEnter={playSoundHover}
-        onClick={playSoundTick}
+        // onMouseEnter={playSoundHover}
+        // onClick={playSoundTick}
         className="round relative flex items-center justify-center min-w-[13.5vw] h-[4.3vw] max-md:w-[27vw] max-md:h-[7vh] w-fit max-sm:h-[17vw] max-sm:min-w-[55vw]"
       >
         <div className="absolute left-0 top-0 flex justify-start">

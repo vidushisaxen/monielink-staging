@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       <WebsiteJsonLd />
       <main className={`${Roobert.variable} ${TWK.variable} antialiased`}>
         <Loader />
-        <SoundButton />
+        {/* <SoundButton /> */}
         <Header />
         {children}
         <Footer />

@@ -16,7 +16,7 @@ const BlogList = () => {
       >
         <div className="flex flex-col  gap-[5vw] text-black-1 max-md:gap-[5vw] max-sm:gap-[10vw]">
           <Copy>
-            <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display  flex flex-col max-sm:w-[80%] ">
+            <h2 className="w-[40%] max-md:w-[60%] text-head-100 font-display capitalize  flex flex-col max-sm:w-[80%] ">
               <span>Explore</span> <span>expert insights</span>{" "}
             </h2>
           </Copy>
@@ -306,20 +306,44 @@ const BlogList = () => {
               </div>
             ))}
           </div>
-          <div className="flex items-center justify-center gap-5 max-sm:pt-[0vw] max-sm:mb-[10vw]">
-            <ArrowButton
-              href={"#"}
-              arrowColor={"#050505"}
-              borderColor={"#050505"}
-              hoverColor={"bg-[#050505]/20"}
-              rotate={"-rotate-180"}
-            />
-            <ArrowButton
-              href={"#"}
-              arrowColor={"#050505"}
-              borderColor={"#050505"}
-              hoverColor={"bg-[#050505]/20"}
-            />
+          <div className="mx-auto">
+            <Link href={"#"} className="round relative ml-[-1vw] flex items-center justify-center min-w-[15vw] h-[4.3vw] w-fit max-sm:h-[17vw] max-sm:min-w-[40vw] max-md:min-w-[22vw]">
+                        <div className="absolute inset-0 z-10">
+                          <div className="w-[80%] mx-auto h-full text-black relative z-10 flex items-center gap-3 justify-center max-md:w-full">
+                            <span className="text-content-20">Load more articles
+                            </span>
+                            <div className="rotate-180 text-black flex items-center justify-center gap-0 w-[1vw] h-full max-sm:w-[3vw] max-md:w-[1.5vw]">
+                              <svg
+                                className="arrow primera next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                              <svg
+                                className="arrow segunda next"
+                                width="8"
+                                height="15"
+                                viewBox="0 0 8 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.50293 14.46L2.50293 7.45996L7.50293 0.459961H5.05293L0.0529289 7.45996L5.05293 14.46H7.50293Z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+          
           </div>
         </div>
       </section>

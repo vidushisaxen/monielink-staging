@@ -1,38 +1,43 @@
+"use client";
+
 import React from "react";
 import styles from "./blog.module.css";
-import SocialMediaBtn from "../Footer/SocialMediaBtn";
 import {
   FacebookIcon,
-  InstagramIcon,
   LinkedinIcon,
   TwitterIcon,
 } from "../Icons";
 import Copy from "../Animations/Copy";
-const BlogContent = () => {
+import { useShare } from "@/lib/use-share";
+const BlogContent = ({ url, title, description }) => {
+  const { share } = useShare({ url, title, description });
+
   return (
-    <section data-theme="white"
-      className={`w-screen h-fit bg-white pt-[25%] mt-[-25%] text-black-1 max-sm:pt-[50%] max-sm:mt-[-50%] ${styles.blogContent}`}
+    <section
+      data-theme="white"
+      className="w-screen h-fit bg-white pt-[25%] mt-[-25%] text-black-1 max-sm:pt-[50%] max-sm:mt-[-50%]"
     >
       <div className="py-[10%] h-full w-full flex justify-between px-[5vw] max-sm:px-[5.5vw] max-md:flex-col max-sm:flex-col max-sm:gap-[15vw]">
-        <div className="w-[20%] h-fit sticky  top-[10%] max-sm:static max-sm:w-full">
+        <div className="w-[20%] h-fit sticky  top-[10%] max-md:static max-md:w-full">
           <div className="w-full flex flex-col gap-[3vw] max-sm:gap-[8vw]">
             <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw] fadeupanim">
-              <span className="text-[1.5vw] max-md:text-[3.5vw] max-sm:text-head-50">Posted On:</span>
-              <p className="max-sm:text-[2vw] max-md:text-[3vw]">June 6 , 2024</p>
+              <span className="text-[1.5vw] max-md:text-[3.5vw] max-sm:text-head-50 font-display font-medium">Posted On:</span>
+              <p className="max-sm:text-[4vw] max-md:text-[3vw]">June 6 , 2024</p>
             </div>
             <div className="flex flex-col gap-[0.7vw] max-sm:gap-[2vw] fadeupanim">
-              <span className="text-[1.5vw] max-md:text-nowrap max-md:text-[3.5vw] max-sm:text-head-50">Share Article:</span>
+              <span className="text-[1.5vw] max-md:text-nowrap max-md:text-[3.5vw] max-sm:text-head-50 font-display font-medium">Share Article:</span>
               <div className="w-fit flex gap-[1vw] max-md:gap-[3vw] max-sm:gap-[2.5vw] max-sm:pb-[1vw] max-md:pb-[5vw]">
                 {socials.map((item, index) => (
-                  <div key={index}>
-                    <a
-                      href={"#"}
-                      className={`group`}
-                      aria-label="Read More"
-                      target="_blank"
+                  <div
+                    key={index}
+                    className="text-[#050505]  group-hover:text-white duration-300 transition-colors relative flex items-center justify-center w-[4.2vw] max-sm:w-[16vw] max-sm:h-[16vw] max-md:w-[9vw]"
+                  >
+                    <button
+                      onClick={() => share(item.platform)}
+                      aria-label={`Share on ${item.platform}`}
+                      className="flex justify-center cursor-pointer items-center w-full h-full group-hover:bg-black-1 relative transition-all duration-300"
                     >
-                      <div className="text-[#050505]  group-hover:text-white duration-300 transition-colors relative flex items-center justify-center w-[4.2vw] max-sm:w-[16vw] max-sm:h-[16vw] max-md:w-[9vw]">
-                        <svg
+                       <svg
                           className="w-full h-full "
                           width="77"
                           height="67"
@@ -45,9 +50,8 @@ const BlogContent = () => {
                             stroke="currentColor"
                             className="group-hover:text-[#FE6E00] duration-300"
                           />
-                        </svg>
-
-                        <div className="absolute inset-[6%] ">
+                          </svg>
+                          <div className="absolute inset-[6%] ">
                           <div
                             style={{
                               clipPath:
@@ -59,15 +63,14 @@ const BlogContent = () => {
                             {item.icon}
                           </div>
                         </div>
-                      </div>
-                    </a>
+                    </button>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[65%] max-md:w-[100%] max-sm:w-full">
+        <div className={`w-[65%] max-md:w-[100%] max-sm:w-full ${styles["blog-article"]}`}>
           <p className="fadeupanim">
             The internet is evolving — and with it, so is the way we engage with
             money, identity, and value. Welcome to Web3: a decentralized,
@@ -88,7 +91,7 @@ const BlogContent = () => {
             meets emerging crypto experiences. That&apos;s why infrastructure matters
             more than ever.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw]  max-sm:my-[15vw] lineDraw" />
+          <hr className="lineDraw" />
           <Copy>
           <h2>What is Web3 and Why Does It Matter?</h2>
           </Copy>
@@ -103,14 +106,14 @@ const BlogContent = () => {
             worlds — conventional banking and emerging crypto platforms — and
             the infrastructure to connect them isn&apos;t always seamless
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <hr className="lineDraw" />
           <Copy>
           <h2>Bridging Traditional Finance and the Web3 Economy</h2>
           </Copy>
-          <span className="max-md:text-content-20 fadeupanim">
+          <p className="fadeupanim">
             Moneylink is solving this challenge by providing the foundational
             tools banks and fintechs need to enable Web3 access:
-          </span>
+          </p>
           <ul className="max-md:text-content-20 fadeupanim">
             <li >
               Smart Wallets: Create and manage digital wallets with
@@ -130,13 +133,13 @@ const BlogContent = () => {
             </li>
           </ul>
           
-          <span className="max-md:text-content-20 fadeupanim">
+          <p className="fadeupanim">
             Whether you're a neobank or an established institution, our platform
             helps you embed secure, Web3-ready functionality directly into your
             apps.
-          </span>
+          </p>
          
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <hr className="lineDraw" />
           <Copy>
           <h2>Why Emerging Markets Are Poised to Lead</h2>
           </Copy>
@@ -150,7 +153,7 @@ const BlogContent = () => {
             and ownership to millions — but only if the infrastructure is in
             place.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <hr className="lineDraw" />
           <Copy>
           <h2>The Future Is Here — Let&apos;s Build It Together</h2>
           </Copy>
@@ -161,7 +164,7 @@ const BlogContent = () => {
             your services into the Web3 economy. Let&apso;s shape the future of
             finance — together.
           </p>
-          <div className="w-full h-[1px] bg-black-1 my-[5vw] max-sm:my-[15vw] lineDraw" />
+          <hr className="lineDraw" />
         </div>
       </div>
     </section>
@@ -171,15 +174,15 @@ const BlogContent = () => {
 export default BlogContent;
 const socials = [
   {
+    platform: "facebook",
     icon: <FacebookIcon />,
-    link: "#",
   },
   {
+    platform: "linkedin",
     icon: <LinkedinIcon />,
-    link: "#",
   },
   {
+    platform: "twitter",
     icon: <TwitterIcon />,
-    link: "#",
   },
 ];

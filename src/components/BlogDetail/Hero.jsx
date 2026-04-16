@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="px-[5vw] bg-black-1 w-full h-full flex flex-col max-md:pt-[22%] pt-[15%] gap-[3vw] max-sm:pt-[30%]">
         <Copy>
 
-        <h1 className="text-head-100 font-display w-[60%] max-md:w-[85%]  max-sm:w-[90%] max-sm:text-head-150 text-white">
+        <h1 className="text-head-100 capitalize font-display w-[60%] max-md:w-[85%]  max-sm:w-[90%] max-sm:text-head-150 text-white">
         Your passport to the web3 economy
         </h1>
         </Copy>
